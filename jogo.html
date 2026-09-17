@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>O Orquestrador do Ecossistema | PIT São José dos Campos</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-space: #050a14;
+      --bg-card: rgba(15, 23, 42, 0.85);
+      --cyan-glow: #06b6d4;
+      --cyan-light: #67e8f9;
+      --blue-accent: #2563eb;
+      --blue-electric: #38bdf8;
+      --purple-accent: #8b5cf6;
+      --emerald-accent: #10b981;
+      --amber-accent: #f59e0b;
+      --rose-accent: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --border-soft: rgba(255, 255, 255, 0.1);
+      --border-glow: rgba(6, 182, 212, 0.4);
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --font-display: 'Outfit', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-space);
+      background-image: 
+        radial-gradient(circle at 10% 15%, rgba(37, 99, 235, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 85%, rgba(139, 92, 246, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.06) 0%, transparent 60%);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 1rem;
+      overflow-x: hidden;
+    }
+
+    /* Top App Bar */
+    .app-header {
+      width: 100%;
+      max-width: 640px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 0.2rem 1.2rem;
+      border-bottom: 1px solid var(--border-soft);
+      margin-bottom: 1.2rem;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, var(--blue-accent), var(--cyan-glow));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 0 15px rgba(6, 182, 212, 0.35);
+    }
+
+    .brand-text h1 {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: #fff;
+    }
+
+    .brand-text span {
+      font-size: 0.72rem;
+      color: var(--cyan-light);
+      font-weight: 600;
+    }
+
+    .audio-toggle-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-soft);
+      border-radius: 999px;
+      padding: 0.35rem 0.75rem;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s;
+    }
+
+    .audio-toggle-btn:hover {
+      border-color: var(--cyan-glow);
+      color: #fff;
+    }
+
+    /* Container Box */
+    .app-wrapper {
+      width: 100%;
+      max-width: 640px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Screen Views */
+    .screen {
+      display: none;
+      flex-direction: column;
+      gap: 1.25rem;
+      animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .screen.active {
+      display: flex;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Glass Cards */
+    .card {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 1.4rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-highlight {
+      border-color: var(--border-glow);
+      box-shadow: 0 0 25px rgba(6, 182, 212, 0.15);
+    }
+
+    /* Intro Screen */
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--cyan-light);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: 1.9rem;
+      font-weight: 900;
+      line-height: 1.15;
+      color: #fff;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, var(--cyan-light), var(--blue-electric), var(--purple-accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+
+    .input-field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .input-field-group label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .text-input {
+      background: rgba(10, 19, 36, 0.8);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-sm);
+      padding: 0.85rem 1rem;
+      font-size: 0.95rem;
+      color: #fff;
+      font-family: var(--font-body);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .text-input:focus {
+      border-color: var(--cyan-glow);
+      box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background: linear-gradient(135deg, var(--blue-accent), var(--cyan-glow));
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 0.95rem 1.4rem;
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      box-shadow: 0 4px 20px rgba(6, 182, 212, 0.3);
+      transition: transform 0.15s ease, box-shadow 0.2s ease;
+      width: 100%;
+    }
+
+    .btn-primary:active {
+      transform: scale(0.98);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-soft);
+      color: var(--text-main);
+      border-radius: var(--radius-sm);
+      padding: 0.8rem 1.2rem;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+      width: 100%;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--cyan-glow);
+    }
+
+    /* Progress and Round Counter */
+    .round-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.8rem;
+    }
+
+    .round-pill {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--cyan-light);
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.25);
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+    }
+
+    .round-year {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+
+    .progress-bar-bg {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 1.25rem;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 20%;
+      background: linear-gradient(90deg, var(--blue-accent), var(--cyan-light));
+      border-radius: 999px;
+      transition: width 0.35s ease;
+    }
+
+    /* Dilemma Presentation */
+    .dilemma-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+
+    .dilemma-context {
+      font-size: 0.92rem;
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      background: rgba(0, 0, 0, 0.25);
+      border-left: 3px solid var(--cyan-glow);
+      padding: 0.85rem 1rem;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+
+    /* Option Cards */
+    .options-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .choice-card {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 1.1rem;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      position: relative;
+    }
+
+    .choice-card:hover {
+      border-color: var(--cyan-glow);
+      background: rgba(6, 182, 212, 0.06);
+      transform: translateY(-2px);
+    }
+
+    .choice-card.selected {
+      border-color: var(--emerald-accent);
+      background: rgba(16, 185, 129, 0.12);
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.25);
+    }
+
+    .choice-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .choice-letter {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--cyan-light);
+    }
+
+    .choice-helix-tag {
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .choice-name {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .choice-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .choice-impact-preview {
+      display: flex;
+      gap: 0.4rem;
+      margin-top: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .impact-pill {
+      font-size: 0.68rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .impact-pos {
+      background: rgba(16, 185, 129, 0.15);
+      color: #6ee7b7;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .impact-neg {
+      background: rgba(244, 63, 94, 0.15);
+      color: #fda4af;
+      border: 1px solid rgba(244, 63, 94, 0.3);
+    }
+
+    /* Outcome Screen (Archetype & Summary) */
+    .archetype-banner {
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .archetype-icon {
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
+      display: inline-block;
+      filter: drop-shadow(0 0 15px rgba(6, 182, 212, 0.5));
+      animation: floatIcon 3s ease-in-out infinite;
+    }
+
+    @keyframes floatIcon {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .archetype-role {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--cyan-light);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .archetype-title {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+    }
+
+    .archetype-tagline {
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      line-height: 1.55;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* Fictional News Headline Card */
+    .news-card {
+      background: rgba(10, 19, 36, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-sm);
+      padding: 1.1rem;
+    }
+
+    .news-date {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--amber-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.4rem;
+    }
+
+    .news-headline {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+
+    .news-snippet {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* 4 Pillars Gauge Grid */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .pillar-card {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-sm);
+      padding: 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .pillar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .pillar-score {
+      font-family: var(--font-mono);
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: #fff;
+    }
+
+    .pillar-bar-bg {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .pillar-bar-val {
+      height: 100%;
+      border-radius: 999px;
+      transition: width 0.6s ease;
+    }
+
+    /* Debate Prompts Card */
+    .debate-box {
+      background: rgba(139, 92, 246, 0.08);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+    }
+
+    .debate-header {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--purple-accent);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .debate-question {
+      font-size: 0.88rem;
+      color: #e2e8f0;
+      line-height: 1.5;
+      margin-bottom: 0.65rem;
+      padding-left: 0.75rem;
+      border-left: 2px solid var(--purple-accent);
+    }
+
+    /* Copy notification toast */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--blue-accent);
+      color: #fff;
+      padding: 0.75rem 1.4rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 999;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Bar -->
+  <header class="app-header">
+    <div class="brand-group">
+      <div class="brand-icon">🏛️</div>
+      <div class="brand-text">
+        <h1>O Dilema do Orquestrador</h1>
+        <span>PIT São José dos Campos • UNIFESP</span>
+      </div>
+    </div>
+    <button class="audio-toggle-btn" id="btn-audio" onclick="toggleAudio()">
+      <span id="audio-icon">🔊</span> Som
+    </button>
+  </header>
+
+  <main class="app-wrapper">
+
+    <!-- SCREEN 1: INTRODUÇÃO -->
+    <section class="screen active" id="screen-intro">
+      <div class="card card-highlight">
+        <div class="hero-badge">🎮 Simulação Estratégica Interativa</div>
+        <h2 class="hero-title">
+          Você é o(a) Orquestrador(a) do <span>PIT São José dos Campos</span>
+        </h2>
+        <p class="hero-desc">
+          O maior ecossistema aeroespacial e tecnológico do Hemisfério Sul está sob sua liderança. 
+          Você terá que tomar <strong>5 decisões complexas</strong> que moldarão o Vale do Paraíba nos próximos anos.
+        </p>
+        
+        <div style="background: rgba(6, 182, 212, 0.08); border-left: 3px solid var(--cyan-glow); padding: 0.85rem 1rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-bottom: 1.25rem; font-size: 0.85rem; color: #cbd5e1; line-height: 1.5;">
+          ⚖️ <strong>Regra do Jogo:</strong> Não existem escolhas certas ou erradas. Cada opção beneficia uma Hélice (Universidade, Indústria, Startups ou Sociedade) e gera trade-offs reais. No final, você descobrirá seu <strong>Arquétipo de Liderança</strong> para debater com a sala!
+        </div>
+
+        <div class="input-field-group">
+          <label for="player-name">Seu Nome ou Apelido (para a credencial final):</label>
+          <input type="text" id="player-name" class="text-input" placeholder="Ex: Josué, Camila, Prof. Ueta..." maxlength="25">
+        </div>
+
+        <button class="btn-primary" onclick="startGame()">
+          <span>Assumir a Orquestração do PIT</span> →
+        </button>
+      </div>
+
+      <div class="card" style="font-size: 0.8rem; color: var(--text-dim); text-align: center;">
+        GETI 2026 • Disciplina de Gestão Estratégica da Tecnologia e Inovação<br>
+        Profª Drª Iraci de Souza João & Prof. Dr. Antônio Yukio Ueta
+      </div>
+    </section>
+
+    <!-- SCREEN 2: RODADA DE DECISÃO -->
+    <section class="screen" id="screen-dilemma">
+      <div class="round-meta">
+        <span class="round-pill" id="round-indicator">DILEMA 1 DE 5</span>
+        <span class="round-year" id="round-year">Ano 1 de Gestão</span>
+      </div>
+
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progress-fill"></div>
+      </div>
+
+      <div class="card card-highlight">
+        <h3 class="dilemma-title" id="dilemma-title">Carregando dilema...</h3>
+        <div class="dilemma-context" id="dilemma-context">Carregando contexto...</div>
+
+        <div class="options-stack" id="options-container">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 3: RESULTADO / ARQUÉTIPO / DEBATE -->
+    <section class="screen" id="screen-result">
+      <div class="card card-highlight archetype-banner">
+        <div class="archetype-icon" id="res-icon">🏛️</div>
+        <div class="archetype-role" id="res-role">Relatório de Gestão (2026–2031)</div>
+        <h2 class="archetype-title" id="res-title">O Diplomata Sistêmico</h2>
+        <p class="archetype-tagline" id="res-tagline">
+          Você equilibrou as hélices com maestria, mantendo a credibilidade científica da UNIFESP e a competitividade da Embraer.
+        </p>
+      </div>
+
+      <!-- Fictional Headline -->
+      <div class="news-card">
+        <div class="news-date">📰 MANCHETE DO VALE NEWS • OUTUBRO DE 2031</div>
+        <h4 class="news-headline" id="news-headline">PIT SJC atinge marca histórica sob gestão orientada a ecossistemas</h4>
+        <p class="news-snippet" id="news-snippet">
+          Análise dos 5 anos de orquestração aponta expansão recorde de patentes conjuntas e atração de novos parceiros industriais.
+        </p>
+      </div>
+
+      <!-- 4 Pillars Breakdown -->
+      <div class="card">
+        <div style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.85rem;">
+          📊 Impacto nos 4 Pilares Estratégicos do PIT
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-header">
+              <span>🔬 Confiança Acadêmica</span>
+              <span class="pillar-score" id="score-academia">75%</span>
+            </div>
+            <div class="pillar-bar-bg">
+              <div class="pillar-bar-val" id="bar-academia" style="width: 75%; background: var(--cyan-light);"></div>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-header">
+              <span>🚀 Deep Tech & Startups</span>
+              <span class="pillar-score" id="score-startups">80%</span>
+            </div>
+            <div class="pillar-bar-bg">
+              <div class="pillar-bar-val" id="bar-startups" style="width: 80%; background: var(--purple-accent);"></div>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-header">
+              <span>🏢 Força Corporativa</span>
+              <span class="pillar-score" id="score-corporations">85%</span>
+            </div>
+            <div class="pillar-bar-bg">
+              <div class="pillar-bar-val" id="bar-corporations" style="width: 85%; background: var(--blue-electric);"></div>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-header">
+              <span>🌱 Sociedade & ESG</span>
+              <span class="pillar-score" id="score-esg">70%</span>
+            </div>
+            <div class="pillar-bar-bg">
+              <div class="pillar-bar-val" id="bar-esg" style="width: 70%; background: var(--emerald-accent);"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Debate Questions Box -->
+      <div class="debate-box">
+        <div class="debate-header">
+          <span>🎤</span> Suas Perguntas para o Debate em Sala:
+        </div>
+        <p style="font-size: 0.8rem; color: #cbd5e1; margin-bottom: 0.75rem;">
+          Quando a equipe do seminário abrir a rodada de conversa, defenda suas escolhas usando estas provocações:
+        </p>
+        <div class="debate-question" id="debate-q1">
+          Por que você preferiu ceder a patente exclusiva à indústria em vez de manter a cotitularidade pública da UNIFESP?
+        </div>
+        <div class="debate-question" id="debate-q2">
+          Como você justificaria para o prefeito de São José dos Campos o impacto do PIT nos bairros vizinhos?
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+        <button class="btn-primary" onclick="copyResult()">
+          📋 Compartilhar / Copiar meu Desfecho
+        </button>
+        <button class="btn-secondary" onclick="restartGame()">
+          🔄 Jogar Novamente com Outras Escolhas
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="toast" id="toast">Copiado para a área de transferência!</div>
+
+  <!-- Game Logic Script -->
+  <script>
+    // Web Audio Synthesizer for tactile feedback
+    let audioEnabled = true;
+    let audioCtx = null;
+
+    function initAudio() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+    }
+
+    function playBeep(freq, type, duration) {
+      if (!audioEnabled) return;
+      try {
+        initAudio();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = type || 'sine';
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
+      } catch (e) {
+        // Audio not allowed yet
+      }
+    }
+
+    function toggleAudio() {
+      audioEnabled = !audioEnabled;
+      document.getElementById('audio-icon').textContent = audioEnabled ? '🔊' : '🔇';
+    }
+
+    /* 5 Dilemmas Configuration */
+    const dilemmas = [
+      {
+        id: 1,
+        year: "Ano 1 de Mandato • 2026",
+        title: "Dilema 1: A Batalha da Patente (Academia vs Indústria)",
+        context: "Um laboratório da UNIFESP e uma startup do Nexus criaram um compósito nanoestruturado ultraleve para fuselagens. Uma gigante aeroespacial oferece R$ 8 milhões para industrializar o projeto, mas exige sigilo total de 5 anos e patente exclusiva mundial, impedindo que o aluno da UNIFESP publique sua dissertação de mestrado. Como você orquestra?",
+        choices: [
+          {
+            letter: "A",
+            helix: "Foco: Indústria & Escala",
+            name: "Aceitar a Exclusividade da Multinacional",
+            desc: "Garante os R$ 8 milhões e a aplicação imediata em voo comercial, mas revolta os docentes da UNIFESP e atrasa a titulação acadêmica.",
+            impacts: [
+              { text: "+30 Força Corporativa", type: "pos" },
+              { text: "-25 Confiança Acadêmica", type: "neg" }
+            ],
+            scores: { academia: -25, startups: +10, corporations: +30, esg: 0 }
+          },
+          {
+            letter: "B",
+            helix: "Foco: Governança & Cotitularidade",
+            name: "Orquestrar Licenciamento Híbrido com Cotitularidade",
+            desc: "Você impõe: a patente é cotitular (UNIFESP-Empresa), a empresa tem direito comercial prioritário e a dissertação é publicada com dados anonimizados após 6 meses.",
+            impacts: [
+              { text: "+20 Confiança Acadêmica", type: "pos" },
+              { text: "+15 Força Corporativa", type: "pos" }
+            ],
+            scores: { academia: +20, startups: +15, corporations: +15, esg: +5 }
+          },
+          {
+            letter: "C",
+            helix: "Foco: Deep Tech & Spin-off",
+            name: "Rejeitar a Multinacional e Incubar Spin-off Própria",
+            desc: "Recusar a proposta e fundar uma spin-off com os alunos e docentes no Nexus Hub, buscando editais da FAPESP (PIPE) para manter 100% da tecnologia pública.",
+            impacts: [
+              { text: "+30 Startups & Deep Tech", type: "pos" },
+              { text: "-20 Liquidez Corporativa", type: "neg" }
+            ],
+            scores: { academia: +25, startups: +30, corporations: -20, esg: +10 }
+          }
+        ]
+      },
+      {
+        id: 2,
+        year: "Ano 2 de Mandato • 2027",
+        title: "Dilema 2: O Perfil de Aceleração do Nexus Hub",
+        context: "O Nexus Hub tem orçamento e bancadas limitadas para o próximo ciclo de inovação. Há duas vocações concorrentes disputando as vagas: soluções digitais rápidas (SaaS/Apps) versus deep techs aeroespaciais e de saúde que levam anos para certificar. O que o PIT prioriza?",
+        choices: [
+          {
+            letter: "A",
+            helix: "Foco: Deep Techs & Hardware Pesado",
+            name: "Priorizar Satélites, Propulsão e Biotecnologia",
+            desc: "Focar em projetos de ciclo longo (5 anos) com alta complexidade física, alinhados com ITA, INPE e UNIFESP. O retorno financeiro é lento, mas o impacto nacional é imenso.",
+            impacts: [
+              { text: "+35 Inovação Disruptiva", type: "pos" },
+              { text: "-15 Retorno Financeiro Imediato", type: "neg" }
+            ],
+            scores: { academia: +20, startups: +35, corporations: +10, esg: +10 }
+          },
+          {
+            letter: "B",
+            helix: "Foco: SaaS Ágil & Métricas Rápidas",
+            name: "Priorizar Software, IA e Startups de Faturamento Rápido",
+            desc: "Acelerar startups de software B2B e marketplaces com tração em 6 meses, inflando os relatórios de geração de receita do parque para impressionar conselheiros.",
+            impacts: [
+              { text: "+25 Caixa & Liquidez", type: "pos" },
+              { text: "-20 Diferenciação Tecnológica", type: "neg" }
+            ],
+            scores: { academia: -15, startups: +15, corporations: +25, esg: -5 }
+          },
+          {
+            letter: "C",
+            helix: "Foco: Simbiose Intersetorial",
+            name: "Obrigar Coopetição: Software a Serviço do Hardware",
+            desc: "Exigir que as startups de IA e software desenvolvam algoritmos exclusivamente voltados para otimizar os testes e ensaios das deep techs aeroespaciais.",
+            impacts: [
+              { text: "+25 Coesão de Rede", type: "pos" },
+              { text: "+20 Inovação", type: "pos" }
+            ],
+            scores: { academia: +15, startups: +25, corporations: +15, esg: +15 }
+          }
+        ]
+      },
+      {
+        id: 3,
+        year: "Ano 3 de Mandato • 2028",
+        title: "Dilema 3: O Fundo Estrangeiro e a Soberania Nacional",
+        context: "Em meio a um aperto fiscal nos editais do governo, um fundo soberano asiático oferece R$ 50 milhões para construir um Centro de Supercomputação no PIT, mas exige controle majoritário dos dados de voo e apropriação internacional das patentes desenvolvidas. Como você se posiciona?",
+        choices: [
+          {
+            letter: "A",
+            helix: "Foco: Capital Global Sem Barreiras",
+            name: "Aceitar a Parceria Integral com o Fundo Asiático",
+            desc: "Coloca o PIT no topo dos rankings mundiais de infraestrutura computacional, mas gera crise institucional imediata com o Ministério da Defesa e DCTA por risco de espionagem.",
+            impacts: [
+              { text: "+35 Caixa & Poderio", type: "pos" },
+              { text: "-30 Confiança Institucional", type: "neg" }
+            ],
+            scores: { academia: -10, startups: +20, corporations: +35, esg: -25 }
+          },
+          {
+            letter: "B",
+            helix: "Foco: Soberania & Consórcio Brasileiro",
+            name: "Rejeitar a Oferta e Articular Consórcio Mútuo Nacional",
+            desc: "Montar um pool com BNDES, Finep, Embraer e FAPESP. A captação será 40% menor e mais burocrática, mas os dados e patentes continuam 100% sob soberania nacional.",
+            impacts: [
+              { text: "+30 Soberania & Confiança", type: "pos" },
+              { text: "-15 Velocidade de Execução", type: "neg" }
+            ],
+            scores: { academia: +25, startups: +10, corporations: +10, esg: +20 }
+          },
+          {
+            letter: "C",
+            helix: "Foco: Diplomacia Tecnológica Híbrida",
+            name: "Aceitar com 'Golden Share' e Auditoria da UNIFESP/ITA",
+            desc: "Permitir o aporte, mas com veto público absoluto em algoritmos militares e exigência de que os servidores físicos fiquem trancados dentro do campus em Eugênio de Melo.",
+            impacts: [
+              { text: "+20 Capital", type: "pos" },
+              { text: "+20 Segurança", type: "pos" }
+            ],
+            scores: { academia: +15, startups: +20, corporations: +20, esg: +10 }
+          }
+        ]
+      },
+      {
+        id: 4,
+        year: "Ano 4 de Mandato • 2029",
+        title: "Dilema 4: O Muro do Parque e a Sociedade (4ª Hélice)",
+        context: "Lideranças comunitárias da Zona Leste de São José dos Campos protestam na Câmara de Vereadores, afirmando que o PIT é uma 'ilha de riqueza blindada' com restaurantes caros e ar-condicionado, que não gera impacto palpável nas escolas públicas e bairros vizinhos. Como agir?",
+        choices: [
+          {
+            letter: "A",
+            helix: "Foco: Cidadania & Living Lab Urbano",
+            name: "Abrir o PIT como Living Lab para Soluções da Periferia",
+            desc: "Criar edital para startups testarem saneamento, telemedicina da UNIFESP e transporte limpo nos bairros locais, abrindo o campus para feiras de ciências com escolas públicas.",
+            impacts: [
+              { text: "+35 Legitimidade Social", type: "pos" },
+              { text: "-10 Foco Restrito da Indústria", type: "neg" }
+            ],
+            scores: { academia: +20, startups: +20, corporations: -5, esg: +35 }
+          },
+          {
+            letter: "B",
+            helix: "Foco: Especialização Produtiva Fechada",
+            name: "Blindar o Foco: Parque Tecnológico não é Centro Comunitário",
+            desc: "Manter o acesso restrito e foco exclusivo em aeroespacial de alta precisão, defendendo na imprensa que o papel do PIT é gerar PIB, impostos e exportações para o Brasil.",
+            impacts: [
+              { text: "+20 Foco Industrial", type: "pos" },
+              { text: "-30 Desgaste Político", type: "neg" }
+            ],
+            scores: { academia: -15, startups: +5, corporations: +25, esg: -30 }
+          },
+          {
+            letter: "C",
+            helix: "Foco: Escola de Alta Precisão & Emprego",
+            name: "Criar Escola Técnica Integrada (UNIFESP-FATEC-Embraer)",
+            desc: "Formar 500 jovens da periferia por ano em usinagem aeroespacial, solda robótica e programação de drones com contratação garantida pelas empresas do APL.",
+            impacts: [
+              { text: "+25 Impacto Social", type: "pos" },
+              { text: "+25 Mão de Obra Qualificada", type: "pos" }
+            ],
+            scores: { academia: +15, startups: +15, corporations: +25, esg: +25 }
+          }
+        ]
+      },
+      {
+        id: 5,
+        year: "Ano 5 de Mandato • 2030",
+        title: "Dilema 5: O Combustível do Futuro e o Choque Verde (5ª Hélice)",
+        context: "Metas climáticas internacionais impõem pesadas taxas de carbono sobre aviões que usam querosene fóssil. O PIT pode liderar a revolução dos combustíveis sustentáveis de aviação (SAF) e hidrogênio verde, mas as fábricas tradicionais de peças mecânicas do Vale do Paraíba temem quebrar. Qual é o seu rumo final?",
+        choices: [
+          {
+            letter: "A",
+            helix: "Foco: Choque Radical de Sustentabilidade",
+            name: "Decretar Moratória Verde: 100% dos Incentivos para Descarbonização",
+            desc: "Cortar qualquer incentivo fiscal do parque para motores a combustão tradicional e canalizar todo o fomento para hidrogênio verde, SAF e eVTOLs elétricos.",
+            impacts: [
+              { text: "+40 Liderança ESG Global", type: "pos" },
+              { text: "-25 Empregos na Cadeia Fóssil", type: "neg" }
+            ],
+            scores: { academia: +20, startups: +30, corporations: -15, esg: +45 }
+          },
+          {
+            letter: "B",
+            helix: "Foco: Gradualismo & Proteção do Emprego Existente",
+            name: "Transição Suave para Proteger as Empresas Tradicionais",
+            desc: "Evitar rupturas drásticas; manter o fomento às peças tradicionais da Embraer e apenas financiar pequenas pesquisas piloto em combustíveis alternativos.",
+            impacts: [
+              { text: "+20 Estabilidade Financeira", type: "pos" },
+              { text: "-30 Risco de Obsolescência", type: "neg" }
+            ],
+            scores: { academia: -15, startups: -10, corporations: +30, esg: -25 }
+          },
+          {
+            letter: "C",
+            helix: "Foco: Hélice Quíntupla Integrada (Agro + Aero)",
+            name: "Orquestrar o Grande Corredor Paulista de SAF",
+            desc: "Conectar o agronegócio de cana do interior paulista com os laboratórios químicos da UNIFESP, o ITA e os bancos de testes de turbinas da Embraer no PIT.",
+            impacts: [
+              { text: "+35 Inovação Sistêmica", type: "pos" },
+              { text: "+30 Sustentabilidade", type: "pos" }
+            ],
+            scores: { academia: +25, startups: +25, corporations: +25, esg: +35 }
+          }
+        ]
+      }
+    ];
+
+    let currentRound = 0;
+    let playerName = "Orquestrador(a)";
+    let playerScores = {
+      academia: 50,
+      startups: 50,
+      corporations: 50,
+      esg: 50
+    };
+    let choicesHistory = [];
+
+    function startGame() {
+      const nameInput = document.getElementById('player-name').value.trim();
+      if (nameInput) {
+        playerName = nameInput;
+      }
+      playBeep(440, 'sine', 0.15);
+      showScreen('screen-dilemma');
+      loadDilemma(0);
+    }
+
+    function showScreen(screenId) {
+      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+      document.getElementById(screenId).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function loadDilemma(index) {
+      currentRound = index;
+      const d = dilemmas[index];
+
+      document.getElementById('round-indicator').textContent = `DILEMA ${index + 1} DE ${dilemmas.length}`;
+      document.getElementById('round-year').textContent = d.year;
+      document.getElementById('progress-fill').style.width = `${((index + 1) / dilemmas.length) * 100}%`;
+
+      document.getElementById('dilemma-title').textContent = d.title;
+      document.getElementById('dilemma-context').textContent = d.context;
+
+      const container = document.getElementById('options-container');
+      container.innerHTML = '';
+
+      d.choices.forEach((c, cIdx) => {
+        const card = document.createElement('div');
+        card.className = 'choice-card';
+        card.onclick = () => selectChoice(cIdx);
+
+        let impactsHtml = '';
+        c.impacts.forEach(imp => {
+          impactsHtml += `<span class="impact-pill ${imp.type === 'pos' ? 'impact-pos' : 'impact-neg'}">${imp.text}</span>`;
+        });
+
+        card.innerHTML = `
+          <div class="choice-header">
+            <span class="choice-letter">OPÇÃO ${c.letter}</span>
+            <span class="choice-helix-tag">${c.helix}</span>
+          </div>
+          <div class="choice-name">${c.name}</div>
+          <div class="choice-desc">${c.desc}</div>
+          <div class="choice-impact-preview">
+            ${impactsHtml}
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function selectChoice(choiceIdx) {
+      playBeep(587.33, 'triangle', 0.12);
+      const choice = dilemmas[currentRound].choices[choiceIdx];
+      choicesHistory.push({
+        dilemmaId: dilemmas[currentRound].id,
+        choiceLetter: choice.letter,
+        choiceName: choice.name,
+        scores: choice.scores
+      });
+
+      // Accumulate scores
+      playerScores.academia += choice.scores.academia;
+      playerScores.startups += choice.scores.startups;
+      playerScores.corporations += choice.scores.corporations;
+      playerScores.esg += choice.scores.esg;
+
+      // Normalization (clamp between 10% and 100%)
+      for (let k in playerScores) {
+        playerScores[k] = Math.max(10, Math.min(100, playerScores[k]));
+      }
+
+      // Visual highlight
+      const cards = document.querySelectorAll('.choice-card');
+      cards[choiceIdx].classList.add('selected');
+
+      setTimeout(() => {
+        if (currentRound + 1 < dilemmas.length) {
+          loadDilemma(currentRound + 1);
+        } else {
+          finishGame();
+        }
+      }, 400);
+    }
+
+    function finishGame() {
+      playBeep(880, 'sine', 0.3);
+      calculateArchetype();
+      showScreen('screen-result');
+    }
+
+    function calculateArchetype() {
+      const { academia, startups, corporations, esg } = playerScores;
+
+      let icon = "🏛️";
+      let title = "O Diplomata Sistêmico";
+      let tagline = `${playerName}, sua gestão equilibrou a autonomia da UNIFESP com as demandas de grande porte da Embraer e a agilidade das startups do Nexus.`;
+      let headline = `PIT SJC atinge marca histórica de co-criação sob liderança equilibrada de ${playerName}`;
+      let snippet = "Após 5 anos de gestão orquestrada, o Parque Tecnológico de São José dos Campos consolidou o modelo de inovação aberta mais estável da América Latina.";
+      let q1 = "Como você conseguiu manter a confiança dos pesquisadores da UNIFESP sem afugentar os prazos rígidos da grande indústria aeroespacial?";
+      let q2 = "Se houvesse um novo choque financeiro, qual dos 4 pilares você estaria disposto(a) a sacrificar primeiro?";
+
+      // Determine archetype by maximum dominant score or combinations
+      if (corporations >= 75 && corporations > academia && corporations > esg) {
+        icon = "💼";
+        title = "O Pragmático Corporativo";
+        tagline = `${playerName}, seu mandato priorizou a atração de capital maciço, escala industrial com a Embraer e sobrevivência financeira do parque acima de debates teóricos.`;
+        headline = `Faturamento das empresas associadas ao PIT SJC cresce 140% com atração de multinacionais`;
+        snippet = `A gestão de ${playerName} foi marcada por pragmatismo: grandes contratos de defesa foram assinados, embora alguns docentes tenham reclamado de rigidez nas patentes.`;
+        q1 = "Você não teme que o parque tenha se transformado em uma prestadora de serviços da grande indústria em vez de um polo de ciência aberta?";
+        q2 = "Como responder aos alunos de mestrado que sentem suas dissertações tolhidas por acordos de sigilo corporativo?";
+      } else if (academia >= 75 && academia > corporations) {
+        icon = "🔬";
+        title = "O Guardião da Ciência Aberta";
+        tagline = `${playerName}, você blindou o papel da universidade pública (UNIFESP/ITA), defendeu patentes abertas e garantiu que o conhecimento gerado permanecesse acessível à sociedade.`;
+        headline = `PIT SJC e UNIFESP batem recorde de publicações científicas e cotitularidade pública`;
+        snippet = `Sob a batuta de ${playerName}, o parque recusou exigências leoninas de multinacionais e priorizou spin-offs de base científica pura.`;
+        q1 = "Como sustentar as contas do parque e o pagamento de bolsistas sem os aportes multimilionários das grandes corporações privadas?";
+        q2 = "O que fazer quando uma empresa âncora ameaça migrar seus laboratórios para outro estado por falta de exclusividade em patentes?";
+      } else if (startups >= 75 && startups > corporations) {
+        icon = "⚡";
+        title = "O Acelerador de Deep Techs";
+        tagline = `${playerName}, sua obsessão foi o risco radical: você transformou o Nexus Hub em um ninho de pioneiros em satélites, drones e computação de ponta.`;
+        headline = `Nexus Hub no PIT se torna o maior celeiro de deep techs e hardware aeroespacial do país`;
+        snippet = `Com a aposta corajosa de ${playerName} em tecnologias de ciclo longo, o parque formou uma nova geração de empreendedores de alta tecnologia.`;
+        q1 = "Como lidar com a taxa natural de mortalidade das deep techs antes que elas alcancem o 'vale da morte' da certificação aeronáutica?";
+        q2 = "As grandes empresas do APL apoiaram sua visão ou sentiram que o parque estava dispersando recursos em empresas iniciantes?";
+      } else if (esg >= 75 && esg > corporations) {
+        icon = "🌱";
+        title = "O Pioneiro da Quíntupla Hélice";
+        tagline = `${playerName}, você colocou a descarbonização, a transição para SAF e o impacto nos bairros da periferia no centro absoluto da governança.`;
+        headline = `PIT São José dos Campos é premiado internacionalmente como Parque Mais Sustentável e Inclusivo`;
+        snippet = `A estratégia ousada de ${playerName} conectou a transição verde aeroespacial a programas de inclusão nas escolas públicas de São José dos Campos.`;
+        q1 = "Como você convenceu os executivos da cadeia fóssil tradicional a apoiarem metas climáticas tão arrojadas sem demissões em massa?";
+        q2 = "A sociedade de São José dos Campos realmente percebeu o parque como um espaço público e acessível?";
+      }
+
+      // Update UI elements
+      document.getElementById('res-icon').textContent = icon;
+      document.getElementById('res-title').textContent = title;
+      document.getElementById('res-tagline').textContent = tagline;
+      document.getElementById('news-headline').textContent = headline;
+      document.getElementById('news-snippet').textContent = snippet;
+
+      document.getElementById('score-academia').textContent = academia + '%';
+      document.getElementById('bar-academia').style.width = academia + '%';
+
+      document.getElementById('score-startups').textContent = startups + '%';
+      document.getElementById('bar-startups').style.width = startups + '%';
+
+      document.getElementById('score-corporations').textContent = corporations + '%';
+      document.getElementById('bar-corporations').style.width = corporations + '%';
+
+      document.getElementById('score-esg').textContent = esg + '%';
+      document.getElementById('bar-esg').style.width = esg + '%';
+
+      document.getElementById('debate-q1').textContent = q1;
+      document.getElementById('debate-q2').textContent = q2;
+    }
+
+    function copyResult() {
+      const title = document.getElementById('res-title').textContent;
+      const tagline = document.getElementById('res-tagline').textContent;
+      const q1 = document.getElementById('debate-q1').textContent;
+      const q2 = document.getElementById('debate-q2').textContent;
+
+      const textToShare = 
+`🏛️ MEU DESFECHO NO PIT SÃO JOSÉ DOS CAMPOS:
+Líder: ${playerName}
+Arquétipo: ${title}
+"${tagline}"
+
+📊 Minhas Métricas de Governança:
+• Confiança Acadêmica (UNIFESP): ${playerScores.academia}%
+• Deep Tech & Startups (Nexus): ${playerScores.startups}%
+• Força Corporativa (Embraer/Indústria): ${playerScores.corporations}%
+• Sociedade & ESG (Cidades Inteligentes): ${playerScores.esg}%
+
+🎤 Minhas Questões para o Debate:
+1. ${q1}
+2. ${q2}
+
+Jogue também no Seminário 5: https://josuejofre.github.io/seminario-ecossistema-inovacao-pit/jogo.html`;
+
+      navigator.clipboard.writeText(textToShare).then(() => {
+        showToast("Resultado copiado! Compartilhe no WhatsApp da sala.");
+      }).catch(() => {
+        showToast("Selecione o texto e copie manualmente.");
+      });
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => {
+        t.classList.remove('show');
+      }, 3000);
+    }
+
+    function restartGame() {
+      playerScores = { academia: 50, startups: 50, corporations: 50, esg: 50 };
+      choicesHistory = [];
+      showScreen('screen-intro');
+    }
+  </script>
+</body>
+</html>

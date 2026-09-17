@@ -4,8 +4,15 @@
 > Disciplina: Gestão Estratégica da Tecnologia e Inovação (GETI 2026)  
 > Programa de Pós-Graduação em Inovação Tecnológica (PPG-PIT) – UNIFESP Campus Parque Tecnológico de São José dos Campos
 
-🌐 **Link Direto da Apresentação no GitHub Pages:**  
-👉 **[https://josuejofre.github.io/seminario-ecossistema-inovacao-pit/](https://josuejofre.github.io/seminario-ecossistema-inovacao-pit/)**
+---
+
+## 🌐 Links Oficiais no GitHub Pages
+
+* 🖥️ **Apresentação de Slides (2 Horas):**  
+  👉 **[https://josuejofre.github.io/seminario-ecossistema-inovacao-pit/](https://josuejofre.github.io/seminario-ecossistema-inovacao-pit/)**
+
+* 📱 **Game da Dinâmica Interativa (Para celulares da sala via QR Code):**  
+  👉 **[https://josuejofre.github.io/seminario-ecossistema-inovacao-pit/jogo.html](https://josuejofre.github.io/seminario-ecossistema-inovacao-pit/jogo.html)**
 
 ---
 
@@ -26,65 +33,55 @@
 
 ---
 
-## 🎯 Estrutura dos 120 Minutos de Apresentação
+## 🎮 A Dinâmica Interativa: "O Orquestrador do Ecossistema"
 
-O seminário atende rigorosamente à ementa e à planilha de divisão dos blocos (`Divisao_Seminario_Ecossistema_Inovacao.xlsm`):
+Substituindo o tradicional quiz de perguntas e respostas com "certo e errado", a dinâmica foi construída como um **jogo imersivo de tomada de decisões estratégicas em 5 rodadas**:
 
-1. **Bloco 1 (15 min) – Conceito e Evolução dos Ecossistemas de Inovação:**  
-   * Origem e metáfora ecológica: Moore (1993), Adner (2006, 2017), Granstrand & Holgersson (2020).
-   * Mapeamento cienciométrico global (Shen et al., 2025/2026).
-   * Diferenciação conceitual: Ecossistema vs Cluster vs Redes vs Sistemas de Inovação (SNI/SRI).
-2. **Bloco 2 (15 min) – Anatomia do Ecossistema de Inovação:**  
-   * Heterogeneidade e interdependência simbiótica (Machado, Faccin & Bittencourt, 2025).
-   * As Hélices da Inovação (Tríplice, Quádrupla e Quíntupla Hélice).
-   * Criação e co-criação coletiva de valor (superaditividade e riscos de apropriação desigual).
-3. **Bloco 3 (15 min) – Governança e Orquestração:**  
-   * Quem coordena atores autônomos sem comando e controle? (Dhanaraj & Parkhe, 2006).
-   * As 5 dimensões da orquestração e competências dinâmicas (cognitivas, relacionais e estruturais).
-4. **Bloco 4 (15 min) – Construção e Gestão de Ecossistemas:**  
-   * Design deliberado vs espontaneidade (Furr & Shipilov, 2018 - MIT Sloan).
-   * Matriz de decisão: Ecossistemas Centralizados (Hub-and-Spoke) vs Adaptativos (Federados).
-   * Parcerias não convencionais e coopetição em estágio pré-competitivo.
-5. **Bloco 5 (15 min) – Estudo de Caso Internacional (San Diego):**  
-   * 20 anos de estudos sobre o ecossistema de San Diego (Majava & Rinkinen, 2026).
-   * Papel da UC San Diego, Salk Institute, Scripps Research, programa CONNECT e a *Beach Culture*.
-6. **Aplicação Prática Nacional – O PIT São José dos Campos:**  
-   * O Parque Tecnológico como orquestrador real do Vale do Paraíba.
-   * APLs Aeroespacial e TIC, Hub Nexus, EMBRAPII e a presença estratégica da UNIFESP.
-   * Benchmarking cruzado: San Diego vs PIT SJC.
-7. **Atividade Obrigatória (15 min) – Entrevista com Liderança do PIT SJC:**  
-   * Gravação e soundbites minuto a minuto confrontando a teoria acadêmica com a realidade prática de gestão de parques tecnológicos.
-8. **Bloco 6 (15 min) – Desafios, Limitações e Fronteiras da Pesquisa:**  
-   * Delimitação de fronteiras difusas, causalidade reversa, limites da metáfora biológica e o *Dark Side* dos ecossistemas.
-9. **Atividade Dinâmica Interativa + Debate (15 a 20 min):**  
-   * *"O Dilema do Orquestrador no PIT SJC"*: Simulação em tempo real dividindo a sala em 4 bancadas (Academia, Corporações, Startups e Governo) com votação ao vivo e cálculo imediato do impacto em Coesão, Inovação e Sustentabilidade Financeira.
-10. **Conclusões, 5 Leis Estratégicas e Sessão de Q&A.**
+1. **Acesso Fácil via QR Code:** Projetado no **Slide 25**, os colegas e professores apontam a câmera do celular e acessam a página do jogo.
+2. **5 Dilemas Reais do PIT SJC:**
+   * *Dilema 1:* A Disputa da Patente e Sigilo (UNIFESP vs Multinacional).
+   * *Dilema 2:* O Perfil de Aceleração do Nexus Hub (Deep Techs vs SaaS Ágil).
+   * *Dilema 3:* Fundo Soberano Estrangeiro vs Soberania Nacional.
+   * *Dilema 4:* O Muro do Parque e a Sociedade Local (4ª Hélice & Living Lab).
+   * *Dilema 5:* Descarbonização da Aviação, SAF e Transição Justa (5ª Hélice).
+3. **Desfecho Personalizado:**
+   * Revelação do **Arquétipo de Orquestrador** de cada jogador (ex: *O Pragmático Corporativo*, *O Guardião da Ciência Aberta*, *O Acelerador de Deep Techs*, *O Pioneiro da Quíntupla Hélice*, *O Diplomata Sistêmico*, *O Articulador Comunitário*).
+   * **Manchete de Jornal de 2031** com o impacto das escolhas.
+   * Gráfico de barras com as métricas nos 4 pilares.
+   * **Perguntas Provocativas** para subsidiar a roda de conversa imediata.
+4. **Debriefing em Sala (Slide 26):**
+   * Painel de debriefing com contadores interativos ao vivo para mapear quantos alunos tiraram cada perfil na sala.
+   * Rodada de conversa orientada para quem quiser justificar e debater suas escolhas de governança com os professores.
 
 ---
 
-## ⌨️ Recursos e Atalhos de Navegação
+## ⌨️ Recursos e Atalhos de Navegação da Apresentação
 
 * `←` ou `→` (ou `Espaço`): Navegar entre os 29 slides.
 * `N`: Abrir/Fechar **Notas do Orador** (script sugerido, tempo recomendado e responsável por slide).
 * `G`: Abrir a **Grade Panorâmica** com miniaturas de todos os slides.
 * `F`: Ativar/Desativar **Modo Tela Cheia (Fullscreen)**.
-* `Home` / `End`: Ir diretamente ao primeiro ou último slide.
-* **Cronômetro Master dos 120 Minutos**: Integrado no cabeçalho com botões de Iniciar (▶), Pausar (⏸) e Zerar (↺).
+* `Home` / `End`: Ir diretamente para o primeiro ou último slide.
+* **Top Clock**: Cronômetro Master de 120 minutos (com Play, Pause e Reset).
 
 ---
 
 ## 📁 Estrutura de Arquivos do Repositório
 
 ```text
-├── index.html                               # Aplicação principal (GitHub Pages)
+├── index.html                               # Apresentação Principal (GitHub Pages)
+├── jogo.html                                # Jogo Interativo Mobile de Escolhas e Desfechos
 ├── apresentacao_seminario_ecossistema_pit.html # Cópia original da apresentação
 ├── Divisao_Seminario_Ecossistema_Inovacao.xlsm # Planilha com a divisão oficial
-├── generate_deck.py                         # Script gerador do código da apresentação
+├── generate_deck.py                         # Script gerador da apresentação
+├── update_slides.py                         # Script de atualização de slides
 ├── assets/                                  # Imagens e ativos visuais em alta resolução
+│   ├── qrcode_jogo.png                      # QR Code de acesso ao jogo no smartphone
+│   ├── qrcode_jogo.svg                      # QR Code vetorial de alta definição
 │   ├── pit_sjc_facade.jpg                   # Fachada do Parque de Inovação Tecnológica SJC
 │   ├── san_diego_cluster.jpg                # Cluster de inovação de San Diego (UCSD / Torrey Pines)
 │   ├── nexus_pit_hub.jpg                    # Interior do Hub Nexus / Orquestração
 │   ├── pit_interview_leader.jpg             # Entrevista executiva com liderança do PIT
 │   └── ecosystem_dynamic_workshop.jpg       # Workshop interativo da dinâmica de sala
-└── README.md                                # Documentação e guia do seminário
+└── README.md                                # Documentação completa
 ```
