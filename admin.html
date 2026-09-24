@@ -518,50 +518,56 @@
 
     .charts-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-      gap: 1.25rem;
+      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+      gap: 1.5rem;
     }
 
     .chart-card {
       background: var(--bg-card);
       border: 1px solid var(--border-soft);
       border-radius: var(--radius-md);
-      padding: 1.35rem;
+      padding: 1.5rem;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
-      transition: transform 0.2s;
+      gap: 1.15rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      overflow: hidden;
+      min-width: 0;
     }
 
     .chart-card:hover {
-      border-color: var(--border-glow);
+      border-color: rgba(6, 182, 212, 0.4);
+      box-shadow: 0 0 25px rgba(6, 182, 212, 0.08);
     }
 
     .chart-q-num {
       font-family: var(--font-mono);
-      font-size: 0.75rem;
+      font-size: 0.82rem;
       color: var(--cyan-light);
       font-weight: 700;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
     }
 
     .chart-q-text {
       font-family: var(--font-display);
-      font-size: 0.98rem;
-      font-weight: 700;
+      font-size: 1.05rem;
+      font-weight: 800;
       color: #fff;
-      line-height: 1.35;
+      line-height: 1.4;
+      margin-top: 0.35rem;
     }
 
     .chart-body {
       display: flex;
       align-items: center;
-      gap: 1.5rem;
+      gap: 1.6rem;
+      min-width: 0;
     }
 
     .pie-container {
-      width: 140px;
-      height: 140px;
+      width: 155px;
+      height: 155px;
       flex-shrink: 0;
       position: relative;
     }
@@ -577,55 +583,128 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 0.65rem;
+      min-width: 0;
     }
 
-    .legend-item {
+    .legend-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-sm);
+      padding: 0.55rem 0.75rem;
+      min-width: 0;
+    }
+
+    .legend-row-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-size: 0.78rem;
       gap: 0.5rem;
     }
 
-    .legend-bullet {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      flex-shrink: 0;
+    .legend-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
     }
 
-    .legend-label {
-      flex: 1;
-      color: #cbd5e1;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+    .pill-correct {
+      background: rgba(16, 185, 129, 0.18);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
     }
 
-    .legend-pct {
+    .pill-wrong-b {
+      background: rgba(239, 68, 68, 0.18);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.4);
+    }
+
+    .pill-wrong-c {
+      background: rgba(245, 158, 11, 0.18);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+    }
+
+    .legend-pct-box {
+      display: flex;
+      align-items: baseline;
+      gap: 0.35rem;
+    }
+
+    .legend-pct-num {
       font-family: var(--font-mono);
-      font-weight: 700;
-      font-size: 0.8rem;
+      font-size: 1.35rem;
+      font-weight: 900;
+      line-height: 1;
     }
+
+    .pct-correct { color: #34d399; text-shadow: 0 0 10px rgba(52, 211, 153, 0.4); }
+    .pct-wrong-b { color: #f87171; text-shadow: 0 0 10px rgba(248, 113, 113, 0.4); }
+    .pct-wrong-c { color: #fbbf24; text-shadow: 0 0 10px rgba(251, 191, 36, 0.4); }
+
+    .legend-pct-votes {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+
+    .legend-desc {
+      font-size: 0.84rem;
+      color: #cbd5e1;
+      line-height: 1.4;
+      white-space: normal;
+      word-break: break-word;
+    }
+
+    .legend-bar-bg {
+      width: 100%;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 0.1rem;
+    }
+
+    .legend-bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      transition: width 0.4s ease;
+    }
+
+    .bar-correct { background: linear-gradient(90deg, #10b981, #34d399); }
+    .bar-wrong-b { background: linear-gradient(90deg, #ef4444, #f87171); }
+    .bar-wrong-c { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
 
     .insight-box {
-      background: rgba(0, 0, 0, 0.35);
+      background: rgba(0, 0, 0, 0.4);
       border-left: 3px solid var(--amber-accent);
-      padding: 0.6rem 0.85rem;
+      padding: 0.75rem 1rem;
       border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      font-size: 0.78rem;
+      font-size: 0.85rem;
       color: #e2e8f0;
-      line-height: 1.45;
+      line-height: 1.48;
     }
 
     .insight-title {
-      font-weight: 700;
+      font-weight: 800;
+      font-size: 0.84rem;
       color: var(--amber-accent);
-      margin-bottom: 0.15rem;
+      margin-bottom: 0.25rem;
       display: flex;
       align-items: center;
-      gap: 0.35rem;
+      gap: 0.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
     /* Modal Winner */
@@ -1578,46 +1657,75 @@
             <div class="pie-container">
               <svg viewBox="0 0 42 42" class="pie-svg">
                 <!-- Base Circle -->
-                <circle cx="21" cy="21" r="${radius}" fill="transparent" stroke="#1e293b" stroke-width="6" />
+                <circle cx="21" cy="21" r="${radius}" fill="transparent" stroke="#1e293b" stroke-width="7" />
                 
                 ${totalVotes === 0 ? `
-                  <circle cx="21" cy="21" r="${radius}" fill="transparent" stroke="#334155" stroke-width="6" stroke-dasharray="100 0" />
+                  <circle cx="21" cy="21" r="${radius}" fill="transparent" stroke="#334155" stroke-width="7" stroke-dasharray="100 0" />
                 ` : `
                   <!-- Option A (Emerald) -->
-                  <circle cx="21" cy="21" r="${radius}" fill="transparent" stroke="var(--emerald-accent)" stroke-width="6"
+                  <circle cx="21" cy="21" r="${radius}" fill="transparent" stroke="var(--emerald-accent)" stroke-width="7"
                     stroke-dasharray="${valA} ${circ - valA}" stroke-dashoffset="-${offA}" />
 
                   <!-- Option B (Rose) -->
-                  <circle cx="21" cy="21" r="${radius}" fill="transparent" stroke="var(--rose-accent)" stroke-width="6"
+                  <circle cx="21" cy="21" r="${radius}" fill="transparent" stroke="var(--rose-accent)" stroke-width="7"
                     stroke-dasharray="${valB} ${circ - valB}" stroke-dashoffset="-${offB}" />
 
                   <!-- Option C (Amber) -->
-                  <circle cx="21" cy="21" r="${radius}" fill="transparent" stroke="var(--amber-accent)" stroke-width="6"
+                  <circle cx="21" cy="21" r="${radius}" fill="transparent" stroke="var(--amber-accent)" stroke-width="7"
                     stroke-dasharray="${valC} ${circ - valC}" stroke-dashoffset="-${offC}" />
                 `}
               </svg>
-              <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                <span style="font-family: var(--font-mono); font-size: 1.15rem; font-weight: 800; color: #fff;">${totalVotes}</span>
-                <span style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase;">votos</span>
+              <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; pointer-events: none;">
+                <span style="font-family: var(--font-mono); font-size: 1.65rem; font-weight: 900; color: #fff; line-height: 1;">${totalVotes}</span>
+                <span style="font-size: 0.72rem; font-weight: 800; color: var(--cyan-light); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 3px;">VOTOS</span>
               </div>
             </div>
 
-            <!-- Legend -->
+            <!-- Legend with Large Numbers, Pills and Progress Bars -->
             <div class="chart-legend">
-              <div class="legend-item">
-                <span class="legend-bullet" style="background: var(--emerald-accent);"></span>
-                <span class="legend-label" title="${q.options[0].text}"><strong>A (Certa):</strong> ${q.options[0].text}</span>
-                <span class="legend-pct" style="color: #6ee7b7;">${pctA}% (${countA})</span>
+              <!-- Option A -->
+              <div class="legend-row">
+                <div class="legend-row-top">
+                  <span class="legend-pill pill-correct">● A (Certa)</span>
+                  <div class="legend-pct-box">
+                    <span class="legend-pct-num pct-correct">${pctA}%</span>
+                    <span class="legend-pct-votes">(${countA} ${countA === 1 ? 'voto' : 'votos'})</span>
+                  </div>
+                </div>
+                <div class="legend-desc">${q.options[0].text}</div>
+                <div class="legend-bar-bg">
+                  <div class="legend-bar-fill bar-correct" style="width: ${pctA}%"></div>
+                </div>
               </div>
-              <div class="legend-item">
-                <span class="legend-bullet" style="background: var(--rose-accent);"></span>
-                <span class="legend-label" title="${q.options[1].text}"><strong>B (Errada):</strong> ${q.options[1].text}</span>
-                <span class="legend-pct" style="color: #fda4af;">${pctB}% (${countB})</span>
+
+              <!-- Option B -->
+              <div class="legend-row">
+                <div class="legend-row-top">
+                  <span class="legend-pill pill-wrong-b">● B (Errada)</span>
+                  <div class="legend-pct-box">
+                    <span class="legend-pct-num pct-wrong-b">${pctB}%</span>
+                    <span class="legend-pct-votes">(${countB} ${countB === 1 ? 'voto' : 'votos'})</span>
+                  </div>
+                </div>
+                <div class="legend-desc">${q.options[1].text}</div>
+                <div class="legend-bar-bg">
+                  <div class="legend-bar-fill bar-wrong-b" style="width: ${pctB}%"></div>
+                </div>
               </div>
-              <div class="legend-item">
-                <span class="legend-bullet" style="background: var(--amber-accent);"></span>
-                <span class="legend-label" title="${q.options[2].text}"><strong>C (Errada):</strong> ${q.options[2].text}</span>
-                <span class="legend-pct" style="color: #fde68a;">${pctC}% (${countC})</span>
+
+              <!-- Option C -->
+              <div class="legend-row">
+                <div class="legend-row-top">
+                  <span class="legend-pill pill-wrong-c">● C (Errada)</span>
+                  <div class="legend-pct-box">
+                    <span class="legend-pct-num pct-wrong-c">${pctC}%</span>
+                    <span class="legend-pct-votes">(${countC} ${countC === 1 ? 'voto' : 'votos'})</span>
+                  </div>
+                </div>
+                <div class="legend-desc">${q.options[2].text}</div>
+                <div class="legend-bar-bg">
+                  <div class="legend-bar-fill bar-wrong-c" style="width: ${pctC}%"></div>
+                </div>
               </div>
             </div>
           </div>
