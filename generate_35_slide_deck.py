@@ -986,8 +986,8 @@ def build_full_html():
 
     <!-- SLIDE 6: BLOCO 1 - DIFERENCIAÇÃO CONCEITUAL -->
     <section class="slide" data-slide="6" data-block="Bloco 1" data-speaker="Nathalia (4ª) / Fernando Barreto (5ª)" data-time="4 min">
-      <div class="slide-tag">⚖️ BLOCO 1 • RIGOR ACADÊMICO</div>
-      <h2 class="slide-title">Diferenciação Crítica: <span>Cluster vs Sistema vs Ecossistema</span></h2>
+      <div class="slide-tag">💡 BLOCO 1 • 4 CONCEITOS ESSENCIAIS</div>
+      <h2 class="slide-title">Como Diferenciar: <span>Cluster, Sistema e Ecossistema</span></h2>
 
       <div class="punchline-card">
         <span style="font-size: 1.4rem;">💡</span>
@@ -1113,7 +1113,7 @@ def build_full_html():
 
       <div class="punchline-card">
         <span style="font-size: 1.4rem;">🔬</span>
-        <div class="punchline-quote">"A monocultura empobrece o solo; a heterogeneidade alimenta a inovação disruptiva."</div>
+        <div class="punchline-quote">"Na saúde, na aviação ou na TI: quando profissionais de áreas diferentes cooperam, o impossível acontece."</div>
       </div>
 
       <div class="grid-3">
@@ -1909,7 +1909,7 @@ def build_full_html():
     <!-- SLIDE 28: BLOCO 6 - DESAFIOS METODOLÓGICOS -->
     <section class="slide" data-slide="28" data-block="Bloco 6" data-speaker="Renato Paschoal (4ª)" data-time="4 min">
       <div class="slide-tag">⚠️ BLOCO 6 • CRÍTICAS E LIMITAÇÕES</div>
-      <h2 class="slide-title">Desafios Metodológicos da Teoria: <span>Shen et al.</span></h2>
+      <h2 class="slide-title">Pés no Chão (Shen et al.): <span>Evitando o "Teatro da Inovação"</span></h2>
 
       <div class="punchline-card">
         <span style="font-size: 1.4rem;">🔍</span>

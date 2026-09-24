@@ -25,14 +25,21 @@ SLIDE 1 | ABERTURA OFICIAL
 Tema: Ecossistemas de Inovação: Teoria, Orquestração e a Prática no PIT SJC
 Apresentador(a): Nathália Neves (Quarta) / Fernando Barreto (Quinta) [Apresentadores do Bloco 1]
 Tempo sugerido: 2 min
-Frase de Efeito no Slide: "Nenhuma organização inova sozinha: o valor não está nas partes, mas na sinergia entre elas."
+Frase de Efeito no Slide: "Nenhuma organização inova sozinha: o valor não está nas partes isoladas, mas na harmonia entre elas."
 
 FALA SUGERIDA DO APRESENTADOR:
-"Boa noite a todos os colegas, professores Iraci e Yukio. Sejam muito bem-vindos ao Seminário 5 da disciplina Gestão Estratégica da Tecnologia e Inovação. Hoje nós vamos mergulhar em um dos temas mais decisivos da gestão contemporânea: os Ecossistemas de Inovação.
+"Boa noite a todos os colegas, professores Iraci e Yukio. Sejam muito bem-vindos ao Seminário 5 da disciplina Gestão Estratégica da Tecnologia e Inovação. Hoje nós vamos mergulhar em um dos temas mais vivos e decisivos da atualidade: os Ecossistemas de Inovação.
 
-Ao longo das últimas décadas, ficou claro que a era do gênio solitário ou do laboratório fechado que inventa tudo internamente acabou. As inovações mais complexas da humanidade — da vacina de RNA à indústria aeroespacial de ponta aqui do Vale do Paraíba — só nascem porque múltiplos atores decidem cooperar em rede. 
+Olhando para a nossa sala, vemos uma riqueza enorme de trajetórias: temos aqui colegas da tecnologia da informação e desenvolvimento, profissionais dedicados da saúde e da enfermagem, aviadores e pilotos que conhecem a precisão do céu, educadores, cientistas e gestores. E por que essa diversidade de profissões é tão importante para o nosso tema de hoje?
 
-Nosso objetivo hoje não é apenas apresentar a literatura acadêmica mais recente, como os estudos de Shen et al., Machado, Faccin & Bittencourt, Furr & Shipilov e a revisão de 20 anos de San Diego por Majava & Rinkinen. Nós vamos confrontar essa teoria com a realidade viva do Parque de Inovação Tecnológica de São José dos Campos, onde realizamos uma entrevista exclusiva com a liderança do PIT, e com a nossa própria universidade, a UNIFESP. E o mais empolgante: após cada bloco, vocês participarão de um jogo interativo no celular, testando seus conhecimentos em tempo real com premiação para o orquestrador mais veloz e preciso da sala. Convidamos todos a abrirem seus smartphones em jogo.html. Vamos em frente!"
+Porque inovação de verdade NÃO é privilégio apenas do computador ou do laboratório fechado!
+Na aviação, todos nós sabemos que um pouso perfeito não depende apenas do talento do piloto na cabine: depende da equipe de solo, dos controladores de voo, da meteorologia e da manutenção rigorosa.
+Na saúde, uma cirurgia complexa não é realizada pelo cirurgião sozinho: ela exige a sintonia fina da enfermagem, do anestesista, dos monitores de precisão e da farmácia hospitalar.
+E no desenvolvimento de software, não adianta ter o algoritmo mais avançado se ninguém entender as dores reais do ser humano que vai usá-lo.
+
+Quando os desafios do mundo se tornam complexos, a figura do gênio solitário que inventa tudo sozinho deixa de existir. Precisamos de redes colaborativas onde quem pensa diferente coopera em harmonia. É exatamente isso que chamamos de Ecossistema de Inovação!
+
+Hoje vamos descomplicar a literatura de ponta — de James Moore a Shen et al., Machado e Furr & Shipilov — conectando cada conceito com a nossa realidade aqui do Parque Tecnológico de São José dos Campos. E para tornar tudo ainda mais leve e envolvente, ao final de cada bloco vocês participarão de um jogo interativo no próprio celular com ranking ao vivo e premiação. Convidamos todos a abrirem jogo.html no smartphone. Vamos decolar juntos nessa jornada!"
 
 --------------------------------------------------------------------------------
 SLIDE 2 | AGENDA E CRONOGRAMA
@@ -66,42 +73,55 @@ São mais de 300 empresas vinculadas, 4 APLs consolidados — Aeroespacial, TIC,
 
 --------------------------------------------------------------------------------
 SLIDE 4 | BLOCO 1: A ORIGEM CONCEITUAL
-Tema: Moore (1993) & A Metáfora Biológica
+Tema: Moore (1993) & A Lição da Natureza: A Coevolução
 Apresentador(a): Nathalia (Quarta) / Fernando Barreto (Quinta)
 Tempo sugerido: 4 min
-Frase de Efeito no Slide: "Na biologia e nos negócios: espécies que coevoluem sobrevivem juntas ou perecem isoladas."
+Frase de Efeito no Slide: "Na natureza e nas organizações: espécies que aprendem a cooperar sobrevivem juntas."
 
 FALA SUGERIDA DO APRESENTADOR:
-"Iniciando o Bloco 1, James Moore em 1993 publicou na Harvard Business Review o artigo seminal que mudou a administração estratégica. Ele observou que as empresas não competem mais como ilhas isoladas em setores estanques. A competição moderna ocorre entre ecossistemas inteiros.
+"Iniciando o Bloco 1, vamos voltar ao ano de 1993, quando o pesquisador James Moore publicou um artigo clássico na Harvard Business Review que transformou o modo como pensamos a estratégia. Ele fez uma pergunta muito simples: por que continuamos tratando as empresas e organizações como ilhas isoladas em setores fechados?
 
-Moore tomou emprestada a metáfora biológica da coevolução: empresas, clientes, fornecedores e órgãos públicos aprendem, adaptam-se e coevoluem em torno de uma proposta de valor central. No PIT SJC, vemos exatamente isso: quando a Embraer necessita desenvolver uma nova liga metálica aeronáutica, ela coevolui em coopetição com pequenas fornecedoras e com os laboratórios da UNIFESP e do ITA."
+Moore olhou para a biologia e tomou emprestada uma lição preciosa da natureza: o conceito de coevolução. Pensem numa colmeia e numa plantação de flores: a abelha precisa da flor para colher o néctar e alimentar a colônia; a flor precisa da abelha para espalhar o pólen e gerar sementes. Nenhuma manda na outra, mas se uma desaparecer, a outra perece junto. Elas coevoluem — ou seja, aprendem, se adaptam e prosperam juntas em torno de um objetivo vital compartilhado.
+
+No mundo das organizações acontece exatamente a mesma coisa. Pensem aqui no Vale do Paraíba: para a Embraer colocar um novo jato moderno no ar, ela não faz tudo sozinha. Ela coevolui em parceria com pequenas empresas de engenharia locais, com centros de pesquisa como o DCTA e o ITA, e com os nossos laboratórios da UNIFESP. Elas competem no mercado por novos contratos, mas cooperam na base do conhecimento. Essa união de cooperação com competição saudável é o que chamamos na literatura de coopetição. É a natureza ensinando os negócios a voarem mais alto!"
 
 --------------------------------------------------------------------------------
-SLIDE 5 | BLOCO 1: EVOLUÇÃO BIBLIOMÉTRICA
-Tema: Shen et al. (2025/2026) e as Três Ondas da Literatura
+SLIDE 5 | BLOCO 1: O MAPA GLOBAL DAS PESQUISAS
+Tema: Shen et al. (2025/2026) e as Três Fases da Literatura Científica
 Apresentador(a): Nathalia (Quarta) / Fernando Barreto (Quinta)
 Tempo sugerido: 4 min
-Frase de Efeito no Slide: "De 1993 a 2026: a literatura migrou do fascínio conceitual para a governança empírica rigorosa."
+Frase de Efeito no Slide: "Da inspiração na natureza ao impacto real nas cidades, na saúde e no planeta."
 
 FALA SUGERIDA DO APRESENTADOR:
-"Shen et al., em seu estudo cienciométrico de vanguarda publicado agora em 2025/2026, analisaram mais de três décadas de literatura acadêmica internacional sobre ecossistemas de inovação. Eles identificam três grandes ondas:
-1ª Onda (1993-2005): A fase seminal, focada na definição conceitual e nas metáforas da biologia.
-2ª Onda (2006-2018): A explosão de estudos sobre plataformas digitais e Big Techs (Apple, Google, Amazon).
-3ª Onda (2019-2026): A maturidade do campo, onde o foco migra para a governança territorial, sustentabilidade Net-Zero e mitigação de riscos sistêmicos. É nesta terceira onda que o modelo do PIT SJC e as competências de orquestração se tornam o centro dos debates científicos."
+"Para entender onde estamos hoje, o grupo de pesquisadores liderado por Shen publicou agora entre 2025 e 2026 um estudo fascinante que fez um raio-X de mais de três décadas de pesquisas no mundo inteiro. E eles descobriram que a história dos ecossistemas se divide em três grandes fases muito intuitivas:
+
+1ª Fase (1993 a 2005) - A Era da Descoberta: Foi quando os pesquisadores ficaram encantados ao perceber que empresas e hospitais se comportam como ecossistemas biológicos, aprendendo a cooperar para não morrerem isoladas.
+
+2ª Fase (2006 a 2018) - A Era das Plataformas e Aplicativos: Foi a explosão da revolução digital e dos smartphones. Vimos gigantes como Apple, Google e Amazon criando ecossistemas de aplicativos onde desenvolvedores do mundo inteiro colaboram em torno de um único sistema operacional que todos carregam no bolso.
+
+3ª Fase (2019 aos dias atuais) - A Era do Pé no Chão e do Impacto Real: Os cientistas perceberam que não adianta ter apenas aplicativos brilhantes se os problemas reais da sociedade não forem resolvidos. É a fase da governança responsável, da saúde integrada, das cidades inteligentes e da sustentabilidade Net-Zero — descarbonizar o transporte, proteger a vida e gerar empregos dignos. É exatamente nessa 3ª fase que o Parque Tecnológico de São José dos Campos se torna um case vivo de liderança territorial!"
 
 --------------------------------------------------------------------------------
-SLIDE 6 | BLOCO 1: DIFERENCIAÇÃO CONCEITUAL CRÍTICA
-Tema: Cluster vs Sistema de Inovação vs Ecossistema de Negócios vs Inovação
+SLIDE 6 | BLOCO 1: 4 CONCEITOS PARA NUNCA MAIS CONFUNDIR
+Tema: Cluster vs Sistema de Inovação vs Ecossistema de Negócios vs Ecossistema de Inovação
 Apresentador(a): Nathalia (Quarta) / Fernando Barreto (Quinta)
 Tempo sugerido: 4 min
-Frase de Efeito no Slide: "Estar no mesmo CEP geográfico não configura um ecossistema: sem interdependência, há apenas vizinhança."
+Frase de Efeito no Slide: "Estar no mesmo endereço físico não forma um ecossistema: sem união de propósitos, há apenas vizinhança."
 
 FALA SUGERIDA DO APRESENTADOR:
-"Um dos pontos mais cobrados na literatura acadêmica rigorosa é não confundir conceitos afins. Vejam a matriz comparativa projetada:
-- Cluster (Porter): Concentração geográfica de firmas similares para ganho de escala e redução de custo logístico.
-- Sistema de Inovação: Foco nas instituições de Estado, leis de incentivo e marcos regulatórios formais.
-- Ecossistema de Negócios: Foco na captura e monetização comercial de produtos já existentes.
-- Ecossistema de Inovação: Foco na co-criação de NOVO conhecimento e tecnologias inéditas que nenhum ator conseguiria gerar de forma isolada. Guardem bem essa diferença!"
+"Um dos pontos mais bonitos da teoria — e que mais cai em bancas acadêmicas e entrevistas de gestão — é saber diferenciar termos que parecem iguais, mas têm almas totalmente diferentes. Vejam como fica simples quando usamos analogias do nosso cotidiano:
+
+1. O que é um Cluster (Porter)?
+Pensem na famosa 'rua dos móveis' ou 'rua dos consultórios médicos': são várias lojas ou clínicas do mesmo setor concentradas na mesma avenida para atrair clientes e baratear frete. Há proximidade geográfica, mas cada um cuida da sua própria caixa registradora.
+
+2. O que é um Sistema de Inovação?
+É o 'esqueleto' e as regras do jogo do país: são as leis, o SUS, a ANAC, a FAPESP, as agências reguladoras e os ministérios. Eles criam o solo e a infraestrutura básica para que as instituições possam funcionar dentro da lei.
+
+3. O que é um Ecossistema de Negócios?
+É a 'grande feira ou shopping': uma rede eficiente de distribuidores, representantes e lojas pronta para divulgar, vender e faturar produtos que já estão prontos e validados no mercado.
+
+4. E o que é, afinal, o Ecossistema de Inovação?
+Aqui está o coração do nosso seminário! É o laboratório vivo onde quem pensa totalmente diferente — o cientista da UNIFESP, o engenheiro da Embraer, o profissional de saúde e o jovem da startup — senta na mesma mesa para inventar o que AINDA NÃO EXISTE! Enquanto o ecossistema de negócios foca em vender o presente, o ecossistema de inovação constrói o futuro que nenhum ator conseguiria criar sozinho!"
 
 --------------------------------------------------------------------------------
 SLIDE 7 | MOMENTO KAHOOT RPG • BLOCO 1
