@@ -3,17 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>O Orquestrador do Ecossistema | PIT São José dos Campos</title>
+  <title>PIT SJC: Orquestrador RPG • Kahoot Interativo | UNIFESP</title>
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Firebase & Realtime Sync Service -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="sync-service.js"></script>
 
   <style>
     :root {
       --bg-space: #050a14;
-      --bg-card: rgba(15, 23, 42, 0.85);
+      --bg-card: rgba(15, 23, 42, 0.92);
       --cyan-glow: #06b6d4;
       --cyan-light: #67e8f9;
       --blue-accent: #2563eb;
@@ -25,11 +32,11 @@
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
       --text-dim: #64748b;
-      --border-soft: rgba(255, 255, 255, 0.1);
-      --border-glow: rgba(6, 182, 212, 0.4);
-      --radius-sm: 10px;
-      --radius-md: 16px;
-      --radius-lg: 24px;
+      --border-soft: rgba(255, 255, 255, 0.12);
+      --border-glow: rgba(6, 182, 212, 0.5);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
       --font-display: 'Outfit', sans-serif;
       --font-body: 'Plus Jakarta Sans', sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
@@ -39,765 +46,823 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      user-select: none;
       -webkit-tap-highlight-color: transparent;
     }
 
     body {
       background-color: var(--bg-space);
-      background-image: 
-        radial-gradient(circle at 10% 15%, rgba(37, 99, 235, 0.15) 0%, transparent 40%),
-        radial-gradient(circle at 90% 85%, rgba(139, 92, 246, 0.15) 0%, transparent 40%),
-        radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.06) 0%, transparent 60%);
       color: var(--text-main);
       font-family: var(--font-body);
       min-height: 100vh;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      padding: 1rem;
-      overflow-x: hidden;
     }
 
-    /* Top App Bar */
-    .app-header {
-      width: 100%;
-      max-width: 640px;
+    /* Fullscreen RPG Canvas */
+    #rpg-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
+      display: block;
+      background: #06101e;
+    }
+
+    /* Floating Top HUD */
+    .rpg-hud {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      z-index: 10;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.6rem 0.2rem 1.2rem;
-      border-bottom: 1px solid var(--border-soft);
-      margin-bottom: 1.2rem;
-    }
-
-    .brand-group {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
-    .brand-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: var(--radius-sm);
-      background: linear-gradient(135deg, var(--blue-accent), var(--cyan-glow));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      box-shadow: 0 0 15px rgba(6, 182, 212, 0.35);
-    }
-
-    .brand-text h1 {
-      font-family: var(--font-display);
-      font-size: 0.95rem;
-      font-weight: 800;
-      letter-spacing: -0.01em;
-      color: #fff;
-    }
-
-    .brand-text span {
-      font-size: 0.72rem;
-      color: var(--cyan-light);
-      font-weight: 600;
-    }
-
-    .audio-toggle-btn {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid var(--border-soft);
-      border-radius: 999px;
-      padding: 0.35rem 0.75rem;
-      color: var(--text-muted);
-      font-size: 0.75rem;
-      font-family: var(--font-mono);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      transition: all 0.2s;
-    }
-
-    .audio-toggle-btn:hover {
-      border-color: var(--cyan-glow);
-      color: #fff;
-    }
-
-    /* Container Box */
-    .app-wrapper {
-      width: 100%;
-      max-width: 640px;
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-      margin-bottom: 2rem;
-    }
-
-    /* Screen Views */
-    .screen {
-      display: none;
-      flex-direction: column;
-      gap: 1.25rem;
-      animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .screen.active {
-      display: flex;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(12px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Glass Cards */
-    .card {
-      background: var(--bg-card);
-      backdrop-filter: blur(16px);
-      border: 1px solid var(--border-soft);
-      border-radius: var(--radius-md);
-      padding: 1.4rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card-highlight {
-      border-color: var(--border-glow);
-      box-shadow: 0 0 25px rgba(6, 182, 212, 0.15);
-    }
-
-    /* Intro Screen */
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      background: rgba(6, 182, 212, 0.12);
-      border: 1px solid rgba(6, 182, 212, 0.3);
-      padding: 0.35rem 0.8rem;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--cyan-light);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.8rem;
-    }
-
-    .hero-title {
-      font-family: var(--font-display);
-      font-size: 1.9rem;
-      font-weight: 900;
-      line-height: 1.15;
-      color: #fff;
-      margin-bottom: 0.8rem;
-    }
-
-    .hero-title span {
-      background: linear-gradient(135deg, var(--cyan-light), var(--blue-electric), var(--purple-accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero-desc {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-      margin-bottom: 1.25rem;
-    }
-
-    .input-field-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .input-field-group label {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--text-muted);
-    }
-
-    .text-input {
-      background: rgba(10, 19, 36, 0.8);
-      border: 1px solid var(--border-soft);
-      border-radius: var(--radius-sm);
-      padding: 0.85rem 1rem;
-      font-size: 0.95rem;
-      color: #fff;
-      font-family: var(--font-body);
-      outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .text-input:focus {
-      border-color: var(--cyan-glow);
-      box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
-    }
-
-    /* Buttons */
-    .btn-primary {
-      background: linear-gradient(135deg, var(--blue-accent), var(--cyan-glow));
-      color: #fff;
-      border: none;
-      border-radius: var(--radius-sm);
-      padding: 0.95rem 1.4rem;
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      font-weight: 700;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.6rem;
-      box-shadow: 0 4px 20px rgba(6, 182, 212, 0.3);
-      transition: transform 0.15s ease, box-shadow 0.2s ease;
-      width: 100%;
-    }
-
-    .btn-primary:active {
-      transform: scale(0.98);
-    }
-
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid var(--border-soft);
-      color: var(--text-main);
-      border-radius: var(--radius-sm);
-      padding: 0.8rem 1.2rem;
-      font-family: var(--font-body);
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      transition: all 0.2s;
-      width: 100%;
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: var(--cyan-glow);
-    }
-
-    /* Progress and Round Counter */
-    .round-meta {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 0.8rem;
-    }
-
-    .round-pill {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--cyan-light);
-      background: rgba(6, 182, 212, 0.12);
-      border: 1px solid rgba(6, 182, 212, 0.25);
-      padding: 0.25rem 0.65rem;
-      border-radius: 999px;
-    }
-
-    .round-year {
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      color: var(--text-dim);
-    }
-
-    .progress-bar-bg {
-      width: 100%;
-      height: 6px;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 999px;
-      overflow: hidden;
-      margin-bottom: 1.25rem;
-    }
-
-    .progress-bar-fill {
-      height: 100%;
-      width: 20%;
-      background: linear-gradient(90deg, var(--blue-accent), var(--cyan-light));
-      border-radius: 999px;
-      transition: width 0.35s ease;
-    }
-
-    /* Dilemma Presentation */
-    .dilemma-title {
-      font-family: var(--font-display);
-      font-size: 1.35rem;
-      font-weight: 800;
-      color: #fff;
-      line-height: 1.25;
-      margin-bottom: 0.75rem;
-    }
-
-    .dilemma-context {
-      font-size: 0.92rem;
-      color: #cbd5e1;
-      line-height: 1.6;
-      margin-bottom: 1.25rem;
-      background: rgba(0, 0, 0, 0.25);
-      border-left: 3px solid var(--cyan-glow);
-      padding: 0.85rem 1rem;
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-    }
-
-    /* Option Cards */
-    .options-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-    }
-
-    .choice-card {
-      background: rgba(15, 23, 42, 0.7);
-      border: 1px solid var(--border-soft);
-      border-radius: var(--radius-md);
-      padding: 1.1rem;
-      cursor: pointer;
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-      position: relative;
-    }
-
-    .choice-card:hover {
-      border-color: var(--cyan-glow);
-      background: rgba(6, 182, 212, 0.06);
-      transform: translateY(-2px);
-    }
-
-    .choice-card.selected {
-      border-color: var(--emerald-accent);
-      background: rgba(16, 185, 129, 0.12);
-      box-shadow: 0 0 20px rgba(16, 185, 129, 0.25);
-    }
-
-    .choice-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .choice-letter {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      font-weight: 800;
-      padding: 0.2rem 0.5rem;
-      border-radius: 6px;
-      background: rgba(255, 255, 255, 0.08);
-      color: var(--cyan-light);
-    }
-
-    .choice-helix-tag {
-      font-size: 0.7rem;
-      color: var(--text-dim);
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    .choice-name {
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: #fff;
-    }
-
-    .choice-desc {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.45;
-    }
-
-    .choice-impact-preview {
-      display: flex;
-      gap: 0.4rem;
-      margin-top: 0.4rem;
-      flex-wrap: wrap;
-    }
-
-    .impact-pill {
-      font-size: 0.68rem;
-      padding: 0.15rem 0.5rem;
-      border-radius: 999px;
-      font-weight: 600;
-    }
-
-    .impact-pos {
-      background: rgba(16, 185, 129, 0.15);
-      color: #6ee7b7;
-      border: 1px solid rgba(16, 185, 129, 0.3);
-    }
-
-    .impact-neg {
-      background: rgba(244, 63, 94, 0.15);
-      color: #fda4af;
-      border: 1px solid rgba(244, 63, 94, 0.3);
-    }
-
-    /* Outcome Screen (Archetype & Summary) */
-    .archetype-banner {
-      text-align: center;
-      padding: 1rem 0;
-    }
-
-    .archetype-icon {
-      font-size: 3.5rem;
-      margin-bottom: 0.5rem;
-      display: inline-block;
-      filter: drop-shadow(0 0 15px rgba(6, 182, 212, 0.5));
-      animation: floatIcon 3s ease-in-out infinite;
-    }
-
-    @keyframes floatIcon {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-
-    .archetype-role {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      color: var(--cyan-light);
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 0.4rem;
-    }
-
-    .archetype-title {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      font-weight: 900;
-      color: #fff;
-      line-height: 1.1;
-      margin-bottom: 0.75rem;
-    }
-
-    .archetype-tagline {
-      font-size: 0.95rem;
-      color: #cbd5e1;
-      line-height: 1.55;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    /* Fictional News Headline Card */
-    .news-card {
-      background: rgba(10, 19, 36, 0.9);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: var(--radius-sm);
-      padding: 1.1rem;
-    }
-
-    .news-date {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      color: var(--amber-accent);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.4rem;
-    }
-
-    .news-headline {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: #fff;
-      line-height: 1.3;
-      margin-bottom: 0.5rem;
-    }
-
-    .news-snippet {
-      font-size: 0.84rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
-
-    /* 4 Pillars Gauge Grid */
-    .pillars-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
-    }
-
-    .pillar-card {
-      background: rgba(0, 0, 0, 0.3);
-      border: 1px solid var(--border-soft);
-      border-radius: var(--radius-sm);
-      padding: 0.85rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-    }
-
-    .pillar-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      font-weight: 600;
-    }
-
-    .pillar-score {
-      font-family: var(--font-mono);
-      font-weight: 800;
-      font-size: 1.15rem;
-      color: #fff;
-    }
-
-    .pillar-bar-bg {
-      width: 100%;
-      height: 6px;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 999px;
-      overflow: hidden;
-    }
-
-    .pillar-bar-val {
-      height: 100%;
-      border-radius: 999px;
-      transition: width 0.6s ease;
-    }
-
-    /* Debate Prompts Card */
-    .debate-box {
-      background: rgba(139, 92, 246, 0.08);
-      border: 1px solid rgba(139, 92, 246, 0.3);
-      border-radius: var(--radius-md);
-      padding: 1.25rem;
-    }
-
-    .debate-header {
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: var(--purple-accent);
-      margin-bottom: 0.6rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .debate-question {
-      font-size: 0.88rem;
-      color: #e2e8f0;
-      line-height: 1.5;
-      margin-bottom: 0.65rem;
-      padding-left: 0.75rem;
-      border-left: 2px solid var(--purple-accent);
-    }
-
-    /* Copy notification toast */
-    .toast {
-      position: fixed;
-      bottom: 2rem;
-      left: 50%;
-      transform: translateX(-50%) translateY(100px);
-      background: var(--blue-accent);
-      color: #fff;
-      padding: 0.75rem 1.4rem;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      z-index: 999;
       pointer-events: none;
     }
 
-    .toast.show {
-      transform: translateX(-50%) translateY(0);
+    .hud-left, .hud-right {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      pointer-events: auto;
+    }
+
+    .hud-pill {
+      background: rgba(10, 19, 36, 0.88);
+      border: 1px solid var(--border-soft);
+      backdrop-filter: blur(12px);
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .hud-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue-accent), var(--cyan-glow));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+
+    .hud-name {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: #fff;
+    }
+
+    .hud-score {
+      font-family: var(--font-mono);
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: var(--cyan-light);
+    }
+
+    .hud-btn {
+      background: rgba(10, 19, 36, 0.88);
+      border: 1px solid var(--border-soft);
+      backdrop-filter: blur(12px);
+      color: var(--text-muted);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+
+    .hud-btn:hover {
+      background: rgba(30, 41, 59, 0.95);
+      color: #fff;
+      border-color: var(--cyan-glow);
+    }
+
+    /* Minimap Widget */
+    .minimap-box {
+      width: 110px;
+      height: 80px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-soft);
+      background: rgba(5, 10, 20, 0.85);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+      pointer-events: auto;
+    }
+
+    #minimap-canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .minimap-tag {
+      position: absolute;
+      bottom: 2px;
+      right: 4px;
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      color: var(--cyan-light);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    /* Floating Direction Pointer Arrow */
+    .target-arrow-banner {
+      position: absolute;
+      top: 68px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(10, 19, 36, 0.9);
+      border: 1px solid var(--cyan-glow);
+      backdrop-filter: blur(10px);
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      z-index: 10;
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.35);
+      animation: pulseBanner 2s infinite;
+      pointer-events: none;
+    }
+
+    @keyframes pulseBanner {
+      0%, 100% { transform: translateX(-50%) scale(1); }
+      50% { transform: translateX(-50%) scale(1.03); }
+    }
+
+    /* Virtual Joystick for Mobile */
+    .joystick-zone {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+      border: 2px dashed rgba(255, 255, 255, 0.15);
+      z-index: 15;
+      touch-action: none;
+      display: none;
+    }
+
+    .joystick-knob {
+      position: absolute;
+      top: 35px;
+      left: 35px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--cyan-glow), var(--blue-accent));
+      box-shadow: 0 0 15px rgba(6, 182, 212, 0.6);
+      pointer-events: none;
+    }
+
+    /* Floating Action Button (Mobile) */
+    .btn-action-mobile {
+      position: absolute;
+      bottom: 28px;
+      right: 28px;
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--emerald-accent), var(--blue-accent));
+      border: 2px solid #fff;
+      box-shadow: 0 0 25px rgba(16, 185, 129, 0.5);
+      color: #fff;
+      font-size: 1.8rem;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 15;
+      cursor: pointer;
+      animation: pulseBtn 1.5s infinite;
+    }
+
+    @keyframes pulseBtn {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+
+    /* Registration Screen Modal */
+    .screen-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 10, 20, 0.92);
+      backdrop-filter: blur(16px);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .modal-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      max-width: 460px;
+      width: 100%;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+      position: relative;
+      text-align: center;
+    }
+
+    .modal-card h2 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 0.3rem;
+    }
+
+    .input-field {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-sm);
+      padding: 0.85rem 1rem;
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      outline: none;
+      margin: 0.75rem 0 1.25rem;
+    }
+
+    .input-field:focus {
+      border-color: var(--cyan-glow);
+      box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+    }
+
+    .btn-main {
+      width: 100%;
+      background: linear-gradient(135deg, var(--blue-accent), var(--cyan-glow));
+      border: none;
+      color: #fff;
+      padding: 0.95rem;
+      border-radius: var(--radius-md);
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 0 25px rgba(6, 182, 212, 0.4);
+      transition: all 0.2s;
+    }
+
+    .btn-main:active {
+      transform: scale(0.98);
+    }
+
+    /* Kahoot Challenge Modal (Active Question) */
+    .challenge-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 10, 20, 0.88);
+      backdrop-filter: blur(14px);
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .challenge-card {
+      background: var(--bg-card);
+      border: 2px solid var(--cyan-glow);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      max-width: 580px;
+      width: 100%;
+      box-shadow: 0 0 50px rgba(6, 182, 212, 0.35);
+      display: flex;
+      flex-direction: column;
+      gap: 1.15rem;
+      position: relative;
+    }
+
+    .q-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .q-badge {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--cyan-light);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .timer-val {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--amber-accent);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .timer-bar-bg {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .timer-bar-fill {
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, var(--cyan-glow), var(--blue-accent));
+      transition: width 0.1s linear;
+    }
+
+    .q-prompt {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.35;
+    }
+
+    .answers-box {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .ans-choice-btn {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.15rem;
+      color: #fff;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      cursor: pointer;
+      text-align: left;
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      line-height: 1.4;
+      transition: all 0.15s ease;
+    }
+
+    .ans-choice-btn:hover {
+      background: rgba(30, 41, 59, 0.95);
+      border-color: var(--cyan-glow);
+    }
+
+    .ans-choice-btn:active {
+      transform: scale(0.98);
+    }
+
+    .ans-letter-tag {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1rem;
+      flex-shrink: 0;
+      color: #fff;
+    }
+
+    /* Immediate Feedback Overlay */
+    .feedback-overlay {
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius-lg);
+      background: rgba(10, 19, 36, 0.97);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      gap: 1rem;
+      z-index: 20;
+    }
+
+    .fb-icon { font-size: 3.5rem; }
+    .fb-title { font-family: var(--font-display); font-size: 1.6rem; font-weight: 900; }
+    .fb-pts { font-family: var(--font-mono); font-size: 1.25rem; font-weight: 800; color: var(--cyan-light); }
+    .fb-exp {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 0.9rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      line-height: 1.5;
+      text-align: left;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header Bar -->
-  <header class="app-header">
-    <div class="brand-group">
-      <div class="brand-icon">🏛️</div>
-      <div class="brand-text">
-        <h1>O Dilema do Orquestrador</h1>
-        <span>PIT São José dos Campos • UNIFESP</span>
+  <!-- 2D Canvas for Campus Walk -->
+  <canvas id="rpg-canvas"></canvas>
+
+  <!-- Top Floating HUD -->
+  <div class="rpg-hud">
+    <div class="hud-left">
+      <div class="hud-pill">
+        <div class="hud-avatar">👔</div>
+        <div>
+          <div class="hud-name" id="hud-name">Orquestrador(a)</div>
+          <div style="font-size: 0.68rem; color: var(--cyan-light);" id="hud-turma">PPG-PIT UNIFESP</div>
+        </div>
+      </div>
+      <div class="hud-pill">
+        <span style="font-size: 0.72rem; color: var(--text-muted);">PONTOS:</span>
+        <span class="hud-score" id="hud-score">0 pts</span>
       </div>
     </div>
-    <button class="audio-toggle-btn" id="btn-audio" onclick="toggleAudio()">
-      <span id="audio-icon">🔊</span> Som
-    </button>
-  </header>
 
-  <main class="app-wrapper">
+    <div class="hud-right">
+      <div class="minimap-box" title="Minimap do Campus PIT SJC">
+        <canvas id="minimap-canvas" width="110" height="80"></canvas>
+        <span class="minimap-tag">MAPA SJC</span>
+      </div>
+      <button class="hud-btn" onclick="toggleAudio()" id="btn-audio" title="Som">🔊</button>
+      <button class="hud-btn" onclick="toggleFullscreen()" title="Tela Cheia">⛶</button>
+    </div>
+  </div>
 
-    <!-- SCREEN 1: INTRODUÇÃO -->
-    <section class="screen active" id="screen-intro">
-      <div class="card card-highlight">
-        <div class="hero-badge">🎮 Simulação Estratégica Interativa</div>
-        <h2 class="hero-title">
-          Você é o(a) Orquestrador(a) do <span>PIT São José dos Campos</span>
-        </h2>
-        <p class="hero-desc">
-          O maior ecossistema aeroespacial e tecnológico do Hemisfério Sul está sob sua liderança. 
-          Você terá que tomar <strong>5 decisões complexas</strong> que moldarão o Vale do Paraíba nos próximos anos.
-        </p>
-        
-        <div style="background: rgba(6, 182, 212, 0.08); border-left: 3px solid var(--cyan-glow); padding: 0.85rem 1rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-bottom: 1.25rem; font-size: 0.85rem; color: #cbd5e1; line-height: 1.5;">
-          ⚖️ <strong>Regra do Jogo:</strong> Não existem escolhas certas ou erradas. Cada opção beneficia uma Hélice (Universidade, Indústria, Startups ou Sociedade) e gera trade-offs reais. No final, você descobrirá seu <strong>Arquétipo de Liderança</strong> para debater com a sala!
+  <!-- Direction Banner Arrow -->
+  <div class="target-arrow-banner" id="direction-banner">
+    <span id="target-arrow">➔</span>
+    <span id="target-label">Vá até a FASE 1: Bloco Acadêmico UNIFESP</span>
+  </div>
+
+  <!-- Touch Joystick & Action Button (Mobile) -->
+  <div class="joystick-zone" id="joystick-zone">
+    <div class="joystick-knob" id="joystick-knob"></div>
+  </div>
+  <div class="btn-action-mobile" id="btn-action-mobile">💬</div>
+
+  <!-- VIEW 1: REGISTRATION MODAL -->
+  <div class="screen-modal" id="modal-register">
+    <div class="modal-card">
+      <div style="font-size: 2.8rem; margin-bottom: 0.4rem;">🏛️⚡🎮</div>
+      <h2>O Orquestrador do Ecossistema</h2>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+        Simulador RPG & Kahoot em Tempo Real • Parque Tecnológico de São José dos Campos
+      </p>
+
+      <div style="text-align: left;">
+        <label style="font-size: 0.78rem; font-weight: 700; color: var(--cyan-light); text-transform: uppercase;">
+          Seu Nome Completo:
+        </label>
+        <input type="text" id="input-name" class="input-field" placeholder="Ex: Josué, Renato, Camila..." autofocus>
+
+        <label style="font-size: 0.78rem; font-weight: 700; color: var(--cyan-light); text-transform: uppercase;">
+          Sua Turma no PPG-PIT:
+        </label>
+        <select id="select-turma" class="input-field" style="margin-bottom: 1.5rem;">
+          <option value="Quarta">Turma de Quarta-feira</option>
+          <option value="Quinta">Turma de Quinta-feira</option>
+          <option value="Convidado">Professor / Convidado</option>
+        </select>
+      </div>
+
+      <button class="btn-main" onclick="registerAndStart()">
+        Entrar no Campus do PIT →
+      </button>
+
+      <div style="font-size: 0.75rem; color: var(--text-dim); margin-top: 1rem;">
+        Use <strong>WASD</strong>, <strong>Setas</strong> ou <strong>toque na tela</strong> para caminhar pelo campus.
+      </div>
+    </div>
+  </div>
+
+  <!-- VIEW 2: KAHOOT CHALLENGE MODAL -->
+  <div class="challenge-modal" id="challenge-modal">
+    <div class="challenge-card">
+      
+      <div class="q-top-row">
+        <span class="q-badge" id="ch-badge">Estação 1 • Pergunta 1 de 3</span>
+        <div class="timer-val">
+          <span>⏱</span>
+          <span id="ch-timer-text">20.0s</span>
         </div>
+      </div>
 
-        <div class="input-field-group">
-          <label for="player-name">Seu Nome ou Apelido (para a credencial final):</label>
-          <input type="text" id="player-name" class="text-input" placeholder="Ex: Josué, Camila, Prof. Ueta..." maxlength="25">
-        </div>
+      <div class="timer-bar-bg">
+        <div class="timer-bar-fill" id="ch-timer-bar"></div>
+      </div>
 
-        <button class="btn-primary" onclick="startGame()">
-          <span>Assumir a Orquestração do PIT</span> →
+      <div class="q-prompt" id="ch-prompt">
+        Texto da pergunta...
+      </div>
+
+      <div class="answers-box" id="ch-answers-container">
+        <!-- Injected via JS with dynamically shuffled options -->
+      </div>
+
+      <!-- Feedback Overlay -->
+      <div class="feedback-overlay" id="feedback-overlay">
+        <div class="fb-icon" id="fb-icon">🎉</div>
+        <div class="fb-title" id="fb-title">Resposta Correta!</div>
+        <div class="fb-pts" id="fb-pts">+1.420 pts (Tempo: 2.1s)</div>
+        <div class="fb-exp" id="fb-exp">Explicação acadêmica do gabarito...</div>
+        <button class="btn-main" onclick="nextQuestionOrReturn()" id="btn-next-q">
+          Próxima Pergunta →
         </button>
       </div>
 
-      <div class="card" style="font-size: 0.8rem; color: var(--text-dim); text-align: center;">
-        GETI 2026 • Disciplina de Gestão Estratégica da Tecnologia e Inovação<br>
-        Profª Drª Iraci de Souza João & Prof. Dr. Antônio Yukio Ueta
-      </div>
-    </section>
+    </div>
+  </div>
 
-    <!-- SCREEN 2: RODADA DE DECISÃO -->
-    <section class="screen" id="screen-dilemma">
-      <div class="round-meta">
-        <span class="round-pill" id="round-indicator">DILEMA 1 DE 5</span>
-        <span class="round-year" id="round-year">Ano 1 de Gestão</span>
-      </div>
-
-      <div class="progress-bar-bg">
-        <div class="progress-bar-fill" id="progress-fill"></div>
-      </div>
-
-      <div class="card card-highlight">
-        <h3 class="dilemma-title" id="dilemma-title">Carregando dilema...</h3>
-        <div class="dilemma-context" id="dilemma-context">Carregando contexto...</div>
-
-        <div class="options-stack" id="options-container">
-          <!-- Injected via JS -->
-        </div>
-      </div>
-    </section>
-
-    <!-- SCREEN 3: RESULTADO / ARQUÉTIPO / DEBATE -->
-    <section class="screen" id="screen-result">
-      <div class="card card-highlight archetype-banner">
-        <div class="archetype-icon" id="res-icon">🏛️</div>
-        <div class="archetype-role" id="res-role">Relatório de Gestão (2026–2031)</div>
-        <h2 class="archetype-title" id="res-title">O Diplomata Sistêmico</h2>
-        <p class="archetype-tagline" id="res-tagline">
-          Você equilibrou as hélices com maestria, mantendo a credibilidade científica da UNIFESP e a competitividade da Embraer.
-        </p>
-      </div>
-
-      <!-- Fictional Headline -->
-      <div class="news-card">
-        <div class="news-date">📰 MANCHETE DO VALE NEWS • OUTUBRO DE 2031</div>
-        <h4 class="news-headline" id="news-headline">PIT SJC atinge marca histórica sob gestão orientada a ecossistemas</h4>
-        <p class="news-snippet" id="news-snippet">
-          Análise dos 5 anos de orquestração aponta expansão recorde de patentes conjuntas e atração de novos parceiros industriais.
-        </p>
-      </div>
-
-      <!-- 4 Pillars Breakdown -->
-      <div class="card">
-        <div style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.85rem;">
-          📊 Impacto nos 4 Pilares Estratégicos do PIT
-        </div>
-
-        <div class="pillars-grid">
-          <div class="pillar-card">
-            <div class="pillar-header">
-              <span>🔬 Confiança Acadêmica</span>
-              <span class="pillar-score" id="score-academia">75%</span>
-            </div>
-            <div class="pillar-bar-bg">
-              <div class="pillar-bar-val" id="bar-academia" style="width: 75%; background: var(--cyan-light);"></div>
-            </div>
-          </div>
-
-          <div class="pillar-card">
-            <div class="pillar-header">
-              <span>🚀 Deep Tech & Startups</span>
-              <span class="pillar-score" id="score-startups">80%</span>
-            </div>
-            <div class="pillar-bar-bg">
-              <div class="pillar-bar-val" id="bar-startups" style="width: 80%; background: var(--purple-accent);"></div>
-            </div>
-          </div>
-
-          <div class="pillar-card">
-            <div class="pillar-header">
-              <span>🏢 Força Corporativa</span>
-              <span class="pillar-score" id="score-corporations">85%</span>
-            </div>
-            <div class="pillar-bar-bg">
-              <div class="pillar-bar-val" id="bar-corporations" style="width: 85%; background: var(--blue-electric);"></div>
-            </div>
-          </div>
-
-          <div class="pillar-card">
-            <div class="pillar-header">
-              <span>🌱 Sociedade & ESG</span>
-              <span class="pillar-score" id="score-esg">70%</span>
-            </div>
-            <div class="pillar-bar-bg">
-              <div class="pillar-bar-val" id="bar-esg" style="width: 70%; background: var(--emerald-accent);"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Debate Questions Box -->
-      <div class="debate-box">
-        <div class="debate-header">
-          <span>🎤</span> Suas Perguntas para o Debate em Sala:
-        </div>
-        <p style="font-size: 0.8rem; color: #cbd5e1; margin-bottom: 0.75rem;">
-          Quando a equipe do seminário abrir a rodada de conversa, defenda suas escolhas usando estas provocações:
-        </p>
-        <div class="debate-question" id="debate-q1">
-          Por que você preferiu ceder a patente exclusiva à indústria em vez de manter a cotitularidade pública da UNIFESP?
-        </div>
-        <div class="debate-question" id="debate-q2">
-          Como você justificaria para o prefeito de São José dos Campos o impacto do PIT nos bairros vizinhos?
-        </div>
-      </div>
-
-      <div style="display: flex; flex-direction: column; gap: 0.6rem;">
-        <button class="btn-primary" onclick="copyResult()">
-          📋 Compartilhar / Copiar meu Desfecho
-        </button>
-        <button class="btn-secondary" onclick="restartGame()">
-          🔄 Jogar Novamente com Outras Escolhas
-        </button>
-      </div>
-    </section>
-
-  </main>
-
-  <div class="toast" id="toast">Copiado para a área de transferência!</div>
-
-  <!-- Game Logic Script -->
   <script>
-    // Web Audio Synthesizer for tactile feedback
+    /* Question Database (3 per block, with shuffleable options) */
+    const rawQuestions = [
+      // BLOCO 1
+      {
+        id: "b1_q1",
+        block: 1,
+        stationName: "Bloco Acadêmico UNIFESP",
+        question: "De qual área da ciência os pesquisadores importaram a palavra 'ecossistema' antes de usá-la no mundo dos negócios?",
+        correctOption: "Da Biologia/Ecologia (Arthur Tansley, 1935)",
+        distractors: [
+          "Da Física Quântica (Entrelaçamento e velocidade)",
+          "Da Geologia Estrutural (Camadas tectônicas rígidas)"
+        ],
+        explanation: "O botânico Arthur Tansley cunhou o termo em 1935 na biologia para descrever comunidades vivas e meio físico; James Moore transmutou o conceito para a estratégia em 1993."
+      },
+      {
+        id: "b1_q2",
+        block: 1,
+        stationName: "Bloco Acadêmico UNIFESP",
+        question: "Embora parecidos, qual é a diferença fundamental entre Ecossistema de Inovação e Ecossistema de Negócios?",
+        correctOption: "Inovação foca na co-criação de novidades; Negócios foca na captura de mercado",
+        distractors: [
+          "Inovação só existe em universidades; Negócios só existe no agronegócio",
+          "Não há diferença nenhuma, são termos exatamente sinônimos"
+        ],
+        explanation: "O ecossistema de inovação é centrado na geração coletiva de novos conhecimentos e soluções; o de negócios foca na comercialização e lucros."
+      },
+      {
+        id: "b1_q3",
+        block: 1,
+        stationName: "Bloco Acadêmico UNIFESP",
+        question: "Qual ator fundamental é incorporado no modelo da Hélice Quádrupla para além de Governo, Empresas e Universidades?",
+        correctOption: "A Sociedade Civil e Usuários finais (Inovação social e cidadã)",
+        distractors: [
+          "Agências Militares de Espionagem para impor sigilo",
+          "Bancos Estrangeiros Especulativos para cobrar tarifas"
+        ],
+        explanation: "A Hélice Quádrupla introduz a sociedade civil e os cidadãos como participantes ativos, garantindo relevância social e legitimidade."
+      },
+
+      // BLOCO 2
+      {
+        id: "b2_q1",
+        block: 2,
+        stationName: "Praça Central das Hélices",
+        question: "Por que a heterogeneidade e interdependência são pilares anatômicos do ecossistema de inovação?",
+        correctOption: "Nenhum ator isolado possui todos os recursos e competências para inovar sozinho",
+        distractors: [
+          "Porque todas as empresas precisam ter exatamente o mesmo tamanho e vender o mesmo produto",
+          "Porque elimina toda e qualquer concorrência ou disputa de mercado na região"
+        ],
+        explanation: "A heterogeneidade garante complementaridade: grandes corporações precisam da agilidade de startups e do rigor analítico das universidades."
+      },
+      {
+        id: "b2_q2",
+        block: 2,
+        stationName: "Praça Central das Hélices",
+        question: "Qual é a função primordial de organizações intermediárias como o Nexus Hub e o PIT SJC?",
+        correctOption: "Atuar como pontes relacionais, reduzindo assimetrias e facilitando transferências",
+        distractors: [
+          "Confiscar patentes de startups para impedir que sejam vendidas no mercado",
+          "Aplicar multas e tributos estaduais em laboratórios que não gerem lucros rápidos"
+        ],
+        explanation: "Intermediários funcionam como 'bridging organizations', reduzindo custos de transação e alinhando linguagens acadêmicas e de negócios."
+      },
+      {
+        id: "b2_q3",
+        block: 2,
+        stationName: "Praça Central das Hélices",
+        question: "Como o valor gerado circula de maneira sustentável e estimula a longevidade da rede?",
+        correctOption: "Através de fluxos bidirecionais onde o ganho sistêmico supera o custo individual de cooperar",
+        distractors: [
+          "Através de extração unilateral forçada pela maior corporação multinacional",
+          "Exclusivamente por repasses de subsídios a fundo perdido sem entregas concretas"
+        ],
+        explanation: "A simbiose requer equilíbrio contínuo entre contribuição e apropriação para evitar que talentos debandem da rede."
+      },
+
+      // BLOCO 3
+      {
+        id: "b3_q1",
+        block: 3,
+        stationName: "Centro de Governança do PIT",
+        question: "Se os atores de um ecossistema são autônomos e independentes, como o orquestrador coordena a rede?",
+        correctOption: "Por autoridade relacional, legitimidade, visão compartilhada e facilitação de consensos",
+        distractors: [
+          "Por controle acionário majoritário e ordens diretas de demissão sobre os reitores",
+          "Não coordena, pois ecossistemas se auto-regulam espontaneamente sem liderança"
+        ],
+        explanation: "Machado et al. destacam que a orquestração apoia-se em governança relacional e liderança por influência, e não em hierarquia formal."
+      },
+      {
+        id: "b3_q2",
+        block: 3,
+        stationName: "Centro de Governança do PIT",
+        question: "Qual é a relevância prática da dimensão de Mobilidade do Conhecimento na orquestração?",
+        correctOption: "Permitir que ideias e dados transitem entre universidade e empresas, elevando a absorção",
+        distractors: [
+          "Impor sigilo perpétuo e confiscar cadernos de laboratório dos mestrandos",
+          "Padronizar o salário de todos os cientistas e técnicos da região no mesmo valor"
+        ],
+        explanation: "A mobilidade de conhecimento desobstrui os canais para que a ciência das bancadas chegue ao mercado em forma de soluções reais."
+      },
+      {
+        id: "b3_q3",
+        block: 3,
+        stationName: "Centro de Governança do PIT",
+        question: "O que assegura a permanência e o engajamento dos parceiros na rede no longo prazo?",
+        correctOption: "Mecanismos transparentes que garantem partilha justa e apropriação dos ganhos",
+        distractors: [
+          "Contratos perpétuos que proíbem os membros fundadores de saírem sob pena de prisão",
+          "Bloquear a entrada de qualquer nova startup ou competidor estrangeiro"
+        ],
+        explanation: "Sem apropriação justa dos frutos da inovação, a confiança se desfaz e os parceiros estratégicos abandonam o ecossistema."
+      },
+
+      // BLOCO 4
+      {
+        id: "b4_q1",
+        block: 4,
+        stationName: "Nexus Hub de Startups",
+        question: "Segundo Furr & Shipilov (MIT Sloan), quando um gestor deve optar por um Ecossistema Adaptativo?",
+        correctOption: "Em ambientes de alta incerteza tecnológica e de mercado, exigindo experimentação flexível",
+        distractors: [
+          "Apenas em monopólios onde o produto final e a cadeia de suprimentos são idênticos há 40 anos",
+          "Exclusivamente quando for estritamente proibido o uso de softwares ou patentes digitais"
+        ],
+        explanation: "Incerteza radical demanda ecossistemas adaptativos, onde múltiplos parceiros coevoluem hipóteses até convergir para a rota vencedora."
+      },
+      {
+        id: "b4_q2",
+        block: 4,
+        stationName: "Nexus Hub de Startups",
+        question: "Por que Furr & Shipilov recomendam atrair parceiros não convencionais para a rede?",
+        correctOption: "Porque trazem repertórios complementares que rompem a miopia e aceleram inovações radicais",
+        distractors: [
+          "Porque prestam consultorias contábeis gratuitamente para o parque",
+          "Para transferir passivos jurídicos para organizações de fachada sem capacidade técnica"
+        ],
+        explanation: "A inovação cross-industry (ex: aeroespacial + games ou saúde + nanotecnologia) é o motor de disrupções inesperadas."
+      },
+      {
+        id: "b4_q3",
+        block: 4,
+        stationName: "Nexus Hub de Startups",
+        question: "Qual é o principal erro de um líder ao tentar desenhar um ecossistema emergente?",
+        correctOption: "Tentar impor controle excessivo e travar arquiteturas prematuramente sem aprender com a rede",
+        distractors: [
+          "Ouvir com frequência as dores e feedbacks dos clientes e professores parceiros",
+          "Autorizar que pesquisadores consultem repositórios acadêmicos internacionais abertos"
+        ],
+        explanation: "O controle centralizador prematuro sufoca a autonomia e a capacidade de experimentação adaptativa dos parceiros."
+      },
+
+      // BLOCO 5
+      {
+        id: "b5_q1",
+        block: 5,
+        stationName: "Pavilhão Aeroespacial & San Diego",
+        question: "Segundo Majava & Rinkinen, qual foi o catalisador histórico da guinada tecnológica de San Diego?",
+        correctOption: "A fundação visionária da UCSD e institutos de ponta (Salk e Scripps) focados em pós-graduação",
+        distractors: [
+          "O fechamento de faculdades locais para focar unicamente na exportação agrícola de laranjas",
+          "Um decreto do século XIX que isentou de impostos a montagem de navios a vapor britânicos"
+        ],
+        explanation: "A UCSD foi projetada desde a origem para pesquisa de pós-graduação e ciências duras, funcionando como ímã para prêmios Nobel e pioneiros."
+      },
+      {
+        id: "b5_q2",
+        block: 5,
+        stationName: "Pavilhão Aeroespacial & San Diego",
+        question: "Qual inovação institucional a organização CONNECT introduziu em San Diego em 1985?",
+        correctOption: "Conectar inventores a mentores experientes e redes de Venture Capital (Springboard)",
+        distractors: [
+          "Monopolizar todas as patentes de biotecnologia da Califórnia sob tutela militar",
+          "Criar uma companhia aérea municipal para voar entre Los Angeles e San Francisco"
+        ],
+        explanation: "O programa Springboard da CONNECT preparava os cientistas para falar a linguagem do mercado e captar fundos de Venture Capital."
+      },
+      {
+        id: "b5_q3",
+        block: 5,
+        stationName: "Pavilhão Aeroespacial & San Diego",
+        question: "Qual ativo intangível cultural é apontado como diferencial competitivo de San Diego?",
+        correctOption: "A prática disseminada de ajudar e mentorar novos empreendedores antes de cobrar qualquer retorno",
+        distractors: [
+          "Processos judiciais sistemáticos para bloquear a circulação de engenheiros de software",
+          "Dependência estrita de repasses orçamentários do Pentágono sem qualquer capital de risco"
+        ],
+        explanation: "A cultura 'give-first' e a mentoria desinteressada aceleraram exponencialmente o capital social e a densidade de conexões na região."
+      },
+
+      // BLOCO 6
+      {
+        id: "b6_q1",
+        block: 6,
+        stationName: "Living Lab Net-Zero & Fronteiras",
+        question: "Segundo Shen et al., qual é uma das maiores dificuldades metodológicas na análise de ecossistemas?",
+        correctOption: "Delimitar fronteiras espaciais e isolar se os resultados vêm do ecossistema ou de fatores macro",
+        distractors: [
+          "A falta de computadores e papel nos centros de pós-graduação modernos",
+          "O fato de que nenhum governo do mundo possui leis de propriedade intelectual"
+        ],
+        explanation: "É metodologicamente desafiador isolar a causalidade estrita entre intervenções no ecossistema e o crescimento do PIB regional."
+      },
+      {
+        id: "b6_q2",
+        block: 6,
+        stationName: "Living Lab Net-Zero & Fronteiras",
+        question: "Qual risco crítico pequenos parceiros e startups enfrentam em ecossistemas dominados por poucas corporações?",
+        correctOption: "Lock-in tecnológico, assimetria de poder e apropriação predatória de sua propriedade intelectual",
+        distractors: [
+          "Excesso de faturamento financeiro que o sistema bancário não consiga registrar",
+          "Obrigação legal de adotar o mesmo logotipo da prefeitura em seus uniformes"
+        ],
+        explanation: "Assimetrias de poder desbalanceadas podem aprisionar pequenas deep techs em relações desvantajosas de dependência de clientes únicos."
+      },
+      {
+        id: "b6_q3",
+        block: 6,
+        stationName: "Living Lab Net-Zero & Fronteiras",
+        question: "Por que avaliar o sucesso de um ecossistema apenas por número bruto de patentes ou eventos é ilusório?",
+        correctOption: "Porque gera 'teatro': patentes que nunca vão a mercado e festas sem geração de renda e impacto real",
+        distractors: [
+          "Porque patentes não têm valor legal na economia internacional",
+          "Porque a única métrica que importa para um parque tecnológico é o tamanho do seu gramado"
+        ],
+        explanation: "Métricas de vaidade medem apenas esforço superficial (outputs); o impacto real mede transformação socioeconômica e renda sustentável."
+      }
+    ];
+
+    /* Station Coordinates on the Realistic 1920x1380 PIT SJC Masterplan Map */
+    const stations = [
+      { id: 1, block: 1, phaseNum: 1, name: "Bloco Acadêmico UNIFESP", phaseLabel: "FASE 1", fullName: "FASE 1 • Bloco Acadêmico UNIFESP", x: 340, y: 360, radius: 95, icon: "🎓", color: "#38bdf8", subtitle: "Campus ICT • Fundamentos Teóricos & Moore (1993)" },
+      { id: 2, block: 2, phaseNum: 2, name: "Praça Central das Hélices", phaseLabel: "FASE 2", fullName: "FASE 2 • Praça Central das Hélices", x: 780, y: 720, radius: 95, icon: "🌀", color: "#a855f7", subtitle: "Rotatória Central • As 5 Hélices & Interdependência" },
+      { id: 3, block: 3, phaseNum: 3, name: "Centro de Governança do PIT", phaseLabel: "FASE 3", fullName: "FASE 3 • Centro de Governança do PIT", x: 1140, y: 920, radius: 100, icon: "🏛️", color: "#f59e0b", subtitle: "Administração OS • Orquestração Machado et al." },
+      { id: 4, block: 4, phaseNum: 4, name: "Nexus Hub de Startups", phaseLabel: "FASE 4", fullName: "FASE 4 • Nexus Hub de Startups", x: 1160, y: 520, radius: 95, icon: "🚀", color: "#06b6d4", subtitle: "Incubadora & Aceleradora • Furr & Shipilov" },
+      { id: 5, block: 5, phaseNum: 5, name: "Pavilhão Aeroespacial & San Diego", phaseLabel: "FASE 5", fullName: "FASE 5 • Pavilhão Aeroespacial & San Diego", x: 1560, y: 440, radius: 105, icon: "✈️", color: "#10b981", subtitle: "Hangares CDT • Benchmarking Internacional" },
+      { id: 6, block: 6, phaseNum: 6, name: "Living Lab Net-Zero & Fronteiras", phaseLabel: "FASE 6", fullName: "FASE 6 • Living Lab Net-Zero & Fronteiras", x: 680, y: 1140, radius: 100, icon: "🌱", color: "#f43f5e", subtitle: "Área de Preservação • Shen et al. & Fronteiras" }
+    ];
+
+    /* BroadcastChannel + LocalStorage Sync */
+    const channel = new BroadcastChannel('kahoot_rpg_channel');
+
+    /* Player State */
+    let player = {
+      name: "",
+      turma: "Quarta",
+      score: 0,
+      answeredQuestions: {}, // qId -> { chosenOption, isCorrect, points, timeMs }
+      completedStations: []
+    };
+
+    let unlockedPhases = [1]; // Default Phase 1 unlocked
+
+    // Audio synthesizer
     let audioEnabled = true;
     let audioCtx = null;
-
     function initAudio() {
-      if (!audioCtx) {
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      }
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     }
-
     function playBeep(freq, type, duration) {
       if (!audioEnabled) return;
       try {
@@ -812,444 +877,1118 @@
         gain.connect(audioCtx.destination);
         osc.start();
         osc.stop(audioCtx.currentTime + duration);
-      } catch (e) {
-        // Audio not allowed yet
-      }
+      } catch (e) {}
     }
-
     function toggleAudio() {
       audioEnabled = !audioEnabled;
-      document.getElementById('audio-icon').textContent = audioEnabled ? '🔊' : '🔇';
+      document.getElementById('btn-audio').textContent = audioEnabled ? '🔊' : '🔇';
+    }
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        document.exitFullscreen().catch(() => {});
+      }
     }
 
-    /* 5 Dilemmas Configuration */
-    const dilemmas = [
-      {
-        id: 1,
-        year: "Ano 1 de Mandato • 2026",
-        title: "Dilema 1: A Batalha da Patente (Academia vs Indústria)",
-        context: "Um laboratório da UNIFESP e uma startup do Nexus criaram um compósito nanoestruturado ultraleve para fuselagens. Uma gigante aeroespacial oferece R$ 8 milhões para industrializar o projeto, mas exige sigilo total de 5 anos e patente exclusiva mundial, impedindo que o aluno da UNIFESP publique sua dissertação de mestrado. Como você orquestra?",
-        choices: [
-          {
-            letter: "A",
-            helix: "Foco: Indústria & Escala",
-            name: "Aceitar a Exclusividade da Multinacional",
-            desc: "Garante os R$ 8 milhões e a aplicação imediata em voo comercial, mas revolta os docentes da UNIFESP e atrasa a titulação acadêmica.",
-            impacts: [
-              { text: "+30 Força Corporativa", type: "pos" },
-              { text: "-25 Confiança Acadêmica", type: "neg" }
-            ],
-            scores: { academia: -25, startups: +10, corporations: +30, esg: 0 }
-          },
-          {
-            letter: "B",
-            helix: "Foco: Governança & Cotitularidade",
-            name: "Orquestrar Licenciamento Híbrido com Cotitularidade",
-            desc: "Você impõe: a patente é cotitular (UNIFESP-Empresa), a empresa tem direito comercial prioritário e a dissertação é publicada com dados anonimizados após 6 meses.",
-            impacts: [
-              { text: "+20 Confiança Acadêmica", type: "pos" },
-              { text: "+15 Força Corporativa", type: "pos" }
-            ],
-            scores: { academia: +20, startups: +15, corporations: +15, esg: +5 }
-          },
-          {
-            letter: "C",
-            helix: "Foco: Deep Tech & Spin-off",
-            name: "Rejeitar a Multinacional e Incubar Spin-off Própria",
-            desc: "Recusar a proposta e fundar uma spin-off com os alunos e docentes no Nexus Hub, buscando editais da FAPESP (PIPE) para manter 100% da tecnologia pública.",
-            impacts: [
-              { text: "+30 Startups & Deep Tech", type: "pos" },
-              { text: "-20 Liquidez Corporativa", type: "neg" }
-            ],
-            scores: { academia: +25, startups: +30, corporations: -20, esg: +10 }
-          }
-        ]
-      },
-      {
-        id: 2,
-        year: "Ano 2 de Mandato • 2027",
-        title: "Dilema 2: O Perfil de Aceleração do Nexus Hub",
-        context: "O Nexus Hub tem orçamento e bancadas limitadas para o próximo ciclo de inovação. Há duas vocações concorrentes disputando as vagas: soluções digitais rápidas (SaaS/Apps) versus deep techs aeroespaciais e de saúde que levam anos para certificar. O que o PIT prioriza?",
-        choices: [
-          {
-            letter: "A",
-            helix: "Foco: Deep Techs & Hardware Pesado",
-            name: "Priorizar Satélites, Propulsão e Biotecnologia",
-            desc: "Focar em projetos de ciclo longo (5 anos) com alta complexidade física, alinhados com ITA, INPE e UNIFESP. O retorno financeiro é lento, mas o impacto nacional é imenso.",
-            impacts: [
-              { text: "+35 Inovação Disruptiva", type: "pos" },
-              { text: "-15 Retorno Financeiro Imediato", type: "neg" }
-            ],
-            scores: { academia: +20, startups: +35, corporations: +10, esg: +10 }
-          },
-          {
-            letter: "B",
-            helix: "Foco: SaaS Ágil & Métricas Rápidas",
-            name: "Priorizar Software, IA e Startups de Faturamento Rápido",
-            desc: "Acelerar startups de software B2B e marketplaces com tração em 6 meses, inflando os relatórios de geração de receita do parque para impressionar conselheiros.",
-            impacts: [
-              { text: "+25 Caixa & Liquidez", type: "pos" },
-              { text: "-20 Diferenciação Tecnológica", type: "neg" }
-            ],
-            scores: { academia: -15, startups: +15, corporations: +25, esg: -5 }
-          },
-          {
-            letter: "C",
-            helix: "Foco: Simbiose Intersetorial",
-            name: "Obrigar Coopetição: Software a Serviço do Hardware",
-            desc: "Exigir que as startups de IA e software desenvolvam algoritmos exclusivamente voltados para otimizar os testes e ensaios das deep techs aeroespaciais.",
-            impacts: [
-              { text: "+25 Coesão de Rede", type: "pos" },
-              { text: "+20 Inovação", type: "pos" }
-            ],
-            scores: { academia: +15, startups: +25, corporations: +15, esg: +15 }
-          }
-        ]
-      },
-      {
-        id: 3,
-        year: "Ano 3 de Mandato • 2028",
-        title: "Dilema 3: O Fundo Estrangeiro e a Soberania Nacional",
-        context: "Em meio a um aperto fiscal nos editais do governo, um fundo soberano asiático oferece R$ 50 milhões para construir um Centro de Supercomputação no PIT, mas exige controle majoritário dos dados de voo e apropriação internacional das patentes desenvolvidas. Como você se posiciona?",
-        choices: [
-          {
-            letter: "A",
-            helix: "Foco: Capital Global Sem Barreiras",
-            name: "Aceitar a Parceria Integral com o Fundo Asiático",
-            desc: "Coloca o PIT no topo dos rankings mundiais de infraestrutura computacional, mas gera crise institucional imediata com o Ministério da Defesa e DCTA por risco de espionagem.",
-            impacts: [
-              { text: "+35 Caixa & Poderio", type: "pos" },
-              { text: "-30 Confiança Institucional", type: "neg" }
-            ],
-            scores: { academia: -10, startups: +20, corporations: +35, esg: -25 }
-          },
-          {
-            letter: "B",
-            helix: "Foco: Soberania & Consórcio Brasileiro",
-            name: "Rejeitar a Oferta e Articular Consórcio Mútuo Nacional",
-            desc: "Montar um pool com BNDES, Finep, Embraer e FAPESP. A captação será 40% menor e mais burocrática, mas os dados e patentes continuam 100% sob soberania nacional.",
-            impacts: [
-              { text: "+30 Soberania & Confiança", type: "pos" },
-              { text: "-15 Velocidade de Execução", type: "neg" }
-            ],
-            scores: { academia: +25, startups: +10, corporations: +10, esg: +20 }
-          },
-          {
-            letter: "C",
-            helix: "Foco: Diplomacia Tecnológica Híbrida",
-            name: "Aceitar com 'Golden Share' e Auditoria da UNIFESP/ITA",
-            desc: "Permitir o aporte, mas com veto público absoluto em algoritmos militares e exigência de que os servidores físicos fiquem trancados dentro do campus em Eugênio de Melo.",
-            impacts: [
-              { text: "+20 Capital", type: "pos" },
-              { text: "+20 Segurança", type: "pos" }
-            ],
-            scores: { academia: +15, startups: +20, corporations: +20, esg: +10 }
-          }
-        ]
-      },
-      {
-        id: 4,
-        year: "Ano 4 de Mandato • 2029",
-        title: "Dilema 4: O Muro do Parque e a Sociedade (4ª Hélice)",
-        context: "Lideranças comunitárias da Zona Leste de São José dos Campos protestam na Câmara de Vereadores, afirmando que o PIT é uma 'ilha de riqueza blindada' com restaurantes caros e ar-condicionado, que não gera impacto palpável nas escolas públicas e bairros vizinhos. Como agir?",
-        choices: [
-          {
-            letter: "A",
-            helix: "Foco: Cidadania & Living Lab Urbano",
-            name: "Abrir o PIT como Living Lab para Soluções da Periferia",
-            desc: "Criar edital para startups testarem saneamento, telemedicina da UNIFESP e transporte limpo nos bairros locais, abrindo o campus para feiras de ciências com escolas públicas.",
-            impacts: [
-              { text: "+35 Legitimidade Social", type: "pos" },
-              { text: "-10 Foco Restrito da Indústria", type: "neg" }
-            ],
-            scores: { academia: +20, startups: +20, corporations: -5, esg: +35 }
-          },
-          {
-            letter: "B",
-            helix: "Foco: Especialização Produtiva Fechada",
-            name: "Blindar o Foco: Parque Tecnológico não é Centro Comunitário",
-            desc: "Manter o acesso restrito e foco exclusivo em aeroespacial de alta precisão, defendendo na imprensa que o papel do PIT é gerar PIB, impostos e exportações para o Brasil.",
-            impacts: [
-              { text: "+20 Foco Industrial", type: "pos" },
-              { text: "-30 Desgaste Político", type: "neg" }
-            ],
-            scores: { academia: -15, startups: +5, corporations: +25, esg: -30 }
-          },
-          {
-            letter: "C",
-            helix: "Foco: Escola de Alta Precisão & Emprego",
-            name: "Criar Escola Técnica Integrada (UNIFESP-FATEC-Embraer)",
-            desc: "Formar 500 jovens da periferia por ano em usinagem aeroespacial, solda robótica e programação de drones com contratação garantida pelas empresas do APL.",
-            impacts: [
-              { text: "+25 Impacto Social", type: "pos" },
-              { text: "+25 Mão de Obra Qualificada", type: "pos" }
-            ],
-            scores: { academia: +15, startups: +15, corporations: +25, esg: +25 }
-          }
-        ]
-      },
-      {
-        id: 5,
-        year: "Ano 5 de Mandato • 2030",
-        title: "Dilema 5: O Combustível do Futuro e o Choque Verde (5ª Hélice)",
-        context: "Metas climáticas internacionais impõem pesadas taxas de carbono sobre aviões que usam querosene fóssil. O PIT pode liderar a revolução dos combustíveis sustentáveis de aviação (SAF) e hidrogênio verde, mas as fábricas tradicionais de peças mecânicas do Vale do Paraíba temem quebrar. Qual é o seu rumo final?",
-        choices: [
-          {
-            letter: "A",
-            helix: "Foco: Choque Radical de Sustentabilidade",
-            name: "Decretar Moratória Verde: 100% dos Incentivos para Descarbonização",
-            desc: "Cortar qualquer incentivo fiscal do parque para motores a combustão tradicional e canalizar todo o fomento para hidrogênio verde, SAF e eVTOLs elétricos.",
-            impacts: [
-              { text: "+40 Liderança ESG Global", type: "pos" },
-              { text: "-25 Empregos na Cadeia Fóssil", type: "neg" }
-            ],
-            scores: { academia: +20, startups: +30, corporations: -15, esg: +45 }
-          },
-          {
-            letter: "B",
-            helix: "Foco: Gradualismo & Proteção do Emprego Existente",
-            name: "Transição Suave para Proteger as Empresas Tradicionais",
-            desc: "Evitar rupturas drásticas; manter o fomento às peças tradicionais da Embraer e apenas financiar pequenas pesquisas piloto em combustíveis alternativos.",
-            impacts: [
-              { text: "+20 Estabilidade Financeira", type: "pos" },
-              { text: "-30 Risco de Obsolescência", type: "neg" }
-            ],
-            scores: { academia: -15, startups: -10, corporations: +30, esg: -25 }
-          },
-          {
-            letter: "C",
-            helix: "Foco: Hélice Quíntupla Integrada (Agro + Aero)",
-            name: "Orquestrar o Grande Corredor Paulista de SAF",
-            desc: "Conectar o agronegócio de cana do interior paulista com os laboratórios químicos da UNIFESP, o ITA e os bancos de testes de turbinas da Embraer no PIT.",
-            impacts: [
-              { text: "+35 Inovação Sistêmica", type: "pos" },
-              { text: "+30 Sustentabilidade", type: "pos" }
-            ],
-            scores: { academia: +25, startups: +25, corporations: +25, esg: +35 }
-          }
-        ]
-      }
-    ];
+    /* Channel & Cloud Listener */
+    if (window.SyncService) {
+      window.SyncService.onStateUpdate((state) => {
+        if (state && state.unlockedPhases) {
+          unlockedPhases = state.unlockedPhases;
+          updateTargetBanner();
+        }
+      });
+    }
 
-    let currentRound = 0;
-    let playerName = "Orquestrador(a)";
-    let playerScores = {
-      academia: 50,
-      startups: 50,
-      corporations: 50,
-      esg: 50
+    if (channel) {
+      channel.onmessage = (event) => {
+        const data = event.data;
+        if (data && data.type === 'STATE_UPDATE') {
+          unlockedPhases = data.state.unlockedPhases || [];
+          updateTargetBanner();
+        }
+      };
+    }
+
+    /* 2D Canvas & Player Engine */
+    const canvas = document.getElementById('rpg-canvas');
+    const ctx = canvas.getContext('2d');
+    const minimapCanvas = document.getElementById('minimap-canvas');
+    const minimapCtx = minimapCanvas.getContext('2d');
+
+    const WORLD_W = 1920;
+    const WORLD_H = 1380;
+
+    // Animated Avatar Character ("Bonequinho Andando")
+    const hero = {
+      x: 400,
+      y: 450,
+      radius: 20,
+      speed: 5.2,
+      vx: 0,
+      vy: 0,
+      targetX: null,
+      targetY: null,
+      facing: 'right', // 'left', 'right', 'up', 'down'
+      isMoving: false,
+      walkCycle: 0,
+      particles: [] // Walking dust puffs
     };
-    let choicesHistory = [];
 
-    function startGame() {
-      const nameInput = document.getElementById('player-name').value.trim();
-      if (nameInput) {
-        playerName = nameInput;
+    const keys = {};
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // Controls listeners
+    window.addEventListener('keydown', (e) => {
+      const isInput = e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA');
+      const regModal = document.getElementById('reg-modal');
+      const isRegOpen = regModal && regModal.style.display !== 'none';
+      const challModal = document.getElementById('challenge-modal');
+      const isChallOpen = challModal && challModal.style.display === 'flex';
+
+      if (isInput || isRegOpen || isChallOpen) {
+        if (e.key === 'Enter' && e.target && e.target.id === 'input-name') {
+          registerAndStart();
+        }
+        return;
       }
-      playBeep(440, 'sine', 0.15);
-      showScreen('screen-dilemma');
-      loadDilemma(0);
+
+      keys[e.code] = true;
+      keys[e.key] = true;
+      hero.targetX = null;
+      hero.targetY = null;
+      if (e.code === 'KeyE' || e.code === 'Space') {
+        checkNearbyStationInteraction();
+      }
+    });
+    window.addEventListener('keyup', (e) => {
+      const isInput = e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA');
+      if (isInput) return;
+      keys[e.code] = false;
+      keys[e.key] = false;
+    });
+
+    // Click/Touch to walk on canvas
+    canvas.addEventListener('pointerdown', (e) => {
+      const camX = Math.max(0, Math.min(WORLD_W - canvas.width, hero.x - canvas.width / 2));
+      const camY = Math.max(0, Math.min(WORLD_H - canvas.height, hero.y - canvas.height / 2));
+      hero.targetX = e.clientX + camX;
+      hero.targetY = e.clientY + camY;
+    });
+
+    // Mobile Virtual Joystick setup
+    const joystickZone = document.getElementById('joystick-zone');
+    const joystickKnob = document.getElementById('joystick-knob');
+    let joyActive = false;
+    let joyStart = { x: 0, y: 0 };
+    let joyDelta = { x: 0, y: 0 };
+
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+      joystickZone.style.display = 'block';
+      document.getElementById('btn-action-mobile').style.display = 'flex';
+
+      joystickZone.addEventListener('touchstart', (e) => {
+        joyActive = true;
+        const t = e.touches[0];
+        const rect = joystickZone.getBoundingClientRect();
+        joyStart = { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 };
+        hero.targetX = null;
+        hero.targetY = null;
+      });
+
+      window.addEventListener('touchmove', (e) => {
+        if (!joyActive) return;
+        const t = e.touches[0];
+        const dx = t.clientX - joyStart.x;
+        const dy = t.clientY - joyStart.y;
+        const dist = Math.hypot(dx, dy);
+        const maxDist = 35;
+        const angle = Math.atan2(dy, dx);
+        const clampedDist = Math.min(dist, maxDist);
+        joyDelta = { x: Math.cos(angle) * (clampedDist / maxDist), y: Math.sin(angle) * (clampedDist / maxDist) };
+        joystickKnob.style.transform = `translate(${Math.cos(angle) * clampedDist}px, ${Math.sin(angle) * clampedDist}px)`;
+      });
+
+      const endJoy = () => {
+        joyActive = false;
+        joyDelta = { x: 0, y: 0 };
+        joystickKnob.style.transform = `translate(0px, 0px)`;
+      };
+      window.addEventListener('touchend', endJoy);
+      window.addEventListener('touchcancel', endJoy);
+
+      document.getElementById('btn-action-mobile').addEventListener('click', () => {
+        checkNearbyStationInteraction();
+      });
     }
 
-    function showScreen(screenId) {
-      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-      document.getElementById(screenId).classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    /* Main Game Loop */
+    let animTime = 0;
+    function gameLoop() {
+      try {
+        updateHero();
+        renderScene();
+        renderMinimap();
+      } catch (err) {
+        console.error("Game loop error:", err);
+      }
+      requestAnimationFrame(gameLoop);
     }
 
-    function loadDilemma(index) {
-      currentRound = index;
-      const d = dilemmas[index];
+    function updateHero() {
+      let dx = 0;
+      let dy = 0;
 
-      document.getElementById('round-indicator').textContent = `DILEMA ${index + 1} DE ${dilemmas.length}`;
-      document.getElementById('round-year').textContent = d.year;
-      document.getElementById('progress-fill').style.width = `${((index + 1) / dilemmas.length) * 100}%`;
+      if (keys['KeyW'] || keys['ArrowUp'] || keys['w'] || keys['W']) dy -= 1;
+      if (keys['KeyS'] || keys['ArrowDown'] || keys['s'] || keys['S']) dy += 1;
+      if (keys['KeyA'] || keys['ArrowLeft'] || keys['a'] || keys['A']) dx -= 1;
+      if (keys['KeyD'] || keys['ArrowRight'] || keys['d'] || keys['D']) dx += 1;
 
-      document.getElementById('dilemma-title').textContent = d.title;
-      document.getElementById('dilemma-context').textContent = d.context;
+      if (joyActive && (Math.abs(joyDelta.x) > 0.1 || Math.abs(joyDelta.y) > 0.1)) {
+        dx = joyDelta.x;
+        dy = joyDelta.y;
+      } else if (hero.targetX !== null && hero.targetY !== null) {
+        const dist = Math.hypot(hero.targetX - hero.x, hero.targetY - hero.y);
+        if (dist < 8) {
+          hero.targetX = null;
+          hero.targetY = null;
+        } else {
+          dx = (hero.targetX - hero.x) / dist;
+          dy = (hero.targetY - hero.y) / dist;
+        }
+      }
 
-      const container = document.getElementById('options-container');
+      const len = Math.hypot(dx, dy);
+      if (len > 0.05) {
+        hero.isMoving = true;
+        hero.x += (dx / (len > 1 ? len : 1)) * hero.speed;
+        hero.y += (dy / (len > 1 ? len : 1)) * hero.speed;
+        hero.walkCycle += 0.28;
+
+        if (Math.abs(dx) > Math.abs(dy)) {
+          hero.facing = dx > 0 ? 'right' : 'left';
+        } else {
+          hero.facing = dy > 0 ? 'down' : 'up';
+        }
+
+        // Emit walking dust particle under shoes
+        if (Math.random() < 0.45) {
+          hero.particles.push({
+            x: hero.x + (Math.random() - 0.5) * 12,
+            y: hero.y + 16,
+            radius: Math.random() * 3 + 2,
+            alpha: 0.6
+          });
+        }
+      } else {
+        hero.isMoving = false;
+      }
+
+      // Update dust particles
+      for (let i = hero.particles.length - 1; i >= 0; i--) {
+        const p = hero.particles[i];
+        p.alpha -= 0.035;
+        p.radius *= 0.96;
+        if (p.alpha <= 0) {
+          hero.particles.splice(i, 1);
+        }
+      }
+
+      // Constrain within world
+      hero.x = Math.max(hero.radius + 20, Math.min(WORLD_W - hero.radius - 20, hero.x));
+      hero.y = Math.max(hero.radius + 40, Math.min(WORLD_H - hero.radius - 20, hero.y));
+    }
+
+    function renderScene() {
+      animTime += 0.03;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Camera offset centered on animated hero
+      const camX = Math.max(0, Math.min(WORLD_W - canvas.width, hero.x - canvas.width / 2));
+      const camY = Math.max(0, Math.min(WORLD_H - canvas.height, hero.y - canvas.height / 2));
+
+      ctx.save();
+      ctx.translate(-camX, -camY);
+
+      // 1. Realistic Campus Masterplan Ground (PIT SJC - Eugênio de Melo)
+      drawCampusGround();
+
+      // 2. Render Stations & Realistic Buildings
+      stations.forEach(st => {
+        drawStation(st);
+      });
+
+      // 3. Target Waypoint Indicator
+      if (hero.targetX !== null) {
+        ctx.beginPath();
+        ctx.arc(hero.targetX, hero.targetY, 12 + Math.sin(animTime * 4) * 4, 0, Math.PI * 2);
+        ctx.strokeStyle = "rgba(6, 182, 212, 0.85)";
+        ctx.lineWidth = 2.5;
+        ctx.stroke();
+      }
+
+      // 4. Draw Animated Walking Avatar ("Bonequinho Andando")
+      drawHero();
+
+      ctx.restore();
+    }
+
+    /* REALISTIC PIT SJC CAMPUS MASTERPLAN RENDERING */
+    function drawCampusGround() {
+      // 1. Base terrain (Vale do Paraíba landscape)
+      ctx.fillStyle = "#070f1e";
+      ctx.fillRect(0, 0, WORLD_W, WORLD_H);
+
+      // Grassy polygons and landscaped parcels
+      ctx.fillStyle = "#0a192f";
+      ctx.fillRect(80, 240, 520, 360);   // UNIFESP Academic Sector
+      ctx.fillRect(940, 380, 480, 360);  // Nexus Innovation Sector
+      ctx.fillRect(1380, 240, 480, 460); // Aerospace & CDT Sector
+      ctx.fillRect(940, 780, 500, 380);  // Governance & OS Sector
+      ctx.fillRect(400, 960, 580, 360);  // Net-Zero Ecological Reserve
+
+      // 2. NORTH: Rodovia Presidente Dutra (BR-116)
+      ctx.fillStyle = "#1e293b";
+      ctx.fillRect(0, 30, WORLD_W, 100);
+      
+      // Highway lane divider
+      ctx.strokeStyle = "#eab308";
+      ctx.lineWidth = 3;
+      ctx.setLineDash([20, 15]);
+      ctx.beginPath();
+      ctx.moveTo(0, 80);
+      ctx.lineTo(WORLD_W, 80);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // Highway Guard-Rails & Highway Sign
+      ctx.fillStyle = "#0f172a";
+      ctx.fillRect(0, 25, WORLD_W, 5);
+      ctx.fillRect(0, 130, WORLD_W, 5);
+
+      // Overhead Highway Signboard
+      drawRoundRect(ctx, 640, 10, 480, 32, 6);
+      ctx.fillStyle = "#065f46";
+      ctx.fill();
+      ctx.strokeStyle = "#fff";
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+      ctx.fillStyle = "#fff";
+      ctx.font = "bold 11px Outfit, sans-serif";
+      ctx.textAlign = "center";
+      ctx.fillText("🛣️ BR-116 PRES. DUTRA • KM 137 • PARQUE TECNOLÓGICO SJC (EUGÊNIO DE MELO)", 880, 30);
+
+      // Access Viaduct and Main Entrance Portico (Guarita com Cancelas)
+      ctx.fillStyle = "#1e293b";
+      ctx.fillRect(720, 130, 160, 140); // Entrance access road
+      
+      // Entrance Gate Canopy
+      drawRoundRect(ctx, 680, 170, 240, 36, 8);
+      ctx.fillStyle = "rgba(15, 23, 42, 0.95)";
+      ctx.fill();
+      ctx.strokeStyle = "#06b6d4";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+      ctx.fillStyle = "#38bdf8";
+      ctx.font = "bold 11px Outfit, sans-serif";
+      ctx.fillText("PÓRTICO PRINCIPAL • PIT SJC", 800, 192);
+
+      // 3. CENTRAL BOULEVARD: Av. Dr. Altino Bondesan (Double Avenue with Palms)
+      ctx.fillStyle = "#162238";
+      // Vertical main boulevard
+      ctx.fillRect(730, 260, 140, 780);
+      // Horizontal central arteries
+      ctx.fillRect(120, 560, WORLD_W - 240, 100);
+      ctx.fillRect(120, 920, 800, 80);
+
+      // Central median with trees / palms
+      ctx.fillStyle = "#0d233a";
+      ctx.fillRect(795, 270, 10, 760);
+      ctx.fillRect(130, 605, WORLD_W - 260, 10);
+
+      // Road markings (white dashed lines)
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.25)";
+      ctx.lineWidth = 2.5;
+      ctx.setLineDash([14, 14]);
+      
+      ctx.beginPath();
+      // Avenue lanes
+      ctx.moveTo(765, 270); ctx.lineTo(765, 1030);
+      ctx.moveTo(835, 270); ctx.lineTo(835, 1030);
+      ctx.moveTo(130, 585); ctx.lineTo(WORLD_W - 130, 585);
+      ctx.moveTo(130, 635); ctx.lineTo(WORLD_W - 130, 635);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // 4. PEDESTRIAN CROSSINGS (Faixas de Pedestres Zebradas)
+      drawCrosswalk(730, 370, 140, 25);
+      drawCrosswalk(730, 530, 140, 25);
+      drawCrosswalk(730, 665, 140, 25);
+      drawCrosswalk(730, 860, 140, 25);
+      drawCrosswalk(570, 560, 25, 100);
+      drawCrosswalk(920, 560, 25, 100);
+
+      // 5. HELIPONTO OFICIAL DO PIT (Near Governance Center)
+      ctx.beginPath();
+      ctx.arc(1360, 960, 55, 0, Math.PI * 2);
+      ctx.fillStyle = "#1e293b";
+      ctx.fill();
+      ctx.strokeStyle = "#eab308";
+      ctx.lineWidth = 4;
+      ctx.stroke();
+      ctx.fillStyle = "#eab308";
+      ctx.font = "bold 44px Outfit, sans-serif";
+      ctx.textAlign = "center";
+      ctx.fillText("H", 1360, 976);
+      ctx.font = "bold 9px JetBrains Mono, monospace";
+      ctx.fillText("HELIPONTO PIT SJC", 1360, 1004);
+
+      // 6. ECOLOGICAL LAKE (Living Lab Net-Zero - South Sector)
+      ctx.beginPath();
+      ctx.ellipse(680, 1180, 180, 90, -0.1, 0, Math.PI * 2);
+      ctx.fillStyle = "#0c4a6e";
+      ctx.fill();
+      ctx.strokeStyle = "#0284c7";
+      ctx.lineWidth = 3;
+      ctx.stroke();
+
+      // Wooden bridge over lake
+      ctx.fillStyle = "#78350f";
+      ctx.fillRect(660, 1090, 40, 180);
+      ctx.fillStyle = "#b45309";
+      for (let by = 1100; by < 1260; by += 15) {
+        ctx.fillRect(662, by, 36, 3);
+      }
+
+      // Solar Farm (Painéis Solares Fotovoltaicos)
+      for (let r = 0; r < 3; r++) {
+        for (let c = 0; c < 5; c++) {
+          ctx.fillStyle = "#1e3a8a";
+          ctx.fillRect(430 + c * 40, 1050 + r * 30, 32, 20);
+          ctx.strokeStyle = "#38bdf8";
+          ctx.lineWidth = 1;
+          ctx.strokeRect(430 + c * 40, 1050 + r * 30, 32, 20);
+        }
+      }
+      ctx.fillStyle = "#6ee7b7";
+      ctx.font = "bold 9px JetBrains Mono, monospace";
+      ctx.fillText("USINA SOLAR FOTOVOLTAICA NET-ZERO", 530, 1155);
+
+      // 7. REALISTIC PARKING LOTS (Estacionamentos com Vagas e Carros)
+      drawParkingLot(140, 410, 140, 100, "ESTACIONAMENTO UNIFESP");
+      drawParkingLot(1280, 560, 140, 90, "ESTACIONAMENTO NEXUS");
+      drawParkingLot(1440, 750, 140, 90, "ESTACIONAMENTO CDT / AERO");
+
+      // 8. AEROSPACE MOCKUP JET (Patio Pavilhão Aeroespacial)
+      drawMockupJet(1680, 360);
+    }
+
+    function drawCrosswalk(x, y, w, h) {
+      ctx.fillStyle = "rgba(255, 255, 255, 0.4)";
+      if (w > h) {
+        for (let ix = x; ix < x + w; ix += 18) {
+          ctx.fillRect(ix, y, 9, h);
+        }
+      } else {
+        for (let iy = y; iy < y + h; iy += 18) {
+          ctx.fillRect(x, iy, w, 9);
+        }
+      }
+    }
+
+    function drawParkingLot(x, y, w, h, label) {
+      ctx.fillStyle = "#0f172a";
+      ctx.fillRect(x, y, w, h);
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.15)";
+      ctx.lineWidth = 1.5;
+      ctx.strokeRect(x, y, w, h);
+
+      // Stalls
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.3)";
+      ctx.lineWidth = 1;
+      const numStalls = Math.floor(w / 24);
+      for (let i = 0; i < numStalls; i++) {
+        const sx = x + i * 24 + 4;
+        ctx.strokeRect(sx, y + 4, 18, 38);
+        ctx.strokeRect(sx, y + h - 42, 18, 38);
+        
+        // Random parked cars
+        if ((i * 7) % 3 === 0) {
+          ctx.fillStyle = (i % 2 === 0) ? "#38bdf8" : "#f43f5e";
+          ctx.fillRect(sx + 3, y + 8, 12, 30);
+        } else if ((i * 5) % 4 === 0) {
+          ctx.fillStyle = "#e2e8f0";
+          ctx.fillRect(sx + 3, y + h - 38, 12, 30);
+        }
+      }
+
+      ctx.fillStyle = "#94a3b8";
+      ctx.font = "bold 8px JetBrains Mono, monospace";
+      ctx.textAlign = "center";
+      ctx.fillText(label, x + w / 2, y + h / 2 + 3);
+    }
+
+    function drawMockupJet(x, y) {
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.rotate(-0.3);
+      // Jet Fuselage
+      ctx.fillStyle = "#e2e8f0";
+      ctx.beginPath();
+      ctx.ellipse(0, 0, 48, 12, 0, 0, Math.PI * 2);
+      ctx.fill();
+      // Wings
+      ctx.fillStyle = "#94a3b8";
+      ctx.beginPath();
+      ctx.moveTo(-10, 0); ctx.lineTo(-20, -42); ctx.lineTo(10, -5);
+      ctx.moveTo(-10, 0); ctx.lineTo(-20, 42); ctx.lineTo(10, 5);
+      ctx.fill();
+      // Cockpit
+      ctx.fillStyle = "#0284c7";
+      ctx.beginPath();
+      ctx.ellipse(24, 0, 10, 5, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+      ctx.fillStyle = "#10b981";
+      ctx.font = "bold 9px JetBrains Mono, monospace";
+      ctx.textAlign = "center";
+      ctx.fillText("MOCKUP AERONAVE EMBRAER", x, y + 55);
+    }
+
+    function drawRoundRect(targetCtx, x, y, width, height, radius) {
+      const r = Math.min(radius, Math.min(width, height) / 2);
+      targetCtx.beginPath();
+      targetCtx.moveTo(x + r, y);
+      targetCtx.lineTo(x + width - r, y);
+      targetCtx.arcTo(x + width, y, x + width, y + r, r);
+      targetCtx.lineTo(x + width, y + height - r);
+      targetCtx.arcTo(x + width, y + height, x + width - r, y + height, r);
+      targetCtx.lineTo(x + r, y + height);
+      targetCtx.arcTo(x, y + height, x, y + height - r, r);
+      targetCtx.lineTo(x, y + r);
+      targetCtx.arcTo(x, y, x + r, y, r);
+      targetCtx.closePath();
+    }
+
+    /* REALISTIC PIT SJC STATION BUILDINGS */
+    function drawStation(st) {
+      const isUnlocked = unlockedPhases.includes(st.block);
+      const isCompleted = player.completedStations.includes(st.id);
+      const dist = Math.hypot(st.x - hero.x, st.y - hero.y);
+      const isNear = dist < st.radius + 35;
+
+      // Pulsing Base Glow when active & unlocked
+      if (isUnlocked && !isCompleted) {
+        ctx.beginPath();
+        ctx.arc(st.x, st.y, st.radius + Math.sin(animTime * 3) * 8, 0, Math.PI * 2);
+        ctx.strokeStyle = `${st.color}44`;
+        ctx.lineWidth = 4;
+        ctx.stroke();
+      }
+
+      // Realistic Building Complex Box
+      ctx.fillStyle = isUnlocked ? "rgba(15, 23, 42, 0.96)" : "rgba(10, 15, 26, 0.85)";
+      ctx.strokeStyle = isCompleted ? "#10b981" : isUnlocked ? st.color : "rgba(255, 255, 255, 0.12)";
+      ctx.lineWidth = isNear && isUnlocked ? 4 : 2;
+
+      drawRoundRect(ctx, st.x - 90, st.y - 65, 180, 130, 16);
+      ctx.fill();
+      ctx.stroke();
+
+      // Top Header Ribbon with PROMINENT PHASE NAME (FASE 1, FASE 2, etc.)
+      drawRoundRect(ctx, st.x - 90, st.y - 65, 180, 26, 16);
+      ctx.fillStyle = isCompleted ? "#065f46" : isUnlocked ? st.color : "#334155";
+      ctx.fill();
+
+      ctx.fillStyle = "#fff";
+      ctx.font = "900 12px Outfit, sans-serif";
+      ctx.textAlign = "center";
+      ctx.fillText(st.phaseLabel + " • DESAFIO KAHOOT", st.x, st.y - 48);
+
+      // Building Icon
+      ctx.font = "28px sans-serif";
+      ctx.fillText(st.icon, st.x, st.y - 12);
+
+      // Station Name
+      ctx.fillStyle = "#fff";
+      ctx.font = "bold 11px Outfit, sans-serif";
+      ctx.fillText(st.name, st.x, st.y + 16);
+
+      // Subtitle / Concept reference
+      ctx.fillStyle = "rgba(255, 255, 255, 0.6)";
+      ctx.font = "9px Outfit, sans-serif";
+      ctx.fillText(st.subtitle.split("•")[1] || st.subtitle, st.x, st.y + 30);
+
+      // Badge status
+      ctx.font = "bold 10px JetBrains Mono, monospace";
+      if (isCompleted) {
+        ctx.fillStyle = "#6ee7b7";
+        ctx.fillText("✓ CONCLUÍDO", st.x, st.y + 50);
+      } else if (isUnlocked) {
+        ctx.fillStyle = "#67e8f9";
+        ctx.fillText("⭐ FASE ATIVA", st.x, st.y + 50);
+      } else {
+        ctx.fillStyle = "#94a3b8";
+        ctx.fillText("🔒 BLOQUEADA", st.x, st.y + 50);
+      }
+
+      // Proximity Action Prompt
+      if (isNear && isUnlocked && !isCompleted) {
+        ctx.fillStyle = "rgba(6, 182, 212, 0.95)";
+        drawRoundRect(ctx, st.x - 95, st.y - 100, 190, 28, 14);
+        ctx.fill();
+
+        ctx.fillStyle = "#000";
+        ctx.font = "900 11px Outfit, sans-serif";
+        ctx.fillText("💬 Clique ou Aperte E para Jogar!", st.x, st.y - 82);
+      }
+    }
+
+    /* ANIMATED WALKING AVATAR ("BONEQUINHO ANDANDO") */
+    function drawHero() {
+      // 1. Draw walking dust particles
+      hero.particles.forEach(p => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(148, 163, 184, ${p.alpha})`;
+        ctx.fill();
+      });
+
+      // 2. Dynamic Shadow scaling with bobbing
+      const bob = hero.isMoving ? Math.abs(Math.sin(hero.walkCycle)) * 3 : Math.sin(animTime * 2) * 1.2;
+      ctx.beginPath();
+      ctx.ellipse(hero.x, hero.y + 18, 16 - bob * 0.8, 7 - bob * 0.4, 0, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(0, 0, 0, 0.45)";
+      ctx.fill();
+
+      // 3. Pulsing Positioning Beacon Ring
+      ctx.beginPath();
+      ctx.arc(hero.x, hero.y + 16, 22 + Math.sin(animTime * 3) * 3, 0, Math.PI * 2);
+      ctx.strokeStyle = "rgba(6, 182, 212, 0.55)";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      ctx.save();
+      ctx.translate(hero.x, hero.y - bob);
+
+      // Facing orientation (flip horizontally if facing left)
+      if (hero.facing === 'left') {
+        ctx.scale(-1, 1);
+      }
+
+      // 4. ANIMATED LEGS & SHOES (Swinging stride)
+      const legStride = hero.isMoving ? Math.sin(hero.walkCycle) * 9 : 0;
+      
+      // Left Leg & Shoe
+      ctx.fillStyle = "#1e293b"; // Dark trousers
+      ctx.fillRect(-8 - legStride * 0.4, 6, 6, 12);
+      ctx.fillStyle = "#0f172a"; // Shoe
+      ctx.fillRect(-10 - legStride * 0.4, 16, 10, 5);
+
+      // Right Leg & Shoe
+      ctx.fillStyle = "#334155";
+      ctx.fillRect(2 + legStride * 0.4, 6, 6, 12);
+      ctx.fillStyle = "#0f172a";
+      ctx.fillRect(2 + legStride * 0.4, 16, 10, 5);
+
+      // 5. TORSO & BUSINESS BLAZER (UNIFESP Royal Blue)
+      ctx.fillStyle = "#1d4ed8";
+      drawRoundRect(ctx, -10, -10, 20, 18, 5);
+      ctx.fill();
+      ctx.strokeStyle = "#60a5fa";
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+
+      // White shirt collar & Gold Tie
+      ctx.fillStyle = "#f8fafc";
+      ctx.beginPath();
+      ctx.moveTo(-4, -10); ctx.lineTo(4, -10); ctx.lineTo(0, -4);
+      ctx.fill();
+
+      ctx.fillStyle = "#f59e0b"; // Gold tie
+      ctx.beginPath();
+      ctx.moveTo(-2, -6); ctx.lineTo(2, -6); ctx.lineTo(0, 4);
+      ctx.fill();
+
+      // 6. ANIMATED ARMS & HANDS
+      const armSwing = hero.isMoving ? -Math.sin(hero.walkCycle) * 7 : 0;
+      // Left arm
+      ctx.fillStyle = "#1e40af";
+      ctx.fillRect(-14, -8 - armSwing * 0.3, 5, 12);
+      ctx.fillStyle = "#fed7aa"; // Skin hand
+      ctx.beginPath();
+      ctx.arc(-11.5, 6 - armSwing * 0.3, 3, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Right arm (holding tablet/folder)
+      ctx.fillStyle = "#2563eb";
+      ctx.fillRect(9, -8 + armSwing * 0.3, 5, 12);
+      ctx.fillStyle = "#06b6d4"; // Tech tablet / folder
+      ctx.fillRect(11, 0 + armSwing * 0.3, 7, 9);
+      ctx.fillStyle = "#fed7aa";
+      ctx.beginPath();
+      ctx.arc(11.5, 6 + armSwing * 0.3, 3, 0, Math.PI * 2);
+      ctx.fill();
+
+      // 7. HEAD & FACE
+      ctx.fillStyle = "#fed7aa"; // Skin tone
+      ctx.beginPath();
+      ctx.arc(0, -18, 10, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Hair
+      ctx.fillStyle = "#331f0d"; // Dark brown hair
+      ctx.beginPath();
+      ctx.arc(0, -21, 10.5, Math.PI, Math.PI * 2);
+      ctx.fill();
+      ctx.fillRect(-10, -22, 20, 5);
+
+      // Glasses & Eyes looking in direction
+      ctx.strokeStyle = "#0f172a";
+      ctx.lineWidth = 1.5;
+      ctx.strokeRect(1, -21, 5, 5);
+      ctx.strokeRect(-6, -21, 5, 5);
+      ctx.beginPath();
+      ctx.moveTo(-1, -19); ctx.lineTo(1, -19);
+      ctx.stroke();
+
+      // Smile
+      ctx.strokeStyle = "#c2410c";
+      ctx.lineWidth = 1.2;
+      ctx.beginPath();
+      ctx.arc(0, -15, 3.5, 0.2, Math.PI - 0.2);
+      ctx.stroke();
+
+      ctx.restore();
+
+      // 8. Floating Name Tag Badge Above Head
+      const labelText = `👑 ${player.name || "Orquestrador"} • ${(player.score || 0).toLocaleString()} pts`;
+      ctx.font = "bold 11px Outfit, sans-serif";
+      const txtWidth = ctx.measureText(labelText).width;
+
+      drawRoundRect(ctx, hero.x - txtWidth / 2 - 8, hero.y - 48, txtWidth + 16, 20, 10);
+      ctx.fillStyle = "rgba(10, 19, 36, 0.92)";
+      ctx.fill();
+      ctx.strokeStyle = "#38bdf8";
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+
+      ctx.fillStyle = "#fff";
+      ctx.textAlign = "center";
+      ctx.fillText(labelText, hero.x, hero.y - 34);
+    }
+
+    function renderMinimap() {
+      minimapCtx.clearRect(0, 0, 110, 80);
+      const scaleX = 110 / WORLD_W;
+      const scaleY = 80 / WORLD_H;
+
+      // Base ground
+      minimapCtx.fillStyle = "#070f1e";
+      minimapCtx.fillRect(0, 0, 110, 80);
+
+      // Lake in minimap
+      minimapCtx.fillStyle = "#0284c7";
+      minimapCtx.beginPath();
+      minimapCtx.ellipse(680 * scaleX, 1180 * scaleY, 14, 7, 0, 0, Math.PI * 2);
+      minimapCtx.fill();
+
+      // Stations
+      stations.forEach(st => {
+        const isUnlocked = unlockedPhases.includes(st.block);
+        const isCompleted = player.completedStations.includes(st.id);
+        minimapCtx.fillStyle = isCompleted ? "#10b981" : isUnlocked ? st.color : "#475569";
+        minimapCtx.beginPath();
+        minimapCtx.arc(st.x * scaleX, st.y * scaleY, 4.5, 0, Math.PI * 2);
+        minimapCtx.fill();
+      });
+
+      // Hero dot
+      minimapCtx.fillStyle = "#fbbf24";
+      minimapCtx.beginPath();
+      minimapCtx.arc(hero.x * scaleX, hero.y * scaleY, 4, 0, Math.PI * 2);
+      minimapCtx.fill();
+    }
+
+    /* Target Direction Arrow and Navigation Helper */
+    function updateTargetBanner() {
+      const nextSt = stations.find(s => unlockedPhases.includes(s.block) && !player.completedStations.includes(s.id));
+      const banner = document.getElementById('direction-banner');
+      const label = document.getElementById('target-label');
+      const arrow = document.getElementById('target-arrow');
+
+      if (!nextSt) {
+        label.textContent = "Parabéns! Todas as fases liberadas foram concluídas!";
+        arrow.textContent = "🏆";
+        return;
+      }
+
+      label.textContent = `Vá até a ${nextSt.phaseLabel}: ${nextSt.name}`;
+      const angle = Math.atan2(nextSt.y - hero.y, nextSt.x - hero.x);
+      const deg = Math.round(angle * (180 / Math.PI));
+      arrow.style.display = "inline-block";
+      arrow.style.transform = `rotate(${deg}deg)`;
+    }
+
+    setInterval(updateTargetBanner, 300);
+
+    /* Station Interaction */
+    function checkNearbyStationInteraction() {
+      stations.forEach(st => {
+        const dist = Math.hypot(st.x - hero.x, st.y - hero.y);
+        if (dist < st.radius + 45) {
+          if (!unlockedPhases.includes(st.block)) {
+            alert(`🔒 A ${st.phaseLabel} (${st.name}) ainda está bloqueada. O apresentador liberará ao final do bloco!`);
+            playBeep(220, 'square', 0.2);
+          } else if (player.completedStations.includes(st.id)) {
+            alert(`✓ Você já concluiu todas as perguntas da ${st.phaseLabel}!`);
+            playBeep(440, 'sine', 0.15);
+          } else {
+            openKahootChallenge(st);
+          }
+        }
+      });
+    }
+
+    /* Kahoot Challenge Engine */
+    let activeStation = null;
+    let activeQuestions = [];
+    let currentQIdx = 0;
+    let qStartTime = 0;
+    let qTimerInterval = null;
+    const Q_MAX_SECONDS = 20;
+
+    function openKahootChallenge(station) {
+      activeStation = station;
+      activeQuestions = rawQuestions.filter(q => q.block === station.block);
+      currentQIdx = 0;
+
+      document.getElementById('challenge-modal').style.display = 'flex';
+      loadCurrentQuestion();
+    }
+
+    /* Shuffle array helper (Fisher-Yates) */
+    function shuffleArray(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function loadCurrentQuestion() {
+      if (currentQIdx >= activeQuestions.length) {
+        finishStationChallenge();
+        return;
+      }
+
+      document.getElementById('feedback-overlay').style.display = 'none';
+
+      const q = activeQuestions[currentQIdx];
+      document.getElementById('ch-badge').textContent = `${activeStation.name} • Pergunta ${currentQIdx + 1} de ${activeQuestions.length}`;
+      document.getElementById('ch-prompt').textContent = q.question;
+
+      // Prepare options with randomization
+      const allChoices = [
+        { text: q.correctOption, isCorrect: true, semanticKey: "A" },
+        { text: q.distractors[0], isCorrect: false, semanticKey: "B" },
+        { text: q.distractors[1], isCorrect: false, semanticKey: "C" }
+      ];
+
+      // SHUFFLE DYNAMICALLY!
+      const shuffled = shuffleArray(allChoices);
+
+      const letters = ["A", "B", "C"];
+      const colors = ["#2563eb", "#db2777", "#d97706"];
+
+      const container = document.getElementById('ch-answers-container');
       container.innerHTML = '';
 
-      d.choices.forEach((c, cIdx) => {
-        const card = document.createElement('div');
-        card.className = 'choice-card';
-        card.onclick = () => selectChoice(cIdx);
-
-        let impactsHtml = '';
-        c.impacts.forEach(imp => {
-          impactsHtml += `<span class="impact-pill ${imp.type === 'pos' ? 'impact-pos' : 'impact-neg'}">${imp.text}</span>`;
-        });
-
-        card.innerHTML = `
-          <div class="choice-header">
-            <span class="choice-letter">OPÇÃO ${c.letter}</span>
-            <span class="choice-helix-tag">${c.helix}</span>
-          </div>
-          <div class="choice-name">${c.name}</div>
-          <div class="choice-desc">${c.desc}</div>
-          <div class="choice-impact-preview">
-            ${impactsHtml}
-          </div>
+      shuffled.forEach((opt, idx) => {
+        const btn = document.createElement('button');
+        btn.className = 'ans-choice-btn';
+        btn.innerHTML = `
+          <div class="ans-letter-tag" style="background: ${colors[idx]};">${letters[idx]}</div>
+          <div>${opt.text}</div>
         `;
-        container.appendChild(card);
+        btn.onclick = () => selectAnswer(opt, q);
+        container.appendChild(btn);
       });
+
+      startCountdown();
     }
 
-    function selectChoice(choiceIdx) {
-      playBeep(587.33, 'triangle', 0.12);
-      const choice = dilemmas[currentRound].choices[choiceIdx];
-      choicesHistory.push({
-        dilemmaId: dilemmas[currentRound].id,
-        choiceLetter: choice.letter,
-        choiceName: choice.name,
-        scores: choice.scores
-      });
+    function startCountdown() {
+      clearInterval(qTimerInterval);
+      qStartTime = Date.now();
+      const bar = document.getElementById('ch-timer-bar');
+      const text = document.getElementById('ch-timer-text');
 
-      // Accumulate scores
-      playerScores.academia += choice.scores.academia;
-      playerScores.startups += choice.scores.startups;
-      playerScores.corporations += choice.scores.corporations;
-      playerScores.esg += choice.scores.esg;
+      bar.style.width = '100%';
+      text.textContent = `${Q_MAX_SECONDS.toFixed(1)}s`;
 
-      // Normalization (clamp between 10% and 100%)
-      for (let k in playerScores) {
-        playerScores[k] = Math.max(10, Math.min(100, playerScores[k]));
-      }
+      qTimerInterval = setInterval(() => {
+        const elapsed = (Date.now() - qStartTime) / 1000;
+        const remaining = Math.max(0, Q_MAX_SECONDS - elapsed);
+        const pct = (remaining / Q_MAX_SECONDS) * 100;
 
-      // Visual highlight
-      const cards = document.querySelectorAll('.choice-card');
-      cards[choiceIdx].classList.add('selected');
+        bar.style.width = `${pct}%`;
+        text.textContent = `${remaining.toFixed(1)}s`;
 
-      setTimeout(() => {
-        if (currentRound + 1 < dilemmas.length) {
-          loadDilemma(currentRound + 1);
-        } else {
-          finishGame();
+        if (remaining <= 0) {
+          clearInterval(qTimerInterval);
+          selectAnswer({ text: "Tempo Esgotado", isCorrect: false, semanticKey: "TIMEOUT" }, activeQuestions[currentQIdx]);
         }
-      }, 400);
+      }, 100);
     }
 
-    function finishGame() {
-      playBeep(880, 'sine', 0.3);
-      calculateArchetype();
-      showScreen('screen-result');
-    }
+    function selectAnswer(chosenOpt, q) {
+      clearInterval(qTimerInterval);
+      const elapsedMs = Date.now() - qStartTime;
 
-    function calculateArchetype() {
-      const { academia, startups, corporations, esg } = playerScores;
-
-      let icon = "🏛️";
-      let title = "O Diplomata Sistêmico";
-      let tagline = `${playerName}, sua gestão equilibrou a autonomia da UNIFESP com as demandas de grande porte da Embraer e a agilidade das startups do Nexus.`;
-      let headline = `PIT SJC atinge marca histórica de co-criação sob liderança equilibrada de ${playerName}`;
-      let snippet = "Após 5 anos de gestão orquestrada, o Parque Tecnológico de São José dos Campos consolidou o modelo de inovação aberta mais estável da América Latina.";
-      let q1 = "Como você conseguiu manter a confiança dos pesquisadores da UNIFESP sem afugentar os prazos rígidos da grande indústria aeroespacial?";
-      let q2 = "Se houvesse um novo choque financeiro, qual dos 4 pilares você estaria disposto(a) a sacrificar primeiro?";
-
-      // Determine archetype by maximum dominant score or combinations
-      if (corporations >= 75 && corporations > academia && corporations > esg) {
-        icon = "💼";
-        title = "O Pragmático Corporativo";
-        tagline = `${playerName}, seu mandato priorizou a atração de capital maciço, escala industrial com a Embraer e sobrevivência financeira do parque acima de debates teóricos.`;
-        headline = `Faturamento das empresas associadas ao PIT SJC cresce 140% com atração de multinacionais`;
-        snippet = `A gestão de ${playerName} foi marcada por pragmatismo: grandes contratos de defesa foram assinados, embora alguns docentes tenham reclamado de rigidez nas patentes.`;
-        q1 = "Você não teme que o parque tenha se transformado em uma prestadora de serviços da grande indústria em vez de um polo de ciência aberta?";
-        q2 = "Como responder aos alunos de mestrado que sentem suas dissertações tolhidas por acordos de sigilo corporativo?";
-      } else if (academia >= 75 && academia > corporations) {
-        icon = "🔬";
-        title = "O Guardião da Ciência Aberta";
-        tagline = `${playerName}, você blindou o papel da universidade pública (UNIFESP/ITA), defendeu patentes abertas e garantiu que o conhecimento gerado permanecesse acessível à sociedade.`;
-        headline = `PIT SJC e UNIFESP batem recorde de publicações científicas e cotitularidade pública`;
-        snippet = `Sob a batuta de ${playerName}, o parque recusou exigências leoninas de multinacionais e priorizou spin-offs de base científica pura.`;
-        q1 = "Como sustentar as contas do parque e o pagamento de bolsistas sem os aportes multimilionários das grandes corporações privadas?";
-        q2 = "O que fazer quando uma empresa âncora ameaça migrar seus laboratórios para outro estado por falta de exclusividade em patentes?";
-      } else if (startups >= 75 && startups > corporations) {
-        icon = "⚡";
-        title = "O Acelerador de Deep Techs";
-        tagline = `${playerName}, sua obsessão foi o risco radical: você transformou o Nexus Hub em um ninho de pioneiros em satélites, drones e computação de ponta.`;
-        headline = `Nexus Hub no PIT se torna o maior celeiro de deep techs e hardware aeroespacial do país`;
-        snippet = `Com a aposta corajosa de ${playerName} em tecnologias de ciclo longo, o parque formou uma nova geração de empreendedores de alta tecnologia.`;
-        q1 = "Como lidar com a taxa natural de mortalidade das deep techs antes que elas alcancem o 'vale da morte' da certificação aeronáutica?";
-        q2 = "As grandes empresas do APL apoiaram sua visão ou sentiram que o parque estava dispersando recursos em empresas iniciantes?";
-      } else if (esg >= 75 && esg > corporations) {
-        icon = "🌱";
-        title = "O Pioneiro da Quíntupla Hélice";
-        tagline = `${playerName}, você colocou a descarbonização, a transição para SAF e o impacto nos bairros da periferia no centro absoluto da governança.`;
-        headline = `PIT São José dos Campos é premiado internacionalmente como Parque Mais Sustentável e Inclusivo`;
-        snippet = `A estratégia ousada de ${playerName} conectou a transição verde aeroespacial a programas de inclusão nas escolas públicas de São José dos Campos.`;
-        q1 = "Como você convenceu os executivos da cadeia fóssil tradicional a apoiarem metas climáticas tão arrojadas sem demissões em massa?";
-        q2 = "A sociedade de São José dos Campos realmente percebeu o parque como um espaço público e acessível?";
+      let points = 0;
+      if (chosenOpt.isCorrect) {
+        // Kahoot formula: 1000 base + speed bonus up to 500
+        const speedBonus = Math.max(0, Math.round(500 * (1 - (elapsedMs / 20000))));
+        points = 1000 + speedBonus;
+        player.score += points;
+        playBeep(880, 'sine', 0.25);
+      } else {
+        playBeep(220, 'square', 0.35);
       }
 
-      // Update UI elements
-      document.getElementById('res-icon').textContent = icon;
-      document.getElementById('res-title').textContent = title;
-      document.getElementById('res-tagline').textContent = tagline;
-      document.getElementById('news-headline').textContent = headline;
-      document.getElementById('news-snippet').textContent = snippet;
+      player.answeredQuestions[q.id] = {
+        chosenText: chosenOpt.text,
+        isCorrect: chosenOpt.isCorrect,
+        semanticKey: chosenOpt.semanticKey,
+        points: points,
+        timeMs: elapsedMs
+      };
 
-      document.getElementById('score-academia').textContent = academia + '%';
-      document.getElementById('bar-academia').style.width = academia + '%';
+      savePlayerState();
 
-      document.getElementById('score-startups').textContent = startups + '%';
-      document.getElementById('bar-startups').style.width = startups + '%';
+      // Broadcast answer to Admin and Presentation Slides in real time
+      const answerPayload = {
+        playerName: player.name,
+        turma: player.turma,
+        questionId: q.id,
+        optionKey: chosenOpt.semanticKey, // Maps back to A (Correct), B or C for clean pie charts
+        isCorrect: chosenOpt.isCorrect,
+        timeMs: elapsedMs
+      };
 
-      document.getElementById('score-corporations').textContent = corporations + '%';
-      document.getElementById('bar-corporations').style.width = corporations + '%';
+      if (window.SyncService) {
+        window.SyncService.sendAnswer(answerPayload);
+      } else if (channel) {
+        channel.postMessage({
+          type: 'PLAYER_ANSWER',
+          payload: answerPayload
+        });
+      }
 
-      document.getElementById('score-esg').textContent = esg + '%';
-      document.getElementById('bar-esg').style.width = esg + '%';
-
-      document.getElementById('debate-q1').textContent = q1;
-      document.getElementById('debate-q2').textContent = q2;
+      // Show Feedback Overlay
+      showFeedback(chosenOpt.isCorrect, points, elapsedMs, q);
     }
 
-    function copyResult() {
-      const title = document.getElementById('res-title').textContent;
-      const tagline = document.getElementById('res-tagline').textContent;
-      const q1 = document.getElementById('debate-q1').textContent;
-      const q2 = document.getElementById('debate-q2').textContent;
+    function showFeedback(isCorrect, points, elapsedMs, q) {
+      const overlay = document.getElementById('feedback-overlay');
+      const icon = document.getElementById('fb-icon');
+      const title = document.getElementById('fb-title');
+      const pts = document.getElementById('fb-pts');
+      const exp = document.getElementById('fb-exp');
+      const btn = document.getElementById('btn-next-q');
 
-      const textToShare = 
-`🏛️ MEU DESFECHO NO PIT SÃO JOSÉ DOS CAMPOS:
-Líder: ${playerName}
-Arquétipo: ${title}
-"${tagline}"
+      if (isCorrect) {
+        icon.textContent = "🎉";
+        title.textContent = "Resposta Correta!";
+        title.style.color = "#6ee7b7";
+        pts.textContent = `+${points.toLocaleString()} pts (Tempo: ${(elapsedMs/1000).toFixed(1)}s)`;
+      } else {
+        icon.textContent = "❌";
+        title.textContent = "Resposta Incorreta!";
+        title.style.color = "#fda4af";
+        pts.textContent = `0 pts (Tempo: ${(elapsedMs/1000).toFixed(1)}s)`;
+      }
 
-📊 Minhas Métricas de Governança:
-• Confiança Acadêmica (UNIFESP): ${playerScores.academia}%
-• Deep Tech & Startups (Nexus): ${playerScores.startups}%
-• Força Corporativa (Embraer/Indústria): ${playerScores.corporations}%
-• Sociedade & ESG (Cidades Inteligentes): ${playerScores.esg}%
+      exp.textContent = q.explanation;
 
-🎤 Minhas Questões para o Debate:
-1. ${q1}
-2. ${q2}
+      const isLast = currentQIdx + 1 >= activeQuestions.length;
+      btn.textContent = isLast ? "Concluir Estação e Voltar ao Campus ➔" : "Próxima Pergunta ➔";
 
-Jogue também no Seminário 5: https://josuejofre.github.io/seminario-ecossistema-inovacao-pit/jogo.html`;
+      overlay.style.display = 'flex';
+    }
 
-      navigator.clipboard.writeText(textToShare).then(() => {
-        showToast("Resultado copiado! Compartilhe no WhatsApp da sala.");
-      }).catch(() => {
-        showToast("Selecione o texto e copie manualmente.");
+    function nextQuestionOrReturn() {
+      currentQIdx++;
+      if (currentQIdx >= activeQuestions.length) {
+        finishStationChallenge();
+      } else {
+        loadCurrentQuestion();
+      }
+    }
+
+    function finishStationChallenge() {
+      document.getElementById('challenge-modal').style.display = 'none';
+      if (!player.completedStations.includes(activeStation.id)) {
+        player.completedStations.push(activeStation.id);
+      }
+      savePlayerState();
+      updateTargetBanner();
+
+      if (typeof confetti === 'function') {
+        confetti({ particleCount: 60, spread: 70, origin: { y: 0.6 } });
+      }
+    }
+
+    /* Save and Load Player State */
+    function savePlayerState() {
+      localStorage.setItem('kahoot_rpg_current_player', JSON.stringify(player));
+      const elName = document.getElementById('hud-name');
+      const elTurma = document.getElementById('hud-turma');
+      const elScore = document.getElementById('hud-score');
+      if (elName) elName.textContent = player.name || "Orquestrador";
+      if (elTurma) elTurma.textContent = `Turma de ${player.turma || "Quarta"}`;
+      if (elScore) elScore.textContent = `${(player.score || 0).toLocaleString()} pts`;
+    }
+
+    function registerAndStart() {
+      const name = document.getElementById('input-name').value.trim();
+      const turma = document.getElementById('select-turma').value;
+      if (!name) {
+        alert("Por favor, digite seu nome para entrar no campus!");
+        return;
+      }
+      player.name = name;
+      player.turma = turma;
+      player.score = 0;
+      player.answeredQuestions = {};
+      player.completedStations = [];
+
+      savePlayerState();
+      document.getElementById('modal-register').style.display = 'none';
+      playBeep(587, 'sine', 0.2);
+    }
+
+    // Direct click/tap on Direction Banner to walk or open challenge
+    const dirBanner = document.getElementById('direction-banner');
+    if (dirBanner) {
+      dirBanner.style.cursor = 'pointer';
+      dirBanner.title = "Clique para ir diretamente até a próxima estação ativa!";
+      dirBanner.addEventListener('click', () => {
+        const nextSt = stations.find(s => unlockedPhases.includes(s.block) && !player.completedStations.includes(s.id));
+        if (nextSt) {
+          hero.x = nextSt.x;
+          hero.y = nextSt.y + 35;
+          openKahootChallenge(nextSt);
+        }
       });
     }
 
-    function showToast(msg) {
-      const t = document.getElementById('toast');
-      t.textContent = msg;
-      t.classList.add('show');
-      setTimeout(() => {
-        t.classList.remove('show');
-      }, 3000);
+    // Direct click on station buildings on canvas
+    canvas.addEventListener('click', (e) => {
+      const camX = Math.max(0, Math.min(WORLD_W - canvas.width, hero.x - canvas.width / 2));
+      const camY = Math.max(0, Math.min(WORLD_H - canvas.height, hero.y - canvas.height / 2));
+      const worldClickX = e.clientX + camX;
+      const worldClickY = e.clientY + camY;
+
+      stations.forEach(st => {
+        const d = Math.hypot(st.x - worldClickX, st.y - worldClickY);
+        if (d < st.radius + 20) {
+          if (!unlockedPhases.includes(st.block)) {
+            alert(`🔒 A Fase ${st.block} (${st.name}) ainda está bloqueada. O apresentador liberará ao final do bloco!`);
+          } else if (player.completedStations.includes(st.id)) {
+            alert(`✓ Você já concluiu todas as perguntas desta estação!`);
+          } else {
+            hero.x = st.x;
+            hero.y = st.y + 35;
+            openKahootChallenge(st);
+          }
+        }
+      });
+    });
+
+    // Check existing player
+    
+    // Listen for Full Game Reset from Admin Cockpit
+    function handleGameReset() {
+      player = {
+        name: "",
+        turma: "Quarta",
+        score: 0,
+        answeredQuestions: {},
+        completedStations: []
+      };
+      localStorage.removeItem('kahoot_rpg_current_player');
+      unlockedPhases = [1, 2, 3, 4, 5, 6]; // All phases unlocked on full reset
+      
+      const modalReg = document.getElementById('modal-register');
+      if (modalReg) modalReg.style.display = 'flex';
+      const modalChal = document.getElementById('challenge-modal');
+      if (modalChal) modalChal.style.display = 'none';
+
+      savePlayerState();
+      updateTargetBanner();
+      console.log('[Jogo] Jogo resetado com sucesso pelo Administrador!');
     }
 
-    function restartGame() {
-      playerScores = { academia: 50, startups: 50, corporations: 50, esg: 50 };
-      choicesHistory = [];
-      showScreen('screen-intro');
+    if (window.SyncService) {
+      window.SyncService.onReset(() => handleGameReset());
     }
+
+    if (channel) {
+      const origOnMessage = channel.onmessage;
+      channel.onmessage = (event) => {
+        if (event.data && event.data.type === 'GAME_RESET') {
+          handleGameReset();
+        } else if (origOnMessage) {
+          origOnMessage(event);
+        }
+      };
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      try {
+        // Check saved admin state for unlocked phases
+        const savedAdmin = localStorage.getItem('kahoot_rpg_state');
+        if (savedAdmin) {
+          try {
+            const parsed = JSON.parse(savedAdmin);
+            if (parsed.unlockedPhases) unlockedPhases = parsed.unlockedPhases;
+          } catch(e){}
+        }
+
+        const savedPlayer = localStorage.getItem('kahoot_rpg_current_player');
+        if (savedPlayer) {
+          try {
+            const parsedP = JSON.parse(savedPlayer);
+            if (parsedP && parsedP.name) {
+              player = {
+                name: parsedP.name,
+                turma: parsedP.turma || "Quarta",
+                score: parsedP.score || 0,
+                answeredQuestions: parsedP.answeredQuestions || {},
+                completedStations: parsedP.completedStations || []
+              };
+              document.getElementById('modal-register').style.display = 'none';
+            }
+          } catch(e){}
+        }
+
+        savePlayerState();
+        updateTargetBanner();
+      } catch (initErr) {
+        console.error("Init error:", initErr);
+      }
+      gameLoop();
+    });
   </script>
 </body>
 </html>

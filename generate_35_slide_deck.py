@@ -1,4 +1,30 @@
-<!DOCTYPE html>
+# -*- coding: utf-8 -*-
+"""
+Generator for the 35-slide presentation with dedicated Kahoot RPG checkpoint slides
+for each of the 6 blocks, large real-time leaderboards, no 'fase liberada' text on slides,
+and updated speaker notes.
+"""
+
+import os
+
+def generate_deck():
+    # Load base template or build directly
+    html_content = build_full_html()
+    
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    idx_path = os.path.join(script_dir, "index.html")
+    apr_path = os.path.join(script_dir, "apresentacao_seminario_ecossistema_pit.html")
+    
+    with open(idx_path, "w", encoding="utf-8") as f:
+        f.write(html_content)
+    print(f"Generated index.html ({len(html_content):,} bytes)")
+    
+    with open(apr_path, "w", encoding="utf-8") as f:
+        f.write(html_content)
+    print(f"Generated apresentacao_seminario_ecossistema_pit.html ({len(html_content):,} bytes)")
+
+def build_full_html():
+    return '''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -2365,4 +2391,7 @@
     });
   </script>
 </body>
-</html>
+</html>'''
+
+if __name__ == "__main__":
+    generate_deck()
