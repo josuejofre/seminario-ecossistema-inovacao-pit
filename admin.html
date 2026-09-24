@@ -1314,7 +1314,7 @@
             channel.postMessage({ type: 'GAME_RESET', state: gameState });
           }
           if (window.SyncService) {
-            window.SyncService.sendState(gameState);
+            window.SyncService.sendReset(gameState);
           }
         } catch (e) {}
 

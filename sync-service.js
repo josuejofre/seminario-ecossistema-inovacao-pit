@@ -32,14 +32,17 @@
   // 2. Inicialização do Firebase se configurado
   function initFirebase() {
     const config = window.FIREBASE_CONFIG;
-    if (config && config.apiKey && config.databaseURL && typeof firebase !== 'undefined') {
+    if (config && config.apiKey && (config.databaseURL || config.projectId) && typeof firebase !== 'undefined') {
       try {
+        if (!config.databaseURL && config.projectId) {
+          config.databaseURL = `https://${config.projectId}-default-rtdb.firebaseio.com`;
+        }
         if (!firebase.apps.length) {
           firebase.initializeApp(config);
         }
         firebaseDb = firebase.database();
         isFirebaseActive = true;
-        console.log('[SyncService] ✅ Conectado com sucesso ao Firebase Realtime Database!');
+        console.log('[SyncService] ✅ Conectado com sucesso ao Firebase Realtime Database! URL:', config.databaseURL);
 
         // Escuta atualizações de estado do jogo (liberação de fases)
         firebaseDb.ref('kahoot_rpg/state').on('value', (snapshot) => {
@@ -47,6 +50,14 @@
           if (state) {
             localStorage.setItem('kahoot_rpg_state', JSON.stringify(state));
             callbacks.onStateUpdate.forEach(cb => cb(state));
+          }
+        });
+
+        // Escuta sinal de reset geral do jogo
+        firebaseDb.ref('kahoot_rpg/resetSignal').on('value', (snapshot) => {
+          const val = snapshot.val();
+          if (val && (Date.now() - val < 1000 * 60 * 30)) { // últimos 30 min
+            handleIncomingMessage({ type: 'GAME_RESET', state: window.SyncService.getLocalState() });
           }
         });
 
@@ -152,6 +163,31 @@
           firebaseDb.ref('kahoot_rpg/state').set(gameState);
         } catch (e) {
           console.error('[SyncService] Erro ao enviar estado para Firebase:', e);
+        }
+      }
+    },
+
+    // Resetar jogo completo (Admin)
+    sendReset: function (gameState) {
+      localStorage.setItem('kahoot_rpg_state', JSON.stringify(gameState));
+      localStorage.removeItem('kahoot_rpg_current_player');
+
+      // 1. Envio Local
+      if (broadcastChannel) {
+        broadcastChannel.postMessage({
+          type: 'GAME_RESET',
+          state: gameState
+        });
+      }
+
+      // 2. Envio Nuvem (Firebase)
+      if (isFirebaseActive && firebaseDb) {
+        try {
+          firebaseDb.ref('kahoot_rpg/state').set(gameState);
+          firebaseDb.ref('kahoot_rpg/answers').remove();
+          firebaseDb.ref('kahoot_rpg/resetSignal').set(Date.now());
+        } catch (e) {
+          console.error('[SyncService] Erro ao resetar Firebase:', e);
         }
       }
     },
