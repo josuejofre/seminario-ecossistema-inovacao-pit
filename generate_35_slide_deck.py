@@ -317,22 +317,170 @@ def build_full_html():
       font-style: italic;
     }
 
-    /* Layout Grids */
-    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.1rem; }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
-    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    /* Dynamic Full-Height Layout Grids */
+    .slide {
+      position: absolute;
+      inset: 1.25rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 1.15rem;
+      opacity: 0;
+      transform: scale(0.98) translateY(12px);
+      pointer-events: none;
+      transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow-y: auto;
+      max-width: 1440px;
+      margin: 0 auto;
+      height: calc(100% - 2.5rem);
+    }
 
-    /* Cards */
+    .slide-title {
+      font-family: var(--font-display);
+      font-size: 2.35rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+
+    .punchline-card {
+      background: linear-gradient(90deg, rgba(6, 182, 212, 0.15), rgba(37, 99, 235, 0.12));
+      border-left: 4px solid var(--cyan-glow);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 0.75rem 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .punchline-quote {
+      font-family: var(--font-display);
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: #fff;
+      font-style: italic;
+    }
+
+    /* 4 Blocks -> 2x2 Grid filling 100% of vertical and horizontal space */
+    .grid-4, .grid-2x2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 1.35rem;
+      flex: 1;
+      min-height: 0;
+      width: 100%;
+    }
+
+    /* 2 Blocks -> 2 Horizontal Rectangular Banners stacked vertically */
+    .grid-2-stacked {
+      display: flex;
+      flex-direction: column;
+      gap: 1.35rem;
+      flex: 1;
+      min-height: 0;
+      width: 100%;
+    }
+
+    .grid-2-stacked .card {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1.8rem 2.4rem;
+    }
+
+    .grid-2-stacked .card-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+    }
+
+    .grid-2-stacked .card-desc {
+      font-size: 1.25rem;
+      line-height: 1.6;
+    }
+
+    .grid-2-stacked .bullet-list li {
+      font-size: 1.2rem;
+      line-height: 1.55;
+    }
+
+    /* 2 Columns Split (Kahoot slides / side-by-side) */
+    .grid-2, .grid-split {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.35rem;
+      flex: 1;
+      min-height: 0;
+      width: 100%;
+    }
+
+    /* 3 Blocks -> 3 Large Columns filling 100% height */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.35rem;
+      flex: 1;
+      min-height: 0;
+      width: 100%;
+    }
+
+    .grid-3 .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1.6rem 1.8rem;
+    }
+
+    .grid-3 .card-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 0.65rem;
+    }
+
+    .grid-3 .card-desc {
+      font-size: 1.15rem;
+      line-height: 1.5;
+    }
+
+    .grid-3 .bullet-list li {
+      font-size: 1.08rem;
+      line-height: 1.45;
+    }
+
+    /* Cards Base */
     .card {
       background: var(--bg-card);
       border: 1px solid var(--border-soft);
       border-radius: var(--radius-md);
-      padding: 1.15rem 1.35rem;
+      padding: 1.6rem 2rem;
       backdrop-filter: blur(12px);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
       transition: all 0.2s ease;
       position: relative;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .card-desc {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      line-height: 1.55;
     }
 
     .card:hover {
@@ -612,7 +760,6 @@ def build_full_html():
     </div>
 
     <div class="header-right">
-      <a href="admin.html" target="_blank" class="deck-btn"><span>⚙️</span> Cockpit Admin</a>
       <a href="jogo.html" target="_blank" class="deck-btn"><span>🎮</span> RPG Aluno</a>
       <button class="deck-btn" onclick="toggleNotesDrawer()" id="btn-notes"><span>📝</span> Notas (N)</button>
       <button class="deck-btn" onclick="toggleGridModal()"><span>🔲</span> Grade (G)</button>
@@ -697,7 +844,7 @@ def build_full_html():
     </section>
 
     <!-- SLIDE 2: AGENDA -->
-    <section class="slide" data-slide="2" data-block="Agenda" data-speaker="Josué Jofre (4ª) / Fernando Barreto (5ª)" data-time="2 min">
+    <section class="slide" data-slide="2" data-block="Agenda" data-speaker="Nathalia (4ª) / Fernando Barreto (5ª)" data-time="2 min">
       <div class="slide-tag">🧭 CRONOGRAMA & ROTEIRO • 120 MINUTOS</div>
       <h2 class="slide-title">Estrutura e <span>Divisão dos Blocos</span></h2>
 
@@ -788,7 +935,7 @@ def build_full_html():
         <div class="punchline-quote">"Na biologia e nos negócios: espécies que coevoluem sobrevivem juntas ou perecem isoladas."</div>
       </div>
 
-      <div class="grid-2">
+      <div class="grid-2-stacked">
         <div class="card card-glow-cyan">
           <div class="card-title"><span>🧬</span> O Salto da Metáfora Biológica</div>
           <ul class="bullet-list">
@@ -848,21 +995,37 @@ def build_full_html():
       </div>
 
       <div class="grid-4">
-        <div class="card">
-          <div class="card-title">Cluster (Porter)</div>
-          <p class="card-desc">Concentração geográfica de firmas similares para ganho de escala e redução de custos operacionais.</p>
-        </div>
-        <div class="card">
-          <div class="card-title">Sistema de Inovação</div>
-          <p class="card-desc">Foco nas instituições públicas, leis de incentivo, ministérios e agências reguladoras do Estado.</p>
-        </div>
-        <div class="card">
-          <div class="card-title">Ecossistema de Negócios</div>
-          <p class="card-desc">Foco na captura de valor presente, canais de distribuição e monetização comercial de produtos.</p>
-        </div>
         <div class="card card-glow-cyan">
-          <div class="card-title" style="color: var(--cyan-light);">Ecossistema de Inovação</div>
-          <p class="card-desc">Foco na <strong>co-criação de novo conhecimento</strong> e geração coletiva de tecnologias inéditas.</p>
+          <div class="card-title"><span>🏭</span> Cluster (Porter)</div>
+          <p class="card-desc">Concentração geográfica de firmas do mesmo setor que buscam ganho de escala produtiva e redução de custos logísticos.</p>
+          <ul class="bullet-list" style="margin-top: 0.8rem;">
+            <li><span class="bullet-dot">▸</span> <strong>Foco Central:</strong> Eficiência de custos e aglomeração de cadeia tradicional.</li>
+            <li><span class="bullet-dot">▸</span> <strong>Limitação:</strong> Não exige interdependência nem co-criação de novidades tecnológicas.</li>
+          </ul>
+        </div>
+        <div class="card card-glow-purple">
+          <div class="card-title"><span>🏛️</span> Sistema de Inovação</div>
+          <p class="card-desc">Arcabouço institucional formal do Estado: leis de incentivo, ministérios, agências reguladoras e fomento público.</p>
+          <ul class="bullet-list" style="margin-top: 0.8rem;">
+            <li><span class="bullet-dot">▸</span> <strong>Foco Central:</strong> Políticas públicas de C&T, subsídios e infraestrutura básica regional.</li>
+            <li><span class="bullet-dot">▸</span> <strong>Limitação:</strong> Dinâmica predominantemente macro, institucional e regulatória.</li>
+          </ul>
+        </div>
+        <div class="card card-glow-amber">
+          <div class="card-title"><span>💼</span> Ecossistema de Negócios</div>
+          <p class="card-desc">Rede de parceiros, fornecedores e canais de distribuição voltada à monetização e entrega de valor existente.</p>
+          <ul class="bullet-list" style="margin-top: 0.8rem;">
+            <li><span class="bullet-dot">▸</span> <strong>Foco Central:</strong> Captura de valor comercial no curto prazo e market share.</li>
+            <li><span class="bullet-dot">▸</span> <strong>Limitação:</strong> Não prioriza a pesquisa científica de ponta nem coevolução em incerteza.</li>
+          </ul>
+        </div>
+        <div class="card card-glow-emerald">
+          <div class="card-title" style="color: #34d399;"><span>🚀</span> Ecossistema de Inovação</div>
+          <p class="card-desc">Comunidade interdependente de atores heterogêneos focada na <strong>co-criação de novo conhecimento</strong>.</p>
+          <ul class="bullet-list" style="margin-top: 0.8rem;">
+            <li><span class="bullet-dot">▸</span> <strong>Foco Central:</strong> Geração conjunta de soluções inéditas que nenhum ator geraria isolado.</li>
+            <li><span class="bullet-dot">▸</span> <strong>Diferencial:</strong> Orquestração relacional, simbiose e coevolução contínua.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -895,15 +1058,17 @@ def build_full_html():
             </div>
           </div>
 
-          <div class="card" style="padding: 1rem; display: flex; flex-direction: column; gap: 0.6rem;">
-            <div style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 0.5rem;">
-              <span>⚡</span> Painel do Apresentador
+          <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; gap: 0.65rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
+            <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.6rem;">
+              <span>📱</span> Como Responder no Celular:
             </div>
-            <a href="admin.html" target="_blank" class="deck-btn" style="width: 100%; justify-content: center; background: var(--blue-accent); color: #fff; font-weight: 700; padding: 0.6rem;">
-              <span>⚙️</span> Abrir Cockpit Admin (Fase 1)
-            </a>
-            <div style="font-size: 0.7rem; color: var(--text-muted); text-align: center;">
-              Pressione <strong>N</strong> para ver suas anotações de fala.
+            <div style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.5;">
+              1. Abra <strong>jogo.html</strong> no seu smartphone<br>
+              2. Caminhe até a estação ativa no campus<br>
+              3. Responda antes do tempo esgotar!
+            </div>
+            <div style="font-size: 0.82rem; color: var(--cyan-light); font-weight: 700; margin-top: 0.2rem;">
+              ⚡ Sincronizado ao vivo via Firebase!
             </div>
           </div>
         </div>
@@ -1015,7 +1180,7 @@ def build_full_html():
         <div class="punchline-quote">"A velocidade de uma esquadra é ditada pela nau mais lenta: o elo mais fraco rompe a rede."</div>
       </div>
 
-      <div class="grid-2">
+      <div class="grid-2-stacked">
         <div class="card card-glow-cyan">
           <div class="card-title"><span>⛓️</span> Riscos de Co-inovação (Ron Adner)</div>
           <ul class="bullet-list">
@@ -1063,15 +1228,17 @@ def build_full_html():
             </div>
           </div>
 
-          <div class="card" style="padding: 1rem; display: flex; flex-direction: column; gap: 0.6rem;">
-            <div style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 0.5rem;">
-              <span>⚡</span> Painel do Apresentador
+          <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; gap: 0.65rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
+            <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.6rem;">
+              <span>📱</span> Como Responder no Celular:
             </div>
-            <a href="admin.html" target="_blank" class="deck-btn" style="width: 100%; justify-content: center; background: var(--blue-accent); color: #fff; font-weight: 700; padding: 0.6rem;">
-              <span>⚙️</span> Abrir Cockpit Admin (Fase 2)
-            </a>
-            <div style="font-size: 0.7rem; color: var(--text-muted); text-align: center;">
-              Pressione <strong>N</strong> para ver suas anotações de fala.
+            <div style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.5;">
+              1. Abra <strong>jogo.html</strong> no seu smartphone<br>
+              2. Caminhe até a estação ativa no campus<br>
+              3. Responda antes do tempo esgotar!
+            </div>
+            <div style="font-size: 0.82rem; color: var(--cyan-light); font-weight: 700; margin-top: 0.2rem;">
+              ⚡ Sincronizado ao vivo via Firebase!
             </div>
           </div>
         </div>
@@ -1186,7 +1353,7 @@ def build_full_html():
         <div class="punchline-quote">"Orquestrar exige soft skills de diplomacia e hard skills de estruturação de contratos tecnológicos."</div>
       </div>
 
-      <div class="grid-2">
+      <div class="grid-2-stacked">
         <div class="card">
           <div class="card-title"><span>🛡️</span> Governança de Propriedade Intelectual</div>
           <ul class="bullet-list">
@@ -1232,15 +1399,17 @@ def build_full_html():
             </div>
           </div>
 
-          <div class="card" style="padding: 1rem; display: flex; flex-direction: column; gap: 0.6rem;">
-            <div style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 0.5rem;">
-              <span>⚡</span> Painel do Apresentador
+          <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; gap: 0.65rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
+            <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.6rem;">
+              <span>📱</span> Como Responder no Celular:
             </div>
-            <a href="admin.html" target="_blank" class="deck-btn" style="width: 100%; justify-content: center; background: var(--blue-accent); color: #fff; font-weight: 700; padding: 0.6rem;">
-              <span>⚙️</span> Abrir Cockpit Admin (Fase 3)
-            </a>
-            <div style="font-size: 0.7rem; color: var(--text-muted); text-align: center;">
-              Pressione <strong>N</strong> para ver suas anotações de fala.
+            <div style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.5;">
+              1. Abra <strong>jogo.html</strong> no seu smartphone<br>
+              2. Caminhe até a estação ativa no campus<br>
+              3. Responda antes do tempo esgotar!
+            </div>
+            <div style="font-size: 0.82rem; color: var(--cyan-light); font-weight: 700; margin-top: 0.2rem;">
+              ⚡ Sincronizado ao vivo via Firebase!
             </div>
           </div>
         </div>
@@ -1288,7 +1457,7 @@ def build_full_html():
         <div class="punchline-quote">"Não tente impor uma visão imperial fechada: ecossistemas robustos nascem de experimentos adaptativos."</div>
       </div>
 
-      <div class="grid-2">
+      <div class="grid-2-stacked">
         <div class="card card-glow-rose">
           <div class="card-title"><span>❌</span> A Armadilha da 'Ilusão de Controle'</div>
           <ul class="bullet-list">
@@ -1344,7 +1513,7 @@ def build_full_html():
         <div class="punchline-quote">"Em um ecossistema, ninguém manda em ninguém: lidera quem constrói o melhor consenso."</div>
       </div>
 
-      <div class="grid-2">
+      <div class="grid-2-stacked">
         <div class="card">
           <div class="card-title"><span>👑</span> Gestão Tradicional vs Orquestração</div>
           <ul class="bullet-list">
@@ -1390,15 +1559,17 @@ def build_full_html():
             </div>
           </div>
 
-          <div class="card" style="padding: 1rem; display: flex; flex-direction: column; gap: 0.6rem;">
-            <div style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 0.5rem;">
-              <span>⚡</span> Painel do Apresentador
+          <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; gap: 0.65rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
+            <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.6rem;">
+              <span>📱</span> Como Responder no Celular:
             </div>
-            <a href="admin.html" target="_blank" class="deck-btn" style="width: 100%; justify-content: center; background: var(--blue-accent); color: #fff; font-weight: 700; padding: 0.6rem;">
-              <span>⚙️</span> Abrir Cockpit Admin (Fase 4)
-            </a>
-            <div style="font-size: 0.7rem; color: var(--text-muted); text-align: center;">
-              Pressione <strong>N</strong> para ver suas anotações de fala.
+            <div style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.5;">
+              1. Abra <strong>jogo.html</strong> no seu smartphone<br>
+              2. Caminhe até a estação ativa no campus<br>
+              3. Responda antes do tempo esgotar!
+            </div>
+            <div style="font-size: 0.82rem; color: var(--cyan-light); font-weight: 700; margin-top: 0.2rem;">
+              ⚡ Sincronizado ao vivo via Firebase!
             </div>
           </div>
         </div>
@@ -1472,7 +1643,7 @@ def build_full_html():
         <div class="punchline-quote">"O segredo do CONNECT não foi dinheiro público: foi transformar executivos seniores em mentores generosos."</div>
       </div>
 
-      <div class="grid-2">
+      <div class="grid-2-stacked">
         <div class="card card-glow-emerald">
           <div class="card-title"><span>🌱</span> Filosofia 'Give-First' e Springboard</div>
           <ul class="bullet-list">
@@ -1519,15 +1690,17 @@ def build_full_html():
             </div>
           </div>
 
-          <div class="card" style="padding: 1rem; display: flex; flex-direction: column; gap: 0.6rem;">
-            <div style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 0.5rem;">
-              <span>⚡</span> Painel do Apresentador
+          <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; gap: 0.65rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
+            <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.6rem;">
+              <span>📱</span> Como Responder no Celular:
             </div>
-            <a href="admin.html" target="_blank" class="deck-btn" style="width: 100%; justify-content: center; background: var(--blue-accent); color: #fff; font-weight: 700; padding: 0.6rem;">
-              <span>⚙️</span> Abrir Cockpit Admin (Fase 5)
-            </a>
-            <div style="font-size: 0.7rem; color: var(--text-muted); text-align: center;">
-              Pressione <strong>N</strong> para ver suas anotações de fala.
+            <div style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.5;">
+              1. Abra <strong>jogo.html</strong> no seu smartphone<br>
+              2. Caminhe até a estação ativa no campus<br>
+              3. Responda antes do tempo esgotar!
+            </div>
+            <div style="font-size: 0.82rem; color: var(--cyan-light); font-weight: 700; margin-top: 0.2rem;">
+              ⚡ Sincronizado ao vivo via Firebase!
             </div>
           </div>
         </div>
@@ -1635,7 +1808,7 @@ def build_full_html():
         <div class="punchline-quote">"Temos excelência em engenharia e defesa: precisamos destravar o Venture Capital e a saída de fundos."</div>
       </div>
 
-      <div class="grid-2">
+      <div class="grid-2-stacked">
         <div class="card card-glow-emerald">
           <div class="card-title"><span>🇺🇸</span> San Diego (CONNECT)</div>
           <ul class="bullet-list">
@@ -1665,7 +1838,7 @@ def build_full_html():
         <div class="punchline-quote">"O orquestrador é o amortecedor de choques e o tradutor de dialetos entre universidade e corporação."</div>
       </div>
 
-      <div class="grid-2">
+      <div class="grid-2-stacked">
         <div class="card card-glow-purple">
           <div class="card-title"><span>⚖️</span> O Dilema dos Dois Relógios</div>
           <p class="card-desc" style="font-size: 0.95rem; line-height: 1.55;">
@@ -1698,21 +1871,37 @@ def build_full_html():
       </div>
 
       <div class="grid-4">
-        <div class="card">
-          <div class="card-title">1. Contratos Claros</div>
-          <p class="card-desc">Propriedade Intelectual decidida antes de ligar o primeiro computador do laboratório.</p>
-        </div>
         <div class="card card-glow-cyan">
-          <div class="card-title">2. Confiança Humana</div>
-          <p class="card-desc">Café semanal e convivência informal resolvem mais impasses do que notificações judiciais.</p>
+          <div class="card-title"><span>📝</span> 1. Contratos & PI Antecipados</div>
+          <p class="card-desc">Definição explícita de Propriedade Intelectual antes do início dos testes no laboratório.</p>
+          <ul class="bullet-list" style="margin-top: 0.6rem;">
+            <li><span class="bullet-dot">▸</span> Segurança jurídica para atrair capital de grandes corporações.</li>
+            <li><span class="bullet-dot">▸</span> Preservação da autoria científica e patentes dos pesquisadores.</li>
+          </ul>
         </div>
-        <div class="card">
-          <div class="card-title">3. Marco de CTI</div>
-          <p class="card-desc">Usar com maestria a Lei 13.243/16 para viabilizar compartilhamento de laboratórios federais.</p>
+        <div class="card card-glow-emerald">
+          <div class="card-title"><span>☕</span> 2. Confiança & Capital Relacional</div>
+          <p class="card-desc">A proximidade e os ritos de convivência diária resolvem mais impasses que disputas formais.</p>
+          <ul class="bullet-list" style="margin-top: 0.6rem;">
+            <li><span class="bullet-dot">▸</span> O Nexus Hub estimula o networking informal entre fundadores.</li>
+            <li><span class="bullet-dot">▸</span> Redução de custos transacionais baseada em reputação e reciprocidade.</li>
+          </ul>
+        </div>
+        <div class="card card-glow-amber">
+          <div class="card-title"><span>⚖️</span> 3. Aplicação do Marco Legal de CTI</div>
+          <p class="card-desc">Uso estratégico da Lei 13.243/16 para desbloquear parcerias entre universidades e empresas.</p>
+          <ul class="bullet-list" style="margin-top: 0.6rem;">
+            <li><span class="bullet-dot">▸</span> Compartilhamento ágil de infraestrutura laboratorial federal.</li>
+            <li><span class="bullet-dot">▸</span> Remuneração de pesquisadores em projetos de inovação aberta.</li>
+          </ul>
         </div>
         <div class="card card-glow-purple">
-          <div class="card-title">4. Formação Mista</div>
-          <p class="card-desc">O PIT busca na UNIFESP mestres que saibam equacionar problemas e formular planos de negócios.</p>
+          <div class="card-title"><span>🎓</span> 4. Formação Transdisciplinar</div>
+          <p class="card-desc">O ecossistema demanda mestres e doutores com sólida visão acadêmica e mentalidade empreendedora.</p>
+          <ul class="bullet-list" style="margin-top: 0.6rem;">
+            <li><span class="bullet-dot">▸</span> Alinhamento do PPG-PIT UNIFESP aos desafios reais das deep techs.</li>
+            <li><span class="bullet-dot">▸</span> Capacidade de traduzir descobertas científicas em modelos de negócio.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -1797,15 +1986,17 @@ def build_full_html():
             </div>
           </div>
 
-          <div class="card" style="padding: 1rem; display: flex; flex-direction: column; gap: 0.6rem;">
-            <div style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 0.5rem;">
-              <span>⚡</span> Painel do Apresentador
+          <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; gap: 0.65rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
+            <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.6rem;">
+              <span>📱</span> Como Responder no Celular:
             </div>
-            <a href="admin.html" target="_blank" class="deck-btn" style="width: 100%; justify-content: center; background: var(--blue-accent); color: #fff; font-weight: 700; padding: 0.6rem;">
-              <span>⚙️</span> Abrir Cockpit Admin (Fase 6)
-            </a>
-            <div style="font-size: 0.7rem; color: var(--text-muted); text-align: center;">
-              Pressione <strong>N</strong> para ver suas anotações de fala.
+            <div style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.5;">
+              1. Abra <strong>jogo.html</strong> no seu smartphone<br>
+              2. Caminhe até a estação ativa no campus<br>
+              3. Responda antes do tempo esgotar!
+            </div>
+            <div style="font-size: 0.82rem; color: var(--cyan-light); font-weight: 700; margin-top: 0.2rem;">
+              ⚡ Sincronizado ao vivo via Firebase!
             </div>
           </div>
         </div>
@@ -1844,7 +2035,7 @@ def build_full_html():
     </section>
 
     <!-- SLIDE 31: CONSOLIDAÇÃO DO KAHOOT RPG -->
-    <section class="slide" data-slide="31" data-block="Dinâmica" data-speaker="Jessica David / Grupo Inteiro" data-time="3 min">
+    <section class="slide" data-slide="31" data-block="Dinâmica" data-speaker="Jéssica David (Atividade Oficial)" data-time="3 min">
       <div class="slide-tag">🏆 FECHAMENTO DO KAHOOT RPG • TODAS AS FASES</div>
       <h2 class="slide-title">Consolidação das 18 Questões: <span>O Pódio Provisório</span></h2>
 
@@ -1873,7 +2064,7 @@ def build_full_html():
     </section>
 
     <!-- SLIDE 32: PREMIAÇÃO E ANÁLISE DOS ERROS -->
-    <section class="slide" data-slide="32" data-block="Dinâmica" data-speaker="Jessica / Renato / Grupo Inteiro" data-time="6 min">
+    <section class="slide" data-slide="32" data-block="Dinâmica" data-speaker="Jéssica David (Atividade Oficial)" data-time="6 min">
       <div class="slide-tag">📊 ANÁLISE DE DADOS & PÓDIO FINAL</div>
       <h2 class="slide-title">Classificação Geral & <span>Diagnóstico Cienciométrico dos Erros</span></h2>
 
@@ -1882,7 +2073,7 @@ def build_full_html():
         <div class="punchline-quote">"Errar na simulação é aprendizado; orquestrar na prática exige precisão científica."</div>
       </div>
 
-      <div class="grid-2">
+      <div class="grid-2-stacked">
         <div class="card card-glow-cyan" style="display: flex; flex-direction: column;">
           <div class="card-title"><span>🏆</span> Top 6 da Turma</div>
           <div style="flex: 1; overflow-y: auto;">
@@ -2004,7 +2195,7 @@ def build_full_html():
       <div class="slide-tag">📚 REFERÊNCIAS BIBLIOGRÁFICAS OFICIAIS</div>
       <h2 class="slide-title">Literatura Seminal e Artigos de <span>Vanguarda (2025/2026)</span></h2>
 
-      <div class="grid-2">
+      <div class="grid-2-stacked">
         <div class="card">
           <ul class="bullet-list" style="font-size: 0.8rem; gap: 0.6rem;">
             <li><span class="bullet-dot">▸</span> <strong>Shen et al. (2025/2026):</strong> Innovation ecosystems: a bibliometric analysis, systematic literature review, and research agenda. <em>Technology Analysis & Strategic Management</em>.</li>
