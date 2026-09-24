@@ -1037,7 +1037,7 @@ def build_full_html():
 
       <div class="punchline-card">
         <span style="font-size: 1.4rem;">📱</span>
-        <div class="punchline-quote">"Acesse o jogo no smartphone, caminhe até a estação no mapa e responda às 3 perguntas!"</div>
+        <div class="punchline-quote">"O link do jogo está no chat: acesse, ande até a Fase 1 e responda o mais rápido possível!"</div>
       </div>
 
       <div class="grid-2" style="grid-template-columns: 380px 1fr; gap: 1.25rem;">
@@ -1060,15 +1060,12 @@ def build_full_html():
 
           <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; gap: 0.65rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
             <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.6rem;">
-              <span>📱</span> Como Responder no Celular:
+              <span>💬</span> O link do jogo está no chat da aula:
             </div>
-            <div style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.5;">
-              1. Abra <strong>jogo.html</strong> no seu smartphone<br>
-              2. Caminhe até a estação ativa no campus<br>
-              3. Responda antes do tempo esgotar!
-            </div>
-            <div style="font-size: 0.82rem; color: var(--cyan-light); font-weight: 700; margin-top: 0.2rem;">
-              ⚡ Sincronizado ao vivo via Firebase!
+            <div style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.6;">
+              <strong>1.</strong> Acesse o link e coloque seu nome completo<br>
+              <strong>2.</strong> Ande até o desafio da <strong>Fase 1</strong><br>
+              <strong>3.</strong> Responda o mais rápido possível!
             </div>
           </div>
         </div>
@@ -1378,7 +1375,7 @@ def build_full_html():
 
       <div class="punchline-card">
         <span style="font-size: 1.4rem;">📱</span>
-        <div class="punchline-quote">"Acesse o jogo no smartphone, caminhe até a estação no mapa e responda às 3 perguntas!"</div>
+        <div class="punchline-quote">"O link do jogo está no chat: acesse, ande até a Fase 2 e responda o mais rápido possível!"</div>
       </div>
 
       <div class="grid-2" style="grid-template-columns: 380px 1fr; gap: 1.25rem;">
@@ -1401,15 +1398,12 @@ def build_full_html():
 
           <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; gap: 0.65rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
             <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.6rem;">
-              <span>📱</span> Como Responder no Celular:
+              <span>💬</span> O link do jogo está no chat da aula:
             </div>
-            <div style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.5;">
-              1. Abra <strong>jogo.html</strong> no seu smartphone<br>
-              2. Caminhe até a estação ativa no campus<br>
-              3. Responda antes do tempo esgotar!
-            </div>
-            <div style="font-size: 0.82rem; color: var(--cyan-light); font-weight: 700; margin-top: 0.2rem;">
-              ⚡ Sincronizado ao vivo via Firebase!
+            <div style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.6;">
+              <strong>1.</strong> Acesse o link do jogo<br>
+              <strong>2.</strong> Ande até o desafio da <strong>Fase 2</strong><br>
+              <strong>3.</strong> Responda o mais rápido possível!
             </div>
           </div>
         </div>
@@ -1538,7 +1532,7 @@ def build_full_html():
 
       <div class="punchline-card">
         <span style="font-size: 1.4rem;">📱</span>
-        <div class="punchline-quote">"Acesse o jogo no smartphone, caminhe até a estação no mapa e responda às 3 perguntas!"</div>
+        <div class="punchline-quote">"O link do jogo está no chat: acesse, ande até a Fase 3 e responda o mais rápido possível!"</div>
       </div>
 
       <div class="grid-2" style="grid-template-columns: 380px 1fr; gap: 1.25rem;">
@@ -1561,15 +1555,12 @@ def build_full_html():
 
           <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; gap: 0.65rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
             <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.6rem;">
-              <span>📱</span> Como Responder no Celular:
+              <span>💬</span> O link do jogo está no chat da aula:
             </div>
-            <div style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.5;">
-              1. Abra <strong>jogo.html</strong> no seu smartphone<br>
-              2. Caminhe até a estação ativa no campus<br>
-              3. Responda antes do tempo esgotar!
-            </div>
-            <div style="font-size: 0.82rem; color: var(--cyan-light); font-weight: 700; margin-top: 0.2rem;">
-              ⚡ Sincronizado ao vivo via Firebase!
+            <div style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.6;">
+              <strong>1.</strong> Acesse o link do jogo<br>
+              <strong>2.</strong> Ande até o desafio da <strong>Fase 3</strong><br>
+              <strong>3.</strong> Responda o mais rápido possível!
             </div>
           </div>
         </div>
@@ -1965,7 +1956,7 @@ def build_full_html():
 
       <div class="punchline-card">
         <span style="font-size: 1.4rem;">📱</span>
-        <div class="punchline-quote">"Acesse o jogo no smartphone, caminhe até a estação no mapa e responda às 3 perguntas!"</div>
+        <div class="punchline-quote">"O link do jogo está no chat: acesse, ande até a Fase 6 e responda o mais rápido possível!"</div>
       </div>
 
       <div class="grid-2" style="grid-template-columns: 380px 1fr; gap: 1.25rem;">
@@ -1988,15 +1979,12 @@ def build_full_html():
 
           <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; gap: 0.65rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
             <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.6rem;">
-              <span>📱</span> Como Responder no Celular:
+              <span>💬</span> O link do jogo está no chat da aula:
             </div>
-            <div style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.5;">
-              1. Abra <strong>jogo.html</strong> no seu smartphone<br>
-              2. Caminhe até a estação ativa no campus<br>
-              3. Responda antes do tempo esgotar!
-            </div>
-            <div style="font-size: 0.82rem; color: var(--cyan-light); font-weight: 700; margin-top: 0.2rem;">
-              ⚡ Sincronizado ao vivo via Firebase!
+            <div style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.6;">
+              <strong>1.</strong> Acesse o link do jogo<br>
+              <strong>2.</strong> Ande até o desafio da <strong>Fase 6</strong><br>
+              <strong>3.</strong> Responda o mais rápido possível!
             </div>
           </div>
         </div>

@@ -1671,6 +1671,10 @@
       }
     }
 
+    function closeWinnerModal() {
+      document.getElementById('winner-modal').classList.remove('active');
+    }
+
     // Cloud Connection Status Indicator
     function updateCloudBadge() {
       const badge = document.getElementById('cloud-status-badge');
