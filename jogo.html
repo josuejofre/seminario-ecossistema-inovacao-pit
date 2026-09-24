@@ -504,6 +504,10 @@
         <span style="font-size: 0.72rem; color: var(--text-muted);">PONTOS:</span>
         <span class="hud-score" id="hud-score">0 pts</span>
       </div>
+      <div class="hud-pill" id="game-cloud-badge" style="gap: 0.35rem; font-size: 0.72rem; color: #34d399;">
+        <span style="width: 7px; height: 7px; border-radius: 50%; background: #10b981; box-shadow: 0 0 6px #10b981;"></span>
+        <span id="game-cloud-text">Nuvem Online</span>
+      </div>
     </div>
 
     <div class="hud-right">
@@ -1987,6 +1991,27 @@
       } catch (initErr) {
         console.error("Init error:", initErr);
       }
+
+      function updateGameCloudBadge() {
+        const badge = document.getElementById('game-cloud-badge');
+        const text = document.getElementById('game-cloud-text');
+        if (!badge || !text) return;
+        if (window.SyncService && window.SyncService.isCloudActive()) {
+          badge.style.color = '#34d399';
+          badge.querySelector('span').style.background = '#10b981';
+          badge.querySelector('span').style.boxShadow = '0 0 6px #10b981';
+          text.textContent = 'Nuvem Online';
+        } else {
+          badge.style.color = '#fbbf24';
+          badge.querySelector('span').style.background = '#f59e0b';
+          badge.querySelector('span').style.boxShadow = '0 0 6px #f59e0b';
+          text.textContent = 'Modo Local';
+        }
+      }
+
+      setTimeout(updateGameCloudBadge, 400);
+      setInterval(updateGameCloudBadge, 3000);
+
       gameLoop();
     });
   </script>

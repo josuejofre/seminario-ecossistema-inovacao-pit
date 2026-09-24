@@ -730,6 +730,10 @@
     </div>
 
     <div class="header-actions">
+      <div id="cloud-status-badge" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.8rem; border-radius: 999px; font-size: 0.75rem; font-weight: 700; background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3);">
+        <span style="width: 8px; height: 8px; border-radius: 50%; background: #10b981; box-shadow: 0 0 8px #10b981;"></span>
+        <span id="cloud-status-text">Nuvem Firebase Ativa</span>
+      </div>
       <a href="index.html" target="_blank" class="btn">
         <span>🖥️</span> Ver Slides
       </a>
@@ -1667,12 +1671,32 @@
       }
     }
 
-    function closeWinnerModal() {
-      document.getElementById('winner-modal').classList.remove('active');
+    // Cloud Connection Status Indicator
+    function updateCloudBadge() {
+      const badge = document.getElementById('cloud-status-badge');
+      const text = document.getElementById('cloud-status-text');
+      if (!badge || !text) return;
+      if (window.SyncService && window.SyncService.isCloudActive()) {
+        badge.style.background = 'rgba(16, 185, 129, 0.15)';
+        badge.style.borderColor = 'rgba(16, 185, 129, 0.3)';
+        badge.style.color = '#34d399';
+        badge.querySelector('span').style.background = '#10b981';
+        badge.querySelector('span').style.boxShadow = '0 0 8px #10b981';
+        text.textContent = 'Nuvem Firebase Ativa';
+      } else {
+        badge.style.background = 'rgba(245, 158, 11, 0.15)';
+        badge.style.borderColor = 'rgba(245, 158, 11, 0.3)';
+        badge.style.color = '#fbbf24';
+        badge.querySelector('span').style.background = '#f59e0b';
+        badge.querySelector('span').style.boxShadow = '0 0 8px #f59e0b';
+        text.textContent = 'Modo Local (BroadcastChannel)';
+      }
     }
 
     // Initialize
     loadState();
+    setTimeout(updateCloudBadge, 400);
+    setInterval(updateCloudBadge, 3000);
   </script>
 </body>
 </html>
