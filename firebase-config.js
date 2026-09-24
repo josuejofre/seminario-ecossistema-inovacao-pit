@@ -1,25 +1,16 @@
 // ==============================================================================
-// CONFIGURAÇÃO DO FIREBASE (OPCIONAL, MAS RECOMENDADO PARA USO EM SALA DE AULA)
-// ==============================================================================
-// Para que 30+ celulares na sala sincronizem em tempo real com o projetor e o
-// painel de administração via 4G/Wi-Fi:
-//
-// 1. Crie um projeto gratuito no Firebase Console: https://console.firebase.google.com/
-// 2. Vá em "Build" -> "Realtime Database" -> "Criar Banco de Dados" (Escolha modo teste).
-// 3. Em Configurações do Projeto (ícone de engrenagem) -> "Seus aplicativos" -> Web (</>).
-// 4. Copie o objeto 'firebaseConfig' e cole abaixo substituindo os valores:
+// CONFIGURAÇÃO DO FIREBASE REALTIME DATABASE (PPG-PIT UNIFESP - SEMINÁRIO 2026)
 // ==============================================================================
 
 window.FIREBASE_CONFIG = {
-  // Cole suas credenciais aqui se desejar sincronização na nuvem (4G/Wi-Fi da sala).
-  // Se deixar vazio ou não preencher, o sistema funciona normalmente usando
-  // BroadcastChannel nativo do navegador (ótimo para testes locais na mesma máquina).
-  
-  apiKey: "",
-  authDomain: "",
-  databaseURL: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: ""
+  apiKey: "AIzaSyCJG_bsas-x552znZ4dhsg-ohxLZiN7onA",
+  authDomain: "pit-seminario-geti.firebaseapp.com",
+  databaseURL: "https://pit-seminario-geti-default-rtdb.firebaseio.com",
+  projectId: "pit-seminario-geti",
+  storageBucket: "pit-seminario-geti.firebasestorage.app",
+  messagingSenderId: "683043058052",
+  appId: "1:683043058052:web:34be1968e03791a4acedd1"
 };
+
+// Compatibilidade adicional
+window.firebaseConfig = window.FIREBASE_CONFIG;
