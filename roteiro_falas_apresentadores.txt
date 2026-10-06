@@ -612,25 +612,25 @@ ENUNCIADO: Qual é o principal erro de um líder ao tentar desenhar um ecossiste
 --------------------------------------------------------------------------------
 
 [QUESTÃO 1 - CÓDIGO: B5_Q1]
-ENUNCIADO: Segundo Majava & Rinkinen, qual foi o catalisador histórico da guinada tecnológica de San Diego?
-  ✓ [RESPOSTA CORRETA]: A fundação visionária da UCSD e institutos de ponta (Salk e Scripps) focados em pós-graduação
-  ✗ [DISTRAÇÃO 1]   : O fechamento de faculdades locais para focar unicamente na exportação agrícola de laranjas
-  ✗ [DISTRAÇÃO 2]   : Um decreto do século XIX que isentou de impostos a montagem de navios a vapor britânicos
-  💡 JUSTIFICATIVA / GABARITO COMENTADO: A UCSD foi projetada desde a origem para pesquisa de pós-graduação e ciências duras, funcionando como ímã para prêmios Nobel e pioneiros.
+ENUNCIADO: Em um ecossistema de inovação, qual é a principal função de uma organização intermediária (ou orquestradora)?
+  ✓ [RESPOSTA CORRETA]: Construir redes de confiança e pontes relacionais que aproximam pesquisadores, mentores e investidores para transformar ciência em negócios
+  ✗ [DISTRAÇÃO 1]   : Financiar obrigatoriamente 100% dos custos de todas as startups utilizando apenas impostos municipais
+  ✗ [DISTRAÇÃO 2]   : Substituir as universidades e realizar todas as pesquisas científicas básicas da região
+  💡 JUSTIFICATIVA / GABARITO COMENTADO: Organizações intermediárias como a CONNECT atuam como catalisadoras e pontes relacionais, conectando atores sem substituir universidades nem financiar integralmente operações.
 
 [QUESTÃO 2 - CÓDIGO: B5_Q2]
-ENUNCIADO: Qual inovação institucional a organização CONNECT introduziu em San Diego em 1985?
-  ✓ [RESPOSTA CORRETA]: Conectar inventores a mentores experientes e redes de Venture Capital (Springboard)
-  ✗ [DISTRAÇÃO 1]   : Monopolizar todas as patentes de biotecnologia da Califórnia sob tutela militar
-  ✗ [DISTRAÇÃO 2]   : Criar uma companhia aérea municipal para voar entre Los Angeles e San Francisco
-  💡 JUSTIFICATIVA / GABARITO COMENTADO: O programa Springboard da CONNECT preparava os cientistas para falar a linguagem do mercado e captar fundos de Venture Capital.
+ENUNCIADO: O que caracteriza o estágio inicial de um "polo tecnológico orgânico" em uma região?
+  ✓ [RESPOSTA CORRETA]: O surgimento espontâneo de empresas tecnológicas a partir de institutos de pesquisa, sem necessidade prévia de parque imobiliário físico ou gestão formal
+  ✗ [DISTRAÇÃO 1]   : A exigência de construir primeiro um grande parque imobiliário de prédios comerciais antes de ter empresas
+  ✗ [DISTRAÇÃO 2]   : A dependência total e exclusiva de fundos de investimento estrangeiros para a criação do polo
+  💡 JUSTIFICATIVA / GABARITO COMENTADO: Em polos orgânicos como San Diego, o ecossistema nasceu espontaneamente do transbordamento científico da UCSD e institutos de pesquisa, antes de qualquer estrutura imobiliária formal.
 
 [QUESTÃO 3 - CÓDIGO: B5_Q3]
-ENUNCIADO: Qual ativo intangível cultural é apontado como diferencial competitivo de San Diego?
-  ✓ [RESPOSTA CORRETA]: A prática disseminada de ajudar e mentorar novos empreendedores antes de cobrar qualquer retorno
-  ✗ [DISTRAÇÃO 1]   : Processos judiciais sistemáticos para bloquear a circulação de engenheiros de software
-  ✗ [DISTRAÇÃO 2]   : Dependência estrita de repasses orçamentários do Pentágono sem qualquer capital de risco
-  💡 JUSTIFICATIVA / GABARITO COMENTADO: A cultura 'give-first' e a mentoria desinteressada aceleraram exponencialmente o capital social e a densidade de conexões na região.
+ENUNCIADO: Qual fator é apontado como essencial para facilitar a troca de conhecimento tácito (spill-overs) em ecossistemas de inovação?
+  ✓ [RESPOSTA CORRETA]: A proximidade geográfica e o adensamento territorial entre universidades, centros de pesquisa e empresas
+  ✗ [DISTRAÇÃO 1]   : A substituição do convívio presencial por comunicações virtuais isoladas a longas distâncias
+  ✗ [DISTRAÇÃO 2]   : O isolamento total dos pesquisadores dentro de laboratórios fechados sob sigilo estrito
+  💡 JUSTIFICATIVA / GABARITO COMENTADO: A proximidade física (clustering) facilita interações espontâneas, redes de confiança e a circulação de conhecimento tácito essencial à inovação.
 
 --------------------------------------------------------------------------------
 📌 FASE 6: LIVING LAB NET-ZERO & FRONTEIRAS (SHEN ET AL. / GARGALOS & FRONTEIRAS)
