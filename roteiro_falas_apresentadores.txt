@@ -537,25 +537,25 @@ ENUNCIADO: Qual ator fundamental é incorporado no modelo da Hélice Quádrupla 
 --------------------------------------------------------------------------------
 
 [QUESTÃO 1 - CÓDIGO: B2_Q1]
-ENUNCIADO: Por que a heterogeneidade e interdependência são pilares anatômicos do ecossistema de inovação?
-  ✓ [RESPOSTA CORRETA]: Nenhum ator isolado possui todos os recursos e competências para inovar sozinho
-  ✗ [DISTRAÇÃO 1]   : Porque todas as empresas precisam ter exatamente o mesmo tamanho e vender o mesmo produto
-  ✗ [DISTRAÇÃO 2]   : Porque elimina toda e qualquer concorrência ou disputa de mercado na região
-  💡 JUSTIFICATIVA / GABARITO COMENTADO: A heterogeneidade garante complementaridade: grandes corporações precisam da agilidade de startups e do rigor analítico das universidades.
+ENUNCIADO: Qual é a lógica da anatomia de um ecossistema ao reunir atores heterogêneos (Academia, Empresas, Governo e Intermediários)?
+  ✓ [RESPOSTA CORRETA]: Construir uma simbiose produtiva onde nenhum ator isolado possui todos os recursos para inovar sozinho
+  ✗ [DISTRAÇÃO 1]   : Subordinar todas as startups e empresas à hierarquia direta dos reitores universitários
+  ✗ [DISTRAÇÃO 2]   : Eliminar completamente qualquer divergência cultural ou concorrência mercadológica na região
+  💡 JUSTIFICATIVA / GABARITO COMENTADO: O ecossistema reúne atores com independência hierárquica e lógicas distintas (capital intelectual, tração de mercado, fomento e orquestração) para cooperar em simbiose.
 
 [QUESTÃO 2 - CÓDIGO: B2_Q2]
-ENUNCIADO: Qual é a função primordial de organizações intermediárias como o Nexus Hub e o PIT SJC?
-  ✓ [RESPOSTA CORRETA]: Atuar como pontes relacionais, reduzindo assimetrias e facilitando transferências
-  ✗ [DISTRAÇÃO 1]   : Confiscar patentes de startups para impedir que sejam vendidas no mercado
-  ✗ [DISTRAÇÃO 2]   : Aplicar multas e tributos estaduais em laboratórios que não gerem lucros rápidos
-  💡 JUSTIFICATIVA / GABARITO COMENTADO: Intermediários funcionam como 'bridging organizations', reduzindo custos de transação e alinhando linguagens acadêmicas e de negócios.
+ENUNCIADO: Na evolução da Tríplice Hélice para a Quíntupla Hélice, quais novas forças fundamentais são incorporadas?
+  ✓ [RESPOSTA CORRETA]: A 4ª Hélice (Sociedade Civil / Cidadãos) e a 5ª Hélice (Meio Ambiente / Sustentabilidade Net-Zero)
+  ✗ [DISTRAÇÃO 1]   : A 4ª Hélice (Tribunais Militares) e a 5ª Hélice (Agências de Propaganda Política)
+  ✗ [DISTRAÇÃO 2]   : A 4ª Hélice (Monopólios Estrangeiros) e a 5ª Hélice (Bancos Especulativos Offshore)
+  💡 JUSTIFICATIVA / GABARITO COMENTADO: A 4ª Hélice traz a validação social dos usuários finais e cidadãos, enquanto a 5ª Hélice exige neutralidade de carbono, preservação ecológica e sustentabilidade regenerativa.
 
 [QUESTÃO 3 - CÓDIGO: B2_Q3]
-ENUNCIADO: Como o valor gerado circula de maneira sustentável e estimula a longevidade da rede?
-  ✓ [RESPOSTA CORRETA]: Através de fluxos bidirecionais onde o ganho sistêmico supera o custo individual de cooperar
-  ✗ [DISTRAÇÃO 1]   : Através de extração unilateral forçada pela maior corporação multinacional
-  ✗ [DISTRAÇÃO 2]   : Exclusivamente por repasses de subsídios a fundo perdido sem entregas concretas
-  💡 JUSTIFICATIVA / GABARITO COMENTADO: A simbiose requer equilíbrio contínuo entre contribuição e apropriação para evitar que talentos debandem da rede.
+ENUNCIADO: Segundo Ron Adner, por que a dinâmica de um ecossistema difere de uma cadeia de suprimentos linear?
+  ✓ [RESPOSTA CORRETA]: Porque opera em coopetição e depende de mitigar 3 riscos: execução, co-inovação de parceiros e adoção
+  ✗ [DISTRAÇÃO 1]   : Porque os contratos de compras impõem monopólio vitalício sem qualquer flexibilidade
+  ✗ [DISTRAÇÃO 2]   : Porque o cliente final é obrigado por lei municipal a arcar com 100% dos prejuízos fabris
+  💡 JUSTIFICATIVA / GABARITO COMENTADO: Como ensina Ron Adner, em ecossistemas o valor é sistêmico: se o parceiro complementar não entrega a tempo (co-inovação) ou o regulador barra (adoção), todo o ecossistema falha.
 
 --------------------------------------------------------------------------------
 📌 FASE 3: CENTRO DE GOVERNANÇA DO PIT (ORQUESTRAÇÃO & MACHADO ET AL.)

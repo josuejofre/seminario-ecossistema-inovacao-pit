@@ -390,6 +390,24 @@
     }
 
     /* 3 Blocks -> 3 Large Columns filling 100% height */
+        .grid-4-cols {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.15rem;
+      flex: 1;
+      min-height: 0;
+      width: 100%;
+    }
+
+    .grid-5-cols {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.95rem;
+      flex: 1;
+      min-height: 0;
+      width: 100%;
+    }
+
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1045,86 +1063,254 @@
 </section>
 <!-- SLIDE 8: BLOCO 2 - ANATOMIA DO ECOSSISTEMA -->
 <section class="slide" data-block="Bloco 2" data-slide="8" data-speaker="Veridiany Braga (4ª) / Fábio Lippi (5ª)" data-time="4 min">
-<div class="slide-tag">🧬 BLOCO 2 • ANATOMIA E INTERDEPENDÊNCIA</div>
-<h2 class="slide-title">Anatomia do Ecossistema: <span>Heterogeneidade &amp; Simbiose</span></h2>
+<div class="slide-tag">🧬 BLOCO 2 • ANATOMIA DO ECOSSISTEMA</div>
+<h2 class="slide-title">Anatomia do Ecossistema: <span>Heterogeneidade &amp; Simbiose de Atores</span></h2>
 <div class="punchline-card">
 <span style="font-size: 1.4rem;">🔬</span>
 <div class="punchline-quote">"Na saúde, na aviação ou na TI: quando profissionais de áreas diferentes cooperam, o impossível acontece."</div>
 </div>
-<div class="grid-3">
-<div class="card card-glow-purple">
-<div class="card-title"><span>🏛️</span> Academia &amp; ICTs</div>
-<ul class="bullet-list">
-<li><span class="bullet-dot">▸</span> Pesquisa básica e aplicada de longo ciclo</li>
-<li><span class="bullet-dot">▸</span> Formação de mestres e doutores qualificados</li>
-<li><span class="bullet-dot">▸</span> Exemplo: UNIFESP, ITA, INPE, CEMADEN</li>
-</ul>
+<div class="grid-4-cols">
+<!-- Coluna 1: Academia & ICTs -->
+<div class="card card-glow-purple" style="display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid var(--purple-accent); padding: 1.25rem 1.15rem;">
+<div>
+<div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.75rem;">
+<span style="font-size: 1.7rem;">🏛️</span>
+<div>
+<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff;">Academia &amp; ICTs</div>
+<div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--purple-accent); font-weight: 700; letter-spacing: 0.04em;">CIÊNCIA &amp; TALENTOS</div>
 </div>
-<div class="card card-glow-cyan">
-<div class="card-title"><span>🏭</span> Empresas &amp; Deep Techs</div>
-<ul class="bullet-list">
-<li><span class="bullet-dot">▸</span> Empresas âncoras (Embraer, Avibras, Ericsson)</li>
-<li><span class="bullet-dot">▸</span> Startups e scale-ups de hardware avançado</li>
-<li><span class="bullet-dot">▸</span> Tração de mercado e geração de faturamento</li>
-</ul>
 </div>
-<div class="card card-glow-emerald">
-<div class="card-title"><span>⚖️</span> Poder Público &amp; Capital</div>
-<ul class="bullet-list">
-<li><span class="bullet-dot">▸</span> FAPESP, FINEP, EMBRAPII e Lei do Bem</li>
-<li><span class="bullet-dot">▸</span> Investidores-anjo e fundos de Venture Capital</li>
-<li><span class="bullet-dot">▸</span> Segurança jurídica e incentivos fiscais locais</li>
-</ul>
+<div style="background: rgba(139, 92, 246, 0.08); border-radius: var(--radius-sm); padding: 0.65rem; margin-bottom: 0.75rem; border-left: 3px solid var(--purple-accent);">
+<div style="font-size: 0.7rem; text-transform: uppercase; color: var(--purple-accent); font-weight: 800; margin-bottom: 0.2rem;">Papel Central:</div>
+<div style="font-size: 0.82rem; color: #fff; line-height: 1.35;">Pesquisa básica e aplicada e formação de talentos de longo ciclo.</div>
+</div>
+</div>
+<div style="background: rgba(0,0,0,0.25); border-radius: var(--radius-sm); padding: 0.6rem 0.65rem; font-size: 0.76rem; color: var(--text-muted);">
+<strong style="color: #cbd5e1;">Recurso Chave:</strong> Capital intelectual e laboratórios de ponta.<br/>
+<span style="color: var(--cyan-light); font-size: 0.73rem; font-weight: 600;">UNIFESP • ITA • INPE • CEMADEN</span>
+</div>
+</div>
+
+<!-- Coluna 2: Empresas & Deep Techs -->
+<div class="card card-glow-cyan" style="display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid var(--cyan-glow); padding: 1.25rem 1.15rem;">
+<div>
+<div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.75rem;">
+<span style="font-size: 1.7rem;">🏭</span>
+<div>
+<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff;">Empresas &amp; Deep Techs</div>
+<div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--cyan-light); font-weight: 700; letter-spacing: 0.04em;">TRAÇÃO &amp; MERCADO</div>
+</div>
+</div>
+<div style="background: rgba(6, 182, 212, 0.08); border-radius: var(--radius-sm); padding: 0.65rem; margin-bottom: 0.75rem; border-left: 3px solid var(--cyan-glow);">
+<div style="font-size: 0.7rem; text-transform: uppercase; color: var(--cyan-light); font-weight: 800; margin-bottom: 0.2rem;">Papel Central:</div>
+<div style="font-size: 0.82rem; color: #fff; line-height: 1.35;">Desenvolvimento tecnológico, conversão em produto e tração.</div>
+</div>
+</div>
+<div style="background: rgba(0,0,0,0.25); border-radius: var(--radius-sm); padding: 0.6rem 0.65rem; font-size: 0.76rem; color: var(--text-muted);">
+<strong style="color: #cbd5e1;">Recurso Chave:</strong> Escala comercial, faturamento e mercados.<br/>
+<span style="color: var(--cyan-light); font-size: 0.73rem; font-weight: 600;">Embraer • Avibras • Ericsson • Startups</span>
+</div>
+</div>
+
+<!-- Coluna 3: Governo & Investidores -->
+<div class="card card-glow-amber" style="display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid var(--amber-glow); padding: 1.25rem 1.15rem;">
+<div>
+<div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.75rem;">
+<span style="font-size: 1.7rem;">⚖️</span>
+<div>
+<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff;">Governo &amp; Investidores</div>
+<div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--amber-glow); font-weight: 700; letter-spacing: 0.04em;">FOMENTO &amp; RISCO</div>
+</div>
+</div>
+<div style="background: rgba(245, 158, 11, 0.08); border-radius: var(--radius-sm); padding: 0.65rem; margin-bottom: 0.75rem; border-left: 3px solid var(--amber-glow);">
+<div style="font-size: 0.7rem; text-transform: uppercase; color: var(--amber-glow); font-weight: 800; margin-bottom: 0.2rem;">Papel Central:</div>
+<div style="font-size: 0.82rem; color: #fff; line-height: 1.35;">Fomento à CTI, legislação e financiamento de risco paciente.</div>
+</div>
+</div>
+<div style="background: rgba(0,0,0,0.25); border-radius: var(--radius-sm); padding: 0.6rem 0.65rem; font-size: 0.76rem; color: var(--text-muted);">
+<strong style="color: #cbd5e1;">Recurso Chave:</strong> Subsídios e capital de risco indispensável.<br/>
+<span style="color: var(--amber-glow); font-size: 0.73rem; font-weight: 600;">FAPESP • FINEP • Anjos • Fundos VC</span>
+</div>
+</div>
+
+<!-- Coluna 4: Intermediários & Sociedade -->
+<div class="card card-glow-emerald" style="display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid var(--emerald-accent); padding: 1.25rem 1.15rem;">
+<div>
+<div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.75rem;">
+<span style="font-size: 1.7rem;">🌉</span>
+<div>
+<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff;">Intermediários &amp; Sociedade</div>
+<div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--emerald-accent); font-weight: 700; letter-spacing: 0.04em;">ORQUESTRAÇÃO &amp; REDE</div>
+</div>
+</div>
+<div style="background: rgba(16, 185, 129, 0.08); border-radius: var(--radius-sm); padding: 0.65rem; margin-bottom: 0.75rem; border-left: 3px solid var(--emerald-accent);">
+<div style="font-size: 0.7rem; text-transform: uppercase; color: var(--emerald-accent); font-weight: 800; margin-bottom: 0.2rem;">Papel Central:</div>
+<div style="font-size: 0.82rem; color: #fff; line-height: 1.35;">Orquestração neutra, governança relacional e validação social.</div>
+</div>
+</div>
+<div style="background: rgba(0,0,0,0.25); border-radius: var(--radius-sm); padding: 0.6rem 0.65rem; font-size: 0.76rem; color: var(--text-muted);">
+<strong style="color: #cbd5e1;">Recurso Chave:</strong> Pontes de confiança e demandas reais.<br/>
+<span style="color: var(--emerald-accent); font-size: 0.73rem; font-weight: 600;">PIT SJC • Nexus Hub • Living Labs</span>
+</div>
 </div>
 </div>
 </section>
 <!-- SLIDE 9: BLOCO 2 - AS 5 HÉLICES -->
 <section class="slide" data-block="Bloco 2" data-slide="9" data-speaker="Veridiany Braga (4ª) / Fábio Lippi (5ª)" data-time="4 min">
-<div class="slide-tag">🌀 BLOCO 2 • MODELOS DE HÉLICES</div>
+<div class="slide-tag">🌀 BLOCO 2 • MODELOS DE HÉLICES DA INOVAÇÃO</div>
 <h2 class="slide-title">Da Tríplice à Quíntupla Hélice: <span>Sociedade &amp; Sustentabilidade</span></h2>
 <div class="punchline-card">
 <span style="font-size: 1.4rem;">🌍</span>
-<div class="punchline-quote">"Tecnologia sem inclusão social e sem regeneração ambiental não é sustentável."</div>
+<div class="punchline-quote">"A evolução do ecossistema: da Tríplice Hélice à Quíntupla Hélice, conectando sociedade, inclusão social e sustentabilidade ambiental (Net-Zero)."</div>
 </div>
-<div class="grid-3">
-<div class="card">
-<div class="card-title">3ª Hélice: Tríplice Clássica</div>
-<p class="card-desc">Universidade + Empresa + Governo. O modelo industrial do século XX focado em patentes e produtos físicos.</p>
+<div class="grid-5-cols">
+<!-- 1ª Hélice -->
+<div class="card card-glow-purple" style="display: flex; flex-direction: column; text-align: center; padding: 1.2rem 0.85rem; border-top: 3px solid var(--purple-accent);">
+<div style="width: 52px; height: 52px; margin: 0 auto 0.75rem auto; border-radius: 50%; background: rgba(139, 92, 246, 0.15); border: 2px solid var(--purple-accent); display: flex; align-items: center; justify-content: center; font-size: 1.6rem;">
+🎓
 </div>
-<div class="card card-glow-purple">
-<div class="card-title">4ª Hélice: Sociedade Civil</div>
-<p class="card-desc">Usuários finais, cidadãos, ONGs e inovação aberta. A validação das soluções nos desafios reais da comunidade urbana.</p>
+<div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--purple-accent); font-weight: 800; text-transform: uppercase;">1ª Hélice</div>
+<div style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 800; color: #fff; margin-bottom: 0.4rem;">Academia &amp; ICTs</div>
+<p style="font-size: 0.76rem; color: var(--text-muted); line-height: 1.4; margin: 0;">
+Pesquisa pura e aplicada, patentes e formação de mentes científicas (UNIFESP, ITA, INPE).
+</p>
 </div>
-<div class="card card-glow-emerald">
-<div class="card-title">5ª Hélice: Meio Ambiente</div>
-<p class="card-desc">Transição energética, Net-Zero, economia circular e preservação. O Living Lab do PIT com neutralidade carbônica.</p>
+
+<!-- 2ª Hélice -->
+<div class="card card-glow-cyan" style="display: flex; flex-direction: column; text-align: center; padding: 1.2rem 0.85rem; border-top: 3px solid var(--cyan-glow);">
+<div style="width: 52px; height: 52px; margin: 0 auto 0.75rem auto; border-radius: 50%; background: rgba(6, 182, 212, 0.15); border: 2px solid var(--cyan-glow); display: flex; align-items: center; justify-content: center; font-size: 1.6rem;">
+🏭
+</div>
+<div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--cyan-light); font-weight: 800; text-transform: uppercase;">2ª Hélice</div>
+<div style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 800; color: #fff; margin-bottom: 0.4rem;">Empresas &amp; Indústria</div>
+<p style="font-size: 0.76rem; color: var(--text-muted); line-height: 1.4; margin: 0;">
+Conversão de tecnologia em produtos comerciais, tração fabril e escala global.
+</p>
+</div>
+
+<!-- 3ª Hélice -->
+<div class="card card-glow-amber" style="display: flex; flex-direction: column; text-align: center; padding: 1.2rem 0.85rem; border-top: 3px solid var(--amber-glow);">
+<div style="width: 52px; height: 52px; margin: 0 auto 0.75rem auto; border-radius: 50%; background: rgba(245, 158, 11, 0.15); border: 2px solid var(--amber-glow); display: flex; align-items: center; justify-content: center; font-size: 1.6rem;">
+🏛️
+</div>
+<div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--amber-glow); font-weight: 800; text-transform: uppercase;">3ª Hélice</div>
+<div style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 800; color: #fff; margin-bottom: 0.4rem;">Governo &amp; Estado</div>
+<p style="font-size: 0.76rem; color: var(--text-muted); line-height: 1.4; margin: 0;">
+Marco legal de CTI, estabilidade regulatória, compras públicas e fomento (FAPESP/FINEP).
+</p>
+</div>
+
+<!-- 4ª Hélice -->
+<div class="card card-glow-rose" style="display: flex; flex-direction: column; text-align: center; padding: 1.2rem 0.85rem; border-top: 3px solid #f43f5e;">
+<div style="width: 52px; height: 52px; margin: 0 auto 0.75rem auto; border-radius: 50%; background: rgba(244, 63, 94, 0.15); border: 2px solid #f43f5e; display: flex; align-items: center; justify-content: center; font-size: 1.6rem;">
+👥
+</div>
+<div style="font-family: var(--font-mono); font-size: 0.68rem; color: #fb7185; font-weight: 800; text-transform: uppercase;">4ª Hélice</div>
+<div style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 800; color: #fff; margin-bottom: 0.4rem;">Sociedade Civil</div>
+<p style="font-size: 0.76rem; color: var(--text-muted); line-height: 1.4; margin: 0;">
+Cidadãos, usuários e co-criação. Validação de demandas nos Living Labs e cidades inteligentes.
+</p>
+</div>
+
+<!-- 5ª Hélice -->
+<div class="card card-glow-emerald" style="display: flex; flex-direction: column; text-align: center; padding: 1.2rem 0.85rem; border-top: 3px solid var(--emerald-accent);">
+<div style="width: 52px; height: 52px; margin: 0 auto 0.75rem auto; border-radius: 50%; background: rgba(16, 185, 129, 0.15); border: 2px solid var(--emerald-accent); display: flex; align-items: center; justify-content: center; font-size: 1.6rem;">
+🌿
+</div>
+<div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--emerald-accent); font-weight: 800; text-transform: uppercase;">5ª Hélice</div>
+<div style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 800; color: #fff; margin-bottom: 0.4rem;">Meio Ambiente (Net-Zero)</div>
+<p style="font-size: 0.76rem; color: var(--text-muted); line-height: 1.4; margin: 0;">
+Transição energética, neutralidade de carbono, economia circular e impacto regenerativo.
+</p>
 </div>
 </div>
 </section>
 <!-- SLIDE 10: BLOCO 2 - INTERDEPENDÊNCIA -->
 <section class="slide" data-block="Bloco 2" data-slide="10" data-speaker="Veridiany Braga (4ª) / Fábio Lippi (5ª)" data-time="4 min">
-<div class="slide-tag">🕸️ BLOCO 2 • DINÂMICA DE REDE</div>
-<h2 class="slide-title">Interdependência: <span>O Gargalo de um é o Gargalo de Todos</span></h2>
+<div class="slide-tag">🕸️ BLOCO 2 • INTERDEPENDÊNCIA E DINÂMICA DE REDE</div>
+<h2 class="slide-title">Interdependência &amp; Riscos: <span>Cadeia Linear vs. Rede Viva</span></h2>
 <div class="punchline-card">
 <span style="font-size: 1.4rem;">🔗</span>
-<div class="punchline-quote">"A velocidade de uma esquadra é ditada pela nau mais lenta: o elo mais fraco rompe a rede."</div>
+<div class="punchline-quote">"Enquanto a cadeia de suprimentos é contratual e linear, o ecossistema opera por coopetição e interdependência de riscos."</div>
 </div>
-<div class="grid-2-stacked">
-<div class="card card-glow-cyan">
-<div class="card-title"><span>⛓️</span> Riscos de Co-inovação (Ron Adner)</div>
-<ul class="bullet-list">
-<li><span class="bullet-dot">▸</span> <strong>Risco de Execução:</strong> A empresa consegue criar a sua peça tecnológica?</li>
-<li><span class="bullet-dot">▸</span> <strong>Risco de Co-inovação:</strong> Os parceiros conseguirão entregar os componentes complementares no prazo?</li>
-<li><span class="bullet-dot">▸</span> <strong>Risco de Adoção:</strong> Os intermediários da cadeia adotarão a inovação sistêmica?</li>
+<div class="grid-2" style="gap: 1.25rem;">
+<!-- LADO ESQUERDO: Cadeia Linear Tradicional -->
+<div class="card" style="display: flex; flex-direction: column; justify-content: space-between; border-left: 4px solid #64748b; padding: 1.4rem 1.6rem;">
+<div>
+<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.5rem;">
+<div style="display: flex; align-items: center; gap: 0.5rem;">
+<span style="font-size: 1.4rem;">⛓️</span>
+<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff;">Cadeia de Suprimentos Tradicional</div>
+</div>
+<span style="font-family: var(--font-mono); font-size: 0.68rem; color: #94a3b8; background: rgba(255,255,255,0.06); padding: 0.2rem 0.5rem; border-radius: 4px;">LINEAR &amp; CONTRATUAL</span>
+</div>
+
+<!-- Diagrama Linear -->
+<div style="background: rgba(0,0,0,0.25); border-radius: var(--radius-sm); padding: 0.75rem; margin-bottom: 0.85rem;">
+<div style="font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; font-family: var(--font-mono); margin-bottom: 0.4rem;">Fluxo Sequencial de Comando:</div>
+<div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; font-weight: 700; color: #cbd5e1;">
+<span style="background: rgba(255,255,255,0.08); padding: 0.3rem 0.5rem; border-radius: 4px;">Fornecedor</span>
+<span style="color: #64748b;">➔</span>
+<span style="background: rgba(255,255,255,0.08); padding: 0.3rem 0.5rem; border-radius: 4px;">Fabril</span>
+<span style="color: #64748b;">➔</span>
+<span style="background: rgba(255,255,255,0.08); padding: 0.3rem 0.5rem; border-radius: 4px;">Canal</span>
+<span style="color: #64748b;">➔</span>
+<span style="background: rgba(255,255,255,0.08); padding: 0.3rem 0.5rem; border-radius: 4px;">Cliente</span>
+</div>
+</div>
+
+<ul class="bullet-list" style="font-size: 0.83rem;">
+<li><span class="bullet-dot" style="color:#64748b;">▸</span> <strong>Comando &amp; Subordinação:</strong> Relações hierárquicas e contratuais rígidas.</li>
+<li><span class="bullet-dot" style="color:#64748b;">▸</span> <strong>Transação Bilateral:</strong> Compra e venda com preços e especificações fixas.</li>
+<li><span class="bullet-dot" style="color:#64748b;">▸</span> <strong>Rigidez Operacional:</strong> Baixa adaptabilidade quando ocorrem disrupções externas.</li>
 </ul>
 </div>
-<div class="card card-glow-purple">
-<div class="card-title"><span>🛡️</span> A Proteção Proporcionada pelo PIT SJC</div>
-<ul class="bullet-list">
-<li><span class="bullet-dot">▸</span> <strong>Redução de Custos de Transação:</strong> Contratos padronizados e mediação de conflitos.</li>
-<li><span class="bullet-dot">▸</span> <strong>Garantia de Fornecimento Local:</strong> Integração de fornecedores credenciados nas 4 APLs.</li>
-<li><span class="bullet-dot">▸</span> <strong>Confiança Relacional:</strong> Convivência diária e proximidade física que geram capital social.</li>
-</ul>
+
+<div style="background: rgba(100, 116, 139, 0.1); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; font-size: 0.74rem; color: #94a3b8;">
+⚠️ Se um elo falha, substitui-se o fornecedor por cláusula de penalidade contratual.
+</div>
+</div>
+
+<!-- LADO DIREITO: Ecossistema de Inovação -->
+<div class="card card-glow-cyan" style="display: flex; flex-direction: column; justify-content: space-between; border-left: 4px solid var(--cyan-glow); padding: 1.4rem 1.6rem;">
+<div>
+<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.5rem;">
+<div style="display: flex; align-items: center; gap: 0.5rem;">
+<span style="font-size: 1.4rem;">🕸️</span>
+<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff;">Ecossistema de Inovação (Rede Viva)</div>
+</div>
+<span style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--cyan-light); background: rgba(6, 182, 212, 0.12); padding: 0.2rem 0.5rem; border-radius: 4px;">COOPETIÇÃO &amp; MALHA</span>
+</div>
+
+<!-- Destaque Proposta de Valor -->
+<div style="background: rgba(6, 182, 212, 0.08); border-radius: var(--radius-sm); padding: 0.65rem 0.75rem; margin-bottom: 0.75rem; border: 1px solid rgba(6, 182, 212, 0.2);">
+<div style="font-size: 0.72rem; color: var(--cyan-light); font-weight: 800; text-transform: uppercase;">Premissa de Ron Adner:</div>
+<div style="font-size: 0.81rem; color: #fff; line-height: 1.35;">
+Atores independentes colaboram para criar um novo mercado e competem dentro dele (<strong>Coopetição</strong>) em torno de uma <strong>Proposta de Valor Conjunta</strong>.
+</div>
+</div>
+
+<!-- Os 3 Riscos -->
+<div style="font-size: 0.72rem; color: #fbbf24; font-weight: 800; text-transform: uppercase; margin-bottom: 0.35rem;">Os 3 Riscos de Co-inovação (Ron Adner):</div>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin-bottom: 0.6rem;">
+<div style="background: rgba(0,0,0,0.3); padding: 0.5rem; border-radius: 4px; border-top: 2px solid var(--purple-accent);">
+<div style="font-size: 0.74rem; font-weight: 800; color: #fff;">1. Execução</div>
+<div style="font-size: 0.7rem; color: var(--text-muted); line-height: 1.25;">A empresa entrega a sua parte tecnológica?</div>
+</div>
+<div style="background: rgba(0,0,0,0.3); padding: 0.5rem; border-radius: 4px; border-top: 2px solid var(--cyan-glow);">
+<div style="font-size: 0.74rem; font-weight: 800; color: #fff;">2. Co-inovação</div>
+<div style="font-size: 0.7rem; color: var(--text-muted); line-height: 1.25;">Parceiros entregam a tempo? (Ex.: bateria eVTOL)</div>
+</div>
+<div style="background: rgba(0,0,0,0.3); padding: 0.5rem; border-radius: 4px; border-top: 2px solid var(--emerald-accent);">
+<div style="font-size: 0.74rem; font-weight: 800; color: #fff;">3. Adoção</div>
+<div style="font-size: 0.7rem; color: var(--text-muted); line-height: 1.25;">Canais e órgãos regulam? (Ex.: rota ANAC)</div>
+</div>
+</div>
+</div>
+
+<div style="background: rgba(6, 182, 212, 0.12); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; font-size: 0.74rem; color: var(--cyan-light);">
+🛡️ <strong>Papel do PIT SJC:</strong> Articular a governança relacional para que o elo mais fraco não colapse o ecossistema.
+</div>
 </div>
 </div>
 </section>
@@ -1147,24 +1333,24 @@
 </div>
 </div>
 <p style="font-size: 0.84rem; color: var(--text-muted); line-height: 1.45; margin-bottom: 0.75rem;">
-              Perguntas sobre atores heterogêneos, a 4ª e 5ª hélices, os riscos de co-inovação de Ron Adner e a simbiose no PIT.
-            </p>
+Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos de co-inovação de Ron Adner.
+</p>
 <div style="background: rgba(0,0,0,0.3); border: 1px dashed var(--border-soft); border-radius: var(--radius-sm); padding: 0.6rem; font-size: 0.76rem; color: var(--text-dim);">
-              ⏱️ <strong>Tempo:</strong> 2 minutos • Pontuação regressiva por milissegundo estilo Kahoot.
-            </div>
+⏱️ <strong>Tempo:</strong> 2 minutos • Pontuação regressiva por milissegundo estilo Kahoot.
+</div>
 </div>
 <div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; gap: 0.65rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
 <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.6rem;">
 <span>📱</span> Como Responder no Celular:
-            </div>
+</div>
 <div style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.5;">
-              1. Abra <strong>jogo.html</strong> no seu smartphone<br/>
-              2. Caminhe até a estação ativa no campus<br/>
-              3. Responda antes do tempo esgotar!
-            </div>
+1. Abra <strong>jogo.html</strong> no seu smartphone<br/>
+2. Caminhe até a estação ativa no campus<br/>
+3. Responda antes do tempo esgotar!
+</div>
 <div style="font-size: 0.82rem; color: var(--cyan-light); font-weight: 700; margin-top: 0.2rem;">
-              ⚡ Sincronizado ao vivo via Firebase!
-            </div>
+⚡ Sincronizado ao vivo via Firebase!
+</div>
 </div>
 </div>
 <!-- Leaderboard Table -->
@@ -2489,10 +2675,30 @@
       5: `Shen et al., em seu estudo recente de 2025/2026, analisaram a produção científica de três décadas. Eles mostram claramente que os ecossistemas deixaram de ser vistos como plataformas proprietárias de Big Techs e passaram a ser estudados sob a ótica de redes territoriais complexas, focadas em sustentabilidade e governança participativa.`,
       6: `É crucial não confundir os conceitos: Cluster é concentração geográfica por custo logístico; Sistema de Inovação foca no papel indutor do Estado; Ecossistema de Negócios captura valor presente; e Ecossistema de Inovação foca na co-criação de novas tecnologias que ninguém criaria sozinho.`,
       7: `[APRESENTADOR: Ao projetar este slide, anuncie ao microfone com entusiasmo: 'Atenção turma, fase liberada no seu celular! Vocês têm 2 minutos para responder às 3 perguntas da estação Bloco Acadêmico UNIFESP no mapa!'] Acompanhem aqui no telão o ranking em tempo real da turma enquanto os colegas pontuam!`,
-      8: `No Bloco 2, exploramos a anatomia do ecossistema. A premissa central é a heterogeneidade radical: universidades, empresas âncoras, startups de deep tech e fundos de investimento têm culturas e prazos completamente diferentes. A riqueza nasce do atrito produtivo entre esses atores.`,
-      9: `Evoluímos da clássica Tríplice Hélice para a Quíntupla Hélice. A 4ª hélice traz a sociedade civil e os usuários finais para a validação das tecnologias. A 5ª hélice exige neutralidade carbônica, economia circular e impacto socioambiental regenerativo.`,
-      10: `A dinâmica de um ecossistema é definida pela interdependência mútua. Como demonstrou Ron Adner, se a sua empresa cria uma bateria revolucionária, mas a cadeia não fornece o carregador rápido ou o marco regulatório barra a venda, o ecossistema colapsa. O PIT atua mitigando exatamente esses riscos de co-inovação.`,
-      11: `[APRESENTADOR: Ao projetar este slide, anuncie ao microfone: 'Atenção turma, fase liberada no celular! Caminhem até a Praça Central das Hélices e respondam às 3 perguntas!'] Vejam na tabela ao vivo como o placar está se movimentando!`,
+      8: `TEMPO: cerca de 4 minutos.
+FALA SUGERIDA:
+"Entrando no Bloco 2, respondemos à pergunta norteadora central: quem compõe a anatomia do ecossistema e o que cada um traz para a mesa? A literatura deixa claro que um ecossistema não é um grupo homogêneo. Ele reúne atores com independência hierárquica e lógicas distintas:
+• A Academia (UNIFESP, ITA, INPE) aporta o capital intelectual e a pesquisa de longo prazo;
+• As Empresas e Deep Techs aportam a tração de mercado e capacidade de escala;
+• O Governo e os Investidores (Anjos e VCs) aportam fomento, legislação e o capital de risco indispensável;
+• E os Intermediários — como o PIT SJC — aportam a orquestração e as pontes de confiança que conectam essas pontas.
+O papel do ecossistema é construir uma simbiose produtiva entre essas forças."`,
+      9: `TEMPO: cerca de 4 minutos.
+FALA SUGERIDA:
+"A teoria das hélices evoluiu para refletir a complexidade do mundo atual. A Tríplice Hélice clássica, reunindo Universidade, Empresa e Governo, foi o motor industrial do século passado. Contudo, o conceito moderno exige avançar para a Quádrupla e a Quíntupla Hélice.
+A 4ª Hélice insere a Sociedade Civil organizada, os cidadãos e os usuários finais. Nela, o valor é co-criado a partir de demandas sociais reais e validado em ambientes do território, como nos Living Labs do PIT SJC.
+Já a 5ª Hélice incorpora o Meio Ambiente e o desenvolvimento sustentável. Em um ecossistema maduro, a inovação não busca apenas retorno financeiro, mas também a neutralidade de carbono e a preservação ecológica (Net-Zero). Assim, o ecossistema atinge sua maturidade ao gerar impacto econômico, social e ambiental de forma integrada."`,
+      10: `TEMPO: cerca de 4 minutos.
+FALA SUGERIDA:
+"O que diferencia, fundamentalmente, um ecossistema de uma simples cadeia de suprimentos ou rede de parceiros?
+Numa cadeia de suprimentos, as relações são lineares, contratuais e focadas em transações diretas de compra e venda.
+No ecossistema, os atores são hierarquicamente independentes. Eles atuam em coopetição, colaborando para criar o mercado e competindo dentro dele. As trocas não são meramente contratuais; os atores alinham esforços em torno de uma proposta de valor conjunta emergente.
+Como ensina Ron Adner, essa interdependência gera três riscos interligados: o risco de execução interna, o risco de coinovação dos parceiros e o risco de adoção pelos canais regulatórios. Se você desenvolve uma aeronave elétrica (eVTOL), mas o parceiro não entrega a bateria ou a ANAC não homologa a rota, todo o ecossistema falha. O PIT SJC atua exatamente para mitigar esses riscos de transação."`,
+      11: `TEMPO: cerca de 3 minutos.
+FALA SUGERIDA:
+"[O APRESENTADOR ACIONA O COCKPIT ADMIN OU O BOTÃO DA TELA E ANUNCIA AO MICROFONE:]
+'Atenção turma, o desafio está pronto no seu celular! Caminhem no mapa até a Praça Central das Hélices e respondam às 3 perguntas sobre a anatomia do ecossistema e as 5 hélices!
+Vejam no telão: a tabela de classificação já está computando os pontos da Fase 2! Quem dominar os conceitos de Ron Adner, simbiose acadêmica-industrial e riscos de co-inovação vai disparar na pontuação. Vocês têm 2 minutos!'"`,
       12: `TEMPO: cerca de 1 minuto.
 1) Ler a questão do bloco em voz alta: Como coordenar atores independentes, e quais mecanismos e competências permitem a orquestração do ecossistema?
 2) Apresentar o percurso em três camadas: QUEM orquestra (o papel do orquestrador), COMO se orquestra (os mecanismos: definição de agenda, mobilização, estabilização da rede, compartilhamento de conhecimento, coordenação e comunicação) e COM O QUÊ (as competências de orquestração).
