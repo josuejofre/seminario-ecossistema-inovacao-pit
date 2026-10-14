@@ -332,7 +332,7 @@ for idx, match in enumerate(slide_matches, 1):
                 tf.word_wrap = True
                 p = tf.paragraphs[0]
                 p.text = clean_body[:500]
-                p.font.size = Pt(13)
+                p.font.size = Pt(15)
                 p.font.color.rgb = COLOR_MUTED
         else:
             # Extract bullet points or cards
@@ -344,7 +344,7 @@ for idx, match in enumerate(slide_matches, 1):
             for i, l in enumerate(clean_lines[:8]):
                 p = tf.add_paragraph() if i > 0 else tf.paragraphs[0]
                 p.text = f"• {l}"
-                p.font.size = Pt(13)
+                p.font.size = Pt(14.5)
                 p.font.color.rgb = COLOR_WHITE if i % 2 == 0 else COLOR_MUTED
 
     # Add bottom footer bar: Presenters (left) and Reference Citation (right)
@@ -360,7 +360,7 @@ for idx, match in enumerate(slide_matches, 1):
     
     r_spk = p_foot.add_run()
     r_spk.text = f"🎤 {spk}   |   "
-    r_spk.font.size = Pt(8.5)
+    r_spk.font.size = Pt(9.5)
     r_spk.font.bold = True
     r_spk.font.color.rgb = COLOR_CYAN
     r_spk.font.name = "JetBrains Mono"
@@ -368,7 +368,7 @@ for idx, match in enumerate(slide_matches, 1):
     if ref_txt:
         r_ref = p_foot.add_run()
         r_ref.text = f"📚 {ref_txt}"
-        r_ref.font.size = Pt(8.5)
+        r_ref.font.size = Pt(9)
         r_ref.font.color.rgb = COLOR_MUTED
         r_ref.font.name = "JetBrains Mono"
 

@@ -9,7 +9,7 @@ ESTRUTURA GERAL DO TEMPO (TOTAL: 120 MINUTOS • 43 SLIDES OFICIAIS):
 - Abertura, Agenda e Contexto PIT: 10 min (Slides 1 a 3)
 - Bloco 1 (Conceito e Evolução): 15 min (Slides 4 a 7 - inclui Momento Kahoot 1)
 - Bloco 2 (Anatomia do Ecossistema): 15 min (Slides 8 a 11 - inclui Momento Kahoot 2)
-- Bloco 3 (Governança e Orquestração - Machado et al., 2025): 15 min (Slides 12 a 19 - inclui Momento Kahoot 3)
+- Bloco 3 (Governança e Orquestração - Machado et al., 2025 - Jéssica David 4ª / Joel 5ª): 15 min (Slides 12 a 19 - inclui Momento Kahoot 3)
 - Bloco 4 (Construção e Gestão de Ecossistemas - Furr & Shipilov): 15 min (Slides 20 a 23 - inclui Momento Kahoot 4)
 - Bloco 5 (Caso San Diego & São José dos Campos - Majava & Rinkinen / PIT): 20 min (Slides 24 a 33 - inclui Momento Kahoot 5)
 - Elo Acadêmico & Atividade de Campo no PIT SJC (Entrevista com a Liderança): 15 min (Slides 34 a 36)
@@ -133,7 +133,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 12 | BLOCO 3: QUESTÃO CENTRAL & MÉTODO (JÉSSICA SLIDE 1)
 Tema: Como Coordenar Atores Independentes? (Machado et al., 2025)
-Apresentador(a): Jéssica David (4ª) / Fernando Barreto (5ª)
+Apresentador(a): Jéssica David (4ª) / Joel (5ª)
 Tempo sugerido: 1 min
 Frase de Efeito no Slide: "Quem orquestra, como se orquestra e com quais competências?"
 
@@ -143,7 +143,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 13 | BLOCO 3: O PAPEL DO ORQUESTRADOR (JÉSSICA SLIDE 2)
 Tema: Coordenar sem Autoridade Hierárquica
-Apresentador(a): Jéssica David (4ª) / Fernando Barreto (5ª)
+Apresentador(a): Jéssica David (4ª) / Joel (5ª)
 Tempo sugerido: 1.5 min
 Frase de Efeito no Slide: "Participantes heterogêneos e interdependentes, mas hierarquicamente independentes."
 
@@ -153,7 +153,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 14 | BLOCO 3: AS DIMENSÕES DA ORQUESTRAÇÃO (JÉSSICA SLIDE 3)
 Tema: Das 3 às 8 Dimensões de Orquestração
-Apresentador(a): Jéssica David (4ª) / Fernando Barreto (5ª)
+Apresentador(a): Jéssica David (4ª) / Joel (5ª)
 Tempo sugerido: 1 min
 Frase de Efeito no Slide: "A evolução da literatura: de Dhanaraj & Parkhe (2006) a Mignoni et al. (2021)."
 
@@ -163,7 +163,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 15 | BLOCO 3: MECANISMOS 1/2 (JÉSSICA SLIDE 4)
 Tema: Dar Direção, Reunir e Manter os Atores
-Apresentador(a): Jéssica David (4ª) / Fernando Barreto (5ª)
+Apresentador(a): Jéssica David (4ª) / Joel (5ª)
 Tempo sugerido: 2 min
 Frase de Efeito no Slide: "Definição de agenda, mobilização e estabilização da rede."
 
@@ -173,7 +173,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 16 | BLOCO 3: MECANISMOS 2/2 (JÉSSICA SLIDE 5)
 Tema: Fazer Conhecimento, Ação e Mensagem Circularem
-Apresentador(a): Jéssica David (4ª) / Fernando Barreto (5ª)
+Apresentador(a): Jéssica David (4ª) / Joel (5ª)
 Tempo sugerido: 2 min
 Frase de Efeito no Slide: "Compartilhamento de conhecimento, coordenação e gestão da comunicação."
 
@@ -183,7 +183,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 17 | BLOCO 3: COMPETÊNCIAS DE ORQUESTRAÇÃO (JÉSSICA SLIDE 6)
 Tema: O Modelo CHA em Ação
-Apresentador(a): Jéssica David (4ª) / Fernando Barreto (5ª)
+Apresentador(a): Jéssica David (4ª) / Joel (5ª)
 Tempo sugerido: 1.75 min
 Frase de Efeito no Slide: "Capacidade + Ação Situada = Competência Manifesta."
 
@@ -193,7 +193,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 18 | BLOCO 3: SÍNTESE DO BLOCO 3 (JÉSSICA SLIDE 7)
 Tema: Como Coordenar Atores Independentes?
-Apresentador(a): Jéssica David (4ª) / Fernando Barreto (5ª)
+Apresentador(a): Jéssica David (4ª) / Joel (5ª)
 Tempo sugerido: 0.75 min
 Frase de Efeito no Slide: "Orquestrar é habilitar a colaboração onde a hierarquia não alcança."
 
@@ -203,7 +203,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 19 | MOMENTO KAHOOT RPG • FASE 3
 Tema: Desafio da Fase 3: Centro de Governança do PIT
-Apresentador(a): Jéssica David (4ª) / Fernando Barreto (5ª)
+Apresentador(a): Jéssica David (4ª) / Joel (5ª)
 Tempo sugerido: 3 min
 Frase de Efeito no Slide: "Responda às 3 perguntas sobre governança, orquestração e competências CHA!"
 
