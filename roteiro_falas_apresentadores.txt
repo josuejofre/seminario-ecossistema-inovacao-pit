@@ -253,7 +253,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 24 | BLOCO 5 (1/9): SAN DIEGO NO RADAR GLOBAL (WIPO)
 Tema: Benchmarking Internacional: 14º Maior Polo Mundial de Inovação
-Apresentador(a): Lilian Veiga (4ª) / Fábio Lippi (5ª)
+Apresentador(a): Lilian Veiga (4ª) / Marciele Toledo (5ª)
 Tempo sugerido: 1.5 min
 Frase de Efeito no Slide: "San Diego é o 14º maior polo mundial de inovação (7º por densidade): 26.713 pedidos de patente PCT liderados pela Qualcomm e 19.862 artigos pela UCSD."
 
@@ -265,7 +265,7 @@ Entre 2020 e 2024, foram nada menos que 26.713 pedidos de patente PCT na cidade,
 --------------------------------------------------------------------------------
 SLIDE 25 | BLOCO 5 (2/9): O QUE É UM ECOSSISTEMA & OS 6 PONTOS-CHAVE
 Tema: Definição de Majava & Rinkinen e a Trajetória de San Diego
-Apresentador(a): Lilian Veiga (4ª) / Fábio Lippi (5ª)
+Apresentador(a): Lilian Veiga (4ª) / Marciele Toledo (5ª)
 Tempo sugerido: 1.75 min
 Frase de Efeito no Slide: "Conjunto dinâmico de atores e relações complementares que impulsionam o desempenho inovador."
 
@@ -283,7 +283,7 @@ E os autores identificam 6 pontos-chave estruturantes na trajetória de San Dieg
 --------------------------------------------------------------------------------
 SLIDE 26 | BLOCO 5 (3/9): CONNECT: A ENGENHARIA DA CONFIANÇA
 Tema: O Orquestrador Regional Bottom-Up e o Programa Springboard
-Apresentador(a): Lilian Veiga (4ª) / Fábio Lippi (5ª)
+Apresentador(a): Lilian Veiga (4ª) / Marciele Toledo (5ª)
 Tempo sugerido: 1.75 min
 Frase de Efeito no Slide: "Criada de baixo para cima (Bottom-Up) na UCSD em resposta à crise militar, a CONNECT reduziu a assimetria entre as 'ideias' dos cientistas e as 'regras' dos negócios."
 
@@ -297,7 +297,7 @@ Atores que compuseram a rede: UCSD, institutos Scripps e Salk, aceleradoras, inc
 --------------------------------------------------------------------------------
 SLIDE 27 | BLOCO 5 (4/9): ANÁLISE PEST: O RADAR DE SUCESSO DE SAN DIEGO
 Tema: Diagnóstico Metodológico: Político, Econômico, Social e Tecnológico
-Apresentador(a): Lilian Veiga (4ª) / Fábio Lippi (5ª)
+Apresentador(a): Lilian Veiga (4ª) / Marciele Toledo (5ª)
 Tempo sugerido: 1.75 min
 Frase de Efeito no Slide: "A concentração simultânea de ideias (ciência básica) e capital viabilizou o milagre da Biotecnologia."
 
@@ -313,7 +313,7 @@ Mas o artigo traz também os contrapontos e efeitos colaterais com honestidade a
 --------------------------------------------------------------------------------
 SLIDE 28 | BLOCO 5 (5/9): SÃO JOSÉ DOS CAMPOS: A GÊNESE DE UMA VOCAÇÃO
 Tema: Planejamento de Estado, Geografia Estratégica e Instituições-Âncora
-Apresentador(a): Lilian Veiga (4ª) / Fábio Lippi (5ª)
+Apresentador(a): Lilian Veiga (4ª) / Marciele Toledo (5ª)
 Tempo sugerido: 1.75 min
 Frase de Efeito no Slide: "Na ausência de capital de risco privado no Brasil dos anos 50/60, o poder de compra estatal do Ministério da Aeronáutica atuou como indutor, viabilizando a Embraer e fornecedores locais."
 
@@ -327,7 +327,7 @@ E assim como em San Diego, constatou-se que quando os fundadores das empresas er
 --------------------------------------------------------------------------------
 SLIDE 29 | BLOCO 5 (6/9): A EVOLUÇÃO TIPOLÓGICA: DE ORGÂNICO À ORQUESTRAÇÃO
 Tema: Da Dificuldade de Acesso a Laboratórios à Gestão Formal do PIT
-Apresentador(a): Lilian Veiga (4ª) / Fábio Lippi (5ª)
+Apresentador(a): Lilian Veiga (4ª) / Marciele Toledo (5ª)
 Tempo sugerido: 1.75 min
 Frase de Efeito no Slide: "Da dificuldade histórica de acesso da indústria aos laboratórios de P&D para a gestão orquestrada de inovação de 25 milhões de m²."
 
@@ -342,7 +342,7 @@ Com a fundação do PIT em 2009, SJC deu o salto para o Polo Tipo 3, assumindo a
 --------------------------------------------------------------------------------
 SLIDE 30 | BLOCO 5 (7/9): O PIT SJC: GOVERNANÇA E TERRITÓRIO
 Tema: Relatório Anual 2025, Matriz Pentagonal e Thiago Rubem (2018)
-Apresentador(a): Lilian Veiga (4ª) / Fábio Lippi (5ª)
+Apresentador(a): Lilian Veiga (4ª) / Marciele Toledo (5ª)
 Tempo sugerido: 1.75 min
 Frase de Efeito no Slide: "Spill-overs territoriais: a proximidade física catalisa o transbordamento espontâneo de conhecimento tácito e sinergia."
 
@@ -356,7 +356,7 @@ E o grande avanço: o PIT resolveu o gargalo histórico dos laboratórios! Em 20
 --------------------------------------------------------------------------------
 SLIDE 31 | BLOCO 5 (8/9): O PIT SJC EM 2026: CONSOLIDAÇÃO & REDES DE CONFIANÇA
 Tema: Parceiros Corporativos, Expansão dos APLs e Gazeta de SP (2026)
-Apresentador(a): Lilian Veiga (4ª) / Fábio Lippi (5ª)
+Apresentador(a): Lilian Veiga (4ª) / Marciele Toledo (5ª)
 Tempo sugerido: 1.75 min
 Frase de Efeito no Slide: "Parque Tecnológico não é mero condomínio imobiliário: é um ambiente catalisador de confiança, pontes relacionais e encontros humanos."
 
@@ -369,7 +369,7 @@ Isso comprova a tese central: inovação requer instituições que gerem pertenc
 --------------------------------------------------------------------------------
 SLIDE 32 | BLOCO 5 (9/9): SÍNTESE COMPARATIVA: SAN DIEGO VS SJC
 Tema: Matriz Oficial de 6 Dimensões e Lições Estratégicas
-Apresentador(a): Lilian Veiga (4ª) / Fábio Lippi (5ª)
+Apresentador(a): Lilian Veiga (4ª) / Marciele Toledo (5ª)
 Tempo sugerido: 2 min
 Frase de Efeito no Slide: "Não existem fórmulas prontas: excelência acadêmica, visão territorial e entidades orquestradoras que geram laços de confiança humana."
 
@@ -386,7 +386,7 @@ Conclusão Geral: Não existem fórmulas prontas. Parques tecnológicos não sã
 --------------------------------------------------------------------------------
 SLIDE 33 | MOMENTO KAHOOT RPG • FASE 5
 Tema: Desafio da Fase 5: Pavilhão Aeroespacial & San Diego
-Apresentador(a): Lilian Veiga (4ª) / Fábio Lippi (5ª)
+Apresentador(a): Lilian Veiga (4ª) / Marciele Toledo (5ª)
 Tempo sugerido: 3 min
 Frase de Efeito no Slide: "Respondam às 3 perguntas sobre San Diego, o orquestrador CONNECT, o programa Springboard e o PIT SJC!"
 
