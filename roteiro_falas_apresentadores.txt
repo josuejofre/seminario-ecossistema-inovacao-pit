@@ -5,7 +5,7 @@ Programa de Pós-Graduação em Inovação Tecnológica (PPG-PIT) – UNIFESP Ca
 Professores: Profª Drª Iraci de Souza João & Prof. Dr. Antônio Yukio Ueta
 ================================================================================
 
-ESTRUTURA GERAL DO TEMPO (TOTAL: 120 MINUTOS • 44 SLIDES OFICIAIS):
+ESTRUTURA GERAL DO TEMPO (TOTAL: 120 MINUTOS • 43 SLIDES OFICIAIS):
 - Abertura, Agenda e Contexto PIT: 10 min (Slides 1 a 3)
 - Bloco 1 (Conceito e Evolução): 15 min (Slides 4 a 7 - inclui Momento Kahoot 1)
 - Bloco 2 (Anatomia do Ecossistema): 15 min (Slides 8 a 11 - inclui Momento Kahoot 2)
@@ -481,7 +481,7 @@ FALA SUGERIDA DA APRESENTADORA (JÉSSICA DAVID):
 --------------------------------------------------------------------------------
 SLIDE 42 | CONCLUSÕES: AS 5 LEIS DOS ECOSSISTEMAS
 Tema: Síntese Estratégica Final
-Apresentador(a): Josué Jofre (4ª) / Renato Paschoal (4ª) / Fernando Barreto (5ª)
+Apresentador(a): Renato Paschoal (4ª) / Fernando Barreto (5ª)
 Tempo sugerido: 4 min
 Frase de Efeito no Slide: "As 5 Leis Fundamentais dos Ecossistemas de Inovação."
 
