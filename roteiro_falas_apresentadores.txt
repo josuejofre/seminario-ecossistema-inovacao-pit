@@ -14,16 +14,16 @@ ESTRUTURA GERAL DO TEMPO (TOTAL: 120 MINUTOS • 44 SLIDES OFICIAIS):
 - Bloco 5 (Caso San Diego & São José dos Campos - Majava & Rinkinen / PIT): 20 min (Slides 24 a 33 - inclui Momento Kahoot 5)
 - Elo Acadêmico & Atividade de Campo no PIT SJC (Entrevista com a Liderança): 15 min (Slides 34 a 36)
 - Bloco 6 (Críticas, Limitações e o Lado Sombrio - Shen et al.): 10 min (Slides 37 a 39 - inclui Momento Kahoot 6)
-- Dinâmica Interativa Kahoot RPG (Pódio Final, Análise de Erros & Debate com a Banca): 20 min (Slides 40 a 44)
+- Dinâmica Interativa Kahoot RPG (Pódio Final, Análise de Erros & Debate com a Banca): 20 min (Slides 40 a 43)
 
 ================================================================================
-SLIDES E FALAS SUGERIDAS (SLIDE A SLIDE • TOTAL: 44 SLIDES)
+SLIDES E FALAS SUGERIDAS (SLIDE A SLIDE • TOTAL: 43 SLIDES)
 ================================================================================
 
 --------------------------------------------------------------------------------
 SLIDE 1 | ABERTURA OFICIAL
 Tema: Ecossistemas de Inovação: Teoria, Orquestração e a Prática no PIT SJC
-Apresentador(a): Josué Jofre / Grupo 5
+Apresentador(a): Josué Jofre (4ª) / Fernando Barreto (5ª)
 Tempo sugerido: 2 min
 Frase de Efeito no Slide: "Nenhuma organização inova sozinha: o valor não está nas partes, mas na sinergia entre elas."
 
@@ -33,7 +33,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 2 | AGENDA E CRONOGRAMA
 Tema: Estrutura e Divisão dos Blocos (120 minutos)
-Apresentador(a): Nathalia Neves (Quarta) / Fernando Barreto (Quinta)
+Apresentador(a): Nathalia Neves (4ª) / Fernando Barreto (5ª)
 Tempo sugerido: 2 min
 Frase de Efeito no Slide: "Da teoria da coevolução biológica à prática orquestrada em São José dos Campos."
 
@@ -43,7 +43,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 3 | CONTEXTO HISTÓRICO DO PIT SJC
 Tema: O Laboratório Vivo: São José dos Campos
-Apresentador(a): Josué Jofre (Quarta) / Marciele Toledo (Quinta)
+Apresentador(a): Josué Jofre (4ª) / Marciele Toledo (5ª)
 Tempo sugerido: 3 min
 Frase de Efeito no Slide: "Onde teoria e prática convergem: 300+ empresas, 4 APLs e o PPG-PIT UNIFESP."
 
@@ -53,7 +53,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 4 | BLOCO 1: A ORIGEM CONCEITUAL
 Tema: James Moore (1993) e a Metáfora Biológica
-Apresentador(a): Nathalia Neves (Quarta) / Fernando Barreto (Quinta)
+Apresentador(a): Nathalia Neves (4ª) / Fernando Barreto (5ª)
 Tempo sugerido: 3 min
 Frase de Efeito no Slide: "Empresas não competem isoladas: competem como espécies em coevolução."
 
@@ -63,7 +63,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 5 | BLOCO 1: ANÁLISE BIBLIOMÉTRICA
 Tema: Evolução de Três Décadas (Shen et al., 2025/2026)
-Apresentador(a): Nathalia Neves (Quarta) / Fernando Barreto (Quinta)
+Apresentador(a): Nathalia Neves (4ª) / Fernando Barreto (5ª)
 Tempo sugerido: 3 min
 Frase de Efeito no Slide: "De plataformas de Big Techs a redes territoriais de sustentabilidade."
 
@@ -73,7 +73,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 6 | BLOCO 1: 4 CONCEITOS ESSENCIAIS
 Tema: Como Diferenciar Cluster, Sistema e Ecossistema
-Apresentador(a): Nathalia Neves (Quarta) / Fernando Barreto (Quinta)
+Apresentador(a): Nathalia Neves (4ª) / Fernando Barreto (5ª)
 Tempo sugerido: 4 min
 Frase de Efeito no Slide: "Precisão terminológica para não chamar qualquer condomínio de ecossistema."
 
@@ -83,7 +83,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 7 | MOMENTO KAHOOT RPG • FASE 1
 Tema: Desafio da Fase 1: Bloco Acadêmico UNIFESP
-Apresentador(a): Nathalia Neves (Quarta) / Fernando Barreto (Quinta)
+Apresentador(a): Nathalia Neves (4ª) / Fernando Barreto (5ª)
 Tempo sugerido: 3 min
 Frase de Efeito no Slide: "Acesse o jogo no smartphone, caminhe até a estação no mapa e responda às 3 perguntas!"
 
@@ -93,7 +93,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 8 | BLOCO 2: ANATOMIA DO ECOSSISTEMA
 Tema: Heterogeneidade & Simbiose de Atores
-Apresentador(a): Veridiany Braga (Quarta) / Fábio Lippi (Quinta)
+Apresentador(a): Veridiany Braga (4ª) / Fábio Lippi (5ª)
 Tempo sugerido: 3 min
 Frase de Efeito no Slide: "Universidades geram ciência, startups trazem agilidade, grandes empresas trazem escala e o governo garante fomento."
 
@@ -103,7 +103,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 9 | BLOCO 2: AS 5 HÉLICES DA INOVAÇÃO
 Tema: Da Tríplice à Quíntupla Hélice (Sociedade & Meio Ambiente)
-Apresentador(a): Veridiany Braga (Quarta) / Fábio Lippi (Quinta)
+Apresentador(a): Veridiany Braga (4ª) / Fábio Lippi (5ª)
 Tempo sugerido: 4 min
 Frase de Efeito no Slide: "Inovação tecnológica sem impacto social e sustentabilidade ecológica é miopia estratégica."
 
@@ -113,7 +113,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 10 | BLOCO 2: INTERDEPENDÊNCIA E DINÂMICA DE REDE
 Tema: Cadeia Linear vs. Rede Viva (Ron Adner)
-Apresentador(a): Veridiany Braga (Quarta) / Fábio Lippi (Quinta)
+Apresentador(a): Veridiany Braga (4ª) / Fábio Lippi (5ª)
 Tempo sugerido: 4 min
 Frase de Efeito no Slide: "Riscos de coinovação: se o parceiro falha na bateria, a aeronave elétrica não voa."
 
@@ -123,7 +123,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 11 | MOMENTO KAHOOT RPG • FASE 2
 Tema: Desafio da Fase 2: Praça Central das Hélices
-Apresentador(a): Veridiany Braga (Quarta) / Fábio Lippi (Quinta)
+Apresentador(a): Veridiany Braga (4ª) / Fábio Lippi (5ª)
 Tempo sugerido: 3 min
 Frase de Efeito no Slide: "Acesse a estação no mapa e responda sobre a simbiose de atores e as 5 hélices!"
 
@@ -133,7 +133,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 12 | BLOCO 3: QUESTÃO CENTRAL & MÉTODO (JÉSSICA SLIDE 1)
 Tema: Como Coordenar Atores Independentes? (Machado et al., 2025)
-Apresentador(a): Jéssica Pascotto David (Quarta)
+Apresentador(a): Jéssica David (4ª) / Fernando Barreto (5ª)
 Tempo sugerido: 1 min
 Frase de Efeito no Slide: "Quem orquestra, como se orquestra e com quais competências?"
 
@@ -143,7 +143,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 13 | BLOCO 3: O PAPEL DO ORQUESTRADOR (JÉSSICA SLIDE 2)
 Tema: Coordenar sem Autoridade Hierárquica
-Apresentador(a): Jéssica Pascotto David (Quarta)
+Apresentador(a): Jéssica David (4ª) / Fernando Barreto (5ª)
 Tempo sugerido: 1.5 min
 Frase de Efeito no Slide: "Participantes heterogêneos e interdependentes, mas hierarquicamente independentes."
 
@@ -153,7 +153,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 14 | BLOCO 3: AS DIMENSÕES DA ORQUESTRAÇÃO (JÉSSICA SLIDE 3)
 Tema: Das 3 às 8 Dimensões de Orquestração
-Apresentador(a): Jéssica Pascotto David (Quarta)
+Apresentador(a): Jéssica David (4ª) / Fernando Barreto (5ª)
 Tempo sugerido: 1 min
 Frase de Efeito no Slide: "A evolução da literatura: de Dhanaraj & Parkhe (2006) a Mignoni et al. (2021)."
 
@@ -163,7 +163,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 15 | BLOCO 3: MECANISMOS 1/2 (JÉSSICA SLIDE 4)
 Tema: Dar Direção, Reunir e Manter os Atores
-Apresentador(a): Jéssica Pascotto David (Quarta)
+Apresentador(a): Jéssica David (4ª) / Fernando Barreto (5ª)
 Tempo sugerido: 2 min
 Frase de Efeito no Slide: "Definição de agenda, mobilização e estabilização da rede."
 
@@ -173,7 +173,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 16 | BLOCO 3: MECANISMOS 2/2 (JÉSSICA SLIDE 5)
 Tema: Fazer Conhecimento, Ação e Mensagem Circularem
-Apresentador(a): Jéssica Pascotto David (Quarta)
+Apresentador(a): Jéssica David (4ª) / Fernando Barreto (5ª)
 Tempo sugerido: 2 min
 Frase de Efeito no Slide: "Compartilhamento de conhecimento, coordenação e gestão da comunicação."
 
@@ -183,7 +183,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 17 | BLOCO 3: COMPETÊNCIAS DE ORQUESTRAÇÃO (JÉSSICA SLIDE 6)
 Tema: O Modelo CHA em Ação
-Apresentador(a): Jéssica Pascotto David (Quarta)
+Apresentador(a): Jéssica David (4ª) / Fernando Barreto (5ª)
 Tempo sugerido: 1.75 min
 Frase de Efeito no Slide: "Capacidade + Ação Situada = Competência Manifesta."
 
@@ -193,7 +193,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 18 | BLOCO 3: SÍNTESE DO BLOCO 3 (JÉSSICA SLIDE 7)
 Tema: Como Coordenar Atores Independentes?
-Apresentador(a): Jéssica Pascotto David (Quarta)
+Apresentador(a): Jéssica David (4ª) / Fernando Barreto (5ª)
 Tempo sugerido: 0.75 min
 Frase de Efeito no Slide: "Orquestrar é habilitar a colaboração onde a hierarquia não alcança."
 
@@ -203,7 +203,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 19 | MOMENTO KAHOOT RPG • FASE 3
 Tema: Desafio da Fase 3: Centro de Governança do PIT
-Apresentador(a): Jéssica Pascotto David (Quarta)
+Apresentador(a): Jéssica David (4ª) / Fernando Barreto (5ª)
 Tempo sugerido: 3 min
 Frase de Efeito no Slide: "Responda às 3 perguntas sobre governança, orquestração e competências CHA!"
 
@@ -213,7 +213,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 20 | BLOCO 4: COMO CONSTRUIR ECOSSISTEMAS
 Tema: Furr & Shipilov (MIT Sloan): Do Zero à Tração
-Apresentador(a): Josué Jofre (Quarta) / Marciele Toledo (Quinta)
+Apresentador(a): Josué Jofre (4ª) / Marciele Toledo (5ª)
 Tempo sugerido: 3 min
 Frase de Efeito no Slide: "Não comece criando regras rígidas: comece resolvendo um gargalo concreto da rede."
 
@@ -223,7 +223,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 21 | BLOCO 4: NEXUS HUB DE STARTUPS
 Tema: Acelerando Deep Techs no Vale do Paraíba
-Apresentador(a): Josué Jofre (Quarta) / Marciele Toledo (Quinta)
+Apresentador(a): Josué Jofre (4ª) / Marciele Toledo (5ª)
 Tempo sugerido: 4 min
 Frase de Efeito no Slide: "Mais de 190 startups em jornada ativa e conexão direta com a indústria pesada."
 
@@ -233,7 +233,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 22 | BLOCO 4: LIDERANÇA ADAPTATIVA
 Tema: Liderança sem Autoridade Hierárquica
-Apresentador(a): Josué Jofre (Quarta) / Marciele Toledo (Quinta)
+Apresentador(a): Josué Jofre (4ª) / Marciele Toledo (5ª)
 Tempo sugerido: 3 min
 Frase de Efeito no Slide: "A autoridade formal comanda tarefas; a liderança orquestradora inspira convergência de propósitos."
 
@@ -243,7 +243,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 23 | MOMENTO KAHOOT RPG • FASE 4
 Tema: Desafio da Fase 4: Nexus Hub de Startups
-Apresentador(a): Josué Jofre (Quarta) / Marciele Toledo (Quinta)
+Apresentador(a): Josué Jofre (4ª) / Marciele Toledo (5ª)
 Tempo sugerido: 3 min
 Frase de Efeito no Slide: "Responda sobre aceleração, deep techs e liderança adaptativa!"
 
@@ -253,7 +253,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 24 | BLOCO 5 (1/9): SAN DIEGO NO RADAR GLOBAL (WIPO)
 Tema: Benchmarking Internacional: 14º Maior Polo Mundial de Inovação
-Apresentador(a): Lilian Veiga Vinhas (Quarta)
+Apresentador(a): Lilian Veiga (4ª) / Fábio Lippi (5ª)
 Tempo sugerido: 1.5 min
 Frase de Efeito no Slide: "San Diego é o 14º maior polo mundial de inovação (7º por densidade): 26.713 pedidos de patente PCT liderados pela Qualcomm e 19.862 artigos pela UCSD."
 
@@ -265,7 +265,7 @@ Entre 2020 e 2024, foram nada menos que 26.713 pedidos de patente PCT na cidade,
 --------------------------------------------------------------------------------
 SLIDE 25 | BLOCO 5 (2/9): O QUE É UM ECOSSISTEMA & OS 6 PONTOS-CHAVE
 Tema: Definição de Majava & Rinkinen e a Trajetória de San Diego
-Apresentador(a): Lilian Veiga Vinhas (Quarta)
+Apresentador(a): Lilian Veiga (4ª) / Fábio Lippi (5ª)
 Tempo sugerido: 1.75 min
 Frase de Efeito no Slide: "Conjunto dinâmico de atores e relações complementares que impulsionam o desempenho inovador."
 
@@ -283,7 +283,7 @@ E os autores identificam 6 pontos-chave estruturantes na trajetória de San Dieg
 --------------------------------------------------------------------------------
 SLIDE 26 | BLOCO 5 (3/9): CONNECT: A ENGENHARIA DA CONFIANÇA
 Tema: O Orquestrador Regional Bottom-Up e o Programa Springboard
-Apresentador(a): Lilian Veiga Vinhas (Quarta)
+Apresentador(a): Lilian Veiga (4ª) / Fábio Lippi (5ª)
 Tempo sugerido: 1.75 min
 Frase de Efeito no Slide: "Criada de baixo para cima (Bottom-Up) na UCSD em resposta à crise militar, a CONNECT reduziu a assimetria entre as 'ideias' dos cientistas e as 'regras' dos negócios."
 
@@ -297,7 +297,7 @@ Atores que compuseram a rede: UCSD, institutos Scripps e Salk, aceleradoras, inc
 --------------------------------------------------------------------------------
 SLIDE 27 | BLOCO 5 (4/9): ANÁLISE PEST: O RADAR DE SUCESSO DE SAN DIEGO
 Tema: Diagnóstico Metodológico: Político, Econômico, Social e Tecnológico
-Apresentador(a): Lilian Veiga Vinhas (Quarta)
+Apresentador(a): Lilian Veiga (4ª) / Fábio Lippi (5ª)
 Tempo sugerido: 1.75 min
 Frase de Efeito no Slide: "A concentração simultânea de ideias (ciência básica) e capital viabilizou o milagre da Biotecnologia."
 
@@ -313,7 +313,7 @@ Mas o artigo traz também os contrapontos e efeitos colaterais com honestidade a
 --------------------------------------------------------------------------------
 SLIDE 28 | BLOCO 5 (5/9): SÃO JOSÉ DOS CAMPOS: A GÊNESE DE UMA VOCAÇÃO
 Tema: Planejamento de Estado, Geografia Estratégica e Instituições-Âncora
-Apresentador(a): Lilian Veiga Vinhas (Quarta)
+Apresentador(a): Lilian Veiga (4ª) / Fábio Lippi (5ª)
 Tempo sugerido: 1.75 min
 Frase de Efeito no Slide: "Na ausência de capital de risco privado no Brasil dos anos 50/60, o poder de compra estatal do Ministério da Aeronáutica atuou como indutor, viabilizando a Embraer e fornecedores locais."
 
@@ -327,7 +327,7 @@ E assim como em San Diego, constatou-se que quando os fundadores das empresas er
 --------------------------------------------------------------------------------
 SLIDE 29 | BLOCO 5 (6/9): A EVOLUÇÃO TIPOLÓGICA: DE ORGÂNICO À ORQUESTRAÇÃO
 Tema: Da Dificuldade de Acesso a Laboratórios à Gestão Formal do PIT
-Apresentador(a): Lilian Veiga Vinhas (Quarta)
+Apresentador(a): Lilian Veiga (4ª) / Fábio Lippi (5ª)
 Tempo sugerido: 1.75 min
 Frase de Efeito no Slide: "Da dificuldade histórica de acesso da indústria aos laboratórios de P&D para a gestão orquestrada de inovação de 25 milhões de m²."
 
@@ -342,7 +342,7 @@ Com a fundação do PIT em 2009, SJC deu o salto para o Polo Tipo 3, assumindo a
 --------------------------------------------------------------------------------
 SLIDE 30 | BLOCO 5 (7/9): O PIT SJC: GOVERNANÇA E TERRITÓRIO
 Tema: Relatório Anual 2025, Matriz Pentagonal e Thiago Rubem (2018)
-Apresentador(a): Lilian Veiga Vinhas (Quarta)
+Apresentador(a): Lilian Veiga (4ª) / Fábio Lippi (5ª)
 Tempo sugerido: 1.75 min
 Frase de Efeito no Slide: "Spill-overs territoriais: a proximidade física catalisa o transbordamento espontâneo de conhecimento tácito e sinergia."
 
@@ -356,7 +356,7 @@ E o grande avanço: o PIT resolveu o gargalo histórico dos laboratórios! Em 20
 --------------------------------------------------------------------------------
 SLIDE 31 | BLOCO 5 (8/9): O PIT SJC EM 2026: CONSOLIDAÇÃO & REDES DE CONFIANÇA
 Tema: Parceiros Corporativos, Expansão dos APLs e Gazeta de SP (2026)
-Apresentador(a): Lilian Veiga Vinhas (Quarta)
+Apresentador(a): Lilian Veiga (4ª) / Fábio Lippi (5ª)
 Tempo sugerido: 1.75 min
 Frase de Efeito no Slide: "Parque Tecnológico não é mero condomínio imobiliário: é um ambiente catalisador de confiança, pontes relacionais e encontros humanos."
 
@@ -369,7 +369,7 @@ Isso comprova a tese central: inovação requer instituições que gerem pertenc
 --------------------------------------------------------------------------------
 SLIDE 32 | BLOCO 5 (9/9): SÍNTESE COMPARATIVA: SAN DIEGO VS SJC
 Tema: Matriz Oficial de 6 Dimensões e Lições Estratégicas
-Apresentador(a): Lilian Veiga Vinhas (Quarta)
+Apresentador(a): Lilian Veiga (4ª) / Fábio Lippi (5ª)
 Tempo sugerido: 2 min
 Frase de Efeito no Slide: "Não existem fórmulas prontas: excelência acadêmica, visão territorial e entidades orquestradoras que geram laços de confiança humana."
 
@@ -386,7 +386,7 @@ Conclusão Geral: Não existem fórmulas prontas. Parques tecnológicos não sã
 --------------------------------------------------------------------------------
 SLIDE 33 | MOMENTO KAHOOT RPG • FASE 5
 Tema: Desafio da Fase 5: Pavilhão Aeroespacial & San Diego
-Apresentador(a): Lilian Veiga Vinhas (Quarta)
+Apresentador(a): Lilian Veiga (4ª) / Fábio Lippi (5ª)
 Tempo sugerido: 3 min
 Frase de Efeito no Slide: "Respondam às 3 perguntas sobre San Diego, o orquestrador CONNECT, o programa Springboard e o PIT SJC!"
 
@@ -397,7 +397,7 @@ FALA SUGERIDA DA APRESENTADORA (LILIAN VEIGA VINHAS):
 --------------------------------------------------------------------------------
 SLIDE 34 | O ELO UNIVERSITÁRIO: UNIFESP & PIT SJC
 Tema: PPG-PIT: Co-criação na Prática & Laboratórios Multiusuários
-Apresentador(a): Josué Jofre / Marciele Toledo
+Apresentador(a): Josué Jofre (4ª) / Marciele Toledo (5ª)
 Tempo sugerido: 3 min
 Frase de Efeito no Slide: "O PPG-PIT não forma apenas teóricos: forma orquestradores capazes de dialogar com a indústria."
 
@@ -407,7 +407,7 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 35 | ATIVIDADE DE CAMPO: ENTREVISTA COM A LIDERANÇA DO PIT SJC
 Tema: A Visão Prática do Orquestrador no Parque Tecnológico
-Apresentador(a): Renato Paschoal (Quarta e Quinta)
+Apresentador(a): Renato Paschoal (4ª e 5ª)
 Tempo sugerido: 6 min
 Frase de Efeito no Slide: "Investigando na prática os desafios reais de governança, conciliação de interesses e transferência tecnológica no PIT São José dos Campos."
 
@@ -417,7 +417,7 @@ FALA SUGERIDA DO APRESENTADOR (RENATO PASCHOAL):
 --------------------------------------------------------------------------------
 SLIDE 36 | 4 EIXOS DE GOVERNANÇA ANALISADOS NA PRÁTICA DO PIT SJC
 Tema: Síntese Prática: Desafios Reais de Gestão Tecnológica
-Apresentador(a): Renato Paschoal (Quarta e Quinta)
+Apresentador(a): Renato Paschoal (4ª e 5ª)
 Tempo sugerido: 4 min
 Frase de Efeito no Slide: "Governança sem hierarquia, tempo da academia vs indústria, sigilo de patentes e retenção de empresas âncoras."
 
@@ -431,7 +431,7 @@ FALA SUGERIDA DO APRESENTADOR (RENATO PASCHOAL):
 --------------------------------------------------------------------------------
 SLIDE 37 | BLOCO 6: CRÍTICAS E LIMITAÇÕES (SHEN ET AL.)
 Tema: Pés no Chão: Evitando o 'Teatro da Inovação'
-Apresentador(a): Renato Paschoal (Quarta)
+Apresentador(a): Renato Paschoal (4ª e 5ª)
 Tempo sugerido: 4 min
 Frase de Efeito no Slide: "Ecossistemas não são panaceia: sem governança ética, viram armadilhas predatórias."
 
@@ -441,7 +441,7 @@ FALA SUGERIDA DO APRESENTADOR (RENATO PASCHOAL):
 --------------------------------------------------------------------------------
 SLIDE 38 | BLOCO 6: O LADO SOMBRIO DOS ECOSSISTEMAS
 Tema: Lock-in, Predação e Assimetrias de Poder
-Apresentador(a): Renato Paschoal (Quarta)
+Apresentador(a): Renato Paschoal (4ª e 5ª)
 Tempo sugerido: 3 min
 Frase de Efeito no Slide: "O papel do orquestrador neutro é proteger os elos vulneráveis da rede."
 
@@ -451,7 +451,7 @@ FALA SUGERIDA DO APRESENTADOR (RENATO PASCHOAL):
 --------------------------------------------------------------------------------
 SLIDE 39 | MOMENTO KAHOOT RPG • FASE 6
 Tema: Desafio da Fase 6: Living Lab Net-Zero & Fronteiras
-Apresentador(a): Renato Paschoal (Quarta)
+Apresentador(a): Renato Paschoal (4ª e 5ª)
 Tempo sugerido: 3 min
 Frase de Efeito no Slide: "Última rodada de perguntas! Decisão do ranking no telão!"
 
@@ -461,7 +461,7 @@ FALA SUGERIDA DO APRESENTADOR (RENATO PASCHOAL):
 --------------------------------------------------------------------------------
 SLIDE 40 | DINÂMICA INTERATIVA: CONSOLIDAÇÃO DO KAHOOT RPG
 Tema: Fechamento das 18 Questões: O Pódio Provisório
-Apresentador(a): Jéssica Pascotto David (Atividade Oficial)
+Apresentador(a): Jéssica David (4ª) / Fernando Barreto (5ª)
 Tempo sugerido: 4 min
 Frase de Efeito no Slide: "Parabéns aos líderes! Vamos agora conferir a classificação geral e os acertos da sala!"
 
@@ -471,7 +471,7 @@ FALA SUGERIDA DA APRESENTADORA (JÉSSICA DAVID):
 --------------------------------------------------------------------------------
 SLIDE 41 | DINÂMICA INTERATIVA: CLASSIFICAÇÃO GERAL & DIAGNÓSTICO
 Tema: Análise de Dados e Pódio Final com Gráficos Cienciométricos
-Apresentador(a): Jéssica Pascotto David (Atividade Oficial)
+Apresentador(a): Jéssica David (4ª) / Fernando Barreto (5ª)
 Tempo sugerido: 5 min
 Frase de Efeito no Slide: "Aprender com os erros: conectando as dúvidas da turma com os autores seminais."
 
@@ -481,7 +481,7 @@ FALA SUGERIDA DA APRESENTADORA (JÉSSICA DAVID):
 --------------------------------------------------------------------------------
 SLIDE 42 | CONCLUSÕES: AS 5 LEIS DOS ECOSSISTEMAS
 Tema: Síntese Estratégica Final
-Apresentador(a): Josué Jofre / Renato Paschoal
+Apresentador(a): Josué Jofre (4ª) / Renato Paschoal (4ª) / Fernando Barreto (5ª)
 Tempo sugerido: 4 min
 Frase de Efeito no Slide: "As 5 Leis Fundamentais dos Ecossistemas de Inovação."
 
@@ -491,22 +491,12 @@ FALA SUGERIDA DO APRESENTADOR:
 --------------------------------------------------------------------------------
 SLIDE 43 | DEBATE ABERTO: PROVOCAÇÕES PARA A TURMA
 Tema: Considerações da Banca Examinadora e Discussão Geral
-Apresentador(a): Grupo Inteiro
+Apresentador(a): Grupo Inteiro (4ª e 5ª)
 Tempo sugerido: 10 min
 Frase de Efeito no Slide: "Como nós, como futuros mestres e doutores, aceleraremos a inovação brasileira?"
 
 FALA SUGERIDA DO APRESENTADOR:
 "Abrimos agora a palavra para a banca examinadora — professora Iraci e professor Yukio — e para os nossos colegas de pós-graduação. Convidamos todos a refletirem sobre as perguntas provocativas que deixamos na tela."
-
---------------------------------------------------------------------------------
-SLIDE 44 | REFERÊNCIAS BIBLIOGRÁFICAS OFICIAIS
-Tema: Literatura Seminal e Artigos de Vanguarda (2025/2026)
-Apresentador(a): Grupo Inteiro
-Tempo sugerido: 1 min
-Frase de Efeito no Slide: "A ciência rigorosa constrói os alicerces da inovação sustentável."
-
-FALA SUGERIDA DO APRESENTADOR:
-"Agradecemos a atenção de todos em nome do Grupo 5! Encerramos projetando as referências bibliográficas oficiais que sustentaram cada gráfico, número e argumento deste seminário."
 
 ================================================================================
 FIM DO ROTEIRO OFICIAL • GRUPO 5 • PPG-PIT UNIFESP 2026

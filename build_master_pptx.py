@@ -369,6 +369,31 @@ for idx, match in enumerate(slide_matches, 1):
                 p.font.size = Pt(13)
                 p.font.color.rgb = COLOR_WHITE if i % 2 == 0 else COLOR_MUTED
 
+    # Add bottom footer bar: Presenters (left) and Reference Citation (right)
+    ref_m = re.search(r'<div class=["\']slide-footer-ref["\']>(.*?)</div>', body, re.DOTALL)
+    ref_txt = re.sub(r'<[^>]+>', ' ', ref_m.group(1)).strip() if ref_m else ""
+    if ref_txt.startswith("📚"):
+        ref_txt = ref_txt.replace("📚", "").strip()
+
+    tb_foot = slide.shapes.add_textbox(Inches(0.8), Inches(6.9), Inches(11.733), Inches(0.45))
+    tf_foot = tb_foot.text_frame
+    tf_foot.word_wrap = True
+    p_foot = tf_foot.paragraphs[0]
+    
+    r_spk = p_foot.add_run()
+    r_spk.text = f"🎤 {spk}   |   "
+    r_spk.font.size = Pt(8.5)
+    r_spk.font.bold = True
+    r_spk.font.color.rgb = COLOR_CYAN
+    r_spk.font.name = "JetBrains Mono"
+
+    if ref_txt:
+        r_ref = p_foot.add_run()
+        r_ref.text = f"📚 {ref_txt}"
+        r_ref.font.size = Pt(8.5)
+        r_ref.font.color.rgb = COLOR_MUTED
+        r_ref.font.name = "JetBrains Mono"
+
     # Set speaker notes
     if num in notes_dict:
         set_notes(slide, notes_dict[num])
