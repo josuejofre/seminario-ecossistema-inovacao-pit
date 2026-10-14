@@ -142,143 +142,94 @@ for idx, match in enumerate(slide_matches, 1):
     # Check for tables in body
     has_table = '<table' in body
 
-    # If Lilian slide with images
+    # If Lilian slide with images (faithful to Apresentação1.pptx)
     if 24 <= num <= 32:
-        if num == 24: # San Diego Radar Global
-            # Left img, right img
-            p_img1 = os.path.join(deck_dir, "assets/lilian/slide_1_img_2.png")
-            p_img2 = os.path.join(deck_dir, "assets/lilian/slide_1_img_4.png")
-            if os.path.exists(p_img1):
-                slide.shapes.add_picture(p_img1, Inches(0.8), Inches(curr_top), width=Inches(5.8))
-            if os.path.exists(p_img2):
-                slide.shapes.add_picture(p_img2, Inches(6.8), Inches(curr_top), width=Inches(5.7))
-        elif num == 25: # 6 Pontos
-            # 6 boxes
-            tb = slide.shapes.add_textbox(Inches(0.8), Inches(curr_top), Inches(11.7), Inches(4.5))
-            tf = tb.text_frame
-            tf.word_wrap = True
-            p = tf.paragraphs[0]
-            p.text = "Os 6 Pontos-Chave de San Diego (Majava & Rinkinen, 2024/2026):"
-            p.font.size = Pt(14)
-            p.font.bold = True
-            p.font.color.rgb = COLOR_CYAN
-            pts = [
-                ("1º Ponto: Universidade com Pesquisa de Ponta", "Fundação da UCSD nos anos 60 com foco em biologia e ciências, atraindo VCs e multinacionais."),
-                ("2º Ponto: Antecedentes Históricos & Vocação", "Investimento prévio em hospitais e clínicas; isolamento geográfico que impediu indústrias pesadas."),
-                ("3º Ponto: Decisões Políticas para Favorecer", "Zoneamento urbano nos anos 70 garantindo proximidade física entre UCSD, institutos e empresas."),
-                ("4º Ponto: Contingências que Geram Ações", "Crise na indústria militar pós-Guerra Fria elevou desemprego, forçando reconversão em biotec e telecom."),
-                ("5º Ponto: Instituição Mediadora (Orquestrador)", "Criação da CONNECT (1985) na UCSD: aceleradora Springboard, mentoria e laços de confiança."),
-                ("6º Ponto: Proximidade Geográfica dos Atores", "Distâncias curtas que facilitaram encontros de corredor, compartilhamento de conhecimento tácito.")
+        if num == 24: # San Diego Radar Global (Lilian Slide 1)
+            p_map = os.path.join(deck_dir, "assets/lilian/slide_1_img_2.png")
+            p_card = os.path.join(deck_dir, "assets/lilian/slide_1_img_3.png")
+            p_gii = os.path.join(deck_dir, "assets/lilian/slide_1_img_4.png")
+            if os.path.exists(p_map):
+                slide.shapes.add_picture(p_map, Inches(0.8), Inches(1.6), width=Inches(6.6), height=Inches(4.8))
+            if os.path.exists(p_card):
+                slide.shapes.add_picture(p_card, Inches(0.9), Inches(3.8), width=Inches(2.5))
+            if os.path.exists(p_gii):
+                slide.shapes.add_picture(p_gii, Inches(7.6), Inches(1.6), width=Inches(4.9), height=Inches(4.8))
+
+        elif num == 25: # O que é um ecossistema? & 6 Pontos (Lilian Slide 2)
+            # Definição
+            tb_def = slide.shapes.add_textbox(Inches(0.8), Inches(1.5), Inches(11.7), Inches(1.2))
+            tf_def = tb_def.text_frame
+            tf_def.word_wrap = True
+            p_d1 = tf_def.paragraphs[0]
+            p_d1.text = '"É conjunto dinâmico e em evolução de atores, instituições, atividades e relações complementares que impulsionam o desempenho inovador."'
+            p_d1.font.size = Pt(13)
+            p_d1.font.italic = True
+            p_d1.font.color.rgb = COLOR_WHITE
+            p_d2 = tf_def.add_paragraph()
+            p_d2.text = "— Jukka Majava & Satu Rinkinen (2026), Technology Analysis & Strategic Management, 38:1, 49-64."
+            p_d2.font.size = Pt(10)
+            p_d2.font.color.rgb = COLOR_CYAN
+
+            # 6 Pontos em 2 colunas
+            pts_col1 = [
+                "1º. Ponto: UNIVERSIDADE COM PESQUISA DE PONTA, ATRAÇÃO DE EMPRESAS",
+                "2º. Ponto: ANTECEDENTES HISTÓRICOS, VOCAÇÃO DA CIDADE",
+                "3º. Ponto: DECISÕES POLÍTICAS PARA FAVORECER O ECOSSISTEMA"
             ]
-            for title_pt, desc_pt in pts:
-                p_item = tf.add_paragraph()
-                r_item1 = p_item.add_run()
-                r_item1.text = f"• {title_pt}: "
-                r_item1.font.bold = True
-                r_item1.font.color.rgb = COLOR_WHITE
-                r_item1.font.size = Pt(12)
-                r_item2 = p_item.add_run()
-                r_item2.text = desc_pt
-                r_item2.font.color.rgb = COLOR_MUTED
-                r_item2.font.size = Pt(11)
-        elif num == 26: # CONNECT
+            pts_col2 = [
+                "4º Ponto: CONTINGENCIAS QUE GERAM AÇÕES",
+                "5º. Ponto: INSTITUIÇÃO MEDIADORA PARA PROPORCIONAR RELACIONAMENTOS ENTRE ATORES",
+                "6º Ponto: PROXIMIDADE GEOGRÁFICA DOS ATORES"
+            ]
+            tb_c1 = slide.shapes.add_textbox(Inches(0.8), Inches(2.9), Inches(5.7), Inches(3.6))
+            tf_c1 = tb_c1.text_frame
+            tf_c1.word_wrap = True
+            for i, pt in enumerate(pts_col1):
+                p_pt = tf_c1.paragraphs[0] if i == 0 else tf_c1.add_paragraph()
+                p_pt.text = f"▸ {pt}\n"
+                p_pt.font.size = Pt(12)
+                p_pt.font.bold = True
+                p_pt.font.color.rgb = COLOR_WHITE
+
+            tb_c2 = slide.shapes.add_textbox(Inches(6.8), Inches(2.9), Inches(5.7), Inches(3.6))
+            tf_c2 = tb_c2.text_frame
+            tf_c2.word_wrap = True
+            for i, pt in enumerate(pts_col2):
+                p_pt = tf_c2.paragraphs[0] if i == 0 else tf_c2.add_paragraph()
+                p_pt.text = f"▸ {pt}\n"
+                p_pt.font.size = Pt(12)
+                p_pt.font.bold = True
+                p_pt.font.color.rgb = COLOR_WHITE
+
+        elif num == 26: # CONNECT (Lilian Slide 3 Hero Infographic)
             p_img = os.path.join(deck_dir, "assets/lilian/slide_3_img_1.png")
             if os.path.exists(p_img):
-                slide.shapes.add_picture(p_img, Inches(1.5), Inches(curr_top), width=Inches(10.3))
-        elif num == 27: # PEST
+                slide.shapes.add_picture(p_img, Inches(1.2), Inches(1.5), width=Inches(10.9), height=Inches(5.1))
+
+        elif num == 27: # PEST Radar (Lilian Slide 4 Hero Infographic)
             p_img = os.path.join(deck_dir, "assets/lilian/slide_4_img_1.png")
             if os.path.exists(p_img):
-                slide.shapes.add_picture(p_img, Inches(1.5), Inches(curr_top), width=Inches(10.3))
-        elif num == 28: # SJC Gênese
+                slide.shapes.add_picture(p_img, Inches(1.2), Inches(1.5), width=Inches(10.9), height=Inches(5.1))
+
+        elif num == 28: # SJC Gênese (Lilian Slide 5 Hero Infographic)
             p_img = os.path.join(deck_dir, "assets/lilian/slide_5_img_1.png")
             if os.path.exists(p_img):
-                slide.shapes.add_picture(p_img, Inches(0.8), Inches(curr_top), width=Inches(6.0))
-            tb = slide.shapes.add_textbox(Inches(7.0), Inches(curr_top), Inches(5.5), Inches(4.5))
-            tf = tb.text_frame
-            tf.word_wrap = True
-            p = tf.paragraphs[0]
-            p.text = "Fatores Estruturantes de São José dos Campos:"
-            p.font.size = Pt(14)
-            p.font.bold = True
-            p.font.color.rgb = COLOR_CYAN
-            items = [
-                ("Fatores Atrativos Originais (Anos 50):", "Localização no Eixo Rio-SP (Via Dutra), energia elétrica abundante, recursos hídricos e relevo plano."),
-                ("Instituições-Âncora Estratégicas:", "CTA e ITA criados nos anos 50 baseados no MIT; INPE criado em 1961 formando elite em P&D aeroespacial e defesa."),
-                ("O Poder de Compra Estatal:", "Na ausência de Venture Capital, as encomendas do Ministério da Aeronáutica viabilizaram a Embraer, Avibras e fornecedores nacionais.")
-            ]
-            for t_sub, d_sub in items:
-                p_it = tf.add_paragraph()
-                r_it1 = p_it.add_run()
-                r_it1.text = f"\n▸ {t_sub} "
-                r_it1.font.bold = True
-                r_it1.font.color.rgb = COLOR_EMERALD
-                r_it1.font.size = Pt(12)
-                r_it2 = p_it.add_run()
-                r_it2.text = d_sub
-                r_it2.font.color.rgb = COLOR_MUTED
-                r_it2.font.size = Pt(11)
-        elif num == 29: # Evolução Tipológica
+                slide.shapes.add_picture(p_img, Inches(1.2), Inches(1.5), width=Inches(10.9), height=Inches(5.1))
+
+        elif num == 29: # Evolução Tipológica (Lilian Slide 6 Hero Infographic)
             p_img = os.path.join(deck_dir, "assets/lilian/slide_6_img_1.png")
             if os.path.exists(p_img):
-                slide.shapes.add_picture(p_img, Inches(1.5), Inches(curr_top), width=Inches(10.3))
-        elif num == 30: # PIT SJC Pentagonal
+                slide.shapes.add_picture(p_img, Inches(1.2), Inches(1.5), width=Inches(10.9), height=Inches(5.1))
+
+        elif num == 30: # PIT SJC Pentagonal (Lilian Slide 7)
             p_img = os.path.join(deck_dir, "assets/lilian/slide_7_img_2.png")
             if os.path.exists(p_img):
-                slide.shapes.add_picture(p_img, Inches(0.8), Inches(curr_top), width=Inches(5.5))
-            tb = slide.shapes.add_textbox(Inches(6.6), Inches(curr_top), Inches(5.9), Inches(4.5))
-            tf = tb.text_frame
-            tf.word_wrap = True
-            p = tf.paragraphs[0]
-            p.text = "Governança e Modelo de Operação do PIT SJC:"
-            p.font.size = Pt(14)
-            p.font.bold = True
-            p.font.color.rgb = COLOR_CYAN
-            items_pit = [
-                ("Gestão por Organização Social:", "Criado em 2009 pela Prefeitura de SJC; gerido pela APTSJC (OS privada sem fins lucrativos credenciada no SPTec/SPAI)."),
-                ("Superação do Gargalo de P&D:", "56 projetos prospectados, 22 executados em 2025; acesso ampliado a 57 laboratórios parceiros multiusuários."),
-                ("Os 5 Eixos da Matriz Pentagonal:", "Defesa e Aeroespacial, TIC, Agronegócio, Saúde/Biotecnologia e Mobilidade Urbana articulando a Tríplice Hélice central."),
-                ("Spill-overs Territoriais (Thiago Rubem, 2018):", "A aglomeração física catalisa transbordamento espontâneo de conhecimento tácito e sinergia.")
-            ]
-            for t_sub, d_sub in items_pit:
-                p_it = tf.add_paragraph()
-                r_it1 = p_it.add_run()
-                r_it1.text = f"\n▸ {t_sub} "
-                r_it1.font.bold = True
-                r_it1.font.color.rgb = COLOR_EMERALD
-                r_it1.font.size = Pt(12)
-                r_it2 = p_it.add_run()
-                r_it2.text = d_sub
-                r_it2.font.color.rgb = COLOR_MUTED
-                r_it2.font.size = Pt(11)
-        elif num == 31: # Parceiros PIT
+                slide.shapes.add_picture(p_img, Inches(3.6), Inches(1.6), width=Inches(6.1), height=Inches(4.9))
+
+        elif num == 31: # Parceiros PIT (Lilian Slide 8)
             p_img = os.path.join(deck_dir, "assets/lilian/slide_8_img_3.png")
             if os.path.exists(p_img):
-                slide.shapes.add_picture(p_img, Inches(0.8), Inches(curr_top), width=Inches(6.2))
-            tb = slide.shapes.add_textbox(Inches(7.2), Inches(curr_top), Inches(5.3), Inches(4.5))
-            tf = tb.text_frame
-            tf.word_wrap = True
-            p = tf.paragraphs[0]
-            p.text = "Expansão dos APLs & Nexus Hub em 2026:"
-            p.font.size = Pt(14)
-            p.font.bold = True
-            p.font.color.rgb = COLOR_CYAN
-            items_apl = [
-                ("Cluster Aeroespacial & Defesa:", "Presença internacional em Dubai e Paris; conexões com +10 países e +120h de capacitação."),
-                ("TIC Vale (137 Empresas):", "Arranjo produtivo em Indústria 4.0, Inteligência Artificial, Big Data e Smart Cities."),
-                ("Agropolo (+21,6%) & Saúde/Mobilidade:", "90 empresas no Agropolo com foco em ESG; cadeia de saúde com +100 rodadas de negócios."),
-                ("Nexus Hub (192 Startups):", "Comunidade com 23 entidades estratégicas e 87 mentores seniores no Nexus Circle.")
-            ]
-            for t_sub, d_sub in items_apl:
-                p_it = tf.add_paragraph()
-                r_it1 = p_it.add_run()
-                r_it1.text = f"\n▸ {t_sub} "
-                r_it1.font.bold = True
-                r_it1.font.color.rgb = COLOR_EMERALD
-                r_it1.font.size = Pt(12)
-                r_it2 = p_it.add_run()
-                r_it2.text = d_sub
-                r_it2.font.color.rgb = COLOR_MUTED
-                r_it2.font.size = Pt(11)
+                slide.shapes.add_picture(p_img, Inches(1.1), Inches(1.6), width=Inches(11.1), height=Inches(4.9))
         elif num == 32: # Tabela Comparativa Completa
             # Add table
             rows = 7
