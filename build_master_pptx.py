@@ -144,33 +144,60 @@ for idx, match in enumerate(slide_matches, 1):
 
     # If Lilian slide with images (faithful to Apresentação1.pptx)
     if 24 <= num <= 32:
-        if num == 24: # San Diego Radar Global (Lilian Slide 1)
-            p_map = os.path.join(deck_dir, "assets/lilian/slide_1_img_2.png")
+        if num == 24: # San Diego Radar Global (Lilian Slide 1 - Figuras e Texto Ampliados)
             p_card = os.path.join(deck_dir, "assets/lilian/slide_1_img_3.png")
+            p_map = os.path.join(deck_dir, "assets/lilian/slide_1_img_2.png")
             p_gii = os.path.join(deck_dir, "assets/lilian/slide_1_img_4.png")
-            if os.path.exists(p_map):
-                slide.shapes.add_picture(p_map, Inches(0.8), Inches(1.6), width=Inches(6.6), height=Inches(4.8))
+            
+            # Imagem 3 (escrita da esquerda) ampliada
             if os.path.exists(p_card):
-                slide.shapes.add_picture(p_card, Inches(0.9), Inches(3.8), width=Inches(2.5))
-            if os.path.exists(p_gii):
-                slide.shapes.add_picture(p_gii, Inches(7.6), Inches(1.6), width=Inches(4.9), height=Inches(4.8))
+                slide.shapes.add_picture(p_card, Inches(0.8), Inches(1.6), width=Inches(3.6))
+                # Callouts em texto nítido
+                tb_c = slide.shapes.add_textbox(Inches(0.8), Inches(4.5), Inches(3.6), Inches(2.0))
+                tf_c = tb_c.text_frame
+                tf_c.word_wrap = True
+                callouts = [
+                    ("Patentes PCT (2020-2024):", "26.713"),
+                    ("Artigos Científicos:", "19.862"),
+                    ("Deals de Venture Capital:", "1.705")
+                ]
+                for i, (k_c, v_c) in enumerate(callouts):
+                    p_cc = tf_c.paragraphs[0] if i == 0 else tf_c.add_paragraph()
+                    r1 = p_cc.add_run()
+                    r1.text = f"• {k_c} "
+                    r1.font.size = Pt(11)
+                    r1.font.color.rgb = COLOR_MUTED
+                    r2 = p_cc.add_run()
+                    r2.text = v_c
+                    r2.font.size = Pt(12)
+                    r2.font.bold = True
+                    r2.font.color.rgb = COLOR_CYAN
 
-        elif num == 25: # O que é um ecossistema? & 6 Pontos (Lilian Slide 2)
-            # Definição
-            tb_def = slide.shapes.add_textbox(Inches(0.8), Inches(1.5), Inches(11.7), Inches(1.2))
+            # Imagem 2 (Mapa Mundial)
+            if os.path.exists(p_map):
+                slide.shapes.add_picture(p_map, Inches(4.6), Inches(1.6), width=Inches(4.4), height=Inches(4.8))
+
+            # Imagem 4 (GII 2025)
+            if os.path.exists(p_gii):
+                slide.shapes.add_picture(p_gii, Inches(9.2), Inches(1.6), width=Inches(3.3), height=Inches(4.8))
+
+        elif num == 25: # O que é um ecossistema? & 6 Pontos (Lilian Slide 2 - Fontes Ampliadas)
+            # Definição ampliada
+            tb_def = slide.shapes.add_textbox(Inches(0.8), Inches(1.4), Inches(11.7), Inches(1.3))
             tf_def = tb_def.text_frame
             tf_def.word_wrap = True
             p_d1 = tf_def.paragraphs[0]
             p_d1.text = '"É conjunto dinâmico e em evolução de atores, instituições, atividades e relações complementares que impulsionam o desempenho inovador."'
-            p_d1.font.size = Pt(13)
+            p_d1.font.size = Pt(15)
+            p_d1.font.bold = True
             p_d1.font.italic = True
             p_d1.font.color.rgb = COLOR_WHITE
             p_d2 = tf_def.add_paragraph()
             p_d2.text = "— Jukka Majava & Satu Rinkinen (2026), Technology Analysis & Strategic Management, 38:1, 49-64."
-            p_d2.font.size = Pt(10)
+            p_d2.font.size = Pt(11)
             p_d2.font.color.rgb = COLOR_CYAN
 
-            # 6 Pontos em 2 colunas
+            # 6 Pontos em 2 colunas com fontes ampliadas
             pts_col1 = [
                 "1º. Ponto: UNIVERSIDADE COM PESQUISA DE PONTA, ATRAÇÃO DE EMPRESAS",
                 "2º. Ponto: ANTECEDENTES HISTÓRICOS, VOCAÇÃO DA CIDADE",
@@ -178,7 +205,7 @@ for idx, match in enumerate(slide_matches, 1):
             ]
             pts_col2 = [
                 "4º Ponto: CONTINGENCIAS QUE GERAM AÇÕES",
-                "5º. Ponto: INSTITUIÇÃO MEDIADORA PARA PROPORCIONAR RELACIONAMENTOS ENTRE ATORES",
+                "5º. Ponto: INSTITUIÇÃO MEDIADORA PARA PROPORCIONAR RELACIONAMENTOS",
                 "6º Ponto: PROXIMIDADE GEOGRÁFICA DOS ATORES"
             ]
             tb_c1 = slide.shapes.add_textbox(Inches(0.8), Inches(2.9), Inches(5.7), Inches(3.6))
@@ -187,7 +214,7 @@ for idx, match in enumerate(slide_matches, 1):
             for i, pt in enumerate(pts_col1):
                 p_pt = tf_c1.paragraphs[0] if i == 0 else tf_c1.add_paragraph()
                 p_pt.text = f"▸ {pt}\n"
-                p_pt.font.size = Pt(12)
+                p_pt.font.size = Pt(13)
                 p_pt.font.bold = True
                 p_pt.font.color.rgb = COLOR_WHITE
 
@@ -197,7 +224,7 @@ for idx, match in enumerate(slide_matches, 1):
             for i, pt in enumerate(pts_col2):
                 p_pt = tf_c2.paragraphs[0] if i == 0 else tf_c2.add_paragraph()
                 p_pt.text = f"▸ {pt}\n"
-                p_pt.font.size = Pt(12)
+                p_pt.font.size = Pt(13)
                 p_pt.font.bold = True
                 p_pt.font.color.rgb = COLOR_WHITE
 
@@ -252,7 +279,7 @@ for idx, match in enumerate(slide_matches, 1):
                 p = cell.text_frame.paragraphs[0]
                 p.text = h
                 p.font.bold = True
-                p.font.size = Pt(12)
+                p.font.size = Pt(13)
                 p.font.color.rgb = COLOR_CYAN
 
             data = [
@@ -270,7 +297,7 @@ for idx, match in enumerate(slide_matches, 1):
                 p0 = c0.text_frame.paragraphs[0]
                 p0.text = d_name
                 p0.font.bold = True
-                p0.font.size = Pt(10)
+                p0.font.size = Pt(11.5)
                 p0.font.color.rgb = COLOR_WHITE
 
                 c1 = tbl.cell(r_idx, 1)
@@ -278,7 +305,7 @@ for idx, match in enumerate(slide_matches, 1):
                 c1.fill.fore_color.rgb = COLOR_CARD
                 p1 = c1.text_frame.paragraphs[0]
                 p1.text = d_sd
-                p1.font.size = Pt(9.5)
+                p1.font.size = Pt(11)
                 p1.font.color.rgb = COLOR_MUTED
 
                 c2 = tbl.cell(r_idx, 2)
@@ -286,7 +313,7 @@ for idx, match in enumerate(slide_matches, 1):
                 c2.fill.fore_color.rgb = COLOR_CARD
                 p2 = c2.text_frame.paragraphs[0]
                 p2.text = d_sjc
-                p2.font.size = Pt(9.5)
+                p2.font.size = Pt(11)
                 p2.font.color.rgb = COLOR_WHITE
 
     else:
