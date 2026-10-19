@@ -2494,42 +2494,54 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 
     <section class="slide" data-slide="35" data-block="Entrevista" data-speaker="Renato Paschoal (4ª) / Marciele (5ª)" data-time="6 min">
         <div class="slide-tag">🎙️ ESTUDO EMPÍRICO • A VOZ DA INDÚSTRIA NO ECOSSISTEMA</div>
-        <h2 class="slide-title">Entrevista com Rodrigo Saad: <span>Governança de PI, ROI e Prevenção ao Oportunismo</span></h2>
+        <h2 class="slide-title">Entrevista com Rodrigo Saad: <span>Prática, Governança e Relação com a Universidade</span></h2>
         
-        <div class="punchline-card">
-          <span style="font-size: 1.4rem;">🎯</span>
-          <div class="punchline-quote">"Blindamos com NDA no Dia Zero para proteger patentes, mas permitimos o mergulho da academia. A curadoria de parceiros idôneos e doutores na empresa evitam oportunistas."</div>
+        <!-- Seletor Interativo dos 4 Recortes da Entrevista -->
+        <div class="clip-tabs-bar" style="display: flex; gap: 0.6rem; margin-top: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+          <button type="button" class="clip-tab-btn" onclick="switchClip(0)" id="clip-btn-0" style="flex: 1; min-width: 200px; padding: 0.55rem 0.8rem; border-radius: 10px; background: rgba(6,182,212,0.25); border: 1px solid var(--cyan-glow); color: #fff; font-weight: 700; cursor: pointer; text-align: left; transition: all 0.2s; box-shadow: 0 0 15px rgba(6,182,212,0.2);">
+            <div style="font-size: 0.75rem; color: var(--cyan-light); text-transform: uppercase; letter-spacing: 0.5px;">Recorte 1 • 1m09s</div>
+            <div style="font-size: 0.92rem; margin-top: 2px;">🔐 PI &amp; NDA no "Dia Zero"</div>
+          </button>
+          <button type="button" class="clip-tab-btn" onclick="switchClip(1)" id="clip-btn-1" style="flex: 1; min-width: 200px; padding: 0.55rem 0.8rem; border-radius: 10px; background: rgba(15,23,42,0.7); border: 1px solid var(--border-soft); color: var(--text-muted); font-weight: 600; cursor: pointer; text-align: left; transition: all 0.2s;">
+            <div style="font-size: 0.75rem; color: var(--emerald-accent); text-transform: uppercase; letter-spacing: 0.5px;">Recorte 2 • 1m05s</div>
+            <div style="font-size: 0.92rem; margin-top: 2px;">🛡️ Prevenção a Oportunistas</div>
+          </button>
+          <button type="button" class="clip-tab-btn" onclick="switchClip(2)" id="clip-btn-2" style="flex: 1; min-width: 200px; padding: 0.55rem 0.8rem; border-radius: 10px; background: rgba(15,23,42,0.7); border: 1px solid var(--border-soft); color: var(--text-muted); font-weight: 600; cursor: pointer; text-align: left; transition: all 0.2s;">
+            <div style="font-size: 0.75rem; color: var(--amber-accent); text-transform: uppercase; letter-spacing: 0.5px;">Recorte 3 • 1m21s</div>
+            <div style="font-size: 0.92rem; margin-top: 2px;">🎓 Indústria Precisa da Academia</div>
+          </button>
+          <button type="button" class="clip-tab-btn" onclick="switchClip(3)" id="clip-btn-3" style="flex: 1; min-width: 200px; padding: 0.55rem 0.8rem; border-radius: 10px; background: rgba(15,23,42,0.7); border: 1px solid var(--border-soft); color: var(--text-muted); font-weight: 600; cursor: pointer; text-align: left; transition: all 0.2s;">
+            <div style="font-size: 0.75rem; color: var(--purple-accent); text-transform: uppercase; letter-spacing: 0.5px;">Recorte 4 • 0m57s</div>
+            <div style="font-size: 0.92rem; margin-top: 2px;">🏢 Barreira Cultural na Gestão</div>
+          </button>
         </div>
 
-        <div class="grid-2-stacked">
-          <div class="card card-glow-purple">
-            <div class="card-title"><span>📋</span> Lições da Prática Industrial &amp; Relação com a Universidade</div>
-            <ul class="bullet-list" style="margin-top: 0.6rem;">
-              <li><span class="bullet-dot">▸</span> <strong>Blindagem com NDA Gradual (36:00):</strong> Proteção rigorosa de patentes industriais da empresa, viabilizando o mergulho do pesquisador e publicações acadêmicas faseadas sem travar a ciência.</li>
-              <li><span class="bullet-dot">▸</span> <strong>Pesquisa com Foco em Negócio &amp; ROI (37:00):</strong> O pragmatismo da manufatura — pesquisa voltada à aplicação fabril direta na cadeia de valor, conciliando o tempo de negócio com o rigor acadêmico.</li>
-              <li><span class="bullet-dot">▸</span> <strong>Mitigação de Oportunistas &amp; "Ride-Alones" (37:30):</strong> Seleção criteriosa de instituições renomadas e valor estratégico de contar com mestres e doutores no corpo da empresa para a curadoria de parcerias.</li>
-            </ul>
-            <div class="chips-row" style="margin-top: 0.8rem;">
-              <span class="chip-badge">Rodrigo Saad (Indústria &amp; P&amp;D)</span>
-              <span class="chip-badge">Entrevista: Nathália Neves</span>
-              <span class="chip-badge">Análise: Renato Paschoal &amp; Grupo 5</span>
-            </div>
+        <!-- Citação Dinâmica do Recorte Selecionado -->
+        <div class="punchline-card" id="active-clip-card" style="margin-bottom: 0.75rem; padding: 0.6rem 1.1rem; border-radius: 10px;">
+          <span id="active-clip-icon" style="font-size: 1.3rem;">🔐</span>
+          <div id="active-clip-quote" class="punchline-quote" style="font-size: 1rem; line-height: 1.4;">
+            "Primeira coisa é o NDA: protegemos nossa tecnologia patenteada, mas permitimos o mergulho do pesquisador e a liberação gradual de publicações. A gente faz pesquisa que vire produto e venda."
           </div>
+        </div>
 
-          <div class="card card-glow-cyan" style="padding: 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(10, 19, 36, 0.95);">
-            <div style="width: 100%; position: relative; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-glow); box-shadow: 0 10px 30px rgba(0,0,0,0.6);">
-              <video id="video-entrevista-rodrigo" controls preload="metadata" poster="assets/rodrigo_saad_thumb.jpg" style="width: 100%; display: block; max-height: 250px; object-fit: contain; background: #000;">
-                <source src="assets/recorte_entrevista_rodrigo_saad.mp4" type="video/mp4">
-                Seu navegador não suporta reprodução de vídeo HTML5.
-              </video>
+        <!-- Container Ampliado do Player de Vídeo -->
+        <div class="card card-glow-cyan" style="padding: 0.75rem; background: rgba(10, 19, 36, 0.95); display: flex; flex-direction: column; align-items: center; border-radius: 14px;">
+          <div style="width: 100%; max-width: 820px; border-radius: 10px; overflow: hidden; border: 1px solid var(--border-glow); box-shadow: 0 10px 30px rgba(0,0,0,0.65); background: #000;">
+            <video id="video-entrevista-player" controls preload="metadata" poster="assets/thumb_recorte1.jpg" style="width: 100%; max-height: 380px; aspect-ratio: 808/672; display: block; margin: 0 auto;">
+              <source id="video-source-elem" src="assets/recorte1_pi_nda.mp4" type="video/mp4">
+              Seu navegador não suporta reprodução de vídeo HTML5.
+            </video>
+          </div>
+          <div style="margin-top: 0.5rem; display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 820px; padding: 0 0.4rem; font-size: 0.88rem;">
+            <div style="color: var(--cyan-light); display: flex; align-items: center; gap: 0.4rem;">
+              <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--cyan-glow); box-shadow: 0 0 8px var(--cyan-glow);"></span>
+              <span id="active-clip-badge">Recorte 1 de 4 • Gestão de Propriedade Intelectual &amp; P&amp;D</span>
             </div>
-            <div style="margin-top: 0.75rem; text-align: left; width: 100%; font-size: 0.92rem; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center;">
-              <span><strong style="color: var(--cyan-light);">▶️ Trecho Selecionado (2m30s):</strong> Contratos, NDA, Oportunismo e Curadoria</span>
-              <span style="background: rgba(6,182,212,0.15); border: 1px solid var(--border-glow); padding: 2px 8px; border-radius: 6px; font-size: 0.82rem; color: var(--cyan-glow);">Entrevista de Campo</span>
+            <div style="color: var(--text-dim); font-size: 0.84rem;">
+              🎙️ <strong>Rodrigo Saad</strong> (Indústria &amp; P&amp;D) • Entrevista: Nathália Neves • Debate: Renato Paschoal
             </div>
           </div>
         </div>
-        <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Neves, N. &amp; Paschoal, R. (2026). Atividade de Campo: Entrevista Técnica com Rodrigo Saad (Liderança Industrial / P&amp;D) sobre Governança, PI e Relações Universidade-Empresa.</span></div>
       </section>
 
     <section class="slide" data-slide="36" data-block="Entrevista" data-speaker="Renato Paschoal (4ª) / Marciele (5ª)" data-time="4 min">
@@ -3070,10 +3082,90 @@ Conclusão Geral: Não existem fórmulas prontas. Parques tecnológicos não sã
       document.querySelectorAll('.slide-thumb').forEach(t => {
         t.classList.toggle('active', parseInt(t.getAttribute('data-thumb')) === num);
       });
+
+      // Pause interview video if leaving slide 35
+      const vPlayer = document.getElementById("video-entrevista-player");
+      if (vPlayer && num !== 35 && !vPlayer.paused) {
+        vPlayer.pause();
+      }
     }
 
     function nextSlide() { showSlide(currentSlide + 1); }
     function prevSlide() { showSlide(currentSlide - 1); }
+
+    /* Interactive 4-Clip Selector for Slide 35 */
+    const clipsData = [
+      {
+        src: "assets/recorte1_pi_nda.mp4",
+        poster: "assets/thumb_recorte1.jpg",
+        icon: "🔐",
+        quote: '"Primeira coisa é o NDA: protegemos nossa tecnologia patenteada, mas permitimos o mergulho do pesquisador e a liberação gradual de publicações. A gente faz pesquisa que vire produto e venda."',
+        badge: "Recorte 1 de 4 • Gestão de Propriedade Intelectual & P&D",
+        color: "var(--cyan-glow)"
+      },
+      {
+        src: "assets/recorte2_oportunismo_curadoria.mp4",
+        poster: "assets/thumb_recorte2.jpg",
+        icon: "🛡️",
+        quote: '"Oportunistas sempre vão existir. Aventureiros \'ride-alones\' são um risco, por isso priorizamos institutos renomados. Ter doutores e mestres na empresa nos ajuda a falar a mesma língua da academia e fazer a curadoria."',
+        badge: "Recorte 2 de 4 • Mitigação de Oportunismo & Curadoria de Parceiros",
+        color: "var(--emerald-accent)"
+      },
+      {
+        src: "assets/recorte3_industria_academia.mp4",
+        poster: "assets/thumb_recorte3.jpg",
+        icon: "🎓",
+        quote: '"É um mercado com pouquíssimos especialistas. Existem nichos que as academias ainda não formam especificamente, mas a aproximação empresa-universidade viabiliza formarmos pessoas para demandas reais."',
+        badge: "Recorte 3 de 4 • A Indústria Precisa da Academia (Formação de Especialistas)",
+        color: "var(--amber-accent)"
+      },
+      {
+        src: "assets/recorte4_barreira_cultural.mp4",
+        poster: "assets/thumb_recorte4.jpg",
+        icon: "🏢",
+        quote: '"A quebra de cultura é a maior barreira. Empresas tradicionais de 50 anos focam só na operação do dia a dia. A diretoria precisa entender que se não inovar, fica para trás."',
+        badge: "Recorte 4 de 4 • Barreira Cultural na Mente da Liderança Tradicional",
+        color: "var(--purple-accent)"
+      }
+    ];
+
+    function switchClip(index) {
+      const player = document.getElementById("video-entrevista-player");
+      const source = document.getElementById("video-source-elem");
+      const quote = document.getElementById("active-clip-quote");
+      const icon = document.getElementById("active-clip-icon");
+      const badge = document.getElementById("active-clip-badge");
+      const data = clipsData[index];
+
+      if (!player || !data) return;
+
+      for (let i = 0; i < 4; i++) {
+        const btn = document.getElementById(`clip-btn-${i}`);
+        if (btn) {
+          if (i === index) {
+            btn.style.background = "rgba(6,182,212,0.25)";
+            btn.style.borderColor = data.color;
+            btn.style.color = "#fff";
+            btn.style.boxShadow = `0 0 15px rgba(6,182,212,0.35)`;
+          } else {
+            btn.style.background = "rgba(15,23,42,0.7)";
+            btn.style.borderColor = "var(--border-soft)";
+            btn.style.color = "var(--text-muted)";
+            btn.style.boxShadow = "none";
+          }
+        }
+      }
+
+      if (quote) quote.innerHTML = data.quote;
+      if (icon) icon.textContent = data.icon;
+      if (badge) badge.innerHTML = data.badge;
+
+      player.pause();
+      if (source) source.src = data.src;
+      player.poster = data.poster;
+      player.load();
+      player.play().catch(e => console.log("User interaction required for autoplay:", e));
+    }
 
     /* Keyboard navigation */
     window.addEventListener('keydown', (e) => {

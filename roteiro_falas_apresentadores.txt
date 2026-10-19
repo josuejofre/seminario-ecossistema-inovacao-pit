@@ -412,12 +412,13 @@ Tempo sugerido: 6 min
 Frase de Efeito no Slide: "Blindamos com NDA no Dia Zero para proteger patentes, mas permitimos o mergulho da academia. A curadoria de parceiros idôneos e doutores na empresa evitam oportunistas."
 
 FALA SUGERIDA DO APRESENTADOR (RENATO PASCHOAL):
-"Caros colegas e professores, para trazer a voz da prática industrial ao nosso seminário, apresentamos os resultados da entrevista de campo conduzida pela nossa colega Nathália Neves com Rodrigo Saad, liderança executiva e gestor de P&D no setor automotivo e manufatureiro.
-Vamos rodar agora no telão um recorte de 2 minutos e meio da fala do Rodrigo. Notem com atenção a precisão com que ele aborda três dores reais que vimos na literatura:
-Primeiro: como blindar o negócio com acordos de confidencialidade (NDA) no 'Dia Zero' sem sufocar o pesquisador universitário, permitindo que os artigos acadêmicos saiam em etapas.
-Segundo: a exigência implacável da manufatura por pesquisa que gere produto vendável e retorno sobre o investimento, e não apenas dados teóricos.
-E terceiro: como a empresa se protege de oportunistas e 'aventureiros solos' priorizando institutos idôneos e colocando mestres e doutores na sua própria equipe para fazer a curadoria dos projetos.
-[O APRESENTADOR DÁ O PLAY NO VÍDEO DO SLIDE E COMENTA OS PONTOS CENTRAIS AO FINAL]."
+"Caros colegas e professores, para trazer a voz autêntica da prática ao nosso seminário, trazemos a entrevista de campo exclusiva realizada pela nossa colega Nathália Neves com Rodrigo Saad, liderança industrial e gestor de P&D no setor automotivo e manufatureiro.
+Em vez de trazermos resumos teóricos estáticos, separamos quatro recortes em vídeo direto ao ponto, acessíveis nos botões interativos do telão:
+- Recorte 1 (1m09s): Como a indústria usa o NDA no 'Dia Zero' para blindar patentes sem travar o avanço de publicações acadêmicas;
+- Recorte 2 (1m05s): A mitigação de oportunistas e 'aventureiros solos' por meio de curadoria rigorosa e a presença de mestres e doutores na empresa;
+- Recorte 3 (1m21s): Por que a indústria automotiva precisa desesperadamente da universidade para formar especialistas em nichos raros de manufatura;
+- Recorte 4 (0m57s): A barreira cultural e a dificuldade de convencer diretorias de empresas tradicionais de 50 anos a investirem em inovação aberta.
+[O APRESENTADOR CLICA NOS RECORTES DESEJADOS CONFORME O TEMPO DISPONÍVEL E DESTACA AS CONEXÕES COM A MATÉRIA]."
 
 --------------------------------------------------------------------------------
 SLIDE 36 | 4 EIXOS DE GOVERNANÇA ANALISADOS NA PRÁTICA DO PIT SJC
