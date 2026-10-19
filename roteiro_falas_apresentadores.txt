@@ -405,29 +405,36 @@ FALA SUGERIDA DO APRESENTADOR:
 "Como futuros mestres e doutores do PPG-PIT, este slide nos toca diretamente. A integração entre a UNIFESP e o Parque Tecnológico não é teórica: é simbiótica. Nossas pesquisas, dissertações e teses nascem dentro dos laboratórios do PIT, conectadas às demandas reais da indústria aeroespacial, de TIC e de saúde."
 
 --------------------------------------------------------------------------------
-SLIDE 35 | ATIVIDADE DE CAMPO: ENTREVISTA COM RODRIGO SAAD (LIDERANÇA INDUSTRIAL)
-Tema: A Visão da Indústria: Governança de PI, ROI e Prevenção ao Oportunismo
+SLIDE 35 | ATIVIDADE DE CAMPO: CONTEXTO & PERFIL DE RODRIGO SAAD
+Tema: A Voz da Indústria: Quem é o Entrevistado e os 4 Eixos Investigados
 Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
-Tempo sugerido: 6 min
-Frase de Efeito no Slide: "Blindamos com NDA no Dia Zero para proteger patentes, mas permitimos o mergulho da academia. A curadoria de parceiros idôneos e doutores na empresa evitam oportunistas."
+Tempo sugerido: 3 min
+Frase de Efeito no Slide: "Investigando a prática: como uma multinacional de autopeças articula inovação com a academia, protege patentes e mitiga comportamentos oportunistas."
 
 FALA SUGERIDA DO APRESENTADOR (RENATO PASCHOAL):
-"Caros colegas e professores, para trazer a voz autêntica da prática ao nosso seminário, trazemos a entrevista de campo exclusiva realizada pela nossa colega Nathália Neves com Rodrigo Saad, liderança industrial e gestor de P&D no setor automotivo e manufatureiro.
-Em vez de trazermos resumos teóricos estáticos, separamos quatro recortes em vídeo direto ao ponto, acessíveis nos botões interativos do telão:
-- Recorte 1 (1m09s): Como a indústria usa o NDA no 'Dia Zero' para blindar patentes sem travar o avanço de publicações acadêmicas;
-- Recorte 2 (1m05s): A mitigação de oportunistas e 'aventureiros solos' por meio de curadoria rigorosa e a presença de mestres e doutores na empresa;
-- Recorte 3 (1m21s): Por que a indústria automotiva precisa desesperadamente da universidade para formar especialistas em nichos raros de manufatura;
-- Recorte 4 (0m57s): A barreira cultural e a dificuldade de convencer diretorias de empresas tradicionais de 50 anos a investirem em inovação aberta.
-[O APRESENTADOR CLICA NOS RECORTES DESEJADOS CONFORME O TEMPO DISPONÍVEL E DESTACA AS CONEXÕES COM A MATÉRIA]."
+"Caros colegas e professores, para trazer o rigor da investigação empírica e a voz autêntica da manufatura ao nosso seminário, apresentamos o estudo de campo conduzido pela nossa colega Nathália Neves com Rodrigo Saad Rodrigues.
+O Rodrigo é gestor executivo de P&D em uma multinacional de autopeças Tier 1 — fabricante de tecidos termoacústicos de alta tecnologia para automóveis, aviação e ferrovias, com centro de pesquisas global na França e fábrica no Brasil.
+Estruturamos a investigação em quatro eixos cruciais da literatura:
+1. O uso de NDA no 'Dia Zero' para blindar patentes sem travar artigos científicos;
+2. Como a empresa se protege de oportunistas e aventureiros solos;
+3. A necessidade vital que a manufatura tem da universidade para formar especialistas em nichos raros;
+4. E a barreira cultural de diretorias de 50 anos em investir em inovação.
+Vamos agora para o próximo slide, onde exibiremos os 4 recortes em vídeo gravados diretamente com o Rodrigo."
 
 --------------------------------------------------------------------------------
-SLIDE 36 | 4 EIXOS DE GOVERNANÇA ANALISADOS NA PRÁTICA DO PIT SJC
-Tema: Síntese Prática: Desafios Reais de Gestão Tecnológica
+SLIDE 36 | CENTRAL AUDIOVISUAL: 4 RECORTES DA ENTREVISTA COM RODRIGO SAAD
+Tema: Relatos em Vídeo: PI, Oportunismo, Academia e Cultura de Gestão
 Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
 Tempo sugerido: 4 min
-Frase de Efeito no Slide: "Governança sem hierarquia, tempo da academia vs indústria, sigilo de patentes e retenção de empresas âncoras."
+Frase de Efeito no Slide: "Primeira coisa é o NDA: protegemos nossa tecnologia patenteada, mas permitimos o mergulho do pesquisador e a liberação gradual de publicações. A gente faz pesquisa que vire produto e venda."
 
 FALA SUGERIDA DO APRESENTADOR (RENATO PASCHOAL):
+"Projetamos agora no telão nossa central de vídeos. Temos aqui 4 botões de acesso direto aos recortes mais expressivos da entrevista:
+- Recorte 1 (1m09s): Blindagem com NDA e pesquisa que vira produto e venda;
+- Recorte 2 (1m05s): Mitigação de oportunistas e curadoria de parceiros idôneos com mestres e doutores na empresa;
+- Recorte 3 (1m21s): Nichos raros de termoformagem e o porquê de a indústria precisar da universidade;
+- Recorte 4 (0m57s): A quebra de paradigma na mentalidade de diretorias tradicionais.
+[O APRESENTADOR CLICA NOS BOTÕES DOS RECORTES DESEJADOS, RODA OS VÍDEOS NO TELÃO E COMENTA AS IMPLICAÇÕES PRÁTICAS COM A BANCA]."
 "Da nossa entrevista com a liderança do PIT, sintetizamos 4 eixos práticos fundamentais:
 1. Como gerenciar a governança sem hierarquia entre empresas concorrentes;
 2. Como equilibrar a velocidade do mercado com os prazos de publicação acadêmica;
