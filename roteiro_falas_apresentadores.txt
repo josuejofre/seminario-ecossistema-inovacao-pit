@@ -396,70 +396,81 @@ FALA SUGERIDA DA APRESENTADORA (LILIAN VEIGA VINHAS):
 
 --------------------------------------------------------------------------------
 SLIDE 34 | O ELO UNIVERSITÁRIO: UNIFESP & PIT SJC
-Tema: PPG-PIT: Co-criação na Prática & Laboratórios Multiusuários
+Tema: PPG-PIT: Co-criação na Prática & Recorte 3 (A Indústria Precisa da Academia)
 Apresentador(a): Josué Jofre (4ª) / Marciele (5ª)
-Tempo sugerido: 3 min
-Frase de Efeito no Slide: "O PPG-PIT não forma apenas teóricos: forma orquestradores capazes de dialogar com a indústria."
-
-FALA SUGERIDA DO APRESENTADOR:
-"Como futuros mestres e doutores do PPG-PIT, este slide nos toca diretamente. A integração entre a UNIFESP e o Parque Tecnológico não é teórica: é simbiótica. Nossas pesquisas, dissertações e teses nascem dentro dos laboratórios do PIT, conectadas às demandas reais da indústria aeroespacial, de TIC e de saúde."
-
---------------------------------------------------------------------------------
-SLIDE 35 | ATIVIDADE DE CAMPO: CONTEXTO & PERFIL DE RODRIGO SAAD
-Tema: A Voz da Indústria: Quem é o Entrevistado e os 4 Eixos Investigados
-Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
-Tempo sugerido: 3 min
-Frase de Efeito no Slide: "Investigando a prática: como uma multinacional de autopeças articula inovação com a academia, protege patentes e mitiga comportamentos oportunistas."
-
-FALA SUGERIDA DO APRESENTADOR (RENATO PASCHOAL):
-"Caros colegas e professores, para trazer o rigor da investigação empírica e a voz autêntica da manufatura ao nosso seminário, apresentamos o estudo de campo conduzido pela nossa colega Nathália Neves com Rodrigo Saad Rodrigues.
-O Rodrigo é gestor executivo de P&D em uma multinacional de autopeças Tier 1 — fabricante de tecidos termoacústicos de alta tecnologia para automóveis, aviação e ferrovias, com centro de pesquisas global na França e fábrica no Brasil.
-Estruturamos a investigação em quatro eixos cruciais da literatura:
-1. O uso de NDA no 'Dia Zero' para blindar patentes sem travar artigos científicos;
-2. Como a empresa se protege de oportunistas e aventureiros solos;
-3. A necessidade vital que a manufatura tem da universidade para formar especialistas em nichos raros;
-4. E a barreira cultural de diretorias de 50 anos em investir em inovação.
-Vamos agora para o próximo slide, onde exibiremos os 4 recortes em vídeo gravados diretamente com o Rodrigo."
-
---------------------------------------------------------------------------------
-SLIDE 36 | CENTRAL AUDIOVISUAL: 4 RECORTES DA ENTREVISTA COM RODRIGO SAAD
-Tema: Relatos em Vídeo: PI, Oportunismo, Academia e Cultura de Gestão
-Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
 Tempo sugerido: 4 min
-Frase de Efeito no Slide: "Primeira coisa é o NDA: protegemos nossa tecnologia patenteada, mas permitimos o mergulho do pesquisador e a liberação gradual de publicações. A gente faz pesquisa que vire produto e venda."
+Frase de Efeito no Slide: "A gente precisa da universidade porque não temos professores nem tempo de treinar o pesquisador do zero. O pesquisador traz a fundamentação profunda que vira produto e patente." — Rodrigo Saad (Liderança P&D Industrial)
+
+FALA SUGERIDA DO APRESENTADOR (JOSUÉ JOFRE):
+"Como futuros mestres e doutores do PPG-PIT, este slide nos toca diretamente. A integração entre a UNIFESP e o Parque Tecnológico de São José dos Campos não é uma promessa teórica: é uma simbiose operacional diária.
+Nós temos aqui três pilares concretos:
+1. Laboratórios Abertos e Multiusuários do Campus Parque Tecnológico para testes e validação;
+2. Mestrado e Doutorado PIT com dissertações e teses orientadas a problemas reais dos nossos APLs;
+3. Empreendedorismo Acadêmico gerando spin-offs deep tech no Nexus Hub com fomento PIPE-FAPESP.
+E para provar que isso não é discurso da academia, trouxemos a própria voz da grande manufatura instalada no ecossistema.
+A nossa colega Nathália Neves entrevistou o Rodrigo Saad Rodrigues, executivo de P&D de uma multinacional Tier 1 de autopeças termoacústicas para os setores automotivo e aeroespacial.
+Vejam em 1 minuto o porquê de uma multinacional buscar a universidade:
+[JOSUÉ DÁ PLAY NO RECORTE 3 (1m21s) NO TELÃO]
+Como o Rodrigo bem enfatizou: a indústria não tem tempo de treinar o pesquisador do zero nos nichos raros de física acústica e polímeros avançados. É a universidade pública de excelência que fornece essa fundamentação."
+
+--------------------------------------------------------------------------------
+SLIDE 35 | ESTUDO EMPÍRICO 1: GOVERNANÇA DE PI E NDA
+Tema: Propriedade Intelectual no "Dia Zero" & Recorte 1
+Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
+Tempo sugerido: 3 min
+Frase de Efeito no Slide: "Primeira coisa é o NDA no Dia Zero: protegemos nossa tecnologia patenteada, mas permitimos o mergulho do pesquisador e a liberação gradual de publicações. A gente faz pesquisa que vire produto e venda." — Rodrigo Saad
 
 FALA SUGERIDA DO APRESENTADOR (RENATO PASCHOAL):
-"Projetamos agora no telão nossa central de vídeos. Temos aqui 4 botões de acesso direto aos recortes mais expressivos da entrevista:
-- Recorte 1 (1m09s): Blindagem com NDA e pesquisa que vira produto e venda;
-- Recorte 2 (1m05s): Mitigação de oportunistas e curadoria de parceiros idôneos com mestres e doutores na empresa;
-- Recorte 3 (1m21s): Nichos raros de termoformagem e o porquê de a indústria precisar da universidade;
-- Recorte 4 (0m57s): A quebra de paradigma na mentalidade de diretorias tradicionais.
-[O APRESENTADOR CLICA NOS BOTÕES DOS RECORTES DESEJADOS, RODA OS VÍDEOS NO TELÃO E COMENTA AS IMPLICAÇÕES PRÁTICAS COM A BANCA]."
-"Da nossa entrevista com a liderança do PIT, sintetizamos 4 eixos práticos fundamentais:
-1. Como gerenciar a governança sem hierarquia entre empresas concorrentes;
-2. Como equilibrar a velocidade do mercado com os prazos de publicação acadêmica;
-3. As cláusulas contratuais de sigilo e partilha de royalties;
-4. As estratégias de atração e retenção de empresas âncoras para garantir a sustentabilidade econômico-financeira do Parque."
+"Dando continuidade ao nosso estudo empírico, assumo a fala para conectar a prática da indústria à literatura de governança de ecossistemas (Machado et al., 2025).
+O maior dilema clássico da inovação aberta é: como a indústria multinacional pode abrir seus desafios fabris para a universidade sem arriscar o vazamento de seus segredos industriais? E, do outro lado, como o mestrando da UNIFESP pode pesquisar sem ficar proibido de defender sua dissertação?
+A resposta do Rodrigo Saad é cirúrgica: governança de PI pactuada no 'Dia Zero'.
+Vejamos o Recorte 1 da entrevista:
+[RENATO DÁ PLAY NO RECORTE 1 (1m09s) NO TELÃO]
+Notem a precisão: o NDA é assinado antes de o pesquisador pisar na fábrica, mas o contrato prevê um cronograma de liberação gradual de artigos científicos. O segredo industrial patenteado é protegido, e a carreira acadêmica do pesquisador é preservada."
+
+--------------------------------------------------------------------------------
+SLIDE 36 | ESTUDO EMPÍRICO 2: PREVENÇÃO AO OPORTUNISMO E CURADORIA
+Tema: Custos de Transação, Filtragem de Startups e Papel de Doutores na Indústria (Recorte 2)
+Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
+Tempo sugerido: 3 min
+Frase de Efeito no Slide: "O ecossistema precisa de curadoria séria. Evitamos os 'ride-alones' e temos doutores na empresa para fazer a ponte técnica real." — Rodrigo Saad
+
+FALA SUGERIDA DO APRESENTADOR (RENATO PASCHOAL):
+"Avançamos agora para uma das questões mais debatidas na teoria dos custos de transação de Williamson (1985) aplicada aos ecossistemas: a mitigação do comportamento oportunista.
+Em qualquer ecossistema que oferece subvenções fiscais e prestígio, surgem startups aventureiras — o que o mercado chama de 'vendedoras de fumaça' ou 'ride-alones', que querem apenas o logotipo da multinacional no slide, sem ter robustez técnica.
+Como uma grande indústria filtra isso? O Rodrigo destaca dois fatores: curadoria rigorosa e a presença de profissionais com PhD dentro do quadro corporativo.
+Vamos ao Recorte 2:
+[RENATO DÁ PLAY NO RECORTE 2 (1m05s) NO TELÃO]
+O doutor dentro da empresa fala a mesma língua técnica do professor da UNIFESP, avalia a maturidade tecnológica (TRL) com rigor e barra o oportunismo antes que vire custo afundado."
 
 --------------------------------------------------------------------------------
 SLIDE 37 | BLOCO 6: CRÍTICAS E LIMITAÇÕES (SHEN ET AL.)
 Tema: Pés no Chão: Evitando o 'Teatro da Inovação'
 Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
 Tempo sugerido: 4 min
-Frase de Efeito no Slide: "Ecossistemas não são panaceia: sem governança ética, viram armadilhas predatórias."
+Frase de Efeito no Slide: "Onde começa e onde termina um ecossistema? A literatura sofre para traçar fronteiras estritas."
 
 FALA SUGERIDA DO APRESENTADOR (RENATO PASCHOAL):
-"No Bloco 6, Shen et al. trazem o contraponto crítico necessário a qualquer análise acadêmica séria. Ecossistemas não são panaceia. Existem riscos severos: assimetria predatória de poder, onde uma grande empresa se apropria do valor gerado por startups vulneráveis; o risco de aprisionamento tecnológico (lock-in); e o perigoso 'teatro da inovação' — quando parques gastam milhões em eventos, cafés e marketing sem gerar nenhuma patente ou produto real."
+"No Bloco 6, trazemos com Shen et al. o contraponto crítico necessário a qualquer análise acadêmica rigorosa. Ecossistemas não são panaceia.
+A literatura recente aponta três grandes fragilidades metodológicas:
+1. Fronteiras Porosas: O PIT SJC termina na Rodovia Dutra, engloba o Vale do Paraíba ou estende seus tentáculos até fornecedores em Munique e Toulouse?
+2. Causalidade Complexa: A startup faturou milhões porque estava no parque tecnológico ou por causa de incentivos fiscais e conjuntura macroeconômica?
+3. Viés de Sucesso: Quase todos os artigos estudam casos vitoriosos como San Diego e Boston, ignorando as centenas de parques tecnológicos que faliram pelo mundo."
 
 --------------------------------------------------------------------------------
 SLIDE 38 | BLOCO 6: O LADO SOMBRIO DOS ECOSSISTEMAS
-Tema: Lock-in, Predação e Assimetrias de Poder
+Tema: Lock-in, Predação e a Barreira Cultural da Gestão Tradicional (Recorte 4)
 Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
-Tempo sugerido: 3 min
-Frase de Efeito no Slide: "O papel do orquestrador neutro é proteger os elos vulneráveis da rede."
+Tempo sugerido: 4 min
+Frase de Efeito no Slide: "O maior desafio não é tecnológico: é convencer a diretoria de uma empresa tradicional a não querer apenas 'comprar pronto' da prateleira." — Rodrigo Saad (Recorte 4)
 
-FALA SUGERIDA DO APRESENTADOR (RENATO PASCHOAL):
-"Aprofundando as armadilhas: analisamos como mitigar o lock-in cognitivo e a predação de propriedade intelectual. O papel do orquestrador neutro (como o PIT SJC) é justamente criar salvaguardas contratuais para que os elos mais fracos da rede — como startups e pesquisadores individuais — não sejam engolidos por corporações multinacionais."
+FALA SUGERIDA DO APRESENTADOR (RENATO PASCHOAL / MARCIELE):
+"Fechando o Bloco 6, analisamos o 'Lado Sombrio dos Ecossistemas'.
+Além do risco de lock-in predatório e do mero 'Teatro da Inovação' (eventos com pizza que não geram patentes), existe uma barreira que os livros muitas vezes ignoram: a inércia cultural da alta gestão tradicional.
+O Rodrigo Saad relatou com muita honestidade a dor de convencer diretorias de empresas de 50 anos a investirem em ecossistemas de inovação aberta em vez de simplesmente comprar tecnologia pronta da prateleira internacional.
+Vejam o Recorte 4:
+[APRESENTADOR DÁ PLAY NO RECORTE 4 (0m57s) NO TELÃO]
+Essa barreira cultural é o verdadeiro gargalo. Sem liderança orquestradora capaz de traduzir a incerteza do P&D em retorno estratégico, a empresa fica presa a fórmulas do passado e é engolida pela concorrência global."
 
 --------------------------------------------------------------------------------
 SLIDE 39 | MOMENTO KAHOOT RPG • FASE 6
