@@ -41,14 +41,22 @@ FALA SUGERIDA DO APRESENTADOR:
 "Nossa apresentação está estruturada em 120 minutos, dividida em 6 blocos fundamentais. Passaremos pela biologia de Moore, as 5 hélices, a orquestração de Machado et al., o benchmarking internacional de San Diego com a Lilian, a atividade empírica de campo no PIT SJC conduzida pelo Renato, e o fechamento dinâmico com a Jéssica. Ao final de cada bloco, teremos a parada estratégica para o Kahoot RPG!"
 
 --------------------------------------------------------------------------------
-SLIDE 3 | CONTEXTO HISTÓRICO DO PIT SJC
-Tema: O Laboratório Vivo: São José dos Campos
-Apresentador(a): Josué Jofre (4ª) / Fernando (5ª)
-Tempo sugerido: 3 min
-Frase de Efeito no Slide: "Onde teoria e prática convergem: 300+ empresas, 4 APLs e o PPG-PIT UNIFESP."
+SLIDE 3 | CONTEXTO PIT SJC & ESTUDO EMPÍRICO DE CAMPO
+Tema: Por que São José dos Campos e o PIT? A Voz da Indústria (Recorte 1 de 4: Indústria & Academia)
+Apresentador(a): Nathalia Neves (4ª) / Fernando (5ª)
+Tempo sugerido: 4 min
+Frase de Efeito no Slide: "A gente precisa da universidade porque não temos professores nem tempo de treinar o pesquisador do zero. O pesquisador traz a fundamentação profunda que vira produto e patente." — Rodrigo Saad (Liderança P&D Industrial)
 
-FALA SUGERIDA DO APRESENTADOR:
-"Para não falarmos de inovação no vácuo, ancoramos nosso estudo no ecossistema onde estamos inseridos: o PIT São José dos Campos. Criado em 2006/2009, é o primeiro parque oficial de SP, abriga mais de 300 empresas e possui o Campus da UNIFESP como coração acadêmico. É o laboratório perfeito para testarmos cada conceito teórico deste seminário."
+FALA SUGERIDA DA APRESENTADORA (NATHÁLIA NEVES):
+"Para não ficarmos apenas em conceitos abstratos, ancoramos todo o nosso seminário no laboratório vivo de São José dos Campos e do PIT SJC.
+Temos aqui uma confluência rara no Brasil: mais de 300 empresas vinculadas, 4 APLs consolidados (Aeroespacial, Defesa, TIC e Saúde) e a presença física da UNIFESP através do Campus Parque Tecnológico.
+E para trazer a voz autêntica de quem vive a inovação na prática, eu tive o privilégio de realizar uma entrevista de campo com o Rodrigo Saad Rodrigues.
+O Rodrigo é gestor executivo de P&D em uma multinacional Tier 1 — fabricante de tecidos termoacústicos avançados para os setores automotivo, ferroviário e aeroespacial, com centro global de pesquisas na França e fábrica no Brasil.
+Eu perguntei a ele: por que uma grande indústria multinacional precisa da universidade pública e de um ecossistema como o PIT?
+Vejam a resposta dele neste primeiro recorte de 1 minuto:
+[NATHÁLIA DÁ PLAY NO RECORTE 3 (1m21s) NO TELÃO]
+Como o Rodrigo destacou com muita clareza: a manufatura não tem professores nem tempo hábil para formar especialistas do zero em física acústica e novos materiais. É a universidade que traz a fundamentação profunda que depois vira produto de prateleira e patente registrada.
+Vamos acompanhar ao longo da apresentação outros 3 recortes dessa entrevista, conectando cada tema da literatura à prática do chão de fábrica."
 
 --------------------------------------------------------------------------------
 SLIDE 4 | BLOCO 1: A ORIGEM CONCEITUAL
@@ -221,14 +229,20 @@ FALA SUGERIDA DO APRESENTADOR:
 "No Bloco 4, Furr & Shipilov ensinam que ecossistemas bem-sucedidos não nascem de grandes comitês burocráticos. Nascem da identificação de um gargalo tecnológico real que nenhum ator consegue superar sozinho."
 
 --------------------------------------------------------------------------------
-SLIDE 21 | BLOCO 4: NEXUS HUB DE STARTUPS
-Tema: Acelerando Deep Techs no Vale do Paraíba
+SLIDE 21 | BLOCO 4: NEXUS HUB DE STARTUPS & CURADORIA
+Tema: Acelerando Deep Techs e Prevenção a Oportunistas (Recorte 2 de 4)
 Apresentador(a): Josué Jofre (4ª) / Joel (5ª)
 Tempo sugerido: 4 min
-Frase de Efeito no Slide: "Mais de 190 startups em jornada ativa e conexão direta com a indústria pesada."
+Frase de Efeito no Slide: "O ecossistema precisa de curadoria séria. Evitamos os 'ride-alones' e temos doutores na empresa para fazer a ponte técnica real." — Rodrigo Saad (Recorte 2)
 
-FALA SUGERIDA DO APRESENTADOR:
-"O Nexus é o braço de aceleração do PIT SJC. Ele conecta as deep techs nascentes com os laboratórios de ponta e os desafios de grandes corporações como Embraer, SIATT e multinacionais."
+FALA SUGERIDA DO APRESENTADOR (JOSUÉ JOFRE):
+"Avançando no Bloco 4 com Furr & Shipilov, vemos a importância de um catalisador de rede: o Nexus Hub de Inovação do PIT SJC.
+O Nexus apoia mais de 190 startups através de programas estruturados como o Nexus Lab (prototipagem e laboratórios multiusuários UNIFESP) e o Nexus Scale (conexão corporativa e captação de investimento).
+Mas como conectar uma startup em estágio inicial a uma gigante multinacional sem cair na armadilha do oportunismo?
+Na teoria dos custos de transação de Williamson (1985), o oportunismo de agentes aventureiros é o maior destruidor de valor.
+O Rodrigo Saad, na entrevista com a Nathália, explicou exatamente como a indústria e o parque fazem essa filtragem para evitar o que ele chama de 'startups de fumaça':
+[JOSUÉ DÁ PLAY NO RECORTE 2 (1m05s) NO TELÃO]
+Notem os dois pilares que o Rodrigo trouxe: primeiro, a curadoria rígida do ecossistema, que filtra quem tem solução tecnológica robusta; segundo, a presença de doutores dentro da própria indústria, capazes de auditar a maturidade técnica da startup e garantir uma ponte sem intermediários."
 
 --------------------------------------------------------------------------------
 SLIDE 22 | BLOCO 4: LIDERANÇA ADAPTATIVA
@@ -396,29 +410,24 @@ FALA SUGERIDA DA APRESENTADORA (LILIAN VEIGA VINHAS):
 
 --------------------------------------------------------------------------------
 SLIDE 34 | O ELO UNIVERSITÁRIO: UNIFESP & PIT SJC
-Tema: PPG-PIT: Co-criação na Prática & Recorte 3 (A Indústria Precisa da Academia)
+Tema: PPG-PIT: Co-criação na Prática & Laboratórios Multiusuários
 Apresentador(a): Josué Jofre (4ª) / Marciele (5ª)
-Tempo sugerido: 4 min
-Frase de Efeito no Slide: "A gente precisa da universidade porque não temos professores nem tempo de treinar o pesquisador do zero. O pesquisador traz a fundamentação profunda que vira produto e patente." — Rodrigo Saad (Liderança P&D Industrial)
+Tempo sugerido: 3 min
+Frase de Efeito no Slide: "O PPG-PIT não forma apenas teóricos: forma orquestradores capazes de dialogar com a indústria."
 
 FALA SUGERIDA DO APRESENTADOR (JOSUÉ JOFRE):
 "Como futuros mestres e doutores do PPG-PIT, este slide nos toca diretamente. A integração entre a UNIFESP e o Parque Tecnológico de São José dos Campos não é uma promessa teórica: é uma simbiose operacional diária.
 Nós temos aqui três pilares concretos:
 1. Laboratórios Abertos e Multiusuários do Campus Parque Tecnológico para testes e validação;
 2. Mestrado e Doutorado PIT com dissertações e teses orientadas a problemas reais dos nossos APLs;
-3. Empreendedorismo Acadêmico gerando spin-offs deep tech no Nexus Hub com fomento PIPE-FAPESP.
-E para provar que isso não é discurso da academia, trouxemos a própria voz da grande manufatura instalada no ecossistema.
-A nossa colega Nathália Neves entrevistou o Rodrigo Saad Rodrigues, executivo de P&D de uma multinacional Tier 1 de autopeças termoacústicas para os setores automotivo e aeroespacial.
-Vejam em 1 minuto o porquê de uma multinacional buscar a universidade:
-[JOSUÉ DÁ PLAY NO RECORTE 3 (1m21s) NO TELÃO]
-Como o Rodrigo bem enfatizou: a indústria não tem tempo de treinar o pesquisador do zero nos nichos raros de física acústica e polímeros avançados. É a universidade pública de excelência que fornece essa fundamentação."
+3. Empreendedorismo Acadêmico gerando spin-offs deep tech no Nexus Hub com fomento PIPE-FAPESP e FINEP."
 
 --------------------------------------------------------------------------------
-SLIDE 35 | ESTUDO EMPÍRICO 1: GOVERNANÇA DE PI E NDA
-Tema: Propriedade Intelectual no "Dia Zero" & Recorte 1
+SLIDE 35 | ESTUDO EMPÍRICO 3: GOVERNANÇA DE PI E NDA
+Tema: Propriedade Intelectual no "Dia Zero" (Recorte 3 de 4)
 Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
 Tempo sugerido: 3 min
-Frase de Efeito no Slide: "Primeira coisa é o NDA no Dia Zero: protegemos nossa tecnologia patenteada, mas permitimos o mergulho do pesquisador e a liberação gradual de publicações. A gente faz pesquisa que vire produto e venda." — Rodrigo Saad
+Frase de Efeito no Slide: "Primeira coisa é o NDA no Dia Zero: protegemos nossa tecnologia patenteada, mas permitimos o mergulho do pesquisador e a liberação gradual de publicações. A gente faz pesquisa que vire produto e venda." — Rodrigo Saad (Recorte 1)
 
 FALA SUGERIDA DO APRESENTADOR (RENATO PASCHOAL):
 "Dando continuidade ao nosso estudo empírico, assumo a fala para conectar a prática da indústria à literatura de governança de ecossistemas (Machado et al., 2025).
@@ -429,19 +438,18 @@ Vejamos o Recorte 1 da entrevista:
 Notem a precisão: o NDA é assinado antes de o pesquisador pisar na fábrica, mas o contrato prevê um cronograma de liberação gradual de artigos científicos. O segredo industrial patenteado é protegido, e a carreira acadêmica do pesquisador é preservada."
 
 --------------------------------------------------------------------------------
-SLIDE 36 | ESTUDO EMPÍRICO 2: PREVENÇÃO AO OPORTUNISMO E CURADORIA
-Tema: Custos de Transação, Filtragem de Startups e Papel de Doutores na Indústria (Recorte 2)
+SLIDE 36 | SÍNTESE PRÁTICA: 4 EIXOS DE GOVERNANÇA NO PIT SJC
+Tema: Contratos & PI, Confiança, Marco Legal e Formação Transdisciplinar
 Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
-Tempo sugerido: 3 min
-Frase de Efeito no Slide: "O ecossistema precisa de curadoria séria. Evitamos os 'ride-alones' e temos doutores na empresa para fazer a ponte técnica real." — Rodrigo Saad
+Tempo sugerido: 4 min
+Frase de Efeito no Slide: "A ponte universidade-empresa exige alinhamento prévio de governança, confiança relacional e domínio do marco regulatório."
 
 FALA SUGERIDA DO APRESENTADOR (RENATO PASCHOAL):
-"Avançamos agora para uma das questões mais debatidas na teoria dos custos de transação de Williamson (1985) aplicada aos ecossistemas: a mitigação do comportamento oportunista.
-Em qualquer ecossistema que oferece subvenções fiscais e prestígio, surgem startups aventureiras — o que o mercado chama de 'vendedoras de fumaça' ou 'ride-alones', que querem apenas o logotipo da multinacional no slide, sem ter robustez técnica.
-Como uma grande indústria filtra isso? O Rodrigo destaca dois fatores: curadoria rigorosa e a presença de profissionais com PhD dentro do quadro corporativo.
-Vamos ao Recorte 2:
-[RENATO DÁ PLAY NO RECORTE 2 (1m05s) NO TELÃO]
-O doutor dentro da empresa fala a mesma língua técnica do professor da UNIFESP, avalia a maturidade tecnológica (TRL) com rigor e barra o oportunismo antes que vire custo afundado."
+"Da nossa análise empírica com o setor produtivo, sintetizamos 4 eixos práticos fundamentais de governança no PIT SJC:
+1. Contratos e PI Antecipados: Definição clara de titularidade de patentes antes de iniciar os testes;
+2. Confiança e Capital Relacional: A convivência diária no parque reduz atritos e custos de transação;
+3. Aplicação do Marco Legal de CTI (Lei 13.243/16): Segurança para compartilhar laboratórios federais e conceder bolsas;
+4. Formação Transdisciplinar: O papel essencial do PPG-PIT em formar mestres e doutores capazes de transitar com fluidez entre a ciência de ponta e a viabilidade econômica."
 
 --------------------------------------------------------------------------------
 SLIDE 37 | BLOCO 6: CRÍTICAS E LIMITAÇÕES (SHEN ET AL.)
@@ -459,7 +467,7 @@ A literatura recente aponta três grandes fragilidades metodológicas:
 
 --------------------------------------------------------------------------------
 SLIDE 38 | BLOCO 6: O LADO SOMBRIO DOS ECOSSISTEMAS
-Tema: Lock-in, Predação e a Barreira Cultural da Gestão Tradicional (Recorte 4)
+Tema: Lock-in, Predação e a Barreira Cultural da Gestão Tradicional (Recorte 4 de 4)
 Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
 Tempo sugerido: 4 min
 Frase de Efeito no Slide: "O maior desafio não é tecnológico: é convencer a diretoria de uma empresa tradicional a não querer apenas 'comprar pronto' da prateleira." — Rodrigo Saad (Recorte 4)
