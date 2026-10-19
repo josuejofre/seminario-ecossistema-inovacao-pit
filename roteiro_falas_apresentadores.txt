@@ -405,14 +405,19 @@ FALA SUGERIDA DO APRESENTADOR:
 "Como futuros mestres e doutores do PPG-PIT, este slide nos toca diretamente. A integração entre a UNIFESP e o Parque Tecnológico não é teórica: é simbiótica. Nossas pesquisas, dissertações e teses nascem dentro dos laboratórios do PIT, conectadas às demandas reais da indústria aeroespacial, de TIC e de saúde."
 
 --------------------------------------------------------------------------------
-SLIDE 35 | ATIVIDADE DE CAMPO: ENTREVISTA COM A LIDERANÇA DO PIT SJC
-Tema: A Visão Prática do Orquestrador no Parque Tecnológico
+SLIDE 35 | ATIVIDADE DE CAMPO: ENTREVISTA COM RODRIGO SAAD (LIDERANÇA INDUSTRIAL)
+Tema: A Visão da Indústria: Governança de PI, ROI e Prevenção ao Oportunismo
 Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
 Tempo sugerido: 6 min
-Frase de Efeito no Slide: "Investigando na prática os desafios reais de governança, conciliação de interesses e transferência tecnológica no PIT São José dos Campos."
+Frase de Efeito no Slide: "Blindamos com NDA no Dia Zero para proteger patentes, mas permitimos o mergulho da academia. A curadoria de parceiros idôneos e doutores na empresa evitam oportunistas."
 
 FALA SUGERIDA DO APRESENTADOR (RENATO PASCHOAL):
-"Caros colegas e professores, para trazer o rigor da investigação empírica ao nosso seminário, realizei uma atividade de campo exclusiva: uma entrevista em profundidade com a liderança do Parque Tecnológico de São José dos Campos. O objetivo foi investigar como a teoria de orquestração se traduz na prática diária do maior complexo de inovação da região. Vamos acompanhar os relatos colhidos diretamente na gestão do Parque."
+"Caros colegas e professores, para trazer a voz da prática industrial ao nosso seminário, apresentamos os resultados da entrevista de campo conduzida pela nossa colega Nathália Neves com Rodrigo Saad, liderança executiva e gestor de P&D no setor automotivo e manufatureiro.
+Vamos rodar agora no telão um recorte de 2 minutos e meio da fala do Rodrigo. Notem com atenção a precisão com que ele aborda três dores reais que vimos na literatura:
+Primeiro: como blindar o negócio com acordos de confidencialidade (NDA) no 'Dia Zero' sem sufocar o pesquisador universitário, permitindo que os artigos acadêmicos saiam em etapas.
+Segundo: a exigência implacável da manufatura por pesquisa que gere produto vendável e retorno sobre o investimento, e não apenas dados teóricos.
+E terceiro: como a empresa se protege de oportunistas e 'aventureiros solos' priorizando institutos idôneos e colocando mestres e doutores na sua própria equipe para fazer a curadoria dos projetos.
+[O APRESENTADOR DÁ O PLAY NO VÍDEO DO SLIDE E COMENTA OS PONTOS CENTRAIS AO FINAL]."
 
 --------------------------------------------------------------------------------
 SLIDE 36 | 4 EIXOS DE GOVERNANÇA ANALISADOS NA PRÁTICA DO PIT SJC
