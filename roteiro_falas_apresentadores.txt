@@ -1,543 +1,591 @@
 ================================================================================
-ROTEIRO DE FALAS DOS APRESENTADORES • SEMINÁRIO 5: ECOSSISTEMAS DE INOVAÇÃO
-Disciplina: Gestão Estratégica da Tecnologia e Inovação (GETI 2026)
-Programa de Pós-Graduação em Inovação Tecnológica (PPG-PIT) – UNIFESP Campus Parque Tecnológico SJC
-Professores: Profª Drª Iraci de Souza João & Prof. Dr. Antônio Yukio Ueta
+ROTEIRO DE APRESENTAÇÃO E FALAS - SEMINÁRIO 5: ECOSSISTEMAS DE INOVAÇÃO & PIT SJC
+PROGRAMA DE PÓS-GRADUAÇÃO EM PROPRIEDADE INTELECTUAL E TRANSFERÊNCIA DE TECNOLOGIA (PPGPIT/UNIFESP)
+DISCIPLINA: GESTÃO ESTRATÉGICA DA INOVAÇÃO | PROFESSORES: IRACI E YUKIO
+DURAÇÃO TOTAL: 120 MINUTOS | 45 SLIDES | 6 BLOCOS DINÂMICOS COM KAHOOT RPG
+ESTUDOS DE CAMPO EMPÍRICOS: RODRIGO SAAD (INDÚSTRIA/P&D) & RUBENS COSTA (GOVERNO/STARTUPS)
 ================================================================================
 
-ESTRUTURA GERAL DO TEMPO (TOTAL: 120 MINUTOS • 43 SLIDES OFICIAIS):
-- Abertura, Agenda e Contexto PIT: 10 min (Slides 1 a 3)
-- Bloco 1 (Conceito e Evolução): 15 min (Slides 4 a 7 - inclui Momento Kahoot 1)
-- Bloco 2 (Anatomia do Ecossistema): 15 min (Slides 8 a 11 - inclui Momento Kahoot 2)
-- Bloco 3 (Governança e Orquestração - Machado et al., 2025 - Jéssica David 4ª / Joel 5ª): 15 min (Slides 12 a 19 - inclui Momento Kahoot 3)
-- Bloco 4 (Construção e Gestão de Ecossistemas - Furr & Shipilov): 15 min (Slides 20 a 23 - inclui Momento Kahoot 4)
-- Bloco 5 (Caso San Diego & São José dos Campos - Majava & Rinkinen / PIT): 20 min (Slides 24 a 33 - inclui Momento Kahoot 5)
-- Elo Acadêmico & Atividade de Campo no PIT SJC (Entrevista com a Liderança): 15 min (Slides 34 a 36)
-- Bloco 6 (Críticas, Limitações e o Lado Sombrio - Shen et al.): 10 min (Slides 37 a 39 - inclui Momento Kahoot 6)
-- Dinâmica Interativa Kahoot RPG (Pódio Final, Análise de Erros & Debate com a Banca): 20 min (Slides 40 a 43)
-
-================================================================================
-SLIDES E FALAS SUGERIDAS (SLIDE A SLIDE • TOTAL: 43 SLIDES)
-================================================================================
-
---------------------------------------------------------------------------------
-SLIDE 1 | ABERTURA OFICIAL
+SLIDE 01 | ABERTURA | TEMPO SUGERIDO: 2 min
 Tema: Ecossistemas de Inovação: Teoria, Orquestração e a Prática no PIT SJC
 Apresentador(a): Josué Jofre (4ª) / Fernando (5ª)
-Tempo sugerido: 2 min
-Frase de Efeito no Slide: "Nenhuma organização inova sozinha: o valor não está nas partes, mas na sinergia entre elas."
+Frase-Chave no Slide: ""Nenhuma organização inova sozinha: o valor não está nas partes, mas na sinergia entre elas.""
 
 FALA SUGERIDA DO APRESENTADOR:
-"Sejam muito bem-vindos, caros colegas, professora Iraci e professor Yukio. Nosso Grupo 5 tem a honra de apresentar o Seminário 5 sobre Ecossistemas de Inovação. Vamos conectar a teoria mais recente da literatura internacional com o nosso laboratório vivo: o Parque Tecnológico de São José dos Campos. Convidamos todos a abrirem o celular e acessarem o jogo pelo QR Code ou link, pois ao final de cada bloco teremos uma fase do nosso Kahoot RPG!"
+Sejam muito bem-vindos, caros colegas, professora Iraci e professor Yukio. Nosso Grupo 5 tem a honra de apresentar o Seminário 5 sobre Ecossistemas de Inovação. Vamos conectar a teoria mais recente da literatura internacional com o nosso laboratório vivo: o Parque Tecnológico de São José dos Campos. Convidamos todos a abrirem o celular e acessarem o jogo pelo QR Code ou link, pois ao final de cada bloco teremos uma fase do nosso Kahoot RPG!
 
 --------------------------------------------------------------------------------
-SLIDE 2 | AGENDA E CRONOGRAMA
-Tema: Estrutura e Divisão dos Blocos (120 minutos)
+
+--------------------------------------------------------------------------------
+
+SLIDE 02 | AGENDA | TEMPO SUGERIDO: 2 min
+Tema: Estrutura e Divisão dos Blocos
 Apresentador(a): Nathalia Neves (4ª) / Fernando (5ª)
-Tempo sugerido: 2 min
-Frase de Efeito no Slide: "Da teoria da coevolução biológica à prática orquestrada em São José dos Campos."
+Frase-Chave no Slide: ""Da teoria da coevolução biológica à prática orquestrada em São José dos Campos.""
 
 FALA SUGERIDA DO APRESENTADOR:
-"Nossa apresentação está estruturada em 120 minutos, dividida em 6 blocos fundamentais. Passaremos pela biologia de Moore, as 5 hélices, a orquestração de Machado et al., o benchmarking internacional de San Diego com a Lilian, a atividade empírica de campo no PIT SJC conduzida pelo Renato, e o fechamento dinâmico com a Jéssica. Ao final de cada bloco, teremos a parada estratégica para o Kahoot RPG!"
+Nossa apresentação está estruturada em 120 minutos, dividida em 6 blocos fundamentais. Passaremos pela biologia de Moore, as 5 hélices, a orquestração de Machado et al., o benchmarking internacional de San Diego com a Lilian, a atividade empírica de campo no PIT SJC conduzida pelo Renato, e o fechamento dinâmico com a Jéssica. Ao final de cada bloco, teremos a parada estratégica para o Kahoot RPG!
 
 --------------------------------------------------------------------------------
-SLIDE 3 | CONTEXTO PIT SJC & ESTUDO EMPÍRICO DE CAMPO
-Tema: Por que São José dos Campos e o PIT? A Voz da Indústria (Recorte 1 de 4: Indústria & Academia)
-Apresentador(a): Nathalia Neves (4ª) / Fernando (5ª)
-Tempo sugerido: 4 min
-Frase de Efeito no Slide: "A gente precisa da universidade porque não temos professores nem tempo de treinar o pesquisador do zero. O pesquisador traz a fundamentação profunda que vira produto e patente." — Rodrigo Saad (Liderança P&D Industrial)
 
-FALA SUGERIDA DA APRESENTADORA (NATHÁLIA NEVES):
-"Para não ficarmos apenas em conceitos abstratos, ancoramos todo o nosso seminário no laboratório vivo de São José dos Campos e do PIT SJC.
+--------------------------------------------------------------------------------
+
+SLIDE 03 | CONTEXTO PIT | TEMPO SUGERIDO: 4 min
+Tema: São José dos Campos & PIT: Por que a Indústria Precisa da Academia?
+Apresentador(a): Nathalia Neves (4ª) / Fernando (5ª)
+Frase-Chave no Slide: ""A gente precisa da universidade porque não temos professores nem tempo de treinar o pesquisador do zero. O pesquisador traz a fundamentação profunda que vira produto e patente." — Rodrigo Saad (Liderança P&D Industrial)"
+RECURSO DE VÍDEO EMPÍRICO: assets/recorte3_industria_academia.mp4?v=2
+
+FALA SUGERIDA DO APRESENTADOR:
+Para não ficarmos apenas em conceitos abstratos, ancoramos todo o nosso seminário no laboratório vivo de São José dos Campos e do PIT SJC.
 Temos aqui uma confluência rara no Brasil: mais de 300 empresas vinculadas, 4 APLs consolidados (Aeroespacial, Defesa, TIC e Saúde) e a presença física da UNIFESP através do Campus Parque Tecnológico.
-E para trazer a voz autêntica de quem vive a inovação na prática, eu tive o privilégio de realizar uma entrevista de campo com o Rodrigo Saad Rodrigues.
-O Rodrigo é gestor executivo de P&D em uma multinacional Tier 1 — fabricante de tecidos termoacústicos avançados para os setores automotivo, ferroviário e aeroespacial, com centro global de pesquisas na França e fábrica no Brasil.
-Eu perguntei a ele: por que uma grande indústria multinacional precisa da universidade pública e de um ecossistema como o PIT?
-Vejam a resposta dele neste primeiro recorte de 1 minuto:
-[NATHÁLIA DÁ PLAY NO RECORTE 3 (1m21s) NO TELÃO]
-Como o Rodrigo destacou com muita clareza: a manufatura não tem professores nem tempo hábil para formar especialistas do zero em física acústica e novos materiais. É a universidade que traz a fundamentação profunda que depois vira produto de prateleira e patente registrada.
-Vamos acompanhar ao longo da apresentação outros 3 recortes dessa entrevista, conectando cada tema da literatura à prática do chão de fábrica."
+E para trazer a voz autêntica de quem vive a inovação na prática, realizamos uma entrevista com Rodrigo Saad, executivo de P&D industrial com mais de duas décadas em multinacionais do setor automotivo e aeroespacial.
+Ele resume de forma contundente por que a indústria precisa da academia: as empresas não têm como formar pesquisadores do zero; é a universidade que fornece a fundamentação científica profunda que viabiliza patentes e produtos inovadores. Vamos assistir!
 
 --------------------------------------------------------------------------------
-SLIDE 4 | BLOCO 1: A ORIGEM CONCEITUAL
-Tema: James Moore (1993) e a Metáfora Biológica
+
+--------------------------------------------------------------------------------
+
+SLIDE 04 | BLOCO 1 | TEMPO SUGERIDO: 4 min
+Tema: A Origem do Conceito: Tansley (1935) & Moore (1993)
 Apresentador(a): Nathalia Neves (4ª) / Fernando (5ª)
-Tempo sugerido: 3 min
-Frase de Efeito no Slide: "Empresas não competem isoladas: competem como espécies em coevolução."
+Frase-Chave no Slide: ""Na biologia e nos negócios: espécies e empresas que coevoluem sobrevivem juntas ou perecem isoladas.""
 
 FALA SUGERIDA DO APRESENTADOR:
-"Iniciando o Bloco 1, James Moore em 1993 publicou na Harvard Business Review o artigo seminal que mudou a administração estratégica. Ele percebeu que as empresas não competem mais como ilhas isoladas. A competição agora é entre ecossistemas completos que coevoluem e cooperam na base enquanto competem pelo mercado final."
+Iniciamos pelo resgate histórico. O termo ecossistema nasceu na biologia em 1935 com Arthur Tansley. Quase 60 anos depois, James Moore teve o lampejo de transpor o conceito para os negócios na Harvard Business Review em 1993: empresas não competem isoladas, mas coevoluem em redes dinâmicas.
 
 --------------------------------------------------------------------------------
-SLIDE 5 | BLOCO 1: ANÁLISE BIBLIOMÉTRICA
-Tema: Evolução de Três Décadas (Shen et al., 2025/2026)
+
+--------------------------------------------------------------------------------
+
+SLIDE 05 | BLOCO 1 | TEMPO SUGERIDO: 4 min
+Tema: Evolução Bibliométrica: Shen et al. (2025/2026)
 Apresentador(a): Nathalia Neves (4ª) / Fernando (5ª)
-Tempo sugerido: 3 min
-Frase de Efeito no Slide: "De plataformas de Big Techs a redes territoriais de sustentabilidade."
+Frase-Chave no Slide: ""De 1993 a 2026: a literatura migrou do fascínio conceitual para a governança empírica rigorosa.""
 
 FALA SUGERIDA DO APRESENTADOR:
-"Shen et al., em seu estudo recente de 2025/2026, analisaram a produção científica de três décadas. Eles mostram claramente que os ecossistemas deixaram de ser vistos como plataformas proprietárias de Big Techs e passaram a ser estudados sob a ótica de redes territoriais complexas, focadas em sustentabilidade e governança participativa."
+Trazemos aqui a análise cienciométrica mais recente publicada por Shen et al. (2025/2026), que examinou mais de duas décadas de produção científica internacional.
+O mapeamento bibliométrico revela uma explosão de publicações a partir de 2016 e aponta quatro grandes clusters de pesquisa: Ecossistemas de Negócios e Plataformas, Ecossistemas de Inovação e Coevolução, Ecossistemas Empreendedores e Cidades Inteligentes, e a fronteira emergente de Transição Sustentável Net-Zero e IA.
 
 --------------------------------------------------------------------------------
-SLIDE 6 | BLOCO 1: 4 CONCEITOS ESSENCIAIS
-Tema: Como Diferenciar Cluster, Sistema e Ecossistema
+
+--------------------------------------------------------------------------------
+
+SLIDE 06 | BLOCO 1 | TEMPO SUGERIDO: 4 min
+Tema: Como Diferenciar: Cluster, Sistema e Ecossistema
 Apresentador(a): Nathalia Neves (4ª) / Fernando (5ª)
-Tempo sugerido: 4 min
-Frase de Efeito no Slide: "Precisão terminológica para não chamar qualquer condomínio de ecossistema."
+Frase-Chave no Slide: ""Estar no mesmo CEP geográfico não configura um ecossistema: sem interdependência, há apenas vizinhança.""
 
 FALA SUGERIDA DO APRESENTADOR:
-"É crucial não confundir os conceitos: Cluster é concentração geográfica por custo logístico; Sistema de Inovação foca no papel indutor do Estado; Ecossistema de Negócios captura valor presente; e Ecossistema de Inovação foca na co-criação de novas tecnologias que ninguém criaria sozinho."
+Um dos maiores erros conceituais é usar cluster, sistema e ecossistema como sinônimos.
+Cluster foca em proximidade geográfica e aglomeração fabril (como Porter definiu);
+Sistema Nacional foca em fronteiras institucionais e políticas de Estado (Freeman e Lundvall);
+Já o Ecossistema de Inovação é definido pela coevolução, simbiose e interdependência estrutural entre atores heterogêneos. O PIT SJC transcendeu o conceito de mero cluster para se consolidar como ecossistema vivo.
 
 --------------------------------------------------------------------------------
-SLIDE 7 | MOMENTO KAHOOT RPG • FASE 1
+
+--------------------------------------------------------------------------------
+
+SLIDE 07 | MOMENTO KAHOOT 1 | TEMPO SUGERIDO: 3 min
 Tema: Desafio da Fase 1: Bloco Acadêmico UNIFESP
 Apresentador(a): Nathalia Neves (4ª) / Fernando (5ª)
-Tempo sugerido: 3 min
-Frase de Efeito no Slide: "Acesse o jogo no smartphone, caminhe até a estação no mapa e responda às 3 perguntas!"
+Frase-Chave no Slide: ""O link do jogo está no chat: acesse, ande até a Fase 1 e responda o mais rápido possível!""
 
 FALA SUGERIDA DO APRESENTADOR:
-"[O APRESENTADOR ANUNCIA AO MICROFONE:] 'Atenção turma, fase liberada no seu celular! Vocês têm 2 minutos para responder às 3 perguntas da estação Bloco Acadêmico UNIFESP no mapa! Acompanhem aqui no telão o ranking ao vivo!' "
+Atenção, turma! Fechamos o Bloco 1 com chave de ouro. Olhem para a tela e para o celular de vocês: o desafio da Fase 1 do nosso Kahoot RPG está aberto!
+São 3 questões fundamentadas em Moore, Shen et al. e na distinção de Porter. O relógio de 3 minutos está correndo. Respondam com estratégia!
 
 --------------------------------------------------------------------------------
-SLIDE 8 | BLOCO 2: ANATOMIA DO ECOSSISTEMA
-Tema: Heterogeneidade & Simbiose de Atores
+
+--------------------------------------------------------------------------------
+
+SLIDE 08 | BLOCO 2 | TEMPO SUGERIDO: 4 min
+Tema: Anatomia do Ecossistema: Heterogeneidade & Simbiose de Atores
 Apresentador(a): Veridiany Braga (4ª) / Fábio (5ª)
-Tempo sugerido: 3 min
-Frase de Efeito no Slide: "Universidades geram ciência, startups trazem agilidade, grandes empresas trazem escala e o governo garante fomento."
+Frase-Chave no Slide: ""Na saúde, na aviação ou na TI: quando profissionais de áreas diferentes cooperam, o impossível acontece.""
 
 FALA SUGERIDA DO APRESENTADOR:
-"Entrando no Bloco 2, desvendamos quem habita o ecossistema. Não se trata de juntar empresas iguais. A força do ecossistema reside na simbiose entre atores heterogêneos com lógicas distintas, que se complementam mutuamente."
+Entrando no Bloco 2, desvendamos quem habita o ecossistema. Não se trata de juntar empresas iguais. A força do ecossistema reside na simbiose entre atores heterogêneos com lógicas distintas, que se complementam mutuamente.
 
 --------------------------------------------------------------------------------
-SLIDE 9 | BLOCO 2: AS 5 HÉLICES DA INOVAÇÃO & ENTREVISTA RUBENS COSTA
-Tema: Da Tríplice à Quíntupla Hélice (Sociedade, Prática & Sustentabilidade)
+
+--------------------------------------------------------------------------------
+
+SLIDE 09 | BLOCO 2 | TEMPO SUGERIDO: 4 min
+Tema: Da Tríplice à Quíntupla Hélice: Sociedade & Sustentabilidade
 Apresentador(a): Veridiany Braga (4ª) / Fábio (5ª)
-Tempo sugerido: 4 min
-Frase de Efeito no Slide: "A Tríplice Hélice na prática exige orquestração real: o governo entra com política pública digital de baixo risco, a universidade com massa crítica e executivos de mercado lideram a execução com metas claras." — Rubens Costa (Ex-Secretário de TI & Executivo de Scale-ups)
-
-FALA SUGERIDA DO APRESENTADOR (VERIDIANY BRAGA / FÁBIO):
-"Evoluímos da Tríplice Hélice tradicional (Universidade-Indústria-Governo) de Etzkowitz e Leydesdorff para a Quíntupla Hélice de Carayannis e Campbell. Hoje, a sociedade civil demanda transparência e inclusão (4ª hélice), e os imperativos de sustentabilidade exigem metas Net-Zero (5ª hélice).
-E para exemplificar como a Tríplice Hélice acontece no mundo real, a colega Nathália Neves entrevistou o executivo Rubens Costa, ex-Secretário de Tecnologia e Inovação e executivo de scale-ups.
-O Rubens explica como o Chile estruturou um dos ecossistemas digitais mais eficientes da América Latina: o governo entrou com política pública digital focada em alto impacto e menor risco fiscal, a PUC Chile forneceu a pesquisa de ponta e foram contratados executivos de Venture Capital para liderar a agência com metas de mercado. Vamos assistir a este trecho prático!"
-[RODAR VÍDEO DO RUBENS COSTA - 1m35s]
-"Percebam como a fala do Rubens desmistifica o papel do poder público: o governo não precisa criar fábricas pesadas que geram passivos tributários; ele pode atuar como viabilizador digital e orquestrador de metas em simbiose com universidades e o mercado privado."
-
-DEIXA PARA O PRÓXIMO: "Compreendido o modelo das hélices, convido o próximo colega para analisar como os atores interagem dinamicamente e os riscos de predação na rede."
-
-
-SLIDE 10 | BLOCO 2: INTERDEPENDÊNCIA E DINÂMICA DE REDE
-Tema: Cadeia Linear vs. Rede Viva (Ron Adner)
-Apresentador(a): Veridiany Braga (4ª) / Fábio (5ª)
-Tempo sugerido: 4 min
-Frase de Efeito no Slide: "Riscos de coinovação: se o parceiro falha na bateria, a aeronave elétrica não voa."
+Frase-Chave no Slide: ""A evolução do ecossistema: da Tríplice Hélice à Quíntupla Hélice, conectando sociedade, inclusão social e sustentabilidade ambiental (Net-Zero).""
 
 FALA SUGERIDA DO APRESENTADOR:
-"Como ensina Ron Adner, a interdependência gera três riscos: execução interna, coinovação dos parceiros e adoção regulatória. O ecossistema só vence quando todos os elos entregam suas partes coordenadas."
+Evoluímos da Tríplice Hélice tradicional (Universidade-Indústria-Governo) de Etzkowitz e Leydesdorff para a Quíntupla Hélice de Carayannis e Campbell.
+Vejam na tela a anatomia completa das 5 hélices:
+1ª Academia & ICTs (UNIFESP, ITA, INPE) gerando pesquisa profunda;
+2ª Indústria convertendo ciência em tração de mercado;
+3ª Governo provendo marco regulatório e fomento estável;
+4ª Sociedade Civil participando via co-criação e Living Labs;
+5ª Meio Ambiente impondo a transição ecológica Net-Zero e circularidade.
 
 --------------------------------------------------------------------------------
-SLIDE 11 | MOMENTO KAHOOT RPG • FASE 2
+
+--------------------------------------------------------------------------------
+
+SLIDE 10 | BLOCO 2 | TEMPO SUGERIDO: 3 min
+Tema: Estudo Empírico: A Tríplice Hélice na Prática & o Case Start-Up Chile
+Apresentador(a): Veridiany Braga (4ª) / Fábio (5ª)
+Frase-Chave no Slide: ""A Tríplice Hélice no Chile operou focada no digital para gerar alto impacto com baixo risco fiscal: o governo fomentou a infraestrutura, a PUC Chile garantiu massa crítica científica e executivos de mercado lideraram a agência com metas de venture capital." — Rubens Costa (Ex-Secretário de TI & Executivo de Scale-ups)"
+RECURSO DE VÍDEO EMPÍRICO: assets/recorte5_triplice_helice_chile.mp4
+
+FALA SUGERIDA DO APRESENTADOR:
+E para enxergar como a Tríplice Hélice opera no mundo real, trazemos um estudo empírico com Rubens Costa, ex-Secretário de Tecnologia e Inovação e executivo de scale-ups (Buser e G4 Educação).
+O Rubens explica como o Chile construiu um dos maiores ecossistemas digitais da América Latina: o governo entrou com política pública digital de baixo risco fiscal, a PUC Chile garantiu retaguarda acadêmica e executivos de Venture Capital foram contratados com metas de mercado para liderar a agência pública. Vamos assistir!
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+SLIDE 11 | BLOCO 2 | TEMPO SUGERIDO: 4 min
+Tema: Interdependência & Riscos: Cadeia Linear vs. Rede Viva
+Apresentador(a): Veridiany Braga (4ª) / Fábio (5ª)
+Frase-Chave no Slide: ""Enquanto a cadeia de suprimentos é contratual e linear, o ecossistema opera por coopetição e interdependência de riscos.""
+
+FALA SUGERIDA DO APRESENTADOR:
+Como ensina Ron Adner, a interdependência gera três riscos: execução interna, coinovação dos parceiros e adoção regulatória. O ecossistema só vence quando todos os elos entregam suas partes coordenadas.
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+SLIDE 12 | MOMENTO KAHOOT 2 | TEMPO SUGERIDO: 3 min
 Tema: Desafio da Fase 2: Praça Central das Hélices
 Apresentador(a): Veridiany Braga (4ª) / Fábio (5ª)
-Tempo sugerido: 3 min
-Frase de Efeito no Slide: "Acesse a estação no mapa e responda sobre a simbiose de atores e as 5 hélices!"
+Frase-Chave no Slide: ""Acesse o jogo no smartphone, caminhe até a estação no mapa e responda às 3 perguntas!""
 
 FALA SUGERIDA DO APRESENTADOR:
-"[O APRESENTADOR ANUNCIA AO MICROFONE:] 'Fase 2 liberada! Respondam às 3 perguntas sobre a anatomia do ecossistema e fiquem de olho no telão!' "
+Atenção, turma! Parada estratégica do Bloco 2. O painel do Kahoot RPG está ativado na tela e nos aparelhos de vocês.
+Mais 3 questões cruciais sobre as 5 hélices, Adner e co-criação. 3 minutos no cronômetro. Valendo posições no ranking!
 
 --------------------------------------------------------------------------------
-SLIDE 12 | BLOCO 3: QUESTÃO CENTRAL & MÉTODO (JÉSSICA SLIDE 1)
-Tema: Como Coordenar Atores Independentes? (Machado et al., 2025)
+
+--------------------------------------------------------------------------------
+
+SLIDE 13 | BLOCO 3 | TEMPO SUGERIDO: 1 min
+Tema: Como coordenar atores independentes, e quais mecanismos e competências permitem a orquestração do ecossistema?
 Apresentador(a): Jéssica David (4ª) / Joel (5ª)
-Tempo sugerido: 1 min
-Frase de Efeito no Slide: "Quem orquestra, como se orquestra e com quais competências?"
 
 FALA SUGERIDA DO APRESENTADOR:
-"Ler a questão central: Como coordenar atores independentes e quais mecanismos e competências permitem a orquestração? Apresento o percurso em 3 camadas: QUEM orquestra, COMO se orquestra e COM O QUÊ. Revisão sistemática em Scopus e Web of Science de 2006 a 2024 tendo Dhanaraj e Parkhe como marco teórico."
+Chegamos ao coração teórico do nosso seminário: como governar e coordenar uma rede onde ninguém é chefe de ninguém?
+A orquestração de ecossistemas é a competência de alinhar atores autônomos sem poder hierárquico, transformando interesses dispersos em uma visão compartilhada.
 
 --------------------------------------------------------------------------------
-SLIDE 13 | BLOCO 3: O PAPEL DO ORQUESTRADOR (JÉSSICA SLIDE 2)
-Tema: Coordenar sem Autoridade Hierárquica
+
+--------------------------------------------------------------------------------
+
+SLIDE 14 | BLOCO 3 | TEMPO SUGERIDO: 1.5 min
+Tema: Coordenar sem autoridade hierárquica
 Apresentador(a): Jéssica David (4ª) / Joel (5ª)
-Tempo sugerido: 1.5 min
-Frase de Efeito no Slide: "Participantes heterogêneos e interdependentes, mas hierarquicamente independentes."
 
 FALA SUGERIDA DO APRESENTADOR:
-"O dilema central: os atores dependem uns dos outros, mas ninguém responde a ninguém hierarquicamente. Orquestrar é criar e extrair valor conjunto sem poder de chefia. Apresento os 13 papéis identificados na literatura, como arquiteto, gatekeeper e líder."
+Analisamos a evolução teórica seminal: o modelo clássico de Dhanaraj e Parkhe (2006) com 3 dimensões (Mobilidade do Conhecimento, Apropriação de Valor e Estabilidade da Rede) foi expandido pelos pesquisadores brasileiros Machado et al. para 8 dimensões operacionais, trazendo a liderança distribuída para a realidade dos ecossistemas contemporâneos.
 
 --------------------------------------------------------------------------------
-SLIDE 14 | BLOCO 3: AS DIMENSÕES DA ORQUESTRAÇÃO (JÉSSICA SLIDE 3)
-Tema: Das 3 às 8 Dimensões de Orquestração
+
+--------------------------------------------------------------------------------
+
+SLIDE 15 | BLOCO 3 | TEMPO SUGERIDO: 1 min
+Tema: Das 3 às 8 dimensões de orquestração
 Apresentador(a): Jéssica David (4ª) / Joel (5ª)
-Tempo sugerido: 1 min
-Frase de Efeito no Slide: "A evolução da literatura: de Dhanaraj & Parkhe (2006) a Mignoni et al. (2021)."
 
 FALA SUGERIDA DO APRESENTADOR:
-"A literatura evoluiu de 3 dimensões em 2006 (conhecimento, apropriabilidade, estabilidade) para 8 dimensões consolidadas. Neste bloco focamos nos mecanismos essenciais para a coordenação prática."
+As primeiras dimensões de Machado et al. tratam do engajamento inicial:
+Dar Direção (definir visão comum), Reunir Atores (atrair talentos heterogêneos) e Manter a Rede (sustentar o comprometimento ao longo do tempo). Sem direção clara, o ecossistema dispersa energia.
 
 --------------------------------------------------------------------------------
-SLIDE 15 | BLOCO 3: MECANISMOS 1/2 (JÉSSICA SLIDE 4)
-Tema: Dar Direção, Reunir e Manter os Atores
+
+--------------------------------------------------------------------------------
+
+SLIDE 16 | BLOCO 3 | TEMPO SUGERIDO: 2 min
+Tema: Dar direção, reunir e manter os atores
 Apresentador(a): Jéssica David (4ª) / Joel (5ª)
-Tempo sugerido: 2 min
-Frase de Efeito no Slide: "Definição de agenda, mobilização e estabilização da rede."
 
 FALA SUGERIDA DO APRESENTADOR:
-"Os três primeiros mecanismos: Definição de agenda (criar visão conjunta), Mobilização (atrair parceiros certos) e Estabilização da rede (evitar oportunismo, isolamento e atrito entre concorrentes)."
+As dimensões seguintes viabilizam o fluxo contínuo:
+Fazer o Conhecimento Circular (spill-overs e mobilidade), Estimular a Ação Conjunta (projetos cooperativos) e Alinhar a Comunicação Externa. A orquestração reduz drasticamente os custos de transação entre empresas e universidades.
 
 --------------------------------------------------------------------------------
-SLIDE 16 | BLOCO 3: MECANISMOS 2/2 (JÉSSICA SLIDE 5)
-Tema: Fazer Conhecimento, Ação e Mensagem Circularem
+
+--------------------------------------------------------------------------------
+
+SLIDE 17 | BLOCO 3 | TEMPO SUGERIDO: 2 min
+Tema: Fazer conhecimento, ação e mensagem circularem
 Apresentador(a): Jéssica David (4ª) / Joel (5ª)
-Tempo sugerido: 2 min
-Frase de Efeito no Slide: "Compartilhamento de conhecimento, coordenação e gestão da comunicação."
 
 FALA SUGERIDA DO APRESENTADOR:
-"Os três mecanismos de fluxo: Compartilhamento de conhecimento (transferência tácita e explícita), Coordenação de atividades conjuntas e Gestão da comunicação (alinhamento de narrativas e redução de ruídos)."
+A competência de orquestração sintetizada no CHA:
+Conhecimento (compreensão sistêmica da rede), Habilidade (mediação de conflitos e governança sem autoridade) e Atitude (visão neutra de longo prazo e liderança servidora).
 
 --------------------------------------------------------------------------------
-SLIDE 17 | BLOCO 3: COMPETÊNCIAS DE ORQUESTRAÇÃO (JÉSSICA SLIDE 6)
-Tema: O Modelo CHA em Ação
+
+--------------------------------------------------------------------------------
+
+SLIDE 18 | BLOCO 3 | TEMPO SUGERIDO: 1.75 min
+Tema: Competência de orquestração: CHA em ação
 Apresentador(a): Jéssica David (4ª) / Joel (5ª)
-Tempo sugerido: 1.75 min
-Frase de Efeito no Slide: "Capacidade + Ação Situada = Competência Manifesta."
 
 FALA SUGERIDA DO APRESENTADOR:
-"Orquestração exige competências individuais específicas: Conhecimento teórico, Habilidades práticas e Atitudes relacionais (CHA). A capacidade só se torna competência quando testada na ação situada diante de conflitos reais."
+Fechando a governança: como coordenar sem hierarquia? Através de incentivos alinhados, reputação mútua, contratos relacionais transparentes e plataformas colaborativas. O orquestrador não comanda; ele facilita e catalisa.
 
 --------------------------------------------------------------------------------
-SLIDE 18 | BLOCO 3: SÍNTESE DO BLOCO 3 (JÉSSICA SLIDE 7)
-Tema: Como Coordenar Atores Independentes?
+
+--------------------------------------------------------------------------------
+
+SLIDE 19 | BLOCO 3 | TEMPO SUGERIDO: 0.75 min
+Tema: Como coordenar atores independentes?
 Apresentador(a): Jéssica David (4ª) / Joel (5ª)
-Tempo sugerido: 0.75 min
-Frase de Efeito no Slide: "Orquestrar é habilitar a colaboração onde a hierarquia não alcança."
 
 FALA SUGERIDA DO APRESENTADOR:
-"Os 3 degraus fundamentais: 1. Assumir papéis adaptativos; 2. Acionar mecanismos de engajamento e fluxo; 3. Mobilizar competências relacionais para gerar valor compartilhado."
+Momento decisivo! Fase 3 do Kahoot RPG no ar.
+Testaremos o domínio de vocês sobre Machado et al., Dhanaraj & Parkhe e liderança sem hierarquia. O ranking provisório vai oscilar agora. Respondam com atenção!
 
 --------------------------------------------------------------------------------
-SLIDE 19 | MOMENTO KAHOOT RPG • FASE 3
+
+--------------------------------------------------------------------------------
+
+SLIDE 20 | MOMENTO KAHOOT 3 | TEMPO SUGERIDO: 3 min
 Tema: Desafio da Fase 3: Centro de Governança do PIT
 Apresentador(a): Jéssica David (4ª) / Joel (5ª)
-Tempo sugerido: 3 min
-Frase de Efeito no Slide: "Responda às 3 perguntas sobre governança, orquestração e competências CHA!"
+Frase-Chave no Slide: ""O link do jogo está no chat: acesse, ande até a Fase 2 e responda o mais rápido possível!""
 
 FALA SUGERIDA DO APRESENTADOR:
-"[JÉSSICA ACIONA A FASE:] 'Atenção sala, Fase 3 liberada! Mostrem domínio sobre os papéis do orquestrador e a estabilização de rede!' "
+Como construir ecossistemas na prática? Nathan Furr e Shipilov (MIT Sloan) ensinam que construir ecossistemas não é impor uma plataforma de cima para baixo, mas criar valor incremental, conectando capacidades pré-existentes e estabelecendo confiança entre os membros fundadores.
 
 --------------------------------------------------------------------------------
-SLIDE 20 | BLOCO 4: COMO CONSTRUIR ECOSSISTEMAS
-Tema: Furr & Shipilov (MIT Sloan): Do Zero à Tração
+
+--------------------------------------------------------------------------------
+
+SLIDE 21 | BLOCO 4 | TEMPO SUGERIDO: 4 min
+Tema: Como Construir Ecossistemas: Furr & Shipilov (MIT)
 Apresentador(a): Josué Jofre (4ª) / Joel (5ª)
-Tempo sugerido: 3 min
-Frase de Efeito no Slide: "Não comece criando regras rígidas: comece resolvendo um gargalo concreto da rede."
+Frase-Chave no Slide: ""Não tente impor uma visão imperial fechada: ecossistemas robustos nascem de experimentos adaptativos.""
 
 FALA SUGERIDA DO APRESENTADOR:
-"No Bloco 4, Furr & Shipilov ensinam que ecossistemas bem-sucedidos não nascem de grandes comitês burocráticos. Nascem da identificação de um gargalo tecnológico real que nenhum ator consegue superar sozinho."
+Como demonstrado por Furr e Shipilov, orquestrar deep techs exige plataformas com filtro rigoroso de maturidade.
+No laboratório de SJC, esse papel é executado com precisão pelo Nexus Hub de Inovação do PIT.
+Rodrigo Saad detalha a importância da curadoria técnica do Nexus: evitar que o ecossistema caia na armadilha do oportunismo comercial superficial, conectando as indústrias apenas a startups com validação tecnológica real. Vamos acompanhar!
 
 --------------------------------------------------------------------------------
-SLIDE 21 | BLOCO 4: NEXUS HUB DE STARTUPS & CURADORIA
-Tema: Acelerando Deep Techs e Prevenção a Oportunistas (Recorte 2 de 4)
-Apresentador(a): Josué Jofre (4ª) / Joel (5ª)
-Tempo sugerido: 4 min
-Frase de Efeito no Slide: "O ecossistema precisa de curadoria séria. Evitamos os 'ride-alones' e temos doutores na empresa para fazer a ponte técnica real." — Rodrigo Saad (Recorte 2)
-
-FALA SUGERIDA DO APRESENTADOR (JOSUÉ JOFRE):
-"Avançando no Bloco 4 com Furr & Shipilov, vemos a importância de um catalisador de rede: o Nexus Hub de Inovação do PIT SJC.
-O Nexus apoia mais de 190 startups através de programas estruturados como o Nexus Lab (prototipagem e laboratórios multiusuários UNIFESP) e o Nexus Scale (conexão corporativa e captação de investimento).
-Mas como conectar uma startup em estágio inicial a uma gigante multinacional sem cair na armadilha do oportunismo?
-Na teoria dos custos de transação de Williamson (1985), o oportunismo de agentes aventureiros é o maior destruidor de valor.
-O Rodrigo Saad, na entrevista com a Nathália, explicou exatamente como a indústria e o parque fazem essa filtragem para evitar o que ele chama de 'startups de fumaça':
-[JOSUÉ DÁ PLAY NO RECORTE 2 (1m05s) NO TELÃO]
-Notem os dois pilares que o Rodrigo trouxe: primeiro, a curadoria rígida do ecossistema, que filtra quem tem solução tecnológica robusta; segundo, a presença de doutores dentro da própria indústria, capazes de auditar a maturidade técnica da startup e garantir uma ponte sem intermediários."
 
 --------------------------------------------------------------------------------
-SLIDE 22 | BLOCO 4: LIDERANÇA ADAPTATIVA
-Tema: Liderança sem Autoridade Hierárquica
+
+SLIDE 22 | BLOCO 4 | TEMPO SUGERIDO: 4 min
+Tema: O Nexus como Catalisador: Acelerando Deep Techs e Filtrando Oportunistas
 Apresentador(a): Josué Jofre (4ª) / Joel (5ª)
-Tempo sugerido: 3 min
-Frase de Efeito no Slide: "A autoridade formal comanda tarefas; a liderança orquestradora inspira convergência de propósitos."
+Frase-Chave no Slide: ""O ecossistema precisa de curadoria séria. Evitamos os 'ride-alones' e temos doutores na empresa para fazer a ponte técnica real." — Rodrigo Saad (Recorte 2)"
+RECURSO DE VÍDEO EMPÍRICO: assets/recorte2_oportunismo_curadoria.mp4?v=2
 
 FALA SUGERIDA DO APRESENTADOR:
-"O desafio do gestor de ecossistema: ele não pode dar ordens a um professor titular do ITA nem ao diretor de compras da Embraer. Sua liderança precisa ser adaptativa, baseada em legitimidade técnica e benefícios recíprocos."
+A liderança sem autoridade hierárquica exige que o orquestrador domine a neutralidade relacional e a transparência. Se o orquestrador for percebido como concorrente direto dos membros da rede, a confiança rui e a colaboração cessa.
 
 --------------------------------------------------------------------------------
-SLIDE 23 | MOMENTO KAHOOT RPG • FASE 4
+
+--------------------------------------------------------------------------------
+
+SLIDE 23 | BLOCO 4 | TEMPO SUGERIDO: 4 min
+Tema: Liderança sem Autoridade Hierárquica: O Desafio do Orquestrador
+Apresentador(a): Josué Jofre (4ª) / Joel (5ª)
+Frase-Chave no Slide: ""Em um ecossistema, ninguém manda em ninguém: lidera quem constrói o melhor consenso.""
+
+FALA SUGERIDA DO APRESENTADOR:
+Fase 4 do Kahoot RPG aberta! 3 questões sobre Furr & Shipilov, Nexus Hub e liderança relacional. 3 minutos de imersão competitiva. Confiram o painel e pontuem!
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+SLIDE 24 | MOMENTO KAHOOT 4 | TEMPO SUGERIDO: 3 min
 Tema: Desafio da Fase 4: Nexus Hub de Startups
 Apresentador(a): Josué Jofre (4ª) / Joel (5ª)
-Tempo sugerido: 3 min
-Frase de Efeito no Slide: "Responda sobre aceleração, deep techs e liderança adaptativa!"
+Frase-Chave no Slide: ""O link do jogo está no chat: acesse, ande até a Fase 3 e responda o mais rápido possível!""
 
 FALA SUGERIDA DO APRESENTADOR:
-"[O APRESENTADOR ANUNCIA:] 'Fase 4 liberada! Respondam no celular e vejam a disputa de posições no ranking!' "
+Passo a palavra para a colega Lilian Veiga, que nos conduzirá pela análise comparativa e benchmarking internacional: o caso clássico de San Diego.
 
 --------------------------------------------------------------------------------
-SLIDE 24 | BLOCO 5 (1/9): SAN DIEGO NO RADAR GLOBAL (WIPO)
-Tema: Benchmarking Internacional: 14º Maior Polo Mundial de Inovação
-Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
-Tempo sugerido: 1.5 min
-Frase de Efeito no Slide: "San Diego é o 14º maior polo mundial de inovação (7º por densidade): 26.713 pedidos de patente PCT liderados pela Qualcomm e 19.862 artigos pela UCSD."
-
-FALA SUGERIDA DA APRESENTADORA (LILIAN VEIGA VINHAS):
-"O principal artigo do nosso bloco tratou do surgimento e dos fatores de sucesso do ecossistema de inovação de San Diego, na Califórnia, conduzido pelos pesquisadores Jukka Majava e Satu Rinkinen (revisão sistemática de 20 anos de estudos entre 2001 e 2021, complementados por entrevistas com especialistas).
-Para termos dimensão do impacto, trago os dados oficiais da Organização Mundial da Propriedade Intelectual (WIPO / ONU) no Global Innovation Index 2025. San Diego ocupa o 14º lugar no ranking dos 100 maiores clusters mundiais de inovação (e o 7º lugar mundial por intensidade relativa à densidade populacional).
-Entre 2020 e 2024, foram nada menos que 26.713 pedidos de patente PCT na cidade, com destaque absoluto para a Qualcomm (líder global de processadores móveis, semicondutores, 4G, 5G e Wi-Fi), que responde sozinha por 64% das patentes. Na produção científica, a UCSD lidera com quase 12 mil artigos (59% da cidade). No Brasil, apenas a região metropolitana de São Paulo figura entre os 100 clusters da WIPO. Além da Qualcomm, centros de P&D de gigantes farmacêuticas mundiais operam na cidade, como Eli Lilly, Pfizer, Janssen e a Illumina, líder global de sequenciamento genético."
 
 --------------------------------------------------------------------------------
-SLIDE 25 | BLOCO 5 (2/9): O QUE É UM ECOSSISTEMA & OS 6 PONTOS-CHAVE
-Tema: Definição de Majava & Rinkinen e a Trajetória de San Diego
-Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
-Tempo sugerido: 1.75 min
-Frase de Efeito no Slide: "Conjunto dinâmico de atores e relações complementares que impulsionam o desempenho inovador."
 
-FALA SUGERIDA DA APRESENTADORA (LILIAN VEIGA VINHAS):
-"Por que estudar San Diego? Porque muitos países e regiões tentam copiar o Vale do Silício sem sucesso. San Diego é um caso fascinante porque era uma cidade periférica, considerada pequena e isolada no extremo sul da Califórnia, e que a partir dos anos 90 tornou-se polo global em biotecnologia e telecomunicações sem fio.
-Majava & Rinkinen definem ecossistema de inovação como um conjunto dinâmico e em evolução de atores, instituições, atividades e relações complementares que impulsionam o desempenho inovador.
-E os autores identificam 6 pontos-chave estruturantes na trajetória de San Diego:
-1º Ponto: A fundação da UCSD nos anos 60 com excelência em biologia e ciências naturais, recrutando mentes brilhantes que atraíram capital de risco e multinacionais.
-2º Ponto: Vocação histórica prévia em hospitais e clínicas; e um isolamento geográfico que dificultava indústrias manufatureiras e pesadas.
-3º Ponto: Decisões políticas deliberadas de zoneamento urbano nos anos 70 reservando áreas para ciências da vida próximas à universidade.
-4º Ponto: Contingências que forçam ação: a cidade tinha base militar forte, mas com o término da Guerra Fria nos anos 80, o desemprego bélico aumentou, forçando a reconversão econômica.
-5º Ponto: Criação de instituição mediadora: em 1985 nasce a CONNECT dentro da UCSD para acelerar empresas e construir confiança entre as partes.
-6º Ponto: Proximidade geográfica dos atores: distâncias curtas facilitaram a colaboração e parcerias diárias."
+SLIDE 25 | BLOCO 5 | TEMPO SUGERIDO: 2 min
+Tema: O Caso de San Diego
+Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
+
+FALA SUGERIDA DO APRESENTADOR:
+San Diego é o caso global mais celebrado de reconversão econômica: de uma base militar naval em crise na década de 1980 para a capital mundial da biotecnologia e telecomunicações (Qualcomm).
 
 --------------------------------------------------------------------------------
-SLIDE 26 | BLOCO 5 (3/9): CONNECT: A ENGENHARIA DA CONFIANÇA
-Tema: O Orquestrador Regional Bottom-Up e o Programa Springboard
-Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
-Tempo sugerido: 1.75 min
-Frase de Efeito no Slide: "Criada de baixo para cima (Bottom-Up) na UCSD em resposta à crise militar, a CONNECT reduziu a assimetria entre as 'ideias' dos cientistas e as 'regras' dos negócios."
-
-FALA SUGERIDA DA APRESENTADORA (LILIAN VEIGA VINHAS):
-"O grande diferencial de San Diego foi a CONNECT, criada em 1985.
-Ela não nasceu de cima para baixo por decreto governamental, mas de baixo para cima (bottom-up), numa união da universidade UCSD com lideranças privadas e cientistas para salvar a economia da cidade pós-crise militar.
-A CONNECT atuou como uma verdadeira aceleradora através do seu consagrado Programa Springboard. Como funcionava? Os cientistas passavam por sabatinas com advogados de patentes, executivos e investidores, que lapidavam o plano de negócios e preparavam a startup para receber investimento institucional.
-Ela cumpriu o papel crucial de reduzir a assimetria entre as ideias dos cientistas e as regras dos negócios, instaurando a cultura de doação de tempo (give-first) e mentoria voluntária.
-Atores que compuseram a rede: UCSD, institutos Scripps e Salk, aceleradoras, incubadoras, investidores-anjo, venture capital, prestadores de serviços jurídicos e financeiros, e empresas pioneiras como Hybritech e Linkabit/Qualcomm, que serviram como raízes de árvores genealógicas para novas startups."
 
 --------------------------------------------------------------------------------
-SLIDE 27 | BLOCO 5 (4/9): ANÁLISE PEST: O RADAR DE SUCESSO DE SAN DIEGO
-Tema: Diagnóstico Metodológico: Político, Econômico, Social e Tecnológico
-Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
-Tempo sugerido: 1.75 min
-Frase de Efeito no Slide: "A concentração simultânea de ideias (ciência básica) e capital viabilizou o milagre da Biotecnologia."
 
-FALA SUGERIDA DA APRESENTADORA (LILIAN VEIGA VINHAS):
-"Para sistematizar as lições de San Diego, o artigo utilizou uma Análise PEST (Político, Econômico, Social e Tecnológico) — método que também utilizamos na disciplina com o professor Yukio:
-No pilar Político (P): zoneamento urbano estratégico e programas federais contínuos de fomento como o SBIR/STTR e fundos do NIH.
-No pilar Econômico (E): farta oferta de Venture Capital especializado, e um ciclo virtuoso onde aquisições por grandes farmacêuticas e IPOs na NASDAQ reinjetavam capital reciclado nos empreendedores locais.
-No pilar Social e Cultural (S): cultura sem aversão ao risco, e altíssima mobilidade interempresarial de executivos, fazendo a expertise circular pelo ecossistema.
-No pilar Tecnológico (T): a excelência da pesquisa da UCSD e o transbordamento das empresas pioneiras.
-Como frase síntese do radar: a concentração simultânea de ideias (ciência básica) e capital viabilizou o milagre da Biotecnologia.
-Mas o artigo traz também os contrapontos e efeitos colaterais com honestidade acadêmica: a alta tecnologia gerou expansão urbana descontrolada, congestionamentos viários, gentrificação e escassez de moradia acessível para profissionais de média e baixa qualificação."
+SLIDE 26 | BLOCO 5 | TEMPO SUGERIDO: 2 min
+Tema: O que é um ecossistema de inovação?
+Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
+
+FALA SUGERIDA DO APRESENTADOR:
+O motor propulsor de San Diego foi a criação da CONNECT em 1985 pela UCSD: uma entidade orquestradora independente criada para conectar cientistas e empreendedores com advogados de patentes, investidores e mentores corporativos.
 
 --------------------------------------------------------------------------------
-SLIDE 28 | BLOCO 5 (5/9): SÃO JOSÉ DOS CAMPOS: A GÊNESE DE UMA VOCAÇÃO
-Tema: Planejamento de Estado, Geografia Estratégica e Instituições-Âncora
-Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
-Tempo sugerido: 1.75 min
-Frase de Efeito no Slide: "Na ausência de capital de risco privado no Brasil dos anos 50/60, o poder de compra estatal do Ministério da Aeronáutica atuou como indutor, viabilizando a Embraer e fornecedores locais."
-
-FALA SUGERIDA DA APRESENTADORA (LILIAN VEIGA VINHAS):
-"Fazendo agora a ponte com o nosso ecossistema em São José dos Campos: como nasceu a nossa vocação tecnológica?
-A trajetória de SJC tem raízes no início da década de 50. A cidade reuniu atributos geográficos privilegiados: localização estratégica no eixo Rio-SP pela recém-inaugurada Via Dutra, abundância de recursos hídricos, energia elétrica e relevo plano.
-Mas a grande virada veio com o Planejamento de Estado. O governo federal decidiu instalar o Centro Técnico de Aeronáutica (CTA) e o Instituto Tecnológico de Aeronáutica (ITA), estruturado a partir da experiência do MIT norte-americano, seguido pelo INPE em 1961.
-Um ponto essencial: no Brasil dos anos 50 e 60 não existia a figura do Venture Capital. O que financiou a inovação brasileira? O poder de compra do Ministério da Aeronáutica, que fez encomendas estratégicas viabilizando a Embraer, Avibras e uma sólida cadeia de fornecedores.
-E assim como em San Diego, constatou-se que quando os fundadores das empresas eram pessoas físicas, na quase totalidade eram pesquisadores saídos dos próprios institutos."
 
 --------------------------------------------------------------------------------
-SLIDE 29 | BLOCO 5 (6/9): A EVOLUÇÃO TIPOLÓGICA: DE ORGÂNICO À ORQUESTRAÇÃO
-Tema: Da Dificuldade de Acesso a Laboratórios à Gestão Formal do PIT
-Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
-Tempo sugerido: 1.75 min
-Frase de Efeito no Slide: "Da dificuldade histórica de acesso da indústria aos laboratórios de P&D para a gestão orquestrada de inovação de 25 milhões de m²."
 
-FALA SUGERIDA DA APRESENTADORA (LILIAN VEIGA VINHAS):
-"A literatura sobre polos tecnológicos classifica essas aglomerações em três tipologias:
-Polo Tipo 1 (Polo Orgânico): aglomeração espontânea sem estrutura formal de orquestração de rede.
-Polo Tipo 2: existência de estrutura organizacional prévia formalizada entre academia, indústria e governo.
-Polo Tipo 3 (Parque Tecnológico): além da estrutura organizacional formal de governança, contém terrenos, prédios e laboratórios compartilhados dedicados a abrigar indústrias e startups interagindo com centros de pesquisa.
-Podemos afirmar categoricamente que São José dos Campos nasceu como um Polo Tipo 1 nos anos 50 a 90. E o que acontecia na prática? Havia barreiras: as empresas tinham enorme dificuldade de acessar os laboratórios do CTA e do INPE, faltava fluxo de informações e apoio em gestão tecnológica.
-Com a fundação do PIT em 2009, SJC deu o salto para o Polo Tipo 3, assumindo a gestão formalizada por Organização Social — funcionando para a nossa região exatamente como a CONNECT funcionou para San Diego! E superando a dificuldade histórica de acesso a laboratórios."
+SLIDE 27 | BLOCO 5 | TEMPO SUGERIDO: 2 min
+Tema: ECOSSISTEMAS DE INOVAÇÃO • O Caso de San Diego
+Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
+
+FALA SUGERIDA DO APRESENTADOR:
+Lições cruciais de San Diego: a universidade pública (UCSD) não ficou fechada em sua torre de marfim; transformou-se no ímã que atraiu mais de 1.000 empresas de biotecnologia e fundos de venture capital globais.
 
 --------------------------------------------------------------------------------
-SLIDE 30 | BLOCO 5 (7/9): O PIT SJC & GOVERNANÇA REGIONAL NO VALE DO PARAÍBA
-Tema: Anatomia do PIT SJC, Matriz Pentagonal e Gestão Pública Regional
+
+--------------------------------------------------------------------------------
+
+SLIDE 28 | BLOCO 5 | TEMPO SUGERIDO: 2 min
+Tema: ECOSSISTEMAS DE INOVAÇÃO • O Caso de San Diego
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
-Tempo sugerido: 3 min
-Frase de Efeito no Slide: "Excelência em gestão pública e articulação territorial: o ecossistema regional do Vale do Paraíba e Litoral Norte integrando inovação entre municípios."
 
-FALA SUGERIDA DA APRESENTADORA (LILIAN VEIGA VINHAS / MARCIELE):
-"Entrando na anatomia atual do PIT SJC, analisamos o diagrama pentagonal oficial da APTSJC do Relatório Anual 2025. Esse modelo articula cinco pilares fundamentais: Empresas e Startups, Institutos de Ciência e Tecnologia (ICTs), Poder Público, Talentos e Capital de Investimento.
-E para comprovar como a Hélice Governamental atua na prática no nosso território, trazemos um recorte fundamental da entrevista com Rubens Costa, que liderou a Secretaria de Tecnologia e Inovação de Caraguatatuba.
-O Rubens compartilha um resultado empírico extraordinário: através de gestão por dados e alinhamento ágil contínuo entre secretarias essenciais (Saúde, Educação e Sepedi), Caraguatatuba conquistou o selo inédito do Tribunal de Contas do Estado (TCE-SP) de excelência no i-Gov TI — um reconhecimento de maturidade digital que menos de 4,5% dos municípios paulistas alcançam e que, em toda a RMVale e Serra, apenas São José dos Campos possuía! Vamos acompanhar!"
-[RODAR VÍDEO DO RUBENS COSTA - 1m20s]
-"Esse caso evidencia que o PIT de São José dos Campos não é uma ilha isolada: ele atua como o polo indutor e irradiador de governança, tecnologia e atração de talentos para os 39 municípios da Região Metropolitana do Vale e Litoral Norte."
+FALA SUGERIDA DO APRESENTADOR:
+Trazendo agora o olhar para o Brasil: São José dos Campos. Um ecossistema de alta tecnologia forjado pela visão militar-estatal do pós-guerra: criação do CTA em 1950, do ITA e da Embraer em 1969.
 
-DEIXA PARA O PRÓXIMO: "Agora vamos observar no Slide 31 a rede de parceiros institucionais, empresas e governos que confiam e compõem o ecossistema do PIT SJC."
+--------------------------------------------------------------------------------
 
+--------------------------------------------------------------------------------
 
-SLIDE 31 | BLOCO 5 (8/9): O PIT SJC EM 2026: CONSOLIDAÇÃO & REDES DE CONFIANÇA
-Tema: Parceiros Corporativos, Expansão dos APLs e Gazeta de SP (2026)
+SLIDE 29 | BLOCO 5 | TEMPO SUGERIDO: 2 min
+Tema: ECOSSISTEMAS DE INOVAÇÃO • O Caso de São José dos Campos
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
-Tempo sugerido: 1.75 min
-Frase de Efeito no Slide: "Parque Tecnológico não é mero condomínio imobiliário: é um ambiente catalisador de confiança, pontes relacionais e encontros humanos."
 
-FALA SUGERIDA DA APRESENTADORA (LILIAN VEIGA VINHAS):
-"Em recente entrevista publicada na Gazeta de São Paulo em maio de 2026, Jeferson Cheriegate, presidente do PIT, destacou que o Parque expandiu sua atuação para além da tecnologia pura: tornou-se articulador de cidades inteligentes, sustentabilidade, ESG e internacionalização.
+FALA SUGERIDA DO APRESENTADOR:
+Podemos afirmar categoricamente que São José dos Campos nasceu como um Polo Tipo 1 (enclave aeronáutico de base militar-estatal).
+Com a fundação do PIT em 2009, SJC deu o salto para o Polo Tipo 3, assumindo a gestão formalizada por Organização Social — funcionando para a nossa região exatamente como a CONNECT funcionou para San Diego!
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+SLIDE 30 | BLOCO 5 | TEMPO SUGERIDO: 2 min
+Tema: ECOSSISTEMAS DE INOVAÇÃO • O Caso de São José dos Campos
+Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
+
+FALA SUGERIDA DO APRESENTADOR:
+Entrando na anatomia atual do PIT SJC, fundamentada no Relatório Anual 2025 e no estudo de Thiago Rubem (2018):
+O Parque foi instituído em 2009 e sua administração é realizada pela Associação Parque Tecnológico de São José dos Campos (APTSJC), uma Organização Social privada sem fins lucrativos credenciada no Sistema Paulista de Parques Tecnológicos (SPTec/SPAI).
+O conceito teórico central é o de spill-overs territoriais: a concentração espacial não é mero espaço físico, ela gera transbordamento de conhecimento tácito que não aconteceria à distância.
+Vejam a matriz pentagonal do Relatório Anual do PIT projetada na tela em grande formato: a Tríplice Hélice central (APTSJC articulando Universidade, Governo e Empresas) coordena cinco eixos estratégicos: Defesa e Aeroespacial, TIC Vale, Agropolo, Saúde e Biotecnologia, e Mobilidade Urbana.
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+SLIDE 31 | BLOCO 5 | TEMPO SUGERIDO: 2 min
+Tema: O PIT SJC
+Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
+
+FALA SUGERIDA DO APRESENTADOR:
+E para comprovar como a Hélice Governamental atua na prática no nosso território, Rubens Costa compartilha um resultado empírico extraordinário de sua gestão na Secretaria de TI de Caraguatatuba: através de governança por dados e alinhamento ágil contínuo entre secretarias (Saúde, Educação e Sepedi), Caraguá conquistou o selo inédito do TCE-SP de excelência no i-Gov TI — um reconhecimento de maturidade digital que menos de 4,5% dos municípios de SP alcançam e que, em toda a RMVale e Serra, apenas São José dos Campos possuía! Vamos assistir!
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+SLIDE 32 | BLOCO 5 | TEMPO SUGERIDO: 3 min
+Tema: Estudo Empírico: A Hélice Pública & Gestão Regional (Selo TCE-SP)
+Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
+RECURSO DE VÍDEO EMPÍRICO: assets/recorte6_governo_caragua_sjc.mp4
+
+FALA SUGERIDA DO APRESENTADOR:
+Em recente entrevista publicada na Gazeta de São Paulo em maio de 2026, Jeferson Cheriegate, presidente do PIT, destacou que o Parque expandiu sua atuação para além da tecnologia pura: tornou-se articulador de cidades inteligentes, sustentabilidade, ESG e internacionalização.
 Olhem para o painel de logos de parceiros corporativos e governamentais que confiam no PIT: Gerdau, Nestlé, Finep, Sebrae, Thales, Novelis, Governos de SP, GO, PR e dezenas de prefeituras!
-Os APLs operam a pleno vapor: o Cluster Aeroespacial e Defesa brasileiro marcou presença em Dubai e Paris; o TIC Vale atingiu 137 empresas; o Agropolo cresceu mais de 21% com 90 empresas; a cadeia de saúde e biotecnologia realizou mais de 100 reuniões de negócios; e o hub de inovação Nexus acelerou 192 startups com 87 mentores seniores.
-Isso comprova a tese central: inovação requer instituições que gerem pertencimento, confiança e encontros presenciais contínuos."
 
 --------------------------------------------------------------------------------
-SLIDE 32 | BLOCO 5 (9/9): SÍNTESE COMPARATIVA: SAN DIEGO VS SJC
-Tema: Matriz Oficial de 6 Dimensões e Lições Estratégicas
+
+--------------------------------------------------------------------------------
+
+SLIDE 33 | BLOCO 5 | TEMPO SUGERIDO: 2 min
+Tema: O PIT SJC
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
-Tempo sugerido: 2 min
-Frase de Efeito no Slide: "Não existem fórmulas prontas: excelência acadêmica, visão territorial e entidades orquestradoras que geram laços de confiança humana."
 
-FALA SUGERIDA DA APRESENTADORA (LILIAN VEIGA VINHAS):
-"Para consolidar este bloco de benchmarking internacional, apresento nossa matriz comparativa detalhada em 6 dimensões estratégicas:
-1. Matriz Científica: San Diego ancorou-se em saúde e UCSD com demandas navais; SJC ancorou-se no planejamento de defesa aeroespacial do CTA/ITA/INPE.
-2. Governança: San Diego operou bottom-up com a ONG CONNECT; SJC evoluiu do polo orgânico (Tipo 1) ao orquestrado (Tipo 3) pelo PIT gerido por Organização Social.
-3. Território: Zoneamento urbano em 1970 em San Diego; Adensamento territorial no PIT gerando transbordamentos tácitos (spill-overs) em SJC.
-4. Genealogia: Startups pioneiras Hybritech e Qualcomm em San Diego; Embraer, Avibras e spin-offs de pesquisadores em SJC.
-5. Financiamento: Venture Capital e IPOs nos EUA; Encomendas estatais históricas de defesa e atual modelo híbrido de investimentos no PIT.
-6. Diversificação: San Diego lidera em Biotecnologia e Telecom; SJC expandiu o aeroespacial para TIC Vale, Agropolo, Saúde, Mobilidade e Cidades Inteligentes.
-Conclusão Geral: Não existem fórmulas prontas. Parques tecnológicos não são empreendimentos imobiliários, mas ecossistemas relacionais de confiança humana mútua!"
+FALA SUGERIDA DO APRESENTADOR:
+Quadro comparativo síntese: San Diego (liderança pela academia e venture capital privado) vs. São José dos Campos (origem estatal aeroespacial, hoje maturando a governança privada e atração de startups via PIT).
 
 --------------------------------------------------------------------------------
-SLIDE 33 | MOMENTO KAHOOT RPG • FASE 5
+
+--------------------------------------------------------------------------------
+
+SLIDE 34 | BLOCO 5 | TEMPO SUGERIDO: 2.5 min
+Tema: Comparativo
+Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
+
+FALA SUGERIDA DO APRESENTADOR:
+Penúltima rodada! Fase 5 do Kahoot RPG.
+Perguntas sobre o benchmarking San Diego vs. SJC, matriz pentagonal da APTSJC e o papel da CONNECT. 3 minutos na contagem regressiva!
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+SLIDE 35 | MOMENTO KAHOOT 5 | TEMPO SUGERIDO: 3 min
 Tema: Desafio da Fase 5: Pavilhão Aeroespacial & San Diego
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
-Tempo sugerido: 3 min
-Frase de Efeito no Slide: "Respondam às 3 perguntas sobre San Diego, o orquestrador CONNECT, o programa Springboard e o PIT SJC!"
+Frase-Chave no Slide: ""Acesse o jogo no smartphone, caminhe até a estação no mapa e responda às 3 perguntas!""
 
-FALA SUGERIDA DA APRESENTADORA (LILIAN VEIGA VINHAS):
-"[AO PROJETAR ESTE SLIDE, ANUNCIE AO MICROFONE:]
-'Atenção turma, fase liberada no celular! Caminhem até a estação Pavilhão Aeroespacial & San Diego e respondam às 3 perguntas! O ranking ao vivo no telão está computando as respostas! Vocês têm 2 minutos!'"
+FALA SUGERIDA DO APRESENTADOR:
+Passo a palavra para o colega Renato Paschoal, que apresentará os achados da nossa imersão de campo in loco no Parque Tecnológico e na UNIFESP.
 
 --------------------------------------------------------------------------------
-SLIDE 34 | O ELO UNIVERSITÁRIO: UNIFESP & PIT SJC
-Tema: PPG-PIT: Co-criação na Prática & Laboratórios Multiusuários
+
+--------------------------------------------------------------------------------
+
+SLIDE 36 | CASO PIT | TEMPO SUGERIDO: 3 min
+Tema: A Integração UNIFESP & PIT: Co-criação na Prática
 Apresentador(a): Josué Jofre (4ª) / Marciele (5ª)
-Tempo sugerido: 3 min
-Frase de Efeito no Slide: "O PPG-PIT não forma apenas teóricos: forma orquestradores capazes de dialogar com a indústria."
+Frase-Chave no Slide: ""O PPG-PIT não forma apenas teóricos: forma orquestradores capazes de dialogar com a indústria.""
 
-FALA SUGERIDA DO APRESENTADOR (JOSUÉ JOFRE):
-"Como futuros mestres e doutores do PPG-PIT, este slide nos toca diretamente. A integração entre a UNIFESP e o Parque Tecnológico de São José dos Campos não é uma promessa teórica: é uma simbiose operacional diária.
-Nós temos aqui três pilares concretos:
-1. Laboratórios Abertos e Multiusuários do Campus Parque Tecnológico para testes e validação;
-2. Mestrado e Doutorado PIT com dissertações e teses orientadas a problemas reais dos nossos APLs;
-3. Empreendedorismo Acadêmico gerando spin-offs deep tech no Nexus Hub com fomento PIPE-FAPESP e FINEP."
+FALA SUGERIDA DO APRESENTADOR:
+A presença física da UNIFESP dentro do PIT SJC é a materialização da co-criação na prática. Professores e mestrandos dividem o mesmo espaço com engenheiros de montadoras e startups de inteligência artificial.
 
 --------------------------------------------------------------------------------
-SLIDE 35 | ESTUDO EMPÍRICO 3: GOVERNANÇA DE PI E NDA
-Tema: Propriedade Intelectual no "Dia Zero" (Recorte 3 de 4)
+
+--------------------------------------------------------------------------------
+
+SLIDE 37 | ENTREVISTA | TEMPO SUGERIDO: 3 min
+Tema: Governança de PI & NDA: Protegendo Patentes sem Travar a Pesquisa
 Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
-Tempo sugerido: 3 min
-Frase de Efeito no Slide: "Primeira coisa é o NDA no Dia Zero: protegemos nossa tecnologia patenteada, mas permitimos o mergulho do pesquisador e a liberação gradual de publicações. A gente faz pesquisa que vire produto e venda." — Rodrigo Saad (Recorte 1)
+Frase-Chave no Slide: ""Primeira coisa é o NDA no Dia Zero: protegemos nossa tecnologia patenteada, mas permitimos o mergulho do pesquisador e a liberação gradual de publicações. A gente faz pesquisa que vire produto e venda." — Rodrigo Saad (Recorte 1)"
+RECURSO DE VÍDEO EMPÍRICO: assets/recorte1_pi_nda.mp4?v=2
 
-FALA SUGERIDA DO APRESENTADOR (RENATO PASCHOAL):
-"Dando continuidade ao nosso estudo empírico, assumo a fala para conectar a prática da indústria à literatura de governança de ecossistemas (Machado et al., 2025).
-O maior dilema clássico da inovação aberta é: como a indústria multinacional pode abrir seus desafios fabris para a universidade sem arriscar o vazamento de seus segredos industriais? E, do outro lado, como o mestrando da UNIFESP pode pesquisar sem ficar proibido de defender sua dissertação?
-A resposta do Rodrigo Saad é cirúrgica: governança de PI pactuada no 'Dia Zero'.
-Vejamos o Recorte 1 da entrevista:
-[RENATO DÁ PLAY NO RECORTE 1 (1m09s) NO TELÃO]
-Notem a precisão: o NDA é assinado antes de o pesquisador pisar na fábrica, mas o contrato prevê um cronograma de liberação gradual de artigos científicos. O segredo industrial patenteado é protegido, e a carreira acadêmica do pesquisador é preservada."
+FALA SUGERIDA DO APRESENTADOR:
+Como apontado por Thiago Rubem e confirmado na nossa atividade prática, a governança de Propriedade Intelectual e os acordos de confidencialidade (NDA) são os pilares que sustentam a confiança na co-criação.
+Rodrigo Saad esclarece com transparência cirúrgica como funciona a mecânica contratual de PI na prática: definir a priori de quem é a titularidade da patente e os royalties de exploração comercial, permitindo que a pesquisa avance protegida e sem surpresas jurídicas. Vamos assistir!
 
 --------------------------------------------------------------------------------
-SLIDE 36 | SÍNTESE PRÁTICA: 4 EIXOS DE GOVERNANÇA NO PIT SJC
-Tema: Contratos & PI, Confiança, Marco Legal e Formação Transdisciplinar
+
+--------------------------------------------------------------------------------
+
+SLIDE 38 | ENTREVISTA | TEMPO SUGERIDO: 4 min
+Tema: 4 Eixos de Governança Analisados na Prática do PIT SJC
 Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
-Tempo sugerido: 4 min
-Frase de Efeito no Slide: "A ponte universidade-empresa exige alinhamento prévio de governança, confiança relacional e domínio do marco regulatório."
+Frase-Chave no Slide: ""A ponte universidade-empresa exige alinhamento prévio de governança, confiança relacional e domínio do marco regulatório.""
 
-FALA SUGERIDA DO APRESENTADOR (RENATO PASCHOAL):
-"Da nossa análise empírica com o setor produtivo, sintetizamos 4 eixos práticos fundamentais de governança no PIT SJC:
-1. Contratos e PI Antecipados: Definição clara de titularidade de patentes antes de iniciar os testes;
-2. Confiança e Capital Relacional: A convivência diária no parque reduz atritos e custos de transação;
-3. Aplicação do Marco Legal de CTI (Lei 13.243/16): Segurança para compartilhar laboratórios federais e conceder bolsas;
-4. Formação Transdisciplinar: O papel essencial do PPG-PIT em formar mestres e doutores capazes de transitar com fluidez entre a ciência de ponta e a viabilidade econômica."
+FALA SUGERIDA DO APRESENTADOR:
+Analisamos os 4 eixos práticos de governança mapeados no PIT SJC: Marco Legal de CTI, Compartilhamento de Infraestrutura Laboratorial, Gestão de Conflitos de Interesse e Retenção de Capital Humano Qualificado.
 
 --------------------------------------------------------------------------------
-SLIDE 37 | BLOCO 6: CRÍTICAS E LIMITAÇÕES (SHEN ET AL.)
-Tema: Pés no Chão: Evitando o 'Teatro da Inovação'
+
+--------------------------------------------------------------------------------
+
+SLIDE 39 | BLOCO 6 | TEMPO SUGERIDO: 4 min
+Tema: Pés no Chão (Shen et al.): Evitando o "Teatro da Inovação"
 Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
-Tempo sugerido: 4 min
-Frase de Efeito no Slide: "Onde começa e onde termina um ecossistema? A literatura sofre para traçar fronteiras estritas."
+Frase-Chave no Slide: ""Onde começa e onde termina um ecossistema? A literatura sofre para traçar fronteiras estritas.""
 
-FALA SUGERIDA DO APRESENTADOR (RENATO PASCHOAL):
-"No Bloco 6, trazemos com Shen et al. o contraponto crítico necessário a qualquer análise acadêmica rigorosa. Ecossistemas não são panaceia.
-A literatura recente aponta três grandes fragilidades metodológicas:
-1. Fronteiras Porosas: O PIT SJC termina na Rodovia Dutra, engloba o Vale do Paraíba ou estende seus tentáculos até fornecedores em Munique e Toulouse?
-2. Causalidade Complexa: A startup faturou milhões porque estava no parque tecnológico ou por causa de incentivos fiscais e conjuntura macroeconômica?
-3. Viés de Sucesso: Quase todos os artigos estudam casos vitoriosos como San Diego e Boston, ignorando as centenas de parques tecnológicos que faliram pelo mundo."
+FALA SUGERIDA DO APRESENTADOR:
+Pés no chão: Shen et al. alertam para o risco do 'teatro da inovação' — eventos e discursos bonitos que não geram patentes, empregos qualificados nem faturamento real. O ecossistema precisa medir impacto concreto.
 
 --------------------------------------------------------------------------------
-SLIDE 38 | BLOCO 6: O LADO SOMBRIO DOS ECOSSISTEMAS
-Tema: Lock-in, Predação e a Barreira Cultural da Gestão Tradicional (Recorte 4 de 4)
+
+--------------------------------------------------------------------------------
+
+SLIDE 40 | BLOCO 6 | TEMPO SUGERIDO: 4 min
+Tema: As Armadilhas da Rede: Lock-in, Predação e a Barreira Cultural da Gestão
 Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
-Tempo sugerido: 4 min
-Frase de Efeito no Slide: "O maior desafio não é tecnológico: é convencer a diretoria de uma empresa tradicional a não querer apenas 'comprar pronto' da prateleira." — Rodrigo Saad (Recorte 4)
+Frase-Chave no Slide: ""O maior desafio não é tecnológico: é convencer a diretoria de uma empresa tradicional a não querer apenas 'comprar pronto' da prateleira." — Rodrigo Saad (Recorte 4)"
+RECURSO DE VÍDEO EMPÍRICO: assets/recorte4_barreira_cultural.mp4?v=2
 
-FALA SUGERIDA DO APRESENTADOR (RENATO PASCHOAL / MARCIELE):
-"Fechando o Bloco 6, analisamos o 'Lado Sombrio dos Ecossistemas'.
-Além do risco de lock-in predatório e do mero 'Teatro da Inovação' (eventos com pizza que não geram patentes), existe uma barreira que os livros muitas vezes ignoram: a inércia cultural da alta gestão tradicional.
-O Rodrigo Saad relatou com muita honestidade a dor de convencer diretorias de empresas de 50 anos a investirem em ecossistemas de inovação aberta em vez de simplesmente comprar tecnologia pronta da prateleira internacional.
-Vejam o Recorte 4:
-[APRESENTADOR DÁ PLAY NO RECORTE 4 (0m57s) NO TELÃO]
-Essa barreira cultural é o verdadeiro gargalo. Sem liderança orquestradora capaz de traduzir a incerteza do P&D em retorno estratégico, a empresa fica presa a fórmulas do passado e é engolida pela concorrência global."
+FALA SUGERIDA DO APRESENTADOR:
+Fechando a análise empírica, examinamos os gargalos e riscos de predação na rede discutidos na literatura de governança.
+Rodrigo Saad encerra com uma reflexão profunda sobre o maior obstáculo da inovação corporativa: a barreira cultural e a miopia de diretorias tradicionais habituadas a métricas de curto prazo, que relutam em validar tecnologias fora de seus muros até que um competidor disruptivo as ameace. Vamos acompanhar!
 
 --------------------------------------------------------------------------------
-SLIDE 39 | MOMENTO KAHOOT RPG • FASE 6
+
+--------------------------------------------------------------------------------
+
+SLIDE 41 | MOMENTO KAHOOT 6 | TEMPO SUGERIDO: 3 min
 Tema: Desafio da Fase 6: Living Lab Net-Zero & Fronteiras
 Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
-Tempo sugerido: 3 min
-Frase de Efeito no Slide: "Última rodada de perguntas! Decisão do ranking no telão!"
+Frase-Chave no Slide: ""O link do jogo está no chat: acesse, ande até a Fase 6 e responda o mais rápido possível!""
 
-FALA SUGERIDA DO APRESENTADOR (RENATO PASCHOAL):
-"[APRESENTADOR AO MICROFONE:] 'Última rodada de perguntas individuais! Acessem a estação Living Lab Net-Zero & Fronteiras no mapa do jogo. São as 3 questões finais decisivas sobre limitações e teatro da inovação! Respondam com agilidade para pontuar no ranking geral!'"
+FALA SUGERIDA DO APRESENTADOR:
+Última chance de pontuar no Kahoot RPG! Fase 6 ativada.
+Questões sobre PI, NDAs, governança do PIT e barreiras culturais. Definam suas posições finais antes da consolidação do pódio!
 
 --------------------------------------------------------------------------------
-SLIDE 40 | DINÂMICA INTERATIVA: CONSOLIDAÇÃO DO KAHOOT RPG
-Tema: Fechamento das 18 Questões: O Pódio Provisório
+
+--------------------------------------------------------------------------------
+
+SLIDE 42 | DINÂMICA | TEMPO SUGERIDO: 3 min
+Tema: Consolidação das 18 Questões: O Pódio Provisório
 Apresentador(a): Jéssica David (4ª) / Marciele (5ª)
-Tempo sugerido: 4 min
-Frase de Efeito no Slide: "Parabéns aos líderes! Vamos agora conferir a classificação geral e os acertos da sala!"
+Frase-Chave no Slide: ""18 decisões estratégicas: quem articulou a melhor orquestração de valor no campus?""
 
-FALA SUGERIDA DA APRESENTADORA (JÉSSICA DAVID):
-"Com as 18 perguntas concluídas, projetamos aqui a classificação consolidada da turma! Jéssica conduzirá o encerramento da dinâmica, parabenizando os melhores colocados e preparando a turma para a análise diagnóstica dos erros mais frequentes."
+FALA SUGERIDA DO APRESENTADOR:
+Consolidação das 18 questões do seminário!
+Vejam na tela o pódio provisório dos colegas que lideraram a pontuação ao longo das 6 fases. Parabéns a todos pelo altíssimo nível de engajamento!
 
 --------------------------------------------------------------------------------
-SLIDE 41 | DINÂMICA INTERATIVA: CLASSIFICAÇÃO GERAL & DIAGNÓSTICO
-Tema: Análise de Dados e Pódio Final com Gráficos Cienciométricos
+
+--------------------------------------------------------------------------------
+
+SLIDE 43 | DINÂMICA | TEMPO SUGERIDO: 6 min
+Tema: Classificação Geral & Diagnóstico Cienciométrico dos Erros
 Apresentador(a): Jéssica David (4ª) / Marciele (5ª)
-Tempo sugerido: 5 min
-Frase de Efeito no Slide: "Aprender com os erros: conectando as dúvidas da turma com os autores seminais."
+Frase-Chave no Slide: ""Errar na simulação é aprendizado; orquestrar na prática exige precisão científica.""
 
-FALA SUGERIDA DA APRESENTADORA (JÉSSICA DAVID):
-"Análise pedagógica dos erros: examinamos quais conceitos geraram mais dúvidas na turma (coopetição, risco de coinovação, orquestração sem autoridade ou modelo CONNECT) e conectamos essas dúvidas diretamente aos autores seminais estudados."
+FALA SUGERIDA DO APRESENTADOR:
+Diagnóstico cienciométrico dos erros e acertos: examinamos quais conceitos geraram mais dúvidas na turma e consolidamos os aprendizados para fixação definitiva.
 
 --------------------------------------------------------------------------------
-SLIDE 42 | CONCLUSÕES: AS 5 LEIS DOS ECOSSISTEMAS
-Tema: Síntese Estratégica Final
+
+--------------------------------------------------------------------------------
+
+SLIDE 44 | CONCLUSÕES | TEMPO SUGERIDO: 3 min
+Tema: As 5 Leis Fundamentais dos Ecossistemas de Inovação
 Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
-Tempo sugerido: 4 min
-Frase de Efeito no Slide: "As 5 Leis Fundamentais dos Ecossistemas de Inovação."
+Frase-Chave no Slide: ""Princípios invariantes validados pela literatura de 1993 a 2026 e pelo case PIT SJC.""
 
 FALA SUGERIDA DO APRESENTADOR:
-"Encaminhando para as conclusões finais do nosso grupo: sintetizamos as 5 leis fundamentais dos ecossistemas de inovação. A lição mestra é que nenhum ator inova sozinho; o território vivo importa; e sem uma orquestração generosa e neutra, a rede se dispersa ou vira mero condomínio empresarial."
+Sintetizamos as 5 Leis Fundamentais dos Ecossistemas de Inovação:
+1ª Simbiose Heterogênea;
+2ª Orquestração sem Hierarquia;
+3ª Proteção de PI com Confiança;
+4ª Enraizamento Territorial com Escala Global;
+5ª Imperativo Ecológico Net-Zero.
 
 --------------------------------------------------------------------------------
-SLIDE 43 | DEBATE ABERTO: PROVOCAÇÕES PARA A TURMA
-Tema: Considerações da Banca Examinadora e Discussão Geral
+
+--------------------------------------------------------------------------------
+
+SLIDE 45 | DEBATE | TEMPO SUGERIDO: 4 min
+Tema: Provocações Estratégicas para o PPG-PIT e PIT SJC
 Apresentador(a): Grupo Inteiro (4ª e 5ª)
-Tempo sugerido: 10 min
-Frase de Efeito no Slide: "Como nós, como futuros mestres e doutores, aceleraremos a inovação brasileira?"
+Frase-Chave no Slide: ""Como nós, como futuros mestres e doutores, aceleraremos a inovação brasileira?""
 
 FALA SUGERIDA DO APRESENTADOR:
-"Abrimos agora a palavra para a banca examinadora — professora Iraci e professor Yukio — e para os nossos colegas de pós-graduação. Convidamos todos a refletirem sobre as perguntas provocativas que deixamos na tela."
+Encerramos com provocações estratégicas para o PPG-PIT UNIFESP e para o PIT SJC:
+Como atrair mais venture capital para Deep Techs? Como engajar mais a 4ª hélice cidadã? E como consolidar o PIT como polo indutor de descarbonização industrial do Brasil?
+Muito obrigado a todos, aos professores e colegas pela atenção!
+};
 
-================================================================================
-FIM DO ROTEIRO OFICIAL • GRUPO 5 • PPG-PIT UNIFESP 2026
-================================================================================
+    /* Deck State */
+    let currentSlide = 1;
+    const totalSlides = 44;
+    let isClockRunning = false;
+    let clockSeconds = 120 * 60; // 120 minutes
+    let clockInterval = null;
+
+    function showSlide(num) {
+      if (num < 1) num = 1;
+      if (num > totalSlides) num = totalSlides;
+      currentSlide = num;
+
+      document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('video').forEach(v => v.pause());
+      const activeEl = document.querySelector(
+
+--------------------------------------------------------------------------------
