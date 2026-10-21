@@ -2,8 +2,8 @@
 ROTEIRO DE APRESENTAÇÃO E FALAS - SEMINÁRIO 5: ECOSSISTEMAS DE INOVAÇÃO & PIT SJC
 PROGRAMA DE PÓS-GRADUAÇÃO EM PROPRIEDADE INTELECTUAL E TRANSFERÊNCIA DE TECNOLOGIA (PPGPIT/UNIFESP)
 DISCIPLINA: GESTÃO ESTRATÉGICA DA INOVAÇÃO | PROFESSORES: IRACI E YUKIO
-DURAÇÃO TOTAL: 120 MINUTOS | 45 SLIDES | 6 BLOCOS DINÂMICOS COM KAHOOT RPG
-ESTUDOS DE CAMPO EMPÍRICOS: RODRIGO SAAD (INDÚSTRIA/P&D) & RUBENS COSTA (GOVERNO/STARTUPS)
+DURAÇÃO TOTAL: 120 MINUTOS | 47 SLIDES | 6 BLOCOS DINÂMICOS COM KAHOOT RPG
+ESTUDOS DE CAMPO: RODRIGO SAAD (INDÚSTRIA), RUBENS COSTA (GOVERNO) & RENATO BOSCHILIA JR. (PIT SJC)
 ================================================================================
 
 SLIDE 01 | ABERTURA | TEMPO SUGERIDO: 2 min
@@ -243,8 +243,7 @@ Tema: Como coordenar atores independentes?
 Apresentador(a): Jéssica David (4ª) / Joel (5ª)
 
 FALA SUGERIDA DO APRESENTADOR:
-Momento decisivo! Fase 3 do Kahoot RPG no ar.
-Testaremos o domínio de vocês sobre Machado et al., Dhanaraj & Parkhe e liderança sem hierarquia. O ranking provisório vai oscilar agora. Respondam com atenção!
+Passo a palavra para o colega que nos conduzirá pela análise das competências dinâmicas de coordenação.
 
 --------------------------------------------------------------------------------
 
@@ -256,7 +255,8 @@ Apresentador(a): Jéssica David (4ª) / Joel (5ª)
 Frase-Chave no Slide: ""O link do jogo está no chat: acesse, ande até a Fase 2 e responda o mais rápido possível!""
 
 FALA SUGERIDA DO APRESENTADOR:
-Como construir ecossistemas na prática? Nathan Furr e Shipilov (MIT Sloan) ensinam que construir ecossistemas não é impor uma plataforma de cima para baixo, mas criar valor incremental, conectando capacidades pré-existentes e estabelecendo confiança entre os membros fundadores.
+Momento decisivo! Fase 3 do Kahoot RPG no ar.
+Testaremos o domínio de vocês sobre Machado et al., Dhanaraj & Parkhe e liderança sem hierarquia. O ranking provisório vai oscilar agora. Respondam com atenção!
 
 --------------------------------------------------------------------------------
 
@@ -268,9 +268,7 @@ Apresentador(a): Josué Jofre (4ª) / Joel (5ª)
 Frase-Chave no Slide: ""Não tente impor uma visão imperial fechada: ecossistemas robustos nascem de experimentos adaptativos.""
 
 FALA SUGERIDA DO APRESENTADOR:
-Como demonstrado por Furr e Shipilov, orquestrar deep techs exige plataformas com filtro rigoroso de maturidade.
-No laboratório de SJC, esse papel é executado com precisão pelo Nexus Hub de Inovação do PIT.
-Rodrigo Saad detalha a importância da curadoria técnica do Nexus: evitar que o ecossistema caia na armadilha do oportunismo comercial superficial, conectando as indústrias apenas a startups com validação tecnológica real. Vamos acompanhar!
+Como construir ecossistemas na prática? Nathan Furr e Shipilov (MIT Sloan) ensinam que construir ecossistemas não é impor uma plataforma de cima para baixo, mas criar valor incremental, conectando capacidades pré-existentes e estabelecendo confiança entre os membros fundadores.
 
 --------------------------------------------------------------------------------
 
@@ -283,7 +281,9 @@ Frase-Chave no Slide: ""O ecossistema precisa de curadoria séria. Evitamos os '
 RECURSO DE VÍDEO EMPÍRICO: assets/recorte2_oportunismo_curadoria.mp4?v=2
 
 FALA SUGERIDA DO APRESENTADOR:
-A liderança sem autoridade hierárquica exige que o orquestrador domine a neutralidade relacional e a transparência. Se o orquestrador for percebido como concorrente direto dos membros da rede, a confiança rui e a colaboração cessa.
+Como demonstrado por Furr e Shipilov, orquestrar deep techs exige plataformas com filtro rigoroso de maturidade.
+No laboratório de SJC, esse papel é executado com precisão pelo Nexus Hub de Inovação do PIT.
+Rodrigo Saad detalha a importância da curadoria técnica do Nexus: evitar que o ecossistema caia na armadilha do oportunismo comercial superficial, conectando as indústrias apenas a startups com validação tecnológica real. Vamos acompanhar!
 
 --------------------------------------------------------------------------------
 
@@ -295,7 +295,7 @@ Apresentador(a): Josué Jofre (4ª) / Joel (5ª)
 Frase-Chave no Slide: ""Em um ecossistema, ninguém manda em ninguém: lidera quem constrói o melhor consenso.""
 
 FALA SUGERIDA DO APRESENTADOR:
-Fase 4 do Kahoot RPG aberta! 3 questões sobre Furr & Shipilov, Nexus Hub e liderança relacional. 3 minutos de imersão competitiva. Confiram o painel e pontuem!
+A liderança sem autoridade hierárquica exige que o orquestrador domine a neutralidade relacional e a transparência. Se o orquestrador for percebido como concorrente direto dos membros da rede, a confiança rui e a colaboração cessa.
 
 --------------------------------------------------------------------------------
 
@@ -307,7 +307,7 @@ Apresentador(a): Josué Jofre (4ª) / Joel (5ª)
 Frase-Chave no Slide: ""O link do jogo está no chat: acesse, ande até a Fase 3 e responda o mais rápido possível!""
 
 FALA SUGERIDA DO APRESENTADOR:
-Passo a palavra para a colega Lilian Veiga, que nos conduzirá pela análise comparativa e benchmarking internacional: o caso clássico de San Diego.
+Fase 4 do Kahoot RPG aberta! 3 questões sobre Furr & Shipilov, Nexus Hub e liderança relacional. 3 minutos de imersão competitiva. Confiram o painel e pontuem!
 
 --------------------------------------------------------------------------------
 
@@ -318,7 +318,7 @@ Tema: O Caso de San Diego
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 
 FALA SUGERIDA DO APRESENTADOR:
-San Diego é o caso global mais celebrado de reconversão econômica: de uma base militar naval em crise na década de 1980 para a capital mundial da biotecnologia e telecomunicações (Qualcomm).
+Passo a palavra para a colega Lilian Veiga, que nos conduzirá pela análise comparativa e benchmarking internacional: o caso clássico de San Diego.
 
 --------------------------------------------------------------------------------
 
@@ -329,7 +329,7 @@ Tema: O que é um ecossistema de inovação?
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 
 FALA SUGERIDA DO APRESENTADOR:
-O motor propulsor de San Diego foi a criação da CONNECT em 1985 pela UCSD: uma entidade orquestradora independente criada para conectar cientistas e empreendedores com advogados de patentes, investidores e mentores corporativos.
+San Diego é o caso global mais celebrado de reconversão econômica: de uma base militar naval em crise na década de 1980 para a capital mundial da biotecnologia e telecomunicações (Qualcomm).
 
 --------------------------------------------------------------------------------
 
@@ -340,7 +340,7 @@ Tema: ECOSSISTEMAS DE INOVAÇÃO • O Caso de San Diego
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 
 FALA SUGERIDA DO APRESENTADOR:
-Lições cruciais de San Diego: a universidade pública (UCSD) não ficou fechada em sua torre de marfim; transformou-se no ímã que atraiu mais de 1.000 empresas de biotecnologia e fundos de venture capital globais.
+O motor propulsor de San Diego foi a criação da CONNECT em 1985 pela UCSD: uma entidade orquestradora independente criada para conectar cientistas e empreendedores com advogados de patentes, investidores e mentores corporativos.
 
 --------------------------------------------------------------------------------
 
@@ -351,13 +351,24 @@ Tema: ECOSSISTEMAS DE INOVAÇÃO • O Caso de San Diego
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 
 FALA SUGERIDA DO APRESENTADOR:
-Trazendo agora o olhar para o Brasil: São José dos Campos. Um ecossistema de alta tecnologia forjado pela visão militar-estatal do pós-guerra: criação do CTA em 1950, do ITA e da Embraer em 1969.
+Lições cruciais de San Diego: a universidade pública (UCSD) não ficou fechada em sua torre de marfim; transformou-se no ímã que atraiu mais de 1.000 empresas de biotecnologia e fundos de venture capital globais.
 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
 
 SLIDE 29 | BLOCO 5 | TEMPO SUGERIDO: 2 min
+Tema: ECOSSISTEMAS DE INOVAÇÃO • O Caso de São José dos Campos
+Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
+
+FALA SUGERIDA DO APRESENTADOR:
+Trazendo agora o olhar para o Brasil: São José dos Campos. Um ecossistema de alta tecnologia forjado pela visão militar-estatal do pós-guerra: criação do CTA em 1950, do ITA e da Embraer em 1969.
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+SLIDE 30 | BLOCO 5 | TEMPO SUGERIDO: 2 min
 Tema: ECOSSISTEMAS DE INOVAÇÃO • O Caso de São José dos Campos
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 
@@ -369,8 +380,8 @@ Com a fundação do PIT em 2009, SJC deu o salto para o Polo Tipo 3, assumindo a
 
 --------------------------------------------------------------------------------
 
-SLIDE 30 | BLOCO 5 | TEMPO SUGERIDO: 2 min
-Tema: ECOSSISTEMAS DE INOVAÇÃO • O Caso de São José dos Campos
+SLIDE 31 | BLOCO 5 | TEMPO SUGERIDO: 2 min
+Tema: O PIT SJC
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 
 FALA SUGERIDA DO APRESENTADOR:
@@ -383,9 +394,10 @@ Vejam a matriz pentagonal do Relatório Anual do PIT projetada na tela em grande
 
 --------------------------------------------------------------------------------
 
-SLIDE 31 | BLOCO 5 | TEMPO SUGERIDO: 2 min
-Tema: O PIT SJC
+SLIDE 32 | BLOCO 5 | TEMPO SUGERIDO: 3 min
+Tema: Estudo Empírico: A Hélice Pública & Gestão Regional (Selo TCE-SP)
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
+RECURSO DE VÍDEO EMPÍRICO: assets/recorte6_governo_caragua_sjc.mp4
 
 FALA SUGERIDA DO APRESENTADOR:
 E para comprovar como a Hélice Governamental atua na prática no nosso território, Rubens Costa compartilha um resultado empírico extraordinário de sua gestão na Secretaria de TI de Caraguatatuba: através de governança por dados e alinhamento ágil contínuo entre secretarias (Saúde, Educação e Sepedi), Caraguá conquistou o selo inédito do TCE-SP de excelência no i-Gov TI — um reconhecimento de maturidade digital que menos de 4,5% dos municípios de SP alcançam e que, em toda a RMVale e Serra, apenas São José dos Campos possuía! Vamos assistir!
@@ -394,10 +406,22 @@ E para comprovar como a Hélice Governamental atua na prática no nosso territó
 
 --------------------------------------------------------------------------------
 
-SLIDE 32 | BLOCO 5 | TEMPO SUGERIDO: 3 min
-Tema: Estudo Empírico: A Hélice Pública & Gestão Regional (Selo TCE-SP)
+SLIDE 33 | BLOCO 5 | TEMPO SUGERIDO: 3 min
+Tema: Estudo Empírico: O Modelo de Gestão do PIT SJC (OS & Contrato de Metas)
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
-RECURSO DE VÍDEO EMPÍRICO: assets/recorte6_governo_caragua_sjc.mp4
+RECURSO DE VÍDEO EMPÍRICO: assets/recorte7_governanca_pit_os.mp4
+
+FALA SUGERIDA DO APRESENTADOR:
+E para esclarecer a engenharia jurídica e operacional do próprio PIT SJC, Renato Boschilia Jr., gestor de projetos e captação do Parque, detalha a divisão entre o patrimônio físico e a inteligência da rede: o terreno é municipal, mas toda a alma e o corpo técnico pertencem à Associação OS sem fins lucrativos.
+A gestão é regida por um Contrato de Gestão anual com a Prefeitura, balizado em metas estritas de conexões, projetos contratados, eventos de capacitação e captação de recursos a fundo perdido para as empresas. É uma política pública orientada a metas socioeconômicas de longo prazo. Vamos assistir!
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+SLIDE 34 | BLOCO 5 | TEMPO SUGERIDO: 2 min
+Tema: O PIT SJC
+Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 
 FALA SUGERIDA DO APRESENTADOR:
 Em recente entrevista publicada na Gazeta de São Paulo em maio de 2026, Jeferson Cheriegate, presidente do PIT, destacou que o Parque expandiu sua atuação para além da tecnologia pura: tornou-se articulador de cidades inteligentes, sustentabilidade, ESG e internacionalização.
@@ -407,8 +431,8 @@ Olhem para o painel de logos de parceiros corporativos e governamentais que conf
 
 --------------------------------------------------------------------------------
 
-SLIDE 33 | BLOCO 5 | TEMPO SUGERIDO: 2 min
-Tema: O PIT SJC
+SLIDE 35 | BLOCO 5 | TEMPO SUGERIDO: 2.5 min
+Tema: Comparativo
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 
 FALA SUGERIDA DO APRESENTADOR:
@@ -418,9 +442,10 @@ Quadro comparativo síntese: San Diego (liderança pela academia e venture capit
 
 --------------------------------------------------------------------------------
 
-SLIDE 34 | BLOCO 5 | TEMPO SUGERIDO: 2.5 min
-Tema: Comparativo
+SLIDE 36 | MOMENTO KAHOOT 5 | TEMPO SUGERIDO: 3 min
+Tema: Desafio da Fase 5: Pavilhão Aeroespacial & San Diego
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
+Frase-Chave no Slide: ""Acesse o jogo no smartphone, caminhe até a estação no mapa e responda às 3 perguntas!""
 
 FALA SUGERIDA DO APRESENTADOR:
 Penúltima rodada! Fase 5 do Kahoot RPG.
@@ -430,10 +455,10 @@ Perguntas sobre o benchmarking San Diego vs. SJC, matriz pentagonal da APTSJC e 
 
 --------------------------------------------------------------------------------
 
-SLIDE 35 | MOMENTO KAHOOT 5 | TEMPO SUGERIDO: 3 min
-Tema: Desafio da Fase 5: Pavilhão Aeroespacial & San Diego
-Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
-Frase-Chave no Slide: ""Acesse o jogo no smartphone, caminhe até a estação no mapa e responda às 3 perguntas!""
+SLIDE 37 | CASO PIT | TEMPO SUGERIDO: 3 min
+Tema: A Integração UNIFESP & PIT: Co-criação na Prática
+Apresentador(a): Josué Jofre (4ª) / Marciele (5ª)
+Frase-Chave no Slide: ""O PPG-PIT não forma apenas teóricos: forma orquestradores capazes de dialogar com a indústria.""
 
 FALA SUGERIDA DO APRESENTADOR:
 Passo a palavra para o colega Renato Paschoal, que apresentará os achados da nossa imersão de campo in loco no Parque Tecnológico e na UNIFESP.
@@ -442,19 +467,20 @@ Passo a palavra para o colega Renato Paschoal, que apresentará os achados da no
 
 --------------------------------------------------------------------------------
 
-SLIDE 36 | CASO PIT | TEMPO SUGERIDO: 3 min
-Tema: A Integração UNIFESP & PIT: Co-criação na Prática
-Apresentador(a): Josué Jofre (4ª) / Marciele (5ª)
-Frase-Chave no Slide: ""O PPG-PIT não forma apenas teóricos: forma orquestradores capazes de dialogar com a indústria.""
+SLIDE 38 | BLOCO 6 | TEMPO SUGERIDO: 3 min
+Tema: Estudo de Caso Prático: Projeto FEHIDRO, IA nas Cidades & ESG
+Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
+RECURSO DE VÍDEO EMPÍRICO: assets/recorte8_fehidro_ia_cidades.mp4
 
 FALA SUGERIDA DO APRESENTADOR:
-A presença física da UNIFESP dentro do PIT SJC é a materialização da co-criação na prática. Professores e mestrandos dividem o mesmo espaço com engenheiros de montadoras e startups de inteligência artificial.
+E para materializar a inovação aberta e o impacto regional do PIT, Renato Boschilia Jr. relata o caso do projeto FEHIDRO: como startups de inteligência artificial residentes no Parque desenvolveram macromedidores digitais de pressão para prefeituras do Vale (Areias, Cunha e Guaratinguetá), reduzindo perdas históricas de água tratada de 60% para níveis altamente eficientes.
+E com muito orgulho, o Boschilia destaca que o nosso colega de mestrado, Renato Paschoal, fez parte da equipe executora desse projeto de ponta! Vamos assistir!
 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
 
-SLIDE 37 | ENTREVISTA | TEMPO SUGERIDO: 3 min
+SLIDE 39 | ENTREVISTA | TEMPO SUGERIDO: 3 min
 Tema: Governança de PI & NDA: Protegendo Patentes sem Travar a Pesquisa
 Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
 Frase-Chave no Slide: ""Primeira coisa é o NDA no Dia Zero: protegemos nossa tecnologia patenteada, mas permitimos o mergulho do pesquisador e a liberação gradual de publicações. A gente faz pesquisa que vire produto e venda." — Rodrigo Saad (Recorte 1)"
@@ -468,7 +494,7 @@ Rodrigo Saad esclarece com transparência cirúrgica como funciona a mecânica c
 
 --------------------------------------------------------------------------------
 
-SLIDE 38 | ENTREVISTA | TEMPO SUGERIDO: 4 min
+SLIDE 40 | ENTREVISTA | TEMPO SUGERIDO: 4 min
 Tema: 4 Eixos de Governança Analisados na Prática do PIT SJC
 Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
 Frase-Chave no Slide: ""A ponte universidade-empresa exige alinhamento prévio de governança, confiança relacional e domínio do marco regulatório.""
@@ -480,7 +506,7 @@ Analisamos os 4 eixos práticos de governança mapeados no PIT SJC: Marco Legal 
 
 --------------------------------------------------------------------------------
 
-SLIDE 39 | BLOCO 6 | TEMPO SUGERIDO: 4 min
+SLIDE 41 | BLOCO 6 | TEMPO SUGERIDO: 4 min
 Tema: Pés no Chão (Shen et al.): Evitando o "Teatro da Inovação"
 Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
 Frase-Chave no Slide: ""Onde começa e onde termina um ecossistema? A literatura sofre para traçar fronteiras estritas.""
@@ -492,7 +518,7 @@ Pés no chão: Shen et al. alertam para o risco do 'teatro da inovação' — ev
 
 --------------------------------------------------------------------------------
 
-SLIDE 40 | BLOCO 6 | TEMPO SUGERIDO: 4 min
+SLIDE 42 | BLOCO 6 | TEMPO SUGERIDO: 4 min
 Tema: As Armadilhas da Rede: Lock-in, Predação e a Barreira Cultural da Gestão
 Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
 Frase-Chave no Slide: ""O maior desafio não é tecnológico: é convencer a diretoria de uma empresa tradicional a não querer apenas 'comprar pronto' da prateleira." — Rodrigo Saad (Recorte 4)"
@@ -506,7 +532,7 @@ Rodrigo Saad encerra com uma reflexão profunda sobre o maior obstáculo da inov
 
 --------------------------------------------------------------------------------
 
-SLIDE 41 | MOMENTO KAHOOT 6 | TEMPO SUGERIDO: 3 min
+SLIDE 43 | MOMENTO KAHOOT 6 | TEMPO SUGERIDO: 3 min
 Tema: Desafio da Fase 6: Living Lab Net-Zero & Fronteiras
 Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
 Frase-Chave no Slide: ""O link do jogo está no chat: acesse, ande até a Fase 6 e responda o mais rápido possível!""
@@ -519,7 +545,7 @@ Questões sobre PI, NDAs, governança do PIT e barreiras culturais. Definam suas
 
 --------------------------------------------------------------------------------
 
-SLIDE 42 | DINÂMICA | TEMPO SUGERIDO: 3 min
+SLIDE 44 | DINÂMICA | TEMPO SUGERIDO: 3 min
 Tema: Consolidação das 18 Questões: O Pódio Provisório
 Apresentador(a): Jéssica David (4ª) / Marciele (5ª)
 Frase-Chave no Slide: ""18 decisões estratégicas: quem articulou a melhor orquestração de valor no campus?""
@@ -532,7 +558,7 @@ Vejam na tela o pódio provisório dos colegas que lideraram a pontuação ao lo
 
 --------------------------------------------------------------------------------
 
-SLIDE 43 | DINÂMICA | TEMPO SUGERIDO: 6 min
+SLIDE 45 | DINÂMICA | TEMPO SUGERIDO: 6 min
 Tema: Classificação Geral & Diagnóstico Cienciométrico dos Erros
 Apresentador(a): Jéssica David (4ª) / Marciele (5ª)
 Frase-Chave no Slide: ""Errar na simulação é aprendizado; orquestrar na prática exige precisão científica.""
@@ -544,7 +570,7 @@ Diagnóstico cienciométrico dos erros e acertos: examinamos quais conceitos ger
 
 --------------------------------------------------------------------------------
 
-SLIDE 44 | CONCLUSÕES | TEMPO SUGERIDO: 3 min
+SLIDE 46 | CONCLUSÕES | TEMPO SUGERIDO: 3 min
 Tema: As 5 Leis Fundamentais dos Ecossistemas de Inovação
 Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
 Frase-Chave no Slide: ""Princípios invariantes validados pela literatura de 1993 a 2026 e pelo case PIT SJC.""
@@ -561,7 +587,7 @@ Sintetizamos as 5 Leis Fundamentais dos Ecossistemas de Inovação:
 
 --------------------------------------------------------------------------------
 
-SLIDE 45 | DEBATE | TEMPO SUGERIDO: 4 min
+SLIDE 47 | DEBATE | TEMPO SUGERIDO: 4 min
 Tema: Provocações Estratégicas para o PPG-PIT e PIT SJC
 Apresentador(a): Grupo Inteiro (4ª e 5ª)
 Frase-Chave no Slide: ""Como nós, como futuros mestres e doutores, aceleraremos a inovação brasileira?""
@@ -574,7 +600,7 @@ Muito obrigado a todos, aos professores e colegas pela atenção!
 
     /* Deck State */
     let currentSlide = 1;
-    const totalSlides = 44;
+    const totalSlides = 47;
     let isClockRunning = false;
     let clockSeconds = 120 * 60; // 120 minutes
     let clockInterval = null;
