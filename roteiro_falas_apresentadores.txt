@@ -109,16 +109,22 @@ FALA SUGERIDA DO APRESENTADOR:
 "Entrando no Bloco 2, desvendamos quem habita o ecossistema. Não se trata de juntar empresas iguais. A força do ecossistema reside na simbiose entre atores heterogêneos com lógicas distintas, que se complementam mutuamente."
 
 --------------------------------------------------------------------------------
-SLIDE 9 | BLOCO 2: AS 5 HÉLICES DA INOVAÇÃO
-Tema: Da Tríplice à Quíntupla Hélice (Sociedade & Meio Ambiente)
+SLIDE 9 | BLOCO 2: AS 5 HÉLICES DA INOVAÇÃO & ENTREVISTA RUBENS COSTA
+Tema: Da Tríplice à Quíntupla Hélice (Sociedade, Prática & Sustentabilidade)
 Apresentador(a): Veridiany Braga (4ª) / Fábio (5ª)
 Tempo sugerido: 4 min
-Frase de Efeito no Slide: "Inovação tecnológica sem impacto social e sustentabilidade ecológica é miopia estratégica."
+Frase de Efeito no Slide: "A Tríplice Hélice na prática exige orquestração real: o governo entra com política pública digital de baixo risco, a universidade com massa crítica e executivos de mercado lideram a execução com metas claras." — Rubens Costa (Ex-Secretário de TI & Executivo de Scale-ups)
 
-FALA SUGERIDA DO APRESENTADOR:
-"Evoluímos da Tríplice Hélice tradicional (Universidade-Indústria-Governo) de Etzkowitz para a Quíntupla Hélice. Hoje, a sociedade civil demanda transparência e o meio ambiente impõe a urgência da economia circular e descarbonização."
+FALA SUGERIDA DO APRESENTADOR (VERIDIANY BRAGA / FÁBIO):
+"Evoluímos da Tríplice Hélice tradicional (Universidade-Indústria-Governo) de Etzkowitz e Leydesdorff para a Quíntupla Hélice de Carayannis e Campbell. Hoje, a sociedade civil demanda transparência e inclusão (4ª hélice), e os imperativos de sustentabilidade exigem metas Net-Zero (5ª hélice).
+E para exemplificar como a Tríplice Hélice acontece no mundo real, a colega Nathália Neves entrevistou o executivo Rubens Costa, ex-Secretário de Tecnologia e Inovação e executivo de scale-ups.
+O Rubens explica como o Chile estruturou um dos ecossistemas digitais mais eficientes da América Latina: o governo entrou com política pública digital focada em alto impacto e menor risco fiscal, a PUC Chile forneceu a pesquisa de ponta e foram contratados executivos de Venture Capital para liderar a agência com metas de mercado. Vamos assistir a este trecho prático!"
+[RODAR VÍDEO DO RUBENS COSTA - 1m35s]
+"Percebam como a fala do Rubens desmistifica o papel do poder público: o governo não precisa criar fábricas pesadas que geram passivos tributários; ele pode atuar como viabilizador digital e orquestrador de metas em simbiose com universidades e o mercado privado."
 
---------------------------------------------------------------------------------
+DEIXA PARA O PRÓXIMO: "Compreendido o modelo das hélices, convido o próximo colega para analisar como os atores interagem dinamicamente e os riscos de predação na rede."
+
+
 SLIDE 10 | BLOCO 2: INTERDEPENDÊNCIA E DINÂMICA DE REDE
 Tema: Cadeia Linear vs. Rede Viva (Ron Adner)
 Apresentador(a): Veridiany Braga (4ª) / Fábio (5ª)
@@ -354,20 +360,22 @@ Podemos afirmar categoricamente que São José dos Campos nasceu como um Polo Ti
 Com a fundação do PIT em 2009, SJC deu o salto para o Polo Tipo 3, assumindo a gestão formalizada por Organização Social — funcionando para a nossa região exatamente como a CONNECT funcionou para San Diego! E superando a dificuldade histórica de acesso a laboratórios."
 
 --------------------------------------------------------------------------------
-SLIDE 30 | BLOCO 5 (7/9): O PIT SJC: GOVERNANÇA E TERRITÓRIO
-Tema: Relatório Anual 2025, Matriz Pentagonal e Thiago Rubem (2018)
+SLIDE 30 | BLOCO 5 (7/9): O PIT SJC & GOVERNANÇA REGIONAL NO VALE DO PARAÍBA
+Tema: Anatomia do PIT SJC, Matriz Pentagonal e Gestão Pública Regional
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
-Tempo sugerido: 1.75 min
-Frase de Efeito no Slide: "Spill-overs territoriais: a proximidade física catalisa o transbordamento espontâneo de conhecimento tácito e sinergia."
+Tempo sugerido: 3 min
+Frase de Efeito no Slide: "Excelência em gestão pública e articulação territorial: o ecossistema regional do Vale do Paraíba e Litoral Norte integrando inovação entre municípios."
 
-FALA SUGERIDA DA APRESENTADORA (LILIAN VEIGA VINHAS):
-"Entrando na anatomia atual do PIT SJC, fundamentada no Relatório Anual 2025 e no estudo de Thiago Rubem (2018):
-O Parque foi instituído em 2009 e sua administração é realizada pela Associação Parque Tecnológico de São José dos Campos (APTSJC), uma Organização Social privada sem fins lucrativos credenciada no Sistema Paulista de Parques Tecnológicos (SPTec/SPAI).
-O conceito teórico central é o de spill-overs territoriais: a concentração espacial não é mero espaço físico, ela gera transbordamento de conhecimento tácito que não aconteceria à distância.
-Vejam a matriz pentagonal do Relatório Anual do PIT projetada na tela: a Tríplice Hélice central (APTSJC articulando Universidade, Governo e Empresas) coordena cinco eixos estratégicos: Defesa e Aeroespacial, TIC Vale, Agropolo, Saúde e Biotecnologia, e Mobilidade Urbana.
-E o grande avanço: o PIT resolveu o gargalo histórico dos laboratórios! Em 2025 foram 56 projetos prospectados, 22 executados e o ecossistema passou a contar com uma rede integrada de 57 laboratórios de instituições parceiras à disposição das empresas!"
+FALA SUGERIDA DA APRESENTADORA (LILIAN VEIGA VINHAS / MARCIELE):
+"Entrando na anatomia atual do PIT SJC, analisamos o diagrama pentagonal oficial da APTSJC do Relatório Anual 2025. Esse modelo articula cinco pilares fundamentais: Empresas e Startups, Institutos de Ciência e Tecnologia (ICTs), Poder Público, Talentos e Capital de Investimento.
+E para comprovar como a Hélice Governamental atua na prática no nosso território, trazemos um recorte fundamental da entrevista com Rubens Costa, que liderou a Secretaria de Tecnologia e Inovação de Caraguatatuba.
+O Rubens compartilha um resultado empírico extraordinário: através de gestão por dados e alinhamento ágil contínuo entre secretarias essenciais (Saúde, Educação e Sepedi), Caraguatatuba conquistou o selo inédito do Tribunal de Contas do Estado (TCE-SP) de excelência no i-Gov TI — um reconhecimento de maturidade digital que menos de 4,5% dos municípios paulistas alcançam e que, em toda a RMVale e Serra, apenas São José dos Campos possuía! Vamos acompanhar!"
+[RODAR VÍDEO DO RUBENS COSTA - 1m20s]
+"Esse caso evidencia que o PIT de São José dos Campos não é uma ilha isolada: ele atua como o polo indutor e irradiador de governança, tecnologia e atração de talentos para os 39 municípios da Região Metropolitana do Vale e Litoral Norte."
 
---------------------------------------------------------------------------------
+DEIXA PARA O PRÓXIMO: "Agora vamos observar no Slide 31 a rede de parceiros institucionais, empresas e governos que confiam e compõem o ecossistema do PIT SJC."
+
+
 SLIDE 31 | BLOCO 5 (8/9): O PIT SJC EM 2026: CONSOLIDAÇÃO & REDES DE CONFIANÇA
 Tema: Parceiros Corporativos, Expansão dos APLs e Gazeta de SP (2026)
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
