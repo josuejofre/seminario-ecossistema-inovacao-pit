@@ -546,7 +546,7 @@ Analisamos os 4 eixos práticos de governança mapeados no PIT SJC: Marco Legal 
 
 SLIDE 43 | BLOCO 6 | TEMPO SUGERIDO: 4 min
 Tema: Pés no Chão: Evitando o "Teatro da Inovação" & 5 Gargalos do Ecossistema
-Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
+Apresentador(a): Renato Paschoal (4ª) / Fábio (5ª)
 Frase-Chave no Slide: ""O Brasil precisa superar o teatro da inovação: faltam orquestradores claros, sobra valorização de diploma sobre saber aplicado, e o risco jurídico ainda é tratado como pós-projeto." — Rubens Costa (Diagnóstico Empírico GETI 2026)"
 
 FALA SUGERIDA DO APRESENTADOR:
@@ -563,7 +563,7 @@ Entramos agora no momento de autocrítica mais importante do nosso seminário. A
 
 SLIDE 44 | BLOCO 6 | TEMPO SUGERIDO: 4 min
 Tema: As Armadilhas da Rede: Lock-in, Predação e a Barreira Cultural da Gestão
-Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
+Apresentador(a): Renato Paschoal (4ª) / Fábio (5ª)
 Frase-Chave no Slide: ""O maior desafio não é tecnológico: é convencer a diretoria de uma empresa tradicional a não querer apenas 'comprar pronto' da prateleira." — Rodrigo Saad (Recorte 4)"
 RECURSO DE VÍDEO EMPÍRICO: assets/recorte4_barreira_cultural.mp4?v=2
 
@@ -577,7 +577,7 @@ Rodrigo Saad encerra com uma reflexão profunda sobre o maior obstáculo da inov
 
 SLIDE 45 | MOMENTO KAHOOT 6 | TEMPO SUGERIDO: 3 min
 Tema: Desafio da Fase 6: Living Lab Net-Zero & Fronteiras
-Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
+Apresentador(a): Renato Paschoal (4ª) / Fábio (5ª)
 Frase-Chave no Slide: ""O link do jogo está no chat: acesse, ande até a Fase 6 e responda o mais rápido possível!""
 
 FALA SUGERIDA DO APRESENTADOR:
@@ -590,7 +590,7 @@ Questões sobre PI, NDAs, governança do PIT e barreiras culturais. Definam suas
 
 SLIDE 46 | DINÂMICA | TEMPO SUGERIDO: 3 min
 Tema: Consolidação das 18 Questões: O Pódio Provisório
-Apresentador(a): Jéssica David (4ª) / Marciele (5ª)
+Apresentador(a): Jéssica David (4ª) / Fernando (5ª)
 Frase-Chave no Slide: ""18 decisões estratégicas: quem articulou a melhor orquestração de valor no campus?""
 
 FALA SUGERIDA DO APRESENTADOR:
@@ -603,7 +603,7 @@ Vejam na tela o pódio provisório dos colegas que lideraram a pontuação ao lo
 
 SLIDE 47 | DINÂMICA | TEMPO SUGERIDO: 6 min
 Tema: Classificação Geral & Diagnóstico Cienciométrico dos Erros
-Apresentador(a): Jéssica David (4ª) / Marciele (5ª)
+Apresentador(a): Jéssica David (4ª) / Fernando (5ª)
 Frase-Chave no Slide: ""Errar na simulação é aprendizado; orquestrar na prática exige precisão científica.""
 
 FALA SUGERIDA DO APRESENTADOR:
@@ -615,7 +615,7 @@ Diagnóstico cienciométrico dos erros e acertos: examinamos quais conceitos ger
 
 SLIDE 48 | CONCLUSÕES | TEMPO SUGERIDO: 3 min
 Tema: As 5 Leis Fundamentais dos Ecossistemas de Inovação
-Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
+Apresentador(a): Renato Paschoal (4ª) / Fernando (5ª)
 Frase-Chave no Slide: ""Princípios invariantes validados pela literatura de 1993 a 2026 e pelo case PIT SJC.""
 
 FALA SUGERIDA DO APRESENTADOR:
