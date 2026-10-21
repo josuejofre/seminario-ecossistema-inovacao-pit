@@ -130,14 +130,17 @@ Vejam na tela a anatomia completa das 5 hélices:
 --------------------------------------------------------------------------------
 
 SLIDE 10 | BLOCO 2 | TEMPO SUGERIDO: 3 min
-Tema: Estudo Empírico: A Tríplice Hélice na Prática & o Case Start-Up Chile
+Tema: Estudo Empírico: A Quádrupla Hélice na Prática & Conexão Academia-Mercado
 Apresentador(a): Veridiany Braga (4ª) / Fábio (5ª)
-Frase-Chave no Slide: ""A Tríplice Hélice no Chile operou focada no digital para gerar alto impacto com baixo risco fiscal: o governo fomentou a infraestrutura, a PUC Chile garantiu massa crítica científica e executivos de mercado lideraram a agência com metas de venture capital." — Rubens Costa (Ex-Secretário de TI & Executivo de Scale-ups)"
-RECURSO DE VÍDEO EMPÍRICO: assets/recorte5_triplice_helice_chile.mp4
+Frase-Chave no Slide: ""O Parque Tecnológico existe para fazer a quádrupla hélice girar: o mais difícil é mostrar ao acadêmico a linguagem do mercado e mostrar ao empresário que a universidade tem método e rigor científico indispensáveis para viabilizar inovações reais." — Renato Boschilia Jr. (Diretor de Novos Negócios PIT SJC / Mestre UNIFESP)"
+RECURSO DE VÍDEO EMPÍRICO: assets/recorte5_quadrupla_helice_renato.mp4
 
 FALA SUGERIDA DO APRESENTADOR:
-E para enxergar como a Tríplice Hélice opera no mundo real, trazemos um estudo empírico com Rubens Costa, ex-Secretário de Tecnologia e Inovação e executivo de scale-ups (Buser e G4 Educação).
-O Rubens explica como o Chile construiu um dos maiores ecossistemas digitais da América Latina: o governo entrou com política pública digital de baixo risco fiscal, a PUC Chile garantiu retaguarda acadêmica e executivos de Venture Capital foram contratados com metas de mercado para liderar a agência pública. Vamos assistir!
+Vejam agora este depoimento fundamental de Renato Boschilia Jr., Diretor de Novos Negócios do PIT SJC e mestre egresso da nossa própria UNIFESP.
+Renato sintetiza com precisão cirúrgica a transição da teoria para a prática da Quádrupla Hélice no Vale do Paraíba:
+1) O PIT SJC operando como orquestrador ativo entre universidade pública, sociedade civil, mercado e governo;
+2) O maior desafio prático: o abismo cultural de linguagem. Mostrar para a academia que o mercado tem dores reais e imediatas, e mostrar para a empresa que a pesquisa exige rigor metodológico, protocolos e validação científica para que a inovação seja robusta e viável;
+3) A importância do contato presencial, olho no olho e resiliência mútua para blindar as parcerias contra a aversão ao risco. Vamos assistir!
 
 --------------------------------------------------------------------------------
 
@@ -595,23 +598,9 @@ Frase-Chave no Slide: ""Como nós, como futuros mestres e doutores, aceleraremos
 FALA SUGERIDA DO APRESENTADOR:
 Encerramos com provocações estratégicas para o PPG-PIT UNIFESP e para o PIT SJC:
 Como atrair mais venture capital para Deep Techs? Como engajar mais a 4ª hélice cidadã? E como consolidar o PIT como polo indutor de descarbonização industrial do Brasil?
-Muito obrigado a todos, aos professores e colegas pela atenção!
-};
-
-    /* Deck State */
-    let currentSlide = 1;
-    const totalSlides = 47;
-    let isClockRunning = false;
-    let clockSeconds = 120 * 60; // 120 minutes
-    let clockInterval = null;
-
-    function showSlide(num) {
-      if (num < 1) num = 1;
-      if (num > totalSlides) num = totalSlides;
-      currentSlide = num;
-
-      document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
-      document.querySelectorAll('video').forEach(v => v.pause());
-      const activeEl = document.querySelector(
+Abrimos agora com muita honra a palavra para os professores e para a turma para iniciarmos nosso debate final.
+Muito obrigado a todos pela atenção!
 
 --------------------------------------------------------------------------------
+FIM DO ROTEIRO OFICIAL
+================================================================================
