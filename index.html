@@ -3059,7 +3059,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 <div class="footer-center">
 <button class="nav-arrow-btn" onclick="prevSlide()" title="Slide Anterior (←)">‹</button>
-<div class="slide-progress-text"><span id="slide-num">1</span> / <span id="slide-total">43</span></div>
+<div class="slide-progress-text"><span id="slide-num">1</span> / <span id="slide-total">47</span></div>
 <button class="nav-arrow-btn" onclick="nextSlide()" title="Próximo Slide (→)">›</button>
 </div>
 <div class="footer-right">
@@ -3296,6 +3296,7 @@ Muito obrigado a todos, aos professores e colegas pela atenção!"`
       }
 
       document.getElementById('slide-num').textContent = num;
+      document.getElementById('slide-total').textContent = totalSlides;
       const progressPercent = (num / totalSlides) * 100;
       document.getElementById('slide-progress-bar').style.width = `${progressPercent}%`;
 
