@@ -513,38 +513,13 @@ Apresentador(a): Josué Jofre (4ª) / Marciele (5ª)
 Frase-Chave no Slide: ""O PPG-PIT não forma apenas teóricos: forma orquestradores capazes de dialogar com a indústria.""
 
 FALA SUGERIDA DO APRESENTADOR:
-Passo a palavra para o colega Renato Paschoal, que apresentará os achados da nossa imersão de campo in loco no Parque Tecnológico e na UNIFESP.
+Passo a palavra para o colega que nos conduzirá pela análise crítica e pelos gargalos práticos do ecossistema de inovação brasileiro.
 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
 
-SLIDE 41 | ENTREVISTA | TEMPO SUGERIDO: 3 min
-Tema: Estudo de Caso Prático: Projeto FEHIDRO, IA nas Cidades & ESG
-Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
-RECURSO DE VÍDEO EMPÍRICO: assets/recorte8_fehidro_ia_cidades.mp4
-
-FALA SUGERIDA DO APRESENTADOR:
-E para materializar a inovação aberta e o impacto regional do PIT, Renato Boschilia Jr. relata o caso do projeto FEHIDRO: como startups de inteligência artificial residentes no Parque desenvolveram macromedidores digitais de pressão para prefeituras do Vale (Areias, Cunha e Guaratinguetá), reduzindo perdas históricas de água tratada de 60% para níveis altamente eficientes.
-E com muito orgulho, o Boschilia destaca que o nosso colega de mestrado, Renato Paschoal, fez parte da equipe executora desse projeto de ponta! Vamos assistir!
-
---------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------
-
-SLIDE 42 | BLOCO 6 | TEMPO SUGERIDO: 4 min
-Tema: 4 Eixos de Governança Analisados na Prática do PIT SJC
-Apresentador(a): Renato Paschoal (4ª) / Marciele (5ª)
-Frase-Chave no Slide: ""A ponte universidade-empresa exige alinhamento prévio de governança, confiança relacional e domínio do marco regulatório.""
-
-FALA SUGERIDA DO APRESENTADOR:
-Analisamos os 4 eixos práticos de governança mapeados no PIT SJC: Marco Legal de CTI, Compartilhamento de Infraestrutura Laboratorial, Gestão de Conflitos de Interesse e Retenção de Capital Humano Qualificado.
-
---------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------
-
-SLIDE 43 | BLOCO 6 | TEMPO SUGERIDO: 4 min
+SLIDE 41 | BLOCO 6 | TEMPO SUGERIDO: 4 min
 Tema: Pés no Chão: Evitando o "Teatro da Inovação" & 5 Gargalos do Ecossistema
 Apresentador(a): Renato Paschoal (4ª) / Fábio (5ª)
 Frase-Chave no Slide: ""O Brasil precisa superar o teatro da inovação: faltam orquestradores claros, sobra valorização de diploma sobre saber aplicado, e o risco jurídico ainda é tratado como pós-projeto." — Rubens Costa (Diagnóstico Empírico GETI 2026)"
@@ -561,7 +536,7 @@ Entramos agora no momento de autocrítica mais importante do nosso seminário. A
 
 --------------------------------------------------------------------------------
 
-SLIDE 44 | BLOCO 6 | TEMPO SUGERIDO: 4 min
+SLIDE 42 | BLOCO 6 | TEMPO SUGERIDO: 4 min
 Tema: As Armadilhas da Rede: Lock-in, Predação e a Barreira Cultural da Gestão
 Apresentador(a): Renato Paschoal (4ª) / Fábio (5ª)
 Frase-Chave no Slide: ""O maior desafio não é tecnológico: é convencer a diretoria de uma empresa tradicional a não querer apenas 'comprar pronto' da prateleira." — Rodrigo Saad (Recorte 4)"
@@ -575,7 +550,7 @@ Rodrigo Saad encerra com uma reflexão profunda sobre o maior obstáculo da inov
 
 --------------------------------------------------------------------------------
 
-SLIDE 45 | MOMENTO KAHOOT 6 | TEMPO SUGERIDO: 3 min
+SLIDE 43 | MOMENTO KAHOOT 6 | TEMPO SUGERIDO: 3 min
 Tema: Desafio da Fase 6: Living Lab Net-Zero & Fronteiras
 Apresentador(a): Renato Paschoal (4ª) / Fábio (5ª)
 Frase-Chave no Slide: ""O link do jogo está no chat: acesse, ande até a Fase 6 e responda o mais rápido possível!""
@@ -588,7 +563,7 @@ Questões sobre PI, NDAs, governança do PIT e barreiras culturais. Definam suas
 
 --------------------------------------------------------------------------------
 
-SLIDE 46 | DINÂMICA | TEMPO SUGERIDO: 3 min
+SLIDE 44 | DINÂMICA | TEMPO SUGERIDO: 3 min
 Tema: Consolidação das 18 Questões: O Pódio Provisório
 Apresentador(a): Jéssica David (4ª) / Fernando (5ª)
 Frase-Chave no Slide: ""18 decisões estratégicas: quem articulou a melhor orquestração de valor no campus?""
@@ -601,7 +576,7 @@ Vejam na tela o pódio provisório dos colegas que lideraram a pontuação ao lo
 
 --------------------------------------------------------------------------------
 
-SLIDE 47 | DINÂMICA | TEMPO SUGERIDO: 6 min
+SLIDE 45 | DINÂMICA | TEMPO SUGERIDO: 6 min
 Tema: Classificação Geral & Diagnóstico Cienciométrico dos Erros
 Apresentador(a): Jéssica David (4ª) / Fernando (5ª)
 Frase-Chave no Slide: ""Errar na simulação é aprendizado; orquestrar na prática exige precisão científica.""
@@ -613,7 +588,7 @@ Diagnóstico cienciométrico dos erros e acertos: examinamos quais conceitos ger
 
 --------------------------------------------------------------------------------
 
-SLIDE 48 | CONCLUSÕES | TEMPO SUGERIDO: 3 min
+SLIDE 46 | CONCLUSÕES | TEMPO SUGERIDO: 3 min
 Tema: As 5 Leis Fundamentais dos Ecossistemas de Inovação
 Apresentador(a): Renato Paschoal (4ª) / Fernando (5ª)
 Frase-Chave no Slide: ""Princípios invariantes validados pela literatura de 1993 a 2026 e pelo case PIT SJC.""
@@ -630,7 +605,7 @@ Sintetizamos as 5 Leis Fundamentais dos Ecossistemas de Inovação:
 
 --------------------------------------------------------------------------------
 
-SLIDE 49 | DEBATE | TEMPO SUGERIDO: 4 min
+SLIDE 47 | DEBATE | TEMPO SUGERIDO: 4 min
 Tema: Provocações Estratégicas para o PPG-PIT e PIT SJC
 Apresentador(a): Grupo Inteiro (4ª e 5ª)
 Frase-Chave no Slide: ""Como nós, como futuros mestres e doutores, aceleraremos a inovação brasileira?""
