@@ -10,6 +10,8 @@
   let broadcastChannel = null;
   let firebaseDb = null;
   let isFirebaseActive = false;
+  const pageLoadTime = Date.now();
+  const seenAnswerKeys = new Set();
 
   const callbacks = {
     onAnswer: [],
@@ -49,23 +51,25 @@
           const state = snapshot.val();
           if (state) {
             localStorage.setItem('kahoot_rpg_state', JSON.stringify(state));
-            callbacks.onStateUpdate.forEach(cb => cb(state));
+            callbacks.onStateUpdate.forEach(cb => {
+              try { cb(state); } catch(e) { console.error(e); }
+            });
           }
         });
 
-        // Escuta sinal de reset geral do jogo
+        // Escuta sinal de reset geral do jogo (apenas disparos recentes pós-carregamento)
         firebaseDb.ref('kahoot_rpg/resetSignal').on('value', (snapshot) => {
           const val = snapshot.val();
-          if (val && (Date.now() - val < 1000 * 60 * 30)) { // últimos 30 min
+          if (val && val > pageLoadTime - 2000) {
             handleIncomingMessage({ type: 'GAME_RESET', state: window.SyncService.getLocalState() });
           }
         });
 
-        // Escuta novas respostas de alunos
-        firebaseDb.ref('kahoot_rpg/answers').limitToLast(50).on('child_added', (snapshot) => {
+        // Escuta respostas de alunos com deduplicação
+        firebaseDb.ref('kahoot_rpg/answers').limitToLast(100).on('child_added', (snapshot) => {
           const answer = snapshot.val();
           if (answer && answer.timestamp && (Date.now() - answer.timestamp < 1000 * 60 * 180)) { // 3 horas
-            callbacks.onAnswer.forEach(cb => cb(answer));
+            triggerAnswer(answer);
           }
         });
 
@@ -78,20 +82,41 @@
     }
   }
 
+  function triggerAnswer(answer) {
+    if (!answer || !answer.playerName || !answer.questionId) return;
+
+    // Deduplicação temporal contra eco entre BroadcastChannel e Firebase
+    const dedupeKey = `${answer.playerName}__q${answer.questionId}__${answer.optionKey}`;
+    if (seenAnswerKeys.has(dedupeKey)) return;
+    seenAnswerKeys.add(dedupeKey);
+    setTimeout(() => seenAnswerKeys.delete(dedupeKey), 8000);
+
+    callbacks.onAnswer.forEach(cb => {
+      try { cb(answer); } catch (err) { console.error('[SyncService] Answer callback error:', err); }
+    });
+  }
+
   function handleIncomingMessage(data) {
     if (!data) return;
     if (data.type === 'PLAYER_ANSWER' && data.payload) {
-      callbacks.onAnswer.forEach(cb => cb(data.payload));
+      triggerAnswer(data.payload);
     } else if (data.type === 'STATE_UPDATE' && data.state) {
       localStorage.setItem('kahoot_rpg_state', JSON.stringify(data.state));
-      callbacks.onStateUpdate.forEach(cb => cb(data.state));
+      callbacks.onStateUpdate.forEach(cb => {
+        try { cb(data.state); } catch(e) { console.error(e); }
+      });
     } else if (data.type === 'GAME_RESET') {
+      seenAnswerKeys.clear();
       localStorage.removeItem('kahoot_rpg_current_player');
       if (data.state) {
         localStorage.setItem('kahoot_rpg_state', JSON.stringify(data.state));
       }
-      callbacks.onReset.forEach(cb => cb(data.state));
-      callbacks.onStateUpdate.forEach(cb => cb(data.state));
+      callbacks.onReset.forEach(cb => {
+        try { cb(data.state); } catch(e) { console.error(e); }
+      });
+      callbacks.onStateUpdate.forEach(cb => {
+        try { cb(data.state); } catch(e) { console.error(e); }
+      });
     }
   }
 
@@ -121,7 +146,6 @@
 
     // Enviar resposta do aluno
     sendAnswer: function (payload) {
-      // payload: { playerName, turma, questionId, optionKey, isCorrect, timeMs }
       const enrichedPayload = {
         ...payload,
         timestamp: Date.now()
@@ -169,8 +193,14 @@
 
     // Resetar jogo completo (Admin)
     sendReset: function (gameState) {
-      localStorage.setItem('kahoot_rpg_state', JSON.stringify(gameState));
+      this.hardResetDatabase(gameState);
+    },
+
+    // Hard reset: apaga do Firebase, limpa local storage e dispara sinal
+    hardResetDatabase: function (gameState, callback) {
+      localStorage.removeItem('kahoot_rpg_state');
       localStorage.removeItem('kahoot_rpg_current_player');
+      seenAnswerKeys.clear();
 
       // 1. Envio Local
       if (broadcastChannel) {
@@ -179,16 +209,24 @@
           state: gameState
         });
       }
+      callbacks.onReset.forEach(cb => { try { cb(gameState); } catch(e){} });
+      callbacks.onStateUpdate.forEach(cb => { try { cb(gameState); } catch(e){} });
 
       // 2. Envio Nuvem (Firebase)
       if (isFirebaseActive && firebaseDb) {
-        try {
-          firebaseDb.ref('kahoot_rpg/state').set(gameState);
-          firebaseDb.ref('kahoot_rpg/answers').remove();
-          firebaseDb.ref('kahoot_rpg/resetSignal').set(Date.now());
-        } catch (e) {
-          console.error('[SyncService] Erro ao resetar Firebase:', e);
-        }
+        Promise.all([
+          firebaseDb.ref('kahoot_rpg/state').set(gameState),
+          firebaseDb.ref('kahoot_rpg/answers').set(null),
+          firebaseDb.ref('kahoot_rpg/resetSignal').set(Date.now())
+        ]).then(() => {
+          console.log('[SyncService] ✅ Hard reset completo no Firebase Realtime Database.');
+          if (typeof callback === 'function') callback(true);
+        }).catch((err) => {
+          console.error('[SyncService] Erro no hard reset do Firebase:', err);
+          if (typeof callback === 'function') callback(false, err);
+        });
+      } else {
+        if (typeof callback === 'function') callback(true);
       }
     },
 

@@ -493,7 +493,7 @@
   <!-- Top Floating HUD -->
   <div class="rpg-hud">
     <div class="hud-left">
-      <div class="hud-pill">
+      <div class="hud-pill" style="cursor: pointer;" onclick="changePlayer()" title="Clique para trocar de aluno ou entrar com outro nome">
         <div class="hud-avatar">👔</div>
         <div>
           <div class="hud-name" id="hud-name">Orquestrador(a)</div>
@@ -511,6 +511,7 @@
     </div>
 
     <div class="hud-right">
+      <button class="hud-btn" onclick="changePlayer()" title="Trocar de Aluno / Novo Jogador" style="font-size: 0.78rem; padding: 0.35rem 0.65rem; width: auto; height: auto; font-weight: 700;">🔄 Trocar Aluno</button>
       <div class="minimap-box" title="Minimap do Campus PIT SJC">
         <canvas id="minimap-canvas" width="110" height="80"></canvas>
         <span class="minimap-tag">MAPA SJC</span>
@@ -895,11 +896,20 @@
       }
     }
 
+    function sanitizeUnlockedPhases(phases) {
+      if (Array.isArray(phases)) {
+        return phases.map(Number).filter(n => n >= 1 && n <= 6);
+      } else if (phases && typeof phases === 'object') {
+        return Object.values(phases).map(Number).filter(n => n >= 1 && n <= 6);
+      }
+      return [1, 2, 3, 4, 5, 6];
+    }
+
     /* Channel & Cloud Listener */
     if (window.SyncService) {
       window.SyncService.onStateUpdate((state) => {
         if (state && state.unlockedPhases) {
-          unlockedPhases = state.unlockedPhases;
+          unlockedPhases = sanitizeUnlockedPhases(state.unlockedPhases);
           updateTargetBanner();
         }
       });
@@ -908,8 +918,8 @@
     if (channel) {
       channel.onmessage = (event) => {
         const data = event.data;
-        if (data && data.type === 'STATE_UPDATE') {
-          unlockedPhases = data.state.unlockedPhases || [];
+        if (data && data.type === 'STATE_UPDATE' && data.state) {
+          unlockedPhases = sanitizeUnlockedPhases(data.state.unlockedPhases);
           updateTargetBanner();
         }
       };
@@ -1921,6 +1931,25 @@
 
     // Check existing player
     
+    function changePlayer() {
+      if (confirm("Deseja sair do cadastro atual e entrar com outro nome?")) {
+        localStorage.removeItem('kahoot_rpg_current_player');
+        player = {
+          name: "",
+          turma: "Quarta",
+          score: 0,
+          answeredQuestions: {},
+          completedStations: []
+        };
+        const inputName = document.getElementById('input-name');
+        if (inputName) inputName.value = '';
+        const modalReg = document.getElementById('modal-register');
+        if (modalReg) modalReg.style.display = 'flex';
+        savePlayerState();
+        updateTargetBanner();
+      }
+    }
+
     // Listen for Full Game Reset from Admin Cockpit
     function handleGameReset() {
       player = {
@@ -1933,10 +1962,18 @@
       localStorage.removeItem('kahoot_rpg_current_player');
       unlockedPhases = [1, 2, 3, 4, 5, 6]; // All phases unlocked on full reset
       
+      const inputName = document.getElementById('input-name');
+      if (inputName) inputName.value = '';
+
       const modalReg = document.getElementById('modal-register');
       if (modalReg) modalReg.style.display = 'flex';
       const modalChal = document.getElementById('challenge-modal');
       if (modalChal) modalChal.style.display = 'none';
+
+      hero.x = 400;
+      hero.y = 450;
+      hero.targetX = null;
+      hero.targetY = null;
 
       savePlayerState();
       updateTargetBanner();
@@ -1965,7 +2002,7 @@
         if (savedAdmin) {
           try {
             const parsed = JSON.parse(savedAdmin);
-            if (parsed.unlockedPhases) unlockedPhases = parsed.unlockedPhases;
+            if (parsed.unlockedPhases) unlockedPhases = sanitizeUnlockedPhases(parsed.unlockedPhases);
           } catch(e){}
         }
 

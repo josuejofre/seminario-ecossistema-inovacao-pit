@@ -856,18 +856,18 @@
     <div>
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.8rem;">
         <h2 class="section-title">🎮 Liberação das Fases do Jogo (Pós-Bloco)</h2>
-        <div style="display: flex; gap: 0.6rem;">
+        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
           <button class="btn btn-success" onclick="toggleAllPhases(true)">
             <span>🚀</span> Liberar Todas
           </button>
-          <button class="btn btn-danger" onclick="toggleAllPhases(false)">
+          <button class="btn btn-secondary" onclick="toggleAllPhases(false)">
             <span>🔒</span> Bloquear Todas
           </button>
           <button class="btn" onclick="generateSimulatedClass()">
             <span>🎲</span> Simular Turma (25 Alunos)
           </button>
-          <button class="btn" onclick="resetFullGame()" style="background: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.5); color: #fca5a5; font-weight: 700;">
-            <span>🔄</span> Resetar Jogo Completo (Libera Fases & Zera Pontos)
+          <button class="btn btn-danger" onclick="resetFullGame()" style="background: rgba(239, 68, 68, 0.25); border-color: rgba(239, 68, 68, 0.6); color: #fca5a5; font-weight: 800;">
+            <span>🔥</span> Apagar Banco & Reset Geral
           </button>
         </div>
       </div>
@@ -927,17 +927,18 @@
           <table class="table">
             <thead>
               <tr>
-                <th style="width: 50px;">Pos</th>
+                <th style="width: 45px;">Pos</th>
                 <th>Jogador</th>
                 <th>Turma</th>
                 <th>Pontuação</th>
                 <th>Acertos</th>
                 <th>Tempo Médio</th>
+                <th style="width: 45px; text-align: center;">Excluir</th>
               </tr>
             </thead>
             <tbody id="leaderboard-tbody">
               <tr>
-                <td colspan="6" style="text-align: center; color: var(--text-dim); padding: 2rem;">
+                <td colspan="7" style="text-align: center; color: var(--text-dim); padding: 2rem;">
                   Nenhum jogador respondeu ainda. Use "Simular Turma" ou convide os colegas a jogar!
                 </td>
               </tr>
@@ -1277,103 +1278,205 @@
     ];
 
     /* Sync Channel */
-    const channel = new BroadcastChannel('kahoot_rpg_channel');
+    const channel = (typeof BroadcastChannel !== 'undefined') ? new BroadcastChannel('kahoot_rpg_channel') : null;
 
     /* Local State */
     let gameState = {
-      unlockedPhases: [1], // Default Phase 1 unlocked
+      unlockedPhases: [1, 2, 3, 4, 5, 6],
       players: {},
       answers: []
     };
+
+    function getSafeUnlockedPhases() {
+      if (!gameState) gameState = { unlockedPhases: [1, 2, 3, 4, 5, 6], players: {}, answers: [] };
+      if (Array.isArray(gameState.unlockedPhases)) {
+        return gameState.unlockedPhases.map(Number).filter(n => n >= 1 && n <= 6);
+      } else if (gameState.unlockedPhases && typeof gameState.unlockedPhases === 'object') {
+        return Object.values(gameState.unlockedPhases).map(Number).filter(n => n >= 1 && n <= 6);
+      }
+      return [1, 2, 3, 4, 5, 6];
+    }
 
     function loadState() {
       const saved = localStorage.getItem('kahoot_rpg_state');
       if (saved) {
         try {
-          gameState = JSON.parse(saved);
+          const parsed = JSON.parse(saved);
+          if (parsed && typeof parsed === 'object') {
+            gameState = {
+              unlockedPhases: parsed.unlockedPhases || [1, 2, 3, 4, 5, 6],
+              players: parsed.players || {},
+              answers: parsed.answers || []
+            };
+          }
         } catch (e) {
-          console.error(e);
+          console.error('[Admin] Erro ao carregar estado local:', e);
         }
       }
+      gameState.unlockedPhases = getSafeUnlockedPhases();
       renderAll();
     }
 
-    function saveState(broadcast = true) {
-      if (window.SyncService) {
-        window.SyncService.sendState(gameState);
+    let saveDebounceTimer = null;
+    function saveState(immediate = false) {
+      gameState.unlockedPhases = getSafeUnlockedPhases();
+
+      const doSave = () => {
+        try {
+          localStorage.setItem('kahoot_rpg_state', JSON.stringify(gameState));
+          if (window.SyncService) {
+            window.SyncService.sendState(gameState);
+          } else if (channel) {
+            channel.postMessage({ type: 'STATE_UPDATE', state: gameState });
+          }
+        } catch (err) {
+          console.error('[Admin] Erro ao salvar estado:', err);
+        }
+      };
+
+      if (immediate) {
+        if (saveDebounceTimer) clearTimeout(saveDebounceTimer);
+        doSave();
+        scheduleRender();
       } else {
-        localStorage.setItem('kahoot_rpg_state', JSON.stringify(gameState));
-        if (broadcast && channel) {
-          channel.postMessage({ type: 'STATE_UPDATE', state: gameState });
-        }
+        if (saveDebounceTimer) clearTimeout(saveDebounceTimer);
+        saveDebounceTimer = setTimeout(doSave, 120);
+        scheduleRender();
       }
-      renderAll();
     }
 
+    let renderDebounceTimer = null;
+    function scheduleRender() {
+      if (renderDebounceTimer) return;
+      renderDebounceTimer = setTimeout(() => {
+        renderDebounceTimer = null;
+        renderAll();
+      }, 50);
+    }
+
+    // Listener de sincronização (usa SyncService se presente, senão BroadcastChannel)
     if (window.SyncService) {
       window.SyncService.onAnswer((payload) => recordPlayerAnswer(payload));
       window.SyncService.onStateUpdate((state) => {
-        gameState = state;
-        renderAll();
+        if (state && typeof state === 'object') {
+          gameState = {
+            unlockedPhases: state.unlockedPhases || gameState.unlockedPhases,
+            players: state.players || {},
+            answers: state.answers || []
+          };
+          gameState.unlockedPhases = getSafeUnlockedPhases();
+          scheduleRender();
+        }
       });
-    }
-
-    if (channel) {
+      window.SyncService.onReset((state) => {
+        gameState = {
+          unlockedPhases: [1, 2, 3, 4, 5, 6],
+          players: {},
+          answers: []
+        };
+        scheduleRender();
+      });
+    } else if (channel) {
       channel.onmessage = (event) => {
         const data = event.data;
-        if (data && data.type === 'PLAYER_ANSWER') {
+        if (data && data.type === 'PLAYER_ANSWER' && data.payload) {
           recordPlayerAnswer(data.payload);
-        } else if (data && data.type === 'STATE_UPDATE') {
+        } else if (data && data.type === 'STATE_UPDATE' && data.state) {
           gameState = data.state;
-          renderAll();
+          gameState.unlockedPhases = getSafeUnlockedPhases();
+          scheduleRender();
+        } else if (data && data.type === 'GAME_RESET') {
+          gameState = {
+            unlockedPhases: [1, 2, 3, 4, 5, 6],
+            players: {},
+            answers: []
+          };
+          scheduleRender();
         }
       };
     }
 
     function recordPlayerAnswer(payload) {
-      // payload: { playerName, turma, questionId, optionKey, isCorrect, timeMs }
-      const playerKey = payload.playerName;
+      if (!payload || !payload.playerName || !payload.questionId) return;
+
+      const playerKey = payload.playerName.trim();
+      if (!playerKey) return;
+
       if (!gameState.players[playerKey]) {
         gameState.players[playerKey] = {
-          name: payload.playerName,
+          name: playerKey,
           turma: payload.turma || "Geral",
           score: 0,
           correctCount: 0,
           totalTimeMs: 0,
-          answersCount: 0
+          answersCount: 0,
+          answeredQuestions: {}
         };
       }
 
       const p = gameState.players[playerKey];
-      p.answersCount++;
-      p.totalTimeMs += payload.timeMs;
+      p.turma = payload.turma || p.turma || "Geral";
+      p.answeredQuestions = p.answeredQuestions || {};
 
       // Kahoot score formula: 1000 base + speed bonus up to 500
       let points = 0;
       if (payload.isCorrect) {
-        p.correctCount++;
-        const speedBonus = Math.max(0, Math.round(500 * (1 - (payload.timeMs / 20000))));
+        const time = Math.min(20000, Math.max(0, payload.timeMs || 0));
+        const speedBonus = Math.max(0, Math.round(500 * (1 - (time / 20000))));
         points = 1000 + speedBonus;
-        p.score += points;
       }
 
-      gameState.answers.push({
-        ...payload,
+      // Registro idempotente por questionId: responder a mesma pergunta nunca infla os acertos!
+      p.answeredQuestions[payload.questionId] = {
+        isCorrect: Boolean(payload.isCorrect),
+        optionKey: payload.optionKey,
         points: points,
-        timestamp: Date.now()
-      });
+        timeMs: payload.timeMs || 0
+      };
 
-      saveState();
+      // Recalcular métricas do jogador estritamente limitadas a 18 questões
+      const ansList = Object.values(p.answeredQuestions);
+      p.answersCount = Math.min(18, ansList.length);
+      p.correctCount = Math.min(18, ansList.filter(a => a.isCorrect).length);
+      p.score = ansList.reduce((sum, a) => sum + (a.points || 0), 0);
+      p.totalTimeMs = ansList.reduce((sum, a) => sum + (a.timeMs || 0), 0);
+
+      // Atualizar lista global de respostas para gráficos (deduplicada por aluno e questão)
+      gameState.answers = gameState.answers || [];
+      const existingIdx = gameState.answers.findIndex(
+        a => a.playerName === playerKey && a.questionId === payload.questionId
+      );
+      const answerRecord = {
+        playerName: playerKey,
+        turma: p.turma,
+        questionId: payload.questionId,
+        optionKey: payload.optionKey,
+        isCorrect: Boolean(payload.isCorrect),
+        timeMs: payload.timeMs || 0,
+        points: points,
+        timestamp: payload.timestamp || Date.now()
+      };
+
+      if (existingIdx >= 0) {
+        gameState.answers[existingIdx] = answerRecord;
+      } else {
+        gameState.answers.push(answerRecord);
+      }
+
+      saveState(false);
     }
 
     function togglePhase(phaseId) {
-      const idx = gameState.unlockedPhases.indexOf(phaseId);
+      const numId = Number(phaseId);
+      let unlocked = getSafeUnlockedPhases();
+      const idx = unlocked.indexOf(numId);
       if (idx > -1) {
-        gameState.unlockedPhases.splice(idx, 1);
+        unlocked.splice(idx, 1);
       } else {
-        gameState.unlockedPhases.push(phaseId);
+        unlocked.push(numId);
       }
-      saveState();
+      gameState.unlockedPhases = unlocked;
+      saveState(true);
     }
 
     function toggleAllPhases(unlock) {
@@ -1382,29 +1485,46 @@
       } else {
         gameState.unlockedPhases = [];
       }
-      saveState();
+      saveState(true);
+    }
+
+    function deletePlayer(playerName) {
+      if (!confirm(`Deseja realmente remover o jogador "${playerName}" e todas as suas respostas?`)) return;
+      delete gameState.players[playerName];
+      if (Array.isArray(gameState.answers)) {
+        gameState.answers = gameState.answers.filter(a => a.playerName !== playerName);
+      }
+      saveState(true);
     }
 
     function resetFullGame() {
-      if (confirm("Deseja realmente RESETAR O JOGO COMPLETO?\n\nEsta ação irá:\n1. Zerar todos os pontos, histórico e cadastro de todos os alunos;\n2. Liberar todas as 6 fases imediatamente;\n3. Enviar sinal de reinício para todas as telas dos alunos.")) {
-        gameState = {
-          unlockedPhases: [1, 2, 3, 4, 5, 6],
-          players: {},
-          answers: []
-        };
-        saveState();
+      const msg = "⚠️ ATENÇÃO: Deseja realmente RESETAR E APAGAR TUDO DO BANCO?\n\nEsta ação é definitiva e irá:\n1. Apagar TODOS os jogadores e cadastros (incluindo testes);\n2. Apagar TODAS as respostas e pontuações do Firebase na Nuvem;\n3. Limpar a memória do navegador de todos os alunos;\n4. Forçar os alunos a voltarem para a tela de cadastro inicial;\n5. Liberar todas as 6 fases imediatamente.\n\nDeseja continuar?";
+      
+      if (!confirm(msg)) return;
 
-        // Broadcast explicit reset to all player tabs/smartphones
-        try {
-          if (channel) {
-            channel.postMessage({ type: 'GAME_RESET', state: gameState });
-          }
-          if (window.SyncService) {
-            window.SyncService.sendReset(gameState);
-          }
-        } catch (e) {}
+      gameState = {
+        unlockedPhases: [1, 2, 3, 4, 5, 6],
+        players: {},
+        answers: []
+      };
 
-        alert("✓ Jogo resetado com sucesso! Todas as 6 fases estão liberadas e os pontos/cadastros foram zerados.");
+      localStorage.removeItem('kahoot_rpg_state');
+      localStorage.removeItem('kahoot_rpg_current_player');
+
+      if (window.SyncService && typeof window.SyncService.hardResetDatabase === 'function') {
+        window.SyncService.hardResetDatabase(gameState, (success) => {
+          if (success) {
+            alert("✓ BANCO DE DADOS E JOGO RESETADOS COM SUCESSO!\n\nNenhum jogador ou resposta anterior permaneceu no Firebase ou no navegador.");
+          } else {
+            alert("✓ Reset local efetuado com sucesso!");
+          }
+          renderAll();
+        });
+      } else {
+        if (window.SyncService) window.SyncService.sendReset(gameState);
+        if (channel) channel.postMessage({ type: 'GAME_RESET', state: gameState });
+        alert("✓ Jogo resetado com sucesso!");
+        renderAll();
       }
     }
 
@@ -1435,14 +1555,13 @@
           score: 0,
           correctCount: 0,
           totalTimeMs: 0,
-          answersCount: 0
+          answersCount: 0,
+          answeredQuestions: {}
         };
 
         const p = gameState.players[name];
 
-        // Simulate answers for all 18 questions with realistic distributions
         questionsDatabase.forEach((q) => {
-          // 65% chance of correct answer, 20% distractor 1, 15% distractor 2
           const rand = Math.random();
           let chosenKey = "A";
           let isCorrect = true;
@@ -1458,18 +1577,19 @@
             isCorrect = false;
           }
 
-          // Random time between 2.2s and 12.5s
           const timeMs = Math.round(2200 + Math.random() * 10300);
-          p.answersCount++;
-          p.totalTimeMs += timeMs;
-
           let points = 0;
           if (isCorrect) {
-            p.correctCount++;
             const speedBonus = Math.max(0, Math.round(500 * (1 - (timeMs / 20000))));
             points = 1000 + speedBonus;
-            p.score += points;
           }
+
+          p.answeredQuestions[q.id] = {
+            isCorrect: isCorrect,
+            optionKey: chosenKey,
+            points: points,
+            timeMs: timeMs
+          };
 
           gameState.answers.push({
             playerName: name,
@@ -1482,9 +1602,15 @@
             timestamp: Date.now()
           });
         });
+
+        const ansList = Object.values(p.answeredQuestions);
+        p.answersCount = Math.min(18, ansList.length);
+        p.correctCount = Math.min(18, ansList.filter(a => a.isCorrect).length);
+        p.score = ansList.reduce((sum, a) => sum + (a.points || 0), 0);
+        p.totalTimeMs = ansList.reduce((sum, a) => sum + (a.timeMs || 0), 0);
       });
 
-      saveState();
+      saveState(true);
     }
 
     /* Renders */
@@ -1496,19 +1622,19 @@
     }
 
     function renderKPIs() {
-      const activePhases = gameState.unlockedPhases.length;
+      const activePhases = getSafeUnlockedPhases().length;
       document.getElementById('kpi-active-phases').textContent = `${activePhases} / 6`;
 
-      const playerKeys = Object.keys(gameState.players);
+      const playerKeys = Object.keys(gameState.players || {});
       document.getElementById('kpi-total-players').textContent = playerKeys.length;
       document.getElementById('kpi-players-sub').textContent = playerKeys.length > 0 ? `${playerKeys.length} participantes ativos` : "Aguardando participantes";
 
-      const totalAnswers = gameState.answers.length;
+      const totalAnswers = (gameState.answers || []).length;
       document.getElementById('kpi-total-answers').textContent = totalAnswers;
 
       let avgTime = 0;
       if (totalAnswers > 0) {
-        const sumTime = gameState.answers.reduce((acc, a) => acc + a.timeMs, 0);
+        const sumTime = gameState.answers.reduce((acc, a) => acc + (a.timeMs || 0), 0);
         avgTime = (sumTime / totalAnswers / 1000).toFixed(1);
       }
       document.getElementById('kpi-avg-time').textContent = `${avgTime}s`;
@@ -1516,17 +1642,20 @@
 
     function renderPhaseCards() {
       const container = document.getElementById('phase-cards-grid');
+      if (!container) return;
+
+      const unlocked = getSafeUnlockedPhases();
       container.innerHTML = '';
 
       phasesMeta.forEach(p => {
-        const isUnlocked = gameState.unlockedPhases.includes(p.id);
+        const isUnlocked = unlocked.includes(Number(p.id));
         const card = document.createElement('div');
         card.className = `phase-card ${isUnlocked ? 'active' : ''}`;
         card.innerHTML = `
           <div>
             <div class="phase-header">
               <span class="phase-badge ${isUnlocked ? 'unlocked' : 'locked'}">
-                ${isUnlocked ? '● Fase Liberada' : '🔒 Bloqueada'}
+                ${isUnlocked ? '● FASE LIBERADA' : '🔒 BLOQUEADA'}
               </span>
               <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--cyan-light);">
                 ${p.ref}
@@ -1547,7 +1676,9 @@
 
     function renderLeaderboard() {
       const tbody = document.getElementById('leaderboard-tbody');
-      const playersList = Object.values(gameState.players);
+      if (!tbody) return;
+
+      const playersList = Object.values(gameState.players || {});
 
       // Sort by score desc, then by average time asc
       playersList.sort((a, b) => {
@@ -1574,7 +1705,7 @@
       if (playersList.length === 0) {
         tbody.innerHTML = `
           <tr>
-            <td colspan="6" style="text-align: center; color: var(--text-dim); padding: 2rem;">
+            <td colspan="7" style="text-align: center; color: var(--text-dim); padding: 2rem;">
               Nenhum jogador respondeu ainda. Use "Simular Turma" ou convide os colegas a jogar!
             </td>
           </tr>
@@ -1587,6 +1718,7 @@
         const rank = idx + 1;
         const rankClass = rank === 1 ? 'rank-1' : rank === 2 ? 'rank-2' : rank === 3 ? 'rank-3' : '';
         const avgTime = p.answersCount > 0 ? (p.totalTimeMs / p.answersCount / 1000).toFixed(1) + 's' : '-';
+        const safeName = p.name.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
 
         const row = document.createElement('tr');
         row.className = rankClass;
@@ -1595,8 +1727,11 @@
           <td><strong>${p.name}</strong></td>
           <td><span style="font-size: 0.78rem; color: var(--cyan-light);">${p.turma}</span></td>
           <td><strong style="font-family: var(--font-mono); color: var(--cyan-glow);">${p.score.toLocaleString()}</strong></td>
-          <td><span style="font-family: var(--font-mono);">${p.correctCount} / 18</span></td>
+          <td><span style="font-family: var(--font-mono); font-weight: 700; color: #6ee7b7;">${Math.min(18, p.correctCount)} / 18</span></td>
           <td><span style="font-family: var(--font-mono); color: var(--text-muted);">${avgTime}</span></td>
+          <td style="text-align: center;">
+            <button onclick="deletePlayer('${safeName}')" title="Excluir Jogador" style="background: none; border: none; cursor: pointer; font-size: 1rem; opacity: 0.6; transition: all 0.2s;" onmouseover="this.style.opacity='1';this.style.transform='scale(1.2)'" onmouseout="this.style.opacity='0.6';this.style.transform='scale(1)'">🗑️</button>
+          </td>
         `;
         tbody.appendChild(row);
       });
