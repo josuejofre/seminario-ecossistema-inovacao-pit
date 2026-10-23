@@ -751,6 +751,308 @@
       font-style: italic;
     }
 
+  
+    /* ==========================================================================
+       ACADEMIC MASTER'S COVER SLIDE (SLIDE 1)
+       ========================================================================== */
+    .slide-cover-academic {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.15rem;
+      padding: 0.25rem 0.5rem 0;
+    }
+
+    .academic-cover-header {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      padding: 0.95rem 1.6rem;
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .institution-crest-box {
+      width: 60px;
+      height: 60px;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.25), rgba(37, 99, 235, 0.35));
+      border: 1px solid rgba(6, 182, 212, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.1rem;
+      flex-shrink: 0;
+      box-shadow: 0 0 25px rgba(6, 182, 212, 0.2);
+    }
+
+    .institution-text-block {
+      display: flex;
+      flex-direction: column;
+      gap: 0.18rem;
+    }
+
+    .univ-name {
+      font-family: var(--font-display);
+      font-size: 1.18rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .inst-name {
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--cyan-light);
+      letter-spacing: 0.02em;
+    }
+
+    .prog-name {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-weight: 500;
+    }
+
+    .academic-context-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .academic-tag-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.35);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--cyan-light);
+      letter-spacing: 0.04em;
+    }
+
+    .academic-tag-seminar {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(139, 92, 246, 0.15);
+      border: 1px solid rgba(139, 92, 246, 0.4);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #c4b5fd;
+      letter-spacing: 0.04em;
+    }
+
+    .academic-title-box {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(10, 19, 36, 0.85) 100%);
+      border: 1px solid rgba(6, 182, 212, 0.25);
+      border-left: 6px solid var(--cyan-glow);
+      border-radius: var(--radius-md);
+      padding: 1.6rem 2.2rem;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .academic-title-box::after {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -10%;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .academic-main-title {
+      font-family: var(--font-display);
+      font-size: 2.85rem;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .academic-main-title span {
+      background: linear-gradient(135deg, var(--cyan-light), var(--blue-electric));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .academic-sub-title {
+      font-family: var(--font-body);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      line-height: 1.35;
+      margin-bottom: 0.85rem;
+    }
+
+    .academic-epigraph {
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-soft);
+      padding-top: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .academic-epigraph::before {
+      content: '“';
+      font-size: 1.8rem;
+      color: var(--cyan-light);
+      font-family: Georgia, serif;
+      line-height: 0;
+      margin-right: 0.2rem;
+    }
+
+    .academic-epigraph::after {
+      content: '”';
+      font-size: 1.8rem;
+      color: var(--cyan-light);
+      font-family: Georgia, serif;
+      line-height: 0;
+      margin-left: 0.2rem;
+    }
+
+    .academic-meta-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 1.35rem;
+      width: 100%;
+    }
+
+    .academic-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 1.3rem 1.6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .academic-panel-header {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin-bottom: 0.9rem;
+      padding-bottom: 0.55rem;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .academic-panel-icon {
+      font-size: 1.35rem;
+    }
+
+    .academic-panel-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 800;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .academic-panel-subtitle {
+      font-size: 0.82rem;
+      color: var(--cyan-light);
+      font-family: var(--font-mono);
+    }
+
+    .discentes-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.65rem 1.2rem;
+    }
+
+    .discente-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 0.5rem 0.8rem;
+      border-radius: var(--radius-sm);
+      transition: all 0.2s;
+    }
+
+    .discente-pill:hover {
+      border-color: rgba(6, 182, 212, 0.35);
+      background: rgba(6, 182, 212, 0.05);
+    }
+
+    .discente-bullet {
+      color: var(--cyan-light);
+      font-size: 0.75rem;
+    }
+
+    .discente-name {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #f1f5f9;
+    }
+
+    .docentes-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .docente-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 0.55rem 0.85rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .docente-role-label {
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .docente-full-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .location-year-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 0.65rem;
+      padding-top: 0.65rem;
+      border-top: 1px solid var(--border-soft);
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+    
   </style>
 </head>
 <body>
@@ -779,75 +1081,121 @@
 </header>
 <!-- Deck Viewport -->
 <main class="deck-viewport" id="deck-viewport">
-<!-- SLIDE 1: ABERTURA -->
-<section class="slide active" data-block="Abertura" data-slide="1" data-speaker="Josué Jofre (4ª) / Fernando (5ª)" data-time="2 min">
-<div class="slide-tag">🚀 ABERTURA OFICIAL • SEMINÁRIO GETI 2026</div>
-<h1 class="slide-title">Ecossistemas de Inovação: <span>Teoria, Orquestração e a Prática no PIT SJC</span></h1>
-<div class="punchline-card">
-<span style="font-size: 1.4rem;">💡</span>
-<div class="punchline-quote">"Nenhuma organização inova sozinha: o valor não está nas partes, mas na sinergia entre elas."</div>
-</div>
-<div class="grid-3">
-<div class="card card-glow-cyan" style="padding: 1rem 1.15rem;">
-<div class="card-title" style="font-size: 1.15rem;"><span>📚</span> Fundamentos Teóricos</div>
-<p class="card-desc" style="font-size: 0.95rem; margin-bottom: 0.35rem;">Artigos seminais e recentes da vanguarda da literatura internacional:</p>
-<ul class="bullet-list" style="margin-bottom: 0.5rem;">
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> <strong>Shen et al. (2025/2026):</strong> Mapeamento cienciométrico e fronteiras</li>
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> <strong>Machado et al. (2025):</strong> Competências de orquestração</li>
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> <strong>Furr &amp; Shipilov (MIT):</strong> Ecossistemas adaptativos</li>
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> <strong>Majava &amp; Rinkinen:</strong> Benchmarking de San Diego</li>
-</ul>
-<div class="chips-row">
-<span class="chip-badge">Hélices 3ª, 4ª e 5ª</span>
-<span class="chip-badge">Co-criação de Valor</span>
-</div>
-</div>
-<div class="card card-glow-purple" style="padding: 1rem 1.15rem;">
-<div class="card-title" style="font-size: 1.15rem;"><span>🔬</span> O Laboratório Vivo</div>
-<p class="card-desc" style="font-size: 0.95rem; margin-bottom: 0.35rem;">Conexão umbilical com o Parque Tecnológico de São José dos Campos:</p>
-<ul class="bullet-list" style="margin-bottom: 0.5rem;">
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> Primeiro Parque Tecnológico do Estado de SP (2006)</li>
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> Mais de 300 empresas e 4 APLs consolidados</li>
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> Nexus Hub: aceleradora e incubadora de deep techs</li>
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> Campus UNIFESP e sinergia com o PPG-PIT</li>
-</ul>
-<div class="chips-row">
-<span class="chip-badge">Embraer &amp; DCTA</span>
-<span class="chip-badge">PPG-PIT UNIFESP</span>
-</div>
-</div>
-<div class="card card-glow-emerald" style="padding: 1rem 1.15rem;">
-<div class="card-title" style="font-size: 1.15rem;"><span>🎮</span> RPG &amp; Kahoot ao Vivo</div>
-<p class="card-desc" style="font-size: 0.95rem; margin-bottom: 0.35rem;">Interatividade em tempo real pelo smartphone da turma:</p>
-<ul class="bullet-list" style="margin-bottom: 0.5rem;">
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> 6 Fases no mapa do PIT acionadas após cada bloco</li>
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> 18 perguntas (1 certa e 2 erradas) com cronômetro</li>
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> Pontuação regressiva estilo Kahoot por milissegundo</li>
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> Pódio com confetes e análise cienciométrica dos erros</li>
-</ul>
-<div class="chips-row">
-<span class="chip-badge">Ranking na Tela</span>
-<span class="chip-badge">Análise de Erros</span>
-</div>
-</div>
-</div>
-<!-- Quick Ticker Preview Compacto -->
-<div class="card" style="padding: 0.45rem 1.1rem; display: flex; align-items: center; justify-content: space-between; border-color: rgba(6,182,212,0.3); margin-top: 0.15rem;">
-<div style="display: flex; align-items: center; gap: 0.7rem;">
-<span style="font-size: 1.15rem;">📡</span>
-<div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-<span style="font-size: 0.95rem; font-weight: 700; color: #fff;">Sessão Interativa da Turma Conectada:</span>
-<span style="font-size: 0.92rem; color: var(--cyan-light);">Abra pelo smartphone: <strong>jogo.html</strong></span>
-</div>
-</div>
-<div style="display: flex; align-items: center; gap: 0.5rem;">
-<div class="live-pulse-dot"></div>
-<span id="ticker-status-s1" style="font-size: 0.88rem; color: var(--text-muted);">Aguardando participantes...</span>
-</div>
-</div>
-<div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Seminário 5: Ecossistemas de Inovação • GETI 2026 / PPG-PIT UNIFESP Campus Parque Tecnológico SJC.</span></div>
+<!-- SLIDE 1: ABERTURA / CAPA ACADÊMICA DE MESTRADO -->
+<section class="slide active slide-cover-academic" data-block="Capa" data-slide="1" data-speaker="Josué Jofre" data-time="2 min">
+  
+  <!-- Institutional Header Banner -->
+  <div class="academic-cover-header">
+    <div class="institution-crest-box">
+      <span>🏛️</span>
+    </div>
+    <div class="institution-text-block">
+      <div class="univ-name">UNIVERSIDADE FEDERAL DE SÃO PAULO • UNIFESP</div>
+      <div class="inst-name">Instituto de Ciência e Tecnologia (ICT) • Campus São José dos Campos</div>
+      <div class="prog-name">Programa de Pós-Graduação em Inovação Tecnológica (PPG-PIT) • Mestrado Profissional</div>
+    </div>
+  </div>
+
+  <!-- Academic Context & Subject Tags -->
+  <div class="academic-context-row">
+    <div class="academic-tag-pill">
+      <span>📚</span>
+      <span>DISCIPLINA: GESTÃO ESTRATÉGICA DA INOVAÇÃO (GETI 2026)</span>
+    </div>
+    <div class="academic-tag-seminar">
+      <span>⚡</span>
+      <span>SEMINÁRIO TEMÁTICO 5</span>
+    </div>
+  </div>
+
+  <!-- Main Title Area -->
+  <div class="academic-title-box">
+    <h1 class="academic-main-title">
+      Ecossistemas de Inovação: <span>Teoria, Orquestração e a Prática no PIT SJC</span>
+    </h1>
+    <h2 class="academic-sub-title">
+      Da coevolução biológica aos ecossistemas adaptativos: a sinergia entre academia, indústria e governo no Parque Tecnológico de São José dos Campos
+    </h2>
+    <div class="academic-epigraph">
+      Nenhuma organização inova sozinha: o valor não reside nas partes isoladas, mas na sinergia, na coevolução e na orquestração dos atores do ecossistema.
+    </div>
+  </div>
+
+  <!-- Metadata Grid: Discentes & Docentes -->
+  <div class="academic-meta-grid">
+    <!-- Panel Discentes (Apenas Turma de Quarta-feira) -->
+    <div class="academic-panel discentes-panel">
+      <div class="academic-panel-header">
+        <span class="academic-panel-icon">🎓</span>
+        <div>
+          <div class="academic-panel-title">DISCENTES / INTEGRANTES DO SEMINÁRIO</div>
+          <div class="academic-panel-subtitle">Turma de Quarta-feira • PPG-PIT UNIFESP</div>
+        </div>
+      </div>
+      <div class="discentes-grid">
+        <div class="discente-pill">
+          <span class="discente-bullet">●</span>
+          <span class="discente-name">Josué Jofre</span>
+        </div>
+        <div class="discente-pill">
+          <span class="discente-bullet">●</span>
+          <span class="discente-name">Nathália Neves</span>
+        </div>
+        <div class="discente-pill">
+          <span class="discente-bullet">●</span>
+          <span class="discente-name">Veridiany Braga</span>
+        </div>
+        <div class="discente-pill">
+          <span class="discente-bullet">●</span>
+          <span class="discente-name">Jéssica Pascotto David</span>
+        </div>
+        <div class="discente-pill">
+          <span class="discente-bullet">●</span>
+          <span class="discente-name">Lilian Velga Vinhas</span>
+        </div>
+        <div class="discente-pill">
+          <span class="discente-bullet">●</span>
+          <span class="discente-name">Renato Paschoal</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel Docentes & Local -->
+    <div class="academic-panel docentes-panel">
+      <div class="academic-panel-header">
+        <span class="academic-panel-icon">👨‍🏫</span>
+        <div>
+          <div class="academic-panel-title">CORPO DOCENTE RESPONSÁVEL</div>
+          <div class="academic-panel-subtitle">Professores Titulares da Disciplina</div>
+        </div>
+      </div>
+      <div class="docentes-content">
+        <div class="docente-row">
+          <span class="docente-role-label">Professora Responsável</span>
+          <span class="docente-full-name">Profª. Drª. Iraci de Souza Martinez</span>
+        </div>
+        <div class="docente-row">
+          <span class="docente-role-label">Professor Responsável</span>
+          <span class="docente-full-name">Prof. Dr. Milton Yukio Tsutsumi</span>
+        </div>
+      </div>
+      <div class="location-year-row">
+        <span>📍 Parque Tecnológico • São José dos Campos – SP</span>
+        <span>2026</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Academic Footnote -->
+  <div class="slide-footer-ref">
+    <span>🏛️</span>
+    <span><strong>UNIFESP ICT</strong> • Programa de Pós-Graduação em Inovação Tecnológica (PPG-PIT) • Seminário 5: Ecossistemas de Inovação.</span>
+  </div>
+
 </section>
-<section class="slide" data-block="Agenda" data-slide="2" data-speaker="Nathalia Neves (4ª) / Fernando (5ª)" data-time="2 min">
+
+<!-- SLIDE 2: AGENDA -->
+<section class="slide" data-block="Agenda" data-slide="2"  data-speaker="Nathalia Neves" data-time="2 min">
 <div class="slide-tag">🧭 CRONOGRAMA &amp; ROTEIRO • 120 MINUTOS</div>
 <h2 class="slide-title">Estrutura e <span>Divisão dos Blocos</span></h2>
 <div class="punchline-card">
@@ -888,7 +1236,7 @@
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Estrutura Baseada em Moore (1993), Etzkowitz (2000), Machado et al. (2025), Furr &amp; Shipilov (2018), Majava &amp; Rinkinen (2026) e Shen et al. (2026).</span></div>
 </section>
-<section class="slide" data-block="Contexto PIT" data-slide="3" data-speaker="Nathalia Neves (4ª) / Fernando (5ª)" data-time="4 min">
+<section class="slide" data-block="Contexto PIT" data-slide="3" data-speaker="Nathalia Neves" data-time="4 min">
 <div class="slide-tag">🎙️ ESTUDO EMPÍRICO • ABERTURA DO CASO DE CAMPO</div>
 <h2 class="slide-title">São José dos Campos &amp; PIT: <span>Por que a Indústria Precisa da Academia?</span></h2>
 <div class="punchline-card" style="margin-bottom: 0.85rem;">
@@ -939,14 +1287,14 @@
                 🎓 <strong>"Por que a Indústria Precisa da Academia"</strong>
 </div>
 <div style="color: var(--text-muted); font-size: 0.82rem;">
-                Apresentação: Nathália Neves (4ª) / Fernando (5ª)
+                Apresentação: Nathália Neves
               </div>
 </div>
 </div>
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Estudo Empírico GETI 2026 • Entrevista de Campo conduzida por Nathália Neves em Out/2026.</span></div>
 </section>
-<section class="slide" data-block="Bloco 1" data-slide="4" data-speaker="Nathalia Neves (4ª) / Fernando (5ª)" data-time="4 min">
+<section class="slide" data-block="Bloco 1" data-slide="4" data-speaker="Nathalia Neves" data-time="4 min">
 <div class="slide-tag">📚 BLOCO 1 • FUNDAMENTOS TEÓRICOS</div>
 <h2 class="slide-title">A Origem do Conceito: <span>Tansley (1935) &amp; Moore (1993)</span></h2>
 <div class="punchline-card">
@@ -973,7 +1321,7 @@
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Tansley, A. G. (1935). The use and abuse of vegetational concepts and terms. Ecology; Moore, J. F. (1993). Predators and Prey. HBR.</span></div>
 </section>
-<section class="slide" data-block="Bloco 1" data-slide="5" data-speaker="Nathalia Neves (4ª) / Fernando (5ª)" data-time="4 min">
+<section class="slide" data-block="Bloco 1" data-slide="5" data-speaker="Nathalia Neves" data-time="4 min">
 <div class="slide-tag">📊 BLOCO 1 • ANÁLISE BIBLIOMÉTRICA</div>
 <h2 class="slide-title">Evolução Bibliométrica: <span>Shen et al. (2025/2026)</span></h2>
 <div class="punchline-card">
@@ -999,7 +1347,7 @@
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Shen, W., et al. (2025/2026). Mapping innovation ecosystem research published from 2006 to 2023: A scientometric review. Technology in Society, 78, 102641.</span></div>
 </section>
-<section class="slide" data-block="Bloco 1" data-slide="6" data-speaker="Nathalia Neves (4ª) / Fernando (5ª)" data-time="4 min">
+<section class="slide" data-block="Bloco 1" data-slide="6" data-speaker="Nathalia Neves" data-time="4 min">
 <div class="slide-tag">💡 BLOCO 1 • 4 CONCEITOS ESSENCIAIS</div>
 <h2 class="slide-title">Como Diferenciar: <span>Cluster, Sistema e Ecossistema</span></h2>
 <div class="punchline-card">
@@ -1042,7 +1390,7 @@
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Porter, M. (1998); Freeman, C. (1987); Lundvall, B.-Å. (1992); Moore, J. F. (1993); Adner, R. (2006).</span></div>
 </section>
-<section class="slide" data-block="Momento Kahoot 1" data-slide="7" data-speaker="Nathalia Neves (4ª) / Fernando (5ª)" data-time="3 min">
+<section class="slide" data-block="Momento Kahoot 1" data-slide="7" data-speaker="Nathalia Neves" data-time="3 min">
 <div class="slide-tag">🎮 MOMENTO KAHOOT RPG • FASE 1</div>
 <h2 class="slide-title">Desafio da Fase 1: <span>Bloco Acadêmico UNIFESP</span></h2>
 <div class="punchline-card">
@@ -1110,7 +1458,7 @@
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Avaliação Formativa Síncrona • Banco de Questões GETI 2026 baseado em Moore (1993) e Shen et al. (2026).</span></div>
 </section>
-<section class="slide" data-block="Bloco 2" data-slide="8" data-speaker="Veridiany Braga (4ª) / Fábio (5ª)" data-time="4 min">
+<section class="slide" data-block="Bloco 2" data-slide="8" data-speaker="Veridiany Braga" data-time="4 min">
 <div class="slide-tag">🧬 BLOCO 2 • ANATOMIA DO ECOSSISTEMA</div>
 <h2 class="slide-title">Anatomia do Ecossistema: <span>Heterogeneidade &amp; Simbiose de Atores</span></h2>
 <div class="punchline-card">
@@ -1202,7 +1550,7 @@
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Machado, C. G., Faccin, K., &amp; Bitencourt, C. C. (2025); Granovetter, M. (1973). The Strength of Weak Ties. AJS.</span></div>
 </section>
 <!-- Slide 9: Da Tríplice à Quíntupla Hélice + Entrevista Rubens Costa -->
-<section class="slide" data-block="Bloco 2" data-slide="9" data-speaker="Veridiany Braga (4ª) / Fábio (5ª)" data-time="4 min">
+<section class="slide" data-block="Bloco 2" data-slide="9" data-speaker="Veridiany Braga" data-time="4 min">
 <div class="slide-tag">🌀 BLOCO 2 • MODELOS DE HÉLICES DA INOVAÇÃO</div>
 <h2 class="slide-title">Da Tríplice à Quíntupla Hélice: <span>Sociedade &amp; Sustentabilidade</span></h2>
 <div class="punchline-card">
@@ -1269,7 +1617,7 @@ Transição energética, neutralidade de carbono, economia circular e impacto re
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Etzkowitz, H. &amp; Leydesdorff, L. (2000). The dynamics of innovation; Carayannis, E. G. &amp; Campbell, D. F. (2009, 2012). Quintuple Innovation Helix.</span></div>
 </section>
 <!-- SLIDE ADICIONAL: ESTUDO EMPÍRICO TRÍPLICE HÉLICE & START-UP CHILE (RUBENS COSTA) -->
-<section class="slide" data-block="Bloco 2" data-slide="10" data-speaker="Veridiany Braga (4ª) / Fábio (5ª)" data-time="3 min">
+<section class="slide" data-block="Bloco 2" data-slide="10" data-speaker="Veridiany Braga" data-time="3 min">
 <div class="slide-tag">🌀 BLOCO 2 • ESTUDO EMPÍRICO &amp; CASO DE CAMPO</div>
 <h2 class="slide-title">Estudo Empírico: <span>A Quádrupla Hélice na Prática &amp; Conexão Academia-Mercado</span></h2>
 <div class="punchline-card" style="margin-bottom: 0.85rem;">
@@ -1322,7 +1670,7 @@ Transição energética, neutralidade de carbono, economia circular e impacto re
 <span><strong>Fonte / Ref:</strong> Entrevista Empírica PPGPIT com Renato Boschilia Jr. (Out/2026); CARAYANNIS &amp; CAMPBELL (2009 - Quadruple Helix); ETZKOWITZ &amp; LEYDESDORFF (2000).</span>
 </div>
 </section>
-<section class="slide" data-block="Bloco 2" data-slide="11" data-speaker="Veridiany Braga (4ª) / Fábio (5ª)" data-time="4 min">
+<section class="slide" data-block="Bloco 2" data-slide="11" data-speaker="Veridiany Braga" data-time="4 min">
 <div class="slide-tag">🕸️ BLOCO 2 • INTERDEPENDÊNCIA E DINÂMICA DE REDE</div>
 <h2 class="slide-title">Interdependência &amp; Riscos: <span>Cadeia Linear vs. Rede Viva</span></h2>
 <div class="punchline-card">
@@ -1404,7 +1752,7 @@ Atores independentes colaboram para criar um novo mercado e competem dentro dele
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Adner, R. (2006; 2012). Match Your Innovation Strategy to Your Innovation Ecosystem / The Wide Lens. Portfolio/Penguin.</span></div>
 </section>
-<section class="slide" data-block="Momento Kahoot 2" data-slide="12" data-speaker="Veridiany Braga (4ª) / Fábio (5ª)" data-time="3 min">
+<section class="slide" data-block="Momento Kahoot 2" data-slide="12" data-speaker="Veridiany Braga" data-time="3 min">
 <div class="slide-tag">🎮 MOMENTO KAHOOT RPG • FASE 2</div>
 <h2 class="slide-title">Desafio da Fase 2: <span>Praça Central das Hélices</span></h2>
 <div class="punchline-card">
@@ -1475,7 +1823,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Avaliação Formativa Síncrona • Banco de Questões GETI 2026 baseado em Adner (2006) e Carayannis &amp; Campbell (2012).</span></div>
 </section>
-<section class="slide" data-block="Bloco 3" data-slide="13" data-speaker="Jéssica David (4ª) / Joel (5ª)" data-time="1 min">
+<section class="slide" data-block="Bloco 3" data-slide="13" data-speaker="Jéssica David" data-time="1 min">
 <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.05rem; color: #3FD0E6; letter-spacing: 0.15em; font-weight: 700; margin-bottom: 0.4rem; text-transform: uppercase;">
           BLOCO 03 · GOVERNANÇA E ORQUESTRAÇÃO
         </div>
@@ -1517,7 +1865,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
         </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Machado, C. G., Faccin, K., &amp; Bitencourt, C. C. (2025). Orchestration competence in innovation ecosystems. Innovation &amp; Management Review.</span></div>
 </section>
-<section class="slide" data-block="Bloco 3" data-slide="14" data-speaker="Jéssica David (4ª) / Joel (5ª)" data-time="1.5 min">
+<section class="slide" data-block="Bloco 3" data-slide="14" data-speaker="Jéssica David" data-time="1.5 min">
 <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.05rem; color: #3FD0E6; letter-spacing: 0.15em; font-weight: 700; margin-bottom: 0.4rem; text-transform: uppercase;">
           01 · O PAPEL DO ORQUESTRADOR
         </div>
@@ -1564,7 +1912,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Dhanaraj, C. &amp; Parkhe, A. (2006). Orchestrating innovation networks. AMR; Machado, Faccin &amp; Bitencourt (2025).</span></div>
 </section>
 <!-- SLIDE 15: ESTUDO EMPÍRICO O PAPEL DO ORQUESTRADOR & AUTORIDADE RELACIONAL (RUBENS COSTA) -->
-<section class="slide" data-block="Bloco 3" data-slide="15" data-speaker="Jéssica David (4ª) / Joel (5ª)" data-time="2 min">
+<section class="slide" data-block="Bloco 3" data-slide="15" data-speaker="Jéssica David" data-time="2 min">
 <div class="slide-tag">🎙️ BLOCO 3 • ESTUDO EMPÍRICO &amp; LIDERANÇA RELACIONAL</div>
 <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.5rem;">
   <div>
@@ -1626,7 +1974,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
   <span><strong>Fonte / Ref:</strong> Entrevista Empírica PPGPIT com Rubens Costa (Out/2026); Dhanaraj &amp; Parkhe (2006); Machado, Faccin &amp; Bitencourt (2025) - Dimensões de Orquestração.</span>
 </div>
 </section>
-<section class="slide" data-block="Bloco 3" data-slide="16" data-speaker="Jéssica David (4ª) / Joel (5ª)" data-time="1 min">
+<section class="slide" data-block="Bloco 3" data-slide="16" data-speaker="Jéssica David" data-time="1 min">
 <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.05rem; color: #3FD0E6; letter-spacing: 0.15em; font-weight: 700; margin-bottom: 0.4rem; text-transform: uppercase;">
           02 · AS DIMENSÕES DA ORQUESTRAÇÃO
         </div>
@@ -1695,7 +2043,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
         </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Hurmelinna-Laukkanen et al. (2011); Da Silva &amp; Bitencourt (2019); Mignoni et al. (2021); Machado et al. (2025).</span></div>
 </section>
-<section class="slide" data-block="Bloco 3" data-slide="17" data-speaker="Jéssica David (4ª) / Joel (5ª)" data-time="2 min">
+<section class="slide" data-block="Bloco 3" data-slide="17" data-speaker="Jéssica David" data-time="2 min">
 <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.05rem; color: #3FD0E6; letter-spacing: 0.15em; font-weight: 700; margin-bottom: 0.4rem; text-transform: uppercase;">
           03 · MECANISMOS (1/2)
         </div>
@@ -1760,7 +2108,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
         </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Machado, C. G., Faccin, K., &amp; Bitencourt, C. C. (2025). Tabela 1 e 2: Mecanismos de Direção, Mobilização e Estabilização.</span></div>
 </section>
-<section class="slide" data-block="Bloco 3" data-slide="18" data-speaker="Jéssica David (4ª) / Joel (5ª)" data-time="2 min">
+<section class="slide" data-block="Bloco 3" data-slide="18" data-speaker="Jéssica David" data-time="2 min">
 <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.05rem; color: #3FD0E6; letter-spacing: 0.15em; font-weight: 700; margin-bottom: 0.4rem; text-transform: uppercase;">
           04 · MECANISMOS (2/2)
         </div>
@@ -1825,7 +2173,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
         </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Machado, C. G., Faccin, K., &amp; Bitencourt, C. C. (2025). Mecanismos de Compartilhamento, Coordenação e Gestão da Comunicação.</span></div>
 </section>
-<section class="slide" data-block="Bloco 3" data-slide="19" data-speaker="Jéssica David (4ª) / Joel (5ª)" data-time="1.75 min">
+<section class="slide" data-block="Bloco 3" data-slide="19" data-speaker="Jéssica David" data-time="1.75 min">
 <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.05rem; color: #3FD0E6; letter-spacing: 0.15em; font-weight: 700; margin-bottom: 0.4rem; text-transform: uppercase;">
           05 · COMPETÊNCIAS DE ORQUESTRAÇÃO
         </div>
@@ -1897,7 +2245,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
         </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Dutra, J. S. (2004). Gestão por competências; Fleury &amp; Fleury (2001); Machado, Faccin &amp; Bitencourt (2025).</span></div>
 </section>
-<section class="slide" data-block="Bloco 3" data-slide="20" data-speaker="Jéssica David (4ª) / Joel (5ª)" data-time="0.75 min">
+<section class="slide" data-block="Bloco 3" data-slide="20" data-speaker="Jéssica David" data-time="0.75 min">
 <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.05rem; color: #3FD0E6; letter-spacing: 0.15em; font-weight: 700; margin-bottom: 0.4rem; text-transform: uppercase;">
           06 · SÍNTESE
         </div>
@@ -1953,7 +2301,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
         </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Machado, C. G., Faccin, K., &amp; Bitencourt, C. C. (2025). Framework Integrado de Competências de Orquestração.</span></div>
 </section>
-<section class="slide" data-block="Momento Kahoot 3" data-slide="21" data-speaker="Jéssica David (4ª) / Joel (5ª)" data-time="3 min">
+<section class="slide" data-block="Momento Kahoot 3" data-slide="21" data-speaker="Jéssica David" data-time="3 min">
 <div class="slide-tag">🎮 MOMENTO KAHOOT RPG • FASE 3</div>
 <h2 class="slide-title">Desafio da Fase 3: <span>Centro de Governança do PIT</span></h2>
 <div class="punchline-card">
@@ -2021,7 +2369,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Avaliação Formativa Síncrona • Banco de Questões GETI 2026 baseado em Machado, Faccin &amp; Bitencourt (2025).</span></div>
 </section>
-<section class="slide" data-block="Bloco 4" data-slide="22" data-speaker="Josué Jofre (4ª) / Joel (5ª)" data-time="4 min">
+<section class="slide" data-block="Bloco 4" data-slide="22" data-speaker="Josué Jofre" data-time="4 min">
 <div class="slide-tag">🏗️ BLOCO 4 • CONSTRUÇÃO DE ECOSSISTEMAS</div>
 <h2 class="slide-title">Como Construir Ecossistemas: <span>Furr &amp; Shipilov (MIT)</span></h2>
 <div class="punchline-card">
@@ -2048,7 +2396,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Furr, N. &amp; Shipilov, A. (2018). Building the Right Ecosystem for Innovation. MIT Sloan Management Review, 59(4), 59-64.</span></div>
 </section>
-<section class="slide" data-block="Bloco 4" data-slide="23" data-speaker="Josué Jofre (4ª) / Joel (5ª)" data-time="4 min">
+<section class="slide" data-block="Bloco 4" data-slide="23" data-speaker="Josué Jofre" data-time="4 min">
 <div class="slide-tag">🚀 BLOCO 4 • NEXUS HUB DE STARTUPS</div>
 <h2 class="slide-title">O Nexus como Catalisador: <span>Acelerando Deep Techs e Filtrando Oportunistas</span></h2>
 <div class="punchline-card" style="margin-bottom: 0.85rem;">
@@ -2095,14 +2443,14 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
                 🛡️ <strong>"Curadoria Rígida: Filtrando Startups Oportunistas"</strong>
 </div>
 <div style="color: var(--text-muted); font-size: 0.82rem;">
-                Apresentação: Josué Jofre (4ª) / Joel (5ª)
+                Apresentação: Josué Jofre
               </div>
 </div>
 </div>
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> APTSJC (2025). Relatório Nexus Hub; Williamson (1985); Entrevista de Campo GETI 2026.</span></div>
 </section>
-<section class="slide" data-block="Bloco 4" data-slide="24" data-speaker="Josué Jofre (4ª) / Joel (5ª)" data-time="4 min">
+<section class="slide" data-block="Bloco 4" data-slide="24" data-speaker="Josué Jofre" data-time="4 min">
 <div class="slide-tag">🧭 BLOCO 4 • LIDERANÇA ADAPTATIVA</div>
 <h2 class="slide-title">Liderança sem Autoridade Hierárquica: <span>O Desafio do Orquestrador</span></h2>
 <div class="punchline-card">
@@ -2128,7 +2476,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Heifetz, R., Grashow, A., &amp; Linsky, M. (2009). The Practice of Adaptive Leadership. Harvard Business Press; Furr &amp; Shipilov (2018).</span></div>
 </section>
 <!-- SLIDE 24: ESTUDO EMPÍRICO GOVERNANÇA DE CONTRATOS & NDA (RODRIGO SAAD & NATHÁLIA NEVES) -->
-<section class="slide" data-block="Bloco 4" data-slide="25" data-speaker="Josué Jofre (4ª) / Joel (5ª)" data-time="3 min">
+<section class="slide" data-block="Bloco 4" data-slide="25" data-speaker="Josué Jofre" data-time="3 min">
 <div class="slide-tag">🔐 BLOCO 4 • ESTUDO EMPÍRICO &amp; GOVERNANÇA CONTRATUAL</div>
 <h2 class="slide-title">Estudo Empírico: <span>Tipos de Contratos, Governança &amp; NDA no "Dia Zero"</span></h2>
 <div class="punchline-card" style="margin-bottom: 0.85rem;">
@@ -2182,7 +2530,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 </section>
 
-<section class="slide" data-block="Momento Kahoot 4" data-slide="26" data-speaker="Josué Jofre (4ª) / Joel (5ª)" data-time="3 min">
+<section class="slide" data-block="Momento Kahoot 4" data-slide="26" data-speaker="Josué Jofre" data-time="3 min">
 <div class="slide-tag">🎮 MOMENTO KAHOOT RPG • FASE 4</div>
 <h2 class="slide-title">Desafio da Fase 4: <span>Nexus Hub de Startups</span></h2>
 <div class="punchline-card">
@@ -2252,7 +2600,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </section>
 <!-- SLIDE 24: LILIAN 1 - SAN DIEGO NO RADAR GLOBAL (COVER SLIDE) -->
 <!-- SLIDE 24: LILIAN 1 - SAN DIEGO NO RADAR GLOBAL (COVER SLIDE - FIGURAS E TEXTO AMPLIADOS) -->
-<section class="slide" data-block="Bloco 5" data-slide="27" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="2 min">
+<section class="slide" data-block="Bloco 5" data-slide="27" data-speaker="Lilian Veiga" data-time="2 min">
 <div class="slide-tag" style="font-size: 1.12rem;">🌍 BLOCO 5 • O CASO DE SAN DIEGO (1/9)</div>
 <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.6rem;">
 <div>
@@ -2328,7 +2676,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 1.05rem;">📚</span> <span><strong>Fonte / Ref:</strong> Global Innovation Index 2025 (WIPO); Jukka Majava &amp; Satu Rinkinen (2026). Twenty years, twenty studies: what can we learn from San Diego’s innovation ecosystem?</span></div>
 </section>
 <!-- SLIDE 25: LILIAN 2 - O QUE É UM ECOSSISTEMA DE INOVAÇÃO? (FONTES AMPLIADAS) -->
-<section class="slide" data-block="Bloco 5" data-slide="28" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="2 min">
+<section class="slide" data-block="Bloco 5" data-slide="28" data-speaker="Lilian Veiga" data-time="2 min">
 <div class="slide-tag" style="font-size: 1.12rem;">🧬 BLOCO 5 • CONCEITO &amp; FUNDAMENTOS (2/9)</div>
 <h2 class="slide-title" style="font-size: 2.5rem; margin-bottom: 0.5rem;">O que é um ecossistema de inovação?</h2>
 <!-- Card de Definição Central Ampliado -->
@@ -2376,7 +2724,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 1.05rem;">📚</span> <span><strong>Fonte / Ref:</strong> Majava, J. &amp; Rinkinen, S. (2026). Twenty years, twenty studies: what can we learn from San Diego’s innovation ecosystem?, Technology Analysis &amp; Strategic Management, 38:1, 49-64.</span></div>
 </section>
 <!-- SLIDE 26: LILIAN 3 - CONNECT: A ENGENHARIA DA CONFIANÇA (HERO INFOGRAPHIC AMPLIADO) -->
-<section class="slide" data-block="Bloco 5" data-slide="29" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="2 min">
+<section class="slide" data-block="Bloco 5" data-slide="29" data-speaker="Lilian Veiga" data-time="2 min">
 <div class="slide-tag" style="font-size: 1.12rem;">🌉 BLOCO 5 • O ORQUESTRADOR REGIONAL (3/9)</div>
 <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
 <h2 class="slide-title" style="margin: 0; font-size: 2.5rem;">ECOSSISTEMAS DE INOVAÇÃO • <span style="color: var(--cyan-light);">O Caso de San Diego</span></h2>
@@ -2389,7 +2737,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 1.05rem;">📚</span> <span><strong>Fonte / Ref:</strong> Jukka Majava &amp; Satu Rinkinen (2026); Walshok, M. L. &amp; Shragge, A. (2014). Invention and Reinvention: The Evolution of San Diego's Innovation Economy.</span></div>
 </section>
 <!-- SLIDE 27: LILIAN 4 - ANÁLISE PEST: O RADAR DE SUCESSO (HERO INFOGRAPHIC AMPLIADO) -->
-<section class="slide" data-block="Bloco 5" data-slide="30" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="2 min">
+<section class="slide" data-block="Bloco 5" data-slide="30" data-speaker="Lilian Veiga" data-time="2 min">
 <div class="slide-tag" style="font-size: 1.12rem;">🎯 BLOCO 5 • DIAGNÓSTICO METODOLÓGICO (4/9)</div>
 <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
 <h2 class="slide-title" style="margin: 0; font-size: 2.5rem;">ECOSSISTEMAS DE INOVAÇÃO • <span style="color: var(--amber-accent);">O Caso de San Diego</span></h2>
@@ -2402,7 +2750,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 1.05rem;">📚</span> <span><strong>Fonte / Ref:</strong> Jukka Majava &amp; Satu Rinkinen (2026). Twenty years, twenty studies: what can we learn from San Diego’s innovation ecosystem? (Tech. Analysis &amp; Strat. Mgmt.).</span></div>
 </section>
 <!-- SLIDE 28: LILIAN 5 - SÃO JOSÉ DOS CAMPOS: GÊNESE DE UMA VOCAÇÃO (HERO INFOGRAPHIC AMPLIADO) -->
-<section class="slide" data-block="Bloco 5" data-slide="31" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="2 min">
+<section class="slide" data-block="Bloco 5" data-slide="31" data-speaker="Lilian Veiga" data-time="2 min">
 <div class="slide-tag" style="font-size: 1.12rem;">🇧🇷 BLOCO 5 • SÃO JOSÉ DOS CAMPOS: RAÍZES HISTÓRICAS (5/9)</div>
 <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
 <h2 class="slide-title" style="margin: 0; font-size: 2.5rem;">ECOSSISTEMAS DE INOVAÇÃO • <span style="color: var(--emerald-accent);">O Caso de São José dos Campos</span></h2>
@@ -2415,7 +2763,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 1.05rem;">📚</span> <span><strong>Fonte / Ref:</strong> Rubem, Thiago Chiquetto (2018). Políticas de inovação, parques tecnológicos e a importância do território: o caso do PIT SJC; Silva, Ozires (1998).</span></div>
 </section>
 <!-- SLIDE 29: LILIAN 6 - A EVOLUÇÃO TIPOLÓGICA (HERO INFOGRAPHIC AMPLIADO) -->
-<section class="slide" data-block="Bloco 5" data-slide="32" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="2 min">
+<section class="slide" data-block="Bloco 5" data-slide="32" data-speaker="Lilian Veiga" data-time="2 min">
 <div class="slide-tag" style="font-size: 1.12rem;">🔄 BLOCO 5 • EVOLUÇÃO ESTRUTURAL (6/9)</div>
 <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
 <h2 class="slide-title" style="margin: 0; font-size: 2.5rem;">ECOSSISTEMAS DE INOVAÇÃO • <span style="color: var(--purple-accent);">O Caso de São José dos Campos</span></h2>
@@ -2429,7 +2777,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </section>
 <!-- SLIDE 30: LILIAN 7 - O PIT SJC: GOVERNANÇA E PENTÁGONO (FONTES E IMAGEM AMPLIADAS) -->
 <!-- Slide 30: O PIT SJC & Ecossistema Regional + Entrevista Rubens Costa -->
-<section class="slide" data-block="Bloco 5" data-slide="33" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="2 min">
+<section class="slide" data-block="Bloco 5" data-slide="33" data-speaker="Lilian Veiga" data-time="2 min">
 <div class="slide-tag" style="font-size: 1.12rem;">🏛️ BLOCO 5 • ANATOMIA DO PIT SJC (7/9)</div>
 <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.5rem;">
 <div>
@@ -2448,7 +2796,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 1.05rem;">📚</span> <span><strong>Fonte / Ref:</strong> RELATÓRIO ANUAL DE ATIVIDADES PIT 2025; RUBEM, Thiago Chiquetto. Políticas de inovação, parques tecnológicos e a importância do território: o caso do PIT SJC (2018).</span></div>
 </section>
 <!-- SLIDE ADICIONAL: ESTUDO EMPÍRICO HÉLICE PÚBLICA & GESTÃO REGIONAL (RUBENS COSTA) -->
-<section class="slide" data-block="Bloco 5" data-slide="34" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="3 min">
+<section class="slide" data-block="Bloco 5" data-slide="34" data-speaker="Lilian Veiga" data-time="3 min">
 <div class="slide-tag" style="font-size: 1.12rem;">🏛️ BLOCO 5 • ESTUDO EMPÍRICO &amp; GESTÃO REGIONAL (8/10)</div>
 <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.5rem;">
 <div>
@@ -2507,7 +2855,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 </section>
 <!-- SLIDE ADICIONAL: ESTUDO EMPÍRICO MODELO INSTITUCIONAL DO PIT (RENATO BOSCHILIA JR.) -->
-<section class="slide" data-block="Bloco 5" data-slide="35" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="3 min">
+<section class="slide" data-block="Bloco 5" data-slide="35" data-speaker="Lilian Veiga" data-time="3 min">
 <div class="slide-tag" style="font-size: 1.12rem;">🏛️ BLOCO 5 • ANATOMIA DO PIT SJC &amp; MODELO INSTITUCIONAL (9/11)</div>
 <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.5rem;">
 <div>
@@ -2566,7 +2914,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 </section>
 <!-- SLIDE 31: LILIAN 8 - O PIT SJC: QUEM CONFIOU EM NOSSO TRABALHO (AMPLIADO) -->
-<section class="slide" data-block="Bloco 5" data-slide="36" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="2 min">
+<section class="slide" data-block="Bloco 5" data-slide="36" data-speaker="Lilian Veiga" data-time="2 min">
 <div class="slide-tag" style="font-size: 1.12rem;">🤝 BLOCO 5 • CONEXÕES &amp; MERCADO (8/9)</div>
 <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.5rem;">
 <div>
@@ -2585,7 +2933,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 1.05rem;">📚</span> <span><strong>Fonte / Ref:</strong> Matéria do jornal Gazeta de São Paulo e entrevista com Jeferson Cheriegate, Presidente do PIT SJC (29.05.2026); Relatório Anual PIT 2025.</span></div>
 </section>
 <!-- SLIDE 32: LILIAN 9 - COMPARATIVO SAN DIEGO VS SÃO JOSÉ DOS CAMPOS (TABELA COM FONTES GRANDES) -->
-<section class="slide" data-block="Bloco 5" data-slide="37" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="2.5 min">
+<section class="slide" data-block="Bloco 5" data-slide="37" data-speaker="Lilian Veiga" data-time="2.5 min">
 <div class="slide-tag" style="font-size: 1.12rem;">⚖️ BLOCO 5 • MATRIZ DE BENCHMARKING (9/9)</div>
 <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
 <h2 class="slide-title" style="margin: 0; font-size: 2.6rem;">Comparativo</h2>
@@ -2638,7 +2986,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 1.05rem;">📚</span> <span><strong>Fonte / Ref:</strong> Matriz Comparativa Oficial Seminário 5 GETI 2026; Jukka Majava &amp; Satu Rinkinen (2026); Thiago Chiquetto Rubem (2018); APTSJC (2025).</span></div>
 </section>
 <!-- SLIDE ADICIONAL: BENCHMARKING INTERNACIONAL & CASE START-UP CHILE (RUBENS COSTA) -->
-<section class="slide" data-block="Bloco 5" data-slide="38" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="3 min">
+<section class="slide" data-block="Bloco 5" data-slide="38" data-speaker="Lilian Veiga" data-time="3 min">
 <div class="slide-tag" style="font-size: 1.12rem;">🇨🇱 BLOCO 5 • BENCHMARKING LATINO-AMERICANO: O CASE CHILE (10/10)</div>
 <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.5rem;">
 <div>
@@ -2701,7 +3049,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 </section>
 
-<section class="slide" data-block="Momento Kahoot 5" data-slide="39" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="3 min">
+<section class="slide" data-block="Momento Kahoot 5" data-slide="39" data-speaker="Lilian Veiga" data-time="3 min">
 <div class="slide-tag">🎮 MOMENTO KAHOOT RPG • FASE 5</div>
 <h2 class="slide-title">Desafio da Fase 5: <span>Pavilhão Aeroespacial &amp; San Diego</span></h2>
 <div class="punchline-card">
@@ -2772,7 +3120,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Avaliação Formativa Síncrona • Banco de Questões GETI 2026 elaborado por Lilian Veiga Vinhas baseado em Majava &amp; Rinkinen (2026).</span></div>
 </section>
-<section class="slide" data-block="Caso PIT" data-slide="40" data-speaker="Josué Jofre (4ª) / Marciele (5ª)" data-time="3 min">
+<section class="slide" data-block="Caso PIT" data-slide="40" data-speaker="Josué Jofre" data-time="3 min">
 <div class="slide-tag">🎓 O ELO UNIVERSITÁRIO • PPG-PIT UNIFESP</div>
 <h2 class="slide-title">A Integração UNIFESP &amp; PIT: <span>Co-criação na Prática</span></h2>
 <div class="punchline-card">
@@ -2796,7 +3144,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Projeto Pedagógico PPG-PIT (2026) • Programa de Pós-Graduação em Inovação Tecnológica, UNIFESP Campus Parque Tecnológico SJC.</span></div>
 </section>
 <!-- SLIDE ADICIONAL: ESTUDO DE CASO PRÁTICO PROJETO FEHIDRO & ESG (RENATO BOSCHILIA JR.) -->
-<section class="slide" data-block="Bloco 6" data-slide="41" data-speaker="Renato Paschoal (4ª) / Fábio (5ª)" data-time="4 min">
+<section class="slide" data-block="Bloco 6" data-slide="41" data-speaker="Renato Paschoal" data-time="4 min">
 <div class="slide-tag">⚠️ BLOCO 6 • CRÍTICAS, LIMITAÇÕES &amp; DIAGNÓSTICO EMPÍRICO</div>
 <h2 class="slide-title">Pés no Chão: <span>Evitando o "Teatro da Inovação" &amp; 5 Gargalos do Ecossistema</span></h2>
 <div class="punchline-card" style="margin-bottom: 0.75rem;">
@@ -2828,7 +3176,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Entrevista Empírica PPGPIT com Rubens Costa (Out/2026); Shen, W. et al. (2025/2026); Alvesson &amp; Spicer (2012) - A Stupidity-Based Theory of Organizations.</span></div>
 </section>
 
-<section class="slide" data-block="Bloco 6" data-slide="42" data-speaker="Renato Paschoal (4ª) / Fábio (5ª)" data-time="4 min">
+<section class="slide" data-block="Bloco 6" data-slide="42" data-speaker="Renato Paschoal" data-time="4 min">
 <div class="slide-tag">🌑 BLOCO 6 • O LADO SOMBRIO DOS ECOSSISTEMAS</div>
 <h2 class="slide-title">As Armadilhas da Rede: <span>Lock-in, Predação e a Barreira Cultural da Gestão</span></h2>
 <div class="punchline-card" style="margin-bottom: 0.85rem;">
@@ -2875,14 +3223,14 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
                 🏢 <strong>"A Barreira Cultural na Gestão Tradicional"</strong>
 </div>
 <div style="color: var(--text-muted); font-size: 0.82rem;">
-                Apresentação: Renato Paschoal (4ª) / Fábio (5ª)
+                Apresentação: Renato Paschoal
               </div>
 </div>
 </div>
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Thomas, L. &amp; Ritala, P. (2022); Alvesson &amp; Spicer (2012); Entrevista de Campo GETI 2026.</span></div>
 </section>
-<section class="slide" data-block="Momento Kahoot 6" data-slide="43" data-speaker="Renato Paschoal (4ª) / Fábio (5ª)" data-time="3 min">
+<section class="slide" data-block="Momento Kahoot 6" data-slide="43" data-speaker="Renato Paschoal" data-time="3 min">
 <div class="slide-tag">🎮 MOMENTO KAHOOT RPG • FASE 6</div>
 <h2 class="slide-title">Desafio da Fase 6: <span>Living Lab Net-Zero &amp; Fronteiras</span></h2>
 <div class="punchline-card">
@@ -2950,7 +3298,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Avaliação Formativa Síncrona • Banco de Questões GETI 2026 baseado em Shen et al. (2025/2026).</span></div>
 </section>
-<section class="slide" data-block="Dinâmica" data-slide="44" data-speaker="Jéssica David (4ª) / Fernando (5ª)" data-time="3 min">
+<section class="slide" data-block="Dinâmica" data-slide="44" data-speaker="Jéssica David" data-time="3 min">
 <div class="slide-tag">🏆 FECHAMENTO DO KAHOOT RPG • TODAS AS FASES</div>
 <h2 class="slide-title">Consolidação das 18 Questões: <span>O Pódio Provisório</span></h2>
 <div class="punchline-card">
@@ -2976,7 +3324,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Avaliação Cienciométrica e Diagnóstico Formativo de Desempenho • Equipe GETI 2026 / PPG-PIT UNIFESP.</span></div>
 </section>
-<section class="slide" data-block="Dinâmica" data-slide="45" data-speaker="Jéssica David (4ª) / Fernando (5ª)" data-time="6 min">
+<section class="slide" data-block="Dinâmica" data-slide="45" data-speaker="Jéssica David" data-time="6 min">
 <div class="slide-tag">📊 ANÁLISE DE DADOS &amp; PÓDIO FINAL</div>
 <h2 class="slide-title">Classificação Geral &amp; <span>Diagnóstico Cienciométrico dos Erros</span></h2>
 <div class="punchline-card">
@@ -3033,7 +3381,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Consolidação dos Dados do Kahoot RPG e Mapeamento de Lacunas Conceituais • PPG-PIT UNIFESP.</span></div>
 </section>
-<section class="slide" data-block="Conclusões" data-slide="46" data-speaker="Renato Paschoal (4ª) / Fernando (5ª)" data-time="3 min">
+<section class="slide" data-block="Conclusões" data-slide="46" data-speaker="Renato Paschoal" data-time="3 min">
 <div class="slide-tag">⚖️ SÍNTESE FINAL • AS 5 LEIS DOS ECOSSISTEMAS</div>
 <h2 class="slide-title">As 5 Leis Fundamentais dos <span>Ecossistemas de Inovação</span></h2>
 <div class="punchline-card">
@@ -3069,7 +3417,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Síntese Integradora: Moore (1993), Adner (2006), Furr &amp; Shipilov (2018), Majava &amp; Rinkinen (2026), Machado et al. (2025).</span></div>
 </section>
-<section class="slide" data-block="Debate" data-slide="47" data-speaker="Grupo Inteiro (4ª e 5ª)" data-time="4 min">
+<section class="slide" data-block="Debate" data-slide="47" data-speaker="Grupo Inteiro (Turma de Quarta)" data-time="4 min">
 <div class="slide-tag">💬 DEBATE ABERTO • CONSIDERAÇÕES DA BANCA</div>
 <h2 class="slide-title">Provocações Estratégicas para o <span>PPG-PIT e PIT SJC</span></h2>
 <div class="punchline-card">
@@ -3106,7 +3454,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 <div class="footer-right">
 <div style="font-size: 0.95rem; color: var(--text-dim); font-family: var(--font-mono);">
-        PPG-PIT UNIFESP SJC • Profª Iraci &amp; Prof. Yukio
+        PPG-PIT UNIFESP SJC • Profª. Drª. Iraci Martinez &amp; Prof. Dr. Milton Yukio Tsutsumi
       </div>
 </div>
 <div class="slide-progress-bar" id="slide-progress-bar" style="width: 2.85%;"></div>
