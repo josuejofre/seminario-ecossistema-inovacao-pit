@@ -21,9 +21,10 @@
   };
 
   const knownPositions = new Map();
+  const knownPlayers = new Map();
 
   function sanitizeKey(str) {
-    return (str || '').trim().replace(/[.#$\[\]\/]/g, '_');
+    return (str || '').trim().toLowerCase().replace(/[\s.#$\[\]\/]+/g, '_');
   }
 
   // 1. Inicialização do BroadcastChannel Local
@@ -64,12 +65,24 @@
           }
         });
 
+        // Escuta jogadores registrados na nuvem
+        firebaseDb.ref('kahoot_rpg/players').on('value', (snapshot) => {
+          const players = snapshot.val() || {};
+          Object.values(players).forEach(p => {
+            if (p && p.name) {
+              const k = sanitizeKey(p.name);
+              knownPlayers.set(k, p);
+            }
+          });
+        });
+
         // Escuta posições de todos os jogadores no mapa do campus
         firebaseDb.ref('kahoot_rpg/positions').on('value', (snapshot) => {
           const positions = snapshot.val() || {};
           Object.values(positions).forEach(p => {
             if (p && p.playerName) {
-              knownPositions.set(p.playerName.trim().toLowerCase(), p);
+              const k = sanitizeKey(p.playerName);
+              knownPositions.set(k, p);
             }
           });
           callbacks.onPosition.forEach(cb => {
@@ -120,10 +133,16 @@
     if (!data) return;
     if (data.type === 'PLAYER_ANSWER' && data.payload) {
       triggerAnswer(data.payload);
+    } else if (data.type === 'PLAYER_REGISTER' && data.payload) {
+      const p = data.payload;
+      if (p && p.name) {
+        knownPlayers.set(sanitizeKey(p.name), p);
+      }
     } else if (data.type === 'PLAYER_POSITION' && data.payload) {
       const p = data.payload;
       if (p && p.playerName) {
-        knownPositions.set(p.playerName.trim().toLowerCase(), p);
+        const k = sanitizeKey(p.playerName);
+        knownPositions.set(k, p);
         callbacks.onPosition.forEach(cb => {
           try { cb({ [p.playerName]: p }); } catch(e) { console.error(e); }
         });
@@ -136,6 +155,7 @@
     } else if (data.type === 'GAME_RESET') {
       seenAnswerKeys.clear();
       knownPositions.clear();
+      knownPlayers.clear();
       localStorage.removeItem('kahoot_rpg_current_player');
       if (data.state) {
         localStorage.setItem('kahoot_rpg_state', JSON.stringify(data.state));
@@ -181,23 +201,101 @@
       return this;
     },
 
-    // Verificação de nome duplicado na sala
-    isPlayerNameTaken: function (name, currentName) {
-      const clean = (name || '').trim().toLowerCase();
-      if (!clean) return false;
-      if (currentName && clean === currentName.trim().toLowerCase()) return false;
+    // Registro seguro assíncrono com bloqueio atômico na nuvem (Firebase)
+    registerPlayer: async function (name, turma) {
+      const cleanName = (name || '').trim();
+      const key = sanitizeKey(cleanName);
+      if (!cleanName || !key) {
+        return { ok: false, error: '⚠️ Por favor, digite seu nome para entrar no campus!' };
+      }
 
-      // 1. Checa no estado salvo localmente (gameState.players)
-      const state = this.getLocalState();
-      if (state && state.players) {
-        for (const k of Object.keys(state.players)) {
-          if (k.trim().toLowerCase() === clean) return true;
+      // 1. Verificação direta e atômica no Firebase Realtime Database
+      if (isFirebaseActive && firebaseDb) {
+        try {
+          const playerSnap = await firebaseDb.ref('kahoot_rpg/players/' + key).once('value');
+          if (playerSnap.exists() && playerSnap.val()) {
+            const existing = playerSnap.val();
+            const displayName = existing.name || cleanName;
+            return {
+              ok: false,
+              error: `⚠️ O nome "${displayName}" já está sendo usado por outro jogador nesta sala! Por favor, escolha outro nome ou adicione seu sobrenome (ex: "${cleanName} Silva").`
+            };
+          }
+
+          const stateSnap = await firebaseDb.ref('kahoot_rpg/state/players/' + key).once('value');
+          if (stateSnap.exists() && stateSnap.val()) {
+            return {
+              ok: false,
+              error: `⚠️ O nome "${cleanName}" já está cadastrado no placar da sala! Por favor, adicione seu sobrenome para diferenciar (ex: "${cleanName} Silva").`
+            };
+          }
+        } catch (err) {
+          console.warn('[SyncService] Verificação online do Firebase falhou, utilizando verificação local:', err);
         }
       }
 
-      // 2. Checa no mapa de posições conhecidas
-      if (knownPositions.has(clean)) {
-        return true;
+      // 2. Verificação local em memória (BroadcastChannel / LocalStorage)
+      if (knownPlayers.has(key)) {
+        return {
+          ok: false,
+          error: `⚠️ O nome "${cleanName}" já está em uso na sala! Por favor, adicione seu sobrenome (ex: "${cleanName} Silva").`
+        };
+      }
+
+      const state = this.getLocalState();
+      if (state && state.players) {
+        for (const pKey of Object.keys(state.players)) {
+          if (sanitizeKey(pKey) === key) {
+            return {
+              ok: false,
+              error: `⚠️ O nome "${cleanName}" já está em uso na sala! Por favor, adicione seu sobrenome (ex: "${cleanName} Silva").`
+            };
+          }
+        }
+      }
+
+      // 3. Nome liberado: registrar na nuvem e avisar broadcast local
+      const record = {
+        name: cleanName,
+        turma: turma || 'Quarta',
+        registeredAt: Date.now()
+      };
+
+      knownPlayers.set(key, record);
+
+      if (isFirebaseActive && firebaseDb) {
+        try {
+          await firebaseDb.ref('kahoot_rpg/players/' + key).set(record);
+        } catch (err) {
+          console.error('[SyncService] Erro ao gravar registro de jogador no Firebase:', err);
+        }
+      }
+
+      if (broadcastChannel) {
+        broadcastChannel.postMessage({
+          type: 'PLAYER_REGISTER',
+          payload: record
+        });
+      }
+
+      return { ok: true, player: record };
+    },
+
+    // Verificação síncrona complementar
+    isPlayerNameTaken: function (name, currentName) {
+      const clean = (name || '').trim();
+      const key = sanitizeKey(clean);
+      if (!clean || !key) return false;
+      if (currentName && sanitizeKey(currentName) === key) return false;
+
+      if (knownPlayers.has(key)) return true;
+      if (knownPositions.has(key)) return true;
+
+      const state = this.getLocalState();
+      if (state && state.players) {
+        for (const k of Object.keys(state.players)) {
+          if (sanitizeKey(k) === key) return true;
+        }
       }
 
       return false;
@@ -218,7 +316,7 @@
         timestamp: Date.now()
       };
       const key = sanitizeKey(payload.playerName);
-      knownPositions.set(payload.playerName.trim().toLowerCase(), enriched);
+      knownPositions.set(key, enriched);
 
       // 1. Envio Local
       if (broadcastChannel) {
@@ -295,6 +393,8 @@
       localStorage.removeItem('kahoot_rpg_state');
       localStorage.removeItem('kahoot_rpg_current_player');
       seenAnswerKeys.clear();
+      knownPositions.clear();
+      knownPlayers.clear();
 
       // 1. Envio Local
       if (broadcastChannel) {
@@ -312,6 +412,7 @@
           firebaseDb.ref('kahoot_rpg/state').set(gameState),
           firebaseDb.ref('kahoot_rpg/answers').set(null),
           firebaseDb.ref('kahoot_rpg/positions').set(null),
+          firebaseDb.ref('kahoot_rpg/players').set(null),
           firebaseDb.ref('kahoot_rpg/resetSignal').set(Date.now())
         ]).then(() => {
           console.log('[SyncService] ✅ Hard reset completo no Firebase Realtime Database.');

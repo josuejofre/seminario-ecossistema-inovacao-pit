@@ -546,7 +546,7 @@
         <label style="font-size: 0.78rem; font-weight: 700; color: var(--cyan-light); text-transform: uppercase;">
           Seu Nome Completo:
         </label>
-        <input type="text" id="input-name" class="input-field" placeholder="Ex: Josué, Renato, Camila..." autofocus>
+        <input type="text" id="input-name" class="input-field" placeholder="Ex: Josué, Renato, Camila..." autofocus onkeydown="if(event.key==='Enter') registerAndStart()">
         <div id="register-name-error" style="display: none; background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.45); color: #fca5a5; font-size: 0.8rem; font-weight: 600; padding: 0.5rem 0.75rem; border-radius: 8px; margin-top: -0.4rem; margin-bottom: 0.8rem; line-height: 1.35;"></div>
 
         <label style="font-size: 0.78rem; font-weight: 700; color: var(--cyan-light); text-transform: uppercase;">
@@ -559,7 +559,7 @@
         </select>
       </div>
 
-      <button class="btn-main" onclick="registerAndStart()">
+      <button id="btn-register-submit" class="btn-main" onclick="registerAndStart()">
         Entrar no Campus do PIT →
       </button>
 
@@ -1886,9 +1886,10 @@
       if (elScore) elScore.textContent = `${(player.score || 0).toLocaleString()} pts`;
     }
 
-    function registerAndStart() {
+    async function registerAndStart() {
       const nameInput = document.getElementById('input-name');
       const errorEl = document.getElementById('register-name-error');
+      const submitBtn = document.getElementById('btn-register-submit');
       const name = (nameInput ? nameInput.value : '').trim();
       const turma = document.getElementById('select-turma').value;
 
@@ -1901,23 +1902,41 @@
         } else {
           alert("Por favor, digite seu nome para entrar no campus!");
         }
+        if (nameInput) nameInput.focus();
         return;
       }
 
-      // Validação de Nome Duplicado (proteção contra colisão na sala)
-      if (window.SyncService && typeof window.SyncService.isPlayerNameTaken === 'function') {
-        const isTaken = window.SyncService.isPlayerNameTaken(name, player.name);
-        if (isTaken) {
-          const msg = `⚠️ O nome "${name}" já está em uso na sala! Por favor, escolha outro ou adicione seu sobrenome (ex: "${name} Silva").`;
+      // Feedback visual enquanto valida
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Entrando no campus...";
+      }
+
+      // Validação assíncrona contra duplicidade na Nuvem (Firebase) e Local
+      if (window.SyncService && typeof window.SyncService.registerPlayer === 'function') {
+        const result = await window.SyncService.registerPlayer(name, turma);
+        if (!result.ok) {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Entrar no Campus do PIT →";
+          }
           if (errorEl) {
-            errorEl.textContent = msg;
+            errorEl.textContent = result.error;
             errorEl.style.display = 'block';
           } else {
-            alert(msg);
+            alert(result.error);
           }
-          if (nameInput) nameInput.focus();
+          if (nameInput) {
+            nameInput.focus();
+            nameInput.select();
+          }
           return;
         }
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Entrar no Campus do PIT →";
       }
 
       player.name = name;

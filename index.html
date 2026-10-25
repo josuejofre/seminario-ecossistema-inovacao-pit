@@ -1570,66 +1570,75 @@
 <span style="font-size: 1.4rem;">📱</span>
 <div class="punchline-quote">"O link do jogo está no chat: acesse, ande até a Fase 1 e responda o mais rápido possível!"</div>
 </div>
-<div class="grid-2" style="grid-template-columns: 380px 1fr; gap: 1.25rem;">
-<div style="display: flex; flex-direction: column; gap: 0.9rem;">
-<div class="card card-glow-cyan">
-<div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem;">
-<span style="font-size: 2.2rem;">🎓</span>
-<div>
-<div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #fff;">Bloco Acadêmico UNIFESP</div>
-<div style="font-size: 0.95rem; color: var(--cyan-light);">FASE 1 DE 6 • Bloco Acadêmico UNIFESP</div>
-</div>
-</div>
-<p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.45; margin-bottom: 0.75rem;">
-              Perguntas sobre a metáfora biológica, coevolução, cienciometria de Shen et al. e as fronteiras conceituais de ecossistemas.
-            </p>
-<div style="background: rgba(0,0,0,0.3); border: 1px dashed var(--border-soft); border-radius: var(--radius-sm); padding: 0.6rem; font-size: 0.98rem; color: var(--text-dim);">
-              ⏱️ <strong>Tempo:</strong> 2 minutos • Pontuação regressiva por milissegundo estilo Kahoot.
-            </div>
-</div>
-<div class="card" style="padding: 1rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
-<div style="display: flex; justify-content: space-between; align-items: center;">
-  <div style="font-family: var(--font-display); font-size: 0.98rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.4rem;">
-    <span>🗺️</span> Radar do Campus ao Vivo:
+<div style="display: grid; grid-template-columns: 290px 1.15fr 1fr; gap: 1.15rem; flex: 1; min-height: 0;">
+<!-- Col 1: Briefing da Estação -->
+<div class="card card-glow-cyan" style="display: flex; flex-direction: column; justify-content: space-between; padding: 1.15rem;">
+  <div>
+    <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem;">
+      <span style="font-size: 2.2rem;">🎓</span>
+      <div>
+        <div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #fff;">Bloco Acadêmico UNIFESP</div>
+        <div style="font-size: 0.88rem; color: var(--cyan-light); font-weight: 600;">FASE 1 DE 6 • Bloco Acadêmico UNIFESP</div>
+      </div>
+    </div>
+    <p style="font-size: 0.98rem; color: var(--text-muted); line-height: 1.45; margin-bottom: 0.75rem;">
+      Perguntas sobre a metáfora biológica, coevolução, cienciometria de Shen et al. e as fronteiras conceituais de ecossistemas.
+    </p>
   </div>
-  <span id="slide-radar-count-p1" style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-light);">0 alunos</span>
+  <div style="background: rgba(0,0,0,0.3); border: 1px dashed var(--border-soft); border-radius: var(--radius-sm); padding: 0.6rem; font-size: 0.92rem; color: var(--text-dim);">
+    ⏱️ <strong>Tempo:</strong> 2 minutos • Pontuação regressiva por milissegundo estilo Kahoot.
+  </div>
 </div>
-<canvas class="slide-campus-radar" data-block="1" id="radar-canvas-p1" width="340" height="135" style="width: 100%; height: 135px; border-radius: 8px; background: #070f1e; border: 1px solid rgba(6, 182, 212, 0.25);"></canvas>
-<div style="font-size: 0.78rem; color: #94a3b8; display: flex; justify-content: space-between;">
-  <span>⚡ <strong>Posição em tempo real</strong></span>
-  <span>🟡 = Alunos no campus</span>
+
+<!-- Col 2: Radar do Campus ao Vivo (GRANDE E DESTACADO) -->
+<div class="card card-glow-cyan" style="display: flex; flex-direction: column; padding: 1.1rem; background: rgba(7, 15, 30, 0.85); border-color: rgba(6, 182, 212, 0.35);">
+  <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 0.5rem; margin-bottom: 0.5rem;">
+    <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.45rem;">
+      <span style="font-size: 1.2rem;">🗺️</span> Radar do Campus ao Vivo
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.5rem;">
+      <div class="live-pulse-dot"></div>
+      <span id="slide-radar-count-p1" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--cyan-light); font-weight: 700;">0 alunos</span>
+    </div>
+  </div>
+  <div style="flex: 1; display: flex; flex-direction: column; min-height: 250px;">
+    <canvas class="slide-campus-radar" data-block="1" id="radar-canvas-p1" width="600" height="340" style="width: 100%; height: 100%; min-height: 240px; border-radius: 8px; background: #070f1e; border: 1px solid rgba(6, 182, 212, 0.35); box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);"></canvas>
+  </div>
+  <div style="font-size: 0.8rem; color: #94a3b8; display: flex; justify-content: space-between; align-items: center; margin-top: 0.45rem; padding-top: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06);">
+    <span>⚡ <strong>Posição em tempo real</strong></span>
+    <span>🟡 Alunos no campus • 🔵 F1 Estação Atual</span>
+  </div>
 </div>
-</div>
-</div>
-<!-- Leaderboard Table -->
-<div class="card card-glow-cyan" style="display: flex; flex-direction: column;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-soft); padding-bottom: 0.6rem; margin-bottom: 0.6rem;">
-<div style="display: flex; align-items: center; gap: 0.6rem;">
-<span style="font-size: 1.25rem;">🏆</span>
-<span style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff;">Classificação da Turma em Tempo Real</span>
-</div>
-<div style="display: flex; align-items: center; gap: 0.6rem;">
-<div class="live-pulse-dot"></div>
-<span style="font-family: var(--font-mono); font-size: 0.95rem; color: var(--cyan-light); font-weight: 700;">AO VIVO</span>
-<span id="leaderboard-count-p1" style="font-size: 0.95rem; color: var(--text-muted);">0 jogadores</span>
-</div>
-</div>
-<div style="flex: 1; overflow-y: auto;">
-<table style="width: 100%; border-collapse: collapse; font-size: 1.05rem; text-align: left;">
-<thead>
-<tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08); color: var(--text-dim); font-size: 0.95rem; text-transform: uppercase;">
-<th style="padding: 0.35rem 0.5rem; width: 45px;">Pos</th>
-<th style="padding: 0.35rem 0.5rem;">Jogador</th>
-<th style="padding: 0.35rem 0.5rem; width: 100px;">Turma</th>
-<th style="padding: 0.35rem 0.5rem; width: 100px;">Pontos</th>
-<th style="padding: 0.35rem 0.5rem; width: 70px;">Acertos</th>
-</tr>
-</thead>
-<tbody id="leaderboard-body-p1">
-<tr><td colspan="5" style="text-align: center; padding: 2.5rem; color: var(--text-dim);">Aguardando respostas da turma para a Fase 1...</td></tr>
-</tbody>
-</table>
-</div>
+
+<!-- Col 3: Leaderboard da Turma -->
+<div class="card card-glow-cyan" style="display: flex; flex-direction: column; padding: 1.15rem;">
+  <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-soft); padding-bottom: 0.6rem; margin-bottom: 0.6rem;">
+    <div style="display: flex; align-items: center; gap: 0.6rem;">
+      <span style="font-size: 1.25rem;">🏆</span>
+      <span style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff;">Classificação da Turma</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.6rem;">
+      <div class="live-pulse-dot"></div>
+      <span style="font-family: var(--font-mono); font-size: 0.92rem; color: var(--cyan-light); font-weight: 700;">AO VIVO</span>
+      <span id="leaderboard-count-p1" style="font-size: 0.92rem; color: var(--text-muted);">0 jogadores</span>
+    </div>
+  </div>
+  <div style="flex: 1; overflow-y: auto;">
+    <table style="width: 100%; border-collapse: collapse; font-size: 1.02rem; text-align: left;">
+      <thead>
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08); color: var(--text-dim); font-size: 0.92rem; text-transform: uppercase;">
+          <th style="padding: 0.35rem 0.5rem; width: 45px;">Pos</th>
+          <th style="padding: 0.35rem 0.5rem;">Jogador</th>
+          <th style="padding: 0.35rem 0.5rem; width: 95px;">Turma</th>
+          <th style="padding: 0.35rem 0.5rem; width: 95px;">Pontos</th>
+          <th style="padding: 0.35rem 0.5rem; width: 65px;">Acertos</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboard-body-p1">
+        <tr><td colspan="5" style="text-align: center; padding: 2.5rem; color: var(--text-dim);">Aguardando respostas da turma para a Fase 1...</td></tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Avaliação Formativa Síncrona • Banco de Questões GETI 2026 baseado em Moore (1993) e Shen et al. (2026).</span></div>
@@ -1951,68 +1960,77 @@ Atores independentes colaboram para criar um novo mercado e competem dentro dele
 <h2 class="slide-title">Desafio da Fase 2: <span>Praça Central das Hélices</span></h2>
 <div class="punchline-card">
 <span style="font-size: 1.4rem;">📱</span>
-<div class="punchline-quote">"Acesse o jogo no smartphone, caminhe até a estação no mapa e responda às 3 perguntas!"</div>
+<div class="punchline-quote">"Acesse o jogo no smartphone, caminhe até a Fase 2 no mapa e responda às 3 perguntas!"</div>
 </div>
-<div class="grid-2" style="grid-template-columns: 380px 1fr; gap: 1.25rem;">
-<div style="display: flex; flex-direction: column; gap: 0.9rem;">
-<div class="card card-glow-purple">
-<div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem;">
-<span style="font-size: 2.2rem;">🌀</span>
-<div>
-<div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #fff;">Praça Central das Hélices</div>
-<div style="font-size: 0.95rem; color: var(--purple-accent);">FASE 2 DE 6 • Praça Central das Hélices</div>
-</div>
-</div>
-<p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.45; margin-bottom: 0.75rem;">
-Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos de co-inovação de Ron Adner.
-</p>
-<div style="background: rgba(0,0,0,0.3); border: 1px dashed var(--border-soft); border-radius: var(--radius-sm); padding: 0.6rem; font-size: 0.98rem; color: var(--text-dim);">
-⏱️ <strong>Tempo:</strong> 2 minutos • Pontuação regressiva por milissegundo estilo Kahoot.
-</div>
-</div>
-<div class="card" style="padding: 1rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
-<div style="display: flex; justify-content: space-between; align-items: center;">
-  <div style="font-family: var(--font-display); font-size: 0.98rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.4rem;">
-    <span>🗺️</span> Radar do Campus ao Vivo:
+<div style="display: grid; grid-template-columns: 290px 1.15fr 1fr; gap: 1.15rem; flex: 1; min-height: 0;">
+<!-- Col 1: Briefing da Estação -->
+<div class="card card-glow-purple" style="display: flex; flex-direction: column; justify-content: space-between; padding: 1.15rem;">
+  <div>
+    <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem;">
+      <span style="font-size: 2.2rem;">🌀</span>
+      <div>
+        <div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #fff;">Praça Central das Hélices</div>
+        <div style="font-size: 0.88rem; color: var(--cyan-light); font-weight: 600;">FASE 2 DE 6 • Praça Central das Hélices</div>
+      </div>
+    </div>
+    <p style="font-size: 0.98rem; color: var(--text-muted); line-height: 1.45; margin-bottom: 0.75rem;">
+      Desafios sobre Hélice Tríplice, Quádrupla e Quíntupla, coesão estrutural e complementaridades de Adner.
+    </p>
   </div>
-  <span id="slide-radar-count-p2" style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-light);">0 alunos</span>
+  <div style="background: rgba(0,0,0,0.3); border: 1px dashed var(--border-soft); border-radius: var(--radius-sm); padding: 0.6rem; font-size: 0.92rem; color: var(--text-dim);">
+    ⏱️ <strong>Tempo:</strong> 2 minutos • Pontuação regressiva por milissegundo estilo Kahoot.
+  </div>
 </div>
-<canvas class="slide-campus-radar" data-block="2" id="radar-canvas-p2" width="340" height="135" style="width: 100%; height: 135px; border-radius: 8px; background: #070f1e; border: 1px solid rgba(6, 182, 212, 0.25);"></canvas>
-<div style="font-size: 0.78rem; color: #94a3b8; display: flex; justify-content: space-between;">
-  <span>⚡ <strong>Posição em tempo real</strong></span>
-  <span>🟡 = Alunos no campus</span>
+
+<!-- Col 2: Radar do Campus ao Vivo (GRANDE E DESTACADO) -->
+<div class="card card-glow-cyan" style="display: flex; flex-direction: column; padding: 1.1rem; background: rgba(7, 15, 30, 0.85); border-color: rgba(6, 182, 212, 0.35);">
+  <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 0.5rem; margin-bottom: 0.5rem;">
+    <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.45rem;">
+      <span style="font-size: 1.2rem;">🗺️</span> Radar do Campus ao Vivo
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.5rem;">
+      <div class="live-pulse-dot"></div>
+      <span id="slide-radar-count-p2" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--cyan-light); font-weight: 700;">0 alunos</span>
+    </div>
+  </div>
+  <div style="flex: 1; display: flex; flex-direction: column; min-height: 250px;">
+    <canvas class="slide-campus-radar" data-block="2" id="radar-canvas-p2" width="600" height="340" style="width: 100%; height: 100%; min-height: 240px; border-radius: 8px; background: #070f1e; border: 1px solid rgba(6, 182, 212, 0.35); box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);"></canvas>
+  </div>
+  <div style="font-size: 0.8rem; color: #94a3b8; display: flex; justify-content: space-between; align-items: center; margin-top: 0.45rem; padding-top: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06);">
+    <span>⚡ <strong>Posição em tempo real</strong></span>
+    <span>🟡 Alunos no campus • 🔵 F2 Estação Atual</span>
+  </div>
 </div>
-</div>
-</div>
-<!-- Leaderboard Table -->
-<div class="card card-glow-cyan" style="display: flex; flex-direction: column;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-soft); padding-bottom: 0.6rem; margin-bottom: 0.6rem;">
-<div style="display: flex; align-items: center; gap: 0.6rem;">
-<span style="font-size: 1.25rem;">🏆</span>
-<span style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff;">Classificação da Turma em Tempo Real</span>
-</div>
-<div style="display: flex; align-items: center; gap: 0.6rem;">
-<div class="live-pulse-dot"></div>
-<span style="font-family: var(--font-mono); font-size: 0.95rem; color: var(--cyan-light); font-weight: 700;">AO VIVO</span>
-<span id="leaderboard-count-p2" style="font-size: 0.95rem; color: var(--text-muted);">0 jogadores</span>
-</div>
-</div>
-<div style="flex: 1; overflow-y: auto;">
-<table style="width: 100%; border-collapse: collapse; font-size: 1.05rem; text-align: left;">
-<thead>
-<tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08); color: var(--text-dim); font-size: 0.95rem; text-transform: uppercase;">
-<th style="padding: 0.35rem 0.5rem; width: 45px;">Pos</th>
-<th style="padding: 0.35rem 0.5rem;">Jogador</th>
-<th style="padding: 0.35rem 0.5rem; width: 100px;">Turma</th>
-<th style="padding: 0.35rem 0.5rem; width: 100px;">Pontos</th>
-<th style="padding: 0.35rem 0.5rem; width: 70px;">Acertos</th>
-</tr>
-</thead>
-<tbody id="leaderboard-body-p2">
-<tr><td colspan="5" style="text-align: center; padding: 2.5rem; color: var(--text-dim);">Aguardando respostas da turma para a Fase 2...</td></tr>
-</tbody>
-</table>
-</div>
+
+<!-- Col 3: Leaderboard da Turma -->
+<div class="card card-glow-purple" style="display: flex; flex-direction: column; padding: 1.15rem;">
+  <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-soft); padding-bottom: 0.6rem; margin-bottom: 0.6rem;">
+    <div style="display: flex; align-items: center; gap: 0.6rem;">
+      <span style="font-size: 1.25rem;">🏆</span>
+      <span style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff;">Classificação da Turma</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.6rem;">
+      <div class="live-pulse-dot"></div>
+      <span style="font-family: var(--font-mono); font-size: 0.92rem; color: var(--cyan-light); font-weight: 700;">AO VIVO</span>
+      <span id="leaderboard-count-p2" style="font-size: 0.92rem; color: var(--text-muted);">0 jogadores</span>
+    </div>
+  </div>
+  <div style="flex: 1; overflow-y: auto;">
+    <table style="width: 100%; border-collapse: collapse; font-size: 1.02rem; text-align: left;">
+      <thead>
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08); color: var(--text-dim); font-size: 0.92rem; text-transform: uppercase;">
+          <th style="padding: 0.35rem 0.5rem; width: 45px;">Pos</th>
+          <th style="padding: 0.35rem 0.5rem;">Jogador</th>
+          <th style="padding: 0.35rem 0.5rem; width: 95px;">Turma</th>
+          <th style="padding: 0.35rem 0.5rem; width: 95px;">Pontos</th>
+          <th style="padding: 0.35rem 0.5rem; width: 65px;">Acertos</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboard-body-p2">
+        <tr><td colspan="5" style="text-align: center; padding: 2.5rem; color: var(--text-dim);">Aguardando respostas da turma para a Fase 2...</td></tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Avaliação Formativa Síncrona • Banco de Questões GETI 2026 baseado em Adner (2006) e Carayannis &amp; Campbell (2012).</span></div>
@@ -2509,68 +2527,77 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <h2 class="slide-title">Desafio da Fase 3: <span>Centro de Governança do PIT</span></h2>
 <div class="punchline-card">
 <span style="font-size: 1.4rem;">📱</span>
-<div class="punchline-quote">"O link do jogo está no chat: acesse, ande até a Fase 2 e responda o mais rápido possível!"</div>
+<div class="punchline-quote">"O link do jogo está no chat: acesse, ande até a Fase 3 e responda o mais rápido possível!"</div>
 </div>
-<div class="grid-2" style="grid-template-columns: 380px 1fr; gap: 1.25rem;">
-<div style="display: flex; flex-direction: column; gap: 0.9rem;">
-<div class="card card-glow-amber">
-<div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem;">
-<span style="font-size: 2.2rem;">🏛️</span>
-<div>
-<div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #fff;">Centro de Governança</div>
-<div style="font-size: 0.95rem; color: var(--amber-accent);">FASE 3 DE 6 • Centro de Governança do PIT</div>
-</div>
-</div>
-<p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.45; margin-bottom: 0.75rem;">
-              Perguntas sobre mobilização de atores, regimes de apropriabilidade, governança via Organização Social e mitigação de entropia.
-            </p>
-<div style="background: rgba(0,0,0,0.3); border: 1px dashed var(--border-soft); border-radius: var(--radius-sm); padding: 0.6rem; font-size: 0.98rem; color: var(--text-dim);">
-              ⏱️ <strong>Tempo:</strong> 2 minutos • Pontuação regressiva por milissegundo estilo Kahoot.
-            </div>
-</div>
-<div class="card" style="padding: 1rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
-<div style="display: flex; justify-content: space-between; align-items: center;">
-  <div style="font-family: var(--font-display); font-size: 0.98rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.4rem;">
-    <span>🗺️</span> Radar do Campus ao Vivo:
+<div style="display: grid; grid-template-columns: 290px 1.15fr 1fr; gap: 1.15rem; flex: 1; min-height: 0;">
+<!-- Col 1: Briefing da Estação -->
+<div class="card card-glow-amber" style="display: flex; flex-direction: column; justify-content: space-between; padding: 1.15rem;">
+  <div>
+    <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem;">
+      <span style="font-size: 2.2rem;">🏛️</span>
+      <div>
+        <div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #fff;">Centro de Governança</div>
+        <div style="font-size: 0.88rem; color: var(--cyan-light); font-weight: 600;">FASE 3 DE 6 • Centro de Governança do PIT</div>
+      </div>
+    </div>
+    <p style="font-size: 0.98rem; color: var(--text-muted); line-height: 1.45; margin-bottom: 0.75rem;">
+      Questões práticas sobre governança ecossistêmica, os 4 pilares de Machado et al. (2025) e orquestração de valor.
+    </p>
   </div>
-  <span id="slide-radar-count-p3" style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-light);">0 alunos</span>
+  <div style="background: rgba(0,0,0,0.3); border: 1px dashed var(--border-soft); border-radius: var(--radius-sm); padding: 0.6rem; font-size: 0.92rem; color: var(--text-dim);">
+    ⏱️ <strong>Tempo:</strong> 2 minutos • Pontuação regressiva por milissegundo estilo Kahoot.
+  </div>
 </div>
-<canvas class="slide-campus-radar" data-block="3" id="radar-canvas-p3" width="340" height="135" style="width: 100%; height: 135px; border-radius: 8px; background: #070f1e; border: 1px solid rgba(6, 182, 212, 0.25);"></canvas>
-<div style="font-size: 0.78rem; color: #94a3b8; display: flex; justify-content: space-between;">
-  <span>⚡ <strong>Posição em tempo real</strong></span>
-  <span>🟡 = Alunos no campus</span>
+
+<!-- Col 2: Radar do Campus ao Vivo (GRANDE E DESTACADO) -->
+<div class="card card-glow-cyan" style="display: flex; flex-direction: column; padding: 1.1rem; background: rgba(7, 15, 30, 0.85); border-color: rgba(6, 182, 212, 0.35);">
+  <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 0.5rem; margin-bottom: 0.5rem;">
+    <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.45rem;">
+      <span style="font-size: 1.2rem;">🗺️</span> Radar do Campus ao Vivo
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.5rem;">
+      <div class="live-pulse-dot"></div>
+      <span id="slide-radar-count-p3" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--cyan-light); font-weight: 700;">0 alunos</span>
+    </div>
+  </div>
+  <div style="flex: 1; display: flex; flex-direction: column; min-height: 250px;">
+    <canvas class="slide-campus-radar" data-block="3" id="radar-canvas-p3" width="600" height="340" style="width: 100%; height: 100%; min-height: 240px; border-radius: 8px; background: #070f1e; border: 1px solid rgba(6, 182, 212, 0.35); box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);"></canvas>
+  </div>
+  <div style="font-size: 0.8rem; color: #94a3b8; display: flex; justify-content: space-between; align-items: center; margin-top: 0.45rem; padding-top: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06);">
+    <span>⚡ <strong>Posição em tempo real</strong></span>
+    <span>🟡 Alunos no campus • 🔵 F3 Estação Atual</span>
+  </div>
 </div>
-</div>
-</div>
-<!-- Leaderboard Table -->
-<div class="card card-glow-cyan" style="display: flex; flex-direction: column;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-soft); padding-bottom: 0.6rem; margin-bottom: 0.6rem;">
-<div style="display: flex; align-items: center; gap: 0.6rem;">
-<span style="font-size: 1.25rem;">🏆</span>
-<span style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff;">Classificação da Turma em Tempo Real</span>
-</div>
-<div style="display: flex; align-items: center; gap: 0.6rem;">
-<div class="live-pulse-dot"></div>
-<span style="font-family: var(--font-mono); font-size: 0.95rem; color: var(--cyan-light); font-weight: 700;">AO VIVO</span>
-<span id="leaderboard-count-p3" style="font-size: 0.95rem; color: var(--text-muted);">0 jogadores</span>
-</div>
-</div>
-<div style="flex: 1; overflow-y: auto;">
-<table style="width: 100%; border-collapse: collapse; font-size: 1.05rem; text-align: left;">
-<thead>
-<tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08); color: var(--text-dim); font-size: 0.95rem; text-transform: uppercase;">
-<th style="padding: 0.35rem 0.5rem; width: 45px;">Pos</th>
-<th style="padding: 0.35rem 0.5rem;">Jogador</th>
-<th style="padding: 0.35rem 0.5rem; width: 100px;">Turma</th>
-<th style="padding: 0.35rem 0.5rem; width: 100px;">Pontos</th>
-<th style="padding: 0.35rem 0.5rem; width: 70px;">Acertos</th>
-</tr>
-</thead>
-<tbody id="leaderboard-body-p3">
-<tr><td colspan="5" style="text-align: center; padding: 2.5rem; color: var(--text-dim);">Aguardando respostas da turma para a Fase 3...</td></tr>
-</tbody>
-</table>
-</div>
+
+<!-- Col 3: Leaderboard da Turma -->
+<div class="card card-glow-amber" style="display: flex; flex-direction: column; padding: 1.15rem;">
+  <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-soft); padding-bottom: 0.6rem; margin-bottom: 0.6rem;">
+    <div style="display: flex; align-items: center; gap: 0.6rem;">
+      <span style="font-size: 1.25rem;">🏆</span>
+      <span style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff;">Classificação da Turma</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.6rem;">
+      <div class="live-pulse-dot"></div>
+      <span style="font-family: var(--font-mono); font-size: 0.92rem; color: var(--cyan-light); font-weight: 700;">AO VIVO</span>
+      <span id="leaderboard-count-p3" style="font-size: 0.92rem; color: var(--text-muted);">0 jogadores</span>
+    </div>
+  </div>
+  <div style="flex: 1; overflow-y: auto;">
+    <table style="width: 100%; border-collapse: collapse; font-size: 1.02rem; text-align: left;">
+      <thead>
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08); color: var(--text-dim); font-size: 0.92rem; text-transform: uppercase;">
+          <th style="padding: 0.35rem 0.5rem; width: 45px;">Pos</th>
+          <th style="padding: 0.35rem 0.5rem;">Jogador</th>
+          <th style="padding: 0.35rem 0.5rem; width: 95px;">Turma</th>
+          <th style="padding: 0.35rem 0.5rem; width: 95px;">Pontos</th>
+          <th style="padding: 0.35rem 0.5rem; width: 65px;">Acertos</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboard-body-p3">
+        <tr><td colspan="5" style="text-align: center; padding: 2.5rem; color: var(--text-dim);">Aguardando respostas da turma para a Fase 3...</td></tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Avaliação Formativa Síncrona • Banco de Questões GETI 2026 baseado em Machado, Faccin &amp; Bitencourt (2025).</span></div>
@@ -2776,68 +2803,77 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <h2 class="slide-title">Desafio da Fase 4: <span>Nexus Hub de Startups</span></h2>
 <div class="punchline-card">
 <span style="font-size: 1.4rem;">📱</span>
-<div class="punchline-quote">"O link do jogo está no chat: acesse, ande até a Fase 3 e responda o mais rápido possível!"</div>
+<div class="punchline-quote">"O link do jogo está no chat: acesse, ande até a Fase 4 e responda o mais rápido possível!"</div>
 </div>
-<div class="grid-2" style="grid-template-columns: 380px 1fr; gap: 1.25rem;">
-<div style="display: flex; flex-direction: column; gap: 0.9rem;">
-<div class="card card-glow-cyan">
-<div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem;">
-<span style="font-size: 2.2rem;">🚀</span>
-<div>
-<div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #fff;">Nexus Hub de Startups</div>
-<div style="font-size: 0.95rem; color: var(--cyan-light);">FASE 4 DE 6 • Nexus Hub de Startups</div>
-</div>
-</div>
-<p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.45; margin-bottom: 0.75rem;">
-              Perguntas sobre ecossistemas adaptativos, a armadilha do controle imperial, suporte a deep techs e liderança lateral.
-            </p>
-<div style="background: rgba(0,0,0,0.3); border: 1px dashed var(--border-soft); border-radius: var(--radius-sm); padding: 0.6rem; font-size: 0.98rem; color: var(--text-dim);">
-              ⏱️ <strong>Tempo:</strong> 2 minutos • Pontuação regressiva por milissegundo estilo Kahoot.
-            </div>
-</div>
-<div class="card" style="padding: 1rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
-<div style="display: flex; justify-content: space-between; align-items: center;">
-  <div style="font-family: var(--font-display); font-size: 0.98rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.4rem;">
-    <span>🗺️</span> Radar do Campus ao Vivo:
+<div style="display: grid; grid-template-columns: 290px 1.15fr 1fr; gap: 1.15rem; flex: 1; min-height: 0;">
+<!-- Col 1: Briefing da Estação -->
+<div class="card card-glow-cyan" style="display: flex; flex-direction: column; justify-content: space-between; padding: 1.15rem;">
+  <div>
+    <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem;">
+      <span style="font-size: 2.2rem;">🚀</span>
+      <div>
+        <div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #fff;">Nexus Hub de Startups</div>
+        <div style="font-size: 0.88rem; color: var(--cyan-light); font-weight: 600;">FASE 4 DE 6 • Nexus Hub de Startups</div>
+      </div>
+    </div>
+    <p style="font-size: 0.98rem; color: var(--text-muted); line-height: 1.45; margin-bottom: 0.75rem;">
+      Perguntas sobre aceleração de deep techs, corporate venture, dilema de coopetição e o ecossistema Nexus do PIT SJC.
+    </p>
   </div>
-  <span id="slide-radar-count-p4" style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-light);">0 alunos</span>
+  <div style="background: rgba(0,0,0,0.3); border: 1px dashed var(--border-soft); border-radius: var(--radius-sm); padding: 0.6rem; font-size: 0.92rem; color: var(--text-dim);">
+    ⏱️ <strong>Tempo:</strong> 2 minutos • Pontuação regressiva por milissegundo estilo Kahoot.
+  </div>
 </div>
-<canvas class="slide-campus-radar" data-block="4" id="radar-canvas-p4" width="340" height="135" style="width: 100%; height: 135px; border-radius: 8px; background: #070f1e; border: 1px solid rgba(6, 182, 212, 0.25);"></canvas>
-<div style="font-size: 0.78rem; color: #94a3b8; display: flex; justify-content: space-between;">
-  <span>⚡ <strong>Posição em tempo real</strong></span>
-  <span>🟡 = Alunos no campus</span>
+
+<!-- Col 2: Radar do Campus ao Vivo (GRANDE E DESTACADO) -->
+<div class="card card-glow-cyan" style="display: flex; flex-direction: column; padding: 1.1rem; background: rgba(7, 15, 30, 0.85); border-color: rgba(6, 182, 212, 0.35);">
+  <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 0.5rem; margin-bottom: 0.5rem;">
+    <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.45rem;">
+      <span style="font-size: 1.2rem;">🗺️</span> Radar do Campus ao Vivo
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.5rem;">
+      <div class="live-pulse-dot"></div>
+      <span id="slide-radar-count-p4" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--cyan-light); font-weight: 700;">0 alunos</span>
+    </div>
+  </div>
+  <div style="flex: 1; display: flex; flex-direction: column; min-height: 250px;">
+    <canvas class="slide-campus-radar" data-block="4" id="radar-canvas-p4" width="600" height="340" style="width: 100%; height: 100%; min-height: 240px; border-radius: 8px; background: #070f1e; border: 1px solid rgba(6, 182, 212, 0.35); box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);"></canvas>
+  </div>
+  <div style="font-size: 0.8rem; color: #94a3b8; display: flex; justify-content: space-between; align-items: center; margin-top: 0.45rem; padding-top: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06);">
+    <span>⚡ <strong>Posição em tempo real</strong></span>
+    <span>🟡 Alunos no campus • 🔵 F4 Estação Atual</span>
+  </div>
 </div>
-</div>
-</div>
-<!-- Leaderboard Table -->
-<div class="card card-glow-cyan" style="display: flex; flex-direction: column;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-soft); padding-bottom: 0.6rem; margin-bottom: 0.6rem;">
-<div style="display: flex; align-items: center; gap: 0.6rem;">
-<span style="font-size: 1.25rem;">🏆</span>
-<span style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff;">Classificação da Turma em Tempo Real</span>
-</div>
-<div style="display: flex; align-items: center; gap: 0.6rem;">
-<div class="live-pulse-dot"></div>
-<span style="font-family: var(--font-mono); font-size: 0.95rem; color: var(--cyan-light); font-weight: 700;">AO VIVO</span>
-<span id="leaderboard-count-p4" style="font-size: 0.95rem; color: var(--text-muted);">0 jogadores</span>
-</div>
-</div>
-<div style="flex: 1; overflow-y: auto;">
-<table style="width: 100%; border-collapse: collapse; font-size: 1.05rem; text-align: left;">
-<thead>
-<tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08); color: var(--text-dim); font-size: 0.95rem; text-transform: uppercase;">
-<th style="padding: 0.35rem 0.5rem; width: 45px;">Pos</th>
-<th style="padding: 0.35rem 0.5rem;">Jogador</th>
-<th style="padding: 0.35rem 0.5rem; width: 100px;">Turma</th>
-<th style="padding: 0.35rem 0.5rem; width: 100px;">Pontos</th>
-<th style="padding: 0.35rem 0.5rem; width: 70px;">Acertos</th>
-</tr>
-</thead>
-<tbody id="leaderboard-body-p4">
-<tr><td colspan="5" style="text-align: center; padding: 2.5rem; color: var(--text-dim);">Aguardando respostas da turma para a Fase 4...</td></tr>
-</tbody>
-</table>
-</div>
+
+<!-- Col 3: Leaderboard da Turma -->
+<div class="card card-glow-cyan" style="display: flex; flex-direction: column; padding: 1.15rem;">
+  <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-soft); padding-bottom: 0.6rem; margin-bottom: 0.6rem;">
+    <div style="display: flex; align-items: center; gap: 0.6rem;">
+      <span style="font-size: 1.25rem;">🏆</span>
+      <span style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff;">Classificação da Turma</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.6rem;">
+      <div class="live-pulse-dot"></div>
+      <span style="font-family: var(--font-mono); font-size: 0.92rem; color: var(--cyan-light); font-weight: 700;">AO VIVO</span>
+      <span id="leaderboard-count-p4" style="font-size: 0.92rem; color: var(--text-muted);">0 jogadores</span>
+    </div>
+  </div>
+  <div style="flex: 1; overflow-y: auto;">
+    <table style="width: 100%; border-collapse: collapse; font-size: 1.02rem; text-align: left;">
+      <thead>
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08); color: var(--text-dim); font-size: 0.92rem; text-transform: uppercase;">
+          <th style="padding: 0.35rem 0.5rem; width: 45px;">Pos</th>
+          <th style="padding: 0.35rem 0.5rem;">Jogador</th>
+          <th style="padding: 0.35rem 0.5rem; width: 95px;">Turma</th>
+          <th style="padding: 0.35rem 0.5rem; width: 95px;">Pontos</th>
+          <th style="padding: 0.35rem 0.5rem; width: 65px;">Acertos</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboard-body-p4">
+        <tr><td colspan="5" style="text-align: center; padding: 2.5rem; color: var(--text-dim);">Aguardando respostas da turma para a Fase 4...</td></tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Avaliação Formativa Síncrona • Banco de Questões GETI 2026 baseado em Furr &amp; Shipilov (2018).</span></div>
@@ -3333,68 +3369,77 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <h2 class="slide-title">Desafio da Fase 5: <span>Pavilhão Aeroespacial &amp; San Diego</span></h2>
 <div class="punchline-card">
 <span style="font-size: 1.4rem;">📱</span>
-<div class="punchline-quote">"Acesse o jogo no smartphone, caminhe até a estação no mapa e responda às 3 perguntas!"</div>
+<div class="punchline-quote">"Acesse o jogo no smartphone, caminhe até a Fase 5 no mapa e responda às 3 perguntas!"</div>
 </div>
-<div class="grid-2" style="grid-template-columns: 380px 1fr; gap: 1.25rem;">
-<div style="display: flex; flex-direction: column; gap: 0.9rem;">
-<div class="card card-glow-emerald">
-<div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem;">
-<span style="font-size: 2.2rem;">✈️</span>
-<div>
-<div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #fff;">Pavilhão Aeroespacial</div>
-<div style="font-size: 0.95rem; color: var(--emerald-accent);">FASE 5 DE 6 • Pavilhão Aeroespacial &amp; San Diego</div>
-</div>
-</div>
-<p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.45; margin-bottom: 0.75rem;">
-              Perguntas sobre a transformação de San Diego, o orquestrador CONNECT, o programa Springboard e o aprendizado para o Brasil.
-            </p>
-<div style="background: rgba(0,0,0,0.3); border: 1px dashed var(--border-soft); border-radius: var(--radius-sm); padding: 0.6rem; font-size: 0.98rem; color: var(--text-dim);">
-              ⏱️ <strong>Tempo:</strong> 2 minutos • Pontuação regressiva por milissegundo estilo Kahoot.
-            </div>
-</div>
-<div class="card" style="padding: 1rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
-<div style="display: flex; justify-content: space-between; align-items: center;">
-  <div style="font-family: var(--font-display); font-size: 0.98rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.4rem;">
-    <span>🗺️</span> Radar do Campus ao Vivo:
+<div style="display: grid; grid-template-columns: 290px 1.15fr 1fr; gap: 1.15rem; flex: 1; min-height: 0;">
+<!-- Col 1: Briefing da Estação -->
+<div class="card card-glow-emerald" style="display: flex; flex-direction: column; justify-content: space-between; padding: 1.15rem;">
+  <div>
+    <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem;">
+      <span style="font-size: 2.2rem;">✈️</span>
+      <div>
+        <div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #fff;">Pavilhão Aeroespacial</div>
+        <div style="font-size: 0.88rem; color: var(--cyan-light); font-weight: 600;">FASE 5 DE 6 • Pavilhão Aeroespacial &amp; San Diego</div>
+      </div>
+    </div>
+    <p style="font-size: 0.98rem; color: var(--text-muted); line-height: 1.45; margin-bottom: 0.75rem;">
+      Desafios sobre o cluster aeroespacial de SJC, benchmarking com CONNECT San Diego e análise PEST.
+    </p>
   </div>
-  <span id="slide-radar-count-p5" style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-light);">0 alunos</span>
+  <div style="background: rgba(0,0,0,0.3); border: 1px dashed var(--border-soft); border-radius: var(--radius-sm); padding: 0.6rem; font-size: 0.92rem; color: var(--text-dim);">
+    ⏱️ <strong>Tempo:</strong> 2 minutos • Pontuação regressiva por milissegundo estilo Kahoot.
+  </div>
 </div>
-<canvas class="slide-campus-radar" data-block="5" id="radar-canvas-p5" width="340" height="135" style="width: 100%; height: 135px; border-radius: 8px; background: #070f1e; border: 1px solid rgba(6, 182, 212, 0.25);"></canvas>
-<div style="font-size: 0.78rem; color: #94a3b8; display: flex; justify-content: space-between;">
-  <span>⚡ <strong>Posição em tempo real</strong></span>
-  <span>🟡 = Alunos no campus</span>
+
+<!-- Col 2: Radar do Campus ao Vivo (GRANDE E DESTACADO) -->
+<div class="card card-glow-cyan" style="display: flex; flex-direction: column; padding: 1.1rem; background: rgba(7, 15, 30, 0.85); border-color: rgba(6, 182, 212, 0.35);">
+  <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 0.5rem; margin-bottom: 0.5rem;">
+    <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.45rem;">
+      <span style="font-size: 1.2rem;">🗺️</span> Radar do Campus ao Vivo
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.5rem;">
+      <div class="live-pulse-dot"></div>
+      <span id="slide-radar-count-p5" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--cyan-light); font-weight: 700;">0 alunos</span>
+    </div>
+  </div>
+  <div style="flex: 1; display: flex; flex-direction: column; min-height: 250px;">
+    <canvas class="slide-campus-radar" data-block="5" id="radar-canvas-p5" width="600" height="340" style="width: 100%; height: 100%; min-height: 240px; border-radius: 8px; background: #070f1e; border: 1px solid rgba(6, 182, 212, 0.35); box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);"></canvas>
+  </div>
+  <div style="font-size: 0.8rem; color: #94a3b8; display: flex; justify-content: space-between; align-items: center; margin-top: 0.45rem; padding-top: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06);">
+    <span>⚡ <strong>Posição em tempo real</strong></span>
+    <span>🟡 Alunos no campus • 🔵 F5 Estação Atual</span>
+  </div>
 </div>
-</div>
-</div>
-<!-- Leaderboard Table -->
-<div class="card card-glow-cyan" style="display: flex; flex-direction: column;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-soft); padding-bottom: 0.6rem; margin-bottom: 0.6rem;">
-<div style="display: flex; align-items: center; gap: 0.6rem;">
-<span style="font-size: 1.25rem;">🏆</span>
-<span style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff;">Classificação da Turma em Tempo Real</span>
-</div>
-<div style="display: flex; align-items: center; gap: 0.6rem;">
-<div class="live-pulse-dot"></div>
-<span style="font-family: var(--font-mono); font-size: 0.95rem; color: var(--cyan-light); font-weight: 700;">AO VIVO</span>
-<span id="leaderboard-count-p5" style="font-size: 0.95rem; color: var(--text-muted);">0 jogadores</span>
-</div>
-</div>
-<div style="flex: 1; overflow-y: auto;">
-<table style="width: 100%; border-collapse: collapse; font-size: 1.05rem; text-align: left;">
-<thead>
-<tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08); color: var(--text-dim); font-size: 0.95rem; text-transform: uppercase;">
-<th style="padding: 0.35rem 0.5rem; width: 45px;">Pos</th>
-<th style="padding: 0.35rem 0.5rem;">Jogador</th>
-<th style="padding: 0.35rem 0.5rem; width: 100px;">Turma</th>
-<th style="padding: 0.35rem 0.5rem; width: 100px;">Pontos</th>
-<th style="padding: 0.35rem 0.5rem; width: 70px;">Acertos</th>
-</tr>
-</thead>
-<tbody id="leaderboard-body-p5">
-<tr><td colspan="5" style="text-align: center; padding: 2.5rem; color: var(--text-dim);">Aguardando respostas da turma para a Fase 5...</td></tr>
-</tbody>
-</table>
-</div>
+
+<!-- Col 3: Leaderboard da Turma -->
+<div class="card card-glow-emerald" style="display: flex; flex-direction: column; padding: 1.15rem;">
+  <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-soft); padding-bottom: 0.6rem; margin-bottom: 0.6rem;">
+    <div style="display: flex; align-items: center; gap: 0.6rem;">
+      <span style="font-size: 1.25rem;">🏆</span>
+      <span style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff;">Classificação da Turma</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.6rem;">
+      <div class="live-pulse-dot"></div>
+      <span style="font-family: var(--font-mono); font-size: 0.92rem; color: var(--cyan-light); font-weight: 700;">AO VIVO</span>
+      <span id="leaderboard-count-p5" style="font-size: 0.92rem; color: var(--text-muted);">0 jogadores</span>
+    </div>
+  </div>
+  <div style="flex: 1; overflow-y: auto;">
+    <table style="width: 100%; border-collapse: collapse; font-size: 1.02rem; text-align: left;">
+      <thead>
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08); color: var(--text-dim); font-size: 0.92rem; text-transform: uppercase;">
+          <th style="padding: 0.35rem 0.5rem; width: 45px;">Pos</th>
+          <th style="padding: 0.35rem 0.5rem;">Jogador</th>
+          <th style="padding: 0.35rem 0.5rem; width: 95px;">Turma</th>
+          <th style="padding: 0.35rem 0.5rem; width: 95px;">Pontos</th>
+          <th style="padding: 0.35rem 0.5rem; width: 65px;">Acertos</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboard-body-p5">
+        <tr><td colspan="5" style="text-align: center; padding: 2.5rem; color: var(--text-dim);">Aguardando respostas da turma para a Fase 5...</td></tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Avaliação Formativa Síncrona • Banco de Questões GETI 2026 elaborado por Lilian Veiga Vinhas baseado em Majava &amp; Rinkinen (2026).</span></div>
@@ -3533,66 +3578,75 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <span style="font-size: 1.4rem;">📱</span>
 <div class="punchline-quote">"O link do jogo está no chat: acesse, ande até a Fase 6 e responda o mais rápido possível!"</div>
 </div>
-<div class="grid-2" style="grid-template-columns: 380px 1fr; gap: 1.25rem;">
-<div style="display: flex; flex-direction: column; gap: 0.9rem;">
-<div class="card card-glow-rose">
-<div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem;">
-<span style="font-size: 2.2rem;">🌱</span>
-<div>
-<div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #fff;">Living Lab Net-Zero</div>
-<div style="font-size: 0.95rem; color: var(--rose-accent);">FASE 6 DE 6 • Living Lab Net-Zero &amp; Fronteiras</div>
-</div>
-</div>
-<p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.45; margin-bottom: 0.75rem;">
-              Perguntas finais sobre a delimitação de fronteiras, causalidade de impacto, o lado sombrio dos ecossistemas e métricas reais de sucesso.
-            </p>
-<div style="background: rgba(0,0,0,0.3); border: 1px dashed var(--border-soft); border-radius: var(--radius-sm); padding: 0.6rem; font-size: 0.98rem; color: var(--text-dim);">
-              ⏱️ <strong>Tempo:</strong> 2 minutos • Pontuação regressiva por milissegundo estilo Kahoot.
-            </div>
-</div>
-<div class="card" style="padding: 1rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
-<div style="display: flex; justify-content: space-between; align-items: center;">
-  <div style="font-family: var(--font-display); font-size: 0.98rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.4rem;">
-    <span>🗺️</span> Radar do Campus ao Vivo:
+<div style="display: grid; grid-template-columns: 290px 1.15fr 1fr; gap: 1.15rem; flex: 1; min-height: 0;">
+<!-- Col 1: Briefing da Estação -->
+<div class="card card-glow-rose" style="display: flex; flex-direction: column; justify-content: space-between; padding: 1.15rem;">
+  <div>
+    <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem;">
+      <span style="font-size: 2.2rem;">🌱</span>
+      <div>
+        <div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #fff;">Living Lab Net-Zero</div>
+        <div style="font-size: 0.88rem; color: var(--cyan-light); font-weight: 600;">FASE 6 DE 6 • Living Lab Net-Zero &amp; Fronteiras</div>
+      </div>
+    </div>
+    <p style="font-size: 0.98rem; color: var(--text-muted); line-height: 1.45; margin-bottom: 0.75rem;">
+      Perguntas sobre cidades inteligentes, transição energética justa, COP30 e a agenda verde dos ecossistemas.
+    </p>
   </div>
-  <span id="slide-radar-count-p6" style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-light);">0 alunos</span>
+  <div style="background: rgba(0,0,0,0.3); border: 1px dashed var(--border-soft); border-radius: var(--radius-sm); padding: 0.6rem; font-size: 0.92rem; color: var(--text-dim);">
+    ⏱️ <strong>Tempo:</strong> 2 minutos • Pontuação regressiva por milissegundo estilo Kahoot.
+  </div>
 </div>
-<canvas class="slide-campus-radar" data-block="6" id="radar-canvas-p6" width="340" height="135" style="width: 100%; height: 135px; border-radius: 8px; background: #070f1e; border: 1px solid rgba(6, 182, 212, 0.25);"></canvas>
-<div style="font-size: 0.78rem; color: #94a3b8; display: flex; justify-content: space-between;">
-  <span>⚡ <strong>Posição em tempo real</strong></span>
-  <span>🟡 = Alunos no campus</span>
+
+<!-- Col 2: Radar do Campus ao Vivo (GRANDE E DESTACADO) -->
+<div class="card card-glow-cyan" style="display: flex; flex-direction: column; padding: 1.1rem; background: rgba(7, 15, 30, 0.85); border-color: rgba(6, 182, 212, 0.35);">
+  <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 0.5rem; margin-bottom: 0.5rem;">
+    <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.45rem;">
+      <span style="font-size: 1.2rem;">🗺️</span> Radar do Campus ao Vivo
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.5rem;">
+      <div class="live-pulse-dot"></div>
+      <span id="slide-radar-count-p6" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--cyan-light); font-weight: 700;">0 alunos</span>
+    </div>
+  </div>
+  <div style="flex: 1; display: flex; flex-direction: column; min-height: 250px;">
+    <canvas class="slide-campus-radar" data-block="6" id="radar-canvas-p6" width="600" height="340" style="width: 100%; height: 100%; min-height: 240px; border-radius: 8px; background: #070f1e; border: 1px solid rgba(6, 182, 212, 0.35); box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);"></canvas>
+  </div>
+  <div style="font-size: 0.8rem; color: #94a3b8; display: flex; justify-content: space-between; align-items: center; margin-top: 0.45rem; padding-top: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06);">
+    <span>⚡ <strong>Posição em tempo real</strong></span>
+    <span>🟡 Alunos no campus • 🔵 F6 Estação Atual</span>
+  </div>
 </div>
-</div>
-</div>
-<!-- Leaderboard Table -->
-<div class="card card-glow-cyan" style="display: flex; flex-direction: column;">
-<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-soft); padding-bottom: 0.6rem; margin-bottom: 0.6rem;">
-<div style="display: flex; align-items: center; gap: 0.6rem;">
-<span style="font-size: 1.25rem;">🏆</span>
-<span style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff;">Classificação da Turma em Tempo Real</span>
-</div>
-<div style="display: flex; align-items: center; gap: 0.6rem;">
-<div class="live-pulse-dot"></div>
-<span style="font-family: var(--font-mono); font-size: 0.95rem; color: var(--cyan-light); font-weight: 700;">AO VIVO</span>
-<span id="leaderboard-count-p6" style="font-size: 0.95rem; color: var(--text-muted);">0 jogadores</span>
-</div>
-</div>
-<div style="flex: 1; overflow-y: auto;">
-<table style="width: 100%; border-collapse: collapse; font-size: 1.05rem; text-align: left;">
-<thead>
-<tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08); color: var(--text-dim); font-size: 0.95rem; text-transform: uppercase;">
-<th style="padding: 0.35rem 0.5rem; width: 45px;">Pos</th>
-<th style="padding: 0.35rem 0.5rem;">Jogador</th>
-<th style="padding: 0.35rem 0.5rem; width: 100px;">Turma</th>
-<th style="padding: 0.35rem 0.5rem; width: 100px;">Pontos</th>
-<th style="padding: 0.35rem 0.5rem; width: 70px;">Acertos</th>
-</tr>
-</thead>
-<tbody id="leaderboard-body-p6">
-<tr><td colspan="5" style="text-align: center; padding: 2.5rem; color: var(--text-dim);">Aguardando respostas da turma para a Fase 6...</td></tr>
-</tbody>
-</table>
-</div>
+
+<!-- Col 3: Leaderboard da Turma -->
+<div class="card card-glow-rose" style="display: flex; flex-direction: column; padding: 1.15rem;">
+  <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-soft); padding-bottom: 0.6rem; margin-bottom: 0.6rem;">
+    <div style="display: flex; align-items: center; gap: 0.6rem;">
+      <span style="font-size: 1.25rem;">🏆</span>
+      <span style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff;">Classificação da Turma</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.6rem;">
+      <div class="live-pulse-dot"></div>
+      <span style="font-family: var(--font-mono); font-size: 0.92rem; color: var(--cyan-light); font-weight: 700;">AO VIVO</span>
+      <span id="leaderboard-count-p6" style="font-size: 0.92rem; color: var(--text-muted);">0 jogadores</span>
+    </div>
+  </div>
+  <div style="flex: 1; overflow-y: auto;">
+    <table style="width: 100%; border-collapse: collapse; font-size: 1.02rem; text-align: left;">
+      <thead>
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08); color: var(--text-dim); font-size: 0.92rem; text-transform: uppercase;">
+          <th style="padding: 0.35rem 0.5rem; width: 45px;">Pos</th>
+          <th style="padding: 0.35rem 0.5rem;">Jogador</th>
+          <th style="padding: 0.35rem 0.5rem; width: 95px;">Turma</th>
+          <th style="padding: 0.35rem 0.5rem; width: 95px;">Pontos</th>
+          <th style="padding: 0.35rem 0.5rem; width: 65px;">Acertos</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboard-body-p6">
+        <tr><td colspan="5" style="text-align: center; padding: 2.5rem; color: var(--text-dim);">Aguardando respostas da turma para a Fase 6...</td></tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Avaliação Formativa Síncrona • Banco de Questões GETI 2026 baseado em Shen et al. (2025/2026).</span></div>
@@ -4236,20 +4290,58 @@ Muito obrigado a todos, aos professores e colegas pela atenção!"`
         Object.keys(positions).forEach(k => {
           const p = positions[k];
           if (p && p.playerName) {
-            livePlayerPositions[p.playerName] = p;
+            livePlayerPositions[p.playerName.trim().toLowerCase()] = p;
           }
         });
       }
       renderAllSlideRadars();
     }
 
+    function getActivePlayersList() {
+      const merged = new Map();
+
+      // 1. Inclui todos os alunos cadastrados no jogo (gameState / leaderboard)
+      if (Array.isArray(localLeaderboard)) {
+        localLeaderboard.forEach((lp, idx) => {
+          if (lp && lp.name) {
+            const answeredCount = Object.keys(lp.answeredQuestions || {}).length;
+            const currentBlock = Math.min(6, Math.max(1, Math.floor(answeredCount / 3) + 1));
+            const st = stationsMeta.find(s => s.block === currentBlock) || stationsMeta[0];
+            const key = lp.name.trim().toLowerCase();
+            const angle = (idx * 1.35) % (Math.PI * 2);
+            const radius = 28 + (idx % 3) * 16;
+            merged.set(key, {
+              playerName: lp.name,
+              turma: lp.turma || 'Quarta',
+              x: Math.round(st.x + Math.cos(angle) * radius),
+              y: Math.round(st.y + Math.sin(angle) * radius),
+              score: lp.score || 0
+            });
+          }
+        });
+      }
+
+      // 2. Sobrepõe posições em tempo real emitidas pelo avatar do aluno
+      Object.values(livePlayerPositions).forEach(p => {
+        if (p && p.playerName) {
+          const key = p.playerName.trim().toLowerCase();
+          const existing = merged.get(key) || {};
+          merged.set(key, { ...existing, ...p });
+        }
+      });
+
+      return Array.from(merged.values());
+    }
+
     function renderAllSlideRadars() {
       const radarCanvases = document.querySelectorAll('.slide-campus-radar');
-      const pList = Object.values(livePlayerPositions).filter(p => p && p.playerName);
+      const pList = getActivePlayersList();
 
       for (let p = 1; p <= 6; p++) {
         const countEl = document.getElementById('slide-radar-count-p' + p);
-        if (countEl) countEl.textContent = `${pList.length} ${pList.length === 1 ? 'aluno' : 'alunos'}`;
+        if (countEl) {
+          countEl.textContent = `${pList.length} ${pList.length === 1 ? 'aluno no campus' : 'alunos no campus'}`;
+        }
       }
 
       radarCanvases.forEach(canvas => {
@@ -4266,30 +4358,31 @@ Muito obrigado a todos, aos professores e colegas pela atenção!"`
       const scaleX = w / 1920;
       const scaleY = h / 1380;
 
+      // Fundo Blueprint Cyberpunk
       ctx.fillStyle = "#070f1e";
       ctx.fillRect(0, 0, w, h);
 
-      // Grid
-      ctx.strokeStyle = "rgba(255, 255, 255, 0.035)";
+      // Grade do Campus
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.04)";
       ctx.lineWidth = 1;
-      for (let x = 0; x < w; x += 30) {
+      for (let x = 0; x < w; x += 35) {
         ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke();
       }
-      for (let y = 0; y < h; y += 30) {
+      for (let y = 0; y < h; y += 35) {
         ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke();
       }
 
-      // Lake
-      ctx.fillStyle = "rgba(2, 132, 199, 0.22)";
+      // Lago do Campus
+      ctx.fillStyle = "rgba(2, 132, 199, 0.25)";
       ctx.beginPath();
-      ctx.ellipse(680 * scaleX, 1180 * scaleY, 60 * scaleX, 30 * scaleY, 0, 0, Math.PI * 2);
+      ctx.ellipse(680 * scaleX, 1180 * scaleY, 70 * scaleX, 35 * scaleY, 0, 0, Math.PI * 2);
       ctx.fill();
 
-      // Connecting Paths
-      ctx.strokeStyle = "rgba(6, 182, 212, 0.15)";
-      ctx.lineWidth = 1.5;
-      ctx.setLineDash([3, 3]);
-      const center = stationsMeta[1];
+      // Vias de Conexão Entre os Polos
+      ctx.strokeStyle = "rgba(6, 182, 212, 0.2)";
+      ctx.lineWidth = 2;
+      ctx.setLineDash([4, 4]);
+      const center = stationsMeta[1]; // Praça Central
       stationsMeta.forEach(st => {
         if (st.id !== 2) {
           ctx.beginPath();
@@ -4300,74 +4393,83 @@ Muito obrigado a todos, aos professores e colegas pela atenção!"`
       });
       ctx.setLineDash([]);
 
-      // Stations
+      // Estações do PIT SJC
       stationsMeta.forEach(st => {
         const isTarget = st.block === targetBlock;
         const sx = st.x * scaleX;
         const sy = st.y * scaleY;
 
         if (isTarget) {
-          ctx.fillStyle = "rgba(6, 182, 212, 0.3)";
+          // Anel de pulso da estação atual
+          ctx.fillStyle = "rgba(6, 182, 212, 0.28)";
           ctx.beginPath();
-          ctx.arc(sx, sy, 18, 0, Math.PI * 2);
+          ctx.arc(sx, sy, 24, 0, Math.PI * 2);
           ctx.fill();
+
+          ctx.strokeStyle = "rgba(6, 182, 212, 0.6)";
+          ctx.lineWidth = 1.5;
+          ctx.beginPath();
+          ctx.arc(sx, sy, 24, 0, Math.PI * 2);
+          ctx.stroke();
         }
 
         ctx.fillStyle = isTarget ? "#38bdf8" : st.color;
         ctx.beginPath();
-        ctx.arc(sx, sy, isTarget ? 7 : 5, 0, Math.PI * 2);
+        ctx.arc(sx, sy, isTarget ? 9 : 6, 0, Math.PI * 2);
         ctx.fill();
 
-        ctx.fillStyle = isTarget ? "#fff" : "#94a3b8";
-        ctx.font = isTarget ? "bold 9px sans-serif" : "8px sans-serif";
+        ctx.fillStyle = isTarget ? "#ffffff" : "#94a3b8";
+        ctx.font = isTarget ? "bold 11px sans-serif" : "10px sans-serif";
         ctx.textAlign = "center";
-        ctx.fillText(`${st.icon} F${st.block}`, sx, sy + 13);
+        ctx.fillText(`${st.icon} F${st.block}`, sx, sy + (isTarget ? 18 : 15));
       });
 
-      // Players
-      pList.forEach(p => {
-        const px = (p.x || 400) * scaleX;
-        const py = (p.y || 450) * scaleY;
+      // Jogadores no Campus
+      if (pList.length === 0) {
+        ctx.fillStyle = "rgba(148, 163, 184, 0.35)";
+        ctx.font = "italic 12px sans-serif";
+        ctx.textAlign = "center";
+        ctx.fillText("Aguardando entrada dos alunos no campus...", w / 2, h / 2 + 65);
+      } else {
+        pList.forEach(p => {
+          const px = (p.x || 400) * scaleX;
+          const py = (p.y || 450) * scaleY;
 
-        ctx.fillStyle = "rgba(251, 191, 36, 0.35)";
-        ctx.beginPath();
-        ctx.arc(px, py, 7, 0, Math.PI * 2);
-        ctx.fill();
+          // Halo do Avatar
+          ctx.fillStyle = "rgba(251, 191, 36, 0.4)";
+          ctx.beginPath();
+          ctx.arc(px, py, 11, 0, Math.PI * 2);
+          ctx.fill();
 
-        ctx.fillStyle = "#fbbf24";
-        ctx.beginPath();
-        ctx.arc(px, py, 3.5, 0, Math.PI * 2);
-        ctx.fill();
+          // Ponto Central do Jogador
+          ctx.fillStyle = "#fbbf24";
+          ctx.beginPath();
+          ctx.arc(px, py, 5, 0, Math.PI * 2);
+          ctx.fill();
 
-        const firstName = (p.playerName || '').split(' ')[0];
-        if (firstName) {
-          ctx.font = "bold 8px 'JetBrains Mono', monospace";
-          ctx.textAlign = "center";
-          ctx.fillStyle = "rgba(10, 19, 36, 0.85)";
-          const tw = ctx.measureText(firstName).width;
-          ctx.fillRect(px - tw / 2 - 2, py - 13, tw + 4, 10);
-          ctx.fillStyle = "#67e8f9";
-          ctx.fillText(firstName, px, py - 5);
-        }
-      });
+          // Crachá de Nome do Aluno
+          const firstName = (p.playerName || '').split(' ')[0];
+          if (firstName) {
+            ctx.font = "bold 10px 'JetBrains Mono', monospace";
+            ctx.textAlign = "center";
+            const tw = ctx.measureText(firstName).width;
+            ctx.fillStyle = "rgba(10, 19, 36, 0.9)";
+            ctx.fillRect(px - tw / 2 - 4, py - 18, tw + 8, 13);
+            ctx.strokeStyle = "rgba(6, 182, 212, 0.4)";
+            ctx.lineWidth = 1;
+            ctx.strokeRect(px - tw / 2 - 4, py - 18, tw + 8, 13);
+            ctx.fillStyle = "#67e8f9";
+            ctx.fillText(firstName, px, py - 8);
+          }
+        });
+      }
     }
 
     if (window.SyncService) {
       window.SyncService.onPosition((positions) => updateSlideRadarPositions(positions));
       window.SyncService.onAnswer((payload) => {
         updateLiveSlideSync();
-        if (payload && payload.playerName) {
-          const matchedSt = stationsMeta.find(s => s.block === payload.block || (payload.questionId && payload.questionId.startsWith('b' + s.block)));
-          if (matchedSt) {
-            livePlayerPositions[payload.playerName] = {
-              playerName: payload.playerName,
-              turma: payload.turma,
-              x: matchedSt.x + (Math.random() * 40 - 20),
-              y: matchedSt.y + (Math.random() * 40 - 20)
-            };
-            renderAllSlideRadars();
-          }
-        }
+        renderAllSlideRadars();
       });
       window.SyncService.onStateUpdate((state) => {
         if (state && state.players) {
@@ -4379,8 +4481,19 @@ Muito obrigado a todos, aos professores e colegas pela atenção!"`
       });
       window.SyncService.onReset(() => {
         livePlayerPositions = {};
+        localLeaderboard = [];
         renderAllSlideRadars();
       });
+
+      // Puxa posições já registradas no início
+      if (typeof window.SyncService.getPositions === 'function') {
+        setTimeout(() => {
+          const initP = window.SyncService.getPositions();
+          if (initP && Object.keys(initP).length > 0) {
+            updateSlideRadarPositions(initP);
+          }
+        }, 300);
+      }
     }
 
     try {
@@ -4388,10 +4501,16 @@ Muito obrigado a todos, aos professores e colegas pela atenção!"`
       channel.onmessage = (e) => {
         if (e.data && (e.data.type === 'PLAYER_ANSWER' || e.data.type === 'STATE_UPDATE')) {
           updateLiveSlideSync();
+          renderAllSlideRadars();
         } else if (e.data && e.data.type === 'PLAYER_POSITION' && e.data.payload) {
           updateSlideRadarPositions({ [e.data.payload.playerName]: e.data.payload });
+        } else if (e.data && e.data.type === 'PLAYER_REGISTER' && e.data.payload) {
+          updateLiveSlideSync();
+          renderAllSlideRadars();
         } else if (e.data && e.data.type === 'GAME_RESET') {
           livePlayerPositions = {};
+          localLeaderboard = [];
+          updateLiveSlideSync();
           renderAllSlideRadars();
         }
       };

@@ -1770,7 +1770,29 @@
       });
 
       // Players
-      const pList = Object.values(playerPositions).filter(p => p && p.playerName);
+      const mergedMap = new Map();
+      if (gameState.players) {
+        Object.keys(gameState.players).forEach((pName, idx) => {
+          const lp = gameState.players[pName];
+          const answeredCount = Object.keys(lp.answeredQuestions || {}).length;
+          const currentBlock = Math.min(6, Math.max(1, Math.floor(answeredCount / 3) + 1));
+          const st = stationsMeta.find(s => s.block === currentBlock) || stationsMeta[0];
+          const angle = idx * 1.35;
+          const radius = 28 + (idx % 3) * 16;
+          mergedMap.set(pName.trim().toLowerCase(), {
+            playerName: pName,
+            turma: lp.turma || 'Quarta',
+            x: Math.round(st.x + Math.cos(angle) * radius),
+            y: Math.round(st.y + Math.sin(angle) * radius)
+          });
+        });
+      }
+      Object.values(playerPositions).forEach(p => {
+        if (p && p.playerName) {
+          mergedMap.set(p.playerName.trim().toLowerCase(), p);
+        }
+      });
+      const pList = Array.from(mergedMap.values());
       const countEl = document.getElementById('radar-players-count');
       if (countEl) countEl.textContent = `${pList.length} ${pList.length === 1 ? 'jogador visível no campus' : 'jogadores visíveis no campus'}`;
 
