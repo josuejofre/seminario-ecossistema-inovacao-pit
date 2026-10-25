@@ -157,6 +157,15 @@
       if (p && p.name) {
         knownPlayers.set(sanitizeKey(p.name), p);
       }
+    } else if (data.type === 'PLAYER_REMOVE' && data.payload) {
+      const k = data.payload.key || sanitizeKey(data.payload.name);
+      knownPlayers.delete(k);
+      knownPositions.delete(k);
+      const allPos = {};
+      knownPositions.forEach((v, key) => { allPos[key] = v; });
+      callbacks.onPosition.forEach(cb => {
+        try { cb(allPos); } catch (e) {}
+      });
     } else if (data.type === 'PLAYER_POSITION' && data.payload) {
       const p = data.payload;
       if (p && p.playerName) {
@@ -220,12 +229,51 @@
       return this;
     },
 
+    // Remoção atômica de jogador (ao trocar de nome ou sair)
+    removePlayer: async function (name) {
+      const cleanName = (name || '').trim();
+      const key = sanitizeKey(cleanName);
+      if (!cleanName || !key) return;
+
+      knownPlayers.delete(key);
+      knownPositions.delete(key);
+
+      if (isFirebaseActive && firebaseDb) {
+        try {
+          await Promise.all([
+            firebaseDb.ref('kahoot_rpg/players/' + key).set(null),
+            firebaseDb.ref('kahoot_rpg/positions/' + key).set(null)
+          ]);
+        } catch (e) {
+          console.error('[SyncService] Erro ao remover jogador do Firebase:', e);
+        }
+      }
+
+      if (broadcastChannel) {
+        broadcastChannel.postMessage({
+          type: 'PLAYER_REMOVE',
+          payload: { name: cleanName, key: key }
+        });
+      }
+
+      const allPos = {};
+      knownPositions.forEach((v, k) => { allPos[k] = v; });
+      callbacks.onPosition.forEach(cb => {
+        try { cb(allPos); } catch (e) {}
+      });
+    },
+
     // Registro seguro assíncrono com bloqueio atômico na nuvem (Firebase)
-    registerPlayer: async function (name, turma) {
+    registerPlayer: async function (name, turma, oldName) {
       const cleanName = (name || '').trim();
       const key = sanitizeKey(cleanName);
       if (!cleanName || !key) {
         return { ok: false, error: '⚠️ Por favor, digite seu nome para entrar no campus!' };
+      }
+
+      // Se o aluno está trocando de nome, remove o anterior na nuvem e no mapa
+      if (oldName && sanitizeKey(oldName) !== key) {
+        await this.removePlayer(oldName);
       }
 
       // 1. Verificação direta e atômica no Firebase Realtime Database
@@ -254,7 +302,7 @@
       }
 
       // 2. Verificação local em memória (BroadcastChannel / LocalStorage)
-      if (knownPlayers.has(key)) {
+      if (knownPlayers.has(key) && (!oldName || sanitizeKey(oldName) !== key)) {
         return {
           ok: false,
           error: `⚠️ O nome "${cleanName}" já está em uso na sala! Por favor, adicione seu sobrenome (ex: "${cleanName} Silva").`

@@ -1634,22 +1634,56 @@
 
     /* Target Direction Arrow and Navigation Helper */
     function updateTargetBanner() {
-      const nextSt = stations.find(s => unlockedPhases.includes(s.block) && !player.completedStations.includes(s.id));
       const banner = document.getElementById('direction-banner');
       const label = document.getElementById('target-label');
       const arrow = document.getElementById('target-arrow');
+      if (!label) return;
 
-      if (!nextSt) {
-        label.textContent = "Parabéns! Todas as fases liberadas foram concluídas!";
-        arrow.textContent = "🏆";
+      const activePhases = Array.isArray(unlockedPhases) ? unlockedPhases.filter(n => n >= 1 && n <= 6) : [];
+
+      // 1. Nenhuma fase liberada ainda (após reset ou antes do início)
+      if (activePhases.length === 0) {
+        label.textContent = "Aguardando o apresentador liberar a Fase 1 no seminário...";
+        if (arrow) {
+          arrow.style.display = "inline-block";
+          arrow.style.transform = "none";
+          arrow.textContent = "⏳";
+        }
         return;
       }
 
-      label.textContent = `Vá até a ${nextSt.phaseLabel}: ${nextSt.name}`;
-      const angle = Math.atan2(nextSt.y - hero.y, nextSt.x - hero.x);
-      const deg = Math.round(angle * (180 / Math.PI));
-      arrow.style.display = "inline-block";
-      arrow.style.transform = `rotate(${deg}deg)`;
+      // 2. Procura a próxima fase liberada que o aluno ainda não concluiu
+      const nextSt = stations.find(s => activePhases.includes(s.block) && !player.completedStations.includes(s.id));
+
+      if (nextSt) {
+        label.textContent = `Vá até a ${nextSt.phaseLabel}: ${nextSt.name}`;
+        const angle = Math.atan2(nextSt.y - hero.y, nextSt.x - hero.x);
+        const deg = Math.round(angle * (180 / Math.PI));
+        if (arrow) {
+          arrow.style.display = "inline-block";
+          arrow.style.transform = `rotate(${deg}deg)`;
+          arrow.textContent = "➜";
+        }
+        return;
+      }
+
+      // 3. Fases liberadas concluídas pelo aluno
+      const totalCompleted = Array.isArray(player.completedStations) ? player.completedStations.length : 0;
+      if (totalCompleted >= 6) {
+        label.textContent = "🏆 Parabéns! Você concluiu todas as 6 fases do campus!";
+        if (arrow) {
+          arrow.style.display = "inline-block";
+          arrow.style.transform = "none";
+          arrow.textContent = "🌟";
+        }
+      } else {
+        label.textContent = "✓ Fases liberadas concluídas! Aguarde a liberação da próxima fase.";
+        if (arrow) {
+          arrow.style.display = "inline-block";
+          arrow.style.transform = "none";
+          arrow.textContent = "⏳";
+        }
+      }
     }
 
     setInterval(updateTargetBanner, 300);
@@ -1914,7 +1948,7 @@
 
       // Validação assíncrona contra duplicidade na Nuvem (Firebase) e Local
       if (window.SyncService && typeof window.SyncService.registerPlayer === 'function') {
-        const result = await window.SyncService.registerPlayer(name, turma);
+        const result = await window.SyncService.registerPlayer(name, turma, player.name);
         if (!result.ok) {
           if (submitBtn) {
             submitBtn.disabled = false;
@@ -2014,8 +2048,12 @@
 
     // Check existing player
     
-    function changePlayer() {
+    async function changePlayer() {
       if (confirm("Deseja sair do cadastro atual e entrar com outro nome?")) {
+        const oldName = player.name;
+        if (oldName && window.SyncService && typeof window.SyncService.removePlayer === 'function') {
+          await window.SyncService.removePlayer(oldName);
+        }
         localStorage.removeItem('kahoot_rpg_current_player');
         player = {
           name: "",
@@ -2025,7 +2063,12 @@
           completedStations: []
         };
         const inputName = document.getElementById('input-name');
-        if (inputName) inputName.value = '';
+        if (inputName) {
+          inputName.value = '';
+          inputName.focus();
+        }
+        const errorEl = document.getElementById('register-name-error');
+        if (errorEl) errorEl.style.display = 'none';
         const modalReg = document.getElementById('modal-register');
         if (modalReg) modalReg.style.display = 'flex';
         savePlayerState();

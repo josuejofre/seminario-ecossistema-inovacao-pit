@@ -4445,9 +4445,17 @@ Muito obrigado a todos, aos professores e colegas pela atenção!"`
         ctx.textAlign = "center";
         ctx.fillText("Aguardando entrada dos alunos no campus...", w / 2, h / 2 + 65);
       } else {
-        pList.forEach(p => {
-          const px = (p.x || 400) * scaleX;
-          const py = (p.y || 450) * scaleY;
+        pList.forEach((p, pIdx) => {
+          let px = (p.x || 400) * scaleX;
+          let py = (p.y || 450) * scaleY;
+
+          // Se estiverem agrupados na entrada (400, 450), espalha os avatares em leque para os crachás não sobreporem
+          if (Math.abs((p.x || 400) - 400) < 15 && Math.abs((p.y || 450) - 450) < 15) {
+            const col = (pIdx % 3) - 1;
+            const row = Math.floor(pIdx / 3);
+            px += col * 44;
+            py += row * 26;
+          }
 
           // Halo do Avatar
           ctx.fillStyle = "rgba(251, 191, 36, 0.4)";
@@ -4529,6 +4537,10 @@ Muito obrigado a todos, aos professores e colegas pela atenção!"`
               isMoving: false
             };
           }
+          renderAllSlideRadars();
+        } else if (e.data && e.data.type === 'PLAYER_REMOVE' && e.data.payload) {
+          const key = (e.data.payload.key || e.data.payload.name || '').trim().toLowerCase();
+          delete livePlayerPositions[key];
           renderAllSlideRadars();
         } else if (e.data && e.data.type === 'GAME_RESET') {
           livePlayerPositions = {};
