@@ -758,16 +758,16 @@
     .slide-cover-academic {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      gap: 1.15rem;
-      padding: 0.25rem 0.5rem 0;
+      justify-content: flex-start;
+      gap: 0.65rem;
+      padding: 0.15rem 0.5rem 0;
     }
 
     .academic-cover-header {
       display: flex;
       align-items: center;
-      gap: 1.4rem;
-      padding: 0.95rem 1.6rem;
+      gap: 1.1rem;
+      padding: 0.65rem 1.4rem;
       background: rgba(15, 23, 42, 0.75);
       border: 1px solid var(--border-soft);
       border-radius: var(--radius-md);
@@ -776,15 +776,15 @@
     }
 
     .institution-crest-box {
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
       border-radius: var(--radius-sm);
       background: linear-gradient(135deg, rgba(6, 182, 212, 0.25), rgba(37, 99, 235, 0.35));
       border: 1px solid rgba(6, 182, 212, 0.45);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2.1rem;
+      font-size: 1.8rem;
       flex-shrink: 0;
       box-shadow: 0 0 25px rgba(6, 182, 212, 0.2);
     }
@@ -792,12 +792,12 @@
     .institution-text-block {
       display: flex;
       flex-direction: column;
-      gap: 0.18rem;
+      gap: 0.15rem;
     }
 
     .univ-name {
       font-family: var(--font-display);
-      font-size: 1.18rem;
+      font-size: 1.12rem;
       font-weight: 800;
       letter-spacing: 0.05em;
       color: #fff;
@@ -805,14 +805,14 @@
     }
 
     .inst-name {
-      font-size: 0.94rem;
+      font-size: 0.9rem;
       font-weight: 600;
       color: var(--cyan-light);
       letter-spacing: 0.02em;
     }
 
     .prog-name {
-      font-size: 0.88rem;
+      font-size: 0.84rem;
       color: var(--text-muted);
       font-family: var(--font-mono);
       font-weight: 500;
@@ -822,7 +822,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1rem;
+      gap: 0.75rem;
       flex-wrap: wrap;
     }
 
@@ -832,10 +832,10 @@
       gap: 0.5rem;
       background: rgba(6, 182, 212, 0.12);
       border: 1px solid rgba(6, 182, 212, 0.35);
-      padding: 0.4rem 1rem;
+      padding: 0.3rem 0.85rem;
       border-radius: 999px;
       font-family: var(--font-mono);
-      font-size: 0.92rem;
+      font-size: 0.86rem;
       font-weight: 700;
       color: var(--cyan-light);
       letter-spacing: 0.04em;
@@ -847,10 +847,10 @@
       gap: 0.5rem;
       background: rgba(139, 92, 246, 0.15);
       border: 1px solid rgba(139, 92, 246, 0.4);
-      padding: 0.4rem 1rem;
+      padding: 0.3rem 0.85rem;
       border-radius: 999px;
       font-family: var(--font-mono);
-      font-size: 0.92rem;
+      font-size: 0.86rem;
       font-weight: 700;
       color: #c4b5fd;
       letter-spacing: 0.04em;
@@ -861,10 +861,11 @@
       border: 1px solid rgba(6, 182, 212, 0.25);
       border-left: 6px solid var(--cyan-glow);
       border-radius: var(--radius-md);
-      padding: 1.6rem 2.2rem;
+      padding: 1.1rem 1.8rem 1.25rem 1.8rem;
       box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
       position: relative;
-      overflow: hidden;
+      overflow: visible;
+      flex-shrink: 0;
     }
 
     .academic-title-box::after {
@@ -880,12 +881,12 @@
 
     .academic-main-title {
       font-family: var(--font-display);
-      font-size: 2.85rem;
+      font-size: 2.35rem;
       font-weight: 900;
-      line-height: 1.1;
+      line-height: 1.15;
       letter-spacing: -0.02em;
       color: #fff;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.35rem;
     }
 
     .academic-main-title span {
@@ -896,46 +897,48 @@
 
     .academic-sub-title {
       font-family: var(--font-body);
-      font-size: 1.35rem;
+      font-size: 1.15rem;
       font-weight: 600;
       color: #e2e8f0;
       line-height: 1.35;
-      margin-bottom: 0.85rem;
+      margin-bottom: 0.45rem;
     }
 
     .academic-epigraph {
       font-style: italic;
-      font-size: 1.05rem;
+      font-size: 0.98rem;
       color: var(--text-muted);
       border-top: 1px solid var(--border-soft);
-      padding-top: 0.75rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
+      padding-top: 0.5rem;
+      margin-top: 0.2rem;
+      display: block;
+      line-height: 1.42;
     }
 
     .academic-epigraph::before {
       content: '“';
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       color: var(--cyan-light);
       font-family: Georgia, serif;
-      line-height: 0;
+      line-height: 1;
       margin-right: 0.2rem;
+      vertical-align: -0.15rem;
     }
 
     .academic-epigraph::after {
       content: '”';
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       color: var(--cyan-light);
       font-family: Georgia, serif;
-      line-height: 0;
+      line-height: 1;
       margin-left: 0.2rem;
+      vertical-align: -0.15rem;
     }
 
     .academic-meta-grid {
       display: grid;
       grid-template-columns: 1.25fr 1fr;
-      gap: 1.35rem;
+      gap: 1rem;
       width: 100%;
     }
 
@@ -943,7 +946,7 @@
       background: var(--bg-card);
       border: 1px solid var(--border-soft);
       border-radius: var(--radius-md);
-      padding: 1.3rem 1.6rem;
+      padding: 0.85rem 1.35rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
