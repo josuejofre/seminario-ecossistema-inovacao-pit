@@ -877,6 +877,28 @@
       </div>
     </div>
 
+    <!-- Live Campus Radar (Posição de Todos os Jogadores no Mapa) -->
+    <div style="margin-bottom: 2rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; flex-wrap: wrap; gap: 0.5rem;">
+        <h2 class="section-title" style="margin-bottom: 0;">🗺️ Radar do Campus PIT SJC • Posição dos Jogadores ao Vivo</h2>
+        <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--cyan-light); background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.3); padding: 0.3rem 0.75rem; border-radius: 999px;" id="radar-players-count">
+          0 jogadores visíveis no campus
+        </span>
+      </div>
+      <div style="background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: var(--radius-md); padding: 1.25rem; display: flex; flex-direction: column; align-items: center; gap: 0.85rem; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+        <canvas id="admin-radar-canvas" width="1000" height="420" style="width: 100%; max-height: 440px; border-radius: 12px; background: #070f1e; border: 1px solid rgba(255,255,255,0.08);"></canvas>
+        <div style="display: flex; gap: 1.25rem; flex-wrap: wrap; justify-content: center; font-size: 0.78rem; color: var(--text-muted);">
+          <span>🎓 Fase 1: Bloco Acadêmico</span>
+          <span>🌀 Fase 2: Praça das Hélices</span>
+          <span>🏛️ Fase 3: Centro de Governança</span>
+          <span>🚀 Fase 4: Nexus Hub</span>
+          <span>✈️ Fase 5: Pavilhão Aeroespacial</span>
+          <span>🌱 Fase 6: Living Lab Net-Zero</span>
+          <span style="color: #fbbf24; font-weight: 700;">🟡 Ponto Amarelo: Aluno no Campus</span>
+        </div>
+      </div>
+    </div>
+
     <!-- Live Leaderboard & Podium -->
     <div>
       <h2 class="section-title">🏅 Ranking Geral em Tempo Real (Kahoot Leaderboard)</h2>
@@ -1354,9 +1376,49 @@
       }, 50);
     }
 
+    const stationsMeta = [
+      { id: 1, block: 1, name: "Bloco Acadêmico UNIFESP", x: 340, y: 360, color: "#38bdf8", icon: "🎓" },
+      { id: 2, block: 2, name: "Praça das Hélices", x: 780, y: 720, color: "#a855f7", icon: "🌀" },
+      { id: 3, block: 3, name: "Centro de Governança PIT", x: 1140, y: 920, color: "#f59e0b", icon: "🏛️" },
+      { id: 4, block: 4, name: "Nexus Hub Startups", x: 1160, y: 520, color: "#06b6d4", icon: "🚀" },
+      { id: 5, block: 5, name: "Pavilhão Aeroespacial", x: 1560, y: 440, color: "#10b981", icon: "✈️" },
+      { id: 6, block: 6, name: "Living Lab Net-Zero", x: 680, y: 1140, color: "#f43f5e", icon: "🌱" }
+    ];
+
+    let playerPositions = {};
+
+    function updateRadarPositions(positions) {
+      if (positions && typeof positions === 'object') {
+        Object.keys(positions).forEach(k => {
+          const p = positions[k];
+          if (p && p.playerName) {
+            playerPositions[p.playerName] = p;
+          }
+        });
+      }
+      renderRadarMap();
+    }
+
     // Listener de sincronização (usa SyncService se presente, senão BroadcastChannel)
     if (window.SyncService) {
-      window.SyncService.onAnswer((payload) => recordPlayerAnswer(payload));
+      window.SyncService.onAnswer((payload) => {
+        recordPlayerAnswer(payload);
+        if (payload && payload.playerName) {
+          const matchedSt = stationsMeta.find(s => s.block === payload.block || (payload.questionId && payload.questionId.startsWith('b' + s.block)));
+          if (matchedSt) {
+            playerPositions[payload.playerName] = {
+              playerName: payload.playerName,
+              turma: payload.turma,
+              x: matchedSt.x + (Math.random() * 40 - 20),
+              y: matchedSt.y + (Math.random() * 40 - 20)
+            };
+          }
+          renderRadarMap();
+        }
+      });
+      window.SyncService.onPosition((positions) => {
+        updateRadarPositions(positions);
+      });
       window.SyncService.onStateUpdate((state) => {
         if (state && typeof state === 'object') {
           gameState = {
@@ -1374,6 +1436,7 @@
           players: {},
           answers: []
         };
+        playerPositions = {};
         scheduleRender();
       });
     } else if (channel) {
@@ -1381,6 +1444,8 @@
         const data = event.data;
         if (data && data.type === 'PLAYER_ANSWER' && data.payload) {
           recordPlayerAnswer(data.payload);
+        } else if (data && data.type === 'PLAYER_POSITION' && data.payload) {
+          updateRadarPositions({ [data.payload.playerName]: data.payload });
         } else if (data && data.type === 'STATE_UPDATE' && data.state) {
           gameState = data.state;
           gameState.unlockedPhases = getSafeUnlockedPhases();
@@ -1391,6 +1456,7 @@
             players: {},
             answers: []
           };
+          playerPositions = {};
           scheduleRender();
         }
       };
@@ -1608,6 +1674,14 @@
         p.correctCount = Math.min(18, ansList.filter(a => a.isCorrect).length);
         p.score = ansList.reduce((sum, a) => sum + (a.points || 0), 0);
         p.totalTimeMs = ansList.reduce((sum, a) => sum + (a.timeMs || 0), 0);
+
+        const assignedSt = stationsMeta[pIdx % stationsMeta.length];
+        playerPositions[name] = {
+          playerName: name,
+          turma: turma,
+          x: Math.round(assignedSt.x + (Math.random() * 80 - 40)),
+          y: Math.round(assignedSt.y + (Math.random() * 80 - 40))
+        };
       });
 
       saveState(true);
@@ -1619,6 +1693,113 @@
       renderPhaseCards();
       renderLeaderboard();
       renderCharts();
+      renderRadarMap();
+    }
+
+    function renderRadarMap() {
+      const canvas = document.getElementById('admin-radar-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const w = canvas.width;
+      const h = canvas.height;
+      const scaleX = w / 1920;
+      const scaleY = h / 1380;
+
+      // Base Background
+      ctx.fillStyle = "#070f1e";
+      ctx.fillRect(0, 0, w, h);
+
+      // Blueprint Grid
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.04)";
+      ctx.lineWidth = 1;
+      for (let x = 0; x < w; x += 40) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, h);
+        ctx.stroke();
+      }
+      for (let y = 0; y < h; y += 40) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(w, y);
+        ctx.stroke();
+      }
+
+      // Campus Lake
+      ctx.fillStyle = "rgba(2, 132, 199, 0.22)";
+      ctx.beginPath();
+      ctx.ellipse(680 * scaleX, 1180 * scaleY, 70 * scaleX, 35 * scaleY, 0, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Connecting Paths
+      ctx.strokeStyle = "rgba(6, 182, 212, 0.16)";
+      ctx.lineWidth = 2;
+      ctx.setLineDash([4, 4]);
+      const center = stationsMeta[1]; // Praça Central
+      stationsMeta.forEach(st => {
+        if (st.id !== 2) {
+          ctx.beginPath();
+          ctx.moveTo(center.x * scaleX, center.y * scaleY);
+          ctx.lineTo(st.x * scaleX, st.y * scaleY);
+          ctx.stroke();
+        }
+      });
+      ctx.setLineDash([]);
+
+      // Stations
+      const unlocked = getSafeUnlockedPhases();
+      stationsMeta.forEach(st => {
+        const isUnlocked = unlocked.includes(st.block);
+        const sx = st.x * scaleX;
+        const sy = st.y * scaleY;
+
+        ctx.fillStyle = isUnlocked ? (st.color + "25") : "rgba(71, 85, 105, 0.15)";
+        ctx.beginPath();
+        ctx.arc(sx, sy, 24 * scaleX, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = isUnlocked ? st.color : "#475569";
+        ctx.beginPath();
+        ctx.arc(sx, sy, 9 * scaleX, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = isUnlocked ? "#fff" : "#94a3b8";
+        ctx.font = `bold ${Math.max(10, Math.round(11 * scaleX))}px sans-serif`;
+        ctx.textAlign = "center";
+        ctx.fillText(`${st.icon} Fase ${st.block}: ${st.name}`, sx, sy + 22 * scaleY);
+      });
+
+      // Players
+      const pList = Object.values(playerPositions).filter(p => p && p.playerName);
+      const countEl = document.getElementById('radar-players-count');
+      if (countEl) countEl.textContent = `${pList.length} ${pList.length === 1 ? 'jogador visível no campus' : 'jogadores visíveis no campus'}`;
+
+      pList.forEach(p => {
+        const px = (p.x || 400) * scaleX;
+        const py = (p.y || 450) * scaleY;
+
+        // Glow
+        ctx.fillStyle = "rgba(251, 191, 36, 0.35)";
+        ctx.beginPath();
+        ctx.arc(px, py, 11, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Dot
+        ctx.fillStyle = "#fbbf24";
+        ctx.beginPath();
+        ctx.arc(px, py, 5, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Name Tag
+        const firstName = (p.playerName || '').split(' ')[0];
+        ctx.font = "bold 10px 'JetBrains Mono', monospace";
+        ctx.textAlign = "center";
+        ctx.fillStyle = "rgba(10, 19, 36, 0.85)";
+        const tw = ctx.measureText(firstName).width;
+        ctx.fillRect(px - tw / 2 - 3, py - 18, tw + 6, 12);
+        ctx.fillStyle = "#67e8f9";
+        ctx.fillText(firstName, px, py - 9);
+      });
     }
 
     function renderKPIs() {

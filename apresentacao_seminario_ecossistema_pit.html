@@ -751,6 +751,467 @@
       font-style: italic;
     }
 
+  
+    /* ==========================================================================
+       ACADEMIC MASTER'S COVER SLIDE (SLIDE 1)
+       ========================================================================== */
+    .slide-cover-academic {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.15rem;
+      padding: 0.25rem 0.5rem 0;
+    }
+
+    .academic-cover-header {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      padding: 0.95rem 1.6rem;
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .institution-crest-box {
+      width: 60px;
+      height: 60px;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.25), rgba(37, 99, 235, 0.35));
+      border: 1px solid rgba(6, 182, 212, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.1rem;
+      flex-shrink: 0;
+      box-shadow: 0 0 25px rgba(6, 182, 212, 0.2);
+    }
+
+    .institution-text-block {
+      display: flex;
+      flex-direction: column;
+      gap: 0.18rem;
+    }
+
+    .univ-name {
+      font-family: var(--font-display);
+      font-size: 1.18rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .inst-name {
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--cyan-light);
+      letter-spacing: 0.02em;
+    }
+
+    .prog-name {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-weight: 500;
+    }
+
+    .academic-context-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .academic-tag-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.35);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--cyan-light);
+      letter-spacing: 0.04em;
+    }
+
+    .academic-tag-seminar {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(139, 92, 246, 0.15);
+      border: 1px solid rgba(139, 92, 246, 0.4);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #c4b5fd;
+      letter-spacing: 0.04em;
+    }
+
+    .academic-title-box {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(10, 19, 36, 0.85) 100%);
+      border: 1px solid rgba(6, 182, 212, 0.25);
+      border-left: 6px solid var(--cyan-glow);
+      border-radius: var(--radius-md);
+      padding: 1.6rem 2.2rem;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .academic-title-box::after {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -10%;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .academic-main-title {
+      font-family: var(--font-display);
+      font-size: 2.85rem;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .academic-main-title span {
+      background: linear-gradient(135deg, var(--cyan-light), var(--blue-electric));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .academic-sub-title {
+      font-family: var(--font-body);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      line-height: 1.35;
+      margin-bottom: 0.85rem;
+    }
+
+    .academic-epigraph {
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-soft);
+      padding-top: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .academic-epigraph::before {
+      content: '“';
+      font-size: 1.8rem;
+      color: var(--cyan-light);
+      font-family: Georgia, serif;
+      line-height: 0;
+      margin-right: 0.2rem;
+    }
+
+    .academic-epigraph::after {
+      content: '”';
+      font-size: 1.8rem;
+      color: var(--cyan-light);
+      font-family: Georgia, serif;
+      line-height: 0;
+      margin-left: 0.2rem;
+    }
+
+    .academic-meta-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 1.35rem;
+      width: 100%;
+    }
+
+    .academic-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 1.3rem 1.6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .academic-panel-header {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin-bottom: 0.9rem;
+      padding-bottom: 0.55rem;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .academic-panel-icon {
+      font-size: 1.35rem;
+    }
+
+    .academic-panel-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 800;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .academic-panel-subtitle {
+      font-size: 0.82rem;
+      color: var(--cyan-light);
+      font-family: var(--font-mono);
+    }
+
+    .discentes-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.65rem 1.2rem;
+    }
+
+    .discente-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 0.5rem 0.8rem;
+      border-radius: var(--radius-sm);
+      transition: all 0.2s;
+    }
+
+    .discente-pill:hover {
+      border-color: rgba(6, 182, 212, 0.35);
+      background: rgba(6, 182, 212, 0.05);
+    }
+
+    .discente-bullet {
+      color: var(--cyan-light);
+      font-size: 0.75rem;
+    }
+
+    .discente-name {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #f1f5f9;
+    }
+
+    .docentes-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .docente-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 0.55rem 0.85rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .docente-role-label {
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .docente-full-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .location-year-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 0.65rem;
+      padding-top: 0.65rem;
+      border-top: 1px solid var(--border-soft);
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+    
+  
+    /* ==========================================================================
+       INTERVIEW SLIDE LAYOUT (COMPACT PLAYER + BIGGER FONTS + BOTTOM STRIP)
+       ========================================================================== */
+    .interview-grid-main {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 1.35rem;
+      flex: 1;
+      min-height: 0;
+      align-items: stretch;
+    }
+
+    .interview-concepts-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0.95rem;
+      justify-content: center;
+      min-height: 0;
+    }
+
+    .interview-concepts-col .card {
+      padding: 1.15rem 1.45rem;
+    }
+
+    .interview-concepts-col .card-title {
+      font-size: 1.32rem;
+      font-weight: 800;
+      margin-bottom: 0.45rem;
+    }
+
+    .interview-concepts-col .card-desc,
+    .interview-concepts-col p {
+      font-size: 1.12rem;
+      line-height: 1.55;
+      color: #cbd5e1;
+    }
+
+    .interview-concepts-col .bullet-list li {
+      font-size: 1.12rem;
+      line-height: 1.55;
+    }
+
+    .interview-player-card {
+      padding: 0.85rem;
+      background: rgba(10, 19, 36, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-md);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .interview-video-wrapper {
+      width: 100%;
+      height: 195px;
+      max-height: 200px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .interview-video-wrapper video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .interview-key-points-box {
+      width: 100%;
+      margin-top: 0.5rem;
+      padding: 0.55rem 0.85rem;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.42;
+    }
+
+    /* Bottom Interviewee Profile Strip */
+    .interviewee-bottom-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      padding: 0.65rem 1.25rem;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-left: 4px solid var(--cyan-light);
+      border-radius: var(--radius-sm);
+      backdrop-filter: blur(10px);
+      flex-shrink: 0;
+    }
+
+    .interviewee-left-profile {
+      display: flex;
+      align-items: center;
+      gap: 0.95rem;
+    }
+
+    .interviewee-avatar-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid var(--cyan-glow);
+      flex-shrink: 0;
+      box-shadow: 0 0 10px rgba(6, 182, 212, 0.35);
+      object-fit: cover;
+    }
+
+    .interviewee-meta-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .interviewee-meta-name {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .interviewee-meta-role {
+      font-size: 0.88rem;
+      color: var(--cyan-light);
+      font-weight: 600;
+    }
+
+    .interviewee-meta-sub {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+
+    .interviewee-field-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.86rem;
+      color: var(--cyan-light);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    
   </style>
 </head>
 <body>
@@ -779,75 +1240,121 @@
 </header>
 <!-- Deck Viewport -->
 <main class="deck-viewport" id="deck-viewport">
-<!-- SLIDE 1: ABERTURA -->
-<section class="slide active" data-block="Abertura" data-slide="1" data-speaker="Josué Jofre (4ª) / Fernando (5ª)" data-time="2 min">
-<div class="slide-tag">🚀 ABERTURA OFICIAL • SEMINÁRIO GETI 2026</div>
-<h1 class="slide-title">Ecossistemas de Inovação: <span>Teoria, Orquestração e a Prática no PIT SJC</span></h1>
-<div class="punchline-card">
-<span style="font-size: 1.4rem;">💡</span>
-<div class="punchline-quote">"Nenhuma organização inova sozinha: o valor não está nas partes, mas na sinergia entre elas."</div>
-</div>
-<div class="grid-3">
-<div class="card card-glow-cyan" style="padding: 1rem 1.15rem;">
-<div class="card-title" style="font-size: 1.15rem;"><span>📚</span> Fundamentos Teóricos</div>
-<p class="card-desc" style="font-size: 0.95rem; margin-bottom: 0.35rem;">Artigos seminais e recentes da vanguarda da literatura internacional:</p>
-<ul class="bullet-list" style="margin-bottom: 0.5rem;">
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> <strong>Shen et al. (2025/2026):</strong> Mapeamento cienciométrico e fronteiras</li>
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> <strong>Machado et al. (2025):</strong> Competências de orquestração</li>
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> <strong>Furr &amp; Shipilov (MIT):</strong> Ecossistemas adaptativos</li>
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> <strong>Majava &amp; Rinkinen:</strong> Benchmarking de San Diego</li>
-</ul>
-<div class="chips-row">
-<span class="chip-badge">Hélices 3ª, 4ª e 5ª</span>
-<span class="chip-badge">Co-criação de Valor</span>
-</div>
-</div>
-<div class="card card-glow-purple" style="padding: 1rem 1.15rem;">
-<div class="card-title" style="font-size: 1.15rem;"><span>🔬</span> O Laboratório Vivo</div>
-<p class="card-desc" style="font-size: 0.95rem; margin-bottom: 0.35rem;">Conexão umbilical com o Parque Tecnológico de São José dos Campos:</p>
-<ul class="bullet-list" style="margin-bottom: 0.5rem;">
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> Primeiro Parque Tecnológico do Estado de SP (2006)</li>
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> Mais de 300 empresas e 4 APLs consolidados</li>
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> Nexus Hub: aceleradora e incubadora de deep techs</li>
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> Campus UNIFESP e sinergia com o PPG-PIT</li>
-</ul>
-<div class="chips-row">
-<span class="chip-badge">Embraer &amp; DCTA</span>
-<span class="chip-badge">PPG-PIT UNIFESP</span>
-</div>
-</div>
-<div class="card card-glow-emerald" style="padding: 1rem 1.15rem;">
-<div class="card-title" style="font-size: 1.15rem;"><span>🎮</span> RPG &amp; Kahoot ao Vivo</div>
-<p class="card-desc" style="font-size: 0.95rem; margin-bottom: 0.35rem;">Interatividade em tempo real pelo smartphone da turma:</p>
-<ul class="bullet-list" style="margin-bottom: 0.5rem;">
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> 6 Fases no mapa do PIT acionadas após cada bloco</li>
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> 18 perguntas (1 certa e 2 erradas) com cronômetro</li>
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> Pontuação regressiva estilo Kahoot por milissegundo</li>
-<li style="font-size: 0.95rem;"><span class="bullet-dot">▸</span> Pódio com confetes e análise cienciométrica dos erros</li>
-</ul>
-<div class="chips-row">
-<span class="chip-badge">Ranking na Tela</span>
-<span class="chip-badge">Análise de Erros</span>
-</div>
-</div>
-</div>
-<!-- Quick Ticker Preview Compacto -->
-<div class="card" style="padding: 0.45rem 1.1rem; display: flex; align-items: center; justify-content: space-between; border-color: rgba(6,182,212,0.3); margin-top: 0.15rem;">
-<div style="display: flex; align-items: center; gap: 0.7rem;">
-<span style="font-size: 1.15rem;">📡</span>
-<div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-<span style="font-size: 0.95rem; font-weight: 700; color: #fff;">Sessão Interativa da Turma Conectada:</span>
-<span style="font-size: 0.92rem; color: var(--cyan-light);">Abra pelo smartphone: <strong>jogo.html</strong></span>
-</div>
-</div>
-<div style="display: flex; align-items: center; gap: 0.5rem;">
-<div class="live-pulse-dot"></div>
-<span id="ticker-status-s1" style="font-size: 0.88rem; color: var(--text-muted);">Aguardando participantes...</span>
-</div>
-</div>
-<div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Seminário 5: Ecossistemas de Inovação • GETI 2026 / PPG-PIT UNIFESP Campus Parque Tecnológico SJC.</span></div>
+<!-- SLIDE 1: ABERTURA / CAPA ACADÊMICA DE MESTRADO -->
+<section class="slide active slide-cover-academic" data-block="Capa" data-slide="1" data-speaker="Josué Jofre" data-time="2 min">
+  
+  <!-- Institutional Header Banner -->
+  <div class="academic-cover-header">
+    <div class="institution-crest-box">
+      <span>🏛️</span>
+    </div>
+    <div class="institution-text-block">
+      <div class="univ-name">UNIVERSIDADE FEDERAL DE SÃO PAULO • UNIFESP</div>
+      <div class="inst-name">Instituto de Ciência e Tecnologia (ICT) • Campus São José dos Campos</div>
+      <div class="prog-name">Programa de Pós-Graduação em Inovação Tecnológica (PPG-PIT) • Mestrado Profissional</div>
+    </div>
+  </div>
+
+  <!-- Academic Context & Subject Tags -->
+  <div class="academic-context-row">
+    <div class="academic-tag-pill">
+      <span>📚</span>
+      <span>DISCIPLINA: GESTÃO ESTRATÉGICA DA INOVAÇÃO (GETI 2026)</span>
+    </div>
+    <div class="academic-tag-seminar">
+      <span>⚡</span>
+      <span>SEMINÁRIO TEMÁTICO 5</span>
+    </div>
+  </div>
+
+  <!-- Main Title Area -->
+  <div class="academic-title-box">
+    <h1 class="academic-main-title">
+      Ecossistemas de Inovação: <span>Teoria, Orquestração e a Prática no PIT SJC</span>
+    </h1>
+    <h2 class="academic-sub-title">
+      Da coevolução biológica aos ecossistemas adaptativos: a sinergia entre academia, indústria e governo no Parque Tecnológico de São José dos Campos
+    </h2>
+    <div class="academic-epigraph">
+      Nenhuma organização inova sozinha: o valor não reside nas partes isoladas, mas na sinergia, na coevolução e na orquestração dos atores do ecossistema.
+    </div>
+  </div>
+
+  <!-- Metadata Grid: Discentes & Docentes -->
+  <div class="academic-meta-grid">
+    <!-- Panel Discentes (Apenas Turma de Quarta-feira) -->
+    <div class="academic-panel discentes-panel">
+      <div class="academic-panel-header">
+        <span class="academic-panel-icon">🎓</span>
+        <div>
+          <div class="academic-panel-title">DISCENTES / INTEGRANTES DO SEMINÁRIO</div>
+          <div class="academic-panel-subtitle">Turma de Quarta-feira • PPG-PIT UNIFESP</div>
+        </div>
+      </div>
+      <div class="discentes-grid">
+        <div class="discente-pill">
+          <span class="discente-bullet">●</span>
+          <span class="discente-name">Josué Jofre</span>
+        </div>
+        <div class="discente-pill">
+          <span class="discente-bullet">●</span>
+          <span class="discente-name">Nathália Neves</span>
+        </div>
+        <div class="discente-pill">
+          <span class="discente-bullet">●</span>
+          <span class="discente-name">Veridiany Braga</span>
+        </div>
+        <div class="discente-pill">
+          <span class="discente-bullet">●</span>
+          <span class="discente-name">Jéssica Pascotto David</span>
+        </div>
+        <div class="discente-pill">
+          <span class="discente-bullet">●</span>
+          <span class="discente-name">Lilian Velga Vinhas</span>
+        </div>
+        <div class="discente-pill">
+          <span class="discente-bullet">●</span>
+          <span class="discente-name">Renato Paschoal</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel Docentes & Local -->
+    <div class="academic-panel docentes-panel">
+      <div class="academic-panel-header">
+        <span class="academic-panel-icon">👨‍🏫</span>
+        <div>
+          <div class="academic-panel-title">CORPO DOCENTE RESPONSÁVEL</div>
+          <div class="academic-panel-subtitle">Professores Titulares da Disciplina</div>
+        </div>
+      </div>
+      <div class="docentes-content">
+        <div class="docente-row">
+          <span class="docente-role-label">Professora Responsável</span>
+          <span class="docente-full-name">Profª. Drª. Iraci de Souza Martinez</span>
+        </div>
+        <div class="docente-row">
+          <span class="docente-role-label">Professor Responsável</span>
+          <span class="docente-full-name">Prof. Dr. Milton Yukio Tsutsumi</span>
+        </div>
+      </div>
+      <div class="location-year-row">
+        <span>📍 Parque Tecnológico • São José dos Campos – SP</span>
+        <span>2026</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Academic Footnote -->
+  <div class="slide-footer-ref">
+    <span>🏛️</span>
+    <span><strong>UNIFESP ICT</strong> • Programa de Pós-Graduação em Inovação Tecnológica (PPG-PIT) • Seminário 5: Ecossistemas de Inovação.</span>
+  </div>
+
 </section>
-<section class="slide" data-block="Agenda" data-slide="2" data-speaker="Nathalia Neves (4ª) / Fernando (5ª)" data-time="2 min">
+
+<!-- SLIDE 2: AGENDA -->
+<section class="slide" data-block="Agenda" data-slide="2"  data-speaker="Nathalia Neves" data-time="2 min">
 <div class="slide-tag">🧭 CRONOGRAMA &amp; ROTEIRO • 120 MINUTOS</div>
 <h2 class="slide-title">Estrutura e <span>Divisão dos Blocos</span></h2>
 <div class="punchline-card">
@@ -888,65 +1395,79 @@
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Estrutura Baseada em Moore (1993), Etzkowitz (2000), Machado et al. (2025), Furr &amp; Shipilov (2018), Majava &amp; Rinkinen (2026) e Shen et al. (2026).</span></div>
 </section>
-<section class="slide" data-block="Contexto PIT" data-slide="3" data-speaker="Nathalia Neves (4ª) / Fernando (5ª)" data-time="4 min">
+<section class="slide" data-block="Contexto PIT" data-slide="3" data-speaker="Nathalia Neves" data-time="4 min">
 <div class="slide-tag">🎙️ ESTUDO EMPÍRICO • ABERTURA DO CASO DE CAMPO</div>
 <h2 class="slide-title">São José dos Campos &amp; PIT: <span>Por que a Indústria Precisa da Academia?</span></h2>
-<div class="punchline-card" style="margin-bottom: 0.85rem;">
+<div class="punchline-card" style="margin-bottom: 0.65rem;">
 <span style="font-size: 1.4rem;">🔬</span>
 <div class="punchline-quote">"A gente precisa da universidade porque não temos professores nem tempo de treinar o pesquisador do zero. O pesquisador traz a fundamentação profunda que vira produto e patente." — <em>Rodrigo Saad (Liderança P&amp;D Industrial)</em></div>
 </div>
-<div style="display: grid; grid-template-columns: 1fr 1.35fr; gap: 1.25rem; flex: 1; min-height: 0; align-items: stretch;">
-<!-- Coluna Esquerda: Contexto do Laboratório Vivo & Perfil do Entrevistado -->
-<div style="display: flex; flex-direction: column; gap: 0.75rem; justify-content: center;">
-<div class="card card-glow-cyan" style="padding: 0.95rem 1.15rem; border-radius: 12px;">
-<div style="display: flex; align-items: center; gap: 0.9rem; margin-bottom: 0.5rem;">
-<div style="width: 60px; height: 60px; border-radius: 50%; overflow: hidden; border: 2px solid var(--cyan-glow); flex-shrink: 0; box-shadow: 0 0 10px rgba(6,182,212,0.35);">
-<img alt="Rodrigo Saad" src="assets/thumb_recorte1.jpg" style="width: 100%; height: 100%; object-fit: cover;"/>
+
+<div class="interview-grid-main">
+  <!-- Coluna Esquerda: Análise Conceitual e Teórica com Fontes Ampliadas -->
+  <div class="interview-concepts-col">
+    <div class="card card-glow-cyan" style="border-left: 4px solid var(--cyan-glow);">
+      <div class="card-title"><span>📍</span> Densidade Única do Ecossistema de SJC</div>
+      <p style="margin-bottom: 0.45rem;">
+        São José dos Campos concentra uma sinergia ímpar no Brasil: mais de <strong>300 empresas inovadoras</strong> vinculadas e <strong>4 Arranjos Produtivos Locais (APLs)</strong> consolidados nas áreas Aeroespacial, Defesa, TIC e Saúde.
+      </p>
+      <p style="margin: 0;">
+        A proximidade física com centros de ponta (DCTA, ITA, INPE) cria uma atmosfera de co-desenvolvimento tecnológico contínuo.
+      </p>
+    </div>
+
+    <div class="card card-glow-purple" style="border-left: 4px solid var(--purple-accent);">
+      <div class="card-title"><span>🎓</span> O Papel Vital da Universidade Pública (UNIFESP)</div>
+      <p style="margin-bottom: 0.45rem;">
+        O <strong>Campus Parque Tecnológico da UNIFESP</strong> atua fisicamente dentro do ecossistema, formando mestres e doutores com rigor científico que a indústria não tem tempo hábil de capacitar do zero.
+      </p>
+      <p style="margin: 0;">
+        Essa fundamentação acadêmica é o catalisador que transforma pesquisas em <strong>patentes, testes de materiais de alta complexidade e produtos de escala global</strong>.
+      </p>
+    </div>
+  </div>
+
+  <!-- Coluna Direita: Player Compacto do Vídeo (Tela Cheia na Apresentação) -->
+  <div class="interview-player-card card-glow-amber">
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+      <span class="chip-badge" style="background: rgba(245, 158, 11, 0.2); border-color: var(--amber-accent); color: var(--amber-accent); font-weight: 700; font-size: 0.8rem;">
+        ▶️ RECORTE 1 DE 4 • INDÚSTRIA &amp; ACADEMIA • 1M21S
+      </span>
+    </div>
+    <div class="interview-video-wrapper">
+      <video controls="" id="video-recorte-3" poster="assets/thumb_recorte3.jpg" preload="metadata">
+        <source src="assets/recorte3_industria_academia.mp4?v=2" type="video/mp4"/>
+        Seu navegador não suporta reprodução de vídeo HTML5.
+      </video>
+    </div>
+    <div class="interview-key-points-box">
+      <div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--amber-accent); font-weight: 800; margin-bottom: 0.2rem;">💡 FOCO DO DEPOIMENTO:</div>
+      A indústria investe em P&amp;D aplicado, mas depende da universidade para a ciência de base. (Use o botão ⛶ para tela cheia).
+    </div>
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-top: 0.35rem; font-size: 0.82rem; color: var(--text-dim);">
+      <span>🎬 Recorte de Campo</span>
+      <span style="color: var(--cyan-light); font-weight: 600;">Nathália Neves</span>
+    </div>
+  </div>
 </div>
-<div>
-<div style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; color: #fff;">Rodrigo Saad Rodrigues</div>
-<div style="font-size: 0.85rem; color: var(--cyan-light); font-weight: 600;">Liderança Executiva &amp; P&amp;D Industrial</div>
-<div style="font-size: 0.78rem; color: var(--text-dim);">Tier 1 Automotivo, Ferroviário &amp; Aeroespacial</div>
+
+<!-- Faixa Inferior: Identificação Completa do Entrevistado -->
+<div class="interviewee-bottom-strip">
+  <div class="interviewee-left-profile">
+    <img alt="Rodrigo Saad" class="interviewee-avatar-img" src="assets/thumb_recorte1.jpg"/>
+    <div class="interviewee-meta-text">
+      <div class="interviewee-meta-name">Rodrigo Saad Rodrigues</div>
+      <div class="interviewee-meta-role">Liderança Executiva &amp; P&amp;D Industrial • Tier 1 Automotivo, Ferroviário &amp; Aeroespacial</div>
+      <div class="interviewee-meta-sub">Multinacional de tecidos termoacústicos avançados no ecossistema de SJC</div>
+    </div>
+  </div>
+  <div class="interviewee-field-badge">
+    <span>🎙️</span>
+    <span>Investigação de campo conduzida por Nathália Neves • PPG-PIT UNIFESP</span>
+  </div>
 </div>
-</div>
-<p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.45; margin: 0;">
-                Multinacional fabricante de tecidos termoacústicos avançados. Para além dos livros, a colega <strong>Nathália Neves</strong> foi a campo investigar a realidade prática da indústria no ecossistema de SJC.
-              </p>
-</div>
-<div class="card card-glow-purple" style="padding: 0.85rem 1.1rem; border-radius: 12px;">
-<div class="card-title" style="font-size: 1rem; margin-bottom: 0.25rem;"><span>📍</span> Por que São José dos Campos e o PIT?</div>
-<ul class="bullet-list" style="margin: 0; gap: 0.35rem;">
-<li style="font-size: 0.85rem; line-height: 1.4;"><span class="bullet-dot" style="color: var(--cyan-light);">▸</span> <strong>Densidade Única:</strong> 300+ empresas, 4 APLs (Aeroespacial, Defesa, TIC e Saúde) e DCTA/ITA/INPE.</li>
-<li style="font-size: 0.85rem; line-height: 1.4;"><span class="bullet-dot" style="color: var(--purple-accent);">▸</span> <strong>Presença da UNIFESP:</strong> O Campus Parque Tecnológico integrado fisicamente ao ecossistema.</li>
-</ul>
-</div>
-</div>
-<!-- Coluna Direita: Player do Recorte 3 -->
-<div class="card card-glow-amber" style="padding: 0.85rem; background: rgba(10, 19, 36, 0.95); display: flex; flex-direction: column; align-items: center; justify-content: space-between; border-radius: 14px;">
-<div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; padding: 0 0.25rem;">
-<span class="chip-badge" style="background: rgba(245, 158, 11, 0.2); border-color: var(--amber-accent); color: var(--amber-accent); font-weight: 700;">
-                ▶️ RECORTE 1 DE 4 • A VOZ DA INDÚSTRIA • 1M21S
-              </span>
-</div>
-<div style="width: 100%; height: 100%; max-height: 380px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(245, 158, 11, 0.35); box-shadow: 0 10px 30px rgba(0,0,0,0.6); background: #000; display: flex; align-items: center; justify-content: center;">
-<video controls="" id="video-recorte-3" poster="assets/thumb_recorte3.jpg" preload="metadata" style="width: 100%; height: 100%; max-height: 380px; object-fit: contain; display: block; margin: 0 auto;">
-<source src="assets/recorte3_industria_academia.mp4?v=2" type="video/mp4"/>
-                Seu navegador não suporta reprodução de vídeo HTML5.
-              </video>
-</div>
-<div style="margin-top: 0.45rem; width: 100%; padding: 0 0.25rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem;">
-<div style="color: var(--amber-accent); font-weight: 600;">
-                🎓 <strong>"Por que a Indústria Precisa da Academia"</strong>
-</div>
-<div style="color: var(--text-muted); font-size: 0.82rem;">
-                Apresentação: Nathália Neves (4ª) / Fernando (5ª)
-              </div>
-</div>
-</div>
-</div>
-<div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Estudo Empírico GETI 2026 • Entrevista de Campo conduzida por Nathália Neves em Out/2026.</span></div>
 </section>
-<section class="slide" data-block="Bloco 1" data-slide="4" data-speaker="Nathalia Neves (4ª) / Fernando (5ª)" data-time="4 min">
+<section class="slide" data-block="Bloco 1" data-slide="4" data-speaker="Nathalia Neves" data-time="4 min">
 <div class="slide-tag">📚 BLOCO 1 • FUNDAMENTOS TEÓRICOS</div>
 <h2 class="slide-title">A Origem do Conceito: <span>Tansley (1935) &amp; Moore (1993)</span></h2>
 <div class="punchline-card">
@@ -973,7 +1494,7 @@
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Tansley, A. G. (1935). The use and abuse of vegetational concepts and terms. Ecology; Moore, J. F. (1993). Predators and Prey. HBR.</span></div>
 </section>
-<section class="slide" data-block="Bloco 1" data-slide="5" data-speaker="Nathalia Neves (4ª) / Fernando (5ª)" data-time="4 min">
+<section class="slide" data-block="Bloco 1" data-slide="5" data-speaker="Nathalia Neves" data-time="4 min">
 <div class="slide-tag">📊 BLOCO 1 • ANÁLISE BIBLIOMÉTRICA</div>
 <h2 class="slide-title">Evolução Bibliométrica: <span>Shen et al. (2025/2026)</span></h2>
 <div class="punchline-card">
@@ -999,7 +1520,7 @@
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Shen, W., et al. (2025/2026). Mapping innovation ecosystem research published from 2006 to 2023: A scientometric review. Technology in Society, 78, 102641.</span></div>
 </section>
-<section class="slide" data-block="Bloco 1" data-slide="6" data-speaker="Nathalia Neves (4ª) / Fernando (5ª)" data-time="4 min">
+<section class="slide" data-block="Bloco 1" data-slide="6" data-speaker="Nathalia Neves" data-time="4 min">
 <div class="slide-tag">💡 BLOCO 1 • 4 CONCEITOS ESSENCIAIS</div>
 <h2 class="slide-title">Como Diferenciar: <span>Cluster, Sistema e Ecossistema</span></h2>
 <div class="punchline-card">
@@ -1042,7 +1563,7 @@
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Porter, M. (1998); Freeman, C. (1987); Lundvall, B.-Å. (1992); Moore, J. F. (1993); Adner, R. (2006).</span></div>
 </section>
-<section class="slide" data-block="Momento Kahoot 1" data-slide="7" data-speaker="Nathalia Neves (4ª) / Fernando (5ª)" data-time="3 min">
+<section class="slide" data-block="Momento Kahoot 1" data-slide="7" data-speaker="Nathalia Neves" data-time="3 min">
 <div class="slide-tag">🎮 MOMENTO KAHOOT RPG • FASE 1</div>
 <h2 class="slide-title">Desafio da Fase 1: <span>Bloco Acadêmico UNIFESP</span></h2>
 <div class="punchline-card">
@@ -1066,15 +1587,18 @@
               ⏱️ <strong>Tempo:</strong> 2 minutos • Pontuação regressiva por milissegundo estilo Kahoot.
             </div>
 </div>
-<div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; gap: 0.65rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
-<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.6rem;">
-<span>💬</span> O link do jogo está no chat da aula:
-            </div>
-<div style="font-size: 1.12rem; color: #cbd5e1; line-height: 1.6;">
-<strong>1.</strong> Acesse o link e coloque seu nome completo<br/>
-<strong>2.</strong> Ande até o desafio da <strong>Fase 1</strong><br/>
-<strong>3.</strong> Responda o mais rápido possível!
-            </div>
+<div class="card" style="padding: 1rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <div style="font-family: var(--font-display); font-size: 0.98rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.4rem;">
+    <span>🗺️</span> Radar do Campus ao Vivo:
+  </div>
+  <span id="slide-radar-count-p1" style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-light);">0 alunos</span>
+</div>
+<canvas class="slide-campus-radar" data-block="1" id="radar-canvas-p1" width="340" height="135" style="width: 100%; height: 135px; border-radius: 8px; background: #070f1e; border: 1px solid rgba(6, 182, 212, 0.25);"></canvas>
+<div style="font-size: 0.78rem; color: #94a3b8; display: flex; justify-content: space-between;">
+  <span>⚡ <strong>Posição em tempo real</strong></span>
+  <span>🟡 = Alunos no campus</span>
+</div>
 </div>
 </div>
 <!-- Leaderboard Table -->
@@ -1110,7 +1634,7 @@
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Avaliação Formativa Síncrona • Banco de Questões GETI 2026 baseado em Moore (1993) e Shen et al. (2026).</span></div>
 </section>
-<section class="slide" data-block="Bloco 2" data-slide="8" data-speaker="Veridiany Braga (4ª) / Fábio (5ª)" data-time="4 min">
+<section class="slide" data-block="Bloco 2" data-slide="8" data-speaker="Veridiany Braga" data-time="4 min">
 <div class="slide-tag">🧬 BLOCO 2 • ANATOMIA DO ECOSSISTEMA</div>
 <h2 class="slide-title">Anatomia do Ecossistema: <span>Heterogeneidade &amp; Simbiose de Atores</span></h2>
 <div class="punchline-card">
@@ -1202,7 +1726,7 @@
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Machado, C. G., Faccin, K., &amp; Bitencourt, C. C. (2025); Granovetter, M. (1973). The Strength of Weak Ties. AJS.</span></div>
 </section>
 <!-- Slide 9: Da Tríplice à Quíntupla Hélice + Entrevista Rubens Costa -->
-<section class="slide" data-block="Bloco 2" data-slide="9" data-speaker="Veridiany Braga (4ª) / Fábio (5ª)" data-time="4 min">
+<section class="slide" data-block="Bloco 2" data-slide="9" data-speaker="Veridiany Braga" data-time="4 min">
 <div class="slide-tag">🌀 BLOCO 2 • MODELOS DE HÉLICES DA INOVAÇÃO</div>
 <h2 class="slide-title">Da Tríplice à Quíntupla Hélice: <span>Sociedade &amp; Sustentabilidade</span></h2>
 <div class="punchline-card">
@@ -1269,60 +1793,78 @@ Transição energética, neutralidade de carbono, economia circular e impacto re
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Etzkowitz, H. &amp; Leydesdorff, L. (2000). The dynamics of innovation; Carayannis, E. G. &amp; Campbell, D. F. (2009, 2012). Quintuple Innovation Helix.</span></div>
 </section>
 <!-- SLIDE ADICIONAL: ESTUDO EMPÍRICO TRÍPLICE HÉLICE & START-UP CHILE (RUBENS COSTA) -->
-<section class="slide" data-block="Bloco 2" data-slide="10" data-speaker="Veridiany Braga (4ª) / Fábio (5ª)" data-time="3 min">
+<section class="slide" data-block="Bloco 2" data-slide="10" data-speaker="Veridiany Braga" data-time="3 min">
 <div class="slide-tag">🌀 BLOCO 2 • ESTUDO EMPÍRICO &amp; CASO DE CAMPO</div>
 <h2 class="slide-title">Estudo Empírico: <span>A Quádrupla Hélice na Prática &amp; Conexão Academia-Mercado</span></h2>
-<div class="punchline-card" style="margin-bottom: 0.85rem;">
+<div class="punchline-card" style="margin-bottom: 0.65rem;">
 <span style="font-size: 1.4rem;">🏛️</span>
-<div class="punchline-quote">"O Parque Tecnológico existe para fazer a quádrupla hélice girar: o mais difícil é mostrar ao acadêmico a linguagem do mercado e mostrar ao empresário que a universidade tem método e rigor científico indispensáveis para viabilizar inovações reais." — <em>Renato Boschilia Jr. (Diretor de Novos Negócios PIT SJC / Mestre UNIFESP)</em></div>
+<div class="punchline-quote">"O Parque Tecnológico existe para fazer a quádrupla hélice girar: o mais difícil é mostrar ao acadêmico a linguagem do mercado e mostrar ao empresário que a universidade tem método e rigor científico indispensáveis." — <em>Renato Boschilia Jr. (Diretor de Novos Negócios PIT SJC / Mestre UNIFESP)</em></div>
 </div>
-<div style="display: grid; grid-template-columns: 1.25fr 1fr; gap: 1.35rem; flex: 1; min-height: 0; align-items: stretch;">
-<!-- Coluna Esquerda: Player de Vídeo Amplo e Perfil -->
-<div style="display: flex; flex-direction: column; justify-content: space-between; min-height: 0;">
-<div style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 0.45rem;">
-<div style="width: 52px; height: 52px; border-radius: 50%; overflow: hidden; border: 2px solid var(--purple-accent); flex-shrink: 0; box-shadow: 0 0 12px rgba(139,92,246,0.4);">
-<img alt="Renato Boschilia Jr." src="assets/thumb_recorte5_renato.jpg" style="width: 100%; height: 100%; object-fit: cover;"/>
+
+<div class="interview-grid-main">
+  <!-- Coluna Esquerda: Análise Conceitual e Teórica com Fontes Ampliadas -->
+  <div class="interview-concepts-col">
+    <div class="card card-glow-purple" style="border-left: 4px solid var(--purple-accent);">
+      <div class="card-title"><span>🌀</span> A Quádrupla Hélice no Território do PIT SJC</div>
+      <p style="margin: 0;">
+        O PIT SJC atua como o <strong>orquestrador neutro</strong> (a 4ª hélice de governança e sociedade civil organizada) que faz convergir universidade pública (UNIFESP, ITA), empresas privadas e fomento governamental municipal e estadual.
+      </p>
+    </div>
+    <div class="card card-glow-cyan" style="border-left: 4px solid var(--cyan-glow);">
+      <div class="card-title"><span>🔬</span> Rigor Científico vs. Velocidade de Mercado</div>
+      <p style="margin: 0;">
+        O pesquisador exige rigor metodológico e validação de viabilidade; a empresa privada exige velocidade de entrega e retorno financeiro. O Parque cria o ambiente de tradução para que ambas as culturas se complementem sem atrito.
+      </p>
+    </div>
+    <div class="card card-glow-emerald" style="border-left: 4px solid var(--emerald-accent);">
+      <div class="card-title"><span>🤝</span> Confiança Presencial &amp; Redução do Risco</div>
+      <p style="margin: 0;">
+        Inovação profunda (Deep Tech) carrega incerteza intrínseca. O contato 'olho no olho' no ecossistema e ferramentas integradoras constroem a resiliência indispensável para a cooperação duradoura entre os atores.
+      </p>
+    </div>
+  </div>
+
+  <!-- Coluna Direita: Player Compacto do Vídeo (Tela Cheia na Apresentação) -->
+  <div class="interview-player-card card-glow-purple">
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+      <span class="chip-badge" style="background: rgba(139, 92, 246, 0.2); border-color: var(--purple-accent); color: var(--purple-glow); font-weight: 700; font-size: 0.8rem;">
+        ▶️ RECORTE PIT SJC • A QUÁDRUPLA HÉLICE • 1M40S
+      </span>
+    </div>
+    <div class="interview-video-wrapper">
+      <video controls="" id="video-recorte-5" poster="assets/thumb_recorte5_renato.jpg" preload="metadata">
+        <source src="assets/recorte5_quadrupla_helice_renato.mp4" type="video/mp4"/>
+        Seu navegador não suporta reprodução de vídeo HTML5.
+      </video>
+    </div>
+    <div class="interview-key-points-box">
+      <div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--purple-accent); font-weight: 800; margin-bottom: 0.2rem;">💡 FOCO DO DEPOIMENTO:</div>
+      Superação do abismo cultural entre pesquisa e mercado; alinhamento de incentivos mútuos. (Use ⛶ para tela cheia).
+    </div>
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-top: 0.35rem; font-size: 0.82rem; color: var(--text-dim);">
+      <span>🎬 Recorte de Campo</span>
+      <span style="color: var(--cyan-light); font-weight: 600;">Veridiany Braga</span>
+    </div>
+  </div>
 </div>
-<div>
-<div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #fff;">Renato Boschilia Jr.</div>
-<div style="font-size: 0.85rem; color: var(--purple-accent); font-weight: 700;">Diretor de Novos Negócios do PIT SJC | Mestre em Eng. de Materiais (UNIFESP)</div>
-</div>
-</div>
-<div style="width: 100%; height: 100%; max-height: 380px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(139, 92, 246, 0.4); box-shadow: 0 10px 30px rgba(0,0,0,0.6); background: #000; display: flex; align-items: center; justify-content: center;">
-<video controls="" id="video-recorte-5" poster="assets/thumb_recorte5_renato.jpg" preload="metadata" style="width: 100%; height: 100%; max-height: 380px; object-fit: contain; display: block; margin: 0 auto;">
-<source src="assets/recorte5_quadrupla_helice_renato.mp4" type="video/mp4"/>
-              Seu navegador não suporta reprodução de vídeo HTML5.
-            </video>
-</div>
-<div style="margin-top: 0.5rem; padding: 0.65rem 0.95rem; background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 8px;">
-<div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--purple-accent); font-weight: 800; margin-bottom: 0.2rem;">📌 PONTOS ESSENCIAIS DO DEPOIMENTO:</div>
-<div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.4;">
-              A Quádrupla Hélice operacionalizada no território do PIT SJC (Academia, Sociedade Civil/PIT, Mercado e Governo); superação do abismo cultural entre o rigor da pesquisa e a velocidade do mercado; resiliência nas pontes de inovação.
-            </div>
-</div>
-</div>
-<!-- Coluna Direita: Análise Conceitual e Lições de Governança -->
-<div style="display: flex; flex-direction: column; gap: 0.75rem; justify-content: center;">
-<div class="card card-glow-purple" style="padding: 0.95rem 1.15rem; border-left: 4px solid var(--purple-accent);">
-<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem;">🌀 A Quádrupla Hélice no Território</div>
-<p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4; margin: 0;">O PIT SJC atua como o orquestrador neutro (a 4ª hélice de governança cidadã e sociedade civil organizada) que faz convergir universidade pública (UNIFESP, ITA), empresas privadas e fomento municipal.</p>
-</div>
-<div class="card card-glow-cyan" style="padding: 0.95rem 1.15rem; border-left: 4px solid var(--cyan-glow);">
-<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem;">🔬 Rigor Científico vs. Velocidade de Mercado</div>
-<p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4; margin: 0;">O pesquisador exige rigor metodológico e validação de viabilidade; a empresa privada exige velocidade e retorno. O Parque cria o ambiente de tradução para que ambas as culturas se complementem.</p>
-</div>
-<div class="card card-glow-emerald" style="padding: 0.95rem 1.15rem; border-left: 4px solid var(--emerald-accent);">
-<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem;">🤝 Confiança Presencial &amp; Redução do Risco</div>
-<p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4; margin: 0;">Inovação profunda (Deep Tech) carrega incerteza intrínseca. O contato 'olho no olho' no ecossistema e ferramentas integradoras (como a rede Colmeia) constroem a resiliência indispensável para a cooperação duradoura.</p>
-</div>
-</div>
-</div>
-<div class="slide-footer-ref">
-<span style="font-size: 1.05rem;">📚</span>
-<span><strong>Fonte / Ref:</strong> Entrevista Empírica PPGPIT com Renato Boschilia Jr. (Out/2026); CARAYANNIS &amp; CAMPBELL (2009 - Quadruple Helix); ETZKOWITZ &amp; LEYDESDORFF (2000).</span>
+
+<!-- Faixa Inferior: Identificação Completa do Entrevistado -->
+<div class="interviewee-bottom-strip">
+  <div class="interviewee-left-profile">
+    <img alt="Renato Boschilia Jr." class="interviewee-avatar-img" src="assets/thumb_recorte5_renato.jpg"/>
+    <div class="interviewee-meta-text">
+      <div class="interviewee-meta-name">Renato Boschilia Jr.</div>
+      <div class="interviewee-meta-role">Diretor de Novos Negócios do PIT SJC • Mestre em Engenharia de Materiais (UNIFESP)</div>
+      <div class="interviewee-meta-sub">Parque de Inovação Tecnológica de São José dos Campos (APTSJC)</div>
+    </div>
+  </div>
+  <div class="interviewee-field-badge">
+    <span>🎙️</span>
+    <span>Investigação de campo conduzida por Veridiany Braga • PPG-PIT UNIFESP</span>
+  </div>
 </div>
 </section>
-<section class="slide" data-block="Bloco 2" data-slide="11" data-speaker="Veridiany Braga (4ª) / Fábio (5ª)" data-time="4 min">
+<section class="slide" data-block="Bloco 2" data-slide="11" data-speaker="Veridiany Braga" data-time="4 min">
 <div class="slide-tag">🕸️ BLOCO 2 • INTERDEPENDÊNCIA E DINÂMICA DE REDE</div>
 <h2 class="slide-title">Interdependência &amp; Riscos: <span>Cadeia Linear vs. Rede Viva</span></h2>
 <div class="punchline-card">
@@ -1404,7 +1946,7 @@ Atores independentes colaboram para criar um novo mercado e competem dentro dele
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Adner, R. (2006; 2012). Match Your Innovation Strategy to Your Innovation Ecosystem / The Wide Lens. Portfolio/Penguin.</span></div>
 </section>
-<section class="slide" data-block="Momento Kahoot 2" data-slide="12" data-speaker="Veridiany Braga (4ª) / Fábio (5ª)" data-time="3 min">
+<section class="slide" data-block="Momento Kahoot 2" data-slide="12" data-speaker="Veridiany Braga" data-time="3 min">
 <div class="slide-tag">🎮 MOMENTO KAHOOT RPG • FASE 2</div>
 <h2 class="slide-title">Desafio da Fase 2: <span>Praça Central das Hélices</span></h2>
 <div class="punchline-card">
@@ -1428,17 +1970,17 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 ⏱️ <strong>Tempo:</strong> 2 minutos • Pontuação regressiva por milissegundo estilo Kahoot.
 </div>
 </div>
-<div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; gap: 0.65rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
-<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.6rem;">
-<span>📱</span> Como Responder no Celular:
+<div class="card" style="padding: 1rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <div style="font-family: var(--font-display); font-size: 0.98rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.4rem;">
+    <span>🗺️</span> Radar do Campus ao Vivo:
+  </div>
+  <span id="slide-radar-count-p2" style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-light);">0 alunos</span>
 </div>
-<div style="font-size: 1.12rem; color: #cbd5e1; line-height: 1.5;">
-1. Abra <strong>jogo.html</strong> no seu smartphone<br/>
-2. Caminhe até a estação ativa no campus<br/>
-3. Responda antes do tempo esgotar!
-</div>
-<div style="font-size: 1.05rem; color: var(--cyan-light); font-weight: 700; margin-top: 0.2rem;">
-⚡ Sincronizado ao vivo via Firebase!
+<canvas class="slide-campus-radar" data-block="2" id="radar-canvas-p2" width="340" height="135" style="width: 100%; height: 135px; border-radius: 8px; background: #070f1e; border: 1px solid rgba(6, 182, 212, 0.25);"></canvas>
+<div style="font-size: 0.78rem; color: #94a3b8; display: flex; justify-content: space-between;">
+  <span>⚡ <strong>Posição em tempo real</strong></span>
+  <span>🟡 = Alunos no campus</span>
 </div>
 </div>
 </div>
@@ -1475,7 +2017,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Avaliação Formativa Síncrona • Banco de Questões GETI 2026 baseado em Adner (2006) e Carayannis &amp; Campbell (2012).</span></div>
 </section>
-<section class="slide" data-block="Bloco 3" data-slide="13" data-speaker="Jéssica David (4ª) / Joel (5ª)" data-time="1 min">
+<section class="slide" data-block="Bloco 3" data-slide="13" data-speaker="Jéssica David" data-time="1 min">
 <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.05rem; color: #3FD0E6; letter-spacing: 0.15em; font-weight: 700; margin-bottom: 0.4rem; text-transform: uppercase;">
           BLOCO 03 · GOVERNANÇA E ORQUESTRAÇÃO
         </div>
@@ -1517,7 +2059,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
         </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Machado, C. G., Faccin, K., &amp; Bitencourt, C. C. (2025). Orchestration competence in innovation ecosystems. Innovation &amp; Management Review.</span></div>
 </section>
-<section class="slide" data-block="Bloco 3" data-slide="14" data-speaker="Jéssica David (4ª) / Joel (5ª)" data-time="1.5 min">
+<section class="slide" data-block="Bloco 3" data-slide="14" data-speaker="Jéssica David" data-time="1.5 min">
 <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.05rem; color: #3FD0E6; letter-spacing: 0.15em; font-weight: 700; margin-bottom: 0.4rem; text-transform: uppercase;">
           01 · O PAPEL DO ORQUESTRADOR
         </div>
@@ -1564,69 +2106,78 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Dhanaraj, C. &amp; Parkhe, A. (2006). Orchestrating innovation networks. AMR; Machado, Faccin &amp; Bitencourt (2025).</span></div>
 </section>
 <!-- SLIDE 15: ESTUDO EMPÍRICO O PAPEL DO ORQUESTRADOR & AUTORIDADE RELACIONAL (RUBENS COSTA) -->
-<section class="slide" data-block="Bloco 3" data-slide="15" data-speaker="Jéssica David (4ª) / Joel (5ª)" data-time="2 min">
+<section class="slide" data-block="Bloco 3" data-slide="15" data-speaker="Jéssica David" data-time="2 min">
 <div class="slide-tag">🎙️ BLOCO 3 • ESTUDO EMPÍRICO &amp; LIDERANÇA RELACIONAL</div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.5rem;">
-  <div>
-    <div style="font-family: var(--font-mono); font-size: 1.05rem; color: var(--purple-accent); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 800;">O PAPEL DO ORQUESTRADOR</div>
-    <h2 class="slide-title" style="margin: 0; font-size: 2.3rem;">Estudo Empírico: <span>Liderança Relacional &amp; O "Pedaço de Pizza"</span></h2>
-  </div>
-  <div style="font-size: 0.95rem; font-family: var(--font-mono); color: var(--text-muted); text-align: right; line-height: 1.35;">
-    Liderança Sem Poder Hierárquico<br>
-    <strong style="color: #fff;">Governança de Redes de Inovação</strong>
-  </div>
+<h2 class="slide-title">Estudo Empírico: <span>Liderança Relacional &amp; O "Pedaço de Pizza"</span></h2>
+<div class="punchline-card" style="margin-bottom: 0.65rem;">
+<span style="font-size: 1.4rem;">🍕</span>
+<div class="punchline-quote">"O orquestrador não tem cadeia de controle sobre ninguém, mas dialoga com governo, universidade e mercado para garantir que cada um saia com o maior pedaço da pizza e o projeto gere resultado real." — <em>Rubens Costa (Diretor de Inovação &amp; Scale-ups)</em></div>
 </div>
-<div class="punchline-card" style="margin-bottom: 0.85rem;">
-  <span style="font-size: 1.4rem;">🍕</span>
-  <div class="punchline-quote">"O orquestrador não tem cadeia de controle sobre ninguém, mas dialoga com governo, universidade e mercado para garantir que cada um saia com o maior pedaço da pizza e o projeto gere resultado real." — <em>Rubens Costa (Diretor de Inovação &amp; Scale-ups)</em></div>
-</div>
-<div style="display: grid; grid-template-columns: 1.25fr 1fr; gap: 1.35rem; flex: 1; min-height: 0; align-items: stretch;">
-  <!-- Coluna Esquerda: Player de Vídeo Amplo e Perfil -->
-  <div style="display: flex; flex-direction: column; justify-content: space-between; min-height: 0;">
-    <div style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 0.45rem;">
-      <div style="width: 52px; height: 52px; border-radius: 50%; overflow: hidden; border: 2px solid var(--purple-accent); flex-shrink: 0; box-shadow: 0 0 12px rgba(139,92,246,0.4);">
-        <img alt="Rubens Costa" src="assets/thumb_recorte10_rubens.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-      </div>
-      <div>
-        <div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #fff;">Rubens Costa</div>
-        <div style="font-size: 0.85rem; color: var(--purple-accent); font-weight: 700;">Diretor de Inovação, Ex-Gestor Público &amp; Mentor de Scale-ups</div>
-      </div>
+
+<div class="interview-grid-main">
+  <!-- Coluna Esquerda: Análise Conceitual e Teórica com Fontes Ampliadas -->
+  <div class="interview-concepts-col">
+    <div class="card card-glow-purple" style="border-left: 4px solid var(--purple-accent);">
+      <div class="card-title"><span>🍕</span> O "Pedaço de Pizza" de Cada Hélice</div>
+      <p style="margin: 0;">
+        A academia busca rigor científico e publicações; o governo busca impacto socioeconômico e arrecadação; o mercado busca retorno sobre investimento. O orquestrador alinha esses incentivos para que todos ganhem conjuntamente.
+      </p>
     </div>
-    <div style="width: 100%; height: 100%; max-height: 380px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(139, 92, 246, 0.4); box-shadow: 0 10px 30px rgba(0,0,0,0.6); background: #000; display: flex; align-items: center; justify-content: center;">
-      <video controls id="video-recorte-10" poster="assets/thumb_recorte10_rubens.jpg" preload="metadata" style="width: 100%; height: 100%; max-height: 380px; object-fit: contain; display: block; margin: 0 auto;">
-        <source src="assets/recorte10_orquestrador_pizza_rubens.mp4" type="video/mp4">
+    <div class="card card-glow-cyan" style="border-left: 4px solid var(--cyan-glow);">
+      <div class="card-title"><span>🤝</span> Liderança Relacional vs. Hierárquica</div>
+      <p style="margin: 0;">
+        Ninguém manda em ninguém num ecossistema. A liderança é exercida por reputação, capacidade de diálogo contínuo (networking) e neutralidade institucional (Dhanaraj &amp; Parkhe, 2006; Machado et al., 2025).
+      </p>
+    </div>
+    <div class="card card-glow-emerald" style="border-left: 4px solid var(--emerald-accent);">
+      <div class="card-title"><span>🎯</span> Governança Focada em Resultados Mensuráveis</div>
+      <p style="margin: 0;">
+        Para mitigar ruídos de vaidade e evitar o "teatro da inovação", o orquestrador foca em entregas tangíveis: redução de custos, criação de empregos de alta tecnologia e transferência tecnológica real para a sociedade.
+      </p>
+    </div>
+  </div>
+
+  <!-- Coluna Direita: Player Compacto do Vídeo (Tela Cheia na Apresentação) -->
+  <div class="interview-player-card card-glow-purple">
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+      <span class="chip-badge" style="background: rgba(139, 92, 246, 0.2); border-color: var(--purple-accent); color: var(--purple-glow); font-weight: 700; font-size: 0.8rem;">
+        ▶️ RECORTE ORQUESTRADOR • PIZZA &amp; REDES • 1M30S
+      </span>
+    </div>
+    <div class="interview-video-wrapper">
+      <video controls="" id="video-recorte-10" poster="assets/thumb_recorte10_rubens.jpg" preload="metadata">
+        <source src="assets/recorte10_orquestrador_pizza_rubens.mp4" type="video/mp4"/>
         Seu navegador não suporta reprodução de vídeo HTML5.
       </video>
     </div>
-    <div style="margin-top: 0.5rem; padding: 0.65rem 0.95rem; background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 8px;">
-      <div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--purple-accent); font-weight: 800; margin-bottom: 0.2rem;">📌 PONTOS ESSENCIAIS DO DEPOIMENTO:</div>
-      <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.4;">
-        Rubens detalha como funciona a orquestração na prática: o líder não tem controle hierárquico sobre os parceiros, mas constrói pontes mensais entre universidade (pesquisa), governo (fomento) e startups (soluções), assegurando que cada elo tenha contrapartidas claras.
-      </div>
+    <div class="interview-key-points-box">
+      <div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--purple-accent); font-weight: 800; margin-bottom: 0.2rem;">💡 FOCO DO DEPOIMENTO:</div>
+      Orquestração sem controle hierárquico: pontes mensais com contrapartidas claras para cada elo. (Use ⛶ para tela cheia).
     </div>
-  </div>
-  <!-- Coluna Direita: Análise Conceitual e Dimensões de Orquestração -->
-  <div style="display: flex; flex-direction: column; gap: 0.75rem; justify-content: center;">
-    <div class="card card-glow-purple" style="padding: 0.95rem 1.15rem; border-left: 4px solid var(--purple-accent);">
-      <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem;">🍕 O "Pedaço de Pizza" de Cada Hélice</div>
-      <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4; margin: 0;">A academia busca rigor científico e publicações; o governo busca impacto socioeconômico; o mercado busca retorno sobre investimento. O orquestrador alinha esses incentivos para que todos ganhem conjuntamente.</p>
-    </div>
-    <div class="card card-glow-cyan" style="padding: 0.95rem 1.15rem; border-left: 4px solid var(--cyan-glow);">
-      <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem;">🤝 Liderança Relacional vs. Hierárquica</div>
-      <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4; margin: 0;">Ninguém manda em ninguém num ecossistema. A liderança é exercida por reputação, capacidade de diálogo contínuo (networking) e neutralidade institucional (Dhanaraj &amp; Parkhe, 2006).</p>
-    </div>
-    <div class="card card-glow-emerald" style="padding: 0.95rem 1.15rem; border-left: 4px solid var(--emerald-accent);">
-      <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem;">🎯 Governança Focada em Resultados Mensuráveis</div>
-      <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4; margin: 0;">Para mitigar ruídos de vaidade e evitar o "teatro da inovação", o orquestrador foca em entregas tangíveis: redução de custos, criação de empregos e transferência tecnológica real para a sociedade.</p>
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-top: 0.35rem; font-size: 0.82rem; color: var(--text-dim);">
+      <span>🎬 Recorte de Campo</span>
+      <span style="color: var(--cyan-light); font-weight: 600;">Jéssica David</span>
     </div>
   </div>
 </div>
-<div class="slide-footer-ref">
-  <span style="font-size: 1.05rem;">📚</span>
-  <span><strong>Fonte / Ref:</strong> Entrevista Empírica PPGPIT com Rubens Costa (Out/2026); Dhanaraj &amp; Parkhe (2006); Machado, Faccin &amp; Bitencourt (2025) - Dimensões de Orquestração.</span>
+
+<!-- Faixa Inferior: Identificação Completa do Entrevistado -->
+<div class="interviewee-bottom-strip">
+  <div class="interviewee-left-profile">
+    <img alt="Rubens Costa" class="interviewee-avatar-img" src="assets/thumb_recorte10_rubens.jpg"/>
+    <div class="interviewee-meta-text">
+      <div class="interviewee-meta-name">Rubens Costa</div>
+      <div class="interviewee-meta-role">Diretor de Inovação, Ex-Gestor Público &amp; Mentor de Scale-ups</div>
+      <div class="interviewee-meta-sub">Experiência em ecossistemas digitais, venture capital e scale-ups de tecnologia</div>
+    </div>
+  </div>
+  <div class="interviewee-field-badge">
+    <span>🎙️</span>
+    <span>Investigação de campo conduzida por Jéssica David • PPG-PIT UNIFESP</span>
+  </div>
 </div>
 </section>
-<section class="slide" data-block="Bloco 3" data-slide="16" data-speaker="Jéssica David (4ª) / Joel (5ª)" data-time="1 min">
+<section class="slide" data-block="Bloco 3" data-slide="16" data-speaker="Jéssica David" data-time="1 min">
 <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.05rem; color: #3FD0E6; letter-spacing: 0.15em; font-weight: 700; margin-bottom: 0.4rem; text-transform: uppercase;">
           02 · AS DIMENSÕES DA ORQUESTRAÇÃO
         </div>
@@ -1695,7 +2246,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
         </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Hurmelinna-Laukkanen et al. (2011); Da Silva &amp; Bitencourt (2019); Mignoni et al. (2021); Machado et al. (2025).</span></div>
 </section>
-<section class="slide" data-block="Bloco 3" data-slide="17" data-speaker="Jéssica David (4ª) / Joel (5ª)" data-time="2 min">
+<section class="slide" data-block="Bloco 3" data-slide="17" data-speaker="Jéssica David" data-time="2 min">
 <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.05rem; color: #3FD0E6; letter-spacing: 0.15em; font-weight: 700; margin-bottom: 0.4rem; text-transform: uppercase;">
           03 · MECANISMOS (1/2)
         </div>
@@ -1760,7 +2311,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
         </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Machado, C. G., Faccin, K., &amp; Bitencourt, C. C. (2025). Tabela 1 e 2: Mecanismos de Direção, Mobilização e Estabilização.</span></div>
 </section>
-<section class="slide" data-block="Bloco 3" data-slide="18" data-speaker="Jéssica David (4ª) / Joel (5ª)" data-time="2 min">
+<section class="slide" data-block="Bloco 3" data-slide="18" data-speaker="Jéssica David" data-time="2 min">
 <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.05rem; color: #3FD0E6; letter-spacing: 0.15em; font-weight: 700; margin-bottom: 0.4rem; text-transform: uppercase;">
           04 · MECANISMOS (2/2)
         </div>
@@ -1825,7 +2376,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
         </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Machado, C. G., Faccin, K., &amp; Bitencourt, C. C. (2025). Mecanismos de Compartilhamento, Coordenação e Gestão da Comunicação.</span></div>
 </section>
-<section class="slide" data-block="Bloco 3" data-slide="19" data-speaker="Jéssica David (4ª) / Joel (5ª)" data-time="1.75 min">
+<section class="slide" data-block="Bloco 3" data-slide="19" data-speaker="Jéssica David" data-time="1.75 min">
 <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.05rem; color: #3FD0E6; letter-spacing: 0.15em; font-weight: 700; margin-bottom: 0.4rem; text-transform: uppercase;">
           05 · COMPETÊNCIAS DE ORQUESTRAÇÃO
         </div>
@@ -1897,7 +2448,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
         </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Dutra, J. S. (2004). Gestão por competências; Fleury &amp; Fleury (2001); Machado, Faccin &amp; Bitencourt (2025).</span></div>
 </section>
-<section class="slide" data-block="Bloco 3" data-slide="20" data-speaker="Jéssica David (4ª) / Joel (5ª)" data-time="0.75 min">
+<section class="slide" data-block="Bloco 3" data-slide="20" data-speaker="Jéssica David" data-time="0.75 min">
 <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.05rem; color: #3FD0E6; letter-spacing: 0.15em; font-weight: 700; margin-bottom: 0.4rem; text-transform: uppercase;">
           06 · SÍNTESE
         </div>
@@ -1953,7 +2504,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
         </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Machado, C. G., Faccin, K., &amp; Bitencourt, C. C. (2025). Framework Integrado de Competências de Orquestração.</span></div>
 </section>
-<section class="slide" data-block="Momento Kahoot 3" data-slide="21" data-speaker="Jéssica David (4ª) / Joel (5ª)" data-time="3 min">
+<section class="slide" data-block="Momento Kahoot 3" data-slide="21" data-speaker="Jéssica David" data-time="3 min">
 <div class="slide-tag">🎮 MOMENTO KAHOOT RPG • FASE 3</div>
 <h2 class="slide-title">Desafio da Fase 3: <span>Centro de Governança do PIT</span></h2>
 <div class="punchline-card">
@@ -1977,15 +2528,18 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
               ⏱️ <strong>Tempo:</strong> 2 minutos • Pontuação regressiva por milissegundo estilo Kahoot.
             </div>
 </div>
-<div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; gap: 0.65rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
-<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.6rem;">
-<span>💬</span> O link do jogo está no chat da aula:
-            </div>
-<div style="font-size: 1.12rem; color: #cbd5e1; line-height: 1.6;">
-<strong>1.</strong> Acesse o link do jogo<br/>
-<strong>2.</strong> Ande até o desafio da <strong>Fase 2</strong><br/>
-<strong>3.</strong> Responda o mais rápido possível!
-            </div>
+<div class="card" style="padding: 1rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <div style="font-family: var(--font-display); font-size: 0.98rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.4rem;">
+    <span>🗺️</span> Radar do Campus ao Vivo:
+  </div>
+  <span id="slide-radar-count-p3" style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-light);">0 alunos</span>
+</div>
+<canvas class="slide-campus-radar" data-block="3" id="radar-canvas-p3" width="340" height="135" style="width: 100%; height: 135px; border-radius: 8px; background: #070f1e; border: 1px solid rgba(6, 182, 212, 0.25);"></canvas>
+<div style="font-size: 0.78rem; color: #94a3b8; display: flex; justify-content: space-between;">
+  <span>⚡ <strong>Posição em tempo real</strong></span>
+  <span>🟡 = Alunos no campus</span>
+</div>
 </div>
 </div>
 <!-- Leaderboard Table -->
@@ -2021,7 +2575,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Avaliação Formativa Síncrona • Banco de Questões GETI 2026 baseado em Machado, Faccin &amp; Bitencourt (2025).</span></div>
 </section>
-<section class="slide" data-block="Bloco 4" data-slide="22" data-speaker="Josué Jofre (4ª) / Joel (5ª)" data-time="4 min">
+<section class="slide" data-block="Bloco 4" data-slide="22" data-speaker="Josué Jofre" data-time="4 min">
 <div class="slide-tag">🏗️ BLOCO 4 • CONSTRUÇÃO DE ECOSSISTEMAS</div>
 <h2 class="slide-title">Como Construir Ecossistemas: <span>Furr &amp; Shipilov (MIT)</span></h2>
 <div class="punchline-card">
@@ -2048,61 +2602,78 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Furr, N. &amp; Shipilov, A. (2018). Building the Right Ecosystem for Innovation. MIT Sloan Management Review, 59(4), 59-64.</span></div>
 </section>
-<section class="slide" data-block="Bloco 4" data-slide="23" data-speaker="Josué Jofre (4ª) / Joel (5ª)" data-time="4 min">
+<section class="slide" data-block="Bloco 4" data-slide="23" data-speaker="Josué Jofre" data-time="4 min">
 <div class="slide-tag">🚀 BLOCO 4 • NEXUS HUB DE STARTUPS</div>
 <h2 class="slide-title">O Nexus como Catalisador: <span>Acelerando Deep Techs e Filtrando Oportunistas</span></h2>
-<div class="punchline-card" style="margin-bottom: 0.85rem;">
+<div class="punchline-card" style="margin-bottom: 0.65rem;">
 <span style="font-size: 1.4rem;">💡</span>
 <div class="punchline-quote">"O ecossistema precisa de curadoria séria. Evitamos os 'ride-alones' e temos doutores na empresa para fazer a ponte técnica real." — <em>Rodrigo Saad (Recorte 2)</em></div>
 </div>
-<div style="display: grid; grid-template-columns: 1fr 1.35fr; gap: 1.25rem; flex: 1; min-height: 0; align-items: stretch;">
-<!-- Coluna Esquerda: Pilares do Nexus e Curadoria -->
-<div style="display: flex; flex-direction: column; gap: 0.75rem; justify-content: center;">
-<div class="card card-glow-cyan" style="padding: 0.95rem 1.15rem; border-radius: 12px;">
-<div class="card-title" style="font-size: 1.05rem; margin-bottom: 0.25rem;"><span>🧪</span> Nexus Lab &amp; Nexus Scale</div>
-<p class="card-desc" style="font-size: 0.86rem; line-height: 1.45; margin: 0; color: var(--text-muted);">
-                Prototipagem rápida, eletrônica, ensaios mecânicos e matchmaking com grandes contas corporativas (open innovation) no Parque Tecnológico.
-              </p>
+
+<div class="interview-grid-main">
+  <!-- Coluna Esquerda: Análise Conceitual e Teórica com Fontes Ampliadas -->
+  <div class="interview-concepts-col">
+    <div class="card card-glow-cyan" style="border-left: 4px solid var(--cyan-glow);">
+      <div class="card-title"><span>🧪</span> Nexus Lab &amp; Nexus Scale</div>
+      <p style="margin: 0;">
+        Infraestrutura de ponta no PIT SJC para prototipagem rápida, eletrônica embarcada, ensaios mecânicos rigorosos e matchmaking qualificado com grandes contas corporativas (open innovation).
+      </p>
+    </div>
+    <div class="card card-glow-emerald" style="border-left: 4px solid var(--emerald-accent);">
+      <div class="card-title"><span>🛡️</span> A Curadoria contra "Startups de Fumaça"</div>
+      <p style="margin: 0;">
+        O orquestrador seleciona startups com maturidade tecnológica real (TRL avançado), filtrando aventureiros que buscam apenas subvenções e visibilidade institucional sem entregar produto funcional.
+      </p>
+    </div>
+    <div class="card card-glow-purple" style="border-left: 4px solid var(--purple-accent);">
+      <div class="card-title"><span>🔬</span> Doutores como Ponte na Manufatura</div>
+      <p style="margin: 0;">
+        A presença de profissionais com título de doutorado (PhD) na indústria permite auditar a ciência proposta pela startup e dialogar em pé de igualdade metodológica com os pesquisadores da UNIFESP.
+      </p>
+    </div>
+  </div>
+
+  <!-- Coluna Direita: Player Compacto do Vídeo (Tela Cheia na Apresentação) -->
+  <div class="interview-player-card card-glow-emerald">
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+      <span class="chip-badge" style="background: rgba(16, 185, 129, 0.2); border-color: var(--emerald-accent); color: var(--emerald-accent); font-weight: 700; font-size: 0.8rem;">
+        ▶️ RECORTE 2 DE 4 • CURADORIA &amp; TRL • 1M05S
+      </span>
+    </div>
+    <div class="interview-video-wrapper">
+      <video controls="" id="video-recorte-2" poster="assets/thumb_recorte2.jpg" preload="metadata">
+        <source src="assets/recorte2_oportunismo_curadoria.mp4?v=2" type="video/mp4"/>
+        Seu navegador não suporta reprodução de vídeo HTML5.
+      </video>
+    </div>
+    <div class="interview-key-points-box">
+      <div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--emerald-accent); font-weight: 800; margin-bottom: 0.2rem;">💡 FOCO DO DEPOIMENTO:</div>
+      Filtragem rigorosa de parceiros e a importância de interlocutores técnicos qualificados. (Use ⛶ para tela cheia).
+    </div>
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-top: 0.35rem; font-size: 0.82rem; color: var(--text-dim);">
+      <span>🎬 Recorte de Campo</span>
+      <span style="color: var(--cyan-light); font-weight: 600;">Josué Jofre</span>
+    </div>
+  </div>
 </div>
-<div class="card card-glow-emerald" style="padding: 0.95rem 1.15rem; border-radius: 12px;">
-<div class="card-title" style="font-size: 1.05rem; margin-bottom: 0.25rem; color: var(--emerald-accent);"><span>🛡️</span> A Curadoria contra "Startups de Fumaça"</div>
-<p class="card-desc" style="font-size: 0.86rem; line-height: 1.45; margin: 0; color: var(--text-muted);">
-                O orquestrador seleciona startups com maturidade tecnológica real (TRL avançado), evitando aventureiros que apenas captam subvenções sem entregar produto.
-              </p>
+
+<!-- Faixa Inferior: Identificação Completa do Entrevistado -->
+<div class="interviewee-bottom-strip">
+  <div class="interviewee-left-profile">
+    <img alt="Rodrigo Saad" class="interviewee-avatar-img" src="assets/thumb_recorte1.jpg"/>
+    <div class="interviewee-meta-text">
+      <div class="interviewee-meta-name">Rodrigo Saad Rodrigues</div>
+      <div class="interviewee-meta-role">Liderança Executiva &amp; P&amp;D Industrial • Tier 1 Automotivo, Ferroviário &amp; Aeroespacial</div>
+      <div class="interviewee-meta-sub">Multinacional de tecidos termoacústicos avançados no ecossistema de SJC</div>
+    </div>
+  </div>
+  <div class="interviewee-field-badge">
+    <span>🎙️</span>
+    <span>Investigação de campo conduzida por Josué Jofre • PPG-PIT UNIFESP</span>
+  </div>
 </div>
-<div class="card card-glow-purple" style="padding: 0.85rem 1.1rem; border-radius: 12px;">
-<div class="card-title" style="font-size: 1rem; margin-bottom: 0.25rem;"><span>🔬</span> Doutores como Ponte na Manufatura</div>
-<p class="card-desc" style="font-size: 0.84rem; line-height: 1.4; margin: 0; color: var(--text-muted);">
-                A presença de profissionais com PhD na indústria permite auditar a ciência da startup e dialogar com os professores da UNIFESP.
-              </p>
-</div>
-</div>
-<!-- Coluna Direita: Player do Recorte 2 -->
-<div class="card card-glow-emerald" style="padding: 0.85rem; background: rgba(10, 19, 36, 0.95); display: flex; flex-direction: column; align-items: center; justify-content: space-between; border-radius: 14px;">
-<div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; padding: 0 0.25rem;">
-<span class="chip-badge" style="background: rgba(16, 185, 129, 0.2); border-color: var(--emerald-accent); color: var(--emerald-accent); font-weight: 700;">
-                ▶️ RECORTE 2 DE 4 • PREVENÇÃO A OPORTUNISMO • 1M05S
-              </span>
-</div>
-<div style="width: 100%; height: 100%; max-height: 380px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(16, 185, 129, 0.35); box-shadow: 0 10px 30px rgba(0,0,0,0.6); background: #000; display: flex; align-items: center; justify-content: center;">
-<video controls="" id="video-recorte-2" poster="assets/thumb_recorte2.jpg" preload="metadata" style="width: 100%; height: 100%; max-height: 380px; object-fit: contain; display: block; margin: 0 auto;">
-<source src="assets/recorte2_oportunismo_curadoria.mp4?v=2" type="video/mp4"/>
-                Seu navegador não suporta reprodução de vídeo HTML5.
-              </video>
-</div>
-<div style="margin-top: 0.45rem; width: 100%; padding: 0 0.25rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem;">
-<div style="color: var(--emerald-accent); font-weight: 600;">
-                🛡️ <strong>"Curadoria Rígida: Filtrando Startups Oportunistas"</strong>
-</div>
-<div style="color: var(--text-muted); font-size: 0.82rem;">
-                Apresentação: Josué Jofre (4ª) / Joel (5ª)
-              </div>
-</div>
-</div>
-</div>
-<div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> APTSJC (2025). Relatório Nexus Hub; Williamson (1985); Entrevista de Campo GETI 2026.</span></div>
 </section>
-<section class="slide" data-block="Bloco 4" data-slide="24" data-speaker="Josué Jofre (4ª) / Joel (5ª)" data-time="4 min">
+<section class="slide" data-block="Bloco 4" data-slide="24" data-speaker="Josué Jofre" data-time="4 min">
 <div class="slide-tag">🧭 BLOCO 4 • LIDERANÇA ADAPTATIVA</div>
 <h2 class="slide-title">Liderança sem Autoridade Hierárquica: <span>O Desafio do Orquestrador</span></h2>
 <div class="punchline-card">
@@ -2128,61 +2699,79 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Heifetz, R., Grashow, A., &amp; Linsky, M. (2009). The Practice of Adaptive Leadership. Harvard Business Press; Furr &amp; Shipilov (2018).</span></div>
 </section>
 <!-- SLIDE 24: ESTUDO EMPÍRICO GOVERNANÇA DE CONTRATOS & NDA (RODRIGO SAAD & NATHÁLIA NEVES) -->
-<section class="slide" data-block="Bloco 4" data-slide="25" data-speaker="Josué Jofre (4ª) / Joel (5ª)" data-time="3 min">
+<section class="slide" data-block="Bloco 4" data-slide="25" data-speaker="Josué Jofre" data-time="3 min">
 <div class="slide-tag">🔐 BLOCO 4 • ESTUDO EMPÍRICO &amp; GOVERNANÇA CONTRATUAL</div>
 <h2 class="slide-title">Estudo Empírico: <span>Tipos de Contratos, Governança &amp; NDA no "Dia Zero"</span></h2>
-<div class="punchline-card" style="margin-bottom: 0.85rem;">
+<div class="punchline-card" style="margin-bottom: 0.65rem;">
 <span style="font-size: 1.4rem;">📜</span>
 <div class="punchline-quote">"Qual documentação formaliza a parceria: contrato aberto flexível, contrato rígido com cláusulas restritas ou acordo informal?" — <em>Pergunta: Nathália Neves • Resposta: Rodrigo Saad (Liderança Executiva de P&amp;D Industrial)</em></div>
 </div>
-<div style="display: grid; grid-template-columns: 1.25fr 1fr; gap: 1.35rem; flex: 1; min-height: 0; align-items: stretch;">
-<!-- Coluna Esquerda: Player de Vídeo Amplo e Perfil -->
-<div style="display: flex; flex-direction: column; justify-content: space-between; min-height: 0;">
-<div style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 0.45rem;">
-<div style="width: 52px; height: 52px; border-radius: 50%; overflow: hidden; border: 2px solid var(--purple-accent); flex-shrink: 0; box-shadow: 0 0 12px rgba(139,92,246,0.4);">
-<img alt="Rodrigo Saad Rodrigues" src="assets/thumb_recorte1.jpg" style="width: 100%; height: 100%; object-fit: cover;"/>
+
+<div class="interview-grid-main">
+  <!-- Coluna Esquerda: Análise Conceitual e Teórica com Fontes Ampliadas -->
+  <div class="interview-concepts-col">
+    <div class="card card-glow-purple" style="border-left: 4px solid var(--purple-accent);">
+      <div class="card-title"><span>🔐</span> O NDA Assinado no "Dia Zero"</div>
+      <p style="margin: 0;">
+        A blindagem jurídica de segredos industriais e propriedade intelectual não deve travar o diálogo, mas ser assinada no primeiro instante de contato para permitir a troca transparente de desafios técnicos entre pesquisadores e empresas.
+      </p>
+    </div>
+    <div class="card card-glow-cyan" style="border-left: 4px solid var(--cyan-glow);">
+      <div class="card-title"><span>📜</span> Contratos com Marcos Rígidos &amp; Escopo Flexível</div>
+      <p style="margin: 0;">
+        Em ecossistemas de inovação aberta, contratos excessivamente burocráticos matam a agilidade; a melhor prática é estabelecer marcos de entregas claros com divisão prévia de titularidade intelectual (co-titularidade ou licenciamento).
+      </p>
+    </div>
+    <div class="card card-glow-emerald" style="border-left: 4px solid var(--emerald-accent);">
+      <div class="card-title"><span>🤝</span> Confiança Relacional vs. Oportunismo</div>
+      <p style="margin: 0;">
+        O instrumento contratual formal não substitui a confiança pessoal, mas mitiga o receio acadêmico e corporativo de apropriação indébita, estabilizando a rede de cooperação (Machado et al., 2025).
+      </p>
+    </div>
+  </div>
+
+  <!-- Coluna Direita: Player Compacto do Vídeo (Tela Cheia na Apresentação) -->
+  <div class="interview-player-card card-glow-purple">
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+      <span class="chip-badge" style="background: rgba(139, 92, 246, 0.2); border-color: var(--purple-accent); color: var(--purple-glow); font-weight: 700; font-size: 0.8rem;">
+        ▶️ RECORTE 3 DE 4 • NDA &amp; CONTRATOS • 1M15S
+      </span>
+    </div>
+    <div class="interview-video-wrapper">
+      <video controls="" id="video-recorte-1" poster="assets/thumb_recorte1.jpg" preload="metadata">
+        <source src="assets/recorte1_pi_nda.mp4?v=2" type="video/mp4"/>
+        Seu navegador não suporta reprodução de vídeo HTML5.
+      </video>
+    </div>
+    <div class="interview-key-points-box">
+      <div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--purple-accent); font-weight: 800; margin-bottom: 0.2rem;">💡 FOCO DO DEPOIMENTO:</div>
+      Primazia do NDA no início das tratativas para proteger patentes e acelerar projetos. (Use ⛶ para tela cheia).
+    </div>
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-top: 0.35rem; font-size: 0.82rem; color: var(--text-dim);">
+      <span>🎬 Recorte de Campo</span>
+      <span style="color: var(--cyan-light); font-weight: 600;">Josué Jofre</span>
+    </div>
+  </div>
 </div>
-<div>
-<div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #fff;">Rodrigo Saad Rodrigues</div>
-<div style="font-size: 0.85rem; color: var(--purple-accent); font-weight: 700;">Liderança Executiva &amp; P&amp;D Industrial (Tier 1 Automotivo &amp; Aeroespacial)</div>
-</div>
-</div>
-<div style="width: 100%; height: 100%; max-height: 380px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(139, 92, 246, 0.4); box-shadow: 0 10px 30px rgba(0,0,0,0.6); background: #000; display: flex; align-items: center; justify-content: center;">
-<video controls="" id="video-recorte-1" poster="assets/thumb_recorte1.jpg" preload="metadata" style="width: 100%; height: 100%; max-height: 380px; object-fit: contain; display: block; margin: 0 auto;">
-<source src="assets/recorte1_pi_nda.mp4?v=2" type="video/mp4"/>
-              Seu navegador não suporta reprodução de vídeo HTML5.
-            </video>
-</div>
-<div style="margin-top: 0.5rem; padding: 0.65rem 0.95rem; background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 8px;">
-<div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--purple-accent); font-weight: 800; margin-bottom: 0.2rem;">📌 PONTOS ESSENCIAIS DO DEPOIMENTO:</div>
-<div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.4;">
-              Nathália Neves questiona sobre a formalização de acordos entre empresas e universidades; Rodrigo Saad explica a primazia do NDA assinado no primeiro contato para blindar patentes e viabilizar a colaboração ágil.
-            </div>
-</div>
-</div>
-<!-- Coluna Direita: Análise Conceitual e Governança Contratual -->
-<div style="display: flex; flex-direction: column; gap: 0.75rem; justify-content: center;">
-<div class="card card-glow-purple" style="padding: 0.95rem 1.15rem; border-left: 4px solid var(--purple-accent);">
-<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem;">🔐 O NDA no "Dia Zero"</div>
-<p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4; margin: 0;">A blindagem jurídica de segredos industriais e patentes não deve travar o diálogo, mas ser assinada no primeiro instante para permitir a troca transparente de desafios técnicos.</p>
-</div>
-<div class="card card-glow-cyan" style="padding: 0.95rem 1.15rem; border-left: 4px solid var(--cyan-glow);">
-<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem;">📜 Contratos com Marcos Rígidos &amp; Escopo Flexível</div>
-<p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4; margin: 0;">Em ecossistemas de inovação aberta, contratos excessivamente burocráticos matam a agilidade; a melhor prática é estabelecer marcos de entregas claros com divisão prévia de titularidade intelectual.</p>
-</div>
-<div class="card card-glow-emerald" style="padding: 0.95rem 1.15rem; border-left: 4px solid var(--emerald-accent);">
-<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem;">🤝 Confiança Relacional vs. Oportunismo</div>
-<p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4; margin: 0;">O instrumento contratual não substitui o alinhamento pessoal, mas mitiga o receio acadêmico e corporativo de apropriação indébita, estabilizando a rede (Machado et al., 2025).</p>
-</div>
-</div>
-</div>
-<div class="slide-footer-ref">
-<span style="font-size: 1.05rem;">📚</span>
-<span><strong>Fonte / Ref:</strong> Entrevista Empírica PPGPIT com Rodrigo Saad &amp; Nathália Neves (Out/2026); Machado, Faccin &amp; Bitencourt (2025) - Dimensão Governança Contratual.</span>
+
+<!-- Faixa Inferior: Identificação Completa do Entrevistado -->
+<div class="interviewee-bottom-strip">
+  <div class="interviewee-left-profile">
+    <img alt="Rodrigo Saad" class="interviewee-avatar-img" src="assets/thumb_recorte1.jpg"/>
+    <div class="interviewee-meta-text">
+      <div class="interviewee-meta-name">Rodrigo Saad Rodrigues</div>
+      <div class="interviewee-meta-role">Liderança Executiva &amp; P&amp;D Industrial (Tier 1 Automotivo &amp; Aeroespacial)</div>
+      <div class="interviewee-meta-sub">Investigação sobre governança de PI com a universidade</div>
+    </div>
+  </div>
+  <div class="interviewee-field-badge">
+    <span>🎙️</span>
+    <span>Investigação de campo conduzida por Josué Jofre &amp; Nathália Neves • PPG-PIT UNIFESP</span>
+  </div>
 </div>
 </section>
 
-<section class="slide" data-block="Momento Kahoot 4" data-slide="26" data-speaker="Josué Jofre (4ª) / Joel (5ª)" data-time="3 min">
+<section class="slide" data-block="Momento Kahoot 4" data-slide="26" data-speaker="Josué Jofre" data-time="3 min">
 <div class="slide-tag">🎮 MOMENTO KAHOOT RPG • FASE 4</div>
 <h2 class="slide-title">Desafio da Fase 4: <span>Nexus Hub de Startups</span></h2>
 <div class="punchline-card">
@@ -2206,15 +2795,18 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
               ⏱️ <strong>Tempo:</strong> 2 minutos • Pontuação regressiva por milissegundo estilo Kahoot.
             </div>
 </div>
-<div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; gap: 0.65rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
-<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.6rem;">
-<span>💬</span> O link do jogo está no chat da aula:
-            </div>
-<div style="font-size: 1.12rem; color: #cbd5e1; line-height: 1.6;">
-<strong>1.</strong> Acesse o link do jogo<br/>
-<strong>2.</strong> Ande até o desafio da <strong>Fase 3</strong><br/>
-<strong>3.</strong> Responda o mais rápido possível!
-            </div>
+<div class="card" style="padding: 1rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <div style="font-family: var(--font-display); font-size: 0.98rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.4rem;">
+    <span>🗺️</span> Radar do Campus ao Vivo:
+  </div>
+  <span id="slide-radar-count-p4" style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-light);">0 alunos</span>
+</div>
+<canvas class="slide-campus-radar" data-block="4" id="radar-canvas-p4" width="340" height="135" style="width: 100%; height: 135px; border-radius: 8px; background: #070f1e; border: 1px solid rgba(6, 182, 212, 0.25);"></canvas>
+<div style="font-size: 0.78rem; color: #94a3b8; display: flex; justify-content: space-between;">
+  <span>⚡ <strong>Posição em tempo real</strong></span>
+  <span>🟡 = Alunos no campus</span>
+</div>
 </div>
 </div>
 <!-- Leaderboard Table -->
@@ -2252,7 +2844,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </section>
 <!-- SLIDE 24: LILIAN 1 - SAN DIEGO NO RADAR GLOBAL (COVER SLIDE) -->
 <!-- SLIDE 24: LILIAN 1 - SAN DIEGO NO RADAR GLOBAL (COVER SLIDE - FIGURAS E TEXTO AMPLIADOS) -->
-<section class="slide" data-block="Bloco 5" data-slide="27" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="2 min">
+<section class="slide" data-block="Bloco 5" data-slide="27" data-speaker="Lilian Veiga" data-time="2 min">
 <div class="slide-tag" style="font-size: 1.12rem;">🌍 BLOCO 5 • O CASO DE SAN DIEGO (1/9)</div>
 <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.6rem;">
 <div>
@@ -2328,7 +2920,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 1.05rem;">📚</span> <span><strong>Fonte / Ref:</strong> Global Innovation Index 2025 (WIPO); Jukka Majava &amp; Satu Rinkinen (2026). Twenty years, twenty studies: what can we learn from San Diego’s innovation ecosystem?</span></div>
 </section>
 <!-- SLIDE 25: LILIAN 2 - O QUE É UM ECOSSISTEMA DE INOVAÇÃO? (FONTES AMPLIADAS) -->
-<section class="slide" data-block="Bloco 5" data-slide="28" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="2 min">
+<section class="slide" data-block="Bloco 5" data-slide="28" data-speaker="Lilian Veiga" data-time="2 min">
 <div class="slide-tag" style="font-size: 1.12rem;">🧬 BLOCO 5 • CONCEITO &amp; FUNDAMENTOS (2/9)</div>
 <h2 class="slide-title" style="font-size: 2.5rem; margin-bottom: 0.5rem;">O que é um ecossistema de inovação?</h2>
 <!-- Card de Definição Central Ampliado -->
@@ -2376,7 +2968,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 1.05rem;">📚</span> <span><strong>Fonte / Ref:</strong> Majava, J. &amp; Rinkinen, S. (2026). Twenty years, twenty studies: what can we learn from San Diego’s innovation ecosystem?, Technology Analysis &amp; Strategic Management, 38:1, 49-64.</span></div>
 </section>
 <!-- SLIDE 26: LILIAN 3 - CONNECT: A ENGENHARIA DA CONFIANÇA (HERO INFOGRAPHIC AMPLIADO) -->
-<section class="slide" data-block="Bloco 5" data-slide="29" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="2 min">
+<section class="slide" data-block="Bloco 5" data-slide="29" data-speaker="Lilian Veiga" data-time="2 min">
 <div class="slide-tag" style="font-size: 1.12rem;">🌉 BLOCO 5 • O ORQUESTRADOR REGIONAL (3/9)</div>
 <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
 <h2 class="slide-title" style="margin: 0; font-size: 2.5rem;">ECOSSISTEMAS DE INOVAÇÃO • <span style="color: var(--cyan-light);">O Caso de San Diego</span></h2>
@@ -2389,7 +2981,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 1.05rem;">📚</span> <span><strong>Fonte / Ref:</strong> Jukka Majava &amp; Satu Rinkinen (2026); Walshok, M. L. &amp; Shragge, A. (2014). Invention and Reinvention: The Evolution of San Diego's Innovation Economy.</span></div>
 </section>
 <!-- SLIDE 27: LILIAN 4 - ANÁLISE PEST: O RADAR DE SUCESSO (HERO INFOGRAPHIC AMPLIADO) -->
-<section class="slide" data-block="Bloco 5" data-slide="30" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="2 min">
+<section class="slide" data-block="Bloco 5" data-slide="30" data-speaker="Lilian Veiga" data-time="2 min">
 <div class="slide-tag" style="font-size: 1.12rem;">🎯 BLOCO 5 • DIAGNÓSTICO METODOLÓGICO (4/9)</div>
 <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
 <h2 class="slide-title" style="margin: 0; font-size: 2.5rem;">ECOSSISTEMAS DE INOVAÇÃO • <span style="color: var(--amber-accent);">O Caso de San Diego</span></h2>
@@ -2402,7 +2994,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 1.05rem;">📚</span> <span><strong>Fonte / Ref:</strong> Jukka Majava &amp; Satu Rinkinen (2026). Twenty years, twenty studies: what can we learn from San Diego’s innovation ecosystem? (Tech. Analysis &amp; Strat. Mgmt.).</span></div>
 </section>
 <!-- SLIDE 28: LILIAN 5 - SÃO JOSÉ DOS CAMPOS: GÊNESE DE UMA VOCAÇÃO (HERO INFOGRAPHIC AMPLIADO) -->
-<section class="slide" data-block="Bloco 5" data-slide="31" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="2 min">
+<section class="slide" data-block="Bloco 5" data-slide="31" data-speaker="Lilian Veiga" data-time="2 min">
 <div class="slide-tag" style="font-size: 1.12rem;">🇧🇷 BLOCO 5 • SÃO JOSÉ DOS CAMPOS: RAÍZES HISTÓRICAS (5/9)</div>
 <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
 <h2 class="slide-title" style="margin: 0; font-size: 2.5rem;">ECOSSISTEMAS DE INOVAÇÃO • <span style="color: var(--emerald-accent);">O Caso de São José dos Campos</span></h2>
@@ -2415,7 +3007,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 1.05rem;">📚</span> <span><strong>Fonte / Ref:</strong> Rubem, Thiago Chiquetto (2018). Políticas de inovação, parques tecnológicos e a importância do território: o caso do PIT SJC; Silva, Ozires (1998).</span></div>
 </section>
 <!-- SLIDE 29: LILIAN 6 - A EVOLUÇÃO TIPOLÓGICA (HERO INFOGRAPHIC AMPLIADO) -->
-<section class="slide" data-block="Bloco 5" data-slide="32" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="2 min">
+<section class="slide" data-block="Bloco 5" data-slide="32" data-speaker="Lilian Veiga" data-time="2 min">
 <div class="slide-tag" style="font-size: 1.12rem;">🔄 BLOCO 5 • EVOLUÇÃO ESTRUTURAL (6/9)</div>
 <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
 <h2 class="slide-title" style="margin: 0; font-size: 2.5rem;">ECOSSISTEMAS DE INOVAÇÃO • <span style="color: var(--purple-accent);">O Caso de São José dos Campos</span></h2>
@@ -2429,7 +3021,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </section>
 <!-- SLIDE 30: LILIAN 7 - O PIT SJC: GOVERNANÇA E PENTÁGONO (FONTES E IMAGEM AMPLIADAS) -->
 <!-- Slide 30: O PIT SJC & Ecossistema Regional + Entrevista Rubens Costa -->
-<section class="slide" data-block="Bloco 5" data-slide="33" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="2 min">
+<section class="slide" data-block="Bloco 5" data-slide="33" data-speaker="Lilian Veiga" data-time="2 min">
 <div class="slide-tag" style="font-size: 1.12rem;">🏛️ BLOCO 5 • ANATOMIA DO PIT SJC (7/9)</div>
 <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.5rem;">
 <div>
@@ -2448,125 +3040,151 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 1.05rem;">📚</span> <span><strong>Fonte / Ref:</strong> RELATÓRIO ANUAL DE ATIVIDADES PIT 2025; RUBEM, Thiago Chiquetto. Políticas de inovação, parques tecnológicos e a importância do território: o caso do PIT SJC (2018).</span></div>
 </section>
 <!-- SLIDE ADICIONAL: ESTUDO EMPÍRICO HÉLICE PÚBLICA & GESTÃO REGIONAL (RUBENS COSTA) -->
-<section class="slide" data-block="Bloco 5" data-slide="34" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="3 min">
-<div class="slide-tag" style="font-size: 1.12rem;">🏛️ BLOCO 5 • ESTUDO EMPÍRICO &amp; GESTÃO REGIONAL (8/10)</div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.5rem;">
-<div>
-<div style="font-family: var(--font-mono); font-size: 1.05rem; color: var(--emerald-accent); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 800;">ECOSSISTEMAS DE INOVAÇÃO</div>
-<h2 class="slide-title" style="margin: 0; font-size: 2.3rem;">Estudo Empírico: <span>A Hélice Pública &amp; Gestão Regional (Selo TCE-SP)</span></h2>
+<section class="slide" data-block="Bloco 5" data-slide="34" data-speaker="Lilian Veiga" data-time="3 min">
+<div class="slide-tag">🏛️ BLOCO 5 • ESTUDO EMPÍRICO &amp; GESTÃO REGIONAL</div>
+<h2 class="slide-title">Estudo Empírico: <span>A Hélice Pública &amp; Gestão Regional (Selo TCE-SP)</span></h2>
+<div class="punchline-card" style="margin-bottom: 0.65rem;">
+<span style="font-size: 1.4rem;">🏛️</span>
+<div class="punchline-quote">"Comunicação contínua e alinhamento ágil com lideranças municipais: implementação de 8 sistemas integrados e a conquista do selo de excelência em Governança de TI do TCE-SP." — <em>Rubens Costa (Ex-Secretário de TI de Caraguatatuba)</em></div>
 </div>
-<div style="font-size: 0.95rem; font-family: var(--font-mono); color: var(--text-muted); text-align: right; line-height: 1.35;">
-          Maturidade Pública no Vale &amp; Litoral<br/>
-<strong style="color: #fff;">Tribunal de Contas do Estado de SP (i-Gov TI)</strong>
+
+<div class="interview-grid-main">
+  <!-- Coluna Esquerda: Análise Conceitual e Teórica com Fontes Ampliadas -->
+  <div class="interview-concepts-col">
+    <div class="card card-glow-emerald" style="border-left: 4px solid var(--emerald-accent);">
+      <div class="card-title"><span>🏆</span> Selo de Excelência i-Gov TI (TCE-SP)</div>
+      <p style="margin: 0;">
+        Menos de 4,5% dos municípios de São Paulo atingem este patamar. Em toda a Região Metropolitana do Vale do Paraíba e Litoral, apenas São José dos Campos e Caraguatatuba conquistaram o selo de governança digital orientada por dados públicos.
+      </p>
+    </div>
+    <div class="card card-glow-cyan" style="border-left: 4px solid var(--cyan-glow);">
+      <div class="card-title"><span>⚙️</span> Alinhamento Ágil entre Secretarias Municipais</div>
+      <p style="margin: 0;">
+        A tecnologia deixou de ser suporte técnico reativo para se tornar alavanca estratégica: modernização das áreas essenciais como Saúde, Educação (25.000 alunos atendidos) e Direitos da Pessoa com Deficiência.
+      </p>
+    </div>
+    <div class="card card-glow-amber" style="border-left: 4px solid var(--amber-accent);">
+      <div class="card-title"><span>🌐</span> O Ecossistema Regional do Vale &amp; Litoral</div>
+      <p style="margin: 0;">
+        O PIT SJC atua como o polo indutor, mas a eficácia da Hélice Governamental depende da maturidade digital de toda a RMVale, criando um território integrado e atrativo para atração de talentos e investimentos de impacto.
+      </p>
+    </div>
+  </div>
+
+  <!-- Coluna Direita: Player Compacto do Vídeo (Tela Cheia na Apresentação) -->
+  <div class="interview-player-card card-glow-emerald">
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+      <span class="chip-badge" style="background: rgba(16, 185, 129, 0.2); border-color: var(--emerald-accent); color: var(--emerald-accent); font-weight: 700; font-size: 0.8rem;">
+        ▶️ RECORTE GOVERNO • SELO TCE-SP • 1M18S
+      </span>
+    </div>
+    <div class="interview-video-wrapper">
+      <video controls="" id="video-recorte-6" poster="assets/thumb_recorte6.jpg" preload="metadata">
+        <source src="assets/recorte6_governo_caragua_sjc.mp4" type="video/mp4"/>
+        Seu navegador não suporta reprodução de vídeo HTML5.
+      </video>
+    </div>
+    <div class="interview-key-points-box">
+      <div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--emerald-accent); font-weight: 800; margin-bottom: 0.2rem;">💡 FOCO DO DEPOIMENTO:</div>
+      Transformação digital no setor público e a conquista de indicadores auditados pelo TCE-SP. (Use ⛶ para tela cheia).
+    </div>
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-top: 0.35rem; font-size: 0.82rem; color: var(--text-dim);">
+      <span>🎬 Recorte de Campo</span>
+      <span style="color: var(--cyan-light); font-weight: 600;">Lilian Veiga</span>
+    </div>
+  </div>
 </div>
-</div>
-<div style="display: grid; grid-template-columns: 1.25fr 1fr; gap: 1.35rem; flex: 1; min-height: 0; align-items: stretch;">
-<!-- Coluna Esquerda: Player de Vídeo Amplo e Perfil -->
-<div style="display: flex; flex-direction: column; justify-content: space-between; min-height: 0;">
-<div style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 0.45rem;">
-<div style="width: 52px; height: 52px; border-radius: 50%; overflow: hidden; border: 2px solid var(--emerald-accent); flex-shrink: 0; box-shadow: 0 0 12px rgba(16,185,129,0.4);">
-<img alt="Rubens Costa" src="assets/thumb_recorte6.jpg" style="width: 100%; height: 100%; object-fit: cover;"/>
-</div>
-<div>
-<div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #fff;">Rubens Costa</div>
-<div style="font-size: 0.85rem; color: var(--emerald-accent); font-weight: 700;">Ex-Secretário de Tecnologia e Inovação de Caraguatatuba</div>
-</div>
-</div>
-<div style="width: 100%; height: 100%; max-height: 380px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(16, 185, 129, 0.4); box-shadow: 0 10px 30px rgba(0,0,0,0.6); background: #000; display: flex; align-items: center; justify-content: center;">
-<video controls="" id="video-recorte-6" poster="assets/thumb_recorte6.jpg" preload="metadata" style="width: 100%; height: 100%; max-height: 380px; object-fit: contain; display: block; margin: 0 auto;">
-<source src="assets/recorte6_governo_caragua_sjc.mp4" type="video/mp4"/>
-              Seu navegador não suporta reprodução de vídeo HTML5.
-            </video>
-</div>
-<div style="margin-top: 0.5rem; padding: 0.65rem 0.95rem; background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px;">
-<div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--emerald-accent); font-weight: 800; margin-bottom: 0.2rem;">📌 PONTOS ESSENCIAIS DO DEPOIMENTO:</div>
-<div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.4;">
-              Comunicação contínua e alinhamento ágil com lideranças municipais; implementação de 8 sistemas integrados e a conquista do selo de excelência em Governança de TI do TCE-SP.
-            </div>
-</div>
-</div>
-<!-- Coluna Direita: Análise Conceitual e Governança Pública Regional -->
-<div style="display: flex; flex-direction: column; gap: 0.75rem; justify-content: center;">
-<div class="card card-glow-emerald" style="padding: 0.95rem 1.15rem; border-left: 4px solid var(--emerald-accent);">
-<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem;">🏆 Selo de Excelência i-Gov TI (TCE-SP)</div>
-<p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4; margin: 0;">Menos de 4,5% dos municípios de São Paulo atingem este patamar. Em toda a Região Metropolitana do Vale do Paraíba e Serra, apenas São José dos Campos e Caraguatatuba conquistaram o selo de governança digital por dados.</p>
-</div>
-<div class="card card-glow-cyan" style="padding: 0.95rem 1.15rem; border-left: 4px solid var(--cyan-glow);">
-<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem;">⚙️ Alinhamento Ágil entre Secretarias</div>
-<p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4; margin: 0;">A tecnologia deixou de ser suporte técnico reativo para se tornar alavanca estratégica: modernização das áreas essenciais como Saúde, Educação (25.000 alunos) e Sepedi (Pessoa com Deficiência e Idoso).</p>
-</div>
-<div class="card card-glow-amber" style="padding: 0.95rem 1.15rem; border-left: 4px solid var(--amber-accent);">
-<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem;">🌐 O Ecossistema Regional do Vale &amp; Litoral</div>
-<p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4; margin: 0;">O PIT SJC atua como o polo indutor, mas a eficácia da Hélice Governamental depende da maturidade digital de toda a RMVale, criando um território integrado e atrativo para investimentos e talentos.</p>
-</div>
-</div>
-</div>
-<div class="slide-footer-ref">
-<span style="font-size: 1.05rem;">📚</span>
-<span><strong>Fonte / Ref:</strong> Entrevista Empírica PPGPIT com Rubens Costa (Out/2026); Tribunal de Contas do Estado de São Paulo (Índice i-Gov TI); Relatório Anual PIT 2025.</span>
+
+<!-- Faixa Inferior: Identificação Completa do Entrevistado -->
+<div class="interviewee-bottom-strip">
+  <div class="interviewee-left-profile">
+    <img alt="Rubens Costa" class="interviewee-avatar-img" src="assets/thumb_recorte6.jpg"/>
+    <div class="interviewee-meta-text">
+      <div class="interviewee-meta-name">Rubens Costa</div>
+      <div class="interviewee-meta-role">Ex-Secretário de Tecnologia e Inovação de Caraguatatuba • Gestor de Scale-ups</div>
+      <div class="interviewee-meta-sub">Liderança na conquista do índice i-Gov TI (TCE-SP) na RMVale e Litoral</div>
+    </div>
+  </div>
+  <div class="interviewee-field-badge">
+    <span>🎙️</span>
+    <span>Investigação de campo conduzida por Lilian Veiga • PPG-PIT UNIFESP</span>
+  </div>
 </div>
 </section>
 <!-- SLIDE ADICIONAL: ESTUDO EMPÍRICO MODELO INSTITUCIONAL DO PIT (RENATO BOSCHILIA JR.) -->
-<section class="slide" data-block="Bloco 5" data-slide="35" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="3 min">
-<div class="slide-tag" style="font-size: 1.12rem;">🏛️ BLOCO 5 • ANATOMIA DO PIT SJC &amp; MODELO INSTITUCIONAL (9/11)</div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.5rem;">
-<div>
-<div style="font-family: var(--font-mono); font-size: 1.05rem; color: var(--emerald-accent); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 800;">ECOSSISTEMAS DE INOVAÇÃO</div>
-<h2 class="slide-title" style="margin: 0; font-size: 2.3rem;">Estudo Empírico: <span>O Modelo de Gestão do PIT SJC (OS &amp; Contrato de Metas)</span></h2>
+<section class="slide" data-block="Bloco 5" data-slide="35" data-speaker="Lilian Veiga" data-time="3 min">
+<div class="slide-tag">🏛️ BLOCO 5 • ANATOMIA DO PIT SJC &amp; MODELO INSTITUCIONAL</div>
+<h2 class="slide-title">Estudo Empírico: <span>O Modelo de Gestão do PIT SJC (OS &amp; Contrato de Metas)</span></h2>
+<div class="punchline-card" style="margin-bottom: 0.65rem;">
+<span style="font-size: 1.4rem;">🏛️</span>
+<div class="punchline-quote">"A divisão entre patrimônio público (terreno municipal) e gestão privada sem fins lucrativos (Associação OS). Comprovação anual de metas com a Prefeitura: conexões, projetos, eventos e captação de recursos." — <em>Renato Boschilia Jr. (PIT SJC)</em></div>
 </div>
-<div style="font-size: 0.95rem; font-family: var(--font-mono); color: var(--text-muted); text-align: right; line-height: 1.35;">
-          Governança Pública por Desempenho<br/>
-<strong style="color: #fff;">Parque de Inovação Tecnológica de SJC</strong>
+
+<div class="interview-grid-main">
+  <!-- Coluna Esquerda: Análise Conceitual e Teórica com Fontes Ampliadas -->
+  <div class="interview-concepts-col">
+    <div class="card card-glow-emerald" style="border-left: 4px solid var(--emerald-accent);">
+      <div class="card-title"><span>🏛️</span> A Natureza Jurídica de Organização Social (OS)</div>
+      <p style="margin: 0;">
+        A Associação APTSJC é uma entidade privada sem fins lucrativos qualificada pelo poder público. Essa estrutura garante agilidade em compras, contratação ágil sob regime CLT e dinamismo operacional inatingível pela administração pública direta.
+      </p>
+    </div>
+    <div class="card card-glow-cyan" style="border-left: 4px solid var(--cyan-glow);">
+      <div class="card-title"><span>📊</span> Contrato de Gestão Baseado em Metas</div>
+      <p style="margin: 0;">
+        Anualmente o PIT presta contas rigorosas à Prefeitura Municipal de SJC: volume de conexões geradas, eventos de capacitação, projetos contratados e captação de recursos a fundo perdido para empresas e laboratórios da região.
+      </p>
+    </div>
+    <div class="card card-glow-amber" style="border-left: 4px solid var(--amber-accent);">
+      <div class="card-title"><span>📈</span> O "Filme" do Impacto Socioeconômico</div>
+      <p style="margin: 0;">
+        A gestão por indicadores permite acompanhar a evolução histórica do ecossistema: o Parque não mede apenas esforços internos, mas o valor real, a renda qualificada e o desenvolvimento tecnológico que a sociedade recebe do investimento público.
+      </p>
+    </div>
+  </div>
+
+  <!-- Coluna Direita: Player Compacto do Vídeo (Tela Cheia na Apresentação) -->
+  <div class="interview-player-card card-glow-emerald">
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+      <span class="chip-badge" style="background: rgba(16, 185, 129, 0.2); border-color: var(--emerald-accent); color: var(--emerald-accent); font-weight: 700; font-size: 0.8rem;">
+        ▶️ RECORTE PIT SJC • MODELO OS &amp; METAS • 1M25S
+      </span>
+    </div>
+    <div class="interview-video-wrapper">
+      <video controls="" id="video-recorte-7" poster="assets/thumb_recorte7.jpg" preload="metadata">
+        <source src="assets/recorte7_governanca_pit_os.mp4" type="video/mp4"/>
+        Seu navegador não suporta reprodução de vídeo HTML5.
+      </video>
+    </div>
+    <div class="interview-key-points-box">
+      <div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--emerald-accent); font-weight: 800; margin-bottom: 0.2rem;">💡 FOCO DO DEPOIMENTO:</div>
+      Governança orientada a desempenho e autonomia de gestão privada para fins públicos. (Use ⛶ para tela cheia).
+    </div>
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-top: 0.35rem; font-size: 0.82rem; color: var(--text-dim);">
+      <span>🎬 Recorte de Campo</span>
+      <span style="color: var(--cyan-light); font-weight: 600;">Lilian Veiga</span>
+    </div>
+  </div>
 </div>
-</div>
-<div style="display: grid; grid-template-columns: 1.25fr 1fr; gap: 1.35rem; flex: 1; min-height: 0; align-items: stretch;">
-<!-- Coluna Esquerda: Player de Vídeo Amplo e Perfil -->
-<div style="display: flex; flex-direction: column; justify-content: space-between; min-height: 0;">
-<div style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 0.45rem;">
-<div style="width: 52px; height: 52px; border-radius: 50%; overflow: hidden; border: 2px solid var(--emerald-accent); flex-shrink: 0; box-shadow: 0 0 12px rgba(16,185,129,0.4);">
-<img alt="Renato Boschilia Jr." src="assets/thumb_recorte7.jpg" style="width: 100%; height: 100%; object-fit: cover;"/>
-</div>
-<div>
-<div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #fff;">Renato Boschilia Jr.</div>
-<div style="font-size: 0.85rem; color: var(--emerald-accent); font-weight: 700;">Gestão de Projetos e Captação de Recursos | PIT SJC</div>
-</div>
-</div>
-<div style="width: 100%; height: 100%; max-height: 380px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(16, 185, 129, 0.4); box-shadow: 0 10px 30px rgba(0,0,0,0.6); background: #000; display: flex; align-items: center; justify-content: center;">
-<video controls="" id="video-recorte-7" poster="assets/thumb_recorte7.jpg" preload="metadata" style="width: 100%; height: 100%; max-height: 380px; object-fit: contain; display: block; margin: 0 auto;">
-<source src="assets/recorte7_governanca_pit_os.mp4" type="video/mp4"/>
-              Seu navegador não suporta reprodução de vídeo HTML5.
-            </video>
-</div>
-<div style="margin-top: 0.5rem; padding: 0.65rem 0.95rem; background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px;">
-<div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--emerald-accent); font-weight: 800; margin-bottom: 0.2rem;">📌 PONTOS ESSENCIAIS DO DEPOIMENTO:</div>
-<div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.4;">
-              A divisão entre patrimônio público (terreno municipal) e gestão privada sem fins lucrativos (Associação OS). Comprovação anual de metas com a Prefeitura: conexões, projetos, eventos e captação de recursos.
-            </div>
-</div>
-</div>
-<!-- Coluna Direita: Análise Conceitual e Governança Pública -->
-<div style="display: flex; flex-direction: column; gap: 0.75rem; justify-content: center;">
-<div class="card card-glow-emerald" style="padding: 0.95rem 1.15rem; border-left: 4px solid var(--emerald-accent);">
-<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem;">🏛️ A Natureza Jurídica de Organização Social (OS)</div>
-<p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4; margin: 0;">A Associação APTSJC é uma entidade privada sem fins lucrativos qualificada pelo poder público. Essa estrutura garante agilidade em compras, contratação ágil por CLT e dinamismo operacional inatingível pela administração direta.</p>
-</div>
-<div class="card card-glow-cyan" style="padding: 0.95rem 1.15rem; border-left: 4px solid var(--cyan-glow);">
-<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem;">📊 Contrato de Gestão Baseado em Metas</div>
-<p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4; margin: 0;">Anualmente o PIT presta contas rigorosas à Prefeitura Municipal: volume de conexões geradas, eventos de capacitação, projetos contratados e captação de recursos a fundo perdido para empresas da região.</p>
-</div>
-<div class="card card-glow-amber" style="padding: 0.95rem 1.15rem; border-left: 4px solid var(--amber-accent);">
-<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem;">📈 O "Filme" do Impacto Socioeconômico</div>
-<p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.4; margin: 0;">A gestão por indicadores permite acompanhar a evolução histórica do ecossistema: o Parque não mede apenas esforços internos, mas o valor real e desenvolvimento que a sociedade recebe do investimento público.</p>
-</div>
-</div>
-</div>
-<div class="slide-footer-ref">
-<span style="font-size: 1.05rem;">📚</span>
-<span><strong>Fonte / Ref:</strong> Entrevista Empírica PPGPIT com Renato Boschilia Jr. (Out/2026); Marco Legal do Terceiro Setor (Lei das OS); Relatório Anual PIT 2025.</span>
+
+<!-- Faixa Inferior: Identificação Completa do Entrevistado -->
+<div class="interviewee-bottom-strip">
+  <div class="interviewee-left-profile">
+    <img alt="Renato Boschilia Jr." class="interviewee-avatar-img" src="assets/thumb_recorte7.jpg"/>
+    <div class="interviewee-meta-text">
+      <div class="interviewee-meta-name">Renato Boschilia Jr.</div>
+      <div class="interviewee-meta-role">Gestão de Projetos e Captação de Recursos • PIT SJC</div>
+      <div class="interviewee-meta-sub">Parque de Inovação Tecnológica de São José dos Campos (APTSJC)</div>
+    </div>
+  </div>
+  <div class="interviewee-field-badge">
+    <span>🎙️</span>
+    <span>Investigação de campo conduzida por Lilian Veiga • PPG-PIT UNIFESP</span>
+  </div>
 </div>
 </section>
 <!-- SLIDE 31: LILIAN 8 - O PIT SJC: QUEM CONFIOU EM NOSSO TRABALHO (AMPLIADO) -->
-<section class="slide" data-block="Bloco 5" data-slide="36" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="2 min">
+<section class="slide" data-block="Bloco 5" data-slide="36" data-speaker="Lilian Veiga" data-time="2 min">
 <div class="slide-tag" style="font-size: 1.12rem;">🤝 BLOCO 5 • CONEXÕES &amp; MERCADO (8/9)</div>
 <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.5rem;">
 <div>
@@ -2585,7 +3203,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 1.05rem;">📚</span> <span><strong>Fonte / Ref:</strong> Matéria do jornal Gazeta de São Paulo e entrevista com Jeferson Cheriegate, Presidente do PIT SJC (29.05.2026); Relatório Anual PIT 2025.</span></div>
 </section>
 <!-- SLIDE 32: LILIAN 9 - COMPARATIVO SAN DIEGO VS SÃO JOSÉ DOS CAMPOS (TABELA COM FONTES GRANDES) -->
-<section class="slide" data-block="Bloco 5" data-slide="37" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="2.5 min">
+<section class="slide" data-block="Bloco 5" data-slide="37" data-speaker="Lilian Veiga" data-time="2.5 min">
 <div class="slide-tag" style="font-size: 1.12rem;">⚖️ BLOCO 5 • MATRIZ DE BENCHMARKING (9/9)</div>
 <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
 <h2 class="slide-title" style="margin: 0; font-size: 2.6rem;">Comparativo</h2>
@@ -2638,70 +3256,79 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 1.05rem;">📚</span> <span><strong>Fonte / Ref:</strong> Matriz Comparativa Oficial Seminário 5 GETI 2026; Jukka Majava &amp; Satu Rinkinen (2026); Thiago Chiquetto Rubem (2018); APTSJC (2025).</span></div>
 </section>
 <!-- SLIDE ADICIONAL: BENCHMARKING INTERNACIONAL & CASE START-UP CHILE (RUBENS COSTA) -->
-<section class="slide" data-block="Bloco 5" data-slide="38" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="3 min">
-<div class="slide-tag" style="font-size: 1.12rem;">🇨🇱 BLOCO 5 • BENCHMARKING LATINO-AMERICANO: O CASE CHILE (10/10)</div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.5rem;">
-<div>
-<div style="font-family: var(--font-mono); font-size: 1.05rem; color: var(--purple-accent); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 800;">CONTRA PONTO LATINO-AMERICANO</div>
-<h2 class="slide-title" style="margin: 0; font-size: 2.2rem;">Estudo Empírico: <span>O Case Start-Up Chile &amp; Santiago como Hub Global</span></h2>
-</div>
-<div style="font-size: 0.95rem; font-family: var(--font-mono); color: var(--text-muted); text-align: right; line-height: 1.35;">
-          Ecossistema de Santiago &amp; CORFO<br/>
-<strong style="color: #fff;">A Tríplice Hélice Orquestrada por Metas de Mercado</strong>
-</div>
-</div>
-<div class="punchline-card" style="margin-bottom: 0.75rem;">
+<section class="slide" data-block="Bloco 5" data-slide="38" data-speaker="Lilian Veiga" data-time="3 min">
+<div class="slide-tag">🇨🇱 BLOCO 5 • BENCHMARKING LATINO-AMERICANO: O CASE CHILE</div>
+<h2 class="slide-title">Estudo Empírico: <span>O Case Start-Up Chile &amp; Santiago como Hub Global</span></h2>
+<div class="punchline-card" style="margin-bottom: 0.65rem;">
 <span style="font-size: 1.4rem;">🇨🇱</span>
 <div class="punchline-quote">"Santiago concentrou as startups e fundos de VC do país porque uniu agência pública com fomento, universidade com método científico e executivos de mercado com metas de investimento." — <em>Rubens Costa (Ex-Secretário de TI &amp; Executivo de Scale-ups)</em></div>
 </div>
-<div style="display: grid; grid-template-columns: 1.25fr 1fr; gap: 1.35rem; flex: 1; min-height: 0; align-items: stretch;">
-<!-- Coluna Esquerda: Player de Vídeo Amplo e Perfil -->
-<div style="display: flex; flex-direction: column; justify-content: space-between; min-height: 0;">
-<div style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 0.45rem;">
-<div style="width: 52px; height: 52px; border-radius: 50%; overflow: hidden; border: 2px solid var(--purple-accent); flex-shrink: 0; box-shadow: 0 0 12px rgba(139,92,246,0.4);">
-<img alt="Rubens Costa" src="assets/thumb_recorte9_rubens.jpg" style="width: 100%; height: 100%; object-fit: cover;"/>
+
+<div class="interview-grid-main">
+  <!-- Coluna Esquerda: Análise Conceitual e Teórica com Fontes Ampliadas -->
+  <div class="interview-concepts-col">
+    <div class="card card-glow-purple" style="border-left: 4px solid var(--purple-accent);">
+      <div class="card-title"><span>🎯</span> Tríplice Hélice Orquestrada por Metas</div>
+      <p style="margin: 0;">
+        O governo chileno (CORFO) forneceu o fomento e a infraestrutura; a universidade (PUC Chile) converteu o empreendedorismo em metodologia científica replicável; e executivos de Venture Capital lideraram o programa com metas estritas de retorno.
+      </p>
+    </div>
+    <div class="card card-glow-cyan" style="border-left: 4px solid var(--cyan-glow);">
+      <div class="card-title"><span>💻</span> O Foco no Digital vs. Subsídios Fabris</div>
+      <p style="margin: 0;">
+        Diferente de doações de terrenos e isenções para indústrias pesadas tradicionais (que geram passivos e risco de descontinuidade), o Chile apostou no software e na tecnologia digital, escalando soluções globais a partir de Santiago.
+      </p>
+    </div>
+    <div class="card card-glow-emerald" style="border-left: 4px solid var(--emerald-accent);">
+      <div class="card-title"><span>📊</span> Parceria Boa Gera Impacto Mensurável</div>
+      <p style="margin: 0;">
+        Não basta discursar sobre inovação: o modelo gerou expressivo crescimento no ecossistema porque uniu as três pontas para resolver dores reais, economizar recursos públicos e atrair investimentos globais.
+      </p>
+    </div>
+  </div>
+
+  <!-- Coluna Direita: Player Compacto do Vídeo (Tela Cheia na Apresentação) -->
+  <div class="interview-player-card card-glow-purple">
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+      <span class="chip-badge" style="background: rgba(139, 92, 246, 0.2); border-color: var(--purple-accent); color: var(--purple-glow); font-weight: 700; font-size: 0.8rem;">
+        ▶️ RECORTE BENCHMARKING • START-UP CHILE • 1M12S
+      </span>
+    </div>
+    <div class="interview-video-wrapper">
+      <video controls="" id="video-recorte-9" poster="assets/thumb_recorte9_rubens.jpg" preload="metadata">
+        <source src="assets/recorte9_startup_chile_rubens.mp4" type="video/mp4"/>
+        Seu navegador não suporta reprodução de vídeo HTML5.
+      </video>
+    </div>
+    <div class="interview-key-points-box">
+      <div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--purple-accent); font-weight: 800; margin-bottom: 0.2rem;">💡 FOCO DO DEPOIMENTO:</div>
+      Ecossistema digital sem risco fiscal de manufatura tradicional; atração de capital global. (Use ⛶ para tela cheia).
+    </div>
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-top: 0.35rem; font-size: 0.82rem; color: var(--text-dim);">
+      <span>🎬 Recorte de Campo</span>
+      <span style="color: var(--cyan-light); font-weight: 600;">Lilian Veiga</span>
+    </div>
+  </div>
 </div>
-<div>
-<div style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: #fff;">Rubens Costa</div>
-<div style="font-size: 0.85rem; color: var(--purple-accent); font-weight: 700;">Ex-Secretário de TI | Scale-ups &amp; Startups (Buser, G4 Educação)</div>
-</div>
-</div>
-<div style="width: 100%; height: 100%; max-height: 360px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(139, 92, 246, 0.4); box-shadow: 0 10px 30px rgba(0,0,0,0.6); background: #000; display: flex; align-items: center; justify-content: center;">
-<video controls="" id="video-recorte-9" poster="assets/thumb_recorte9_rubens.jpg" preload="metadata" style="width: 100%; height: 100%; max-height: 360px; object-fit: contain; display: block; margin: 0 auto;">
-<source src="assets/recorte9_startup_chile_rubens.mp4" type="video/mp4"/>
-              Seu navegador não suporta reprodução de vídeo HTML5.
-            </video>
-</div>
-<div style="margin-top: 0.45rem; padding: 0.55rem 0.85rem; background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 8px;">
-<div style="font-size: 0.76rem; font-family: var(--font-mono); color: var(--purple-accent); font-weight: 800; margin-bottom: 0.15rem;">📌 PONTOS ESSENCIAIS DO DEPOIMENTO:</div>
-<div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.35;">
-              Como o Chile construiu um ecossistema digital global: a opção pelo digital com menor risco fiscal (evitando passivos como o caso fabril de Taubaté/LG) e a governança com executivos de VC.
-            </div>
-</div>
-</div>
-<!-- Coluna Direita: Análise Conceitual e Lições de Governança -->
-<div style="display: flex; flex-direction: column; gap: 0.65rem; justify-content: center;">
-<div class="card card-glow-purple" style="padding: 0.85rem 1.05rem; border-left: 4px solid var(--purple-accent);">
-<div style="font-family: var(--font-display); font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 0.2rem;">🎯 Tríplice Hélice Orquestrada por Metas</div>
-<p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.35; margin: 0;">O governo (CORFO) forneceu o fomento e infraestrutura; a PUC Chile converteu empreendedorismo em metodologia científica replicável e dados de pesquisa; e executivos de Venture Capital lideraram o programa com metas estritas de retorno.</p>
-</div>
-<div class="card card-glow-cyan" style="padding: 0.85rem 1.05rem; border-left: 4px solid var(--cyan-glow);">
-<div style="font-family: var(--font-display); font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 0.2rem;">💻 O Foco no Digital vs. Subsídios Fabris</div>
-<p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.35; margin: 0;">Diferente de doações de terrenos e isenções para indústrias pesadas tradicionais (que geram passivos e risco de descontinuidade), o Chile apostou no software e na tecnologia digital, escalando soluções globais a partir de Santiago.</p>
-</div>
-<div class="card card-glow-emerald" style="padding: 0.85rem 1.05rem; border-left: 4px solid var(--emerald-accent);">
-<div style="font-family: var(--font-display); font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 0.2rem;">📊 Parceria Boa Gera Impacto Mensurável</div>
-<p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.35; margin: 0;">Não basta discursar sobre inovação: o modelo gerou o maior salto de crescimento no PIB das Américas porque uniu as três pontas para resolver dores reais, economizar recursos públicos e atrair investimentos globais.</p>
-</div>
-</div>
-</div>
-<div class="slide-footer-ref">
-<span style="font-size: 1.05rem;">📚</span>
-<span><strong>Fonte / Ref:</strong> Entrevista Empírica PPGPIT com Rubens Costa (Out/2026); Estudo de Caso CORFO &amp; Start-Up Chile; Etzkowitz &amp; Leydesdorff (2000).</span>
+
+<!-- Faixa Inferior: Identificação Completa do Entrevistado -->
+<div class="interviewee-bottom-strip">
+  <div class="interviewee-left-profile">
+    <img alt="Rubens Costa" class="interviewee-avatar-img" src="assets/thumb_recorte9_rubens.jpg"/>
+    <div class="interviewee-meta-text">
+      <div class="interviewee-meta-name">Rubens Costa</div>
+      <div class="interviewee-meta-role">Ex-Secretário de TI • Executivo de Scale-ups (Buser, G4 Educação)</div>
+      <div class="interviewee-meta-sub">Experiência em ecossistemas de venture capital e escala internacional</div>
+    </div>
+  </div>
+  <div class="interviewee-field-badge">
+    <span>🎙️</span>
+    <span>Investigação de campo conduzida por Lilian Veiga • PPG-PIT UNIFESP</span>
+  </div>
 </div>
 </section>
 
-<section class="slide" data-block="Momento Kahoot 5" data-slide="39" data-speaker="Lilian Veiga (4ª) / Marciele (5ª)" data-time="3 min">
+<section class="slide" data-block="Momento Kahoot 5" data-slide="39" data-speaker="Lilian Veiga" data-time="3 min">
 <div class="slide-tag">🎮 MOMENTO KAHOOT RPG • FASE 5</div>
 <h2 class="slide-title">Desafio da Fase 5: <span>Pavilhão Aeroespacial &amp; San Diego</span></h2>
 <div class="punchline-card">
@@ -2725,18 +3352,18 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
               ⏱️ <strong>Tempo:</strong> 2 minutos • Pontuação regressiva por milissegundo estilo Kahoot.
             </div>
 </div>
-<div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; gap: 0.65rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
-<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.6rem;">
-<span>📱</span> Como Responder no Celular:
-            </div>
-<div style="font-size: 1.12rem; color: #cbd5e1; line-height: 1.5;">
-              1. Abra <strong>jogo.html</strong> no seu smartphone<br/>
-              2. Caminhe até a estação ativa no campus<br/>
-              3. Responda antes do tempo esgotar!
-            </div>
-<div style="font-size: 1.05rem; color: var(--cyan-light); font-weight: 700; margin-top: 0.2rem;">
-              ⚡ Sincronizado ao vivo via Firebase!
-            </div>
+<div class="card" style="padding: 1rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <div style="font-family: var(--font-display); font-size: 0.98rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.4rem;">
+    <span>🗺️</span> Radar do Campus ao Vivo:
+  </div>
+  <span id="slide-radar-count-p5" style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-light);">0 alunos</span>
+</div>
+<canvas class="slide-campus-radar" data-block="5" id="radar-canvas-p5" width="340" height="135" style="width: 100%; height: 135px; border-radius: 8px; background: #070f1e; border: 1px solid rgba(6, 182, 212, 0.25);"></canvas>
+<div style="font-size: 0.78rem; color: #94a3b8; display: flex; justify-content: space-between;">
+  <span>⚡ <strong>Posição em tempo real</strong></span>
+  <span>🟡 = Alunos no campus</span>
+</div>
 </div>
 </div>
 <!-- Leaderboard Table -->
@@ -2772,7 +3399,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Avaliação Formativa Síncrona • Banco de Questões GETI 2026 elaborado por Lilian Veiga Vinhas baseado em Majava &amp; Rinkinen (2026).</span></div>
 </section>
-<section class="slide" data-block="Caso PIT" data-slide="40" data-speaker="Josué Jofre (4ª) / Marciele (5ª)" data-time="3 min">
+<section class="slide" data-block="Caso PIT" data-slide="40" data-speaker="Josué Jofre" data-time="3 min">
 <div class="slide-tag">🎓 O ELO UNIVERSITÁRIO • PPG-PIT UNIFESP</div>
 <h2 class="slide-title">A Integração UNIFESP &amp; PIT: <span>Co-criação na Prática</span></h2>
 <div class="punchline-card">
@@ -2796,7 +3423,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Projeto Pedagógico PPG-PIT (2026) • Programa de Pós-Graduação em Inovação Tecnológica, UNIFESP Campus Parque Tecnológico SJC.</span></div>
 </section>
 <!-- SLIDE ADICIONAL: ESTUDO DE CASO PRÁTICO PROJETO FEHIDRO & ESG (RENATO BOSCHILIA JR.) -->
-<section class="slide" data-block="Bloco 6" data-slide="41" data-speaker="Renato Paschoal (4ª) / Fábio (5ª)" data-time="4 min">
+<section class="slide" data-block="Bloco 6" data-slide="41" data-speaker="Renato Paschoal" data-time="4 min">
 <div class="slide-tag">⚠️ BLOCO 6 • CRÍTICAS, LIMITAÇÕES &amp; DIAGNÓSTICO EMPÍRICO</div>
 <h2 class="slide-title">Pés no Chão: <span>Evitando o "Teatro da Inovação" &amp; 5 Gargalos do Ecossistema</span></h2>
 <div class="punchline-card" style="margin-bottom: 0.75rem;">
@@ -2828,61 +3455,78 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Entrevista Empírica PPGPIT com Rubens Costa (Out/2026); Shen, W. et al. (2025/2026); Alvesson &amp; Spicer (2012) - A Stupidity-Based Theory of Organizations.</span></div>
 </section>
 
-<section class="slide" data-block="Bloco 6" data-slide="42" data-speaker="Renato Paschoal (4ª) / Fábio (5ª)" data-time="4 min">
+<section class="slide" data-block="Bloco 6" data-slide="42" data-speaker="Renato Paschoal" data-time="4 min">
 <div class="slide-tag">🌑 BLOCO 6 • O LADO SOMBRIO DOS ECOSSISTEMAS</div>
 <h2 class="slide-title">As Armadilhas da Rede: <span>Lock-in, Predação e a Barreira Cultural da Gestão</span></h2>
-<div class="punchline-card" style="margin-bottom: 0.85rem;">
+<div class="punchline-card" style="margin-bottom: 0.65rem;">
 <span style="font-size: 1.4rem;">🚨</span>
 <div class="punchline-quote">"O maior desafio não é tecnológico: é convencer a diretoria de uma empresa tradicional a não querer apenas 'comprar pronto' da prateleira." — <em>Rodrigo Saad (Recorte 4)</em></div>
 </div>
-<div style="display: grid; grid-template-columns: 1fr 1.35fr; gap: 1.25rem; flex: 1; min-height: 0; align-items: stretch;">
-<!-- Coluna Esquerda: As Armadilhas Teóricas e Culturais -->
-<div style="display: flex; flex-direction: column; gap: 0.75rem; justify-content: center;">
-<div class="card card-glow-rose" style="padding: 0.85rem 1.1rem; border-radius: 12px;">
-<div class="card-title" style="font-size: 1.05rem; margin-bottom: 0.25rem; color: #f43f5e;"><span>🪤</span> Lock-in Predatório &amp; Assimetria</div>
-<p class="card-desc" style="font-size: 0.86rem; line-height: 1.45; margin: 0; color: var(--text-muted);">
-                Startups e laboratórios acadêmicos que investem recursos em tecnologia hiper-customizada para uma empresa âncora e ficam reféns de preços ditados.
-              </p>
+
+<div class="interview-grid-main">
+  <!-- Coluna Esquerda: Análise Conceitual e Teórica com Fontes Ampliadas -->
+  <div class="interview-concepts-col">
+    <div class="card card-glow-rose" style="border-left: 4px solid #f43f5e;">
+      <div class="card-title" style="color: #f43f5e;"><span>🪤</span> Lock-in Predatório &amp; Assimetria de Poder</div>
+      <p style="margin: 0;">
+        Startups e laboratórios acadêmicos que investem recursos em tecnologia hiper-customizada para uma empresa âncora e ficam reféns de preços ditados unilateralmente, perdendo autonomia mercadológica.
+      </p>
+    </div>
+    <div class="card card-glow-amber" style="border-left: 4px solid var(--amber-accent);">
+      <div class="card-title" style="color: var(--amber-accent);"><span>🎪</span> O "Teatro da Inovação"</div>
+      <p style="margin: 0;">
+        Eventos de networking com discursos de sustentabilidade que geram alto engajamento em redes sociais, mas zero patentes registradas, zero contratos assinados e zero escala industrial real.
+      </p>
+    </div>
+    <div class="card card-glow-purple" style="border-left: 4px solid var(--purple-accent);">
+      <div class="card-title" style="color: var(--purple-glow);"><span>🧱</span> Inércia Cultural da Alta Liderança</div>
+      <p style="margin: 0;">
+        Diretorias corporativas antigas com aversão a risco, condicionadas a importar produtos prontos de prateleira em vez de co-desenvolver soluções com o ecossistema regional de inovação.
+      </p>
+    </div>
+  </div>
+
+  <!-- Coluna Direita: Player Compacto do Vídeo (Tela Cheia na Apresentação) -->
+  <div class="interview-player-card card-glow-purple">
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+      <span class="chip-badge" style="background: rgba(139, 92, 246, 0.2); border-color: var(--purple-accent); color: var(--purple-glow); font-weight: 700; font-size: 0.8rem;">
+        ▶️ RECORTE 4 DE 4 • BARREIRA CULTURAL • 0M57S
+      </span>
+    </div>
+    <div class="interview-video-wrapper">
+      <video controls="" id="video-recorte-4" poster="assets/thumb_recorte4.jpg" preload="metadata">
+        <source src="assets/recorte4_barreira_cultural.mp4?v=2" type="video/mp4"/>
+        Seu navegador não suporta reprodução de vídeo HTML5.
+      </video>
+    </div>
+    <div class="interview-key-points-box">
+      <div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--purple-accent); font-weight: 800; margin-bottom: 0.2rem;">💡 FOCO DO DEPOIMENTO:</div>
+      O desafio cultural da liderança tradicional que resiste ao desenvolvimento compartilhado. (Use ⛶ para tela cheia).
+    </div>
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-top: 0.35rem; font-size: 0.82rem; color: var(--text-dim);">
+      <span>🎬 Recorte de Campo</span>
+      <span style="color: var(--cyan-light); font-weight: 600;">Renato Paschoal</span>
+    </div>
+  </div>
 </div>
-<div class="card card-glow-amber" style="padding: 0.85rem 1.1rem; border-radius: 12px;">
-<div class="card-title" style="font-size: 1.05rem; margin-bottom: 0.25rem; color: var(--amber-accent);"><span>🎪</span> O "Teatro da Inovação"</div>
-<p class="card-desc" style="font-size: 0.86rem; line-height: 1.45; margin: 0; color: var(--text-muted);">
-                Eventos de networking com pizza e discursos de sustentabilidade que geram alto engajamento em redes sociais, mas zero patentes e zero escala industrial.
-              </p>
+
+<!-- Faixa Inferior: Identificação Completa do Entrevistado -->
+<div class="interviewee-bottom-strip">
+  <div class="interviewee-left-profile">
+    <img alt="Rodrigo Saad" class="interviewee-avatar-img" src="assets/thumb_recorte1.jpg"/>
+    <div class="interviewee-meta-text">
+      <div class="interviewee-meta-name">Rodrigo Saad Rodrigues</div>
+      <div class="interviewee-meta-role">Liderança Executiva &amp; P&amp;D Industrial (Tier 1 Automotivo &amp; Aeroespacial)</div>
+      <div class="interviewee-meta-sub">Reflexão sobre barreiras de inovação aberta em grandes corporações</div>
+    </div>
+  </div>
+  <div class="interviewee-field-badge">
+    <span>🎙️</span>
+    <span>Investigação de campo conduzida por Renato Paschoal • PPG-PIT UNIFESP</span>
+  </div>
 </div>
-<div class="card card-glow-purple" style="padding: 0.85rem 1.1rem; border-radius: 12px;">
-<div class="card-title" style="font-size: 1.05rem; margin-bottom: 0.25rem; color: var(--purple-accent);"><span>🧱</span> Inércia Cultural da Alta Liderança</div>
-<p class="card-desc" style="font-size: 0.86rem; line-height: 1.45; margin: 0; color: var(--text-muted);">
-                Diretorias de empresas antigas e conservadoras com aversão a risco, condicionadas a importar produtos prontos em vez de co-desenvolver com o ecossistema.
-              </p>
-</div>
-</div>
-<!-- Coluna Direita: Player do Recorte 4 -->
-<div class="card card-glow-purple" style="padding: 0.85rem; background: rgba(10, 19, 36, 0.95); display: flex; flex-direction: column; align-items: center; justify-content: space-between; border-radius: 14px;">
-<div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; padding: 0 0.25rem;">
-<span class="chip-badge" style="background: rgba(139, 92, 246, 0.2); border-color: var(--purple-accent); color: var(--purple-glow); font-weight: 700;">
-                ▶️ RECORTE 4 DE 4 • A BARREIRA CULTURAL • 0M57S
-              </span>
-</div>
-<div style="width: 100%; height: 100%; max-height: 380px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(139, 92, 246, 0.35); box-shadow: 0 10px 30px rgba(0,0,0,0.6); background: #000; display: flex; align-items: center; justify-content: center;">
-<video controls="" id="video-recorte-4" poster="assets/thumb_recorte4.jpg" preload="metadata" style="width: 100%; height: 100%; max-height: 380px; object-fit: contain; display: block; margin: 0 auto;">
-<source src="assets/recorte4_barreira_cultural.mp4?v=2" type="video/mp4"/>
-                Seu navegador não suporta reprodução de vídeo HTML5.
-              </video>
-</div>
-<div style="margin-top: 0.45rem; width: 100%; padding: 0 0.25rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem;">
-<div style="color: var(--purple-glow); font-weight: 600;">
-                🏢 <strong>"A Barreira Cultural na Gestão Tradicional"</strong>
-</div>
-<div style="color: var(--text-muted); font-size: 0.82rem;">
-                Apresentação: Renato Paschoal (4ª) / Fábio (5ª)
-              </div>
-</div>
-</div>
-</div>
-<div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Thomas, L. &amp; Ritala, P. (2022); Alvesson &amp; Spicer (2012); Entrevista de Campo GETI 2026.</span></div>
 </section>
-<section class="slide" data-block="Momento Kahoot 6" data-slide="43" data-speaker="Renato Paschoal (4ª) / Fábio (5ª)" data-time="3 min">
+<section class="slide" data-block="Momento Kahoot 6" data-slide="43" data-speaker="Renato Paschoal" data-time="3 min">
 <div class="slide-tag">🎮 MOMENTO KAHOOT RPG • FASE 6</div>
 <h2 class="slide-title">Desafio da Fase 6: <span>Living Lab Net-Zero &amp; Fronteiras</span></h2>
 <div class="punchline-card">
@@ -2906,15 +3550,18 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
               ⏱️ <strong>Tempo:</strong> 2 minutos • Pontuação regressiva por milissegundo estilo Kahoot.
             </div>
 </div>
-<div class="card" style="padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; gap: 0.65rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
-<div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.6rem;">
-<span>💬</span> O link do jogo está no chat da aula:
-            </div>
-<div style="font-size: 1.12rem; color: #cbd5e1; line-height: 1.6;">
-<strong>1.</strong> Acesse o link do jogo<br/>
-<strong>2.</strong> Ande até o desafio da <strong>Fase 6</strong><br/>
-<strong>3.</strong> Responda o mais rápido possível!
-            </div>
+<div class="card" style="padding: 1rem; display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05);">
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <div style="font-family: var(--font-display); font-size: 0.98rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.4rem;">
+    <span>🗺️</span> Radar do Campus ao Vivo:
+  </div>
+  <span id="slide-radar-count-p6" style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-light);">0 alunos</span>
+</div>
+<canvas class="slide-campus-radar" data-block="6" id="radar-canvas-p6" width="340" height="135" style="width: 100%; height: 135px; border-radius: 8px; background: #070f1e; border: 1px solid rgba(6, 182, 212, 0.25);"></canvas>
+<div style="font-size: 0.78rem; color: #94a3b8; display: flex; justify-content: space-between;">
+  <span>⚡ <strong>Posição em tempo real</strong></span>
+  <span>🟡 = Alunos no campus</span>
+</div>
 </div>
 </div>
 <!-- Leaderboard Table -->
@@ -2950,7 +3597,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Avaliação Formativa Síncrona • Banco de Questões GETI 2026 baseado em Shen et al. (2025/2026).</span></div>
 </section>
-<section class="slide" data-block="Dinâmica" data-slide="44" data-speaker="Jéssica David (4ª) / Fernando (5ª)" data-time="3 min">
+<section class="slide" data-block="Dinâmica" data-slide="44" data-speaker="Jéssica David" data-time="3 min">
 <div class="slide-tag">🏆 FECHAMENTO DO KAHOOT RPG • TODAS AS FASES</div>
 <h2 class="slide-title">Consolidação das 18 Questões: <span>O Pódio Provisório</span></h2>
 <div class="punchline-card">
@@ -2976,7 +3623,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Avaliação Cienciométrica e Diagnóstico Formativo de Desempenho • Equipe GETI 2026 / PPG-PIT UNIFESP.</span></div>
 </section>
-<section class="slide" data-block="Dinâmica" data-slide="45" data-speaker="Jéssica David (4ª) / Fernando (5ª)" data-time="6 min">
+<section class="slide" data-block="Dinâmica" data-slide="45" data-speaker="Jéssica David" data-time="6 min">
 <div class="slide-tag">📊 ANÁLISE DE DADOS &amp; PÓDIO FINAL</div>
 <h2 class="slide-title">Classificação Geral &amp; <span>Diagnóstico Cienciométrico dos Erros</span></h2>
 <div class="punchline-card">
@@ -3033,7 +3680,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Consolidação dos Dados do Kahoot RPG e Mapeamento de Lacunas Conceituais • PPG-PIT UNIFESP.</span></div>
 </section>
-<section class="slide" data-block="Conclusões" data-slide="46" data-speaker="Renato Paschoal (4ª) / Fernando (5ª)" data-time="3 min">
+<section class="slide" data-block="Conclusões" data-slide="46" data-speaker="Renato Paschoal" data-time="3 min">
 <div class="slide-tag">⚖️ SÍNTESE FINAL • AS 5 LEIS DOS ECOSSISTEMAS</div>
 <h2 class="slide-title">As 5 Leis Fundamentais dos <span>Ecossistemas de Inovação</span></h2>
 <div class="punchline-card">
@@ -3069,7 +3716,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Síntese Integradora: Moore (1993), Adner (2006), Furr &amp; Shipilov (2018), Majava &amp; Rinkinen (2026), Machado et al. (2025).</span></div>
 </section>
-<section class="slide" data-block="Debate" data-slide="47" data-speaker="Grupo Inteiro (4ª e 5ª)" data-time="4 min">
+<section class="slide" data-block="Debate" data-slide="47" data-speaker="Grupo Inteiro (Turma de Quarta)" data-time="4 min">
 <div class="slide-tag">💬 DEBATE ABERTO • CONSIDERAÇÕES DA BANCA</div>
 <h2 class="slide-title">Provocações Estratégicas para o <span>PPG-PIT e PIT SJC</span></h2>
 <div class="punchline-card">
@@ -3106,7 +3753,7 @@ Perguntas sobre a anatomia do ecossistema, o modelo das 5 hélices e os riscos d
 </div>
 <div class="footer-right">
 <div style="font-size: 0.95rem; color: var(--text-dim); font-family: var(--font-mono);">
-        PPG-PIT UNIFESP SJC • Profª Iraci &amp; Prof. Yukio
+        PPG-PIT UNIFESP SJC • Profª. Drª. Iraci Martinez &amp; Prof. Dr. Milton Yukio Tsutsumi
       </div>
 </div>
 <div class="slide-progress-bar" id="slide-progress-bar" style="width: 2.85%;"></div>
@@ -3355,6 +4002,10 @@ Muito obrigado a todos, aos professores e colegas pela atenção!"`
       if (vPlayer && num !== 35 && !vPlayer.paused) {
         vPlayer.pause();
       }
+
+      if (typeof renderAllSlideRadars === 'function') {
+        setTimeout(renderAllSlideRadars, 60);
+      }
     }
 
     function nextSlide() { showSlide(currentSlide + 1); }
@@ -3569,14 +4220,166 @@ Muito obrigado a todos, aos professores e colegas pela atenção!"`
       refreshSlideWidgets();
     }
 
+    const stationsMeta = [
+      { id: 1, block: 1, name: "Bloco Acadêmico UNIFESP", x: 340, y: 360, color: "#38bdf8", icon: "🎓" },
+      { id: 2, block: 2, name: "Praça das Hélices", x: 780, y: 720, color: "#a855f7", icon: "🌀" },
+      { id: 3, block: 3, name: "Centro de Governança PIT", x: 1140, y: 920, color: "#f59e0b", icon: "🏛️" },
+      { id: 4, block: 4, name: "Nexus Hub Startups", x: 1160, y: 520, color: "#06b6d4", icon: "🚀" },
+      { id: 5, block: 5, name: "Pavilhão Aeroespacial", x: 1560, y: 440, color: "#10b981", icon: "✈️" },
+      { id: 6, block: 6, name: "Living Lab Net-Zero", x: 680, y: 1140, color: "#f43f5e", icon: "🌱" }
+    ];
+
+    let livePlayerPositions = {};
+
+    function updateSlideRadarPositions(positions) {
+      if (positions && typeof positions === 'object') {
+        Object.keys(positions).forEach(k => {
+          const p = positions[k];
+          if (p && p.playerName) {
+            livePlayerPositions[p.playerName] = p;
+          }
+        });
+      }
+      renderAllSlideRadars();
+    }
+
+    function renderAllSlideRadars() {
+      const radarCanvases = document.querySelectorAll('.slide-campus-radar');
+      const pList = Object.values(livePlayerPositions).filter(p => p && p.playerName);
+
+      for (let p = 1; p <= 6; p++) {
+        const countEl = document.getElementById('slide-radar-count-p' + p);
+        if (countEl) countEl.textContent = `${pList.length} ${pList.length === 1 ? 'aluno' : 'alunos'}`;
+      }
+
+      radarCanvases.forEach(canvas => {
+        const block = Number(canvas.getAttribute('data-block')) || 1;
+        drawSingleRadar(canvas, block, pList);
+      });
+    }
+
+    function drawSingleRadar(canvas, targetBlock, pList) {
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const w = canvas.width;
+      const h = canvas.height;
+      const scaleX = w / 1920;
+      const scaleY = h / 1380;
+
+      ctx.fillStyle = "#070f1e";
+      ctx.fillRect(0, 0, w, h);
+
+      // Grid
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.035)";
+      ctx.lineWidth = 1;
+      for (let x = 0; x < w; x += 30) {
+        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke();
+      }
+      for (let y = 0; y < h; y += 30) {
+        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke();
+      }
+
+      // Lake
+      ctx.fillStyle = "rgba(2, 132, 199, 0.22)";
+      ctx.beginPath();
+      ctx.ellipse(680 * scaleX, 1180 * scaleY, 60 * scaleX, 30 * scaleY, 0, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Connecting Paths
+      ctx.strokeStyle = "rgba(6, 182, 212, 0.15)";
+      ctx.lineWidth = 1.5;
+      ctx.setLineDash([3, 3]);
+      const center = stationsMeta[1];
+      stationsMeta.forEach(st => {
+        if (st.id !== 2) {
+          ctx.beginPath();
+          ctx.moveTo(center.x * scaleX, center.y * scaleY);
+          ctx.lineTo(st.x * scaleX, st.y * scaleY);
+          ctx.stroke();
+        }
+      });
+      ctx.setLineDash([]);
+
+      // Stations
+      stationsMeta.forEach(st => {
+        const isTarget = st.block === targetBlock;
+        const sx = st.x * scaleX;
+        const sy = st.y * scaleY;
+
+        if (isTarget) {
+          ctx.fillStyle = "rgba(6, 182, 212, 0.3)";
+          ctx.beginPath();
+          ctx.arc(sx, sy, 18, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        ctx.fillStyle = isTarget ? "#38bdf8" : st.color;
+        ctx.beginPath();
+        ctx.arc(sx, sy, isTarget ? 7 : 5, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = isTarget ? "#fff" : "#94a3b8";
+        ctx.font = isTarget ? "bold 9px sans-serif" : "8px sans-serif";
+        ctx.textAlign = "center";
+        ctx.fillText(`${st.icon} F${st.block}`, sx, sy + 13);
+      });
+
+      // Players
+      pList.forEach(p => {
+        const px = (p.x || 400) * scaleX;
+        const py = (p.y || 450) * scaleY;
+
+        ctx.fillStyle = "rgba(251, 191, 36, 0.35)";
+        ctx.beginPath();
+        ctx.arc(px, py, 7, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = "#fbbf24";
+        ctx.beginPath();
+        ctx.arc(px, py, 3.5, 0, Math.PI * 2);
+        ctx.fill();
+
+        const firstName = (p.playerName || '').split(' ')[0];
+        if (firstName) {
+          ctx.font = "bold 8px 'JetBrains Mono', monospace";
+          ctx.textAlign = "center";
+          ctx.fillStyle = "rgba(10, 19, 36, 0.85)";
+          const tw = ctx.measureText(firstName).width;
+          ctx.fillRect(px - tw / 2 - 2, py - 13, tw + 4, 10);
+          ctx.fillStyle = "#67e8f9";
+          ctx.fillText(firstName, px, py - 5);
+        }
+      });
+    }
+
     if (window.SyncService) {
-      window.SyncService.onAnswer(() => updateLiveSlideSync());
+      window.SyncService.onPosition((positions) => updateSlideRadarPositions(positions));
+      window.SyncService.onAnswer((payload) => {
+        updateLiveSlideSync();
+        if (payload && payload.playerName) {
+          const matchedSt = stationsMeta.find(s => s.block === payload.block || (payload.questionId && payload.questionId.startsWith('b' + s.block)));
+          if (matchedSt) {
+            livePlayerPositions[payload.playerName] = {
+              playerName: payload.playerName,
+              turma: payload.turma,
+              x: matchedSt.x + (Math.random() * 40 - 20),
+              y: matchedSt.y + (Math.random() * 40 - 20)
+            };
+            renderAllSlideRadars();
+          }
+        }
+      });
       window.SyncService.onStateUpdate((state) => {
         if (state && state.players) {
           localLeaderboard = Object.values(state.players);
           localLeaderboard.sort((a, b) => b.score - a.score);
         }
         refreshSlideWidgets();
+        renderAllSlideRadars();
+      });
+      window.SyncService.onReset(() => {
+        livePlayerPositions = {};
+        renderAllSlideRadars();
       });
     }
 
@@ -3585,6 +4388,11 @@ Muito obrigado a todos, aos professores e colegas pela atenção!"`
       channel.onmessage = (e) => {
         if (e.data && (e.data.type === 'PLAYER_ANSWER' || e.data.type === 'STATE_UPDATE')) {
           updateLiveSlideSync();
+        } else if (e.data && e.data.type === 'PLAYER_POSITION' && e.data.payload) {
+          updateSlideRadarPositions({ [e.data.payload.playerName]: e.data.payload });
+        } else if (e.data && e.data.type === 'GAME_RESET') {
+          livePlayerPositions = {};
+          renderAllSlideRadars();
         }
       };
     } catch (e) {}

@@ -16,8 +16,15 @@
   const callbacks = {
     onAnswer: [],
     onStateUpdate: [],
-    onReset: []
+    onReset: [],
+    onPosition: []
   };
+
+  const knownPositions = new Map();
+
+  function sanitizeKey(str) {
+    return (str || '').trim().replace(/[.#$\[\]\/]/g, '_');
+  }
 
   // 1. Inicialização do BroadcastChannel Local
   try {
@@ -55,6 +62,19 @@
               try { cb(state); } catch(e) { console.error(e); }
             });
           }
+        });
+
+        // Escuta posições de todos os jogadores no mapa do campus
+        firebaseDb.ref('kahoot_rpg/positions').on('value', (snapshot) => {
+          const positions = snapshot.val() || {};
+          Object.values(positions).forEach(p => {
+            if (p && p.playerName) {
+              knownPositions.set(p.playerName.trim().toLowerCase(), p);
+            }
+          });
+          callbacks.onPosition.forEach(cb => {
+            try { cb(positions); } catch(e) { console.error(e); }
+          });
         });
 
         // Escuta sinal de reset geral do jogo (apenas disparos recentes pós-carregamento)
@@ -100,6 +120,14 @@
     if (!data) return;
     if (data.type === 'PLAYER_ANSWER' && data.payload) {
       triggerAnswer(data.payload);
+    } else if (data.type === 'PLAYER_POSITION' && data.payload) {
+      const p = data.payload;
+      if (p && p.playerName) {
+        knownPositions.set(p.playerName.trim().toLowerCase(), p);
+        callbacks.onPosition.forEach(cb => {
+          try { cb({ [p.playerName]: p }); } catch(e) { console.error(e); }
+        });
+      }
     } else if (data.type === 'STATE_UPDATE' && data.state) {
       localStorage.setItem('kahoot_rpg_state', JSON.stringify(data.state));
       callbacks.onStateUpdate.forEach(cb => {
@@ -107,6 +135,7 @@
       });
     } else if (data.type === 'GAME_RESET') {
       seenAnswerKeys.clear();
+      knownPositions.clear();
       localStorage.removeItem('kahoot_rpg_current_player');
       if (data.state) {
         localStorage.setItem('kahoot_rpg_state', JSON.stringify(data.state));
@@ -116,6 +145,9 @@
       });
       callbacks.onStateUpdate.forEach(cb => {
         try { cb(data.state); } catch(e) { console.error(e); }
+      });
+      callbacks.onPosition.forEach(cb => {
+        try { cb({}); } catch(e) { console.error(e); }
       });
     }
   }
@@ -134,6 +166,11 @@
       return this;
     },
 
+    onPosition: function (cb) {
+      if (typeof cb === 'function') callbacks.onPosition.push(cb);
+      return this;
+    },
+
     onStateUpdate: function (cb) {
       if (typeof cb === 'function') callbacks.onStateUpdate.push(cb);
       return this;
@@ -142,6 +179,63 @@
     onReset: function (cb) {
       if (typeof cb === 'function') callbacks.onReset.push(cb);
       return this;
+    },
+
+    // Verificação de nome duplicado na sala
+    isPlayerNameTaken: function (name, currentName) {
+      const clean = (name || '').trim().toLowerCase();
+      if (!clean) return false;
+      if (currentName && clean === currentName.trim().toLowerCase()) return false;
+
+      // 1. Checa no estado salvo localmente (gameState.players)
+      const state = this.getLocalState();
+      if (state && state.players) {
+        for (const k of Object.keys(state.players)) {
+          if (k.trim().toLowerCase() === clean) return true;
+        }
+      }
+
+      // 2. Checa no mapa de posições conhecidas
+      if (knownPositions.has(clean)) {
+        return true;
+      }
+
+      return false;
+    },
+
+    // Obter todas as posições atuais
+    getPositions: function () {
+      const out = {};
+      knownPositions.forEach((v, k) => { out[v.playerName || k] = v; });
+      return out;
+    },
+
+    // Enviar posição do avatar no mapa (chamado a cada 30 segundos ou em marcos)
+    sendPosition: function (payload) {
+      if (!payload || !payload.playerName) return;
+      const enriched = {
+        ...payload,
+        timestamp: Date.now()
+      };
+      const key = sanitizeKey(payload.playerName);
+      knownPositions.set(payload.playerName.trim().toLowerCase(), enriched);
+
+      // 1. Envio Local
+      if (broadcastChannel) {
+        broadcastChannel.postMessage({
+          type: 'PLAYER_POSITION',
+          payload: enriched
+        });
+      }
+
+      // 2. Envio Nuvem (Firebase)
+      if (isFirebaseActive && firebaseDb) {
+        try {
+          firebaseDb.ref('kahoot_rpg/positions/' + key).set(enriched);
+        } catch (e) {
+          console.error('[SyncService] Erro ao enviar posição para Firebase:', e);
+        }
+      }
     },
 
     // Enviar resposta do aluno
@@ -217,6 +311,7 @@
         Promise.all([
           firebaseDb.ref('kahoot_rpg/state').set(gameState),
           firebaseDb.ref('kahoot_rpg/answers').set(null),
+          firebaseDb.ref('kahoot_rpg/positions').set(null),
           firebaseDb.ref('kahoot_rpg/resetSignal').set(Date.now())
         ]).then(() => {
           console.log('[SyncService] ✅ Hard reset completo no Firebase Realtime Database.');
