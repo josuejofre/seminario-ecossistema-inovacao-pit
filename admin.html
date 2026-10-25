@@ -1304,19 +1304,19 @@
 
     /* Local State */
     let gameState = {
-      unlockedPhases: [1, 2, 3, 4, 5, 6],
+      unlockedPhases: [],
       players: {},
       answers: []
     };
 
     function getSafeUnlockedPhases() {
-      if (!gameState) gameState = { unlockedPhases: [1, 2, 3, 4, 5, 6], players: {}, answers: [] };
+      if (!gameState) gameState = { unlockedPhases: [], players: {}, answers: [] };
       if (Array.isArray(gameState.unlockedPhases)) {
         return gameState.unlockedPhases.map(Number).filter(n => n >= 1 && n <= 6);
       } else if (gameState.unlockedPhases && typeof gameState.unlockedPhases === 'object') {
         return Object.values(gameState.unlockedPhases).map(Number).filter(n => n >= 1 && n <= 6);
       }
-      return [1, 2, 3, 4, 5, 6];
+      return [];
     }
 
     function loadState() {
@@ -1326,7 +1326,7 @@
           const parsed = JSON.parse(saved);
           if (parsed && typeof parsed === 'object') {
             gameState = {
-              unlockedPhases: parsed.unlockedPhases || [1, 2, 3, 4, 5, 6],
+              unlockedPhases: Array.isArray(parsed.unlockedPhases) ? parsed.unlockedPhases : [],
               players: parsed.players || {},
               answers: parsed.answers || []
             };
@@ -1432,7 +1432,7 @@
       });
       window.SyncService.onReset((state) => {
         gameState = {
-          unlockedPhases: [1, 2, 3, 4, 5, 6],
+          unlockedPhases: [],
           players: {},
           answers: []
         };
@@ -1452,7 +1452,7 @@
           scheduleRender();
         } else if (data && data.type === 'GAME_RESET') {
           gameState = {
-            unlockedPhases: [1, 2, 3, 4, 5, 6],
+            unlockedPhases: [],
             players: {},
             answers: []
           };
@@ -1564,12 +1564,12 @@
     }
 
     function resetFullGame() {
-      const msg = "⚠️ ATENÇÃO: Deseja realmente RESETAR E APAGAR TUDO DO BANCO?\n\nEsta ação é definitiva e irá:\n1. Apagar TODOS os jogadores e cadastros (incluindo testes);\n2. Apagar TODAS as respostas e pontuações do Firebase na Nuvem;\n3. Limpar a memória do navegador de todos os alunos;\n4. Forçar os alunos a voltarem para a tela de cadastro inicial;\n5. Liberar todas as 6 fases imediatamente.\n\nDeseja continuar?";
+      const msg = "⚠️ ATENÇÃO: Deseja realmente RESETAR E APAGAR TUDO DO BANCO?\n\nEsta ação é definitiva e irá:\n1. Apagar TODOS os jogadores e cadastros (incluindo testes);\n2. Apagar TODAS as respostas e pontuações do Firebase na Nuvem;\n3. Limpar a memória do navegador de todos os alunos;\n4. Forçar os alunos a voltarem para a tela de cadastro inicial;\n5. Bloquear todas as 6 fases (o apresentador liberará fase por fase no momento certo).\n\nDeseja continuar?";
       
       if (!confirm(msg)) return;
 
       gameState = {
-        unlockedPhases: [1, 2, 3, 4, 5, 6],
+        unlockedPhases: [],
         players: {},
         answers: []
       };
@@ -1580,7 +1580,7 @@
       if (window.SyncService && typeof window.SyncService.hardResetDatabase === 'function') {
         window.SyncService.hardResetDatabase(gameState, (success) => {
           if (success) {
-            alert("✓ BANCO DE DADOS E JOGO RESETADOS COM SUCESSO!\n\nNenhum jogador ou resposta anterior permaneceu no Firebase ou no navegador.");
+            alert("✓ BANCO DE DADOS E JOGO RESETADOS COM SUCESSO!\n\nTodas as fases estão agora BLOQUEADAS e o banco de dados está limpo.");
           } else {
             alert("✓ Reset local efetuado com sucesso!");
           }
@@ -1589,7 +1589,7 @@
       } else {
         if (window.SyncService) window.SyncService.sendReset(gameState);
         if (channel) channel.postMessage({ type: 'GAME_RESET', state: gameState });
-        alert("✓ Jogo resetado com sucesso!");
+        alert("✓ Jogo resetado com sucesso! Todas as fases estão bloqueadas.");
         renderAll();
       }
     }

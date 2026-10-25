@@ -68,11 +68,28 @@
         // Escuta jogadores registrados na nuvem
         firebaseDb.ref('kahoot_rpg/players').on('value', (snapshot) => {
           const players = snapshot.val() || {};
+          let hasNew = false;
           Object.values(players).forEach(p => {
             if (p && p.name) {
               const k = sanitizeKey(p.name);
               knownPlayers.set(k, p);
+              if (!knownPositions.has(k)) {
+                knownPositions.set(k, {
+                  playerName: p.name,
+                  turma: p.turma || 'Quarta',
+                  x: 400,
+                  y: 450,
+                  isMoving: false,
+                  timestamp: p.registeredAt || Date.now()
+                });
+                hasNew = true;
+              }
             }
+          });
+          const allPos = {};
+          knownPositions.forEach((v, k) => { allPos[k] = v; });
+          callbacks.onPosition.forEach(cb => {
+            try { cb(allPos); } catch(e) { console.error(e); }
           });
         });
 
@@ -85,8 +102,10 @@
               knownPositions.set(k, p);
             }
           });
+          const allPos = {};
+          knownPositions.forEach((v, k) => { allPos[k] = v; });
           callbacks.onPosition.forEach(cb => {
-            try { cb(positions); } catch(e) { console.error(e); }
+            try { cb(allPos); } catch(e) { console.error(e); }
           });
         });
 
@@ -261,11 +280,24 @@
         registeredAt: Date.now()
       };
 
+      const initialPos = {
+        playerName: cleanName,
+        turma: turma || 'Quarta',
+        x: 400,
+        y: 450,
+        isMoving: false,
+        timestamp: Date.now()
+      };
+
       knownPlayers.set(key, record);
+      knownPositions.set(key, initialPos);
 
       if (isFirebaseActive && firebaseDb) {
         try {
-          await firebaseDb.ref('kahoot_rpg/players/' + key).set(record);
+          await Promise.all([
+            firebaseDb.ref('kahoot_rpg/players/' + key).set(record),
+            firebaseDb.ref('kahoot_rpg/positions/' + key).set(initialPos)
+          ]);
         } catch (err) {
           console.error('[SyncService] Erro ao gravar registro de jogador no Firebase:', err);
         }
@@ -276,7 +308,15 @@
           type: 'PLAYER_REGISTER',
           payload: record
         });
+        broadcastChannel.postMessage({
+          type: 'PLAYER_POSITION',
+          payload: initialPos
+        });
       }
+
+      callbacks.onPosition.forEach(cb => {
+        try { cb({ [key]: initialPos }); } catch(e) {}
+      });
 
       return { ok: true, player: record };
     },

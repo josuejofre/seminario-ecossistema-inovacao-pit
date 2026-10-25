@@ -4300,28 +4300,42 @@ Muito obrigado a todos, aos professores e colegas pela atenção!"`
     function getActivePlayersList() {
       const merged = new Map();
 
-      // 1. Inclui todos os alunos cadastrados no jogo (gameState / leaderboard)
+      // 1. Posições conhecidas pelo SyncService (incluindo todos os jogadores registrados no Firebase)
+      if (window.SyncService && typeof window.SyncService.getPositions === 'function') {
+        const syncPos = window.SyncService.getPositions();
+        if (syncPos && typeof syncPos === 'object') {
+          Object.values(syncPos).forEach(p => {
+            if (p && p.playerName) {
+              merged.set(p.playerName.trim().toLowerCase(), p);
+            }
+          });
+        }
+      }
+
+      // 2. Inclui todos os alunos cadastrados no jogo (gameState / leaderboard)
       if (Array.isArray(localLeaderboard)) {
         localLeaderboard.forEach((lp, idx) => {
           if (lp && lp.name) {
-            const answeredCount = Object.keys(lp.answeredQuestions || {}).length;
-            const currentBlock = Math.min(6, Math.max(1, Math.floor(answeredCount / 3) + 1));
-            const st = stationsMeta.find(s => s.block === currentBlock) || stationsMeta[0];
             const key = lp.name.trim().toLowerCase();
-            const angle = (idx * 1.35) % (Math.PI * 2);
-            const radius = 28 + (idx % 3) * 16;
-            merged.set(key, {
-              playerName: lp.name,
-              turma: lp.turma || 'Quarta',
-              x: Math.round(st.x + Math.cos(angle) * radius),
-              y: Math.round(st.y + Math.sin(angle) * radius),
-              score: lp.score || 0
-            });
+            if (!merged.has(key)) {
+              const answeredCount = Object.keys(lp.answeredQuestions || {}).length;
+              const currentBlock = Math.min(6, Math.max(1, Math.floor(answeredCount / 3) + 1));
+              const st = stationsMeta.find(s => s.block === currentBlock) || stationsMeta[0];
+              const angle = (idx * 1.35) % (Math.PI * 2);
+              const radius = 28 + (idx % 3) * 16;
+              merged.set(key, {
+                playerName: lp.name,
+                turma: lp.turma || 'Quarta',
+                x: Math.round(st.x + Math.cos(angle) * radius),
+                y: Math.round(st.y + Math.sin(angle) * radius),
+                score: lp.score || 0
+              });
+            }
           }
         });
       }
 
-      // 2. Sobrepõe posições em tempo real emitidas pelo avatar do aluno
+      // 3. Sobrepõe posições em tempo real emitidas pelo avatar do aluno
       Object.values(livePlayerPositions).forEach(p => {
         if (p && p.playerName) {
           const key = p.playerName.trim().toLowerCase();
@@ -4506,6 +4520,15 @@ Muito obrigado a todos, aos professores e colegas pela atenção!"`
           updateSlideRadarPositions({ [e.data.payload.playerName]: e.data.payload });
         } else if (e.data && e.data.type === 'PLAYER_REGISTER' && e.data.payload) {
           updateLiveSlideSync();
+          if (e.data.payload.name) {
+            livePlayerPositions[e.data.payload.name.trim().toLowerCase()] = {
+              playerName: e.data.payload.name,
+              turma: e.data.payload.turma || 'Quarta',
+              x: 400,
+              y: 450,
+              isMoving: false
+            };
+          }
           renderAllSlideRadars();
         } else if (e.data && e.data.type === 'GAME_RESET') {
           livePlayerPositions = {};
