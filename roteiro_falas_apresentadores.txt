@@ -3,7 +3,7 @@ ROTEIRO DE APRESENTAÇÃO E FALAS - SEMINÁRIO 5: ECOSSISTEMAS DE INOVAÇÃO & P
 PROGRAMA DE PÓS-GRADUAÇÃO EM PROPRIEDADE INTELECTUAL E TRANSFERÊNCIA DE TECNOLOGIA (PPGPIT/UNIFESP)
 DISCIPLINA: GESTÃO ESTRATÉGICA DA INOVAÇÃO
 DOCENTES RESPONSÁVEIS: Profa. Dra. Iraci Martinez Pereira & Prof. Dr. Milton Yukio Tsutsumi
-DURAÇÃO TOTAL: 120 MINUTOS | 47 SLIDES | 6 BLOCOS DINÂMICOS COM KAHOOT RPG
+DURAÇÃO TOTAL: 120 MINUTOS | 46 SLIDES | 6 BLOCOS DINÂMICOS COM KAHOOT RPG
 EQUIPE DISCENTE (EM ORDEM ALFABÉTICA):
   1. Jéssica Pascotto David
   2. Josué Jofre
@@ -451,20 +451,6 @@ Vejam a matriz pentagonal do Relatório Anual do PIT projetada na tela em grande
 --------------------------------------------------------------------------------
 
 SLIDE 34 | BLOCO 5 | TEMPO SUGERIDO: 3 min
-Tema: Estudo Empírico: A Hélice Pública & Gestão Regional (Selo TCE-SP)
-Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
-Investigação Empírica de Campo: Conduzida por Lilian Veiga • PPG-PIT UNIFESP
-Entrevistado: Renato Boschilia Jr. (Diretor de Novos Negócios PIT SJC / Mestre UNIFESP)
-RECURSO DE VÍDEO EMPÍRICO: assets/recorte6_governo_caragua_sjc.mp4
-
-FALA SUGERIDA DO APRESENTADOR:
-E para comprovar como a Hélice Governamental atua na prática no nosso território, Rubens Costa compartilha um resultado empírico extraordinário de sua gestão na Secretaria de TI de Caraguatatuba: através de governança por dados e alinhamento ágil contínuo entre secretarias (Saúde, Educação e Sepedi), Caraguá conquistou o selo inédito do TCE-SP de excelência no i-Gov TI — um reconhecimento de maturidade digital que menos de 4,5% dos municípios de SP alcançam e que, em toda a RMVale e Serra, apenas São José dos Campos possuía! Vamos assistir!
-
---------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------
-
-SLIDE 35 | BLOCO 5 | TEMPO SUGERIDO: 3 min
 Tema: Estudo Empírico: O Modelo de Gestão do PIT SJC (OS & Contrato de Metas)
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 Investigação Empírica de Campo: Conduzida por Lilian Veiga • PPG-PIT UNIFESP
@@ -479,7 +465,7 @@ A gestão é regida por um Contrato de Gestão anual com a Prefeitura, balizado 
 
 --------------------------------------------------------------------------------
 
-SLIDE 36 | BLOCO 5 | TEMPO SUGERIDO: 2 min
+SLIDE 35 | BLOCO 5 | TEMPO SUGERIDO: 2 min
 Tema: O PIT SJC
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 
@@ -491,7 +477,7 @@ Olhem para o painel de logos de parceiros corporativos e governamentais que conf
 
 --------------------------------------------------------------------------------
 
-SLIDE 37 | BLOCO 5 | TEMPO SUGERIDO: 2.5 min
+SLIDE 36 | BLOCO 5 | TEMPO SUGERIDO: 2.5 min
 Tema: Comparativo
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 
@@ -502,7 +488,7 @@ Quadro comparativo síntese: San Diego (liderança pela academia e venture capit
 
 --------------------------------------------------------------------------------
 
-SLIDE 38 | BLOCO 5 | TEMPO SUGERIDO: 3 min
+SLIDE 37 | BLOCO 5 | TEMPO SUGERIDO: 3 min
 Tema: Estudo Empírico: O Case Start-Up Chile & Santiago como Hub Global
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 Investigação Empírica de Campo: Conduzida por Lilian Veiga • PPG-PIT UNIFESP
@@ -521,7 +507,7 @@ Rubens analisa como o Chile construiu um dos maiores ecossistemas digitais da Am
 
 --------------------------------------------------------------------------------
 
-SLIDE 39 | MOMENTO KAHOOT 5 | TEMPO SUGERIDO: 3 min
+SLIDE 38 | MOMENTO KAHOOT 5 | TEMPO SUGERIDO: 3 min
 Tema: Desafio da Fase 5: Pavilhão Aeroespacial & San Diego
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 Frase-Chave no Slide: ""Acesse o jogo no smartphone, caminhe até a estação no mapa e responda às 3 perguntas!""
@@ -534,7 +520,7 @@ Perguntas sobre o benchmarking San Diego vs. SJC, matriz pentagonal da APTSJC e 
 
 --------------------------------------------------------------------------------
 
-SLIDE 40 | CASO PIT | TEMPO SUGERIDO: 3 min
+SLIDE 39 | CASO PIT | TEMPO SUGERIDO: 3 min
 Tema: A Integração UNIFESP & PIT: Co-criação na Prática
 Apresentador(a): Renato Paschoal (4ª) / Fábio (5ª)
 Frase-Chave no Slide: ""O PPG-PIT não forma apenas teóricos: forma orquestradores capazes de dialogar com a indústria.""
@@ -546,7 +532,7 @@ Vejam como a UNIFESP e o Parque Tecnológico de São José dos Campos operam a c
 
 --------------------------------------------------------------------------------
 
-SLIDE 41 | BLOCO 6 | TEMPO SUGERIDO: 4 min
+SLIDE 40 | BLOCO 6 | TEMPO SUGERIDO: 4 min
 Tema: Pés no Chão: Evitando o "Teatro da Inovação" & 5 Gargalos do Ecossistema
 Apresentador(a): Renato Paschoal (4ª) / Fábio (5ª)
 Frase-Chave no Slide: ""O Brasil precisa superar o teatro da inovação: faltam orquestradores claros, sobra valorização de diploma sobre saber aplicado, e o risco jurídico ainda é tratado como pós-projeto." — Rubens Costa (Diagnóstico Empírico GETI 2026)"
@@ -563,7 +549,7 @@ Entramos agora no momento de autocrítica mais importante do nosso seminário. A
 
 --------------------------------------------------------------------------------
 
-SLIDE 42 | BLOCO 6 | TEMPO SUGERIDO: 4 min
+SLIDE 41 | BLOCO 6 | TEMPO SUGERIDO: 4 min
 Tema: As Armadilhas da Rede: Lock-in, Predação e a Barreira Cultural da Gestão
 Apresentador(a): Renato Paschoal (4ª) / Fábio (5ª)
 Investigação Empírica de Campo: Conduzida por Renato Paschoal • PPG-PIT UNIFESP
@@ -579,7 +565,7 @@ Rodrigo Saad encerra com uma reflexão profunda sobre o maior obstáculo da inov
 
 --------------------------------------------------------------------------------
 
-SLIDE 43 | MOMENTO KAHOOT 6 | TEMPO SUGERIDO: 3 min
+SLIDE 42 | MOMENTO KAHOOT 6 | TEMPO SUGERIDO: 3 min
 Tema: Desafio da Fase 6: Living Lab Net-Zero & Fronteiras
 Apresentador(a): Renato Paschoal (4ª) / Fábio (5ª)
 Frase-Chave no Slide: ""O link do jogo está no chat: acesse, ande até a Fase 6 e responda o mais rápido possível!""
@@ -592,7 +578,7 @@ Questões sobre PI, NDAs, governança do PIT e barreiras culturais. Definam suas
 
 --------------------------------------------------------------------------------
 
-SLIDE 44 | DINÂMICA | TEMPO SUGERIDO: 3 min
+SLIDE 43 | DINÂMICA | TEMPO SUGERIDO: 3 min
 Tema: Consolidação das 18 Questões: O Pódio Provisório
 Apresentador(a): Jéssica David (4ª) / Fernando (5ª)
 Frase-Chave no Slide: ""18 decisões estratégicas: quem articulou a melhor orquestração de valor no campus?""
@@ -605,7 +591,7 @@ Vejam na tela o pódio provisório dos colegas que lideraram a pontuação ao lo
 
 --------------------------------------------------------------------------------
 
-SLIDE 45 | DINÂMICA | TEMPO SUGERIDO: 6 min
+SLIDE 44 | DINÂMICA | TEMPO SUGERIDO: 6 min
 Tema: Classificação Geral & Diagnóstico Cienciométrico dos Erros
 Apresentador(a): Jéssica David (4ª) / Fernando (5ª)
 Frase-Chave no Slide: ""Errar na simulação é aprendizado; orquestrar na prática exige precisão científica.""
@@ -617,7 +603,7 @@ Diagnóstico cienciométrico dos erros e acertos: examinamos quais conceitos ger
 
 --------------------------------------------------------------------------------
 
-SLIDE 46 | CONCLUSÕES | TEMPO SUGERIDO: 3 min
+SLIDE 45 | CONCLUSÕES | TEMPO SUGERIDO: 3 min
 Tema: As 5 Leis Fundamentais dos Ecossistemas de Inovação
 Apresentador(a): Renato Paschoal (4ª) / Fernando (5ª)
 Frase-Chave no Slide: ""Princípios invariantes validados pela literatura de 1993 a 2026 e pelo case PIT SJC.""
@@ -634,7 +620,7 @@ Sintetizamos as 5 Leis Fundamentais dos Ecossistemas de Inovação:
 
 --------------------------------------------------------------------------------
 
-SLIDE 47 | DEBATE | TEMPO SUGERIDO: 4 min
+SLIDE 46 | DEBATE | TEMPO SUGERIDO: 4 min
 Tema: Provocações Estratégicas para o PPG-PIT e PIT SJC
 Apresentador(a): Grupo Inteiro (4ª e 5ª)
 Frase-Chave no Slide: ""Como nós, como futuros mestres e doutores, aceleraremos a inovação brasileira?""
