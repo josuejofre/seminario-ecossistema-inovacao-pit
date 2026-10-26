@@ -1,9 +1,20 @@
 ================================================================================
 ROTEIRO DE APRESENTAÇÃO E FALAS - SEMINÁRIO 5: ECOSSISTEMAS DE INOVAÇÃO & PIT SJC
 PROGRAMA DE PÓS-GRADUAÇÃO EM PROPRIEDADE INTELECTUAL E TRANSFERÊNCIA DE TECNOLOGIA (PPGPIT/UNIFESP)
-DISCIPLINA: GESTÃO ESTRATÉGICA DA INOVAÇÃO | PROFESSORES: IRACI E YUKIO
-DURAÇÃO TOTAL: 120 MINUTOS | 48 SLIDES | 6 BLOCOS DINÂMICOS COM KAHOOT RPG
-ESTUDOS DE CAMPO: RODRIGO SAAD (INDÚSTRIA), RUBENS COSTA (GOVERNO) & RENATO BOSCHILIA JR. (PIT SJC)
+DISCIPLINA: GESTÃO ESTRATÉGICA DA INOVAÇÃO
+DOCENTES RESPONSÁVEIS: Profa. Dra. Iraci Martinez Pereira & Prof. Dr. Milton Yukio Tsutsumi
+DURAÇÃO TOTAL: 120 MINUTOS | 47 SLIDES | 6 BLOCOS DINÂMICOS COM KAHOOT RPG
+EQUIPE DISCENTE (EM ORDEM ALFABÉTICA):
+  1. Jéssica Pascotto David
+  2. Josué Jofre
+  3. Lilian Veiga Vinhas
+  4. Nathália Neves
+  5. Renato Paschoal
+  6. Veridiany Braga
+ESTUDOS EMPÍRICOS DE CAMPO (ENTREVISTAS CONDUZIDAS PELO GRUPO):
+  • Rodrigo Saad Rodrigues (P&D Industrial Tier 1) — Entrevistas conduzidas por Nathália Neves & Renato Paschoal
+  • Rubens Costa (Gestão Pública & Scale-ups) — Entrevistas conduzidas por Jéssica David & Lilian Veiga
+  • Renato Boschilia Jr. (Diretor Novos Negócios PIT SJC) — Entrevistas conduzidas por Veridiany Braga & Lilian Veiga
 ================================================================================
 
 SLIDE 01 | ABERTURA | TEMPO SUGERIDO: 2 min
@@ -33,6 +44,8 @@ Nossa apresentação está estruturada em 120 minutos, dividida em 6 blocos fund
 SLIDE 03 | CONTEXTO PIT | TEMPO SUGERIDO: 4 min
 Tema: São José dos Campos & PIT: Por que a Indústria Precisa da Academia?
 Apresentador(a): Nathalia Neves (4ª) / Fernando (5ª)
+Investigação Empírica de Campo: Conduzida por Nathália Neves • PPG-PIT UNIFESP
+Entrevistado: Rodrigo Saad Rodrigues (Liderança P&D Industrial • Tier 1 Automotivo/Aeroespacial)
 Frase-Chave no Slide: ""A gente precisa da universidade porque não temos professores nem tempo de treinar o pesquisador do zero. O pesquisador traz a fundamentação profunda que vira produto e patente." — Rodrigo Saad (Liderança P&D Industrial)"
 RECURSO DE VÍDEO EMPÍRICO: assets/recorte3_industria_academia.mp4?v=2
 
@@ -132,6 +145,8 @@ Vejam na tela a anatomia completa das 5 hélices:
 SLIDE 10 | BLOCO 2 | TEMPO SUGERIDO: 3 min
 Tema: Estudo Empírico: A Quádrupla Hélice na Prática & Conexão Academia-Mercado
 Apresentador(a): Veridiany Braga (4ª) / Fábio (5ª)
+Investigação Empírica de Campo: Conduzida por Veridiany Braga • PPG-PIT UNIFESP
+Entrevistado: Renato Boschilia Jr. (Diretor de Novos Negócios PIT SJC / Mestre UNIFESP)
 Frase-Chave no Slide: ""O Parque Tecnológico existe para fazer a quádrupla hélice girar: o mais difícil é mostrar ao acadêmico a linguagem do mercado e mostrar ao empresário que a universidade tem método e rigor científico indispensáveis para viabilizar inovações reais." — Renato Boschilia Jr. (Diretor de Novos Negócios PIT SJC / Mestre UNIFESP)"
 RECURSO DE VÍDEO EMPÍRICO: assets/recorte5_quadrupla_helice_renato.mp4
 
@@ -197,6 +212,8 @@ Analisamos a evolução teórica seminal: o modelo clássico de Dhanaraj e Parkh
 SLIDE 15 | BLOCO 3 | TEMPO SUGERIDO: 2 min
 Tema: Estudo Empírico: Liderança Relacional & O "Pedaço de Pizza"
 Apresentador(a): Jéssica David (4ª) / Joel (5ª)
+Investigação Empírica de Campo: Conduzida por Jéssica David • PPG-PIT UNIFESP
+Entrevistado: Rubens Costa (Diretor de Inovação & Scale-ups / Ex-Secretário de TI)
 Frase-Chave no Slide: ""O orquestrador não tem cadeia de controle sobre ninguém, mas dialoga com governo, universidade e mercado para garantir que cada um saia com o maior pedaço da pizza e o projeto gere resultado real." — Rubens Costa (Diretor de Inovação & Scale-ups)"
 RECURSO DE VÍDEO EMPÍRICO: assets/recorte10_orquestrador_pizza_rubens.mp4
 
@@ -295,6 +312,8 @@ Como construir ecossistemas na prática? Nathan Furr e Shipilov (MIT Sloan) ensi
 SLIDE 23 | BLOCO 4 | TEMPO SUGERIDO: 4 min
 Tema: O Nexus como Catalisador: Acelerando Deep Techs e Filtrando Oportunistas
 Apresentador(a): Josué Jofre (4ª) / Joel (5ª)
+Investigação Empírica de Campo: Conduzida por Nathália Neves • PPG-PIT UNIFESP
+Entrevistado: Rodrigo Saad Rodrigues (Liderança P&D Industrial • Tier 1 Automotivo/Aeroespacial)
 Frase-Chave no Slide: ""O ecossistema precisa de curadoria séria. Evitamos os 'ride-alones' e temos doutores na empresa para fazer a ponte técnica real." — Rodrigo Saad (Recorte 2)"
 RECURSO DE VÍDEO EMPÍRICO: assets/recorte2_oportunismo_curadoria.mp4?v=2
 
@@ -322,6 +341,8 @@ A liderança sem autoridade hierárquica exige que o orquestrador domine a neutr
 SLIDE 25 | BLOCO 4 | TEMPO SUGERIDO: 3 min
 Tema: Estudo Empírico: Tipos de Contratos, Governança & NDA no "Dia Zero"
 Apresentador(a): Josué Jofre (4ª) / Joel (5ª)
+Investigação Empírica de Campo: Conduzida por Nathália Neves • PPG-PIT UNIFESP
+Entrevistado: Rodrigo Saad Rodrigues (Liderança P&D Industrial • Tier 1 Automotivo/Aeroespacial)
 Frase-Chave no Slide: ""Qual documentação formaliza a parceria: contrato aberto flexível, contrato rígido com cláusulas restritas ou acordo informal?" — Pergunta: Nathália Neves • Resposta: Rodrigo Saad (Liderança Executiva de P&D Industrial)"
 RECURSO DE VÍDEO EMPÍRICO: assets/recorte1_pi_nda.mp4?v=2
 
@@ -432,6 +453,8 @@ Vejam a matriz pentagonal do Relatório Anual do PIT projetada na tela em grande
 SLIDE 34 | BLOCO 5 | TEMPO SUGERIDO: 3 min
 Tema: Estudo Empírico: A Hélice Pública & Gestão Regional (Selo TCE-SP)
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
+Investigação Empírica de Campo: Conduzida por Lilian Veiga • PPG-PIT UNIFESP
+Entrevistado: Renato Boschilia Jr. (Diretor de Novos Negócios PIT SJC / Mestre UNIFESP)
 RECURSO DE VÍDEO EMPÍRICO: assets/recorte6_governo_caragua_sjc.mp4
 
 FALA SUGERIDA DO APRESENTADOR:
@@ -444,6 +467,8 @@ E para comprovar como a Hélice Governamental atua na prática no nosso territó
 SLIDE 35 | BLOCO 5 | TEMPO SUGERIDO: 3 min
 Tema: Estudo Empírico: O Modelo de Gestão do PIT SJC (OS & Contrato de Metas)
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
+Investigação Empírica de Campo: Conduzida por Lilian Veiga • PPG-PIT UNIFESP
+Entrevistado: Renato Boschilia Jr. (Diretor de Novos Negócios PIT SJC / Mestre UNIFESP)
 RECURSO DE VÍDEO EMPÍRICO: assets/recorte7_governanca_pit_os.mp4
 
 FALA SUGERIDA DO APRESENTADOR:
@@ -480,6 +505,8 @@ Quadro comparativo síntese: San Diego (liderança pela academia e venture capit
 SLIDE 38 | BLOCO 5 | TEMPO SUGERIDO: 3 min
 Tema: Estudo Empírico: O Case Start-Up Chile & Santiago como Hub Global
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
+Investigação Empírica de Campo: Conduzida por Lilian Veiga • PPG-PIT UNIFESP
+Entrevistado: Rubens Costa (Diretor de Inovação & Scale-ups / Ex-Secretário de TI)
 Frase-Chave no Slide: ""Santiago concentrou as startups e fundos de VC do país porque uniu agência pública com fomento, universidade com método científico e executivos de mercado com metas de investimento." — Rubens Costa (Ex-Secretário de TI & Executivo de Scale-ups)"
 RECURSO DE VÍDEO EMPÍRICO: assets/recorte9_startup_chile_rubens.mp4
 
@@ -539,6 +566,8 @@ Entramos agora no momento de autocrítica mais importante do nosso seminário. A
 SLIDE 42 | BLOCO 6 | TEMPO SUGERIDO: 4 min
 Tema: As Armadilhas da Rede: Lock-in, Predação e a Barreira Cultural da Gestão
 Apresentador(a): Renato Paschoal (4ª) / Fábio (5ª)
+Investigação Empírica de Campo: Conduzida por Renato Paschoal • PPG-PIT UNIFESP
+Entrevistado: Rodrigo Saad Rodrigues (Liderança P&D Industrial • Tier 1 Automotivo/Aeroespacial)
 Frase-Chave no Slide: ""O maior desafio não é tecnológico: é convencer a diretoria de uma empresa tradicional a não querer apenas 'comprar pronto' da prateleira." — Rodrigo Saad (Recorte 4)"
 RECURSO DE VÍDEO EMPÍRICO: assets/recorte4_barreira_cultural.mp4?v=2
 
