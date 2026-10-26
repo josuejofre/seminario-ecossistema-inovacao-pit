@@ -209,7 +209,7 @@
       border-color: var(--cyan-glow);
     }
 
-    /* Main Deck Stage */
+    /* Main Deck Stage - Full Widescreen */
     .deck-viewport {
       flex: 1;
       position: relative;
@@ -217,23 +217,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 1.25rem 2.5rem;
-    }
-
-    .slide {
-      position: absolute;
-      inset: 1.25rem 2.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      gap: 0.85rem;
-      opacity: 0;
-      transform: scale(0.98) translateY(12px);
-      pointer-events: none;
-      transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      overflow-y: auto;
-      max-width: 1400px;
-      margin: 0 auto;
+      padding: 0.65rem 1.25rem;
     }
 
     .slide.active {
@@ -289,22 +273,25 @@
       font-style: italic;
     }
 
-    /* Dynamic Full-Height Layout Grids */
+    /* Dynamic Full-Height Layout Grids - Full Widescreen */
     .slide {
       position: absolute;
-      inset: 1.25rem 2.5rem;
+      inset: 0.65rem 1.25rem;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      gap: 1.15rem;
+      gap: 1rem;
       opacity: 0;
       transform: scale(0.98) translateY(12px);
       pointer-events: none;
       transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       overflow-y: auto;
-      max-width: 1440px;
+      overflow-x: hidden;
+      max-width: 1840px;
+      width: calc(100% - 2.5rem);
       margin: 0 auto;
-      height: calc(100% - 2.5rem);
+      height: calc(100% - 1.3rem);
+      box-sizing: border-box;
     }
 
     .slide-title {
@@ -486,17 +473,17 @@
 
     .card-title {
       font-family: var(--font-display);
-      font-size: 1.38rem;
+      font-size: 1.45rem;
       font-weight: 800;
       color: #fff;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.65rem;
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.65rem;
     }
 
     .card-desc {
-      font-size: 1.15rem;
+      font-size: 1.20rem;
       color: #cbd5e1;
       line-height: 1.55;
     }
@@ -510,7 +497,7 @@
     }
 
     .bullet-list li {
-      font-size: 1.12rem;
+      font-size: 1.16rem;
       color: #cbd5e1;
       line-height: 1.5;
       display: flex;
@@ -881,12 +868,12 @@
 
     .academic-main-title {
       font-family: var(--font-display);
-      font-size: 2.35rem;
+      font-size: 2.75rem;
       font-weight: 900;
       line-height: 1.15;
       letter-spacing: -0.02em;
       color: #fff;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.4rem;
     }
 
     .academic-main-title span {
@@ -897,22 +884,22 @@
 
     .academic-sub-title {
       font-family: var(--font-body);
-      font-size: 1.15rem;
+      font-size: 1.25rem;
       font-weight: 600;
       color: #e2e8f0;
       line-height: 1.35;
-      margin-bottom: 0.45rem;
+      margin-bottom: 0.5rem;
     }
 
     .academic-epigraph {
       font-style: italic;
-      font-size: 0.98rem;
+      font-size: 1.10rem;
       color: var(--text-muted);
       border-top: 1px solid var(--border-soft);
-      padding-top: 0.5rem;
-      margin-top: 0.2rem;
+      padding-top: 0.55rem;
+      margin-top: 0.25rem;
       display: block;
-      line-height: 1.42;
+      line-height: 1.45;
     }
 
     .academic-epigraph::before {
@@ -1009,7 +996,7 @@
     }
 
     .discente-name {
-      font-size: 1.05rem;
+      font-size: 1.12rem;
       font-weight: 600;
       color: #f1f5f9;
     }
@@ -1039,7 +1026,7 @@
     }
 
     .docente-full-name {
-      font-size: 1.05rem;
+      font-size: 1.12rem;
       font-weight: 700;
       color: #fff;
     }
@@ -1062,8 +1049,8 @@
        ========================================================================== */
     .interview-grid-main {
       display: grid;
-      grid-template-columns: 1fr 340px;
-      gap: 1.35rem;
+      grid-template-columns: 1fr 380px;
+      gap: 1.6rem;
       flex: 1;
       min-height: 0;
       align-items: stretch;
@@ -3481,25 +3468,25 @@ Atores independentes colaboram para criar um novo mercado e competem dentro dele
 </div>
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.15rem; flex: 1; min-height: 0;">
 <div class="card card-glow-rose" style="padding: 1.25rem 1.45rem; display: flex; flex-direction: column; justify-content: center;">
-<div class="card-title" style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.45rem; color: #f43f5e; line-height: 1.3;"><span>1️⃣</span> Falta de um Orquestrador Claro</div>
-<p class="card-desc" style="font-size: 1.08rem; line-height: 1.5; color: #cbd5e1; margin: 0;">Desalinhamento crônico entre as hélices: o governo opera com lentidão burocrática, a universidade foca em publicações e o mercado exige retorno imediato. Sem um orquestrador neutro com autoridade relacional, as pontes não se sustentam.</p>
+<div class="card-title" style="font-size: 1.30rem; font-weight: 800; margin-bottom: 0.45rem; color: #f43f5e; line-height: 1.3;"><span>1️⃣</span> Falta de um Orquestrador Claro</div>
+<p class="card-desc" style="font-size: 1.15rem; line-height: 1.52; color: #cbd5e1; margin: 0;">Desalinhamento crônico entre as hélices: o governo opera com lentidão burocrática, a universidade foca em publicações e o mercado exige retorno imediato. Sem um orquestrador neutro com autoridade relacional, as pontes não se sustentam.</p>
 </div>
 <div class="card card-glow-amber" style="padding: 1.25rem 1.45rem; display: flex; flex-direction: column; justify-content: center;">
-<div class="card-title" style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.45rem; color: var(--amber-accent); line-height: 1.3;"><span>2️⃣</span> Cultura do Diploma vs. Saber Aplicado</div>
-<p class="card-desc" style="font-size: 1.08rem; line-height: 1.5; color: #cbd5e1; margin: 0;">O "Teatro da Inovação" nacional supervaloriza títulos e certificados acadêmicos em detrimento da educação prática e da capacidade de resolver dores industriais reais com código, engenharia e patentes comerciais.</p>
+<div class="card-title" style="font-size: 1.30rem; font-weight: 800; margin-bottom: 0.45rem; color: var(--amber-accent); line-height: 1.3;"><span>2️⃣</span> Cultura do Diploma vs. Saber Aplicado</div>
+<p class="card-desc" style="font-size: 1.15rem; line-height: 1.52; color: #cbd5e1; margin: 0;">O "Teatro da Inovação" nacional supervaloriza títulos e certificados acadêmicos em detrimento da educação prática e da capacidade de resolver dores industriais reais com código, engenharia e patentes comerciais.</p>
 </div>
 <div class="card card-glow-purple" style="padding: 1.25rem 1.45rem; display: flex; flex-direction: column; justify-content: center;">
-<div class="card-title" style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.45rem; color: var(--purple-accent); line-height: 1.3;"><span>3️⃣</span> Risco Jurídico como Pós-Projeto</div>
-<p class="card-desc" style="font-size: 1.08rem; line-height: 1.5; color: #cbd5e1; margin: 0;">No Brasil, a segurança regulatória e a conformidade fiscal são tratadas como apêndice ao final do projeto. Se a blindagem jurídica não fizer parte do design no Dia +1 da iniciativa pública, o projeto trava nos órgãos de controle.</p>
+<div class="card-title" style="font-size: 1.30rem; font-weight: 800; margin-bottom: 0.45rem; color: var(--purple-accent); line-height: 1.3;"><span>3️⃣</span> Risco Jurídico como Pós-Projeto</div>
+<p class="card-desc" style="font-size: 1.15rem; line-height: 1.52; color: #cbd5e1; margin: 0;">No Brasil, a segurança regulatória e a conformidade fiscal são tratadas como apêndice ao final do projeto. Se a blindagem jurídica não fizer parte do design no Dia +1 da iniciativa pública, o projeto trava nos órgãos de controle.</p>
 </div>
 <div class="card card-glow-cyan" style="padding: 1.25rem 1.45rem; display: flex; flex-direction: column; justify-content: center;">
-<div class="card-title" style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.45rem; color: var(--cyan-light); line-height: 1.3;"><span>4️⃣</span> Fuga de Capital Intelectual &amp; P&amp;D Não-Exportável</div>
-<p class="card-desc" style="font-size: 1.08rem; line-height: 1.5; color: #cbd5e1; margin: 0;">Formamos pesquisadores de ponta em universidades públicas, mas o ecossistema falha em reter os cérebros ou em converter seu conhecimento em produtos globais de alto valor agregado exportáveis.</p>
+<div class="card-title" style="font-size: 1.30rem; font-weight: 800; margin-bottom: 0.45rem; color: var(--cyan-light); line-height: 1.3;"><span>4️⃣</span> Fuga de Capital Intelectual &amp; P&amp;D Não-Exportável</div>
+<p class="card-desc" style="font-size: 1.15rem; line-height: 1.52; color: #cbd5e1; margin: 0;">Formamos pesquisadores de ponta em universidades públicas, mas o ecossistema falha em reter os cérebros ou em converter seu conhecimento em produtos globais de alto valor agregado exportáveis.</p>
 </div>
 </div>
 <div class="card card-glow-emerald" style="margin-top: 0.85rem; padding: 0.95rem 1.45rem; border-left: 4px solid var(--emerald-accent);">
-<div style="font-size: 1.18rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem; display: flex; align-items: center; gap: 0.5rem;"><span>💡</span> A Falha nas Compras Públicas: O Exemplo dos ERPs Municipais</div>
-<p style="font-size: 1.05rem; color: #cbd5e1; line-height: 1.48; margin: 0;">Prefeituras gastam milhões anuais em softwares proprietários ineficientes enquanto a universidade local desenvolve código aberto de alta qualidade. Sem orquestração e mecanismos de encomenda tecnológica (Marco Legal das Startups), as duas pontas continuam isoladas.</p>
+<div style="font-size: 1.25rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem; display: flex; align-items: center; gap: 0.5rem;"><span>💡</span> A Falha nas Compras Públicas: O Exemplo dos ERPs Municipais</div>
+<p style="font-size: 1.12rem; color: #cbd5e1; line-height: 1.5; margin: 0;">Prefeituras gastam milhões anuais em softwares proprietários ineficientes enquanto a universidade local desenvolve código aberto de alta qualidade. Sem orquestração e mecanismos de encomenda tecnológica (Marco Legal das Startups), as duas pontas continuam isoladas.</p>
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Entrevista Empírica PPGPIT com Rubens Costa (Out/2026); Shen, W. et al. (2025/2026); Alvesson &amp; Spicer (2012) - A Stupidity-Based Theory of Organizations.</span></div>
 </section>
