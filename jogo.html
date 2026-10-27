@@ -1717,7 +1717,21 @@
     function openKahootChallenge(station) {
       activeStation = station;
       activeQuestions = rawQuestions.filter(q => q.block === station.block);
-      currentQIdx = 0;
+
+      // Anti-Cheat no F5: Verifica perguntas já respondidas nesta estação
+      const answeredInStation = activeQuestions.filter(q => player.answeredQuestions && player.answeredQuestions[q.id]);
+      if (answeredInStation.length >= activeQuestions.length) {
+        if (!player.completedStations.includes(station.id)) {
+          player.completedStations.push(station.id);
+          savePlayerState();
+        }
+        alert(`✓ Você já concluiu e enviou todas as perguntas da ${station.phaseLabel}! Tentativa de resposta duplicada ignorada.`);
+        return;
+      }
+
+      // Inicia na PRIMEIRA pergunta ainda NÃO respondida (impossibilita refazer perguntas após F5)
+      const firstUnansweredIdx = activeQuestions.findIndex(q => !player.answeredQuestions || !player.answeredQuestions[q.id]);
+      currentQIdx = (firstUnansweredIdx !== -1) ? firstUnansweredIdx : 0;
 
       // Envia posição imediata para o telão/radar saber que o aluno chegou na estação
       if (window.SyncService && typeof window.SyncService.sendPosition === 'function' && player && player.name) {
@@ -1751,9 +1765,17 @@
         return;
       }
 
-      document.getElementById('feedback-overlay').style.display = 'none';
-
       const q = activeQuestions[currentQIdx];
+
+      // Anti-Cheat Guard: Se a pergunta atual já foi respondida nesta sessão ou salva, avança imediatamente
+      if (player.answeredQuestions && player.answeredQuestions[q.id]) {
+        console.warn(`[Anti-Cheat] Pergunta ${q.id} já possui resposta registrada para ${player.name}. Avançando...`);
+        currentQIdx++;
+        loadCurrentQuestion();
+        return;
+      }
+
+      document.getElementById('feedback-overlay').style.display = 'none';
       document.getElementById('ch-badge').textContent = `${activeStation.name} • Pergunta ${currentQIdx + 1} de ${activeQuestions.length}`;
       document.getElementById('ch-prompt').textContent = q.question;
 
@@ -1812,6 +1834,11 @@
     }
 
     function selectAnswer(chosenOpt, q) {
+      // Anti-Cheat: bloqueio absoluto contra re-resposta
+      if (player.answeredQuestions && player.answeredQuestions[q.id]) {
+        alert("⚠️ Você já respondeu a esta pergunta! Cada participante só pode registrar uma resposta por questão.");
+        return;
+      }
       clearInterval(qTimerInterval);
       const elapsedMs = Date.now() - qStartTime;
 

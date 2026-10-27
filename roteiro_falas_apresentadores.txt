@@ -2,8 +2,8 @@
 ROTEIRO DE APRESENTAÇÃO E FALAS - SEMINÁRIO 5: ECOSSISTEMAS DE INOVAÇÃO & PIT SJC
 PROGRAMA DE PÓS-GRADUAÇÃO EM PROPRIEDADE INTELECTUAL E TRANSFERÊNCIA DE TECNOLOGIA (PPGPIT/UNIFESP)
 DISCIPLINA: GESTÃO ESTRATÉGICA DA INOVAÇÃO
-DOCENTES RESPONSÁVEIS: Profa. Dra. Iraci Martinez Pereira & Prof. Dr. Milton Yukio Tsutsumi
-DURAÇÃO TOTAL: 120 MINUTOS | 46 SLIDES | 6 BLOCOS DINÂMICOS COM KAHOOT RPG
+DOCENTE RESPONSÁVEL: Prof. Dr. Antonio Yukio Ueta
+DURAÇÃO TOTAL: 120 MINUTOS | 45 SLIDES | 6 BLOCOS DINÂMICOS COM KAHOOT RPG
 EQUIPE DISCENTE (EM ORDEM ALFABÉTICA):
   1. Jéssica Pascotto David
   2. Josué Jofre
@@ -23,7 +23,7 @@ Apresentador(a): Josué Jofre (4ª) / Fernando (5ª)
 Frase-Chave no Slide: ""Nenhuma organização inova sozinha: o valor não está nas partes, mas na sinergia entre elas.""
 
 FALA SUGERIDA DO APRESENTADOR:
-Sejam muito bem-vindos, caros colegas, professora Iraci e professor Yukio. Nosso Grupo 5 tem a honra de apresentar o Seminário 5 sobre Ecossistemas de Inovação. Vamos conectar a teoria mais recente da literatura internacional com o nosso laboratório vivo: o Parque Tecnológico de São José dos Campos. Convidamos todos a abrirem o celular e acessarem o jogo pelo QR Code ou link, pois ao final de cada bloco teremos uma fase do nosso Kahoot RPG!
+Sejam muito bem-vindos, caros colegas, professor Yukio Ueta. Nosso Grupo 5 tem a honra de apresentar o Seminário 5 sobre Ecossistemas de Inovação. Vamos conectar a teoria mais recente da literatura internacional com o nosso laboratório vivo: o Parque Tecnológico de São José dos Campos. Convidamos todos a abrirem o celular e acessarem o jogo pelo QR Code ou link, pois ao final de cada bloco teremos uma fase do nosso Kahoot RPG!
 
 --------------------------------------------------------------------------------
 
@@ -603,33 +603,14 @@ Diagnóstico cienciométrico dos erros e acertos: examinamos quais conceitos ger
 
 --------------------------------------------------------------------------------
 
-SLIDE 45 | CONCLUSÕES | TEMPO SUGERIDO: 3 min
-Tema: As 5 Leis Fundamentais dos Ecossistemas de Inovação
-Apresentador(a): Renato Paschoal (4ª) / Fernando (5ª)
-Frase-Chave no Slide: ""Princípios invariantes validados pela literatura de 1993 a 2026 e pelo case PIT SJC.""
-
-FALA SUGERIDA DO APRESENTADOR:
-Sintetizamos as 5 Leis Fundamentais dos Ecossistemas de Inovação:
-1ª Simbiose Heterogênea;
-2ª Orquestração sem Hierarquia;
-3ª Proteção de PI com Confiança;
-4ª Enraizamento Territorial com Escala Global;
-5ª Imperativo Ecológico Net-Zero.
-
---------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------
-
-SLIDE 46 | DEBATE | TEMPO SUGERIDO: 4 min
-Tema: Provocações Estratégicas para o PPG-PIT e PIT SJC
+SLIDE 45 | DEBATE & NUVEM DE PALAVRAS | TEMPO SUGERIDO: 5 min
+Tema: Síntese Conceitual, Nuvem de Palavras & Provocações Estratégicas para o PPG-PIT e PIT SJC
 Apresentador(a): Grupo Inteiro (4ª e 5ª)
-Frase-Chave no Slide: ""Como nós, como futuros mestres e doutores, aceleraremos a inovação brasileira?""
+Frase-Chave no Slide: ""O valor de um ecossistema não está na soma das suas partes, mas na sinergia viva dos seus termos e conexões.""
 
 FALA SUGERIDA DO APRESENTADOR:
-Encerramos com provocações estratégicas para o PPG-PIT UNIFESP e para o PIT SJC:
-Como atrair mais venture capital para Deep Techs? Como engajar mais a 4ª hélice cidadã? E como consolidar o PIT como polo indutor de descarbonização industrial do Brasil?
-Abrimos agora com muita honra a palavra para os professores e para a turma para iniciarmos nosso debate final.
-Muito obrigado a todos pela atenção!
+Encerramos a nossa apresentação projetando na tela a Nuvem de Palavras viva com todos os conceitos fundamentais que percorremos hoje — da Tríplice e Quíntupla Hélice de Moore e Etzkowitz até a liderança sem hierarquia de Machado et al., os spillovers territoriais de San Diego e a governança de contratos e patentes do PIT SJC e do Nexus Hub.
+Deixamos três provocações estratégicas para o nosso ecossistema e passamos a palavra com muita honra ao nosso professor titular, Prof. Dr. Antonio Yukio Ueta, e a todos os nossos colegas de turma para enriquecermos este debate! Muito obrigado a todos pela atenção!
 
 --------------------------------------------------------------------------------
 FIM DO ROTEIRO OFICIAL

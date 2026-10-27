@@ -1465,9 +1465,15 @@
     function recordPlayerAnswer(payload) {
       if (!payload || !payload.playerName || !payload.questionId) return;
 
-      const playerKey = payload.playerName.trim();
-      if (!playerKey) return;
+      const rawName = (payload.playerName || '').trim();
+      if (!rawName) return;
 
+      // Busca chave de forma estritamente case-insensitive
+      const canonicalKey = Object.keys(gameState.players).find(
+        k => k.toLowerCase() === rawName.toLowerCase()
+      ) || rawName;
+
+      const playerKey = canonicalKey;
       if (!gameState.players[playerKey]) {
         gameState.players[playerKey] = {
           name: playerKey,

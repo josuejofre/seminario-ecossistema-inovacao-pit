@@ -276,47 +276,71 @@
         await this.removePlayer(oldName);
       }
 
-      // 1. Verificação direta e atômica no Firebase Realtime Database
+      // 1. Verificação direta e atômica no Firebase Realtime Database (Varredura rigorosa Case-Insensitive)
       if (isFirebaseActive && firebaseDb) {
         try {
-          const playerSnap = await firebaseDb.ref('kahoot_rpg/players/' + key).once('value');
-          if (playerSnap.exists() && playerSnap.val()) {
-            const existing = playerSnap.val();
-            const displayName = existing.name || cleanName;
-            return {
-              ok: false,
-              error: `⚠️ O nome "${displayName}" já está sendo usado por outro jogador nesta sala! Por favor, escolha outro nome ou adicione seu sobrenome (ex: "${cleanName} Silva").`
-            };
+          // A) Checagem em kahoot_rpg/players (varredura de todos os cadastrados)
+          const playersSnap = await firebaseDb.ref('kahoot_rpg/players').once('value');
+          if (playersSnap.exists() && playersSnap.val()) {
+            const allPlayers = playersSnap.val();
+            for (const [pKey, pVal] of Object.entries(allPlayers)) {
+              const existingName = (pVal && pVal.name) ? pVal.name : pKey;
+              if (sanitizeKey(existingName) === key) {
+                if (!oldName || sanitizeKey(oldName) !== key) {
+                  return {
+                    ok: false,
+                    error: `⚠️ O nome "${existingName}" (ou com grafia similar) já está em uso nesta sala! Por favor, adicione seu sobrenome (ex: "${cleanName} Silva").`
+                  };
+                }
+              }
+            }
           }
 
-          const stateSnap = await firebaseDb.ref('kahoot_rpg/state/players/' + key).once('value');
+          // B) Checagem em kahoot_rpg/state/players (varredura de pontuações no placar)
+          const stateSnap = await firebaseDb.ref('kahoot_rpg/state/players').once('value');
           if (stateSnap.exists() && stateSnap.val()) {
-            return {
-              ok: false,
-              error: `⚠️ O nome "${cleanName}" já está cadastrado no placar da sala! Por favor, adicione seu sobrenome para diferenciar (ex: "${cleanName} Silva").`
-            };
+            const statePlayers = stateSnap.val();
+            for (const [pKey, pVal] of Object.entries(statePlayers)) {
+              const existingName = (pVal && pVal.name) ? pVal.name : pKey;
+              if (sanitizeKey(existingName) === key) {
+                if (!oldName || sanitizeKey(oldName) !== key) {
+                  return {
+                    ok: false,
+                    error: `⚠️ O nome "${existingName}" já está registrado no placar! Por favor, adicione seu sobrenome para diferenciar (ex: "${cleanName} Silva").`
+                  };
+                }
+              }
+            }
           }
         } catch (err) {
           console.warn('[SyncService] Verificação online do Firebase falhou, utilizando verificação local:', err);
         }
       }
 
-      // 2. Verificação local em memória (BroadcastChannel / LocalStorage)
-      if (knownPlayers.has(key) && (!oldName || sanitizeKey(oldName) !== key)) {
-        return {
-          ok: false,
-          error: `⚠️ O nome "${cleanName}" já está em uso na sala! Por favor, adicione seu sobrenome (ex: "${cleanName} Silva").`
-        };
+      // 2. Verificação local em memória (BroadcastChannel / LocalStorage) - Totalmente Case-Insensitive
+      for (const [k, p] of knownPlayers.entries()) {
+        if (k === key || sanitizeKey(p.name || '') === key) {
+          if (!oldName || sanitizeKey(oldName) !== key) {
+            const displayName = p.name || cleanName;
+            return {
+              ok: false,
+              error: `⚠️ O nome "${displayName}" já está conectado à sala! Por favor, adicione seu sobrenome (ex: "${cleanName} Silva").`
+            };
+          }
+        }
       }
 
       const state = this.getLocalState();
       if (state && state.players) {
-        for (const pKey of Object.keys(state.players)) {
-          if (sanitizeKey(pKey) === key) {
-            return {
-              ok: false,
-              error: `⚠️ O nome "${cleanName}" já está em uso na sala! Por favor, adicione seu sobrenome (ex: "${cleanName} Silva").`
-            };
+        for (const [pKey, pVal] of Object.entries(state.players)) {
+          const existingName = (pVal && pVal.name) ? pVal.name : pKey;
+          if (sanitizeKey(existingName) === key) {
+            if (!oldName || sanitizeKey(oldName) !== key) {
+              return {
+                ok: false,
+                error: `⚠️ O nome "${existingName}" já está no placar local! Por favor, adicione seu sobrenome (ex: "${cleanName} Silva").`
+              };
+            }
           }
         }
       }
