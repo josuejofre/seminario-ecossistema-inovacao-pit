@@ -39,7 +39,7 @@ def generate_pdf():
         """)
 
         # Obter número total de slides
-        total_slides = page.evaluate("totalSlides || 47")
+        total_slides = page.evaluate("document.querySelectorAll('.slide').length || (typeof totalSlides !== 'undefined' ? totalSlides : 46)")
         print(f"Total de slides a capturar: {total_slides}")
 
         pdf_doc = fitz.open()
