@@ -1421,12 +1421,17 @@
       });
       window.SyncService.onStateUpdate((state) => {
         if (state && typeof state === 'object') {
+          let incomingPhases = [];
+          if (Array.isArray(state.unlockedPhases)) {
+            incomingPhases = state.unlockedPhases.map(Number).filter(n => n >= 1 && n <= 6);
+          } else if (state.unlockedPhases && typeof state.unlockedPhases === 'object') {
+            incomingPhases = Object.values(state.unlockedPhases).map(Number).filter(n => n >= 1 && n <= 6);
+          }
           gameState = {
-            unlockedPhases: state.unlockedPhases || gameState.unlockedPhases,
+            unlockedPhases: incomingPhases,
             players: state.players || {},
             answers: state.answers || []
           };
-          gameState.unlockedPhases = getSafeUnlockedPhases();
           scheduleRender();
         }
       });

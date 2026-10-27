@@ -56,13 +56,24 @@
 
         // Escuta atualizações de estado do jogo (liberação de fases)
         firebaseDb.ref('kahoot_rpg/state').on('value', (snapshot) => {
-          const state = snapshot.val();
-          if (state) {
-            localStorage.setItem('kahoot_rpg_state', JSON.stringify(state));
-            callbacks.onStateUpdate.forEach(cb => {
-              try { cb(state); } catch(e) { console.error(e); }
-            });
+          const val = snapshot.val();
+          const state = (val && typeof val === 'object') ? val : { unlockedPhases: [], players: {}, answers: [] };
+          
+          // Tratamento rigoroso: se for false ou omitido pelo Firebase, garante array vazia
+          if (!state.unlockedPhases || state.unlockedPhases === false) {
+            state.unlockedPhases = [];
+          } else if (typeof state.unlockedPhases === 'object' && !Array.isArray(state.unlockedPhases)) {
+            state.unlockedPhases = Object.values(state.unlockedPhases).map(Number).filter(n => n >= 1 && n <= 6);
+          } else if (Array.isArray(state.unlockedPhases)) {
+            state.unlockedPhases = state.unlockedPhases.map(Number).filter(n => n >= 1 && n <= 6);
+          } else {
+            state.unlockedPhases = [];
           }
+
+          localStorage.setItem('kahoot_rpg_state', JSON.stringify(state));
+          callbacks.onStateUpdate.forEach(cb => {
+            try { cb(state); } catch(e) { console.error(e); }
+          });
         });
 
         // Escuta jogadores registrados na nuvem
@@ -475,20 +486,34 @@
 
     // Enviar atualização de estado (Admin)
     sendState: function (gameState) {
-      localStorage.setItem('kahoot_rpg_state', JSON.stringify(gameState));
+      if (!gameState) return;
+      const cleanState = {
+        unlockedPhases: Array.isArray(gameState.unlockedPhases) ? gameState.unlockedPhases.map(Number) : [],
+        players: gameState.players || {},
+        answers: gameState.answers || []
+      };
+
+      localStorage.setItem('kahoot_rpg_state', JSON.stringify(cleanState));
 
       // 1. Envio Local
       if (broadcastChannel) {
         broadcastChannel.postMessage({
           type: 'STATE_UPDATE',
-          state: gameState
+          state: cleanState
         });
       }
 
       // 2. Envio Nuvem (Firebase)
       if (isFirebaseActive && firebaseDb) {
         try {
-          firebaseDb.ref('kahoot_rpg/state').set(gameState);
+          // No Firebase RTDB, uma array vazia [] é omitida pelo motor.
+          // Para garantir que o estado de "todas as fases bloqueadas" persista na nuvem:
+          const cloudState = {
+            ...cleanState,
+            unlockedPhases: cleanState.unlockedPhases.length > 0 ? cleanState.unlockedPhases : false,
+            updatedAt: Date.now()
+          };
+          firebaseDb.ref('kahoot_rpg/state').set(cloudState);
         } catch (e) {
           console.error('[SyncService] Erro ao enviar estado para Firebase:', e);
         }

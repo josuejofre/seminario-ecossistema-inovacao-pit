@@ -554,7 +554,6 @@
         </label>
         <select id="select-turma" class="input-field" style="margin-bottom: 1.5rem;">
           <option value="Quarta">Turma de Quarta-feira</option>
-          <option value="Quinta">Turma de Quinta-feira</option>
           <option value="Convidado">Professor / Convidado</option>
         </select>
       </div>
@@ -861,7 +860,7 @@
       completedStations: []
     };
 
-    let unlockedPhases = [1]; // Default Phase 1 unlocked
+    let unlockedPhases = []; // Por padrão, TODAS as fases iniciam BLOQUEADAS até liberação do apresentador
 
     // Audio synthesizer
     let audioEnabled = true;
@@ -903,16 +902,31 @@
       } else if (phases && typeof phases === 'object') {
         return Object.values(phases).map(Number).filter(n => n >= 1 && n <= 6);
       }
-      return [1, 2, 3, 4, 5, 6];
+      return []; // Por segurança estrita, qualquer falha ou ausência resulta em 0 fases liberadas
     }
+
+    // Inicialização imediata com estado salvo localmente (se houver)
+    try {
+      const savedStateRaw = localStorage.getItem('kahoot_rpg_state');
+      if (savedStateRaw) {
+        const parsed = JSON.parse(savedStateRaw);
+        if (parsed) {
+          unlockedPhases = sanitizeUnlockedPhases(parsed.unlockedPhases);
+        }
+      }
+    } catch (e) {}
 
     /* Channel & Cloud Listener */
     if (window.SyncService) {
       window.SyncService.onStateUpdate((state) => {
-        if (state && state.unlockedPhases) {
+        if (state && typeof state === 'object') {
           unlockedPhases = sanitizeUnlockedPhases(state.unlockedPhases);
           updateTargetBanner();
         }
+      });
+      window.SyncService.onReset(() => {
+        unlockedPhases = [];
+        updateTargetBanner();
       });
     }
 
@@ -921,6 +935,9 @@
         const data = event.data;
         if (data && data.type === 'STATE_UPDATE' && data.state) {
           unlockedPhases = sanitizeUnlockedPhases(data.state.unlockedPhases);
+          updateTargetBanner();
+        } else if (data && data.type === 'GAME_RESET') {
+          unlockedPhases = [];
           updateTargetBanner();
         }
       };
@@ -935,10 +952,10 @@
     const WORLD_W = 1920;
     const WORLD_H = 1380;
 
-    // Animated Avatar Character ("Bonequinho Andando")
+    // Animated Avatar Character ("Bonequinho Andando") - Spawn na Alameda Central (longe de estações)
     const hero = {
-      x: 400,
-      y: 450,
+      x: 550,
+      y: 560,
       radius: 20,
       speed: 5.2,
       vx: 0,
@@ -1715,6 +1732,15 @@
     const Q_MAX_SECONDS = 20;
 
     function openKahootChallenge(station) {
+      if (!station) return;
+
+      // Trava Estrita de Fase: se a fase não estiver desbloqueada, impede abertura do modal
+      if (!Array.isArray(unlockedPhases) || !unlockedPhases.includes(station.block)) {
+        alert(`🔒 A ${station.phaseLabel} (${station.name}) está bloqueada!\n\nO apresentador liberará esta fase no momento apropriado do seminário.`);
+        playBeep(220, 'square', 0.25);
+        return;
+      }
+
       activeStation = station;
       activeQuestions = rawQuestions.filter(q => q.block === station.block);
 

@@ -451,16 +451,20 @@ Vejam a matriz pentagonal do Relatório Anual do PIT projetada na tela em grande
 --------------------------------------------------------------------------------
 
 SLIDE 34 | BLOCO 5 | TEMPO SUGERIDO: 3 min
-Tema: Estudo Empírico: O Modelo de Gestão do PIT SJC (OS & Contrato de Metas)
+Tema: O modelo de Gestão do PIT SJC, sob aspectos gerais e práticos.
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 Investigação Empírica de Campo: Conduzida por Lilian Veiga • PPG-PIT UNIFESP
-Entrevistado: Renato Boschilia Jr. (Diretor de Novos Negócios PIT SJC / Mestre UNIFESP)
-RECURSO DE VÍDEO EMPÍRICO: assets/recorte7_governanca_pit_os.mp4
+Entrevistados: 
+1) Renato Boschilia Jr. (Gestão de Projetos e Captação de Recursos • PIT SJC / Mestre UNIFESP)
+2) Ana Abreu (Coordenadora de Estratégia e Inovação • PIT SJC)
+RECURSOS DE VÍDEO EMPÍRICO (Lado a Lado): 
+- Vídeo 1: assets/recorte7_governanca_pit_os.mp4 (Aspectos Gerais / Governança OS & Metas)
+- Vídeo 2: assets/Ana_02_Conexao_e_programas.mp4 (Aspectos Práticos / Conexão e Programas)
 
 FALA SUGERIDA DO APRESENTADOR:
-E para esclarecer a engenharia jurídica e operacional do próprio PIT SJC, Renato Boschilia Jr., gestor de projetos e captação do Parque, detalha a divisão entre o patrimônio físico e a inteligência da rede: o terreno é municipal, mas toda a alma e o corpo técnico pertencem à Associação OS sem fins lucrativos.
-A gestão é regida por um Contrato de Gestão anual com a Prefeitura, balizado em metas estritas de conexões, projetos contratados, eventos de capacitação e captação de recursos a fundo perdido para as empresas. É uma política pública orientada a metas socioeconômicas de longo prazo. Vamos assistir!
-
+"Para compreendermos a engenharia e o dinamismo do PIT SJC em sua plenitude, trazemos dois olhares empíricos complementares colhidos diretamente no Parque:
+De um lado, os Aspectos Gerais e Institucionais com Renato Boschilia Jr., detalhando a natureza de Organização Social (OS), onde o patrimônio físico pertence ao município, mas a gestão é privada e sem fins lucrativos, cobrada rigorosamente por um Contrato de Gestão com metas anuais de impacto regional.
+Do outro lado, os Aspectos Práticos e Operacionais com Ana Abreu, coordenadora de estratégia e inovação, demonstrando como a Tríplice Hélice é conectada no dia a dia: como pesquisadores, empresas e poder público dialogam e como os programas setoriais e APLs transformam essas pontes em projetos reais. Vamos assistir!"
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------

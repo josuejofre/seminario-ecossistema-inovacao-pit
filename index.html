@@ -1131,6 +1131,82 @@
       line-height: 1.48;
     }
 
+    /* ==========================================================================
+       DUAL INTERVIEW VIDEO LAYOUT (SLIDE 34: 2 VÍDEOS LADO A LADO)
+       ========================================================================== */
+    .interview-dual-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      flex: 1;
+      min-height: 0;
+      align-items: stretch;
+    }
+
+    .interview-dual-col {
+      background: rgba(10, 19, 36, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-md);
+      padding: 0.95rem 1.15rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.65rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      min-height: 0;
+    }
+
+    .interview-dual-col.card-glow-emerald {
+      border-top: 3px solid var(--emerald-accent);
+      box-shadow: 0 10px 30px rgba(16, 185, 129, 0.12);
+    }
+
+    .interview-dual-col.card-glow-cyan {
+      border-top: 3px solid var(--cyan-light);
+      box-shadow: 0 10px 30px rgba(6, 182, 212, 0.12);
+    }
+
+    .interview-dual-col .interview-video-wrapper {
+      width: 100%;
+      height: 300px;
+      max-height: 320px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .interview-dual-col .interview-video-wrapper video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      background: #000;
+    }
+
+    .interviewee-col-profile {
+      display: flex;
+      align-items: center;
+      gap: 0.95rem;
+      padding: 0.65rem 0.95rem;
+      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-sm);
+      backdrop-filter: blur(8px);
+    }
+
+    .interviewee-col-profile.glow-emerald {
+      border-left: 4px solid var(--emerald-accent);
+    }
+
+    .interviewee-col-profile.glow-cyan {
+      border-left: 4px solid var(--cyan-light);
+    }
+
     /* Bottom Interviewee Profile Strip */
     .interviewee-bottom-strip {
       display: flex;
@@ -3062,76 +3138,83 @@ Atores independentes colaboram para criar um novo mercado e competem dentro dele
 </div>
 <div class="slide-footer-ref"><span style="font-size: 1.05rem;">📚</span> <span><strong>Fonte / Ref:</strong> RELATÓRIO ANUAL DE ATIVIDADES PIT 2025; RUBEM, Thiago Chiquetto. Políticas de inovação, parques tecnológicos e a importância do território: o caso do PIT SJC (2018).</span></div>
 </section>
-<!-- SLIDE ADICIONAL: ESTUDO EMPÍRICO MODELO INSTITUCIONAL DO PIT (RENATO BOSCHILIA JR.) -->
+<!-- SLIDE 34: O MODELO DE GESTÃO DO PIT SJC, SOB ASPECTOS GERAIS E PRÁTICOS -->
 <section class="slide" data-block="Bloco 5" data-slide="34" data-speaker="Lilian Veiga" data-time="3 min">
-<div class="slide-tag">🏛️ BLOCO 5 • ANATOMIA DO PIT SJC &amp; MODELO INSTITUCIONAL</div>
-<h2 class="slide-title">Estudo Empírico: <span>O Modelo de Gestão do PIT SJC (OS &amp; Contrato de Metas)</span></h2>
-<div class="punchline-card" style="margin-bottom: 0.65rem;">
-<span style="font-size: 1.4rem;">🏛️</span>
-<div class="punchline-quote">"A divisão entre patrimônio público (terreno municipal) e gestão privada sem fins lucrativos (Associação OS). Comprovação anual de metas com a Prefeitura: conexões, projetos, eventos e captação de recursos." — <em>Renato Boschilia Jr. (PIT SJC)</em></div>
-</div>
+<div class="slide-tag">🏛️ BLOCO 5 • ANATOMIA DO PIT SJC &amp; ESTUDO EMPÍRICO</div>
+<h2 class="slide-title">O modelo de Gestão do PIT SJC, sob aspectos gerais e práticos.</h2>
 
-<div class="interview-grid-main">
-  <!-- Coluna Esquerda: Análise Conceitual e Teórica com Fontes Ampliadas -->
-  <div class="interview-concepts-col">
-    <div class="card card-glow-emerald" style="border-left: 4px solid var(--emerald-accent);">
-      <div class="card-title"><span>🏛️</span> A Natureza Jurídica de Organização Social (OS)</div>
-      <p style="margin: 0;">
-        A Associação APTSJC é uma entidade privada sem fins lucrativos qualificada pelo poder público. Essa estrutura garante agilidade em compras, contratação ágil sob regime CLT e dinamismo operacional inatingível pela administração pública direta.
-      </p>
-    </div>
-    <div class="card card-glow-cyan" style="border-left: 4px solid var(--cyan-glow);">
-      <div class="card-title"><span>📊</span> Contrato de Gestão Baseado em Metas</div>
-      <p style="margin: 0;">
-        Anualmente o PIT presta contas rigorosas à Prefeitura Municipal de SJC: volume de conexões geradas, eventos de capacitação, projetos contratados e captação de recursos a fundo perdido para empresas e laboratórios da região.
-      </p>
-    </div>
-    <div class="card card-glow-amber" style="border-left: 4px solid var(--amber-accent);">
-      <div class="card-title"><span>📈</span> O "Filme" do Impacto Socioeconômico</div>
-      <p style="margin: 0;">
-        A gestão por indicadores permite acompanhar a evolução histórica do ecossistema: o Parque não mede apenas esforços internos, mas o valor real, a renda qualificada e o desenvolvimento tecnológico que a sociedade recebe do investimento público.
-      </p>
-    </div>
-  </div>
-
-  <!-- Coluna Direita: Player Compacto do Vídeo (Tela Cheia na Apresentação) -->
-  <div class="interview-player-card card-glow-emerald">
-    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
-      <span class="chip-badge" style="background: rgba(16, 185, 129, 0.2); border-color: var(--emerald-accent); color: var(--emerald-accent); font-weight: 700; font-size: 0.92rem;">
-        ▶️ RECORTE PIT SJC • MODELO OS &amp; METAS • 1M25S
+<!-- Dois Vídeos Lado a Lado -->
+<div class="interview-dual-grid">
+  <!-- Vídeo 1: Aspectos Gerais e Institucionais (Renato Boschilia Jr.) -->
+  <div class="interview-dual-col card-glow-emerald">
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+      <span class="chip-badge" style="background: rgba(16, 185, 129, 0.18); border-color: var(--emerald-accent); color: var(--emerald-accent); font-weight: 700; font-size: 0.95rem;">
+        🏛️ ASPECTOS GERAIS • MODELO OS &amp; METAS COM A PREFEITURA
       </span>
+      <span style="font-family: var(--font-mono); font-size: 0.88rem; color: var(--text-dim);">1m 25s</span>
     </div>
+
     <div class="interview-video-wrapper">
       <video controls="" id="video-recorte-7" poster="assets/thumb_recorte7.jpg" preload="metadata">
         <source src="assets/recorte7_governanca_pit_os.mp4" type="video/mp4"/>
         Seu navegador não suporta reprodução de vídeo HTML5.
       </video>
     </div>
-    <div class="interview-key-points-box">
-      <div style="font-size: 0.92rem; font-family: var(--font-mono); color: var(--emerald-accent); font-weight: 800; margin-bottom: 0.2rem;">💡 FOCO DO DEPOIMENTO:</div>
-      Governança orientada a desempenho e autonomia de gestão privada para fins públicos. (Use ⛶ para tela cheia).
+
+    <div class="interview-key-points-box" style="margin-top: 0; padding: 0.5rem 0.8rem; font-size: 0.98rem;">
+      <strong style="color: var(--emerald-accent); font-family: var(--font-mono);">💡 FOCO INSTITUCIONAL:</strong>
+      A separação entre patrimônio público (terreno municipal) e gestão privada sem fins lucrativos (OS), com contrato rigoroso de metas anuais de impacto.
     </div>
-    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-top: 0.35rem; font-size: 0.95rem; color: var(--text-dim);">
-      <span>🎬 Recorte de Campo</span>
-      <span style="color: var(--cyan-light); font-weight: 600;">Lilian Veiga</span>
+
+    <!-- Identificação do Entrevistado Abaixo do Vídeo -->
+    <div class="interviewee-col-profile glow-emerald">
+      <img alt="Renato Boschilia Jr." class="interviewee-avatar-img" src="assets/thumb_recorte7.jpg"/>
+      <div class="interviewee-meta-text">
+        <div class="interviewee-meta-name" style="font-size: 1.12rem;">Renato Boschilia Jr.</div>
+        <div class="interviewee-meta-role" style="font-size: 0.96rem; color: var(--emerald-accent);">Gestão de Projetos e Captação de Recursos • PIT SJC</div>
+        <div class="interviewee-meta-sub" style="font-size: 0.88rem;">Associação Parque Tecnológico de São José dos Campos (APTSJC)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vídeo 2: Aspectos Práticos e Operacionais (Ana Abreu) -->
+  <div class="interview-dual-col card-glow-cyan">
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+      <span class="chip-badge" style="background: rgba(6, 182, 212, 0.18); border-color: var(--cyan-light); color: var(--cyan-light); font-weight: 700; font-size: 0.95rem;">
+        ⚡ ASPECTOS PRÁTICOS • CONEXÃO UNIVERSIDADE-EMPRESA &amp; PROGRAMAS
+      </span>
+      <span style="font-family: var(--font-mono); font-size: 0.88rem; color: var(--text-dim);">2m 47s</span>
+    </div>
+
+    <div class="interview-video-wrapper">
+      <video controls="" id="video-ana-02" poster="assets/thumb_ana_02.jpg" preload="metadata">
+        <source src="assets/Ana_02_Conexao_e_programas.mp4" type="video/mp4"/>
+        Seu navegador não suporta reprodução de vídeo HTML5.
+      </video>
+    </div>
+
+    <div class="interview-key-points-box" style="margin-top: 0; padding: 0.5rem 0.8rem; font-size: 0.98rem;">
+      <strong style="color: var(--cyan-light); font-family: var(--font-mono);">💡 FOCO OPERACIONAL:</strong>
+      Como o PIT orquestra a tríplice hélice na prática: conexão entre pesquisadores, empresas e poder público através dos programas setoriais e APLs.
+    </div>
+
+    <!-- Identificação da Entrevistada Abaixo do Vídeo -->
+    <div class="interviewee-col-profile glow-cyan">
+      <img alt="Ana Abreu" class="interviewee-avatar-img" src="assets/avatar_ana_abreu.jpg"/>
+      <div class="interviewee-meta-text">
+        <div class="interviewee-meta-name" style="font-size: 1.12rem;">Ana Abreu</div>
+        <div class="interviewee-meta-role" style="font-size: 0.96rem; color: var(--cyan-light);">Coordenadora de Estratégia e Inovação • PIT SJC</div>
+        <div class="interviewee-meta-sub" style="font-size: 0.88rem;">Coordenação de APLs e Gestão dos Programas de Inovação (APTSJC)</div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- Faixa Inferior: Identificação Completa do Entrevistado -->
-<div class="interviewee-bottom-strip">
-  <div class="interviewee-left-profile">
-    <img alt="Renato Boschilia Jr." class="interviewee-avatar-img" src="assets/thumb_recorte7.jpg"/>
-    <div class="interviewee-meta-text">
-      <div class="interviewee-meta-name">Renato Boschilia Jr.</div>
-      <div class="interviewee-meta-role">Gestão de Projetos e Captação de Recursos • PIT SJC</div>
-      <div class="interviewee-meta-sub">Parque de Inovação Tecnológica de São José dos Campos (APTSJC)</div>
-    </div>
-  </div>
-  <div class="interviewee-field-badge">
-    <span>🎙️</span>
-    <span>Investigação de campo conduzida por Lilian Veiga • PPG-PIT UNIFESP</span>
-  </div>
+<!-- Faixa Inferior de Investigação de Campo -->
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 0.4rem 1rem; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--radius-sm); font-size: 0.92rem; color: var(--text-muted); font-family: var(--font-mono); flex-shrink: 0;">
+  <span>🎙️ Investigação empírica de campo PPG-PIT UNIFESP</span>
+  <span>Entrevistadores: <strong style="color: #fff;">Lilian Veiga</strong> &amp; Equipe de Pesquisa</span>
+  <span style="color: var(--cyan-light);">PIT SJC • Estudo de Caso de Gestão</span>
 </div>
 </section>
 <!-- SLIDE 31: LILIAN 8 - O PIT SJC: QUEM CONFIOU EM NOSSO TRABALHO (AMPLIADO) -->
@@ -3894,9 +3977,10 @@ O conceito teórico central é o de spill-overs territoriais: a concentração e
 Vejam a matriz pentagonal do Relatório Anual do PIT projetada na tela em grande formato: a Tríplice Hélice central (APTSJC articulando Universidade, Governo e Empresas) coordena cinco eixos estratégicos: Defesa e Aeroespacial, TIC Vale, Agropolo, Saúde e Biotecnologia, e Mobilidade Urbana."
 
 --------------------------------------------------------------------------------`,
-    34: `E para comprovar como a Hélice Governamental atua na prática no nosso território, Rubens Costa compartilha um resultado empírico extraordinário de sua gestão na Secretaria de TI de Caraguatatuba: através de governança por dados e alinhamento ágil contínuo entre secretarias (Saúde, Educação e Sepedi), Caraguá conquistou o selo inédito do TCE-SP de excelência no i-Gov TI — um reconhecimento de maturidade digital que menos de 4,5% dos municípios de SP alcançam e que, em toda a RMVale e Serra, apenas São José dos Campos possuía! Vamos assistir!"
-
---------------------------------------------------------------------------------`,
+    34: `O Modelo de Gestão do PIT SJC, sob aspectos gerais e práticos:
+Apresentamos aqui dois depoimentos empíricos essenciais coletados pela nossa equipe:
+1) Renato Boschilia Jr. (Gestão de Projetos e Captação) detalha os aspectos gerais e institucionais: a separação entre o patrimônio público (terreno municipal) e a gestão privada sem fins lucrativos da Associação APTSJC (OS), regida por um rigoroso Contrato de Gestão anual baseado em metas estritas com a Prefeitura (conexões geradas, projetos contratados e captação de recursos).
+2) Ana Abreu (Coordenadora de Estratégia e Inovação) detalha os aspectos práticos e operacionais: como o PIT faz a conexão entre universidade, empresas e poder público no dia a dia, dividindo os programas por eixos e articulando APLs (como o TICVALE) para transformar parcerias em resultados concretos. Vamos assistir!`,
     35: `E para esclarecer a engenharia jurídica e operacional do próprio PIT SJC, Renato Boschilia Jr., gestor de projetos e captação do Parque, detalha a divisão entre o patrimônio físico e a inteligência da rede: o terreno é municipal, mas toda a alma e o corpo técnico pertencem à Associação OS sem fins lucrativos.
 A gestão é regida por um Contrato de Gestão anual com a Prefeitura, balizado em metas estritas de conexões, projetos contratados, eventos de capacitação e captação de recursos a fundo perdido para as empresas. É uma política pública orientada a metas socioeconômicas de longo prazo. Vamos assistir!"
 
@@ -4708,6 +4792,14 @@ Muito obrigado a todos, aos professor Yukio Ueta e colegas pela atenção!"`
       updateLiveSlideSync();
       // Periodically refresh in case of background updates
       setInterval(updateLiveSlideSync, 1500);
+
+      // Pausa mútua entre os vídeos do Slide 34 (Renato Boschilia Jr. e Ana Abreu)
+      const vRenato = document.getElementById('video-recorte-7');
+      const vAna = document.getElementById('video-ana-02');
+      if (vRenato && vAna) {
+        vRenato.addEventListener('play', () => { if (!vAna.paused) vAna.pause(); });
+        vAna.addEventListener('play', () => { if (!vRenato.paused) vRenato.pause(); });
+      }
     });
   </script>
 </body>
