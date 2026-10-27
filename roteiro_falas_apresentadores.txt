@@ -3,7 +3,7 @@ ROTEIRO DE APRESENTAÇÃO E FALAS - SEMINÁRIO 5: ECOSSISTEMAS DE INOVAÇÃO & P
 PROGRAMA DE PÓS-GRADUAÇÃO EM PROPRIEDADE INTELECTUAL E TRANSFERÊNCIA DE TECNOLOGIA (PPGPIT/UNIFESP)
 DISCIPLINA: GESTÃO ESTRATÉGICA DA INOVAÇÃO
 DOCENTE RESPONSÁVEL: Prof. Dr. Antonio Yukio Ueta
-DURAÇÃO TOTAL: 120 MINUTOS | 45 SLIDES | 6 BLOCOS DINÂMICOS COM KAHOOT RPG
+DURAÇÃO TOTAL: 120 MINUTOS | 46 SLIDES | 6 BLOCOS DINÂMICOS COM KAHOOT RPG
 EQUIPE DISCENTE (EM ORDEM ALFABÉTICA):
   1. Jéssica Pascotto David
   2. Josué Jofre
@@ -29,7 +29,24 @@ Sejam muito bem-vindos, caros colegas, professor Yukio Ueta. Nosso Grupo 5 tem a
 
 --------------------------------------------------------------------------------
 
-SLIDE 02 | AGENDA | TEMPO SUGERIDO: 2 min
+
+SLIDE 02 | DINÂMICA INTERATIVA & PREMIAÇÃO | TEMPO SUGERIDO: 2 min
+Tema: O Orquestrador do Ecossistema: Competição RPG no Campus PIT & Vale Outback
+Apresentador(a): Josué Jofre (4ª) / Fernando (5ª)
+Frase-Chave no Slide: ""Aprenda, jogue e dispute a liderança do ecossistema: o campeão geral leva um Vale-Presente de R$ 115 no Outback Steakhouse!""
+
+FALA SUGERIDA DO APRESENTADOR:
+Apresentamos agora a dinâmica interativa que vai nos acompanhar durante todo o seminário: o RPG Kahoot no Campus Virtual do PIT SJC!
+Desenvolvemos uma réplica interativa do Parque Tecnológico com 6 fases temáticas ancoradas nos 6 blocos da nossa apresentação.
+A cada bloco teórico e empírico concluído, liberamos uma nova estação no mapa do campus para todos responderem perguntas em tempo real pelo celular.
+E o melhor: com uma premiação real de altíssimo nível para engajar a turma! O primeiro colocado no ranking geral ao final da aula ganhará um Vale-Presente oficial de R$ 115,00 no Outback Steakhouse!
+Todos podem pegar o celular agora mesmo, apontar a câmera para o QR Code na tela ou acessar o link da plataforma. Digitem seu nome, selecionem a turma de quarta-feira e fiquem prontos na alameda central. Que vença o melhor orquestrador!
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+SLIDE 03 | AGENDA | TEMPO SUGERIDO: 2 min
 Tema: Estrutura e Divisão dos Blocos
 Apresentador(a): Nathalia Neves (4ª) / Fernando (5ª)
 Frase-Chave no Slide: ""Da teoria da coevolução biológica à prática orquestrada em São José dos Campos.""
@@ -41,7 +58,7 @@ Nossa apresentação está estruturada em 120 minutos, dividida em 6 blocos fund
 
 --------------------------------------------------------------------------------
 
-SLIDE 03 | CONTEXTO PIT | TEMPO SUGERIDO: 4 min
+SLIDE 04 | CONTEXTO PIT | TEMPO SUGERIDO: 4 min
 Tema: São José dos Campos & PIT: Por que a Indústria Precisa da Academia?
 Apresentador(a): Nathalia Neves (4ª) / Fernando (5ª)
 Investigação Empírica de Campo: Conduzida por Nathália Neves • PPG-PIT UNIFESP
@@ -59,7 +76,7 @@ Ele resume de forma contundente por que a indústria precisa da academia: as emp
 
 --------------------------------------------------------------------------------
 
-SLIDE 04 | BLOCO 1 | TEMPO SUGERIDO: 4 min
+SLIDE 05 | BLOCO 1 | TEMPO SUGERIDO: 4 min
 Tema: A Origem do Conceito: Tansley (1935) & Moore (1993)
 Apresentador(a): Nathalia Neves (4ª) / Fernando (5ª)
 Frase-Chave no Slide: ""Na biologia e nos negócios: espécies e empresas que coevoluem sobrevivem juntas ou perecem isoladas.""
@@ -71,7 +88,7 @@ Iniciamos pelo resgate histórico. O termo ecossistema nasceu na biologia em 193
 
 --------------------------------------------------------------------------------
 
-SLIDE 05 | BLOCO 1 | TEMPO SUGERIDO: 4 min
+SLIDE 06 | BLOCO 1 | TEMPO SUGERIDO: 4 min
 Tema: Evolução Bibliométrica: Shen et al. (2025/2026)
 Apresentador(a): Nathalia Neves (4ª) / Fernando (5ª)
 Frase-Chave no Slide: ""De 1993 a 2026: a literatura migrou do fascínio conceitual para a governança empírica rigorosa.""
@@ -84,7 +101,7 @@ O mapeamento bibliométrico revela uma explosão de publicações a partir de 20
 
 --------------------------------------------------------------------------------
 
-SLIDE 06 | BLOCO 1 | TEMPO SUGERIDO: 4 min
+SLIDE 07 | BLOCO 1 | TEMPO SUGERIDO: 4 min
 Tema: Como Diferenciar: Cluster, Sistema e Ecossistema
 Apresentador(a): Nathalia Neves (4ª) / Fernando (5ª)
 Frase-Chave no Slide: ""Estar no mesmo CEP geográfico não configura um ecossistema: sem interdependência, há apenas vizinhança.""
@@ -99,7 +116,7 @@ Já o Ecossistema de Inovação é definido pela coevolução, simbiose e interd
 
 --------------------------------------------------------------------------------
 
-SLIDE 07 | MOMENTO KAHOOT 1 | TEMPO SUGERIDO: 3 min
+SLIDE 08 | MOMENTO KAHOOT 1 | TEMPO SUGERIDO: 3 min
 Tema: Desafio da Fase 1: Bloco Acadêmico UNIFESP
 Apresentador(a): Nathalia Neves (4ª) / Fernando (5ª)
 Frase-Chave no Slide: ""O link do jogo está no chat: acesse, ande até a Fase 1 e responda o mais rápido possível!""
@@ -112,7 +129,7 @@ São 3 questões fundamentadas em Moore, Shen et al. e na distinção de Porter.
 
 --------------------------------------------------------------------------------
 
-SLIDE 08 | BLOCO 2 | TEMPO SUGERIDO: 4 min
+SLIDE 09 | BLOCO 2 | TEMPO SUGERIDO: 4 min
 Tema: Anatomia do Ecossistema: Heterogeneidade & Simbiose de Atores
 Apresentador(a): Veridiany Braga (4ª) / Fábio (5ª)
 Frase-Chave no Slide: ""Na saúde, na aviação ou na TI: quando profissionais de áreas diferentes cooperam, o impossível acontece.""
@@ -124,7 +141,7 @@ Entrando no Bloco 2, desvendamos quem habita o ecossistema. Não se trata de jun
 
 --------------------------------------------------------------------------------
 
-SLIDE 09 | BLOCO 2 | TEMPO SUGERIDO: 4 min
+SLIDE 10 | BLOCO 2 | TEMPO SUGERIDO: 4 min
 Tema: Da Tríplice à Quíntupla Hélice: Sociedade & Sustentabilidade
 Apresentador(a): Veridiany Braga (4ª) / Fábio (5ª)
 Frase-Chave no Slide: ""A evolução do ecossistema: da Tríplice Hélice à Quíntupla Hélice, conectando sociedade, inclusão social e sustentabilidade ambiental (Net-Zero).""
@@ -142,7 +159,7 @@ Vejam na tela a anatomia completa das 5 hélices:
 
 --------------------------------------------------------------------------------
 
-SLIDE 10 | BLOCO 2 | TEMPO SUGERIDO: 3 min
+SLIDE 11 | BLOCO 2 | TEMPO SUGERIDO: 3 min
 Tema: Estudo Empírico: A Quádrupla Hélice na Prática & Conexão Academia-Mercado
 Apresentador(a): Veridiany Braga (4ª) / Fábio (5ª)
 Investigação Empírica de Campo: Conduzida por Veridiany Braga • PPG-PIT UNIFESP
@@ -161,7 +178,7 @@ Renato sintetiza com precisão cirúrgica a transição da teoria para a prátic
 
 --------------------------------------------------------------------------------
 
-SLIDE 11 | BLOCO 2 | TEMPO SUGERIDO: 4 min
+SLIDE 12 | BLOCO 2 | TEMPO SUGERIDO: 4 min
 Tema: Interdependência & Riscos: Cadeia Linear vs. Rede Viva
 Apresentador(a): Veridiany Braga (4ª) / Fábio (5ª)
 Frase-Chave no Slide: ""Enquanto a cadeia de suprimentos é contratual e linear, o ecossistema opera por coopetição e interdependência de riscos.""
@@ -173,7 +190,7 @@ Como ensina Ron Adner, a interdependência gera três riscos: execução interna
 
 --------------------------------------------------------------------------------
 
-SLIDE 12 | MOMENTO KAHOOT 2 | TEMPO SUGERIDO: 3 min
+SLIDE 13 | MOMENTO KAHOOT 2 | TEMPO SUGERIDO: 3 min
 Tema: Desafio da Fase 2: Praça Central das Hélices
 Apresentador(a): Veridiany Braga (4ª) / Fábio (5ª)
 Frase-Chave no Slide: ""Acesse o jogo no smartphone, caminhe até a estação no mapa e responda às 3 perguntas!""
@@ -186,7 +203,7 @@ Mais 3 questões cruciais sobre as 5 hélices, Adner e co-criação. 3 minutos n
 
 --------------------------------------------------------------------------------
 
-SLIDE 13 | BLOCO 3 | TEMPO SUGERIDO: 1 min
+SLIDE 14 | BLOCO 3 | TEMPO SUGERIDO: 1 min
 Tema: Como coordenar atores independentes, e quais mecanismos e competências permitem a orquestração do ecossistema?
 Apresentador(a): Jéssica David (4ª) / Joel (5ª)
 
@@ -198,7 +215,7 @@ A orquestração de ecossistemas é a competência de alinhar atores autônomos 
 
 --------------------------------------------------------------------------------
 
-SLIDE 14 | BLOCO 3 | TEMPO SUGERIDO: 1.5 min
+SLIDE 15 | BLOCO 3 | TEMPO SUGERIDO: 1.5 min
 Tema: Coordenar sem autoridade hierárquica
 Apresentador(a): Jéssica David (4ª) / Joel (5ª)
 
@@ -209,7 +226,7 @@ Analisamos a evolução teórica seminal: o modelo clássico de Dhanaraj e Parkh
 
 --------------------------------------------------------------------------------
 
-SLIDE 15 | BLOCO 3 | TEMPO SUGERIDO: 2 min
+SLIDE 16 | BLOCO 3 | TEMPO SUGERIDO: 2 min
 Tema: Estudo Empírico: Liderança Relacional & O "Pedaço de Pizza"
 Apresentador(a): Jéssica David (4ª) / Joel (5ª)
 Investigação Empírica de Campo: Conduzida por Jéssica David • PPG-PIT UNIFESP
@@ -226,7 +243,7 @@ Sem essa coordenação por resultados reais, as parcerias travam em vaidades ins
 
 --------------------------------------------------------------------------------
 
-SLIDE 16 | BLOCO 3 | TEMPO SUGERIDO: 1 min
+SLIDE 17 | BLOCO 3 | TEMPO SUGERIDO: 1 min
 Tema: Das 3 às 8 dimensões de orquestração
 Apresentador(a): Jéssica David (4ª) / Joel (5ª)
 
@@ -238,7 +255,7 @@ Dar Direção (definir visão comum), Reunir Atores (atrair talentos heterogêne
 
 --------------------------------------------------------------------------------
 
-SLIDE 17 | BLOCO 3 | TEMPO SUGERIDO: 2 min
+SLIDE 18 | BLOCO 3 | TEMPO SUGERIDO: 2 min
 Tema: Dar direção, reunir e manter os atores
 Apresentador(a): Jéssica David (4ª) / Joel (5ª)
 
@@ -250,7 +267,7 @@ Fazer o Conhecimento Circular (spill-overs e mobilidade), Estimular a Ação Con
 
 --------------------------------------------------------------------------------
 
-SLIDE 18 | BLOCO 3 | TEMPO SUGERIDO: 2 min
+SLIDE 19 | BLOCO 3 | TEMPO SUGERIDO: 2 min
 Tema: Fazer conhecimento, ação e mensagem circularem
 Apresentador(a): Jéssica David (4ª) / Joel (5ª)
 
@@ -262,7 +279,7 @@ Conhecimento (compreensão sistêmica da rede), Habilidade (mediação de confli
 
 --------------------------------------------------------------------------------
 
-SLIDE 19 | BLOCO 3 | TEMPO SUGERIDO: 1.75 min
+SLIDE 20 | BLOCO 3 | TEMPO SUGERIDO: 1.75 min
 Tema: Competência de orquestração: CHA em ação
 Apresentador(a): Jéssica David (4ª) / Joel (5ª)
 
@@ -273,7 +290,7 @@ Fechando a governança: como coordenar sem hierarquia? Através de incentivos al
 
 --------------------------------------------------------------------------------
 
-SLIDE 20 | BLOCO 3 | TEMPO SUGERIDO: 0.75 min
+SLIDE 21 | BLOCO 3 | TEMPO SUGERIDO: 0.75 min
 Tema: Como coordenar atores independentes?
 Apresentador(a): Jéssica David (4ª) / Joel (5ª)
 
@@ -284,7 +301,7 @@ Passo a palavra para o colega que nos conduzirá pela análise das competências
 
 --------------------------------------------------------------------------------
 
-SLIDE 21 | MOMENTO KAHOOT 3 | TEMPO SUGERIDO: 3 min
+SLIDE 22 | MOMENTO KAHOOT 3 | TEMPO SUGERIDO: 3 min
 Tema: Desafio da Fase 3: Centro de Governança do PIT
 Apresentador(a): Jéssica David (4ª) / Joel (5ª)
 Frase-Chave no Slide: ""O link do jogo está no chat: acesse, ande até a Fase 2 e responda o mais rápido possível!""
@@ -297,7 +314,7 @@ Testaremos o domínio de vocês sobre Machado et al., Dhanaraj & Parkhe e lidera
 
 --------------------------------------------------------------------------------
 
-SLIDE 22 | BLOCO 4 | TEMPO SUGERIDO: 4 min
+SLIDE 23 | BLOCO 4 | TEMPO SUGERIDO: 4 min
 Tema: Como Construir Ecossistemas: Furr & Shipilov (MIT)
 Apresentador(a): Josué Jofre (4ª) / Joel (5ª)
 Frase-Chave no Slide: ""Não tente impor uma visão imperial fechada: ecossistemas robustos nascem de experimentos adaptativos.""
@@ -309,7 +326,7 @@ Como construir ecossistemas na prática? Nathan Furr e Shipilov (MIT Sloan) ensi
 
 --------------------------------------------------------------------------------
 
-SLIDE 23 | BLOCO 4 | TEMPO SUGERIDO: 4 min
+SLIDE 24 | BLOCO 4 | TEMPO SUGERIDO: 4 min
 Tema: O Nexus como Catalisador: Acelerando Deep Techs e Filtrando Oportunistas
 Apresentador(a): Josué Jofre (4ª) / Joel (5ª)
 Investigação Empírica de Campo: Conduzida por Nathália Neves • PPG-PIT UNIFESP
@@ -326,7 +343,7 @@ Rodrigo Saad detalha a importância da curadoria técnica do Nexus: evitar que o
 
 --------------------------------------------------------------------------------
 
-SLIDE 24 | BLOCO 4 | TEMPO SUGERIDO: 4 min
+SLIDE 25 | BLOCO 4 | TEMPO SUGERIDO: 4 min
 Tema: Liderança sem Autoridade Hierárquica: O Desafio do Orquestrador
 Apresentador(a): Josué Jofre (4ª) / Joel (5ª)
 Frase-Chave no Slide: ""Em um ecossistema, ninguém manda em ninguém: lidera quem constrói o melhor consenso.""
@@ -338,7 +355,7 @@ A liderança sem autoridade hierárquica exige que o orquestrador domine a neutr
 
 --------------------------------------------------------------------------------
 
-SLIDE 25 | BLOCO 4 | TEMPO SUGERIDO: 3 min
+SLIDE 26 | BLOCO 4 | TEMPO SUGERIDO: 3 min
 Tema: Estudo Empírico: Tipos de Contratos, Governança & NDA no "Dia Zero"
 Apresentador(a): Josué Jofre (4ª) / Joel (5ª)
 Investigação Empírica de Campo: Conduzida por Nathália Neves • PPG-PIT UNIFESP
@@ -357,7 +374,7 @@ Rodrigo esclarece com transparência cirúrgica a mecânica de governança contr
 
 --------------------------------------------------------------------------------
 
-SLIDE 26 | MOMENTO KAHOOT 4 | TEMPO SUGERIDO: 3 min
+SLIDE 27 | MOMENTO KAHOOT 4 | TEMPO SUGERIDO: 3 min
 Tema: Desafio da Fase 4: Nexus Hub de Startups
 Apresentador(a): Josué Jofre (4ª) / Joel (5ª)
 Frase-Chave no Slide: ""O link do jogo está no chat: acesse, ande até a Fase 3 e responda o mais rápido possível!""
@@ -369,7 +386,7 @@ Fase 4 do Kahoot RPG aberta! 3 questões sobre Furr & Shipilov, Nexus Hub e lide
 
 --------------------------------------------------------------------------------
 
-SLIDE 27 | BLOCO 5 | TEMPO SUGERIDO: 2 min
+SLIDE 28 | BLOCO 5 | TEMPO SUGERIDO: 2 min
 Tema: O Caso de San Diego
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 
@@ -380,7 +397,7 @@ Passo a palavra para a colega Lilian Veiga, que nos conduzirá pela análise com
 
 --------------------------------------------------------------------------------
 
-SLIDE 28 | BLOCO 5 | TEMPO SUGERIDO: 2 min
+SLIDE 29 | BLOCO 5 | TEMPO SUGERIDO: 2 min
 Tema: O que é um ecossistema de inovação?
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 
@@ -391,7 +408,7 @@ San Diego é o caso global mais celebrado de reconversão econômica: de uma bas
 
 --------------------------------------------------------------------------------
 
-SLIDE 29 | BLOCO 5 | TEMPO SUGERIDO: 2 min
+SLIDE 30 | BLOCO 5 | TEMPO SUGERIDO: 2 min
 Tema: ECOSSISTEMAS DE INOVAÇÃO • O Caso de San Diego
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 
@@ -402,7 +419,7 @@ O motor propulsor de San Diego foi a criação da CONNECT em 1985 pela UCSD: uma
 
 --------------------------------------------------------------------------------
 
-SLIDE 30 | BLOCO 5 | TEMPO SUGERIDO: 2 min
+SLIDE 31 | BLOCO 5 | TEMPO SUGERIDO: 2 min
 Tema: ECOSSISTEMAS DE INOVAÇÃO • O Caso de San Diego
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 
@@ -413,7 +430,7 @@ Lições cruciais de San Diego: a universidade pública (UCSD) não ficou fechad
 
 --------------------------------------------------------------------------------
 
-SLIDE 31 | BLOCO 5 | TEMPO SUGERIDO: 2 min
+SLIDE 32 | BLOCO 5 | TEMPO SUGERIDO: 2 min
 Tema: ECOSSISTEMAS DE INOVAÇÃO • O Caso de São José dos Campos
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 
@@ -424,7 +441,7 @@ Trazendo agora o olhar para o Brasil: São José dos Campos. Um ecossistema de a
 
 --------------------------------------------------------------------------------
 
-SLIDE 32 | BLOCO 5 | TEMPO SUGERIDO: 2 min
+SLIDE 33 | BLOCO 5 | TEMPO SUGERIDO: 2 min
 Tema: ECOSSISTEMAS DE INOVAÇÃO • O Caso de São José dos Campos
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 
@@ -436,7 +453,7 @@ Com a fundação do PIT em 2009, SJC deu o salto para o Polo Tipo 3, assumindo a
 
 --------------------------------------------------------------------------------
 
-SLIDE 33 | BLOCO 5 | TEMPO SUGERIDO: 2 min
+SLIDE 34 | BLOCO 5 | TEMPO SUGERIDO: 2 min
 Tema: O PIT SJC
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 
@@ -450,7 +467,7 @@ Vejam a matriz pentagonal do Relatório Anual do PIT projetada na tela em grande
 
 --------------------------------------------------------------------------------
 
-SLIDE 34 | BLOCO 5 | TEMPO SUGERIDO: 3 min
+SLIDE 35 | BLOCO 5 | TEMPO SUGERIDO: 3 min
 Tema: O modelo de Gestão do PIT SJC, sob aspectos gerais e práticos.
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 Investigação Empírica de Campo: Conduzida por Lilian Veiga • PPG-PIT UNIFESP
@@ -469,7 +486,7 @@ Do outro lado, os Aspectos Práticos e Operacionais com Ana Abreu, coordenadora 
 
 --------------------------------------------------------------------------------
 
-SLIDE 35 | BLOCO 5 | TEMPO SUGERIDO: 2 min
+SLIDE 36 | BLOCO 5 | TEMPO SUGERIDO: 2 min
 Tema: O PIT SJC
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 
@@ -481,7 +498,7 @@ Olhem para o painel de logos de parceiros corporativos e governamentais que conf
 
 --------------------------------------------------------------------------------
 
-SLIDE 36 | BLOCO 5 | TEMPO SUGERIDO: 2.5 min
+SLIDE 37 | BLOCO 5 | TEMPO SUGERIDO: 2.5 min
 Tema: Comparativo
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 
@@ -492,7 +509,7 @@ Quadro comparativo síntese: San Diego (liderança pela academia e venture capit
 
 --------------------------------------------------------------------------------
 
-SLIDE 37 | BLOCO 5 | TEMPO SUGERIDO: 3 min
+SLIDE 38 | BLOCO 5 | TEMPO SUGERIDO: 3 min
 Tema: Estudo Empírico: O Case Start-Up Chile & Santiago como Hub Global
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 Investigação Empírica de Campo: Conduzida por Lilian Veiga • PPG-PIT UNIFESP
@@ -511,7 +528,7 @@ Rubens analisa como o Chile construiu um dos maiores ecossistemas digitais da Am
 
 --------------------------------------------------------------------------------
 
-SLIDE 38 | MOMENTO KAHOOT 5 | TEMPO SUGERIDO: 3 min
+SLIDE 39 | MOMENTO KAHOOT 5 | TEMPO SUGERIDO: 3 min
 Tema: Desafio da Fase 5: Pavilhão Aeroespacial & San Diego
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 Frase-Chave no Slide: ""Acesse o jogo no smartphone, caminhe até a estação no mapa e responda às 3 perguntas!""
@@ -524,7 +541,7 @@ Perguntas sobre o benchmarking San Diego vs. SJC, matriz pentagonal da APTSJC e 
 
 --------------------------------------------------------------------------------
 
-SLIDE 39 | CASO PIT | TEMPO SUGERIDO: 3 min
+SLIDE 40 | CASO PIT | TEMPO SUGERIDO: 3 min
 Tema: A Integração UNIFESP & PIT: Co-criação na Prática
 Apresentador(a): Renato Paschoal (4ª) / Fábio (5ª)
 Frase-Chave no Slide: ""O PPG-PIT não forma apenas teóricos: forma orquestradores capazes de dialogar com a indústria.""
@@ -536,7 +553,7 @@ Vejam como a UNIFESP e o Parque Tecnológico de São José dos Campos operam a c
 
 --------------------------------------------------------------------------------
 
-SLIDE 40 | BLOCO 6 | TEMPO SUGERIDO: 4 min
+SLIDE 41 | BLOCO 6 | TEMPO SUGERIDO: 4 min
 Tema: Pés no Chão: Evitando o "Teatro da Inovação" & 5 Gargalos do Ecossistema
 Apresentador(a): Renato Paschoal (4ª) / Fábio (5ª)
 Frase-Chave no Slide: ""O Brasil precisa superar o teatro da inovação: faltam orquestradores claros, sobra valorização de diploma sobre saber aplicado, e o risco jurídico ainda é tratado como pós-projeto." — Rubens Costa (Diagnóstico Empírico GETI 2026)"
@@ -553,7 +570,7 @@ Entramos agora no momento de autocrítica mais importante do nosso seminário. A
 
 --------------------------------------------------------------------------------
 
-SLIDE 41 | BLOCO 6 | TEMPO SUGERIDO: 4 min
+SLIDE 42 | BLOCO 6 | TEMPO SUGERIDO: 4 min
 Tema: As Armadilhas da Rede: Lock-in, Predação e a Barreira Cultural da Gestão
 Apresentador(a): Renato Paschoal (4ª) / Fábio (5ª)
 Investigação Empírica de Campo: Conduzida por Renato Paschoal • PPG-PIT UNIFESP
@@ -569,7 +586,7 @@ Rodrigo Saad encerra com uma reflexão profunda sobre o maior obstáculo da inov
 
 --------------------------------------------------------------------------------
 
-SLIDE 42 | MOMENTO KAHOOT 6 | TEMPO SUGERIDO: 3 min
+SLIDE 43 | MOMENTO KAHOOT 6 | TEMPO SUGERIDO: 3 min
 Tema: Desafio da Fase 6: Living Lab Net-Zero & Fronteiras
 Apresentador(a): Renato Paschoal (4ª) / Fábio (5ª)
 Frase-Chave no Slide: ""O link do jogo está no chat: acesse, ande até a Fase 6 e responda o mais rápido possível!""
@@ -582,7 +599,7 @@ Questões sobre PI, NDAs, governança do PIT e barreiras culturais. Definam suas
 
 --------------------------------------------------------------------------------
 
-SLIDE 43 | DINÂMICA | TEMPO SUGERIDO: 3 min
+SLIDE 44 | DINÂMICA | TEMPO SUGERIDO: 3 min
 Tema: Consolidação das 18 Questões: O Pódio Provisório
 Apresentador(a): Jéssica David (4ª) / Fernando (5ª)
 Frase-Chave no Slide: ""18 decisões estratégicas: quem articulou a melhor orquestração de valor no campus?""
@@ -595,7 +612,7 @@ Vejam na tela o pódio provisório dos colegas que lideraram a pontuação ao lo
 
 --------------------------------------------------------------------------------
 
-SLIDE 44 | DINÂMICA | TEMPO SUGERIDO: 6 min
+SLIDE 45 | DINÂMICA | TEMPO SUGERIDO: 6 min
 Tema: Classificação Geral & Diagnóstico Cienciométrico dos Erros
 Apresentador(a): Jéssica David (4ª) / Fernando (5ª)
 Frase-Chave no Slide: ""Errar na simulação é aprendizado; orquestrar na prática exige precisão científica.""
@@ -607,7 +624,7 @@ Diagnóstico cienciométrico dos erros e acertos: examinamos quais conceitos ger
 
 --------------------------------------------------------------------------------
 
-SLIDE 45 | DEBATE & NUVEM DE PALAVRAS | TEMPO SUGERIDO: 5 min
+SLIDE 46 | DEBATE & NUVEM DE PALAVRAS | TEMPO SUGERIDO: 5 min
 Tema: Síntese Conceitual, Nuvem de Palavras & Provocações Estratégicas para o PPG-PIT e PIT SJC
 Apresentador(a): Grupo Inteiro (4ª e 5ª)
 Frase-Chave no Slide: ""O valor de um ecossistema não está na soma das suas partes, mas na sinergia viva dos seus termos e conexões.""
