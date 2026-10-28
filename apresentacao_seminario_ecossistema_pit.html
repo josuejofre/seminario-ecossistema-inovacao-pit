@@ -3476,9 +3476,12 @@ Atores independentes colaboram para criar um novo mercado e competem dentro dele
 <a href="https://pitsjc.org.br/institucional/relatorio-de-atividades/" style="color: var(--cyan-light); text-decoration: underline; font-weight: 700;" target="_blank">pitsjc.org.br/institucional/relatorio-de-atividades/</a>
 </div>
 </div>
-<!-- Diagrama Pentagonal Centralizado em Grande Formato -->
-<div class="card" style="flex: 1; min-height: 0; padding: 0.85rem; background: #ffffff; border: 2px solid rgba(16, 185, 129, 0.5); box-shadow: 0 0 40px rgba(16, 185, 129, 0.18); display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 12px;">
+<!-- Diagrama Pentagonal Centralizado em Grande Formato com Zoom -->
+<div class="card zoom-box" onclick="if(window.openImageModal){openImageModal('assets/lilian/slide_7_img_2.png', 'O PIT SJC • Diagrama Pentagonal Oficial APTSJC (Relatório Anual de Atividades PIT 2025)');}" style="flex: 1; min-height: 0; padding: 0.85rem; background: #ffffff; border: 2px solid rgba(16, 185, 129, 0.5); box-shadow: 0 0 40px rgba(16, 185, 129, 0.18); display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 12px; cursor: zoom-in; position: relative;" title="Clique para ampliar em tela cheia">
 <img alt="O PIT SJC - Diagrama Pentagonal Oficial APTSJC" src="assets/lilian/slide_7_img_2.png" style="width: 100%; height: 100%; max-height: 500px; object-fit: contain;"/>
+<div style="position: absolute; bottom: 14px; right: 18px; background: rgba(15, 23, 42, 0.88); border: 1px solid var(--emerald-accent); border-radius: 8px; padding: 0.4rem 0.85rem; font-size: 0.95rem; color: #fff; font-family: var(--font-mono); font-weight: 700; pointer-events: none; display: flex; align-items: center; gap: 0.45rem; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+<span style="font-size: 1.1rem;">🔍</span> Clique para ampliar
+</div>
 </div>
 <div class="slide-footer-ref"><span style="font-size: 1.05rem;">📚</span> <span><strong>Fonte / Ref:</strong> RELATÓRIO ANUAL DE ATIVIDADES PIT 2025; RUBEM, Thiago Chiquetto. Políticas de inovação, parques tecnológicos e a importância do território: o caso do PIT SJC (2018).</span></div>
 </section>
@@ -4602,6 +4605,19 @@ A gestão é regida por um Contrato de Gestão anual com a Prefeitura, balizado 
       if (modal && img) {
         img.src = src;
         if (cap) cap.textContent = caption || 'Visualização Ampliada (Alta Resolução)';
+        
+        // Estilização inteligente de fundo para imagens claras vs escuras
+        if (src.includes('slide_7_img_2') || src.includes('trl_vale_da_morte') || src.includes('barreiras_gestao') || src.includes('manchete_')) {
+          img.style.background = '#ffffff';
+          img.style.padding = '1.2rem';
+          img.style.borderColor = 'rgba(16, 185, 129, 0.6)';
+          img.style.boxShadow = '0 0 50px rgba(16, 185, 129, 0.4)';
+        } else {
+          img.style.background = '#0a1324';
+          img.style.padding = '0';
+          img.style.borderColor = 'var(--cyan-glow)';
+          img.style.boxShadow = '0 0 50px rgba(6, 182, 212, 0.45)';
+        }
         modal.style.display = 'flex';
       }
     }
