@@ -1278,7 +1278,46 @@
       white-space: nowrap;
     }
     
-  </style>
+  /* RENATO SLIDES 40-42 BEGIN */
+.slide.renato-slide { gap: clamp(.35rem, .85vh, .7rem); }
+.renato-slide .renato-eyebrow { font-family: var(--font-mono, monospace); color: #67e8f9; font-size: clamp(.8rem, 1.04vw, 1.05rem); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.renato-slide .slide-title { font-size: clamp(1.65rem, 2.35vw, 2.65rem); margin: 0; line-height: 1.12; }
+.renato-slide .renato-subtitle { font-size: clamp(1.05rem, 1.34vw, 1.38rem); color: #cbd5e1; line-height: 1.38; margin: 0; }
+.renato-layout { display: grid; grid-template-columns: minmax(0, 1.82fr) minmax(310px, .85fr); gap: clamp(.6rem, 1.1vw, 1.05rem); flex: 1; min-height: 0; }
+.renato-panel { background: linear-gradient(155deg, rgba(20,32,57,.96), rgba(9,17,34,.97)); border: 1px solid rgba(103,232,249,.19); border-radius: 18px; padding: clamp(.55rem, .8vw, .85rem); min-width: 0; min-height: 0; box-shadow: inset 0 1px 0 rgba(255,255,255,.045); }
+.renato-main-image { display: flex; align-items: center; justify-content: center; background: radial-gradient(ellipse at center, rgba(132,65,171,.16), rgba(8,16,31,.6) 70%); overflow: hidden; }
+.renato-main-image img { display: block; width: 100%; height: 100%; max-height: min(70vh, 640px); object-fit: contain; }
+.renato-video-panel { display: flex; flex-direction: column; gap: .65rem; justify-content: center; border-color: rgba(168,85,247,.32); }
+.renato-video-panel .renato-media-heading { color: #f8fafc; font-size: clamp(1.14rem, 1.5vw, 1.65rem); font-family: var(--font-display, sans-serif); line-height: 1.2; font-weight: 800; margin: 0; }
+.renato-video-panel .renato-label { font: 800 .86rem var(--font-mono, monospace); color: #d8b4fe; letter-spacing: .06em; text-transform: uppercase; }
+.renato-video-frame { position: relative; display: flex; width: 100%; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; border: 1px solid rgba(168,85,247,.45); background: linear-gradient(140deg,#171b39,#301c52 60%,#0f172a); }
+.renato-video-frame video { width: 100%; height: 100%; object-fit: contain; background: #080b16; display: none; }
+.renato-video-frame.renato-has-video video { display: block; }
+.renato-video-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1rem; gap: .45rem; text-align: center; }
+.renato-video-placeholder .renato-play { border-radius: 50%; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.3); width: 63px; height: 63px; display: flex; align-items: center; justify-content: center; font-size: 1.7rem; color: #f8fafc; }
+.renato-video-placeholder strong { font-family: var(--font-display,sans-serif); font-size: clamp(.97rem,1.2vw,1.25rem); color: #fff; }
+.renato-video-placeholder small { font-family: var(--font-body,sans-serif); font-size: clamp(.76rem,.9vw,.93rem); color: #c4b5fd; }
+.renato-has-video .renato-video-placeholder { display: none; }
+.renato-footnote { font: 500 clamp(.75rem,.9vw,.94rem) var(--font-body,sans-serif); color: #94a3b8; line-height: 1.35; margin: 0; }
+.renato-double-images { display: grid; grid-template-rows: minmax(0,1fr) minmax(0,1fr); gap: .65rem; min-height: 0; }
+.renato-infographic-link { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; border-radius: 11px; overflow: hidden; background: #fff; cursor: zoom-in; border: 2px solid #f8fafc; }
+.renato-infographic-link img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.renato-visual-caption { padding: .32rem .15rem .1rem; color: #cbd5e1; font-family: var(--font-display,sans-serif); font-size: clamp(.87rem,1.0vw,1.08rem); font-weight: 700; }
+.renato-infographic-card { display: flex; flex-direction: column; min-height: 0; padding: .42rem; }
+.renato-infographic-card .renato-infographic-link { flex: 1; min-height: 0; }
+.renato-image-tip { display: block; font-size: .78rem; color: #94a3b8; text-align: center; }
+.renato-cases { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: .7rem; min-height: 0; }
+.renato-case { display: flex; flex-direction: column; min-height: 0; }
+.renato-case-label { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .25rem; font: 800 clamp(.91rem,1.12vw,1.22rem) var(--font-display,sans-serif); color: #f8fafc; margin: 0 0 .45rem; }
+.renato-case-label span { font-size: .76em; color: #a5b4fc; font-weight: 600; }
+.renato-case-image { display: block; flex: 1; min-height: 0; width: 100%; border-radius: 10px; overflow: hidden; border: 2px solid white; background: #fff; cursor: zoom-in; }
+.renato-case-image img { width: 100%; height: 100%; object-fit: contain; object-position: center top; display: block; background: #fff; }
+.renato-slide-41 .renato-layout { grid-template-columns: minmax(0,1.85fr) minmax(315px,.85fr); }
+.renato-slide-42 .renato-layout { grid-template-columns: minmax(0,1.78fr) minmax(310px,.82fr); }
+@media (max-width: 980px) { .renato-layout, .renato-slide-41 .renato-layout, .renato-slide-42 .renato-layout { grid-template-columns: 1fr; flex: initial; } .renato-main-image img { height: auto; max-height: 50vh; } .renato-video-panel { min-height: 230px; } .renato-double-images { grid-template-rows: repeat(2,minmax(230px,auto)); } .renato-infographic-link { min-height: 220px; } .renato-cases { min-height: 390px; } .renato-case-image { min-height: 350px; } }
+@media (max-height: 690px) and (min-width: 981px) { .renato-slide .slide-title {font-size: 1.85rem;} .renato-slide .renato-subtitle {font-size:1.0rem;} .renato-slide .renato-visual-caption {font-size:.88rem;} .renato-slide .renato-video-placeholder .renato-play {width:45px;height:45px;} }
+/* RENATO SLIDES 40-42 END */
+</style>
 </head>
 <body>
 <div class="ambient-glow"></div>
@@ -3747,133 +3786,108 @@ Atores independentes colaboram para criar um novo mercado e competem dentro dele
 </div>
 <div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Avaliação Formativa Síncrona • Banco de Questões GETI 2026 elaborado por Lilian Veiga Vinhas baseado em Majava &amp; Rinkinen (2026).</span></div>
 </section>
-<section class="slide" data-block="Caso PIT" data-slide="40" data-speaker="Renato Paschoal" data-time="3 min">
-<div class="slide-tag">🎓 O ELO UNIVERSITÁRIO • PPG-PIT UNIFESP</div>
-<h2 class="slide-title">A Integração UNIFESP &amp; PIT: <span>Co-criação na Prática</span></h2>
-<div class="punchline-card">
-<span style="font-size: 1.4rem;">🔬</span>
-<div class="punchline-quote">"O PPG-PIT não forma apenas teóricos: forma orquestradores capazes de dialogar com a indústria."</div>
-</div>
-<div class="grid-3">
-<div class="card card-glow-cyan">
-<div class="card-title"><span>🧪</span> Laboratórios Abertos</div>
-<p class="card-desc">Infraestrutura multiusuária do Campus Parque Tecnológico SJC com acesso franqueado a pesquisadores e empresas para testes avançados.</p>
-</div>
-<div class="card card-glow-purple">
-<div class="card-title"><span>📜</span> Mestrado &amp; Doutorado PIT</div>
-<p class="card-desc">Dissertações e teses desenvolvidas sobre desafios concretos dos APLs de São José dos Campos, formando especialistas sob medida.</p>
-</div>
-<div class="card card-glow-emerald">
-<div class="card-title"><span>🚀</span> Empreendedorismo Acadêmico</div>
-<p class="card-desc">Incentivo ativo à geração de spin-offs universitárias ancoradas no Nexus Hub com fomento de risco PIPE-FAPESP e FINEP.</p>
-</div>
-</div>
-<div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Projeto Pedagógico PPG-PIT (2026) • Programa de Pós-Graduação em Inovação Tecnológica, UNIFESP Campus Parque Tecnológico SJC.</span></div>
-</section>
-<!-- SLIDE ADICIONAL: ESTUDO DE CASO PRÁTICO PROJETO FEHIDRO & ESG (RENATO BOSCHILIA JR.) -->
-<section class="slide" data-block="Bloco 6" data-slide="41" data-speaker="Renato Paschoal" data-time="4 min">
-<div class="slide-tag">⚠️ BLOCO 6 • CRÍTICAS, LIMITAÇÕES &amp; DIAGNÓSTICO EMPÍRICO</div>
-<h2 class="slide-title">Pés no Chão: <span>Evitando o "Teatro da Inovação" &amp; 5 Gargalos do Ecossistema</span></h2>
-<div class="punchline-card" style="margin-bottom: 0.85rem; padding: 0.85rem 1.4rem;">
-<span style="font-size: 1.6rem;">🔍</span>
-<div class="punchline-quote" style="font-size: 1.25rem; line-height: 1.45;">"O Brasil precisa superar o teatro da inovação: faltam orquestradores claros, sobra valorização de diploma sobre saber aplicado, e o risco jurídico ainda é tratado como pós-projeto." — <em>Rubens Costa (Diagnóstico Empírico GETI 2026)</em></div>
-</div>
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.15rem; flex: 1; min-height: 0;">
-<div class="card card-glow-rose" style="padding: 1.25rem 1.45rem; display: flex; flex-direction: column; justify-content: center;">
-<div class="card-title" style="font-size: 1.30rem; font-weight: 800; margin-bottom: 0.45rem; color: #f43f5e; line-height: 1.3;"><span>1️⃣</span> Falta de um Orquestrador Claro</div>
-<p class="card-desc" style="font-size: 1.15rem; line-height: 1.52; color: #cbd5e1; margin: 0;">Desalinhamento crônico entre as hélices: o governo opera com lentidão burocrática, a universidade foca em publicações e o mercado exige retorno imediato. Sem um orquestrador neutro com autoridade relacional, as pontes não se sustentam.</p>
-</div>
-<div class="card card-glow-amber" style="padding: 1.25rem 1.45rem; display: flex; flex-direction: column; justify-content: center;">
-<div class="card-title" style="font-size: 1.30rem; font-weight: 800; margin-bottom: 0.45rem; color: var(--amber-accent); line-height: 1.3;"><span>2️⃣</span> Cultura do Diploma vs. Saber Aplicado</div>
-<p class="card-desc" style="font-size: 1.15rem; line-height: 1.52; color: #cbd5e1; margin: 0;">O "Teatro da Inovação" nacional supervaloriza títulos e certificados acadêmicos em detrimento da educação prática e da capacidade de resolver dores industriais reais com código, engenharia e patentes comerciais.</p>
-</div>
-<div class="card card-glow-purple" style="padding: 1.25rem 1.45rem; display: flex; flex-direction: column; justify-content: center;">
-<div class="card-title" style="font-size: 1.30rem; font-weight: 800; margin-bottom: 0.45rem; color: var(--purple-accent); line-height: 1.3;"><span>3️⃣</span> Risco Jurídico como Pós-Projeto</div>
-<p class="card-desc" style="font-size: 1.15rem; line-height: 1.52; color: #cbd5e1; margin: 0;">No Brasil, a segurança regulatória e a conformidade fiscal são tratadas como apêndice ao final do projeto. Se a blindagem jurídica não fizer parte do design no Dia +1 da iniciativa pública, o projeto trava nos órgãos de controle.</p>
-</div>
-<div class="card card-glow-cyan" style="padding: 1.25rem 1.45rem; display: flex; flex-direction: column; justify-content: center;">
-<div class="card-title" style="font-size: 1.30rem; font-weight: 800; margin-bottom: 0.45rem; color: var(--cyan-light); line-height: 1.3;"><span>4️⃣</span> Fuga de Capital Intelectual &amp; P&amp;D Não-Exportável</div>
-<p class="card-desc" style="font-size: 1.15rem; line-height: 1.52; color: #cbd5e1; margin: 0;">Formamos pesquisadores de ponta em universidades públicas, mas o ecossistema falha em reter os cérebros ou em converter seu conhecimento em produtos globais de alto valor agregado exportáveis.</p>
-</div>
-</div>
-<div class="card card-glow-emerald" style="margin-top: 0.85rem; padding: 0.95rem 1.45rem; border-left: 4px solid var(--emerald-accent);">
-<div style="font-size: 1.25rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem; display: flex; align-items: center; gap: 0.5rem;"><span>💡</span> A Falha nas Compras Públicas: O Exemplo dos ERPs Municipais</div>
-<p style="font-size: 1.12rem; color: #cbd5e1; line-height: 1.5; margin: 0;">Prefeituras gastam milhões anuais em softwares proprietários ineficientes enquanto a universidade local desenvolve código aberto de alta qualidade. Sem orquestração e mecanismos de encomenda tecnológica (Marco Legal das Startups), as duas pontas continuam isoladas.</p>
-</div>
-<div class="slide-footer-ref"><span style="font-size: 0.95rem;">📚</span> <span><strong>Fonte / Ref:</strong> Entrevista Empírica PPGPIT com Rubens Costa (Out/2026); Shen, W. et al. (2025/2026); Alvesson &amp; Spicer (2012) - A Stupidity-Based Theory of Organizations.</span></div>
-</section>
-
-<section class="slide" data-block="Bloco 6" data-slide="42" data-speaker="Renato Paschoal" data-time="4 min">
-<div class="slide-tag">🌑 BLOCO 6 • O LADO SOMBRIO DOS ECOSSISTEMAS</div>
-<h2 class="slide-title">As Armadilhas da Rede: <span>Lock-in, Predação e a Barreira Cultural da Gestão</span></h2>
-<div class="punchline-card" style="margin-bottom: 0.65rem;">
-<span style="font-size: 1.4rem;">🚨</span>
-<div class="punchline-quote">"O maior desafio não é tecnológico: é convencer a diretoria de uma empresa tradicional a não querer apenas 'comprar pronto' da prateleira." — <em>Rodrigo Saad (Recorte 4)</em></div>
-</div>
-
-<div class="interview-grid-main">
-  <!-- Coluna Esquerda: Análise Conceitual e Teórica com Fontes Ampliadas -->
-  <div class="interview-concepts-col">
-    <div class="card card-glow-rose" style="border-left: 4px solid #f43f5e;">
-      <div class="card-title" style="color: #f43f5e;"><span>🪤</span> Lock-in Predatório &amp; Assimetria de Poder</div>
-      <p style="margin: 0;">
-        Startups e laboratórios acadêmicos que investem recursos em tecnologia hiper-customizada para uma empresa âncora e ficam reféns de preços ditados unilateralmente, perdendo autonomia mercadológica.
-      </p>
+<!-- RENATO SLIDE 40 BEGIN -->
+<section class="slide renato-slide renato-slide-40" data-block="PIT • Da conexão ao resultado" data-slide="40" data-speaker="Renato Paschoal" data-time="3 min">
+  <div class="renato-eyebrow">🔗 ECOSSISTEMA NA PRÁTICA • PIT SJC</div>
+  <h2 class="slide-title">Da conexão ao <span>resultado</span></h2>
+  <p class="renato-subtitle">Perspectivas de gestão de parques tecnológicos a partir da prática no PIT SJC</p>
+  <div class="renato-layout">
+    <div class="renato-panel renato-main-image" style="cursor: zoom-in;" onclick="if(window.openImageModal){openImageModal('assets/renato/ecossistema_programas_pit.png', 'Programas e Redes Conectados do PIT SJC');}" title="Clique para ampliar o diagrama">
+      <img src="assets/renato/ecossistema_programas_pit.png" alt="Diagrama dos programas e redes do PIT conectados como ecossistema, com Nexus, LINKi, Agropolo Vale, Soft Landing, Cluster Aeroespacial, TIC Vale, SmartGov e outros"/>
     </div>
-    <div class="card card-glow-amber" style="border-left: 4px solid var(--amber-accent);">
-      <div class="card-title" style="color: var(--amber-accent);"><span>🎪</span> O "Teatro da Inovação"</div>
-      <p style="margin: 0;">
-        Eventos de networking com discursos de sustentabilidade que geram alto engajamento em redes sociais, mas zero patentes registradas, zero contratos assinados e zero escala industrial real.
-      </p>
-    </div>
-    <div class="card card-glow-purple" style="border-left: 4px solid var(--purple-accent);">
-      <div class="card-title" style="color: var(--purple-glow);"><span>🧱</span> Inércia Cultural da Alta Liderança</div>
-      <p style="margin: 0;">
-        Diretorias corporativas antigas com aversão a risco, condicionadas a importar produtos prontos de prateleira em vez de co-desenvolver soluções com o ecossistema regional de inovação.
-      </p>
-    </div>
-  </div>
-
-  <!-- Coluna Direita: Player Compacto do Vídeo (Tela Cheia na Apresentação) -->
-  <div class="interview-player-card card-glow-purple">
-    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
-      <span class="chip-badge" style="background: rgba(139, 92, 246, 0.2); border-color: var(--purple-accent); color: var(--purple-glow); font-weight: 700; font-size: 0.92rem;">
-        ▶️ RECORTE 4 DE 4 • BARREIRA CULTURAL • 0M57S
-      </span>
-    </div>
-    <div class="interview-video-wrapper">
-      <video controls="" id="video-recorte-4" poster="assets/thumb_recorte4.jpg" preload="metadata">
-        <source src="assets/recorte4_barreira_cultural.mp4?v=2" type="video/mp4"/>
-        Seu navegador não suporta reprodução de vídeo HTML5.
+    <div class="renato-panel renato-video-panel">
+    <div class="renato-label">🎬 ENTREVISTA COM ANA • VÍDEO 03</div>
+    <h3 class="renato-media-heading">Os ingredientes necessários</h3>
+    <div class="renato-video-frame">
+      <div class="renato-video-placeholder"><div class="renato-play">▶</div>
+        <strong>Vídeo 03 da Ana</strong><small>Espaço reservado • incorporar o MP4</small>
+      </div>
+      <video controls playsinline preload="metadata" aria-label="Vídeo 03 da Ana: Os ingredientes necessários">
+        <source src="assets/renato/ana_video_03.mp4" type="video/mp4"/>
+        Navegador não suporta o elemento de vídeo.
       </video>
     </div>
-    <div class="interview-key-points-box">
-      <div style="font-size: 0.92rem; font-family: var(--font-mono); color: var(--purple-accent); font-weight: 800; margin-bottom: 0.2rem;">💡 FOCO DO DEPOIMENTO:</div>
-      O desafio cultural da liderança tradicional que resiste ao desenvolvimento compartilhado. (Use ⛶ para tela cheia).
-    </div>
-    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-top: 0.35rem; font-size: 0.95rem; color: var(--text-dim);">
-      <span>🎬 Recorte de Campo</span>
-      <span style="color: var(--cyan-light); font-weight: 600;">Renato Paschoal</span>
-    </div>
+    <p class="renato-footnote">Depoimento de Ana sobre condições necessárias para transformar conexões em iniciativas concretas.</p>
   </div>
-</div>
-
-<!-- Faixa Inferior: Identificação Completa do Entrevistado -->
-<div class="interviewee-bottom-strip">
-  <div class="interviewee-left-profile">
-    <img alt="Rodrigo Saad" class="interviewee-avatar-img" src="assets/thumb_recorte1.jpg"/>
-    <div class="interviewee-meta-text">
-      <div class="interviewee-meta-name">Rodrigo Saad Rodrigues</div>
-      <div class="interviewee-meta-role">Liderança Executiva &amp; P&amp;D Industrial (Tier 1 Automotivo &amp; Aeroespacial)</div>
-      <div class="interviewee-meta-sub">Reflexão sobre barreiras de inovação aberta em grandes corporações</div>
-    </div>
   </div>
-  <div class="interviewee-field-badge">
-    <span>🎙️</span>
-    <span>Investigação de campo conduzida por Renato Paschoal • PPG-PIT UNIFESP</span>
-  </div>
-</div>
 </section>
+<!-- RENATO SLIDE 40 END -->
+<!-- SLIDE ADICIONAL: ESTUDO DE CASO PRÁTICO PROJETO FEHIDRO & ESG (RENATO BOSCHILIA JR.) -->
+<!-- RENATO SLIDE 41 BEGIN -->
+<section class="slide renato-slide renato-slide-41" data-block="PIT • Conexões e barreiras" data-slide="41" data-speaker="Renato Paschoal" data-time="4 min">
+  <div class="renato-eyebrow">🌉 CIÊNCIA, TECNOLOGIA E MERCADO</div>
+  <h2 class="slide-title">AS CONEXÕES DE UM <span>ECOSSISTEMA</span></h2>
+  <p class="renato-subtitle">Por que boas conexões não se transformam em projetos?</p>
+  <div class="renato-layout">
+    <div class="renato-double-images">
+      <div class="renato-panel renato-infographic-card">
+        <div class="renato-visual-caption">1 · TRLs e Vale da Morte</div>
+        <a class="renato-infographic-link" href="assets/renato/trl_vale_da_morte.png" target="_blank" rel="noopener" title="Clique para ampliar a régua TRL" onclick="if(window.openImageModal){openImageModal('assets/renato/trl_vale_da_morte.png', '1 · TRLs e Vale da Morte (Régua Tecnológica)'); return false;}">
+          <img src="assets/renato/trl_vale_da_morte.png" alt="Régua TRL de 1 a 9 mostrando ciência na academia, vale da morte entre TRLs 4 e 7 e chegada ao mercado e à indústria"/>
+        </a>
+      </div>
+      <div class="renato-panel renato-infographic-card">
+        <div class="renato-visual-caption">2 · Barreiras de gestão</div>
+        <a class="renato-infographic-link" href="assets/renato/barreiras_gestao.png" target="_blank" rel="noopener" title="Clique para ampliar o infográfico das barreiras" onclick="if(window.openImageModal){openImageModal('assets/renato/barreiras_gestao.png', '2 · Barreiras de Gestão: Academia e Indústria'); return false;}">
+          <img src="assets/renato/barreiras_gestao.png" alt="Infográfico de três barreiras: tempos e interesses diferentes, conexão sem estruturação, financiamento e continuidade"/>
+        </a>
+      </div>
+    </div>
+    <div class="renato-panel renato-video-panel">
+    <div class="renato-label">🎬 ENTREVISTA COM ANA • VÍDEO 04</div>
+    <h3 class="renato-media-heading">O desafio da conexão com a academia</h3>
+    <div class="renato-video-frame">
+      <div class="renato-video-placeholder"><div class="renato-play">▶</div>
+        <strong>Vídeo 04 da Ana</strong><small>Espaço reservado • incorporar o MP4</small>
+      </div>
+      <video controls playsinline preload="metadata" aria-label="Vídeo 04 da Ana: O desafio da conexão com a academia">
+        <source src="assets/renato/ana_video_04.mp4" type="video/mp4"/>
+        Navegador não suporta o elemento de vídeo.
+      </video>
+    </div>
+    <p class="renato-footnote">Ana comenta por que aproximações entre academia e empresas nem sempre evoluem para projetos.</p>
+  </div>
+  </div>
+  <span class="renato-image-tip">Clique nas imagens para ampliar e ler os detalhes.</span>
+</section>
+<!-- RENATO SLIDE 41 END -->
+
+<!-- RENATO SLIDE 42 BEGIN -->
+<section class="slide renato-slide renato-slide-42" data-block="PIT • Cases de articulação" data-slide="42" data-speaker="Renato Paschoal" data-time="4 min">
+  <div class="renato-eyebrow">🚀 EVIDÊNCIAS E EXEMPLOS • PIT SJC</div>
+  <h2 class="slide-title">Da teoria à prática: <span>quando a articulação faz diferença</span></h2>
+  <div class="renato-layout">
+    <div class="renato-cases">
+      <div class="renato-panel renato-case">
+        <div class="renato-case-label">APEX <span>Internacionalização</span></div>
+        <a class="renato-case-image" href="assets/renato/manchete_apex.png" target="_blank" rel="noopener" title="Abrir captura integral da notícia APEX" onclick="if(window.openImageModal){openImageModal('assets/renato/manchete_apex.png', 'APEX · Programa de Internacionalização e StartOut Brasil'); return false;}">
+          <img src="assets/renato/manchete_apex.png" alt="Captura de notícia do portal PIT SJC sobre programa de internacionalização Apex/StartOut Brasil"/>
+        </a>
+      </div>
+      <div class="renato-panel renato-case">
+        <div class="renato-case-label">FEHIDRO <span>Perdas de água e IA</span></div>
+        <a class="renato-case-image" href="assets/renato/manchete_fehidro.png" target="_blank" rel="noopener" title="Abrir captura integral da notícia sobre água e IA" onclick="if(window.openImageModal){openImageModal('assets/renato/manchete_fehidro.png', 'FEHIDRO · Inteligência Artificial e Perdas de Água'); return false;}">
+          <img src="assets/renato/manchete_fehidro.png" alt="Captura de manchete sobre projeto de inteligência artificial para monitorar perdas de água no Vale do Paraíba"/>
+        </a>
+      </div>
+    </div>
+    <div class="renato-panel renato-video-panel">
+    <div class="renato-label">🎬 ENTREVISTA COM ANA • VÍDEO 06</div>
+    <h3 class="renato-media-heading">APEX: a articulação em ação</h3>
+    <div class="renato-video-frame">
+      <div class="renato-video-placeholder"><div class="renato-play">▶</div>
+        <strong>Vídeo 06 da Ana</strong><small>Espaço reservado • incorporar o MP4</small>
+      </div>
+      <video controls playsinline preload="metadata" aria-label="Vídeo 06 da Ana: APEX: a articulação em ação">
+        <source src="assets/renato/ana_video_06.mp4" type="video/mp4"/>
+        Navegador não suporta o elemento de vídeo.
+      </video>
+    </div>
+    <p class="renato-footnote">Depoimento de Ana sobre a articulação prática e o case de internacionalização APEX.</p>
+  </div>
+  </div>
+</section>
+<!-- RENATO SLIDE 42 END -->
 <section class="slide" data-block="Momento Kahoot 6" data-slide="43" data-speaker="Renato Paschoal" data-time="3 min">
 <div class="slide-tag">🎮 MOMENTO KAHOOT RPG • FASE 6</div>
 <h2 class="slide-title">Desafio da Fase 6: <span>Living Lab Net-Zero &amp; Fronteiras</span></h2>
@@ -4295,14 +4309,9 @@ Rubens explica as razões do salto econômico e tecnológico chileno:
 1) Tríplice Hélice orquestrada por metas: a agência pública CORFO entrou com fomento e infraestrutura; a PUC Chile estruturou a metodologia acadêmica, acompanhamento de métricas e pesquisa científica; e executivos de Venture Capital lideraram o programa com metas estritas de retorno;
 2) A opção inteligente pelo setor digital: menor risco fiscal e altíssimo poder de escala global, evitando os passivos de subsídios a indústrias pesadas tradicionais (como o caso fabril de Taubaté/LG);
 3) Parceria real orientada a resultado: inovação com impacto mensurável no PIB, sem burocracia inútil.`,
-    40: `Penúltima rodada! Fase 5 do Kahoot RPG.
-Perguntas sobre o benchmarking San Diego vs. SJC, matriz pentagonal da APTSJC e o papel da CONNECT. 3 minutos na contagem regressiva!"
-
---------------------------------------------------------------------------------`,
-    41: `Vejam como a UNIFESP e o Parque Tecnológico de São José dos Campos operam a co-criação na prática: o PPG-PIT não forma apenas teóricos, mas orquestradores capazes de dialogar com a indústria através de laboratórios multiusuários abertos, dissertações focadas nos desafios locais e fomento a spin-offs acadêmicas ancoradas no Nexus Hub.`,
-    42: `Pés no chão: Shen et al. alertam para o risco do 'teatro da inovação' — eventos e discursos bonitos que não geram patentes, empregos qualificados nem faturamento real. O ecossistema precisa medir impacto concreto."
-
---------------------------------------------------------------------------------`,
+    40: `Neste bloco, proponho passar da pergunta “quem está conectado?” para “o que essa conexão produz?”. A figura mostra diferentes programas e redes articulados pelo PIT SJC; não são iniciativas isoladas, mas possíveis portas de entrada para cooperação. O papel de gestão é mobilizar competências, reconhecer demandas e tornar as relações produtivas. Vamos ouvir agora a Ana, no vídeo 03, sobre os ingredientes necessários para que esse ecossistema funcione.`,
+    41: `Ter atores próximos não garante projeto. A régua TRL ilustra a transição de conhecimento e pesquisa para validação tecnológica, demonstração, escala e aplicação no mercado. Na imagem, os TRLs de 4 a 7 são representados como Vale da Morte, região de risco e incerteza na passagem para aplicações. O infográfico resume três barreiras de gestão: tempos e interesses diferentes; conexão sem escopo e governança; financiamento e continuidade. O ponto não é apenas promover encontros, mas estruturar compromissos e recursos. Vamos ouvir a Ana no vídeo 04 sobre a conexão com a academia.`,
+    42: `Aqui trago dois exemplos para discutir quando a articulação pode gerar oportunidades práticas. No caso APEX, a captura apresentada trata de uma iniciativa de internacionalização; no caso identificado como FEHIDRO, a manchete mostra uma iniciativa voltada ao controle de perdas de água com inteligência artificial. As imagens são registros jornalísticos e não devem ser apresentadas, isoladamente, como comprovação de resultados ou da fonte de financiamento. Para aprofundar o primeiro case, apresento o vídeo 06 da Ana falando sobre a APEX.`,
     43: `Fechando a análise empírica, examinamos os gargalos e riscos de predação na rede discutidos na literatura de governança.
 Rodrigo Saad encerra com uma reflexão profunda sobre o maior obstáculo da inovação corporativa: a barreira cultural e a miopia de diretorias tradicionais habituadas a métricas de curto prazo, que relutam em validar tecnologias fora de seus muros até que um competidor disruptivo as ameace. Vamos acompanhar!"
 
@@ -5101,5 +5110,22 @@ Muito obrigado a todos, aos professor Yukio Ueta e colegas pela atenção!"`
       }
     });
   </script>
+<script>
+/* RENATO VIDEO PLACEHOLDERS BEGIN */
+(function () {
+  function initRenatoVideos() {
+    document.querySelectorAll('.renato-video-frame video').forEach(function (video) {
+      var frame = video.closest('.renato-video-frame');
+      if (!frame) return;
+      function markReady() { frame.classList.add('renato-has-video'); }
+      video.addEventListener('loadedmetadata', markReady);
+      if (video.readyState >= 1) markReady();
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initRenatoVideos);
+  else initRenatoVideos();
+})();
+/* RENATO VIDEO PLACEHOLDERS END */
+</script>
 </body>
 </html>
