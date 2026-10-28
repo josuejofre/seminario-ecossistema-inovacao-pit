@@ -509,26 +509,7 @@ Quadro comparativo síntese: San Diego (liderança pela academia e venture capit
 
 --------------------------------------------------------------------------------
 
-SLIDE 38 | BLOCO 5 | TEMPO SUGERIDO: 3 min
-Tema: Estudo Empírico: O Case Start-Up Chile & Santiago como Hub Global
-Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
-Investigação Empírica de Campo: Conduzida por Lilian Veiga • PPG-PIT UNIFESP
-Entrevistado: Rubens Costa (Diretor de Inovação & Scale-ups / Ex-Secretário de TI)
-Frase-Chave no Slide: ""Santiago concentrou as startups e fundos de VC do país porque uniu agência pública com fomento, universidade com método científico e executivos de mercado com metas de investimento." — Rubens Costa (Ex-Secretário de TI & Executivo de Scale-ups)"
-RECURSO DE VÍDEO EMPÍRICO: assets/recorte9_startup_chile_rubens.mp4
-
-FALA SUGERIDA DO APRESENTADOR:
-Para fechar o Bloco 5 com uma perspectiva internacional latino-americana, trazemos um estudo empírico com Rubens Costa, ex-Secretário de Tecnologia e Inovação e executivo de scale-ups (Buser e G4 Educação).
-Rubens analisa como o Chile construiu um dos maiores ecossistemas digitais da América Latina:
-1) A Tríplice Hélice orquestrada por metas: a agência pública CORFO forneceu infraestrutura e fomento; a PUC Chile transformou empreendedorismo em metodologia científica replicável e dados de pesquisa; e executivos de Venture Capital lideraram o programa com metas estritas de retorno;
-2) A opção pelo digital de baixo risco: diferente de subsídios a indústrias pesadas tradicionais (que geram passivos tributários e risco de descontinuidade, como o caso fabril de Taubaté/LG), o software escala globalmente a partir de um único polo;
-3) Parceria boa gera resultado mensurável: o ecossistema chileno acelerou o crescimento do PIB focando na resolução de dores reais da sociedade. Vamos assistir!
-
---------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------
-
-SLIDE 39 | MOMENTO KAHOOT 5 | TEMPO SUGERIDO: 3 min
+SLIDE 38 | MOMENTO KAHOOT 5 | TEMPO SUGERIDO: 3 min
 Tema: Desafio da Fase 5: Pavilhão Aeroespacial & San Diego
 Apresentador(a): Lilian Veiga (4ª) / Marciele (5ª)
 Frase-Chave no Slide: ""Acesse o jogo no smartphone, caminhe até a estação no mapa e responda às 3 perguntas!""
@@ -541,7 +522,7 @@ Perguntas sobre o benchmarking San Diego vs. SJC, matriz pentagonal da APTSJC e 
 
 --------------------------------------------------------------------------------
 
-SLIDE 40 | CASO PIT | TEMPO SUGERIDO: 3 min
+SLIDE 39 | CASO PIT | TEMPO SUGERIDO: 3 min
 Tema: A Integração UNIFESP & PIT: Co-criação na Prática
 Apresentador(a): Renato Paschoal (4ª) / Fábio (5ª)
 Frase-Chave no Slide: ""O PPG-PIT não forma apenas teóricos: forma orquestradores capazes de dialogar com a indústria.""
@@ -553,7 +534,7 @@ Vejam como a UNIFESP e o Parque Tecnológico de São José dos Campos operam a c
 
 --------------------------------------------------------------------------------
 
-SLIDE 41 | BLOCO 6 | TEMPO SUGERIDO: 4 min
+SLIDE 40 | BLOCO 6 | TEMPO SUGERIDO: 4 min
 Tema: Pés no Chão: Evitando o "Teatro da Inovação" & 5 Gargalos do Ecossistema
 Apresentador(a): Renato Paschoal (4ª) / Fábio (5ª)
 Frase-Chave no Slide: ""O Brasil precisa superar o teatro da inovação: faltam orquestradores claros, sobra valorização de diploma sobre saber aplicado, e o risco jurídico ainda é tratado como pós-projeto." — Rubens Costa (Diagnóstico Empírico GETI 2026)"
@@ -570,7 +551,7 @@ Entramos agora no momento de autocrítica mais importante do nosso seminário. A
 
 --------------------------------------------------------------------------------
 
-SLIDE 42 | BLOCO 6 | TEMPO SUGERIDO: 4 min
+SLIDE 41 | BLOCO 6 | TEMPO SUGERIDO: 4 min
 Tema: As Armadilhas da Rede: Lock-in, Predação e a Barreira Cultural da Gestão
 Apresentador(a): Renato Paschoal (4ª) / Fábio (5ª)
 Investigação Empírica de Campo: Conduzida por Renato Paschoal • PPG-PIT UNIFESP
@@ -586,7 +567,7 @@ Rodrigo Saad encerra com uma reflexão profunda sobre o maior obstáculo da inov
 
 --------------------------------------------------------------------------------
 
-SLIDE 43 | MOMENTO KAHOOT 6 | TEMPO SUGERIDO: 3 min
+SLIDE 42 | MOMENTO KAHOOT 6 | TEMPO SUGERIDO: 3 min
 Tema: Desafio da Fase 6: Gestão do PIT & Articulação Prática
 Apresentador(a): Renato Paschoal
 Frase-Chave no Slide: ""O link do jogo está no chat: acesse, ande até a Fase 6 e responda o mais rápido possível!""
@@ -599,7 +580,7 @@ Questões sobre os programas do PIT SJC, a superação do Vale da Morte (TRLs) e
 
 --------------------------------------------------------------------------------
 
-SLIDE 44 | DINÂMICA | TEMPO SUGERIDO: 3 min
+SLIDE 43 | DINÂMICA | TEMPO SUGERIDO: 3 min
 Tema: Consolidação das 18 Questões: O Pódio Provisório
 Apresentador(a): Jéssica David (4ª) / Fernando (5ª)
 Frase-Chave no Slide: ""18 decisões estratégicas: quem articulou a melhor orquestração de valor no campus?""
@@ -612,7 +593,7 @@ Vejam na tela o pódio provisório dos colegas que lideraram a pontuação ao lo
 
 --------------------------------------------------------------------------------
 
-SLIDE 45 | DINÂMICA | TEMPO SUGERIDO: 6 min
+SLIDE 44 | DINÂMICA | TEMPO SUGERIDO: 6 min
 Tema: Classificação Geral & Diagnóstico Cienciométrico dos Erros
 Apresentador(a): Jéssica David (4ª) / Fernando (5ª)
 Frase-Chave no Slide: ""Errar na simulação é aprendizado; orquestrar na prática exige precisão científica.""
@@ -624,7 +605,7 @@ Diagnóstico cienciométrico dos erros e acertos: examinamos quais conceitos ger
 
 --------------------------------------------------------------------------------
 
-SLIDE 46 | DEBATE & NUVEM DE PALAVRAS | TEMPO SUGERIDO: 5 min
+SLIDE 45 | DEBATE & NUVEM DE PALAVRAS | TEMPO SUGERIDO: 5 min
 Tema: Síntese Conceitual, Nuvem de Palavras & Provocações Estratégicas para o PPG-PIT e PIT SJC
 Apresentador(a): Grupo Inteiro (4ª e 5ª)
 Frase-Chave no Slide: ""O valor de um ecossistema não está na soma das suas partes, mas na sinergia viva dos seus termos e conexões.""
